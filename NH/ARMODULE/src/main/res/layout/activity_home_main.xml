@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.szb.ARMODULE.Home.Home_Main"
+    tools:layout_editor_absoluteX="0dp"
+    tools:layout_editor_absoluteY="25dp">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_weight="10"
+        android:background="@drawable/title"
+        android:minHeight="50dp"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/drawer_layout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_weight="90"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        tools:context=".MainActivity"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintVertical_bias="0.0">
+
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/main"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/tap_bar"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="10"
+                android:background="@drawable/tapbar"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_marginBottom="1dp">
+
+                <ImageView
+                    android:id="@+id/bt_quiz"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintHorizontal_bias="0.385"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/selector_quiz"
+                    tools:ignore="ContentDescription" />
+
+                <ImageView
+                    android:id="@+id/bt_info"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentEnd="false"
+                    android:layout_alignParentRight="false"
+                    android:layout_centerVertical="false"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintHorizontal_bias="0.85"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/selector_info"
+                    tools:ignore="ContentDescription" />
+
+                <ImageView
+                    android:id="@+id/bt_rank"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintHorizontal_bias="0.619"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/selector_rank"
+                    tools:ignore="ContentDescription" />
+
+                <ImageView
+                    android:id="@+id/bt_home"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentLeft="false"
+                    android:layout_alignParentStart="false"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintHorizontal_bias="0.152"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/selector_home"
+                    tools:ignore="ContentDescription" />
+
+            </android.support.constraint.ConstraintLayout>
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/viewpager"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="90"
+                app:layout_constraintBottom_toTopOf="@+id/tap_bar"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="1.0"></android.support.v4.view.ViewPager>
+
+        </android.support.constraint.ConstraintLayout>
+
+        <ListView
+            android:id="@+id/side_menu"
+            android:layout_width="240dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:background="#EDEDED"
+            android:choiceMode="singleChoice"
+            android:divider="@android:color/transparent"
+            android:dividerHeight="0dp" />
+    </android.support.v4.widget.DrawerLayout>
+
+
+
+
+
+
+
+</android.support.constraint.ConstraintLayout>
