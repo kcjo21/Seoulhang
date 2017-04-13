@@ -3,8 +3,8 @@
   <component name="FacetManager">
     <facet type="android" name="Android">
       <configuration>
-        <option name="GEN_FOLDER_RELATIVE_PATH_APT" value="/../../nolhanggo/gen" />
-        <option name="GEN_FOLDER_RELATIVE_PATH_AIDL" value="/../../nolhanggo/gen" />
+        <option name="GEN_FOLDER_RELATIVE_PATH_APT" value="/../gen" />
+        <option name="GEN_FOLDER_RELATIVE_PATH_AIDL" value="/../gen" />
         <option name="MANIFEST_FILE_RELATIVE_PATH" value="/../../nolhanggo/AndroidManifest.xml" />
         <option name="RES_FOLDER_RELATIVE_PATH" value="/../../nolhanggo/res" />
         <option name="ASSETS_FOLDER_RELATIVE_PATH" value="/../../nolhanggo/assets" />
