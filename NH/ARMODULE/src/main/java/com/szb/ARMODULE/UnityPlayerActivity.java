@@ -1,20 +1,17 @@
 package com.szb.ARMODULE;
 
-import com.szb.ARMODULE.loginpackage.LoginManager;
+import com.szb.ARMODULE.start_pack.loginpackage.LoginManager;
 import com.szb.ARMODULE.model.retrofit.PlayerDTO;
 import com.szb.ARMODULE.network.NetworkClient;
 import com.unity3d.player.*;
 import android.app.Activity;
-import android.content.Intent;
 import android.content.res.Configuration;
 import android.graphics.PixelFormat;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.MotionEvent;
-import android.view.View;
 import android.view.Window;
-import android.view.WindowManager;
 import android.widget.Button;
 
 import retrofit2.Call;

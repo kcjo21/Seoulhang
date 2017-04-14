@@ -16,6 +16,9 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.engine.DiskCacheStrategy;
+import com.bumptech.glide.request.target.GlideDrawableImageViewTarget;
 import com.szb.ARMODULE.GameActivity;
 import com.szb.ARMODULE.R;
 
@@ -34,6 +37,10 @@ public class Home_Main extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_main);
+
+        ImageView run = (ImageView)findViewById(R.id.runing);
+        GlideDrawableImageViewTarget imageViewTarget = new GlideDrawableImageViewTarget(run);
+        Glide.with(this).load(R.raw.run).diskCacheStrategy(DiskCacheStrategy.SOURCE).into(imageViewTarget);
 
         backPressCloseHandler = new BackPressCloseHandler(this); //뒤로가기 이벤트 핸들러
 
@@ -159,10 +166,10 @@ public class Home_Main extends AppCompatActivity {
 
     }
 
-    @Override
-    public void onBackPressed() {
-        backPressCloseHandler.onBackPressed();
+    @Override public void onBackPressed() {
+         backPressCloseHandler.onBackPressed();
     }
+
 
 
 

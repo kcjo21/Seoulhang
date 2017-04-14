@@ -4,7 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.widget.Toast;
 
-import com.szb.ARMODULE.MainActivity;
+import com.szb.ARMODULE.start_pack.MainActivity;
 
 public class BackPressCloseHandler {           //백키 핸들러
     private long backKeyPressedTime = 0;
@@ -26,9 +26,6 @@ public class BackPressCloseHandler {           //백키 핸들러
         }
         if (System.currentTimeMillis() <= backKeyPressedTime + 2000) {
             toast.cancel();
-            Intent t = new Intent(activity, MainActivity.class);
-            activity.startActivity(t);
-
             activity.moveTaskToBack(true);
             activity.finish();
 
