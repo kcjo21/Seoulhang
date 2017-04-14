@@ -19,7 +19,7 @@ public class SplashActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         ImageView run = (ImageView)findViewById(R.id.run);
         GlideDrawableImageViewTarget imageViewTarget = new GlideDrawableImageViewTarget(run);
-        Glide.with(this).load(R.raw.run).diskCacheStrategy(DiskCacheStrategy.SOURCE).into(imageViewTarget);
+        Glide.with(this).load(R.raw.run_gbg).diskCacheStrategy(DiskCacheStrategy.SOURCE).into(imageViewTarget);
         Handler s = new Handler();
         s.postDelayed(new splashhanddler(),3000);
     }
