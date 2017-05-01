@@ -8,6 +8,6 @@ public class GameActivity extends UnityPlayerActivity {
     protected void onCreate(Bundle arg0) {
         // TODO Auto-generated method stub
         super.onCreate(arg0);
-        Log.d("Unity", "Unity started");
+
     }
 }

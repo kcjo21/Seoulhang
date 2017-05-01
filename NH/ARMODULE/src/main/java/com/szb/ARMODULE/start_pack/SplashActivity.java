@@ -17,13 +17,16 @@ public class SplashActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         setContentView(R.layout.splash);
         super.onCreate(savedInstanceState);
-        ImageView run = (ImageView)findViewById(R.id.run);
-        GlideDrawableImageViewTarget imageViewTarget = new GlideDrawableImageViewTarget(run);
-        Glide.with(this).load(R.raw.run_gbg).diskCacheStrategy(DiskCacheStrategy.SOURCE).into(imageViewTarget);
+        ImageView run = (ImageView)findViewById(R.id.running_man);
+        ImageView load =  (ImageView)findViewById(R.id.load);
+        GlideDrawableImageViewTarget ivt_1 = new GlideDrawableImageViewTarget(run);
+        GlideDrawableImageViewTarget ivt_2 = new GlideDrawableImageViewTarget(load);
+        Glide.with(this).load(R.raw.run_gbg).diskCacheStrategy(DiskCacheStrategy.SOURCE).into(ivt_1);
+        Glide.with(this).load(R.raw.title_loading).diskCacheStrategy(DiskCacheStrategy.SOURCE).into(ivt_2);
         Handler s = new Handler();
         s.postDelayed(new splashhanddler(),3000);
     }
-    class splashhanddler implements Runnable{
+    private class splashhanddler implements Runnable{
         @Override
         public void run() {
             startActivity(

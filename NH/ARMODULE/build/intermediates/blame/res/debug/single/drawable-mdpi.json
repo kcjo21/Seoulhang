@@ -4,8 +4,20 @@
         "source": "C:\\Users\\cwh62\\Documents\\GitHub\\Nolhang\\NH\\ARMODULE\\src\\main\\res\\drawable-mdpi\\title_t.png"
     },
     {
+        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\Nolhang\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\free.png",
+        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\Nolhang\\NH\\ARMODULE\\src\\main\\res\\drawable-mdpi\\free.png"
+    },
+    {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\Nolhang\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\quiz_2.png",
         "source": "C:\\Users\\cwh62\\Documents\\GitHub\\Nolhang\\NH\\ARMODULE\\src\\main\\res\\drawable-mdpi\\quiz_2.png"
+    },
+    {
+        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\Nolhang\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\tajimahal.png",
+        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\Nolhang\\NH\\ARMODULE\\src\\main\\res\\drawable-mdpi\\tajimahal.png"
+    },
+    {
+        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\Nolhang\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\col2.png",
+        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\Nolhang\\NH\\ARMODULE\\src\\main\\res\\drawable-mdpi\\col2.png"
     },
     {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\Nolhang\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\camera.png",
@@ -24,6 +36,14 @@
         "source": "C:\\Users\\cwh62\\Documents\\GitHub\\Nolhang\\NH\\ARMODULE\\src\\main\\res\\drawable-mdpi\\info_2.png"
     },
     {
+        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\Nolhang\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\col.png",
+        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\Nolhang\\NH\\ARMODULE\\src\\main\\res\\drawable-mdpi\\col.png"
+    },
+    {
+        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\Nolhang\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\eiffel.png",
+        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\Nolhang\\NH\\ARMODULE\\src\\main\\res\\drawable-mdpi\\eiffel.png"
+    },
+    {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\Nolhang\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\home_2.png",
         "source": "C:\\Users\\cwh62\\Documents\\GitHub\\Nolhang\\NH\\ARMODULE\\src\\main\\res\\drawable-mdpi\\home_2.png"
     },
@@ -40,7 +60,15 @@
         "source": "C:\\Users\\cwh62\\Documents\\GitHub\\Nolhang\\NH\\ARMODULE\\src\\main\\res\\drawable-mdpi\\rank_1.png"
     },
     {
+        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\Nolhang\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\tower.png",
+        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\Nolhang\\NH\\ARMODULE\\src\\main\\res\\drawable-mdpi\\tower.png"
+    },
+    {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\Nolhang\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\home_1.png",
         "source": "C:\\Users\\cwh62\\Documents\\GitHub\\Nolhang\\NH\\ARMODULE\\src\\main\\res\\drawable-mdpi\\home_1.png"
+    },
+    {
+        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\Nolhang\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\namdaemoon.png",
+        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\Nolhang\\NH\\ARMODULE\\src\\main\\res\\drawable-mdpi\\namdaemoon.png"
     }
 ]

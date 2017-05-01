@@ -5,11 +5,52 @@
     android:id="@+id/con"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/background_light"
+    android:background="@drawable/bg_main"
     tools:context=".start_pack.MainActivity"
     tools:layout_editor_absoluteX="0dp"
     tools:layout_editor_absoluteY="25dp">
 
+
+    <ImageView
+        android:id="@+id/travel"
+        android:layout_width="142dp"
+        android:layout_height="117dp"
+        android:translationX="-20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.695"
+        tools:ignore="ContentDescription" />
+
+    <ImageView
+        android:id="@+id/running_man"
+        android:layout_width="60dp"
+        android:layout_height="62dp"
+        android:scaleType="fitStart"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.931"
+        app:srcCompat="@android:color/background_light"
+        tools:ignore="ContentDescription" />
+
+    <ImageView
+        android:id="@+id/title_t"
+        android:layout_width="349dp"
+        android:layout_height="267dp"
+        android:background="@drawable/title_t"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.108"
+        tools:ignore="ContentDescription,NotSibling" />
 
     <Button
         android:id="@+id/Login"
@@ -20,21 +61,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/title_t"
         app:layout_constraintVertical_bias="0.73"
         tools:ignore="RtlHardcoded" />
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="300dp"
-        android:layout_height="215dp"
-        android:background="@drawable/title_t"
-        android:visibility="visible"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.108"
-        tools:ignore="ContentDescription,NotSibling" />
 
 </android.support.constraint.ConstraintLayout>

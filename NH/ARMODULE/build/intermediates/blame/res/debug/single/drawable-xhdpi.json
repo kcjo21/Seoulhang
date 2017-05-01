@@ -4,8 +4,16 @@
         "source": "C:\\Users\\cwh62\\Documents\\GitHub\\Nolhang\\NH\\ARMODULE\\src\\main\\res\\drawable-xhdpi\\backtitle.png"
     },
     {
+        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\Nolhang\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\bg_main.png",
+        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\Nolhang\\NH\\ARMODULE\\src\\main\\res\\drawable-xhdpi\\bg_main.png"
+    },
+    {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\Nolhang\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\title.png",
         "source": "C:\\Users\\cwh62\\Documents\\GitHub\\Nolhang\\NH\\ARMODULE\\src\\main\\res\\drawable-xhdpi\\title.png"
+    },
+    {
+        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\Nolhang\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\title_hs.png",
+        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\Nolhang\\NH\\ARMODULE\\src\\main\\res\\drawable-xhdpi\\title_hs.png"
     },
     {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\Nolhang\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\app_banner.png",
