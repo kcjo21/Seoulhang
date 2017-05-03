@@ -55,14 +55,32 @@
     <Button
         android:id="@+id/Login"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginBottom="8dp"
         android:background="@android:color/background_light"
         android:text="@string/Login"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/title_t"
-        app:layout_constraintVertical_bias="0.73"
+        app:layout_constraintVertical_bias="0.611"
         tools:ignore="RtlHardcoded" />
+
+    <EditText
+        android:id="@+id/loginId"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="31dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:textColor="@color/cardview_shadow_start_color"
+        android:textColorLink="@color/cardview_shadow_start_color"
+        android:textStyle="italic"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title_t"
+        tools:text="Insert code" />
 
 </android.support.constraint.ConstraintLayout>

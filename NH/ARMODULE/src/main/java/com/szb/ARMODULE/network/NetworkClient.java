@@ -3,6 +3,7 @@ package com.szb.ARMODULE.network;
 import android.util.Log;
 
 import com.szb.ARMODULE.model.retrofit.PlayerDTO;
+import com.szb.ARMODULE.model.retrofit.QuestDTO;
 
 import java.util.concurrent.TimeUnit;
 
@@ -47,4 +48,10 @@ public class NetworkClient {
         Call<PlayerDTO> call = service.login(player);
         call.enqueue(cb);
     }
+
+    public void getregioncode(String player, int region, Callback<QuestDTO> callback){
+        Call <QuestDTO> call = service.getregioncode(player,region);
+        call.enqueue(callback);
+    }
+
 }

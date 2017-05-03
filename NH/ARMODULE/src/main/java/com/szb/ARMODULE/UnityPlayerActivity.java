@@ -1,5 +1,8 @@
 package com.szb.ARMODULE;
 
+import com.szb.ARMODULE.Home.managerpackage.QuestManager;
+import com.szb.ARMODULE.model.database.Quest;
+import com.szb.ARMODULE.model.retrofit.QuestDTO;
 import com.szb.ARMODULE.start_pack.loginpackage.LoginManager;
 import com.szb.ARMODULE.model.retrofit.PlayerDTO;
 import com.szb.ARMODULE.network.NetworkClient;
@@ -20,9 +23,9 @@ import retrofit2.Response;
 
 public class UnityPlayerActivity extends Activity
 {
-	Button btnSignin;
+
 	LoginManager loginmanager;
-	String loginid = "jpark426";
+	String playerid = "jpark";
 	protected UnityPlayer mUnityPlayer; // don't change the name of this variable; referenced from native code
 
 	// Setup activity layout
@@ -38,32 +41,25 @@ public class UnityPlayerActivity extends Activity
 		mUnityPlayer.requestFocus();
 	}
 	public void onTouch(String ObjName){
-
+		int region = Integer.parseInt(ObjName);
 		loginmanager = LoginManager.getInstance();
 
-		NetworkClient networkClient = NetworkClient.getInstance("http://117.16.197.48:5000");
-
-		networkClient.login(loginid,new Callback<PlayerDTO>() {
+		NetworkClient networkClient = NetworkClient.getInstance("http://192.168.129.129:5000");
+		networkClient.getregioncode(playerid, region, new Callback <QuestDTO>() {
 			@Override
-			public void onResponse(Call<PlayerDTO> call, Response<PlayerDTO> response) {
+			public void onResponse(Call<QuestDTO> call, Response<QuestDTO> response) {
 				switch (response.code()){
 					case 200:
 						//json 데이터를 파싱하는 것을 수월하게 해준다.
-
-						PlayerDTO playerDTO = response.body();
-
-						Log.e("TAG", "team dto : " + playerDTO.toString());
-						// teamDTO를 이용하여 realm에 team 데이터를 생성한다.
-						loginmanager.create(playerDTO);
+						QuestDTO questDTO = response.body();
 						break;
-
 					default:
 						break;
 				}
 			}
 
 			@Override
-			public void onFailure(Call<PlayerDTO> call, Throwable t) {
+			public void onFailure(Call<QuestDTO> call, Throwable t) {
 				Log.e("ACC","s?? " + t.getMessage());
 
 			}

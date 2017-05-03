@@ -20,6 +20,10 @@ import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.bumptech.glide.request.target.GlideDrawableImageViewTarget;
 import com.szb.ARMODULE.GameActivity;
+import com.szb.ARMODULE.Home.frag.Frag_Home;
+import com.szb.ARMODULE.Home.frag.Frag_Info;
+import com.szb.ARMODULE.Home.frag.Frag_Quiz;
+import com.szb.ARMODULE.Home.frag.Frag_Rank;
 import com.szb.ARMODULE.R;
 
 
@@ -196,9 +200,12 @@ public class Home_Main extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
+        Bundle extras = getIntent().getExtras();
+        String playerid=extras.getString("playerid");
         int id = item.getItemId();
         if (id == R.id.camera_button) {
-            Intent intent = new Intent(this, GameActivity.class);
+            Intent intent = new Intent(Home_Main.this,GameActivity.class);
+            intent.putExtra("playerid",playerid);
             startActivity(intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK));
             return true;
         }

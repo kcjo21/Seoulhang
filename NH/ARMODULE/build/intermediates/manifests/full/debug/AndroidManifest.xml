@@ -87,9 +87,6 @@
             android:required="false" />
 
         <activity
-            android:name="com.szb.ARMODULE.start_pack.loginpackage.Login"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
-        <activity
             android:name="com.szb.ARMODULE.GameActivity"
             android:launchMode="singleTask"
             android:process=":unityplayer"
