@@ -64,7 +64,11 @@ public class MainActivity extends Activity {
         Login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                loginid = loginId.getText().toString();
+                loginid = "123";
+                Intent intent = new Intent(MainActivity.this,Home_Main.class);
+                intent.putExtra("playerid",loginid);
+                startActivity(intent);
+                finish();
 
                 networkClient = NetworkClient.getInstance("http://192.168.0.23:5000");
 
@@ -86,6 +90,7 @@ public class MainActivity extends Activity {
                                 startActivity(intent);
                                 finish();
                                 break;
+
 
                             default:
                                 Log.e("TAG", "다른 아이디");

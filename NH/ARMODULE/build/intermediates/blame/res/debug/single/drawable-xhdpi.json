@@ -1,5 +1,33 @@
 [
     {
+        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\Nolhang\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\info_2.png",
+        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\Nolhang\\NH\\ARMODULE\\src\\main\\res\\drawable-xhdpi\\info_2.png"
+    },
+    {
+        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\Nolhang\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\title_t.png",
+        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\Nolhang\\NH\\ARMODULE\\src\\main\\res\\drawable-xhdpi\\title_t.png"
+    },
+    {
+        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\Nolhang\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\quiz_1.png",
+        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\Nolhang\\NH\\ARMODULE\\src\\main\\res\\drawable-xhdpi\\quiz_1.png"
+    },
+    {
+        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\Nolhang\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\camera.png",
+        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\Nolhang\\NH\\ARMODULE\\src\\main\\res\\drawable-xhdpi\\camera.png"
+    },
+    {
+        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\Nolhang\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\home_1.png",
+        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\Nolhang\\NH\\ARMODULE\\src\\main\\res\\drawable-xhdpi\\home_1.png"
+    },
+    {
+        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\Nolhang\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\app_banner.png",
+        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\Nolhang\\NH\\ARMODULE\\src\\main\\res\\drawable-xhdpi\\app_banner.png"
+    },
+    {
+        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\Nolhang\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\tapbar.png",
+        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\Nolhang\\NH\\ARMODULE\\src\\main\\res\\drawable-xhdpi\\tapbar.png"
+    },
+    {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\Nolhang\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\backtitle.png",
         "source": "C:\\Users\\cwh62\\Documents\\GitHub\\Nolhang\\NH\\ARMODULE\\src\\main\\res\\drawable-xhdpi\\backtitle.png"
     },
@@ -8,23 +36,67 @@
         "source": "C:\\Users\\cwh62\\Documents\\GitHub\\Nolhang\\NH\\ARMODULE\\src\\main\\res\\drawable-xhdpi\\bg_main.png"
     },
     {
+        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\Nolhang\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\col2.png",
+        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\Nolhang\\NH\\ARMODULE\\src\\main\\res\\drawable-xhdpi\\col2.png"
+    },
+    {
+        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\Nolhang\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\eiffel.png",
+        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\Nolhang\\NH\\ARMODULE\\src\\main\\res\\drawable-xhdpi\\eiffel.png"
+    },
+    {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\Nolhang\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\title.png",
         "source": "C:\\Users\\cwh62\\Documents\\GitHub\\Nolhang\\NH\\ARMODULE\\src\\main\\res\\drawable-xhdpi\\title.png"
+    },
+    {
+        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\Nolhang\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\app_icon.png",
+        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\Nolhang\\NH\\ARMODULE\\src\\main\\res\\drawable-xhdpi\\app_icon.png"
+    },
+    {
+        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\Nolhang\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\tajimahal.png",
+        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\Nolhang\\NH\\ARMODULE\\src\\main\\res\\drawable-xhdpi\\tajimahal.png"
+    },
+    {
+        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\Nolhang\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\tower.png",
+        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\Nolhang\\NH\\ARMODULE\\src\\main\\res\\drawable-xhdpi\\tower.png"
+    },
+    {
+        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\Nolhang\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\quiz_2.png",
+        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\Nolhang\\NH\\ARMODULE\\src\\main\\res\\drawable-xhdpi\\quiz_2.png"
+    },
+    {
+        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\Nolhang\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\rank_1.png",
+        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\Nolhang\\NH\\ARMODULE\\src\\main\\res\\drawable-xhdpi\\rank_1.png"
+    },
+    {
+        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\Nolhang\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\col.png",
+        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\Nolhang\\NH\\ARMODULE\\src\\main\\res\\drawable-xhdpi\\col.png"
     },
     {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\Nolhang\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\title_hs.png",
         "source": "C:\\Users\\cwh62\\Documents\\GitHub\\Nolhang\\NH\\ARMODULE\\src\\main\\res\\drawable-xhdpi\\title_hs.png"
     },
     {
-        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\Nolhang\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\app_banner.png",
-        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\Nolhang\\NH\\ARMODULE\\src\\main\\res\\drawable-xhdpi\\app_banner.png"
+        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\Nolhang\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\rank_2.png",
+        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\Nolhang\\NH\\ARMODULE\\src\\main\\res\\drawable-xhdpi\\rank_2.png"
+    },
+    {
+        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\Nolhang\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\home_2.png",
+        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\Nolhang\\NH\\ARMODULE\\src\\main\\res\\drawable-xhdpi\\home_2.png"
     },
     {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\Nolhang\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\bg_load.png",
         "source": "C:\\Users\\cwh62\\Documents\\GitHub\\Nolhang\\NH\\ARMODULE\\src\\main\\res\\drawable-xhdpi\\bg_load.png"
     },
     {
-        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\Nolhang\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\tapbar.png",
-        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\Nolhang\\NH\\ARMODULE\\src\\main\\res\\drawable-xhdpi\\tapbar.png"
+        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\Nolhang\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\free.png",
+        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\Nolhang\\NH\\ARMODULE\\src\\main\\res\\drawable-xhdpi\\free.png"
+    },
+    {
+        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\Nolhang\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\info_1.png",
+        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\Nolhang\\NH\\ARMODULE\\src\\main\\res\\drawable-xhdpi\\info_1.png"
+    },
+    {
+        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\Nolhang\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\namdaemoon.png",
+        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\Nolhang\\NH\\ARMODULE\\src\\main\\res\\drawable-xhdpi\\namdaemoon.png"
     }
 ]

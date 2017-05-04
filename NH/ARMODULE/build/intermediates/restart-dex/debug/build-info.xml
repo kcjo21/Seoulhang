@@ -6,7 +6,7 @@
     density="420dpi"
     format="10"
     plugin-version="2.3.1"
-    timestamp="1493714215476"
+    timestamp="1493883335614"
     token="-4191092472353378267"
     verifier="COLD_SWAP_REQUESTED" >
 
@@ -25,11 +25,8 @@
 
     <build
         build-mode="FULL"
-        timestamp="1493712779044"
+        timestamp="1493882920764"
         verifier="FULL_BUILD_REQUESTED" >
-        <artifact
-            location="C:\Users\cwh62\Documents\GitHub\Nolhang\NH\ARMODULE\build\intermediates\split-apk\debug\slices\slice_1.apk"
-            type="SPLIT" />
         <artifact
             location="C:\Users\cwh62\Documents\GitHub\Nolhang\NH\ARMODULE\build\intermediates\split-apk\debug\slices\slice_2.apk"
             type="SPLIT" />
@@ -49,6 +46,9 @@
             location="C:\Users\cwh62\Documents\GitHub\Nolhang\NH\ARMODULE\build\intermediates\split-apk\debug\slices\slice_0.apk"
             type="SPLIT" />
         <artifact
+            location="C:\Users\cwh62\Documents\GitHub\Nolhang\NH\ARMODULE\build\intermediates\split-apk\debug\slices\slice_1.apk"
+            type="SPLIT" />
+        <artifact
             location="C:\Users\cwh62\Documents\GitHub\Nolhang\NH\ARMODULE\build\intermediates\split-apk\debug\dep\dependencies.apk"
             type="SPLIT" />
         <artifact
@@ -66,15 +66,7 @@
     </build>
     <build
         build-mode="COLD"
-        timestamp="1493713812308"
-        verifier="COLD_SWAP_REQUESTED" >
-        <artifact
-            location="C:\Users\cwh62\Documents\GitHub\Nolhang\NH\ARMODULE\build\intermediates\split-apk\debug\slices\slice_0.apk"
-            type="SPLIT" />
-    </build>
-    <build
-        build-mode="COLD"
-        timestamp="1493714081880"
+        timestamp="1493883215349"
         verifier="COLD_SWAP_REQUESTED" >
         <artifact
             location="C:\Users\cwh62\Documents\GitHub\Nolhang\NH\ARMODULE\build\intermediates\split-apk\debug\slices\slice_1.apk"
@@ -82,7 +74,15 @@
     </build>
     <build
         build-mode="COLD"
-        timestamp="1493714215476"
+        timestamp="1493883292758"
+        verifier="COLD_SWAP_REQUESTED" >
+        <artifact
+            location="C:\Users\cwh62\Documents\GitHub\Nolhang\NH\ARMODULE\build\outputs\apk\ARMODULE-debug.apk"
+            type="SPLIT_MAIN" />
+    </build>
+    <build
+        build-mode="COLD"
+        timestamp="1493883335614"
         verifier="COLD_SWAP_REQUESTED" />
 
 </instant-run>

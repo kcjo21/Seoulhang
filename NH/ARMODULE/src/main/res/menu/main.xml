@@ -7,12 +7,5 @@
         android:icon="@drawable/camera"
         android:title="@string/ARCam"
         app:showAsAction="ifRoom" />
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/t_Text"
-        android:text="q"
-        android:background="#000000"
-        tools:ignore="HardcodedText" />
 
 </menu>

@@ -26,21 +26,22 @@ import com.szb.ARMODULE.Home.frag.Frag_Quiz;
 import com.szb.ARMODULE.Home.frag.Frag_Rank;
 import com.szb.ARMODULE.R;
 
-
 public class Home_Main extends AppCompatActivity {
 
     ViewPager viewpager;
     ConstraintLayout top;
-
     Toolbar toolbar;
     DrawerLayout dlDrawer;
     ActionBarDrawerToggle dtToggle;
     private BackPressCloseHandler backPressCloseHandler;
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_main);
+
 
         ImageView run = (ImageView)findViewById(R.id.runing);
         GlideDrawableImageViewTarget imageViewTarget = new GlideDrawableImageViewTarget(run);
@@ -215,6 +216,8 @@ public class Home_Main extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
+
 
 }
 

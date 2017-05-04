@@ -14,4 +14,7 @@
     <string name="open_drawer">open draweropen draweropen draweropen draweropen draweropen drawer</string>
     <string name="close_drawer">close drawerclose drawerclose drawerclose drawerclose drawer</string>
     <string name="nolhang">NOLHANG</string>
+    <string name="insert_quiz">Insert Quiz</string>
+    <string name="region">Region</string>
+    <string name="num">num</string>
 </resources>
