@@ -1,18 +1,22 @@
 package com.szb.ARMODULE.model.database;
 
-import com.google.gson.annotations.SerializedName;
+
 
 /**
  * Created by cwh62 on 2017-05-02.
  */
+import io.realm.RealmObject;
 
-public class Quest {
+public class Quest extends RealmObject{
 
     private String question;
     private String answer;
     private int questioncode;
     private int regioncode;
     private String contenttype;
+    private int qresult;
+
+    public int getQresult() { return this.qresult;}
 
     public String getContenttype() {
         return this.contenttype;
@@ -35,6 +39,8 @@ public class Quest {
     }
 
 
+    public void setQresult(int result) { this.qresult = result;}
+
     public void setContenttype(String contenttype) {
         this.contenttype = contenttype;
     }
@@ -54,4 +60,5 @@ public class Quest {
     public void setRegioncode(int regioncode) {
         this.regioncode = regioncode;
     }
+
 }

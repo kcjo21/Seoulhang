@@ -1,626 +1,234 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="?android:attr/colorLongPressedHighlight"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:weightSum="100">
 
-    <ScrollView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="0dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_weight="3"
+        android:orientation="horizontal"
+        android:weightSum="100">
 
-        <LinearLayout
+        <TextView
+            android:id="@+id/grade"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="15"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="@string/등급"
+            android:textColor="@android:color/black"
+            android:textSize="14dp"
+            tools:ignore="NestedWeights,SpUsage" />
+
+        <TextView
+            android:id="@+id/playercode"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="25"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="@string/코드번호"
+            android:textColor="@android:color/black"
+            android:textSize="14dp"
+            tools:ignore="SpUsage" />
+
+        <TextView
+            android:id="@+id/playernick"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="30"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="@string/닉네임"
+            android:textColor="@android:color/black"
+            android:textSize="14dp"
+            tools:ignore="SpUsage" />
+
+        <TextView
+            android:id="@+id/point"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="15"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="@string/점수"
+            android:textColor="@android:color/black"
+            android:textSize="14dp"
+            tools:ignore="SpUsage" />
+
+        <TextView
+            android:id="@+id/hint"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="15"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="@string/남은힌트"
+            android:textColor="@android:color/black"
+            android:textSize="14dp"
+            tools:ignore="SpUsage" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="2dp"
+        android:layout_weight="8"
+        android:background="@color/SKYBLUE"
+        android:orientation="horizontal"
+        android:weightSum="100">
+
+        <ImageView
+            android:id="@+id/info_grade"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="15"
+            android:gravity="center_vertical|center_horizontal"
+            android:textColor="@android:color/black"
+            android:textSize="14dp"
+            tools:ignore="NestedWeights,SpUsage" />
+
+        <TextView
+            android:id="@+id/info_code"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="25"
+            android:gravity="center_vertical|center_horizontal"
+            android:textColor="@android:color/black"
+            android:textSize="18dp"
+            tools:ignore="SpUsage" />
+
+        <TextView
+            android:id="@+id/info_name"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="30"
+            android:gravity="center_vertical|center_horizontal"
+            android:textColor="@android:color/black"
+            android:textSize="18dp"
+            tools:ignore="SpUsage" />
+
+        <TextView
+            android:id="@+id/info_point"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="15"
+            android:gravity="center_vertical|center_horizontal"
+            android:textColor="@android:color/black"
+            android:textSize="20dp"
+            tools:ignore="SpUsage" />
+
+        <TextView
+            android:id="@+id/info_hint"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="15"
+            android:gravity="center_vertical|center_horizontal"
+            android:textColor="@android:color/black"
+            android:textSize="24dp"
+            tools:ignore="SpUsage" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.5"
+        android:background="@color/Carkviewline"
+        android:orientation="horizontal"></LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_weight="4"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/solved"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:gravity="center_vertical"
+            android:text="@string/해결한문제"
+            android:textColor="@android:color/black"
+            android:textSize="14dp"
+            tools:ignore="DuplicateIds,RtlHardcoded,SpUsage" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="39"
+        android:orientation="horizontal"
+        android:weightSum="100">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rvi"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="100"
+            android:visibility="visible"
+            tools:ignore="NestedWeights" />
+
+        <TextView
+            android:id="@+id/no_quiz"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="100"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="@string/현재해결한문제없음"
+            android:textSize="30dp"
+            android:visibility="gone"
+            tools:ignore="SpUsage" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.5"
+        android:background="@color/Carkviewline"
+        android:orientation="horizontal"></LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_weight="4"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/rate"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:gravity="center_vertical"
+            android:text="@string/지역별달성률"
+            android:textColor="@android:color/black"
+            android:textSize="14dp"
+            tools:ignore="RtlHardcoded,SpUsage" />
+    </LinearLayout>
+
+    <ExpandableListView
+        android:id="@+id/exl"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_weight="39"
+        android:scrollbars="none" />
 
-            <TextView
-                android:id="@+id/textView83"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="HELLO"
-                android:textColor="@android:color/background_dark"
-                android:textScaleX="5" />
-
-            <TextView
-                android:id="@+id/textView82"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="HELLO"
-                android:textColor="@android:color/background_dark"
-                android:textScaleX="5" />
-
-            <TextView
-                android:id="@+id/textView81"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="HELLO"
-                android:textColor="@android:color/background_dark"
-                android:textScaleX="5" />
-
-            <TextView
-                android:id="@+id/textView80"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="HELLO"
-                android:textColor="@android:color/background_dark"
-                android:textScaleX="5" />
-
-            <TextView
-                android:id="@+id/textView79"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="HELLO"
-                android:textColor="@android:color/background_dark"
-                android:textScaleX="5" />
-
-            <TextView
-                android:id="@+id/textView78"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="HELLO"
-                android:textColor="@android:color/background_dark"
-                android:textScaleX="5" />
-
-            <TextView
-                android:id="@+id/textView77"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="HELLO"
-                android:textColor="@android:color/background_dark"
-                android:textScaleX="5" />
-
-            <TextView
-                android:id="@+id/textView76"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="HELLO"
-                android:textColor="@android:color/background_dark"
-                android:textScaleX="5" />
-
-            <TextView
-                android:id="@+id/textView75"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="HELLO"
-                android:textColor="@android:color/background_dark"
-                android:textScaleX="5" />
-
-            <TextView
-                android:id="@+id/textView74"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="HELLO"
-                android:textColor="@android:color/background_dark"
-                android:textScaleX="5" />
-
-            <TextView
-                android:id="@+id/textView73"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="HELLO"
-                android:textColor="@android:color/background_dark"
-                android:textScaleX="5" />
-
-            <TextView
-                android:id="@+id/textView72"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="HELLO"
-                android:textColor="@android:color/background_dark"
-                android:textScaleX="5" />
-
-            <TextView
-                android:id="@+id/textView71"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="HELLO"
-                android:textColor="@android:color/background_dark"
-                android:textScaleX="5" />
-
-            <TextView
-                android:id="@+id/textView70"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="HELLO"
-                android:textColor="@android:color/background_dark"
-                android:textScaleX="5" />
-
-            <TextView
-                android:id="@+id/textView69"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="HELLO"
-                android:textColor="@android:color/background_dark"
-                android:textScaleX="5" />
-
-            <TextView
-                android:id="@+id/textView68"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="HELLO"
-                android:textColor="@android:color/background_dark"
-                android:textScaleX="5" />
-
-            <TextView
-                android:id="@+id/textView67"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="HELLO"
-                android:textColor="@android:color/background_dark"
-                android:textScaleX="5" />
-
-            <TextView
-                android:id="@+id/textView66"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="HELLO"
-                android:textColor="@android:color/background_dark"
-                android:textScaleX="5" />
-
-            <TextView
-                android:id="@+id/textView65"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="HELLO"
-                android:textColor="@android:color/background_dark"
-                android:textScaleX="5" />
-
-            <TextView
-                android:id="@+id/textView64"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="HELLO"
-                android:textColor="@android:color/background_dark"
-                android:textScaleX="5" />
-
-            <TextView
-                android:id="@+id/textView63"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="HELLO"
-                android:textColor="@android:color/background_dark"
-                android:textScaleX="5" />
-
-            <TextView
-                android:id="@+id/textView62"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="HELLO"
-                android:textColor="@android:color/background_dark"
-                android:textScaleX="5" />
-
-            <TextView
-                android:id="@+id/textView61"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="HELLO"
-                android:textColor="@android:color/background_dark"
-                android:textScaleX="5" />
-
-            <TextView
-                android:id="@+id/textView60"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="HELLO"
-                android:textColor="@android:color/background_dark"
-                android:textScaleX="5" />
-
-            <TextView
-                android:id="@+id/textView59"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="HELLO"
-                android:textColor="@android:color/background_dark"
-                android:textScaleX="5" />
-
-            <TextView
-                android:id="@+id/textView58"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="HELLO"
-                android:textColor="@android:color/background_dark"
-                android:textScaleX="5" />
-
-            <TextView
-                android:id="@+id/textView57"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="HELLO"
-                android:textColor="@android:color/background_dark"
-                android:textScaleX="5" />
-
-            <TextView
-                android:id="@+id/textView56"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="HELLO"
-                android:textColor="@android:color/background_dark"
-                android:textScaleX="5" />
-
-            <TextView
-                android:id="@+id/textView55"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="HELLO"
-                android:textColor="@android:color/background_dark"
-                android:textScaleX="5" />
-
-            <TextView
-                android:id="@+id/textView54"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="HELLO"
-                android:textColor="@android:color/background_dark"
-                android:textScaleX="5" />
-
-            <TextView
-                android:id="@+id/textView53"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="HELLO"
-                android:textColor="@android:color/background_dark"
-                android:textScaleX="5" />
-
-            <TextView
-                android:id="@+id/textView52"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="HELLO"
-                android:textColor="@android:color/background_dark"
-                android:textScaleX="5" />
-
-            <TextView
-                android:id="@+id/textView51"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="HELLO"
-                android:textColor="@android:color/background_dark"
-                android:textScaleX="5" />
-
-            <TextView
-                android:id="@+id/textView50"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="HELLO"
-                android:textColor="@android:color/background_dark"
-                android:textScaleX="5" />
-
-            <TextView
-                android:id="@+id/textView49"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="HELLO"
-                android:textColor="@android:color/background_dark"
-                android:textScaleX="5" />
-
-            <TextView
-                android:id="@+id/textView48"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="HELLO"
-                android:textColor="@android:color/background_dark"
-                android:textScaleX="5" />
-
-            <TextView
-                android:id="@+id/textView47"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="HELLO"
-                android:textColor="@android:color/background_dark"
-                android:textScaleX="5" />
-
-            <TextView
-                android:id="@+id/textView46"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="HELLO"
-                android:textColor="@android:color/background_dark"
-                android:textScaleX="5" />
-
-            <TextView
-                android:id="@+id/textView45"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="HELLO"
-                android:textColor="@android:color/background_dark"
-                android:textScaleX="5" />
-
-            <TextView
-                android:id="@+id/textView44"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="HELLO"
-                android:textColor="@android:color/background_dark"
-                android:textScaleX="5" />
-
-            <TextView
-                android:id="@+id/textView43"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="HELLO"
-                android:textColor="@android:color/background_dark"
-                android:textScaleX="5" />
-
-            <TextView
-                android:id="@+id/textView42"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="HELLO"
-                android:textColor="@android:color/background_dark"
-                android:textScaleX="5" />
-
-            <TextView
-                android:id="@+id/textView41"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="HELLO"
-                android:textColor="@android:color/background_dark"
-                android:textScaleX="5" />
-
-            <TextView
-                android:id="@+id/textView40"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="HELLO"
-                android:textColor="@android:color/background_dark"
-                android:textScaleX="5" />
-
-            <TextView
-                android:id="@+id/textView39"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="HELLO"
-                android:textColor="@android:color/background_dark"
-                android:textScaleX="5" />
-
-            <TextView
-                android:id="@+id/textView38"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="HELLO"
-                android:textColor="@android:color/background_dark"
-                android:textScaleX="5" />
-
-            <TextView
-                android:id="@+id/textView37"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="HELLO"
-                android:textColor="@android:color/background_dark"
-                android:textScaleX="5" />
-
-            <TextView
-                android:id="@+id/textView36"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="HELLO"
-                android:textColor="@android:color/background_dark"
-                android:textScaleX="5" />
-
-            <TextView
-                android:id="@+id/textView35"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="HELLO"
-                android:textColor="@android:color/background_dark"
-                android:textScaleX="5" />
-
-            <TextView
-                android:id="@+id/textView34"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="HELLO"
-                android:textColor="@android:color/background_dark"
-                android:textScaleX="5" />
-
-            <TextView
-                android:id="@+id/textView33"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="HELLO"
-                android:textColor="@android:color/background_dark"
-                android:textScaleX="5" />
-
-            <TextView
-                android:id="@+id/textView32"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="HELLO"
-                android:textColor="@android:color/background_dark"
-                android:textScaleX="5" />
-
-            <TextView
-                android:id="@+id/textView31"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="HELLO"
-                android:textColor="@android:color/background_dark"
-                android:textScaleX="5" />
-
-            <TextView
-                android:id="@+id/textView30"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="HELLO"
-                android:textColor="@android:color/background_dark"
-                android:textScaleX="5" />
-
-            <TextView
-                android:id="@+id/textView29"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="HELLO"
-                android:textColor="@android:color/background_dark"
-                android:textScaleX="5" />
-
-            <TextView
-                android:id="@+id/textView28"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="HELLO"
-                android:textColor="@android:color/background_dark"
-                android:textScaleX="5" />
-
-            <TextView
-                android:id="@+id/textView27"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="HELLO"
-                android:textColor="@android:color/background_dark"
-                android:textScaleX="5" />
-
-            <TextView
-                android:id="@+id/textView26"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="HELLO"
-                android:textColor="@android:color/background_dark"
-                android:textScaleX="5" />
-
-            <TextView
-                android:id="@+id/textView25"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="HELLO"
-                android:textColor="@android:color/background_dark"
-                android:textScaleX="5" />
-
-            <TextView
-                android:id="@+id/textView24"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="HELLO"
-                android:textColor="@android:color/background_dark"
-                android:textScaleX="5" />
-
-            <TextView
-                android:id="@+id/textView23"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="HELLO"
-                android:textColor="@android:color/background_dark"
-                android:textScaleX="5" />
-
-            <TextView
-                android:id="@+id/textView22"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="HELLO"
-                android:textColor="@android:color/background_dark"
-                android:textScaleX="5" />
-
-            <TextView
-                android:id="@+id/textView21"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="HELLO"
-                android:textColor="@android:color/background_dark"
-                android:textScaleX="5" />
-
-            <TextView
-                android:id="@+id/textView20"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="HELLO"
-                android:textColor="@android:color/background_dark"
-                android:textScaleX="5" />
-
-            <TextView
-                android:id="@+id/textView19"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="HELLO"
-                android:textColor="@android:color/background_dark"
-                android:textScaleX="5" />
-
-            <TextView
-                android:id="@+id/textView18"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="HELLO"
-                android:textColor="@android:color/background_dark"
-                android:textScaleX="5" />
-
-            <TextView
-                android:id="@+id/textView17"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="HELLO"
-                android:textColor="@android:color/background_dark"
-                android:textScaleX="5" />
-
-            <TextView
-                android:id="@+id/textView16"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="HELLO"
-                android:textColor="@android:color/background_dark"
-                android:textScaleX="5" />
-
-            <TextView
-                android:id="@+id/textView15"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="HELLO"
-                android:textColor="@android:color/background_dark"
-                android:textScaleX="5" />
-
-            <TextView
-                android:id="@+id/textView14"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="HELLO"
-                android:textColor="@android:color/background_dark"
-                android:textScaleX="5" />
-
-            <TextView
-                android:id="@+id/textView13"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="HELLO"
-                android:textColor="@android:color/background_dark"
-                android:textScaleX="5" />
-
-            <TextView
-                android:id="@+id/textView12"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="HELLO"
-                android:textColor="@android:color/background_dark"
-                android:textScaleX="5" />
-
-            <TextView
-                android:id="@+id/textView11"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="HELLO"
-                android:textColor="@android:color/background_dark"
-                android:textScaleX="5" />
-
-            <TextView
-                android:id="@+id/textView10"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="HELLO"
-                android:textColor="@android:color/background_dark"
-                android:textScaleX="5" />
-
-            <TextView
-                android:id="@+id/textView9"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="HELLO"
-                android:textColor="@android:color/background_dark"
-                android:textScaleX="5" />
-
-            <TextView
-                android:id="@+id/textView8"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="HELLO"
-                android:textColor="@android:color/background_dark"
-                android:textScaleX="5" />
-        </LinearLayout>
-    </ScrollView>
 </LinearLayout>

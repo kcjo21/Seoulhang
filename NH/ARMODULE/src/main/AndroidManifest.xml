@@ -7,8 +7,8 @@
     android:versionName="1.0">
 
     <uses-sdk
-        android:minSdkVersion="16"
-        android:targetSdkVersion="22" />
+        android:minSdkVersion="17"
+        android:targetSdkVersion="24" />
 
     <uses-feature android:name="android.hardware.camera" />
 
@@ -43,6 +43,7 @@
 
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
 
     <application
         android:name=".RealmInit"
@@ -68,7 +69,7 @@
             android:name="com.unity3d.player.VideoPlayer"
             android:configChanges="fontScale|keyboard|keyboardHidden|locale|mnc|mcc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|uiMode|touchscreen"
             android:label="@string/app_name"
-            android:screenOrientation="portrait"></activity>
+            android:screenOrientation="portrait" />
         <!--
             To support devices using the TI S3D library for stereo mode we must
             add the following library.
@@ -77,7 +78,7 @@
         <uses-library
             android:name="com.ti.s3d"
             android:required="false" />
-      <!--             To support the ODG R7 in stereo mode we must add the following library. -->
+        <!-- To support the ODG R7 in stereo mode we must add the following library. -->
         <uses-library
             android:name="com.osterhoutgroup.api.ext"
             android:required="false" />
@@ -88,12 +89,13 @@
             android:process=":unityplayer"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
-            android:name=".start_pack.MainActivity"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-        </activity>
-        <activity
             android:name=".Home.Home_Main"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
+            android:configChanges="orientation|keyboard"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".start_pack.MainActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
         <activity
             android:name=".start_pack.SplashActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar">
@@ -103,6 +105,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".start_pack.TutorialActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity android:name=".start_pack.Setting"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
     </application>
 
 </manifest> <!-- android:installLocation="preferExternal" -->

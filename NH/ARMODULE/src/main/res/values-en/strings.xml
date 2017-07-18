@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">NOLHANG</string>
+    <string name="ARCam">ARCam</string>
+    <string name="Signup">Signup</string>
+    <string name="Login">Login</string>
+    <string name="Email">Email</string>
+    <string name="Password">Password</string>
+    <string name="Name">Name</string>
+    <string name="Submit">Submit</string>
+    <string name="Signin">Signin</string>
+    <string name="action_settings">action_settings</string>
+    <string name="please_check_id">Please check your ID</string>
+    <string name="can_not_connent_to_server">Cannot connect Server.</string>
+    <string name="open_drawer">open draweropen draweropen draweropen draweropen draweropen drawer</string>
+    <string name="close_drawer">close drawerclose drawerclose drawerclose drawerclose drawer</string>
+    <string name="nolhang">NOLHANG</string>
+    <string name="insert_quiz">Insert Quiz</string>
+    <string name="region">Region</string>
+    <string name="num">num</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="달성률"><font size="1">Achievement rate </font></string>
+    <string name="닉네임">Name</string>
+    <string name="등급">Tier</string>
+    <string name="순위">Rank</string>
+    <string name="점수">Score</string>
+    <string name="코드번호">Code</string>
+    <string name="남은힌트">Hint</string>
+    <string name="해결한문제">Quiz Solved</string>
+    <string name="지역별달성률">Information by Region</string>
+    <string name="현재해결한문제없음">No Quiz Solved.</string>
+    <string name="코드를입력">Please enter your code.</string>
+    <string name="풀수있는문제없음">You have no Quiz to solve. Please collect new Quizzes</string>
+    <string name="최근문제">New Quiz</string>
+    <string name="정답을입력하세요">Please enter your answer.</string>
+    <string name="내순위">My Rank</string>
+    <string name="환영">Wellcome! %s</string>
+    <string name="홈으로가기">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Go to Home</string>
+    <string name="카메라켜기">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Turn on Camera</string>
+    <string name="등급표">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Tier Information</string>
+    <string name="설정">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Setting</string>
+    <string name="side_닉네임">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Name&#160;:&#160;%s</string>
+    <string name="side_힌트수">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Hint&#160;:&#160;%s</string>
+    <string name="side_등급">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Tier&#160;:&#160;%s</string>
+    <string name="side_점수">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Score&#160;:&#160;%s</string>
+    <string name="side_코드번호">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Code&#160;:&#160;%s</string>
+    <string name="승급">You are Advanced!</string>
+    <string name="정답이다">Correct!</string>
+    <string name="오답">Incorrect..</string>
+    <string name="힌트없음">You have no hint bonus left.</string>
+    <string name="새문제">You got a new quiz!</string>
+    <string name="이미가지고있는문제">You already have got this quiz.</string>
+    <string name="등급차트">Challenger = Score 450 \nMaster = Score 340 \nDiamond = Score 240 \nPlatinum = Score 160 \nGold = Score 90 \nSilver = Score 40 \nBronze = Score 10</string>
+    <string name="설명">Find Target Image and Get a Score.\nThe tier is fixed by Score.\nThe Prize will be provided according to the Rank</string>
+    <string name="등급정보">Tier Infomation</string>
+    <string name="ghkrdls">OK</string>
+    <string name="초보자">Unrank</string>
+    <string name="브론즈">Bronze</string>
+    <string name="실버">Silver</string>
+    <string name="마스터">Master</string>
+    <string name="챌린저">Challenger</string>
+    <string name="플래티넘">Platinum</string>
+    <string name="골드">Gold</string>
+    <string name="다이아몬드">Diamond</string>
+    <string name="점수_0">Score 0</string>
+    <string name="점수_10">Score 10</string>
+    <string name="점수_40">Score 40</string>
+    <string name="점수_90">Score 90</string>
+    <string name="점수_160">Score 160</string>
+    <string name="점수_240">Score 240</string>
+    <string name="점수_340">Score 340</string>
+    <string name="점수_450">Score 450</string>
+</resources>

@@ -5,27 +5,23 @@ package com.szb.ARMODULE.model.retrofit;
  */
 
 import com.google.gson.annotations.SerializedName;
+import com.szb.ARMODULE.start_pack.Setting;
 
 public class PlayerDTO {
     private String id;
-    private String name;
+    private int language;
 
-    private String gender;
-    private int age;
-    private int tel;
 
-    @SerializedName("solve_question_count")
-    private int solvequestioncount;
 
-    @SerializedName("create_time")
-    private int createtime;
 
 
     public String getId() { return id; }
+    public int getLanguage() {return language;}
 
     public void setId(String id) {
         this.id = id;
     }
+    public void setLanguage(int language) {this.language = language;}
 
     @Override
     public String toString(){

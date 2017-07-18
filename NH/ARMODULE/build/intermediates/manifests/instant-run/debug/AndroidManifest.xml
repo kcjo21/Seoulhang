@@ -7,7 +7,7 @@
     android:versionName="1.0" >
 
     <uses-sdk
-        android:minSdkVersion="16"
+        android:minSdkVersion="17"
         android:targetSdkVersion="25" />
 
     <uses-feature android:name="android.hardware.camera" />
@@ -43,6 +43,7 @@
 
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
 
     <meta-data
         android:name="android.support.VERSION"
@@ -92,11 +93,12 @@
             android:process=":unityplayer"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
-            android:name="com.szb.ARMODULE.start_pack.MainActivity"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
-        </activity>
-        <activity
             android:name="com.szb.ARMODULE.Home.Home_Main"
+            android:configChanges="orientation|keyboard"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="com.szb.ARMODULE.start_pack.MainActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
             android:name="com.szb.ARMODULE.start_pack.SplashActivity"
@@ -107,6 +109,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name="com.szb.ARMODULE.start_pack.TutorialActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name="com.szb.ARMODULE.start_pack.Setting"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
 
         <provider
             android:name="com.android.tools.fd.runtime.InstantRunContentProvider"

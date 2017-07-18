@@ -12,13 +12,14 @@
         android:layout_width="202dp"
         android:layout_height="128dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.612"
-        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintHorizontal_bias="0.113"
+        app:layout_constraintLeft_toLeftOf="@+id/running_man"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/running_man"
-        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintVertical_bias="0.022"
         app:srcCompat="@android:color/background_light"
-        tools:ignore="ContentDescription" />
+        tools:ignore="ContentDescription"
+        android:layout_marginTop="8dp" />
 
     <ImageView
         android:id="@+id/running_man"
@@ -28,9 +29,9 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.443"
         app:srcCompat="@android:color/background_light"
         tools:ignore="ContentDescription"
-        app:layout_constraintHorizontal_bias="0.453" />
+        app:layout_constraintVertical_bias="0.439"
+        app:layout_constraintHorizontal_bias="0.502" />
 
 </android.support.constraint.ConstraintLayout>

@@ -24,8 +24,7 @@ import retrofit2.Response;
 public class UnityPlayerActivity extends Activity
 {
 
-	LoginManager loginmanager;
-	String playerid = "jpark";
+	QuestManager questmanager;
 	protected UnityPlayer mUnityPlayer; // don't change the name of this variable; referenced from native code
 
 	// Setup activity layout
@@ -42,7 +41,9 @@ public class UnityPlayerActivity extends Activity
 	}
 	public void onTouch(String ObjName){
 		int region = Integer.parseInt(ObjName);
-		loginmanager = LoginManager.getInstance();
+		questmanager = QuestManager.getInstance();
+		Bundle extras = getIntent().getExtras();
+		String playerid=extras.getString("playerid");
 
 		NetworkClient networkClient = NetworkClient.getInstance("http://192.168.129.129:5000");
 		networkClient.getregioncode(playerid, region, new Callback <QuestDTO>() {
@@ -65,7 +66,7 @@ public class UnityPlayerActivity extends Activity
 			}
 		});
 
-		Log.e("TAG", "login???? : " + loginmanager.toString());
+		Log.e("TAG", "login???? : " + questmanager.toString());
 		Log.e("HIHI: ",ObjName);
 
 	}

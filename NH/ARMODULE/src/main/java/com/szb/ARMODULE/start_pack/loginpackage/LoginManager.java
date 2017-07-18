@@ -18,11 +18,9 @@ public class LoginManager  extends Activity{
     private String name;
 
     private String gender;
-    private int age;
+    private String age;
     private int tel;
-
     private int solvequestioncount;
-
     private int createtime;
 
     Realm realm = null;

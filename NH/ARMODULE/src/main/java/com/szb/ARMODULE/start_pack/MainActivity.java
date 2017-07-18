@@ -4,13 +4,16 @@ package com.szb.ARMODULE.start_pack;
 import android.animation.ObjectAnimator;
 import android.app.Activity;
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.content.res.Configuration;
+import android.content.res.Resources;
 import android.os.Bundle;
+import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -21,12 +24,14 @@ import com.bumptech.glide.request.animation.ViewPropertyAnimation;
 import com.bumptech.glide.request.target.GlideDrawableImageViewTarget;
 import com.szb.ARMODULE.Home.BackPressCloseHandler;
 import com.szb.ARMODULE.Home.Home_Main;
-import com.szb.ARMODULE.UnityPlayerActivity;
 import com.szb.ARMODULE.R;
 import com.szb.ARMODULE.model.retrofit.PlayerDTO;
 import com.szb.ARMODULE.network.NetworkClient;
 import com.szb.ARMODULE.start_pack.loginpackage.LoginManager;
+import com.szb.ARMODULE.network.Ipm;
+import com.szb.ARMODULE.start_pack.loginpackage.Logm;
 
+import java.util.Locale;
 import java.util.Random;
 
 import retrofit2.Call;
@@ -36,10 +41,11 @@ import retrofit2.Response;
 
 public class MainActivity extends Activity {
     Button Login;
-    LoginManager loginmanager;
     TextView loginId;
     String loginid;
     NetworkClient networkClient;
+    Ipm ipm;
+    Logm logm;
     private BackPressCloseHandler backPressCloseHandler;
 
     public static final int ran_bg[]={
@@ -54,43 +60,44 @@ public class MainActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         loginId = (TextView)findViewById(R.id.loginId);
-        loginmanager = LoginManager.getInstance();
         Login = (Button)findViewById(R.id.Login);
+        ipm = new Ipm();
+        logm = new Logm();
+
+
 
 
         Login.setOnClickListener(new View.OnClickListener() {
+
             @Override
             public void onClick(View view) {
-                loginid = "123";
-                Intent intent = new Intent(MainActivity.this,Home_Main.class);
-                intent.putExtra("playerid",loginid);
-                startActivity(intent);
-                finish();
-
-                networkClient = NetworkClient.getInstance("http://192.168.0.23:5000");
-
+                loginid = loginId.getText().toString();
+                String ip = ipm.getip();
+                logm.setPlayerid(loginid);
+                networkClient = NetworkClient.getInstance(ip);
                 Log.e("ACC","TEAM id IS !!! "+ loginid);
-                networkClient.login(loginid,new Callback<PlayerDTO>() {
+
+                 networkClient.login(loginid,new Callback<PlayerDTO>() {
                     @Override
                     public void onResponse(Call<PlayerDTO> call, Response<PlayerDTO> response) {
+                        Log.e("아이디",loginid);
                         switch (response.code()){
                             case 200:
                                 //json 데이터를 파싱하는 것을 수월하게 해준다.
+                                Log.e("case200",loginid);
 
                                 PlayerDTO playerDTO = response.body();
 
                                 Log.e("TAG", "team dto : " + playerDTO.toString());
                                 // teamDTO를 이용하여 realm에 team 데이터를 생성한다.
-                                loginmanager.create(playerDTO);
                                 Intent intent = new Intent(MainActivity.this,Home_Main.class);
-                                intent.putExtra("playerid",loginid);
                                 startActivity(intent);
                                 finish();
                                 break;
-
 
                             default:
                                 Log.e("TAG", "다른 아이디");
@@ -103,6 +110,8 @@ public class MainActivity extends Activity {
                     @Override
                     public void onFailure(Call<PlayerDTO> call, Throwable t) {
                         Log.e("ACC","s?? " + t.getMessage());
+                        Toast toast = Toast.makeText(getApplicationContext(), getResources().getString(R.string.can_not_connent_to_server), Toast.LENGTH_LONG);
+                        toast.show();
 
                     }
                 });
@@ -110,7 +119,7 @@ public class MainActivity extends Activity {
         });
 
 
-        Log.e("TAG", "login???? : " + loginmanager.toString());
+       // Log.e("TAG", "login???? : " + loginmanager.toString());
 
 
         ImageView achi = (ImageView)findViewById(R.id.travel);
@@ -119,6 +128,10 @@ public class MainActivity extends Activity {
         ImageView run = (ImageView)findViewById(R.id.running_man);
         GlideDrawableImageViewTarget ivt_1 = new GlideDrawableImageViewTarget(run);
         Glide.with(this).load(R.raw.run_gbg).diskCacheStrategy(DiskCacheStrategy.ALL).animate(animationObject).into(ivt_1);
+
+        ImageView sun = (ImageView)findViewById(R.id.the_sun);
+        GlideDrawableImageViewTarget imageViewTarget_sun = new GlideDrawableImageViewTarget(sun);
+        Glide.with(this).load(R.raw.cartoon_sun_vector).diskCacheStrategy(DiskCacheStrategy.SOURCE).into(imageViewTarget_sun);
 
         backPressCloseHandler = new BackPressCloseHandler(this);
         Login = (Button)findViewById(R.id.Login);
@@ -141,8 +154,8 @@ public class MainActivity extends Activity {
             ObjectAnimator fadeoutY = ObjectAnimator.ofFloat(view,"ScaleY",2f,0f);
             fadeoutX.setRepeatCount(-1);
             fadeoutY.setRepeatCount(-1);
-            fadeoutX.setDuration(25000);
-            fadeoutY.setDuration(25000);
+            fadeoutX.setDuration(20000);
+            fadeoutY.setDuration(20000);
             fadeoutX.start();
             fadeoutY.start();
             view.startAnimation(tran_R);

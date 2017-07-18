@@ -35,29 +35,14 @@ public class PlayerRealmProxy extends com.szb.ARMODULE.model.database.Player
         implements Cloneable {
 
         public long idIndex;
-        public long nameIndex;
-        public long genderIndex;
-        public long ageIndex;
-        public long telIndex;
-        public long solvequestioncountIndex;
-        public long createtimeIndex;
+        public long languageIndex;
 
         PlayerColumnInfo(String path, Table table) {
-            final Map<String, Long> indicesMap = new HashMap<String, Long>(7);
+            final Map<String, Long> indicesMap = new HashMap<String, Long>(2);
             this.idIndex = getValidColumnIndex(path, table, "Player", "id");
             indicesMap.put("id", this.idIndex);
-            this.nameIndex = getValidColumnIndex(path, table, "Player", "name");
-            indicesMap.put("name", this.nameIndex);
-            this.genderIndex = getValidColumnIndex(path, table, "Player", "gender");
-            indicesMap.put("gender", this.genderIndex);
-            this.ageIndex = getValidColumnIndex(path, table, "Player", "age");
-            indicesMap.put("age", this.ageIndex);
-            this.telIndex = getValidColumnIndex(path, table, "Player", "tel");
-            indicesMap.put("tel", this.telIndex);
-            this.solvequestioncountIndex = getValidColumnIndex(path, table, "Player", "solvequestioncount");
-            indicesMap.put("solvequestioncount", this.solvequestioncountIndex);
-            this.createtimeIndex = getValidColumnIndex(path, table, "Player", "createtime");
-            indicesMap.put("createtime", this.createtimeIndex);
+            this.languageIndex = getValidColumnIndex(path, table, "Player", "language");
+            indicesMap.put("language", this.languageIndex);
 
             setIndicesMap(indicesMap);
         }
@@ -66,12 +51,7 @@ public class PlayerRealmProxy extends com.szb.ARMODULE.model.database.Player
         public final void copyColumnInfoFrom(ColumnInfo other) {
             final PlayerColumnInfo otherInfo = (PlayerColumnInfo) other;
             this.idIndex = otherInfo.idIndex;
-            this.nameIndex = otherInfo.nameIndex;
-            this.genderIndex = otherInfo.genderIndex;
-            this.ageIndex = otherInfo.ageIndex;
-            this.telIndex = otherInfo.telIndex;
-            this.solvequestioncountIndex = otherInfo.solvequestioncountIndex;
-            this.createtimeIndex = otherInfo.createtimeIndex;
+            this.languageIndex = otherInfo.languageIndex;
 
             setIndicesMap(otherInfo.getIndicesMap());
         }
@@ -88,12 +68,7 @@ public class PlayerRealmProxy extends com.szb.ARMODULE.model.database.Player
     static {
         List<String> fieldNames = new ArrayList<String>();
         fieldNames.add("id");
-        fieldNames.add("name");
-        fieldNames.add("gender");
-        fieldNames.add("age");
-        fieldNames.add("tel");
-        fieldNames.add("solvequestioncount");
-        fieldNames.add("createtime");
+        fieldNames.add("language");
         FIELD_NAMES = Collections.unmodifiableList(fieldNames);
     }
 
@@ -144,151 +119,30 @@ public class PlayerRealmProxy extends com.szb.ARMODULE.model.database.Player
     }
 
     @SuppressWarnings("cast")
-    public String realmGet$name() {
+    public int realmGet$language() {
         proxyState.getRealm$realm().checkIfValid();
-        return (java.lang.String) proxyState.getRow$realm().getString(columnInfo.nameIndex);
+        return (int) proxyState.getRow$realm().getLong(columnInfo.languageIndex);
     }
 
-    public void realmSet$name(String value) {
+    public void realmSet$language(int value) {
         if (proxyState.isUnderConstruction()) {
             if (!proxyState.getAcceptDefaultValue$realm()) {
                 return;
             }
             final Row row = proxyState.getRow$realm();
-            if (value == null) {
-                row.getTable().setNull(columnInfo.nameIndex, row.getIndex(), true);
-                return;
-            }
-            row.getTable().setString(columnInfo.nameIndex, row.getIndex(), value, true);
+            row.getTable().setLong(columnInfo.languageIndex, row.getIndex(), value, true);
             return;
         }
 
         proxyState.getRealm$realm().checkIfValid();
-        if (value == null) {
-            proxyState.getRow$realm().setNull(columnInfo.nameIndex);
-            return;
-        }
-        proxyState.getRow$realm().setString(columnInfo.nameIndex, value);
-    }
-
-    @SuppressWarnings("cast")
-    public String realmGet$gender() {
-        proxyState.getRealm$realm().checkIfValid();
-        return (java.lang.String) proxyState.getRow$realm().getString(columnInfo.genderIndex);
-    }
-
-    public void realmSet$gender(String value) {
-        if (proxyState.isUnderConstruction()) {
-            if (!proxyState.getAcceptDefaultValue$realm()) {
-                return;
-            }
-            final Row row = proxyState.getRow$realm();
-            if (value == null) {
-                row.getTable().setNull(columnInfo.genderIndex, row.getIndex(), true);
-                return;
-            }
-            row.getTable().setString(columnInfo.genderIndex, row.getIndex(), value, true);
-            return;
-        }
-
-        proxyState.getRealm$realm().checkIfValid();
-        if (value == null) {
-            proxyState.getRow$realm().setNull(columnInfo.genderIndex);
-            return;
-        }
-        proxyState.getRow$realm().setString(columnInfo.genderIndex, value);
-    }
-
-    @SuppressWarnings("cast")
-    public int realmGet$age() {
-        proxyState.getRealm$realm().checkIfValid();
-        return (int) proxyState.getRow$realm().getLong(columnInfo.ageIndex);
-    }
-
-    public void realmSet$age(int value) {
-        if (proxyState.isUnderConstruction()) {
-            if (!proxyState.getAcceptDefaultValue$realm()) {
-                return;
-            }
-            final Row row = proxyState.getRow$realm();
-            row.getTable().setLong(columnInfo.ageIndex, row.getIndex(), value, true);
-            return;
-        }
-
-        proxyState.getRealm$realm().checkIfValid();
-        proxyState.getRow$realm().setLong(columnInfo.ageIndex, value);
-    }
-
-    @SuppressWarnings("cast")
-    public int realmGet$tel() {
-        proxyState.getRealm$realm().checkIfValid();
-        return (int) proxyState.getRow$realm().getLong(columnInfo.telIndex);
-    }
-
-    public void realmSet$tel(int value) {
-        if (proxyState.isUnderConstruction()) {
-            if (!proxyState.getAcceptDefaultValue$realm()) {
-                return;
-            }
-            final Row row = proxyState.getRow$realm();
-            row.getTable().setLong(columnInfo.telIndex, row.getIndex(), value, true);
-            return;
-        }
-
-        proxyState.getRealm$realm().checkIfValid();
-        proxyState.getRow$realm().setLong(columnInfo.telIndex, value);
-    }
-
-    @SuppressWarnings("cast")
-    public int realmGet$solvequestioncount() {
-        proxyState.getRealm$realm().checkIfValid();
-        return (int) proxyState.getRow$realm().getLong(columnInfo.solvequestioncountIndex);
-    }
-
-    public void realmSet$solvequestioncount(int value) {
-        if (proxyState.isUnderConstruction()) {
-            if (!proxyState.getAcceptDefaultValue$realm()) {
-                return;
-            }
-            final Row row = proxyState.getRow$realm();
-            row.getTable().setLong(columnInfo.solvequestioncountIndex, row.getIndex(), value, true);
-            return;
-        }
-
-        proxyState.getRealm$realm().checkIfValid();
-        proxyState.getRow$realm().setLong(columnInfo.solvequestioncountIndex, value);
-    }
-
-    @SuppressWarnings("cast")
-    public int realmGet$createtime() {
-        proxyState.getRealm$realm().checkIfValid();
-        return (int) proxyState.getRow$realm().getLong(columnInfo.createtimeIndex);
-    }
-
-    public void realmSet$createtime(int value) {
-        if (proxyState.isUnderConstruction()) {
-            if (!proxyState.getAcceptDefaultValue$realm()) {
-                return;
-            }
-            final Row row = proxyState.getRow$realm();
-            row.getTable().setLong(columnInfo.createtimeIndex, row.getIndex(), value, true);
-            return;
-        }
-
-        proxyState.getRealm$realm().checkIfValid();
-        proxyState.getRow$realm().setLong(columnInfo.createtimeIndex, value);
+        proxyState.getRow$realm().setLong(columnInfo.languageIndex, value);
     }
 
     public static RealmObjectSchema createRealmObjectSchema(RealmSchema realmSchema) {
         if (!realmSchema.contains("Player")) {
             RealmObjectSchema realmObjectSchema = realmSchema.create("Player");
             realmObjectSchema.add(new Property("id", RealmFieldType.STRING, !Property.PRIMARY_KEY, !Property.INDEXED, !Property.REQUIRED));
-            realmObjectSchema.add(new Property("name", RealmFieldType.STRING, !Property.PRIMARY_KEY, !Property.INDEXED, !Property.REQUIRED));
-            realmObjectSchema.add(new Property("gender", RealmFieldType.STRING, !Property.PRIMARY_KEY, !Property.INDEXED, !Property.REQUIRED));
-            realmObjectSchema.add(new Property("age", RealmFieldType.INTEGER, !Property.PRIMARY_KEY, !Property.INDEXED, Property.REQUIRED));
-            realmObjectSchema.add(new Property("tel", RealmFieldType.INTEGER, !Property.PRIMARY_KEY, !Property.INDEXED, Property.REQUIRED));
-            realmObjectSchema.add(new Property("solvequestioncount", RealmFieldType.INTEGER, !Property.PRIMARY_KEY, !Property.INDEXED, Property.REQUIRED));
-            realmObjectSchema.add(new Property("createtime", RealmFieldType.INTEGER, !Property.PRIMARY_KEY, !Property.INDEXED, Property.REQUIRED));
+            realmObjectSchema.add(new Property("language", RealmFieldType.INTEGER, !Property.PRIMARY_KEY, !Property.INDEXED, Property.REQUIRED));
             return realmObjectSchema;
         }
         return realmSchema.get("Player");
@@ -298,12 +152,7 @@ public class PlayerRealmProxy extends com.szb.ARMODULE.model.database.Player
         if (!sharedRealm.hasTable("class_Player")) {
             Table table = sharedRealm.getTable("class_Player");
             table.addColumn(RealmFieldType.STRING, "id", Table.NULLABLE);
-            table.addColumn(RealmFieldType.STRING, "name", Table.NULLABLE);
-            table.addColumn(RealmFieldType.STRING, "gender", Table.NULLABLE);
-            table.addColumn(RealmFieldType.INTEGER, "age", Table.NOT_NULLABLE);
-            table.addColumn(RealmFieldType.INTEGER, "tel", Table.NOT_NULLABLE);
-            table.addColumn(RealmFieldType.INTEGER, "solvequestioncount", Table.NOT_NULLABLE);
-            table.addColumn(RealmFieldType.INTEGER, "createtime", Table.NOT_NULLABLE);
+            table.addColumn(RealmFieldType.INTEGER, "language", Table.NOT_NULLABLE);
             table.setPrimaryKey("");
             return table;
         }
@@ -314,14 +163,14 @@ public class PlayerRealmProxy extends com.szb.ARMODULE.model.database.Player
         if (sharedRealm.hasTable("class_Player")) {
             Table table = sharedRealm.getTable("class_Player");
             final long columnCount = table.getColumnCount();
-            if (columnCount != 7) {
-                if (columnCount < 7) {
-                    throw new RealmMigrationNeededException(sharedRealm.getPath(), "Field count is less than expected - expected 7 but was " + columnCount);
+            if (columnCount != 2) {
+                if (columnCount < 2) {
+                    throw new RealmMigrationNeededException(sharedRealm.getPath(), "Field count is less than expected - expected 2 but was " + columnCount);
                 }
                 if (allowExtraColumns) {
-                    RealmLog.debug("Field count is more than expected - expected 7 but was %1$d", columnCount);
+                    RealmLog.debug("Field count is more than expected - expected 2 but was %1$d", columnCount);
                 } else {
-                    throw new RealmMigrationNeededException(sharedRealm.getPath(), "Field count is more than expected - expected 7 but was " + columnCount);
+                    throw new RealmMigrationNeededException(sharedRealm.getPath(), "Field count is more than expected - expected 2 but was " + columnCount);
                 }
             }
             Map<String, RealmFieldType> columnTypes = new HashMap<String, RealmFieldType>();
@@ -344,59 +193,14 @@ public class PlayerRealmProxy extends com.szb.ARMODULE.model.database.Player
             if (!table.isColumnNullable(columnInfo.idIndex)) {
                 throw new RealmMigrationNeededException(sharedRealm.getPath(), "Field 'id' is required. Either set @Required to field 'id' or migrate using RealmObjectSchema.setNullable().");
             }
-            if (!columnTypes.containsKey("name")) {
-                throw new RealmMigrationNeededException(sharedRealm.getPath(), "Missing field 'name' in existing Realm file. Either remove field or migrate using io.realm.internal.Table.addColumn().");
+            if (!columnTypes.containsKey("language")) {
+                throw new RealmMigrationNeededException(sharedRealm.getPath(), "Missing field 'language' in existing Realm file. Either remove field or migrate using io.realm.internal.Table.addColumn().");
             }
-            if (columnTypes.get("name") != RealmFieldType.STRING) {
-                throw new RealmMigrationNeededException(sharedRealm.getPath(), "Invalid type 'String' for field 'name' in existing Realm file.");
+            if (columnTypes.get("language") != RealmFieldType.INTEGER) {
+                throw new RealmMigrationNeededException(sharedRealm.getPath(), "Invalid type 'int' for field 'language' in existing Realm file.");
             }
-            if (!table.isColumnNullable(columnInfo.nameIndex)) {
-                throw new RealmMigrationNeededException(sharedRealm.getPath(), "Field 'name' is required. Either set @Required to field 'name' or migrate using RealmObjectSchema.setNullable().");
-            }
-            if (!columnTypes.containsKey("gender")) {
-                throw new RealmMigrationNeededException(sharedRealm.getPath(), "Missing field 'gender' in existing Realm file. Either remove field or migrate using io.realm.internal.Table.addColumn().");
-            }
-            if (columnTypes.get("gender") != RealmFieldType.STRING) {
-                throw new RealmMigrationNeededException(sharedRealm.getPath(), "Invalid type 'String' for field 'gender' in existing Realm file.");
-            }
-            if (!table.isColumnNullable(columnInfo.genderIndex)) {
-                throw new RealmMigrationNeededException(sharedRealm.getPath(), "Field 'gender' is required. Either set @Required to field 'gender' or migrate using RealmObjectSchema.setNullable().");
-            }
-            if (!columnTypes.containsKey("age")) {
-                throw new RealmMigrationNeededException(sharedRealm.getPath(), "Missing field 'age' in existing Realm file. Either remove field or migrate using io.realm.internal.Table.addColumn().");
-            }
-            if (columnTypes.get("age") != RealmFieldType.INTEGER) {
-                throw new RealmMigrationNeededException(sharedRealm.getPath(), "Invalid type 'int' for field 'age' in existing Realm file.");
-            }
-            if (table.isColumnNullable(columnInfo.ageIndex)) {
-                throw new RealmMigrationNeededException(sharedRealm.getPath(), "Field 'age' does support null values in the existing Realm file. Use corresponding boxed type for field 'age' or migrate using RealmObjectSchema.setNullable().");
-            }
-            if (!columnTypes.containsKey("tel")) {
-                throw new RealmMigrationNeededException(sharedRealm.getPath(), "Missing field 'tel' in existing Realm file. Either remove field or migrate using io.realm.internal.Table.addColumn().");
-            }
-            if (columnTypes.get("tel") != RealmFieldType.INTEGER) {
-                throw new RealmMigrationNeededException(sharedRealm.getPath(), "Invalid type 'int' for field 'tel' in existing Realm file.");
-            }
-            if (table.isColumnNullable(columnInfo.telIndex)) {
-                throw new RealmMigrationNeededException(sharedRealm.getPath(), "Field 'tel' does support null values in the existing Realm file. Use corresponding boxed type for field 'tel' or migrate using RealmObjectSchema.setNullable().");
-            }
-            if (!columnTypes.containsKey("solvequestioncount")) {
-                throw new RealmMigrationNeededException(sharedRealm.getPath(), "Missing field 'solvequestioncount' in existing Realm file. Either remove field or migrate using io.realm.internal.Table.addColumn().");
-            }
-            if (columnTypes.get("solvequestioncount") != RealmFieldType.INTEGER) {
-                throw new RealmMigrationNeededException(sharedRealm.getPath(), "Invalid type 'int' for field 'solvequestioncount' in existing Realm file.");
-            }
-            if (table.isColumnNullable(columnInfo.solvequestioncountIndex)) {
-                throw new RealmMigrationNeededException(sharedRealm.getPath(), "Field 'solvequestioncount' does support null values in the existing Realm file. Use corresponding boxed type for field 'solvequestioncount' or migrate using RealmObjectSchema.setNullable().");
-            }
-            if (!columnTypes.containsKey("createtime")) {
-                throw new RealmMigrationNeededException(sharedRealm.getPath(), "Missing field 'createtime' in existing Realm file. Either remove field or migrate using io.realm.internal.Table.addColumn().");
-            }
-            if (columnTypes.get("createtime") != RealmFieldType.INTEGER) {
-                throw new RealmMigrationNeededException(sharedRealm.getPath(), "Invalid type 'int' for field 'createtime' in existing Realm file.");
-            }
-            if (table.isColumnNullable(columnInfo.createtimeIndex)) {
-                throw new RealmMigrationNeededException(sharedRealm.getPath(), "Field 'createtime' does support null values in the existing Realm file. Use corresponding boxed type for field 'createtime' or migrate using RealmObjectSchema.setNullable().");
+            if (table.isColumnNullable(columnInfo.languageIndex)) {
+                throw new RealmMigrationNeededException(sharedRealm.getPath(), "Field 'language' does support null values in the existing Realm file. Use corresponding boxed type for field 'language' or migrate using RealmObjectSchema.setNullable().");
             }
             return columnInfo;
         } else {
@@ -424,46 +228,11 @@ public class PlayerRealmProxy extends com.szb.ARMODULE.model.database.Player
                 ((PlayerRealmProxyInterface) obj).realmSet$id((String) json.getString("id"));
             }
         }
-        if (json.has("name")) {
-            if (json.isNull("name")) {
-                ((PlayerRealmProxyInterface) obj).realmSet$name(null);
+        if (json.has("language")) {
+            if (json.isNull("language")) {
+                throw new IllegalArgumentException("Trying to set non-nullable field 'language' to null.");
             } else {
-                ((PlayerRealmProxyInterface) obj).realmSet$name((String) json.getString("name"));
-            }
-        }
-        if (json.has("gender")) {
-            if (json.isNull("gender")) {
-                ((PlayerRealmProxyInterface) obj).realmSet$gender(null);
-            } else {
-                ((PlayerRealmProxyInterface) obj).realmSet$gender((String) json.getString("gender"));
-            }
-        }
-        if (json.has("age")) {
-            if (json.isNull("age")) {
-                throw new IllegalArgumentException("Trying to set non-nullable field 'age' to null.");
-            } else {
-                ((PlayerRealmProxyInterface) obj).realmSet$age((int) json.getInt("age"));
-            }
-        }
-        if (json.has("tel")) {
-            if (json.isNull("tel")) {
-                throw new IllegalArgumentException("Trying to set non-nullable field 'tel' to null.");
-            } else {
-                ((PlayerRealmProxyInterface) obj).realmSet$tel((int) json.getInt("tel"));
-            }
-        }
-        if (json.has("solvequestioncount")) {
-            if (json.isNull("solvequestioncount")) {
-                throw new IllegalArgumentException("Trying to set non-nullable field 'solvequestioncount' to null.");
-            } else {
-                ((PlayerRealmProxyInterface) obj).realmSet$solvequestioncount((int) json.getInt("solvequestioncount"));
-            }
-        }
-        if (json.has("createtime")) {
-            if (json.isNull("createtime")) {
-                throw new IllegalArgumentException("Trying to set non-nullable field 'createtime' to null.");
-            } else {
-                ((PlayerRealmProxyInterface) obj).realmSet$createtime((int) json.getInt("createtime"));
+                ((PlayerRealmProxyInterface) obj).realmSet$language((int) json.getInt("language"));
             }
         }
         return obj;
@@ -484,47 +253,12 @@ public class PlayerRealmProxy extends com.szb.ARMODULE.model.database.Player
                 } else {
                     ((PlayerRealmProxyInterface) obj).realmSet$id((String) reader.nextString());
                 }
-            } else if (name.equals("name")) {
+            } else if (name.equals("language")) {
                 if (reader.peek() == JsonToken.NULL) {
                     reader.skipValue();
-                    ((PlayerRealmProxyInterface) obj).realmSet$name(null);
+                    throw new IllegalArgumentException("Trying to set non-nullable field 'language' to null.");
                 } else {
-                    ((PlayerRealmProxyInterface) obj).realmSet$name((String) reader.nextString());
-                }
-            } else if (name.equals("gender")) {
-                if (reader.peek() == JsonToken.NULL) {
-                    reader.skipValue();
-                    ((PlayerRealmProxyInterface) obj).realmSet$gender(null);
-                } else {
-                    ((PlayerRealmProxyInterface) obj).realmSet$gender((String) reader.nextString());
-                }
-            } else if (name.equals("age")) {
-                if (reader.peek() == JsonToken.NULL) {
-                    reader.skipValue();
-                    throw new IllegalArgumentException("Trying to set non-nullable field 'age' to null.");
-                } else {
-                    ((PlayerRealmProxyInterface) obj).realmSet$age((int) reader.nextInt());
-                }
-            } else if (name.equals("tel")) {
-                if (reader.peek() == JsonToken.NULL) {
-                    reader.skipValue();
-                    throw new IllegalArgumentException("Trying to set non-nullable field 'tel' to null.");
-                } else {
-                    ((PlayerRealmProxyInterface) obj).realmSet$tel((int) reader.nextInt());
-                }
-            } else if (name.equals("solvequestioncount")) {
-                if (reader.peek() == JsonToken.NULL) {
-                    reader.skipValue();
-                    throw new IllegalArgumentException("Trying to set non-nullable field 'solvequestioncount' to null.");
-                } else {
-                    ((PlayerRealmProxyInterface) obj).realmSet$solvequestioncount((int) reader.nextInt());
-                }
-            } else if (name.equals("createtime")) {
-                if (reader.peek() == JsonToken.NULL) {
-                    reader.skipValue();
-                    throw new IllegalArgumentException("Trying to set non-nullable field 'createtime' to null.");
-                } else {
-                    ((PlayerRealmProxyInterface) obj).realmSet$createtime((int) reader.nextInt());
+                    ((PlayerRealmProxyInterface) obj).realmSet$language((int) reader.nextInt());
                 }
             } else {
                 reader.skipValue();
@@ -560,12 +294,7 @@ public class PlayerRealmProxy extends com.szb.ARMODULE.model.database.Player
             com.szb.ARMODULE.model.database.Player realmObject = realm.createObjectInternal(com.szb.ARMODULE.model.database.Player.class, false, Collections.<String>emptyList());
             cache.put(newObject, (RealmObjectProxy) realmObject);
             ((PlayerRealmProxyInterface) realmObject).realmSet$id(((PlayerRealmProxyInterface) newObject).realmGet$id());
-            ((PlayerRealmProxyInterface) realmObject).realmSet$name(((PlayerRealmProxyInterface) newObject).realmGet$name());
-            ((PlayerRealmProxyInterface) realmObject).realmSet$gender(((PlayerRealmProxyInterface) newObject).realmGet$gender());
-            ((PlayerRealmProxyInterface) realmObject).realmSet$age(((PlayerRealmProxyInterface) newObject).realmGet$age());
-            ((PlayerRealmProxyInterface) realmObject).realmSet$tel(((PlayerRealmProxyInterface) newObject).realmGet$tel());
-            ((PlayerRealmProxyInterface) realmObject).realmSet$solvequestioncount(((PlayerRealmProxyInterface) newObject).realmGet$solvequestioncount());
-            ((PlayerRealmProxyInterface) realmObject).realmSet$createtime(((PlayerRealmProxyInterface) newObject).realmGet$createtime());
+            ((PlayerRealmProxyInterface) realmObject).realmSet$language(((PlayerRealmProxyInterface) newObject).realmGet$language());
             return realmObject;
         }
     }
@@ -583,18 +312,7 @@ public class PlayerRealmProxy extends com.szb.ARMODULE.model.database.Player
         if (realmGet$id != null) {
             Table.nativeSetString(tableNativePtr, columnInfo.idIndex, rowIndex, realmGet$id, false);
         }
-        String realmGet$name = ((PlayerRealmProxyInterface)object).realmGet$name();
-        if (realmGet$name != null) {
-            Table.nativeSetString(tableNativePtr, columnInfo.nameIndex, rowIndex, realmGet$name, false);
-        }
-        String realmGet$gender = ((PlayerRealmProxyInterface)object).realmGet$gender();
-        if (realmGet$gender != null) {
-            Table.nativeSetString(tableNativePtr, columnInfo.genderIndex, rowIndex, realmGet$gender, false);
-        }
-        Table.nativeSetLong(tableNativePtr, columnInfo.ageIndex, rowIndex, ((PlayerRealmProxyInterface)object).realmGet$age(), false);
-        Table.nativeSetLong(tableNativePtr, columnInfo.telIndex, rowIndex, ((PlayerRealmProxyInterface)object).realmGet$tel(), false);
-        Table.nativeSetLong(tableNativePtr, columnInfo.solvequestioncountIndex, rowIndex, ((PlayerRealmProxyInterface)object).realmGet$solvequestioncount(), false);
-        Table.nativeSetLong(tableNativePtr, columnInfo.createtimeIndex, rowIndex, ((PlayerRealmProxyInterface)object).realmGet$createtime(), false);
+        Table.nativeSetLong(tableNativePtr, columnInfo.languageIndex, rowIndex, ((PlayerRealmProxyInterface)object).realmGet$language(), false);
         return rowIndex;
     }
 
@@ -616,18 +334,7 @@ public class PlayerRealmProxy extends com.szb.ARMODULE.model.database.Player
                 if (realmGet$id != null) {
                     Table.nativeSetString(tableNativePtr, columnInfo.idIndex, rowIndex, realmGet$id, false);
                 }
-                String realmGet$name = ((PlayerRealmProxyInterface)object).realmGet$name();
-                if (realmGet$name != null) {
-                    Table.nativeSetString(tableNativePtr, columnInfo.nameIndex, rowIndex, realmGet$name, false);
-                }
-                String realmGet$gender = ((PlayerRealmProxyInterface)object).realmGet$gender();
-                if (realmGet$gender != null) {
-                    Table.nativeSetString(tableNativePtr, columnInfo.genderIndex, rowIndex, realmGet$gender, false);
-                }
-                Table.nativeSetLong(tableNativePtr, columnInfo.ageIndex, rowIndex, ((PlayerRealmProxyInterface)object).realmGet$age(), false);
-                Table.nativeSetLong(tableNativePtr, columnInfo.telIndex, rowIndex, ((PlayerRealmProxyInterface)object).realmGet$tel(), false);
-                Table.nativeSetLong(tableNativePtr, columnInfo.solvequestioncountIndex, rowIndex, ((PlayerRealmProxyInterface)object).realmGet$solvequestioncount(), false);
-                Table.nativeSetLong(tableNativePtr, columnInfo.createtimeIndex, rowIndex, ((PlayerRealmProxyInterface)object).realmGet$createtime(), false);
+                Table.nativeSetLong(tableNativePtr, columnInfo.languageIndex, rowIndex, ((PlayerRealmProxyInterface)object).realmGet$language(), false);
             }
         }
     }
@@ -647,22 +354,7 @@ public class PlayerRealmProxy extends com.szb.ARMODULE.model.database.Player
         } else {
             Table.nativeSetNull(tableNativePtr, columnInfo.idIndex, rowIndex, false);
         }
-        String realmGet$name = ((PlayerRealmProxyInterface)object).realmGet$name();
-        if (realmGet$name != null) {
-            Table.nativeSetString(tableNativePtr, columnInfo.nameIndex, rowIndex, realmGet$name, false);
-        } else {
-            Table.nativeSetNull(tableNativePtr, columnInfo.nameIndex, rowIndex, false);
-        }
-        String realmGet$gender = ((PlayerRealmProxyInterface)object).realmGet$gender();
-        if (realmGet$gender != null) {
-            Table.nativeSetString(tableNativePtr, columnInfo.genderIndex, rowIndex, realmGet$gender, false);
-        } else {
-            Table.nativeSetNull(tableNativePtr, columnInfo.genderIndex, rowIndex, false);
-        }
-        Table.nativeSetLong(tableNativePtr, columnInfo.ageIndex, rowIndex, ((PlayerRealmProxyInterface)object).realmGet$age(), false);
-        Table.nativeSetLong(tableNativePtr, columnInfo.telIndex, rowIndex, ((PlayerRealmProxyInterface)object).realmGet$tel(), false);
-        Table.nativeSetLong(tableNativePtr, columnInfo.solvequestioncountIndex, rowIndex, ((PlayerRealmProxyInterface)object).realmGet$solvequestioncount(), false);
-        Table.nativeSetLong(tableNativePtr, columnInfo.createtimeIndex, rowIndex, ((PlayerRealmProxyInterface)object).realmGet$createtime(), false);
+        Table.nativeSetLong(tableNativePtr, columnInfo.languageIndex, rowIndex, ((PlayerRealmProxyInterface)object).realmGet$language(), false);
         return rowIndex;
     }
 
@@ -686,22 +378,7 @@ public class PlayerRealmProxy extends com.szb.ARMODULE.model.database.Player
                 } else {
                     Table.nativeSetNull(tableNativePtr, columnInfo.idIndex, rowIndex, false);
                 }
-                String realmGet$name = ((PlayerRealmProxyInterface)object).realmGet$name();
-                if (realmGet$name != null) {
-                    Table.nativeSetString(tableNativePtr, columnInfo.nameIndex, rowIndex, realmGet$name, false);
-                } else {
-                    Table.nativeSetNull(tableNativePtr, columnInfo.nameIndex, rowIndex, false);
-                }
-                String realmGet$gender = ((PlayerRealmProxyInterface)object).realmGet$gender();
-                if (realmGet$gender != null) {
-                    Table.nativeSetString(tableNativePtr, columnInfo.genderIndex, rowIndex, realmGet$gender, false);
-                } else {
-                    Table.nativeSetNull(tableNativePtr, columnInfo.genderIndex, rowIndex, false);
-                }
-                Table.nativeSetLong(tableNativePtr, columnInfo.ageIndex, rowIndex, ((PlayerRealmProxyInterface)object).realmGet$age(), false);
-                Table.nativeSetLong(tableNativePtr, columnInfo.telIndex, rowIndex, ((PlayerRealmProxyInterface)object).realmGet$tel(), false);
-                Table.nativeSetLong(tableNativePtr, columnInfo.solvequestioncountIndex, rowIndex, ((PlayerRealmProxyInterface)object).realmGet$solvequestioncount(), false);
-                Table.nativeSetLong(tableNativePtr, columnInfo.createtimeIndex, rowIndex, ((PlayerRealmProxyInterface)object).realmGet$createtime(), false);
+                Table.nativeSetLong(tableNativePtr, columnInfo.languageIndex, rowIndex, ((PlayerRealmProxyInterface)object).realmGet$language(), false);
             }
         }
     }
@@ -725,12 +402,7 @@ public class PlayerRealmProxy extends com.szb.ARMODULE.model.database.Player
             cache.put(realmObject, new RealmObjectProxy.CacheData<RealmModel>(currentDepth, unmanagedObject));
         }
         ((PlayerRealmProxyInterface) unmanagedObject).realmSet$id(((PlayerRealmProxyInterface) realmObject).realmGet$id());
-        ((PlayerRealmProxyInterface) unmanagedObject).realmSet$name(((PlayerRealmProxyInterface) realmObject).realmGet$name());
-        ((PlayerRealmProxyInterface) unmanagedObject).realmSet$gender(((PlayerRealmProxyInterface) realmObject).realmGet$gender());
-        ((PlayerRealmProxyInterface) unmanagedObject).realmSet$age(((PlayerRealmProxyInterface) realmObject).realmGet$age());
-        ((PlayerRealmProxyInterface) unmanagedObject).realmSet$tel(((PlayerRealmProxyInterface) realmObject).realmGet$tel());
-        ((PlayerRealmProxyInterface) unmanagedObject).realmSet$solvequestioncount(((PlayerRealmProxyInterface) realmObject).realmGet$solvequestioncount());
-        ((PlayerRealmProxyInterface) unmanagedObject).realmSet$createtime(((PlayerRealmProxyInterface) realmObject).realmGet$createtime());
+        ((PlayerRealmProxyInterface) unmanagedObject).realmSet$language(((PlayerRealmProxyInterface) realmObject).realmGet$language());
         return unmanagedObject;
     }
 

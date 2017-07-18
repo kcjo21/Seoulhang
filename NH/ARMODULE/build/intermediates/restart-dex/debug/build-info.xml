@@ -6,83 +6,107 @@
     density="420dpi"
     format="10"
     plugin-version="2.3.1"
-    timestamp="1493883335614"
-    token="-4191092472353378267"
+    timestamp="1497339577664"
+    token="2778544177512967684"
     verifier="COLD_SWAP_REQUESTED" >
 
     <task
         name="javac"
-        duration="0" />
+        duration="2796" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="0" />
+        duration="95" />
     <task
         name="verifier"
-        duration="0" />
+        duration="44" />
+
+    <artifact
+        location="C:\Users\cwh62\OneDrive\Nol\NH\ARMODULE\build\intermediates\split-apk\debug\slices\slice_7.apk"
+        type="SPLIT" />
+    <artifact
+        location="C:\Users\cwh62\OneDrive\Nol\NH\ARMODULE\build\intermediates\split-apk\debug\slices\slice_3.apk"
+        type="SPLIT" />
+    <artifact
+        location="C:\Users\cwh62\OneDrive\Nol\NH\ARMODULE\build\intermediates\split-apk\debug\slices\slice_1.apk"
+        type="SPLIT" />
 
     <build
         build-mode="FULL"
-        timestamp="1493882920764"
+        timestamp="1497337775998"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
-            location="C:\Users\cwh62\Documents\GitHub\Nolhang\NH\ARMODULE\build\intermediates\split-apk\debug\slices\slice_2.apk"
+            location="C:\Users\cwh62\OneDrive\Nol\NH\ARMODULE\build\intermediates\split-apk\debug\slices\slice_3.apk"
             type="SPLIT" />
         <artifact
-            location="C:\Users\cwh62\Documents\GitHub\Nolhang\NH\ARMODULE\build\intermediates\split-apk\debug\slices\slice_7.apk"
+            location="C:\Users\cwh62\OneDrive\Nol\NH\ARMODULE\build\intermediates\split-apk\debug\slices\slice_2.apk"
             type="SPLIT" />
         <artifact
-            location="C:\Users\cwh62\Documents\GitHub\Nolhang\NH\ARMODULE\build\intermediates\split-apk\debug\slices\slice_8.apk"
+            location="C:\Users\cwh62\OneDrive\Nol\NH\ARMODULE\build\intermediates\split-apk\debug\slices\slice_0.apk"
             type="SPLIT" />
         <artifact
-            location="C:\Users\cwh62\Documents\GitHub\Nolhang\NH\ARMODULE\build\intermediates\split-apk\debug\slices\slice_9.apk"
+            location="C:\Users\cwh62\OneDrive\Nol\NH\ARMODULE\build\intermediates\split-apk\debug\slices\slice_1.apk"
             type="SPLIT" />
         <artifact
-            location="C:\Users\cwh62\Documents\GitHub\Nolhang\NH\ARMODULE\build\intermediates\split-apk\debug\slices\slice_5.apk"
+            location="C:\Users\cwh62\OneDrive\Nol\NH\ARMODULE\build\intermediates\split-apk\debug\slices\slice_7.apk"
             type="SPLIT" />
         <artifact
-            location="C:\Users\cwh62\Documents\GitHub\Nolhang\NH\ARMODULE\build\intermediates\split-apk\debug\slices\slice_0.apk"
+            location="C:\Users\cwh62\OneDrive\Nol\NH\ARMODULE\build\intermediates\split-apk\debug\slices\slice_9.apk"
             type="SPLIT" />
         <artifact
-            location="C:\Users\cwh62\Documents\GitHub\Nolhang\NH\ARMODULE\build\intermediates\split-apk\debug\slices\slice_1.apk"
+            location="C:\Users\cwh62\OneDrive\Nol\NH\ARMODULE\build\intermediates\split-apk\debug\slices\slice_8.apk"
             type="SPLIT" />
         <artifact
-            location="C:\Users\cwh62\Documents\GitHub\Nolhang\NH\ARMODULE\build\intermediates\split-apk\debug\dep\dependencies.apk"
+            location="C:\Users\cwh62\OneDrive\Nol\NH\ARMODULE\build\outputs\apk\ARMODULE-debug.apk"
+            type="SPLIT_MAIN" />
+        <artifact
+            location="C:\Users\cwh62\OneDrive\Nol\NH\ARMODULE\build\intermediates\split-apk\debug\dep\dependencies.apk"
             type="SPLIT" />
         <artifact
-            location="C:\Users\cwh62\Documents\GitHub\Nolhang\NH\ARMODULE\build\intermediates\split-apk\debug\slices\slice_6.apk"
+            location="C:\Users\cwh62\OneDrive\Nol\NH\ARMODULE\build\intermediates\split-apk\debug\slices\slice_4.apk"
             type="SPLIT" />
         <artifact
-            location="C:\Users\cwh62\Documents\GitHub\Nolhang\NH\ARMODULE\build\intermediates\split-apk\debug\slices\slice_3.apk"
+            location="C:\Users\cwh62\OneDrive\Nol\NH\ARMODULE\build\intermediates\split-apk\debug\slices\slice_6.apk"
             type="SPLIT" />
         <artifact
-            location="C:\Users\cwh62\Documents\GitHub\Nolhang\NH\ARMODULE\build\intermediates\split-apk\debug\slices\slice_4.apk"
+            location="C:\Users\cwh62\OneDrive\Nol\NH\ARMODULE\build\intermediates\split-apk\debug\slices\slice_5.apk"
+            type="SPLIT" />
+    </build>
+    <build
+        build-mode="COLD"
+        timestamp="1497339467379"
+        verifier="COLD_SWAP_REQUESTED" >
+        <artifact
+            location="C:\Users\cwh62\OneDrive\Nol\NH\ARMODULE\build\intermediates\split-apk\debug\slices\slice_0.apk"
             type="SPLIT" />
         <artifact
-            location="C:\Users\cwh62\Documents\GitHub\Nolhang\NH\ARMODULE\build\outputs\apk\ARMODULE-debug.apk"
+            location="C:\Users\cwh62\OneDrive\Nol\NH\ARMODULE\build\intermediates\split-apk\debug\slices\slice_2.apk"
+            type="SPLIT" />
+        <artifact
+            location="C:\Users\cwh62\OneDrive\Nol\NH\ARMODULE\build\intermediates\split-apk\debug\slices\slice_8.apk"
+            type="SPLIT" />
+        <artifact
+            location="C:\Users\cwh62\OneDrive\Nol\NH\ARMODULE\build\intermediates\split-apk\debug\slices\slice_9.apk"
+            type="SPLIT" />
+        <artifact
+            location="C:\Users\cwh62\OneDrive\Nol\NH\ARMODULE\build\outputs\apk\ARMODULE-debug.apk"
             type="SPLIT_MAIN" />
     </build>
     <build
         build-mode="COLD"
-        timestamp="1493883215349"
+        timestamp="1497339577664"
         verifier="COLD_SWAP_REQUESTED" >
         <artifact
-            location="C:\Users\cwh62\Documents\GitHub\Nolhang\NH\ARMODULE\build\intermediates\split-apk\debug\slices\slice_1.apk"
+            location="C:\Users\cwh62\OneDrive\Nol\NH\ARMODULE\build\intermediates\split-apk\debug\slices\slice_7.apk"
+            type="SPLIT" />
+        <artifact
+            location="C:\Users\cwh62\OneDrive\Nol\NH\ARMODULE\build\intermediates\split-apk\debug\slices\slice_3.apk"
+            type="SPLIT" />
+        <artifact
+            location="C:\Users\cwh62\OneDrive\Nol\NH\ARMODULE\build\intermediates\split-apk\debug\slices\slice_1.apk"
             type="SPLIT" />
     </build>
-    <build
-        build-mode="COLD"
-        timestamp="1493883292758"
-        verifier="COLD_SWAP_REQUESTED" >
-        <artifact
-            location="C:\Users\cwh62\Documents\GitHub\Nolhang\NH\ARMODULE\build\outputs\apk\ARMODULE-debug.apk"
-            type="SPLIT_MAIN" />
-    </build>
-    <build
-        build-mode="COLD"
-        timestamp="1493883335614"
-        verifier="COLD_SWAP_REQUESTED" />
 
 </instant-run>

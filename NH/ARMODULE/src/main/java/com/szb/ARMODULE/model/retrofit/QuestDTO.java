@@ -4,6 +4,8 @@ package com.szb.ARMODULE.model.retrofit;
  * Created by cwh62 on 2017-05-02.
  */
 
+import android.widget.Button;
+
 import com.google.gson.annotations.SerializedName;
 
 public class QuestDTO {
@@ -15,6 +17,10 @@ public class QuestDTO {
     private int regioncode;
     @SerializedName("content_type")
     private String contenttype;
+    private int qresult;
+
+
+    public int getQresult() { return this.qresult;}
 
     public String getContenttype() {
         return this.contenttype;
@@ -32,9 +38,7 @@ public class QuestDTO {
         return this.questioncode;
     }
 
-    public int getRegioncode() {
-        return this.regioncode;
-    }
+    public int getRegioncode() {return this.regioncode;}
 
 
     public void setContenttype(String contenttype) {
@@ -57,5 +61,7 @@ public class QuestDTO {
         this.regioncode = regioncode;
     }
 
+    public void setQresult(int result) {this.qresult = qresult;}
 }
+
 

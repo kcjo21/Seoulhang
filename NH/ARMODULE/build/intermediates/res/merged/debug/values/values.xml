@@ -98,7 +98,20 @@
     <bool name="abc_config_actionMenuItemAllCaps">true</bool>
     <bool name="abc_config_closeDialogWhenTouchOutside">true</bool>
     <bool name="abc_config_showMenuShortcutsWhenKeyboardPresent">false</bool>
+    <color name="BLUE">#0070c0</color>
+    <color name="BRONZE">#b87333</color>
+    <color name="Carkviewline">#dbdbdb</color>
+    <color name="Creamson">#dc143c</color>
+    <color name="GOLD">#ffd700</color>
     <color name="Green00cc66">#00cc66</color>
+    <color name="LIGHTGREEN_">#00cc99</color>
+    <color name="LIME">#00ff00</color>
+    <color name="ORINGERED">#ff4500</color>
+    <color name="PUPLE">#9932cc</color>
+    <color name="PURPLE">#9932cc</color>
+    <color name="RED">#ff0000</color>
+    <color name="SIVER">#c0c0c0</color>
+    <color name="SKYBLUE">#87ceeb</color>
     <color name="abc_input_method_navigation_guard">@android:color/black</color>
     <color name="abc_search_url_text_normal">#7fa87f</color>
     <color name="abc_search_url_text_pressed">@android:color/black</color>
@@ -627,6 +640,7 @@
     <dimen name="notification_subtext_size">13sp</dimen>
     <dimen name="notification_top_pad">10dp</dimen>
     <dimen name="notification_top_pad_large_text">5dp</dimen>
+    <dimen name="size">14dp</dimen>
     <drawable name="notification_template_icon_bg">#3333B5E5</drawable>
     <drawable name="notification_template_icon_low_bg">#0cffffff</drawable>
     <item name="action_bar_activity_content" type="id"/>
@@ -696,8 +710,11 @@
     <string name="app_name">놀행</string>
     <string name="appbar_scrolling_view_behavior" translatable="false">android.support.design.widget.AppBarLayout$ScrollingViewBehavior</string>
     <string name="bottom_sheet_behavior" translatable="false">android.support.design.widget.BottomSheetBehavior</string>
+    <string name="can_not_connent_to_server">서버에 연결할 수 없습니다.</string>
     <string name="character_counter_pattern" translatable="false">%1$d / %2$d</string>
     <string name="close_drawer">close drawerclose drawerclose drawerclose drawerclose drawer</string>
+    <string name="ghkrdls">확인</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="insert_quiz">Insert Quiz</string>
     <string name="nolhang">NOLHANG</string>
     <string name="num">num</string>
@@ -710,7 +727,60 @@
     <string name="please_check_id">아이디를 확인해주세요</string>
     <string name="region">Region</string>
     <string name="search_menu_title">Search</string>
+    <string name="side_닉네임">                닉네임 : %s</string>
+    <string name="side_등급">                등급 : %s</string>
+    <string name="side_점수">                점수 : %s</string>
+    <string name="side_코드번호">                코드번호 : %s</string>
+    <string name="side_힌트수">                남은 힌트 수 : %s</string>
     <string name="status_bar_notification_info_overflow">999+</string>
+    <string name="골드">골드</string>
+    <string name="남은힌트">힌트</string>
+    <string name="내순위">내 순위</string>
+    <string name="닉네임">닉네임</string>
+    <string name="다이아몬드">다이아몬드</string>
+    <string name="달성률">달성률 </string>
+    <string name="등급">등급</string>
+    <string name="등급정보">등급표</string>
+    <string name="등급차트">챌린저 = 450점 \n마스터 = 340점 \n다이아몬드 = 240점 \n플래티넘 = 160점 \n골드 = 90점 \n실버 = 40점 \n브론즈 = 10점</string>
+    <string name="등급표">                등급표</string>
+    <string name="마스터">마스터</string>
+    <string name="브론즈">브론즈</string>
+    <string name="새문제">새 문제를 획득하였습니다!</string>
+    <string name="설명">사진을 찾아서 문제를 획득하고, 점수를 얻으십시오.\n점수에 따라 등급이 결정되고, 순위에 따라 상품이 지급됩니다.</string>
+    <string name="설정">                설정</string>
+    <string name="순위">순위</string>
+    <string name="승급">승급했습니다!</string>
+    <string name="실버">실버</string>
+    <string name="오답">오답입니다!</string>
+    <string name="이미가지고있는문제">이미 가지고 있는 문제 입니다.</string>
+    <string name="점수">점수</string>
+    <string name="점수_0">0점</string>
+    <string name="점수_10">10점</string>
+    <string name="점수_160">160점</string>
+    <string name="점수_240">240점</string>
+    <string name="점수_340">340점</string>
+    <string name="점수_40">40점</string>
+    <string name="점수_450">450점</string>
+    <string name="점수_90">90점</string>
+    <string name="정답을입력하세요">정답을 입력하세요.</string>
+    <string name="정답이다">정답입니다!</string>
+    <string name="지역별달성률">지역별 정보</string>
+    <string name="챌린저">챌린저</string>
+    <string name="초보자">초보자</string>
+    <string name="최근문제">최근 문제</string>
+    <string name="카메라켜기">                카메라 켜기</string>
+    <string name="코드를입력">코드를 입력하세요.</string>
+    <string name="코드번호">코드번호</string>
+    <string name="풀수있는문제없음">현재 풀 수 있는 문제가 없습니다. 새로운 문제를 획득해주세요.</string>
+    <string name="플래티넘">플래티넘</string>
+    <string name="해결한문제">해결한 문제</string>
+    <string name="현재해결한문제없음">현재 해결한 문제가 없습니다.</string>
+    <string name="홈으로가기">                홈으로 가기</string>
+    <string name="환영">%s님 환영합니다!</string>
+    <string name="힌트">
+        <item>힌트1</item>
+    </string>
+    <string name="힌트없음">남은 힌트가 없습니다!</string>
     <style name="AlertDialog.AppCompat" parent="Base.AlertDialog.AppCompat"/>
     <style name="AlertDialog.AppCompat.Light" parent="Base.AlertDialog.AppCompat.Light"/>
     <style name="Animation.AppCompat.Dialog" parent="Base.Animation.AppCompat.Dialog"/>
@@ -719,18 +789,6 @@
         <item name="android:windowEnterAnimation">@anim/design_bottom_sheet_slide_in</item>
         <item name="android:windowExitAnimation">@anim/design_bottom_sheet_slide_out</item>
     </style>
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-        <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
-    </style>
-    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
-    <style name="AppTheme.NoActionBar">
-        <item name="windowActionBar">false</item>
-        <item name="windowNoTitle">false</item>
-    </style>
-    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
     <style name="Base.AlertDialog.AppCompat" parent="android:Widget">
         <item name="android:layout">@layout/abc_alert_dialog_material</item>
         <item name="listLayout">@layout/abc_select_dialog_material</item>
@@ -2092,7 +2150,7 @@
     <style name="ThemeOverlay.AppCompat.Dialog.Alert" parent="Base.ThemeOverlay.AppCompat.Dialog.Alert"/>
     <style name="ThemeOverlay.AppCompat.Light" parent="Base.ThemeOverlay.AppCompat.Light"/>
     <style name="UnityThemeSelector" parent="android:Theme.Light.NoTitleBar.Fullscreen">
-    </style>
+</style>
     <style name="Widget.AppCompat.ActionBar" parent="Base.Widget.AppCompat.ActionBar">
     </style>
     <style name="Widget.AppCompat.ActionBar.Solid" parent="Base.Widget.AppCompat.ActionBar.Solid">

@@ -1,0 +1,382 @@
+[
+    {
+        "merged": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-ko-hdpi\\title_text_home.png",
+        "source": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\src\\main\\res\\drawable-ko-hdpi\\title_text_home.png"
+    },
+    {
+        "merged": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-ko-hdpi\\five.png",
+        "source": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\src\\main\\res\\drawable-ko-hdpi\\five.png"
+    },
+    {
+        "merged": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-ko-hdpi\\eiffel.png",
+        "source": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\src\\main\\res\\drawable-ko-hdpi\\eiffel.png"
+    },
+    {
+        "merged": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-ko-hdpi\\skip.png",
+        "source": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\src\\main\\res\\drawable-ko-hdpi\\skip.png"
+    },
+    {
+        "merged": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-ko-hdpi\\help_tuto.png",
+        "source": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\src\\main\\res\\drawable-ko-hdpi\\help_tuto.png"
+    },
+    {
+        "merged": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-ko-hdpi\\new_two.png",
+        "source": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\src\\main\\res\\drawable-ko-hdpi\\new_two.png"
+    },
+    {
+        "merged": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-ko-hdpi\\button.png",
+        "source": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\src\\main\\res\\drawable-ko-hdpi\\button.png"
+    },
+    {
+        "merged": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-ko-hdpi\\side_home.png",
+        "source": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\src\\main\\res\\drawable-ko-hdpi\\side_home.png"
+    },
+    {
+        "merged": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-ko-hdpi\\side_camera_on.png",
+        "source": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\src\\main\\res\\drawable-ko-hdpi\\side_camera_on.png"
+    },
+    {
+        "merged": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-ko-hdpi\\side_camera_on_on.png",
+        "source": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\src\\main\\res\\drawable-ko-hdpi\\side_camera_on_on.png"
+    },
+    {
+        "merged": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-ko-hdpi\\eight.png",
+        "source": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\src\\main\\res\\drawable-ko-hdpi\\eight.png"
+    },
+    {
+        "merged": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-ko-hdpi\\help_tuto_on.png",
+        "source": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\src\\main\\res\\drawable-ko-hdpi\\help_tuto_on.png"
+    },
+    {
+        "merged": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-ko-hdpi\\bronze.png",
+        "source": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\src\\main\\res\\drawable-ko-hdpi\\bronze.png"
+    },
+    {
+        "merged": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-ko-hdpi\\quiz_list_red.png",
+        "source": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\src\\main\\res\\drawable-ko-hdpi\\quiz_list_red.png"
+    },
+    {
+        "merged": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-ko-hdpi\\info_1.png",
+        "source": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\src\\main\\res\\drawable-ko-hdpi\\info_1.png"
+    },
+    {
+        "merged": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-ko-hdpi\\two.png",
+        "source": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\src\\main\\res\\drawable-ko-hdpi\\two.png"
+    },
+    {
+        "merged": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-ko-hdpi\\home_2.png",
+        "source": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\src\\main\\res\\drawable-ko-hdpi\\home_2.png"
+    },
+    {
+        "merged": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-ko-hdpi\\quiz_solved.png",
+        "source": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\src\\main\\res\\drawable-ko-hdpi\\quiz_solved.png"
+    },
+    {
+        "merged": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-ko-hdpi\\text_grade.png",
+        "source": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\src\\main\\res\\drawable-ko-hdpi\\text_grade.png"
+    },
+    {
+        "merged": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-ko-hdpi\\three.png",
+        "source": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\src\\main\\res\\drawable-ko-hdpi\\three.png"
+    },
+    {
+        "merged": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-ko-hdpi\\tuto_a.png",
+        "source": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\src\\main\\res\\drawable-ko-hdpi\\tuto_a.png"
+    },
+    {
+        "merged": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-ko-hdpi\\nine.png",
+        "source": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\src\\main\\res\\drawable-ko-hdpi\\nine.png"
+    },
+    {
+        "merged": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-ko-hdpi\\tuto_title.png",
+        "source": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\src\\main\\res\\drawable-ko-hdpi\\tuto_title.png"
+    },
+    {
+        "merged": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-ko-hdpi\\subtitle_top.png",
+        "source": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\src\\main\\res\\drawable-ko-hdpi\\subtitle_top.png"
+    },
+    {
+        "merged": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-ko-hdpi\\camera_mode.png",
+        "source": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\src\\main\\res\\drawable-ko-hdpi\\camera_mode.png"
+    },
+    {
+        "merged": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-ko-hdpi\\col2.png",
+        "source": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\src\\main\\res\\drawable-ko-hdpi\\col2.png"
+    },
+    {
+        "merged": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-ko-hdpi\\text_point.png",
+        "source": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\src\\main\\res\\drawable-ko-hdpi\\text_point.png"
+    },
+    {
+        "merged": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-ko-hdpi\\tajimahal.png",
+        "source": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\src\\main\\res\\drawable-ko-hdpi\\tajimahal.png"
+    },
+    {
+        "merged": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-ko-hdpi\\side_grade.png",
+        "source": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\src\\main\\res\\drawable-ko-hdpi\\side_grade.png"
+    },
+    {
+        "merged": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-ko-hdpi\\seven.png",
+        "source": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\src\\main\\res\\drawable-ko-hdpi\\seven.png"
+    },
+    {
+        "merged": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-ko-hdpi\\main_tilte_rank.png",
+        "source": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\src\\main\\res\\drawable-ko-hdpi\\main_tilte_rank.png"
+    },
+    {
+        "merged": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-ko-hdpi\\answer_button.png",
+        "source": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\src\\main\\res\\drawable-ko-hdpi\\answer_button.png"
+    },
+    {
+        "merged": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-ko-hdpi\\col.png",
+        "source": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\src\\main\\res\\drawable-ko-hdpi\\col.png"
+    },
+    {
+        "merged": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-ko-hdpi\\subtitle.png",
+        "source": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\src\\main\\res\\drawable-ko-hdpi\\subtitle.png"
+    },
+    {
+        "merged": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-ko-hdpi\\six.png",
+        "source": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\src\\main\\res\\drawable-ko-hdpi\\six.png"
+    },
+    {
+        "merged": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-ko-hdpi\\about_nol.png",
+        "source": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\src\\main\\res\\drawable-ko-hdpi\\about_nol.png"
+    },
+    {
+        "merged": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-ko-hdpi\\info_2.png",
+        "source": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\src\\main\\res\\drawable-ko-hdpi\\info_2.png"
+    },
+    {
+        "merged": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-ko-hdpi\\free.png",
+        "source": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\src\\main\\res\\drawable-ko-hdpi\\free.png"
+    },
+    {
+        "merged": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-ko-hdpi\\side_home_on.png",
+        "source": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\src\\main\\res\\drawable-ko-hdpi\\side_home_on.png"
+    },
+    {
+        "merged": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-ko-hdpi\\camera.png",
+        "source": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\src\\main\\res\\drawable-ko-hdpi\\camera.png"
+    },
+    {
+        "merged": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-ko-hdpi\\bg_load.png",
+        "source": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\src\\main\\res\\drawable-ko-hdpi\\bg_load.png"
+    },
+    {
+        "merged": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-ko-hdpi\\new_four.png",
+        "source": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\src\\main\\res\\drawable-ko-hdpi\\new_four.png"
+    },
+    {
+        "merged": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-ko-hdpi\\side_setting_on.png",
+        "source": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\src\\main\\res\\drawable-ko-hdpi\\side_setting_on.png"
+    },
+    {
+        "merged": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-ko-hdpi\\main_tilte_info.png",
+        "source": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\src\\main\\res\\drawable-ko-hdpi\\main_tilte_info.png"
+    },
+    {
+        "merged": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-ko-hdpi\\chat.png",
+        "source": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\src\\main\\res\\drawable-ko-hdpi\\chat.png"
+    },
+    {
+        "merged": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-ko-hdpi\\quiz_2.png",
+        "source": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\src\\main\\res\\drawable-ko-hdpi\\quiz_2.png"
+    },
+    {
+        "merged": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-ko-hdpi\\tapbar.png",
+        "source": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\src\\main\\res\\drawable-ko-hdpi\\tapbar.png"
+    },
+    {
+        "merged": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-ko-hdpi\\main_tilte_quiz.png",
+        "source": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\src\\main\\res\\drawable-ko-hdpi\\main_tilte_quiz.png"
+    },
+    {
+        "merged": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-ko-hdpi\\app_icon.png",
+        "source": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\src\\main\\res\\drawable-ko-hdpi\\app_icon.png"
+    },
+    {
+        "merged": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-ko-hdpi\\namdaemoon.png",
+        "source": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\src\\main\\res\\drawable-ko-hdpi\\namdaemoon.png"
+    },
+    {
+        "merged": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-ko-hdpi\\one.png",
+        "source": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\src\\main\\res\\drawable-ko-hdpi\\one.png"
+    },
+    {
+        "merged": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-ko-hdpi\\four.png",
+        "source": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\src\\main\\res\\drawable-ko-hdpi\\four.png"
+    },
+    {
+        "merged": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-ko-hdpi\\new_eight.png",
+        "source": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\src\\main\\res\\drawable-ko-hdpi\\new_eight.png"
+    },
+    {
+        "merged": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-ko-hdpi\\answer_button_dimend.png",
+        "source": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\src\\main\\res\\drawable-ko-hdpi\\answer_button_dimend.png"
+    },
+    {
+        "merged": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-ko-hdpi\\title_t.png",
+        "source": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\src\\main\\res\\drawable-ko-hdpi\\title_t.png"
+    },
+    {
+        "merged": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-ko-hdpi\\new_six.png",
+        "source": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\src\\main\\res\\drawable-ko-hdpi\\new_six.png"
+    },
+    {
+        "merged": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-ko-hdpi\\rank_1.png",
+        "source": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\src\\main\\res\\drawable-ko-hdpi\\rank_1.png"
+    },
+    {
+        "merged": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-ko-hdpi\\new_seven.png",
+        "source": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\src\\main\\res\\drawable-ko-hdpi\\new_seven.png"
+    },
+    {
+        "merged": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-ko-hdpi\\text_name.png",
+        "source": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\src\\main\\res\\drawable-ko-hdpi\\text_name.png"
+    },
+    {
+        "merged": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-ko-hdpi\\quiz_1.png",
+        "source": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\src\\main\\res\\drawable-ko-hdpi\\quiz_1.png"
+    },
+    {
+        "merged": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-ko-hdpi\\hint_button_on.png",
+        "source": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\src\\main\\res\\drawable-ko-hdpi\\hint_button_on.png"
+    },
+    {
+        "merged": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-ko-hdpi\\gold.png",
+        "source": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\src\\main\\res\\drawable-ko-hdpi\\gold.png"
+    },
+    {
+        "merged": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-ko-hdpi\\main_tilte_home.png",
+        "source": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\src\\main\\res\\drawable-ko-hdpi\\main_tilte_home.png"
+    },
+    {
+        "merged": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-ko-hdpi\\tuto_d.png",
+        "source": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\src\\main\\res\\drawable-ko-hdpi\\tuto_d.png"
+    },
+    {
+        "merged": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-ko-hdpi\\app_banner.png",
+        "source": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\src\\main\\res\\drawable-ko-hdpi\\app_banner.png"
+    },
+    {
+        "merged": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-ko-hdpi\\new_one.png",
+        "source": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\src\\main\\res\\drawable-ko-hdpi\\new_one.png"
+    },
+    {
+        "merged": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-ko-hdpi\\side_setting.png",
+        "source": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\src\\main\\res\\drawable-ko-hdpi\\side_setting.png"
+    },
+    {
+        "merged": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-ko-hdpi\\new_five.png",
+        "source": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\src\\main\\res\\drawable-ko-hdpi\\new_five.png"
+    },
+    {
+        "merged": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-ko-hdpi\\rank_2.png",
+        "source": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\src\\main\\res\\drawable-ko-hdpi\\rank_2.png"
+    },
+    {
+        "merged": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-ko-hdpi\\card_view_back.png",
+        "source": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\src\\main\\res\\drawable-ko-hdpi\\card_view_back.png"
+    },
+    {
+        "merged": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-ko-hdpi\\indicator_on.png",
+        "source": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\src\\main\\res\\drawable-ko-hdpi\\indicator_on.png"
+    },
+    {
+        "merged": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-ko-hdpi\\quiz_list_blue.png",
+        "source": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\src\\main\\res\\drawable-ko-hdpi\\quiz_list_blue.png"
+    },
+    {
+        "merged": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-ko-hdpi\\rate.png",
+        "source": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\src\\main\\res\\drawable-ko-hdpi\\rate.png"
+    },
+    {
+        "merged": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-ko-hdpi\\silver.png",
+        "source": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\src\\main\\res\\drawable-ko-hdpi\\silver.png"
+    },
+    {
+        "merged": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-ko-hdpi\\title_s.png",
+        "source": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\src\\main\\res\\drawable-ko-hdpi\\title_s.png"
+    },
+    {
+        "merged": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-ko-hdpi\\button_on.png",
+        "source": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\src\\main\\res\\drawable-ko-hdpi\\button_on.png"
+    },
+    {
+        "merged": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-ko-hdpi\\hint_button.png",
+        "source": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\src\\main\\res\\drawable-ko-hdpi\\hint_button.png"
+    },
+    {
+        "merged": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-ko-hdpi\\camera_mode_on.png",
+        "source": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\src\\main\\res\\drawable-ko-hdpi\\camera_mode_on.png"
+    },
+    {
+        "merged": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-ko-hdpi\\new_nine.png",
+        "source": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\src\\main\\res\\drawable-ko-hdpi\\new_nine.png"
+    },
+    {
+        "merged": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-ko-hdpi\\timer.png",
+        "source": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\src\\main\\res\\drawable-ko-hdpi\\timer.png"
+    },
+    {
+        "merged": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-ko-hdpi\\about_nol_on.png",
+        "source": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\src\\main\\res\\drawable-ko-hdpi\\about_nol_on.png"
+    },
+    {
+        "merged": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-ko-hdpi\\answer_button_on.png",
+        "source": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\src\\main\\res\\drawable-ko-hdpi\\answer_button_on.png"
+    },
+    {
+        "merged": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-ko-hdpi\\tower.png",
+        "source": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\src\\main\\res\\drawable-ko-hdpi\\tower.png"
+    },
+    {
+        "merged": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-ko-hdpi\\side_grade_on.png",
+        "source": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\src\\main\\res\\drawable-ko-hdpi\\side_grade_on.png"
+    },
+    {
+        "merged": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-ko-hdpi\\my_rank.png",
+        "source": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\src\\main\\res\\drawable-ko-hdpi\\my_rank.png"
+    },
+    {
+        "merged": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-ko-hdpi\\indicator_off.png",
+        "source": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\src\\main\\res\\drawable-ko-hdpi\\indicator_off.png"
+    },
+    {
+        "merged": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-ko-hdpi\\text_hint.png",
+        "source": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\src\\main\\res\\drawable-ko-hdpi\\text_hint.png"
+    },
+    {
+        "merged": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-ko-hdpi\\setting_back.png",
+        "source": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\src\\main\\res\\drawable-ko-hdpi\\setting_back.png"
+    },
+    {
+        "merged": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-ko-hdpi\\home_1.png",
+        "source": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\src\\main\\res\\drawable-ko-hdpi\\home_1.png"
+    },
+    {
+        "merged": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-ko-hdpi\\quiz_list_green.png",
+        "source": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\src\\main\\res\\drawable-ko-hdpi\\quiz_list_green.png"
+    },
+    {
+        "merged": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-ko-hdpi\\bg_main.png",
+        "source": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\src\\main\\res\\drawable-ko-hdpi\\bg_main.png"
+    },
+    {
+        "merged": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-ko-hdpi\\quiz_list_gold.png",
+        "source": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\src\\main\\res\\drawable-ko-hdpi\\quiz_list_gold.png"
+    },
+    {
+        "merged": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-ko-hdpi\\new_three.png",
+        "source": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\src\\main\\res\\drawable-ko-hdpi\\new_three.png"
+    },
+    {
+        "merged": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-ko-hdpi\\no_quiz.png",
+        "source": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\src\\main\\res\\drawable-ko-hdpi\\no_quiz.png"
+    },
+    {
+        "merged": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-ko-hdpi\\title.png",
+        "source": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\src\\main\\res\\drawable-ko-hdpi\\title.png"
+    }
+]

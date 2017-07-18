@@ -1,0 +1,16 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="100"
+    tools:context="com.szb.ARMODULE.start_pack.tutorial.tuto_c">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <ImageView
+        android:id="@+id/tuto_c"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="100" />
+</LinearLayout>

@@ -5,12 +5,12 @@
         android:toXDelta="73%p"
         android:fromYDelta="0%p"
         android:toYDelta="-16%p"
-        android:duration="25000"
+        android:duration="20000"
         android:repeatCount="infinite"/>
     <alpha
         android:fromAlpha="1"
         android:toAlpha="0"
-        android:startOffset="23000"
+        android:startOffset="18000"
         android:duration="2000"
         android:repeatCount="infinite"/>
 
