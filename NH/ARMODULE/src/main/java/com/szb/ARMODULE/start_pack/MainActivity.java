@@ -4,11 +4,7 @@ package com.szb.ARMODULE.start_pack;
 import android.animation.ObjectAnimator;
 import android.app.Activity;
 import android.content.Intent;
-import android.content.SharedPreferences;
-import android.content.res.Configuration;
-import android.content.res.Resources;
 import android.os.Bundle;
-import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.View;
 import android.view.animation.Animation;
@@ -27,11 +23,9 @@ import com.szb.ARMODULE.Home.Home_Main;
 import com.szb.ARMODULE.R;
 import com.szb.ARMODULE.model.retrofit.PlayerDTO;
 import com.szb.ARMODULE.network.NetworkClient;
-import com.szb.ARMODULE.start_pack.loginpackage.LoginManager;
 import com.szb.ARMODULE.network.Ipm;
 import com.szb.ARMODULE.start_pack.loginpackage.Logm;
 
-import java.util.Locale;
 import java.util.Random;
 
 import retrofit2.Call;
@@ -42,6 +36,8 @@ import retrofit2.Response;
 public class MainActivity extends Activity {
     Button Login;
     TextView loginId;
+    TextView join;
+    TextView find;
     String loginid;
     NetworkClient networkClient;
     Ipm ipm;
@@ -64,9 +60,22 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         loginId = (TextView)findViewById(R.id.loginId);
+        join = (TextView)findViewById(R.id.join_tm);
+        find = (TextView)findViewById(R.id.find_t);
         Login = (Button)findViewById(R.id.Login);
         ipm = new Ipm();
         logm = new Logm();
+
+
+
+        join.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this,JoinActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
 
 
 

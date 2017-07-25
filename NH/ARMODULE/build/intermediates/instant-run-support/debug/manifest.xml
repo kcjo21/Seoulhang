@@ -115,6 +115,7 @@
         <activity
             android:name="com.szb.ARMODULE.start_pack.Setting"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity android:name="com.szb.ARMODULE.start_pack.JoinActivity" />
 
         <provider
             android:name="com.android.tools.fd.runtime.InstantRunContentProvider"

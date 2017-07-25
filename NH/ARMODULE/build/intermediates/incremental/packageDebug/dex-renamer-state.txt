@@ -1,4 +1,7 @@
-#Tue Jun 13 16:59:30 KST 2017
-base.0=C\:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\1f\\main
+#Sun Jul 23 18:57:11 KST 2017
+base.0=C\:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_12b260f35b73b454463e13e34465f7b891cd46ea
+renamed.1=classes2.dex
 renamed.0=classes.dex
-file.0=C\:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\1f\\main\\classes.dex
+file.1=C\:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_45832c8457b0c7c6f4fc620553560388169ee332\\classes.dex
+base.1=C\:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_45832c8457b0c7c6f4fc620553560388169ee332
+file.0=C\:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_12b260f35b73b454463e13e34465f7b891cd46ea\\classes.dex

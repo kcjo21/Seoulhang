@@ -6,6 +6,7 @@ import com.szb.ARMODULE.model.database.Item;
 import com.szb.ARMODULE.model.retrofit.HintDTO;
 import com.szb.ARMODULE.model.retrofit.InventoryDTO;
 import com.szb.ARMODULE.model.retrofit.ItemDTO;
+import com.szb.ARMODULE.model.retrofit.JoinDTO;
 import com.szb.ARMODULE.model.retrofit.PlayerDTO;
 import com.szb.ARMODULE.model.retrofit.QuestDTO;
 import com.szb.ARMODULE.model.retrofit.RankDTO;
@@ -95,6 +96,15 @@ public class NetworkClient {
 
     public void setlanguage(String player, int language, Callback<Integer> callback){
         Call<Integer> call = service.setlanguage(player, language);
+        call.enqueue(callback);
+    }
+
+    public void getjoin(String player, String password, String name, String gender, Integer age, String phone, String email, Callback<String> callback){
+        Call<String> call = service.getjoin(player, password, name, gender, age, phone, email);
+        call.enqueue(callback);
+    }
+    public void checkid(String player,Callback<String> callback){
+        Call<String> call = service.checkid(player);
         call.enqueue(callback);
     }
 }

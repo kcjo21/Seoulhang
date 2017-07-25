@@ -33,7 +33,7 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/title_t"
-        app:layout_constraintVertical_bias="1.0">
+        app:layout_constraintVertical_bias="0.996">
 
     </android.support.constraint.ConstraintLayout>
 
@@ -47,7 +47,7 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="@+id/Login"
-        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintVertical_bias="0.8"
         app:srcCompat="@android:color/background_light"
         tools:ignore="ContentDescription" />
 
@@ -93,16 +93,18 @@
 
     <Button
         android:id="@+id/Login"
-        android:layout_width="80dp"
+        android:layout_width="100dp"
         android:layout_height="50dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="109dp"
         android:background="@drawable/button_on_off"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.757"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="@+id/constraintLayout3"
-        app:layout_constraintVertical_bias="0.669"
+        app:layout_constraintVertical_bias="0.094"
         tools:ignore="RtlHardcoded" />
 
     <EditText
@@ -125,5 +127,31 @@
         app:layout_constraintTop_toBottomOf="@+id/title_t"
         app:layout_constraintVertical_bias="0.984"
         tools:ignore="SpUsage" />
+
+    <TextView
+        android:id="@+id/join_tm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="26dp"
+        android:text="회원가입"
+        android:textSize="16sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="@+id/constraintLayout3"
+        app:layout_constraintTop_toBottomOf="@+id/Login" />
+
+    <TextView
+        android:id="@+id/find_t"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="23dp"
+        android:text="아이디/비밀번호 찾기"
+        android:textSize="16sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/join_tm" />
 
 </android.support.constraint.ConstraintLayout>

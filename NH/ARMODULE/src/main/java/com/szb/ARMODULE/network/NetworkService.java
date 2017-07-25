@@ -3,6 +3,7 @@ package com.szb.ARMODULE.network;
 import com.szb.ARMODULE.model.retrofit.HintDTO;
 import com.szb.ARMODULE.model.retrofit.InventoryDTO;
 import com.szb.ARMODULE.model.retrofit.ItemDTO;
+import com.szb.ARMODULE.model.retrofit.JoinDTO;
 import com.szb.ARMODULE.model.retrofit.PlayerDTO;
 import com.szb.ARMODULE.model.retrofit.QuestDTO;
 import com.szb.ARMODULE.model.retrofit.RankDTO;
@@ -44,4 +45,11 @@ public interface NetworkService {
 
     @GET("/setting_language/{player}/language/{language}")
     Call <Integer> setlanguage(@Path("player")String player, @Path("language") int language);
+
+    @GET("/id/{player}/pass/{password}/name/{name}/gender/{gender}/age/{age}/phone/{phone}/email/{email}")
+    Call <String> getjoin(@Path("player")String player, @Path("password")String password, @Path("name")String name, @Path("gender")String gender, @Path("age")Integer age, @Path("phone")String phone, @Path("email")String email );
+
+    @GET("/checkid/{player}")
+    Call<String> checkid(@Path("player")String player);
+
 }
