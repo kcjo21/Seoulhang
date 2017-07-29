@@ -116,6 +116,7 @@
             android:name="com.szb.ARMODULE.start_pack.Setting"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity android:name="com.szb.ARMODULE.start_pack.JoinActivity" />
+        <activity android:name="com.szb.ARMODULE.Home.frag.Frag_Map" />
 
         <provider
             android:name="com.android.tools.fd.runtime.InstantRunContentProvider"

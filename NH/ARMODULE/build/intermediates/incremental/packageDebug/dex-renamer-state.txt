@@ -1,7 +1,7 @@
-#Sun Jul 23 18:57:11 KST 2017
-base.0=C\:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_12b260f35b73b454463e13e34465f7b891cd46ea
+#Sun Jul 30 08:15:55 KST 2017
+base.0=C\:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_0ece8e9f9f0a18bc77054c5c29297c80a12c892b
 renamed.1=classes2.dex
 renamed.0=classes.dex
-file.1=C\:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_45832c8457b0c7c6f4fc620553560388169ee332\\classes.dex
-base.1=C\:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_45832c8457b0c7c6f4fc620553560388169ee332
-file.0=C\:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_12b260f35b73b454463e13e34465f7b891cd46ea\\classes.dex
+file.1=C\:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_1822977287b1e23c65fd178ace35131121d3a492\\classes.dex
+base.1=C\:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_1822977287b1e23c65fd178ace35131121d3a492
+file.0=C\:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_0ece8e9f9f0a18bc77054c5c29297c80a12c892b\\classes.dex

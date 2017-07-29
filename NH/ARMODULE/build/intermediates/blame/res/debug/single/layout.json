@@ -156,6 +156,10 @@
         "source": "C:\\Users\\cwh62\\.android\\build-cache\\1860e7502bea0f552aaa4935120bb2accced6b21\\output\\res\\layout\\abc_action_bar_up_container.xml"
     },
     {
+        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\layout\\frag_map.xml",
+        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\src\\main\\res\\layout\\frag_map.xml"
+    },
+    {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\layout\\item_info_p.xml",
         "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\src\\main\\res\\layout\\item_info_p.xml"
     },

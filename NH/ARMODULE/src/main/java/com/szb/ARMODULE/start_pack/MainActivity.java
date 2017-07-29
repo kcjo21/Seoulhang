@@ -80,6 +80,16 @@ public class MainActivity extends Activity {
 
 
 
+
+        Intent intent = new Intent(MainActivity.this,Home_Main.class);
+        startActivity(intent);
+        finish();
+
+
+
+
+
+
         Login.setOnClickListener(new View.OnClickListener() {
 
             @Override
