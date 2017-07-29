@@ -95,6 +95,15 @@
                     android:text="@string/중복확인"
                     android:textSize="10sp"
                     tools:ignore="SmallSp" />
+
+                <TextView
+                    android:id="@+id/check_t"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="20"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:textColor="@color/BLUE"
+                    android:visibility="gone" />
             </LinearLayout>
 
             <LinearLayout

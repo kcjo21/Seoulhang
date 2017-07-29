@@ -89,7 +89,7 @@
     <string name="취소" >Cancel</string>
     <string name="중복확인" >Check</string>
     <string name="비밀번호일치">password do not match.</string>
-    <string name="사용가능">This ID available.</string>
+    <string name="사용가능">Available.</string>
     <string name="EID">Enter your ID.</string>
     <string name="EPass">Please enter the 8~20 digit passwords</string>
     <string name="Ename">Enter your name.</string>
@@ -97,4 +97,5 @@
     <string name="Eage">Enter your age.</string>
     <string name="Ephone">Enter your phone number.</string>
     <string name="checkplease">perform a check for overlapping Identification.</string>
+    <string name="회원가입성공">Congratulations!</string>
 </resources>

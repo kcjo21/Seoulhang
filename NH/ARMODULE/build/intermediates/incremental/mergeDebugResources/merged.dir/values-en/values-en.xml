@@ -71,7 +71,7 @@
     <string name="비밀번호">Password</string>
     <string name="비밀번호일치">password do not match.</string>
     <string name="비밀번호확인">Confirm</string>
-    <string name="사용가능">This ID available.</string>
+    <string name="사용가능">Available.</string>
     <string name="새문제">You got a new quiz!</string>
     <string name="설명">Find Target Image and Get a Score.\nThe tier is fixed by Score.\nThe Prize will be provided according to the Rank</string>
     <string name="설정">                Setting</string>
@@ -112,12 +112,13 @@
     <string name="확인">Confirm</string>
     <string name="환영">Wellcome! %s</string>
     <string name="회원가입">JOIN</string>
+    <string name="회원가입성공">Congratulations!</string>
     <string name="힌트">
         <item>힌트1</item>
     </string>
     <string name="힌트없음">You have no hint bonus left.</string>
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-        <!-- Customize your theme here. -->
+        
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>

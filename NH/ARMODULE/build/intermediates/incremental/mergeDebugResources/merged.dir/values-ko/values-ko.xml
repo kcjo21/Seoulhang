@@ -92,7 +92,7 @@
     <string name="비밀번호">비밀번호</string>
     <string name="비밀번호일치">비밀번호가 일치하지 않습니다.</string>
     <string name="비밀번호확인">비밀번호 확인</string>
-    <string name="사용가능">사용가능한 아이디입니다.</string>
+    <string name="사용가능">사용가능</string>
     <string name="새문제">새 문제를 획득하였습니다!</string>
     <string name="설명">사진을 찾아서 문제를 획득하고, 점수를 얻으십시오.\n점수에 따라 등급이 결정되고, 순위에 따라 상품이 지급됩니다.</string>
     <string name="설정">                설정</string>
@@ -133,12 +133,13 @@
     <string name="확인">확인</string>
     <string name="환영">%s님 환영합니다!</string>
     <string name="회원가입">회원가입</string>
+    <string name="회원가입성공">회원가입을 축하합니다!</string>
     <string name="힌트">
         <item>힌트1</item>
     </string>
     <string name="힌트없음">남은 힌트가 없습니다!</string>
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-        <!-- Customize your theme here. -->
+        
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>

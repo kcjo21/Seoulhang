@@ -1,39 +1,47 @@
 [
     {
-        "merged": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\chat.png",
-        "source": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\chat.png"
-    },
-    {
-        "merged": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\main_tilte_info.png",
-        "source": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\main_tilte_info.png"
+        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\answer_button.png",
+        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\answer_button.png"
     },
     {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\main_tilte_info.png",
         "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\main_tilte_info.png"
     },
     {
-        "merged": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\bg_load.png",
-        "source": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\bg_load.png"
-    },
-    {
-        "merged": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\nine.png",
-        "source": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\nine.png"
+        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\camera_mode_on.png",
+        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\camera_mode_on.png"
     },
     {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\nine.png",
         "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\nine.png"
     },
     {
+        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\col2.png",
+        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\col2.png"
+    },
+    {
+        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\about_nol.png",
+        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\about_nol.png"
+    },
+    {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\skip.png",
         "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\skip.png"
     },
     {
-        "merged": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\one.png",
-        "source": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\one.png"
+        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\app_icon.png",
+        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\app_icon.png"
+    },
+    {
+        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\quiz_list_green.png",
+        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\quiz_list_green.png"
     },
     {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\chat.png",
         "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\chat.png"
+    },
+    {
+        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\home_2.png",
+        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\home_2.png"
     },
     {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\five.png",
@@ -48,8 +56,16 @@
         "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\bg_main.png"
     },
     {
+        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\seven.png",
+        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\seven.png"
+    },
+    {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\new_nine.png",
         "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\new_nine.png"
+    },
+    {
+        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\four.png",
+        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\four.png"
     },
     {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\main_tilte_quiz.png",
@@ -60,356 +76,12 @@
         "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\one.png"
     },
     {
-        "merged": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\about_nol_on.png",
-        "source": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\about_nol_on.png"
-    },
-    {
-        "merged": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\five.png",
-        "source": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\five.png"
-    },
-    {
-        "merged": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\new_six.png",
-        "source": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\new_six.png"
-    },
-    {
-        "merged": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\main_tilte_rank.png",
-        "source": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\main_tilte_rank.png"
-    },
-    {
-        "merged": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\app_icon.png",
-        "source": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\app_icon.png"
-    },
-    {
-        "merged": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\timer.png",
-        "source": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\timer.png"
-    },
-    {
-        "merged": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\side_setting.png",
-        "source": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\side_setting.png"
-    },
-    {
-        "merged": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\button.png",
-        "source": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\button.png"
-    },
-    {
-        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\quiz_2.png",
-        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\quiz_2.png"
-    },
-    {
-        "merged": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\rank_2.png",
-        "source": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\rank_2.png"
-    },
-    {
-        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\col.png",
-        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\col.png"
-    },
-    {
-        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\free.png",
-        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\free.png"
-    },
-    {
-        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\button.png",
-        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\button.png"
-    },
-    {
-        "merged": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\hint_button_on.png",
-        "source": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\hint_button_on.png"
-    },
-    {
-        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\hint_button_on.png",
-        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\hint_button_on.png"
-    },
-    {
-        "merged": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\quiz_2.png",
-        "source": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\quiz_2.png"
-    },
-    {
-        "merged": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\tuto_a.png",
-        "source": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\tuto_a.png"
-    },
-    {
-        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\text_grade.png",
-        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\text_grade.png"
-    },
-    {
-        "merged": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\side_home.png",
-        "source": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\side_home.png"
-    },
-    {
-        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\eiffel.png",
-        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\eiffel.png"
-    },
-    {
-        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\text_hint.png",
-        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\text_hint.png"
-    },
-    {
-        "merged": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\skip.png",
-        "source": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\skip.png"
-    },
-    {
-        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\quiz_list_blue.png",
-        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\quiz_list_blue.png"
-    },
-    {
-        "merged": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\free.png",
-        "source": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\free.png"
-    },
-    {
-        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\quiz_list_red.png",
-        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\quiz_list_red.png"
-    },
-    {
-        "merged": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\eiffel.png",
-        "source": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\eiffel.png"
-    },
-    {
-        "merged": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\setting_back.png",
-        "source": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\setting_back.png"
-    },
-    {
-        "merged": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\help_tuto_on.png",
-        "source": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\help_tuto_on.png"
-    },
-    {
-        "merged": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\card_view_back.png",
-        "source": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\card_view_back.png"
-    },
-    {
-        "merged": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\camera_mode.png",
-        "source": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\camera_mode.png"
-    },
-    {
-        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\quiz_list_gold.png",
-        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\quiz_list_gold.png"
-    },
-    {
-        "merged": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\three.png",
-        "source": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\three.png"
-    },
-    {
-        "merged": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\side_setting_on.png",
-        "source": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\side_setting_on.png"
-    },
-    {
-        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\side_grade.png",
-        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\side_grade.png"
-    },
-    {
-        "merged": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\tuto_title.png",
-        "source": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\tuto_title.png"
-    },
-    {
-        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\new_two.png",
-        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\new_two.png"
-    },
-    {
-        "merged": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\text_hint.png",
-        "source": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\text_hint.png"
-    },
-    {
-        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\answer_button_on.png",
-        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\answer_button_on.png"
-    },
-    {
-        "merged": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\tower.png",
-        "source": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\tower.png"
-    },
-    {
-        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\camera.png",
-        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\camera.png"
-    },
-    {
-        "merged": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\camera.png",
-        "source": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\camera.png"
-    },
-    {
-        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\quiz_1.png",
-        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\quiz_1.png"
-    },
-    {
-        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\title_text_home.png",
-        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\title_text_home.png"
-    },
-    {
-        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\namdaemoon.png",
-        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\namdaemoon.png"
-    },
-    {
-        "merged": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\answer_button_dimend.png",
-        "source": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\answer_button_dimend.png"
-    },
-    {
-        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\side_camera_on_on.png",
-        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\side_camera_on_on.png"
-    },
-    {
-        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\tower.png",
-        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\tower.png"
-    },
-    {
-        "merged": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\silver.png",
-        "source": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\silver.png"
-    },
-    {
-        "merged": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\side_home_on.png",
-        "source": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\side_home_on.png"
-    },
-    {
-        "merged": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\rate.png",
-        "source": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\rate.png"
-    },
-    {
-        "merged": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\new_eight.png",
-        "source": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\new_eight.png"
-    },
-    {
-        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\six.png",
-        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\six.png"
-    },
-    {
-        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\tajimahal.png",
-        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\tajimahal.png"
-    },
-    {
-        "merged": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\new_five.png",
-        "source": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\new_five.png"
-    },
-    {
-        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\bronze.png",
-        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\bronze.png"
-    },
-    {
-        "merged": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\gold.png",
-        "source": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\gold.png"
-    },
-    {
-        "merged": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\rank_1.png",
-        "source": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\rank_1.png"
-    },
-    {
-        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\new_five.png",
-        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\new_five.png"
-    },
-    {
-        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\setting_back.png",
-        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\setting_back.png"
-    },
-    {
-        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\title.png",
-        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\title.png"
-    },
-    {
-        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\main_tilte_rank.png",
-        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\main_tilte_rank.png"
-    },
-    {
-        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\subtitle_top.png",
-        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\subtitle_top.png"
-    },
-    {
-        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\new_six.png",
-        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\new_six.png"
-    },
-    {
-        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\info_1.png",
-        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\info_1.png"
-    },
-    {
-        "merged": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\text_grade.png",
-        "source": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\text_grade.png"
-    },
-    {
-        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\app_banner.png",
-        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\app_banner.png"
-    },
-    {
-        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\text_point.png",
-        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\text_point.png"
-    },
-    {
-        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\timer.png",
-        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\timer.png"
-    },
-    {
-        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\rank_2.png",
-        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\rank_2.png"
-    },
-    {
-        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\help_tuto.png",
-        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\help_tuto.png"
-    },
-    {
-        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\answer_button.png",
-        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\answer_button.png"
-    },
-    {
-        "merged": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\home_2.png",
-        "source": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\home_2.png"
-    },
-    {
-        "merged": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\my_rank.png",
-        "source": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\my_rank.png"
-    },
-    {
-        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\camera_mode_on.png",
-        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\camera_mode_on.png"
-    },
-    {
-        "merged": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\title_s.png",
-        "source": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\title_s.png"
-    },
-    {
-        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\col2.png",
-        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\col2.png"
-    },
-    {
-        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\about_nol.png",
-        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\about_nol.png"
-    },
-    {
-        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\app_icon.png",
-        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\app_icon.png"
-    },
-    {
-        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\quiz_list_green.png",
-        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\quiz_list_green.png"
-    },
-    {
-        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\home_2.png",
-        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\home_2.png"
-    },
-    {
-        "merged": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\bronze.png",
-        "source": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\bronze.png"
-    },
-    {
-        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\seven.png",
-        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\seven.png"
-    },
-    {
-        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\four.png",
-        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\four.png"
-    },
-    {
-        "merged": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\title_t.png",
-        "source": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\title_t.png"
-    },
-    {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\indicator_off.png",
         "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\indicator_off.png"
     },
     {
-        "merged": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\new_nine.png",
-        "source": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\new_nine.png"
-    },
-    {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\side_grade_on.png",
         "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\side_grade_on.png"
-    },
-    {
-        "merged": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\camera_mode_on.png",
-        "source": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\camera_mode_on.png"
     },
     {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\title_t.png",
@@ -428,20 +100,8 @@
         "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\about_nol_on.png"
     },
     {
-        "merged": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\new_three.png",
-        "source": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\new_three.png"
-    },
-    {
-        "merged": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\col2.png",
-        "source": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\col2.png"
-    },
-    {
-        "merged": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\app_banner.png",
-        "source": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\app_banner.png"
-    },
-    {
-        "merged": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\no_quiz.png",
-        "source": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\no_quiz.png"
+        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\quiz_2.png",
+        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\quiz_2.png"
     },
     {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\side_home_on.png",
@@ -452,104 +112,76 @@
         "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\new_eight.png"
     },
     {
-        "merged": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\seven.png",
-        "source": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\seven.png"
-    },
-    {
-        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\new_three.png",
-        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\new_three.png"
+        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\col.png",
+        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\col.png"
     },
     {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\home_1.png",
         "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\home_1.png"
     },
     {
-        "merged": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\tapbar.png",
-        "source": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\tapbar.png"
+        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\new_three.png",
+        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\new_three.png"
     },
     {
-        "merged": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\new_one.png",
-        "source": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\new_one.png"
+        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\free.png",
+        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\free.png"
     },
     {
-        "merged": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\tuto_d.png",
-        "source": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\tuto_d.png"
+        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\button.png",
+        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\button.png"
     },
     {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\two.png",
         "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\two.png"
     },
     {
-        "merged": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\eight.png",
-        "source": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\eight.png"
-    },
-    {
-        "merged": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\about_nol.png",
-        "source": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\about_nol.png"
-    },
-    {
-        "merged": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\info_1.png",
-        "source": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\info_1.png"
+        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\hint_button_on.png",
+        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\hint_button_on.png"
     },
     {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\side_setting.png",
         "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\side_setting.png"
     },
     {
-        "merged": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\main_tilte_home.png",
-        "source": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\main_tilte_home.png"
-    },
-    {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\tapbar.png",
         "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\tapbar.png"
+    },
+    {
+        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\text_grade.png",
+        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\text_grade.png"
     },
     {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\three.png",
         "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\three.png"
     },
     {
-        "merged": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\text_point.png",
-        "source": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\text_point.png"
+        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\eiffel.png",
+        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\eiffel.png"
     },
     {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\my_rank.png",
         "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\my_rank.png"
     },
     {
-        "merged": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\side_camera_on.png",
-        "source": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\side_camera_on.png"
+        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\text_hint.png",
+        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\text_hint.png"
     },
     {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\side_camera_on.png",
         "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\side_camera_on.png"
     },
     {
-        "merged": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\side_camera_on_on.png",
-        "source": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\side_camera_on_on.png"
+        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\quiz_list_blue.png",
+        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\quiz_list_blue.png"
     },
     {
-        "merged": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\text_name.png",
-        "source": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\text_name.png"
-    },
-    {
-        "merged": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\subtitle_top.png",
-        "source": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\subtitle_top.png"
-    },
-    {
-        "merged": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\button_on.png",
-        "source": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\button_on.png"
+        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\quiz_list_red.png",
+        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\quiz_list_red.png"
     },
     {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\indicator_on.png",
         "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\indicator_on.png"
-    },
-    {
-        "merged": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\quiz_list_green.png",
-        "source": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\quiz_list_green.png"
-    },
-    {
-        "merged": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\indicator_off.png",
-        "source": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\indicator_off.png"
     },
     {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\button_on.png",
@@ -560,52 +192,44 @@
         "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\main_tilte_home.png"
     },
     {
-        "merged": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\side_grade_on.png",
-        "source": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\side_grade_on.png"
-    },
-    {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\text_name.png",
         "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\text_name.png"
     },
     {
-        "merged": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\title.png",
-        "source": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\title.png"
-    },
-    {
-        "merged": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\four.png",
-        "source": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\four.png"
+        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\quiz_list_gold.png",
+        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\quiz_list_gold.png"
     },
     {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\info_2.png",
         "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\info_2.png"
     },
     {
-        "merged": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\side_grade.png",
-        "source": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\side_grade.png"
-    },
-    {
-        "merged": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\info_2.png",
-        "source": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\info_2.png"
+        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\side_grade.png",
+        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\side_grade.png"
     },
     {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\card_view_back.png",
         "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\card_view_back.png"
     },
     {
+        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\new_two.png",
+        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\new_two.png"
+    },
+    {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\tuto_title.png",
         "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\tuto_title.png"
     },
     {
-        "merged": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\quiz_1.png",
-        "source": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\quiz_1.png"
-    },
-    {
-        "merged": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\subtitle.png",
-        "source": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\subtitle.png"
+        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\answer_button_on.png",
+        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\answer_button_on.png"
     },
     {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\no_quiz.png",
         "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\no_quiz.png"
+    },
+    {
+        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\camera.png",
+        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\camera.png"
     },
     {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\gold.png",
@@ -616,24 +240,16 @@
         "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\side_home.png"
     },
     {
-        "merged": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\answer_button_on.png",
-        "source": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\answer_button_on.png"
-    },
-    {
-        "merged": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\new_seven.png",
-        "source": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\new_seven.png"
+        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\quiz_1.png",
+        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\quiz_1.png"
     },
     {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\rank_1.png",
         "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\rank_1.png"
     },
     {
-        "merged": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\bg_main.png",
-        "source": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\bg_main.png"
-    },
-    {
-        "merged": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\hint_button.png",
-        "source": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\hint_button.png"
+        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\title_text_home.png",
+        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\title_text_home.png"
     },
     {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\rate.png",
@@ -644,119 +260,123 @@
         "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\answer_button_dimend.png"
     },
     {
-        "merged": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\quiz_list_blue.png",
-        "source": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\quiz_list_blue.png"
+        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\namdaemoon.png",
+        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\namdaemoon.png"
     },
     {
-        "merged": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\quiz_list_red.png",
-        "source": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\quiz_list_red.png"
+        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\side_camera_on_on.png",
+        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\side_camera_on_on.png"
     },
     {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\side_setting_on.png",
         "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\side_setting_on.png"
     },
     {
-        "merged": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\new_two.png",
-        "source": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\new_two.png"
+        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\tower.png",
+        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\tower.png"
     },
     {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\subtitle.png",
         "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\subtitle.png"
     },
     {
-        "merged": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\new_four.png",
-        "source": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\new_four.png"
+        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\six.png",
+        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\six.png"
     },
     {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\tuto_a.png",
         "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\tuto_a.png"
     },
     {
-        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\tuto_d.png",
-        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\tuto_d.png"
+        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\tajimahal.png",
+        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\tajimahal.png"
     },
     {
-        "merged": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\namdaemoon.png",
-        "source": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\namdaemoon.png"
+        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\tuto_d.png",
+        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\tuto_d.png"
     },
     {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\bg_load.png",
         "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\bg_load.png"
     },
     {
-        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\quiz_solved.png",
-        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\quiz_solved.png"
+        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\bronze.png",
+        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\bronze.png"
     },
     {
-        "merged": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\quiz_solved.png",
-        "source": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\quiz_solved.png"
+        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\quiz_solved.png",
+        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\quiz_solved.png"
     },
     {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\title_s.png",
         "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\title_s.png"
     },
     {
-        "merged": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\title_text_home.png",
-        "source": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\title_text_home.png"
+        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\new_five.png",
+        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\new_five.png"
     },
     {
-        "merged": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\help_tuto.png",
-        "source": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\help_tuto.png"
+        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\setting_back.png",
+        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\setting_back.png"
     },
     {
-        "merged": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\indicator_on.png",
-        "source": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\indicator_on.png"
+        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\title.png",
+        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\title.png"
     },
     {
-        "merged": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\two.png",
-        "source": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\two.png"
+        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\subtitle_top.png",
+        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\subtitle_top.png"
+    },
+    {
+        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\main_tilte_rank.png",
+        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\main_tilte_rank.png"
     },
     {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\eight.png",
         "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\eight.png"
     },
     {
-        "merged": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\tajimahal.png",
-        "source": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\tajimahal.png"
+        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\new_six.png",
+        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\new_six.png"
+    },
+    {
+        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\info_1.png",
+        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\info_1.png"
     },
     {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\hint_button.png",
         "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\hint_button.png"
     },
     {
-        "merged": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\quiz_list_gold.png",
-        "source": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\quiz_list_gold.png"
+        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\app_banner.png",
+        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\app_banner.png"
     },
     {
-        "merged": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\answer_button.png",
-        "source": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\answer_button.png"
-    },
-    {
-        "merged": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\main_tilte_quiz.png",
-        "source": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\main_tilte_quiz.png"
+        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\text_point.png",
+        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\text_point.png"
     },
     {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\help_tuto_on.png",
         "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\help_tuto_on.png"
     },
     {
-        "merged": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\six.png",
-        "source": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\six.png"
-    },
-    {
-        "merged": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\col.png",
-        "source": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\col.png"
+        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\timer.png",
+        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\timer.png"
     },
     {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\new_one.png",
         "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\new_one.png"
     },
     {
+        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\rank_2.png",
+        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\rank_2.png"
+    },
+    {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\silver.png",
         "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\silver.png"
     },
     {
-        "merged": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\home_1.png",
-        "source": "C:\\Users\\cwh62\\OneDrive\\Nol\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\home_1.png"
+        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\build\\intermediates\\res\\merged\\debug\\drawable-en-mdpi\\help_tuto.png",
+        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\src\\main\\res\\drawable-en-mdpi\\help_tuto.png"
     }
 ]

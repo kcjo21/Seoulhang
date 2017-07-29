@@ -42,6 +42,7 @@ public class JoinActivity extends Activity {
     Ipm ipm;
     Button check;
     TextView alert;
+    TextView check_id;
     Boolean check_tf;
 
     @Override
@@ -64,6 +65,7 @@ public class JoinActivity extends Activity {
         email = (EditText) findViewById(R.id.email_t);
         check = (Button) findViewById(R.id.check_b);
         alert = (TextView)findViewById(R.id.alert);
+        check_id = (TextView)findViewById(R.id.check_t);
 
 
         cancel.setOnClickListener(new View.OnClickListener() {
@@ -78,12 +80,14 @@ public class JoinActivity extends Activity {
         id.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
+                check.setEnabled(false);
             }
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-
+                check.setVisibility(View.VISIBLE);
+                check_id.setVisibility(View.GONE);
+                alert.setText("");
                 int sizeid = id.getText().length();
                 if(sizeid>0)
                     check.setEnabled(true);
@@ -115,9 +119,10 @@ public class JoinActivity extends Activity {
 
                                 case 200:
                                    check.setVisibility(View.GONE);
-                                    alert.setText(getResources().getString(R.string.사용가능));
+                                    check_id.setVisibility(View.VISIBLE);
+                                    check_id.setText(getResources().getString(R.string.사용가능));
                                     check_tf=true;
-
+                                    break;
 
                                 default:
                                     alert.setText(getResources().getString(R.string.please_check_already_id));
@@ -145,10 +150,7 @@ public class JoinActivity extends Activity {
 
             @Override
             public void onClick(View view) {
-                String sid = id.getText().toString();
-                final String spass = password.getText().toString();
-                final String scpass = passwordconfirm.getText().toString();
-                String sname = name.getText().toString();
+
                 men.setChecked(true);
                 men.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -162,58 +164,64 @@ public class JoinActivity extends Activity {
                         gender = "여";
                     }
                 });
-                int sage = Integer.parseInt(age.getText().toString());
-                String sphone = phone.getText().toString();
-                String semail = email.getText().toString();
+
                 String ip = ipm.getip();
                 Log.e("ACC","TEAM id IS !!! "+ ip);
                 networkClient = NetworkClient.getInstance(ip);
-                Log.e("ACC","TEAM id IS !!! "+ sid);
                 TextView alert = (TextView)findViewById(R.id.alert);
-                if(id.getText().length()<0) alert.setText(getResources().getString(R.string.EID));
+                if(id.getText().length()<=0) alert.setText(getResources().getString(R.string.EID));
                 else if(!check_tf)alert.setText(getResources().getString(R.string.checkplease));
-                else if(password.getText().length()<0)alert.setText(getResources().getString(R.string.EPass));
-                else if(!password.getText().toString().equals(passwordconfirm.getText().toString()))alert.setText(getResources().getString(R.string.checkplease));
-                else if(name.getText().length()<0)alert.setText(getResources().getString(R.string.Ename));
-                else if(age.getText().length()<0)alert.setText(getResources().getString(R.string.Eage));
-                else if(phone.getText().length()<0)alert.setText(getResources().getString(R.string.Ephone));
-                else if(email.getText().length()<0)alert.setText(getResources().getString(R.string.EEmail));
+                else if(password.getText().length()<=0)alert.setText(getResources().getString(R.string.EPass));
+                else if(!password.getText().toString().equals(passwordconfirm.getText().toString()))alert.setText(getResources().getString(R.string.비밀번호일치));
+                else if(name.getText().length()<=0)alert.setText(getResources().getString(R.string.Ename));
+                else if(age.getText().length()<=0)alert.setText(getResources().getString(R.string.Eage));
+                else if(phone.getText().length()<=0)alert.setText(getResources().getString(R.string.Ephone));
+                else if(email.getText().length()<=0)alert.setText(getResources().getString(R.string.EEmail));
 
+                else {
 
+                    String sid = id.getText().toString();
+                    final String spass = password.getText().toString();
+                    final String scpass = passwordconfirm.getText().toString();
+                    String sname = name.getText().toString();
+                    int sage = Integer.parseInt(age.getText().toString());
+                    String sphone = phone.getText().toString();
+                    String semail = email.getText().toString();
 
-                networkClient.getjoin(sid,spass,sname,gender,sage,sphone,semail,new Callback<String>() {
-                    @Override
-                    public void onResponse(Call<String> call, Response<String> response) {
-                        if (spass.equals(scpass)) {
-                            switch (response.code()) {
-                                case 200:
-                                    String joinDTO = response.body();
-                                    Log.e("TAG", "team dto : " + joinDTO.toString());
-                                    Intent intent = new Intent(JoinActivity.this, MainActivity.class);
-                                    startActivity(intent);
-                                    finish();
-                                    break;
+                    networkClient.getjoin(sid, spass, sname, gender, sage, sphone, semail, new Callback<String>() {
+                        @Override
+                        public void onResponse(Call<String> call, Response<String> response) {
+                            if (spass.equals(scpass)) {
+                                switch (response.code()) {
+                                    case 200:
+                                        String joinDTO = response.body();
+                                        Log.e("TAG", "team dto : " + joinDTO.toString());
+                                        Intent intent = new Intent(JoinActivity.this, MainActivity.class);
+                                        startActivity(intent);
+                                        finish();
+                                        break;
 
-                                case 205:
-                                    Log.e("TAG", "입력 제한");
-                                    Toast toast = Toast.makeText(getApplicationContext(), getResources().getString(R.string.please_check_already_id), Toast.LENGTH_LONG);
-                                    toast.show();
-                                    break;
+                                    case 205:
+                                        Log.e("TAG", "입력 제한");
+                                        Toast toast = Toast.makeText(getApplicationContext(), getResources().getString(R.string.please_check_already_id), Toast.LENGTH_LONG);
+                                        toast.show();
+                                        break;
 
+                                }
                             }
+                            Toast toast = Toast.makeText(getApplicationContext(), getResources().getString(R.string.회원가입성공), Toast.LENGTH_LONG);
+                            toast.show();
                         }
-                        Toast toast = Toast.makeText(getApplicationContext(),getResources().getString(R.string.비밀번호일치),Toast.LENGTH_LONG);
-                        toast.show();
-                    }
 
-                    @Override
-                    public void onFailure(Call<String> call, Throwable t) {
-                        Log.e("ACC","s?? " + t.getMessage());
-                        Toast toast = Toast.makeText(getApplicationContext(), getResources().getString(R.string.can_not_connent_to_server), Toast.LENGTH_LONG);
-                        toast.show();
+                        @Override
+                        public void onFailure(Call<String> call, Throwable t) {
+                            Log.e("ACC", "s?? " + t.getMessage());
+                            Toast toast = Toast.makeText(getApplicationContext(), getResources().getString(R.string.can_not_connent_to_server), Toast.LENGTH_LONG);
+                            toast.show();
 
-                    }
-                });
+                        }
+                    });
+                }
             }
         });
     }
