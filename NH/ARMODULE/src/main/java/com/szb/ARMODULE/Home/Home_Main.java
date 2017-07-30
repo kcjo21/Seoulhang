@@ -30,6 +30,7 @@ import com.bumptech.glide.request.target.GlideDrawableImageViewTarget;
 import com.szb.ARMODULE.GameActivity;
 import com.szb.ARMODULE.Home.frag.Frag_Home;
 import com.szb.ARMODULE.Home.frag.Frag_Info;
+import com.szb.ARMODULE.Home.frag.Frag_Map;
 import com.szb.ARMODULE.Home.frag.Frag_Quiz;
 import com.szb.ARMODULE.Home.frag.Frag_Rank;
 import com.szb.ARMODULE.model.retrofit.InventoryDTO;
@@ -230,7 +231,8 @@ public class Home_Main extends AppCompatActivity {
         ImageView bt_home = (ImageView)findViewById(R.id.bt_home);
         ImageView bt_quiz = (ImageView)findViewById(R.id.bt_quiz);
         ImageView bt_info = (ImageView)findViewById(R.id.bt_info);
-        ImageView bt_rank = (ImageView)findViewById(R.id.bt_rank);    //이미지 뷰에 각  레이아웃 할당
+        ImageView bt_rank = (ImageView)findViewById(R.id.bt_rank);
+        ImageView bt_map = (ImageView)findViewById(R.id.bt_map);  //이미지 뷰에 각  레이아웃 할당
 
         viewpager.setAdapter(new pagerAdapter(getSupportFragmentManager()));
         viewpager.setCurrentItem(0);
@@ -242,7 +244,9 @@ public class Home_Main extends AppCompatActivity {
         bt_rank.setOnClickListener(movePageListener);
         bt_rank.setTag(2);
         bt_info.setOnClickListener(movePageListener);
-        bt_info.setTag(3);                                       //페이저 리스너에 태그에 할당된 버튼 추가
+        bt_info.setTag(3);
+        bt_map.setOnClickListener(movePageListener);
+        bt_map.setTag(4);                                //페이저 리스너에 태그에 할당된 버튼 추가
 
         bt_home.setSelected(true);  //뷰페이저 초기값 bt_home
 
@@ -256,7 +260,7 @@ public class Home_Main extends AppCompatActivity {
             public void onPageSelected(int position)
             {
                 int i = 0;
-                while(i<4)
+                while(i<5)
                 {
                     if(position==i)
                     {
@@ -289,7 +293,7 @@ public class Home_Main extends AppCompatActivity {
         {   //페이지 이동값 리스너
             int tag = (int) v.getTag();
             int i = 0;
-            while(i<4)
+            while(i<5)
             {
                 if(tag==i)
                 {
@@ -322,6 +326,8 @@ public class Home_Main extends AppCompatActivity {
                     return new Frag_Rank();
                 case 3:
                     return new Frag_Info();
+                case 4:
+                    return new Frag_Map();
                 default:
                     return null;
             }
@@ -330,7 +336,7 @@ public class Home_Main extends AppCompatActivity {
         @Override
         public int getCount()
         {
-            return 4;
+            return 5;
         }
 
     }

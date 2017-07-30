@@ -4,6 +4,8 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/ARMODULE/ARMODULE.iml" filepath="$PROJECT_DIR$/ARMODULE/ARMODULE.iml" />
       <module fileurl="file://$PROJECT_DIR$/NH.iml" filepath="$PROJECT_DIR$/NH.iml" />
+      <module fileurl="file://$PROJECT_DIR$/trafficsubway-release/trafficsubway-release.iml" filepath="$PROJECT_DIR$/trafficsubway-release/trafficsubway-release.iml" />
+      <module fileurl="file://$PROJECT_DIR$/trafficsubway-release/trafficsubway-release.iml" filepath="$PROJECT_DIR$/trafficsubway-release/trafficsubway-release.iml" />
     </modules>
   </component>
 </project>

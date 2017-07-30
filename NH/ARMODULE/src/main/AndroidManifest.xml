@@ -111,7 +111,8 @@
         <activity
             android:name=".start_pack.Setting"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
-        <activity android:name=".start_pack.JoinActivity"></activity>
+        <activity android:name=".start_pack.JoinActivity" />
+        <activity android:name=".Home.frag.Frag_Map"></activity>
     </application>
 
 </manifest> <!-- android:installLocation="preferExternal" -->

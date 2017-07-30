@@ -89,15 +89,39 @@
                 app:layout_constraintRight_toRightOf="parent">
 
                 <ImageView
+                    android:id="@+id/bt_home"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentLeft="false"
+                    android:layout_alignParentStart="false"
+                    android:layout_marginEnd="20dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toLeftOf="@+id/bt_quiz"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.6"
+                    app:srcCompat="@drawable/selector_home"
+                    tools:ignore="ContentDescription,RtlHardcoded" />
+
+                <ImageView
                     android:id="@+id/bt_quiz"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
+                    android:layout_marginEnd="20dp"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintHorizontal_bias="0.385"
+                    app:layout_constraintRight_toLeftOf="@+id/bt_rank"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/selector_quiz"
+                    tools:ignore="ContentDescription" />
+
+                <ImageView
+                    android:id="@+id/bt_rank"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintLeft_toLeftOf="parent"
                     app:layout_constraintRight_toRightOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/selector_quiz"
+                    app:srcCompat="@drawable/selector_rank"
                     tools:ignore="ContentDescription" />
 
                 <ImageView
@@ -107,39 +131,23 @@
                     android:layout_alignParentEnd="false"
                     android:layout_alignParentRight="false"
                     android:layout_centerVertical="false"
+                    android:layout_marginStart="20dp"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintHorizontal_bias="0.85"
-                    app:layout_constraintLeft_toLeftOf="parent"
-                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintLeft_toRightOf="@+id/bt_rank"
                     app:layout_constraintTop_toTopOf="parent"
                     app:srcCompat="@drawable/selector_info"
                     tools:ignore="ContentDescription,RtlHardcoded" />
 
                 <ImageView
-                    android:id="@+id/bt_rank"
+                    android:id="@+id/bt_map"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
+                    android:layout_marginStart="20dp"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintHorizontal_bias="0.619"
-                    app:layout_constraintLeft_toLeftOf="parent"
-                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintLeft_toRightOf="@+id/bt_info"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/selector_rank"
-                    tools:ignore="ContentDescription" />
-
-                <ImageView
-                    android:id="@+id/bt_home"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_alignParentLeft="false"
-                    android:layout_alignParentStart="false"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintHorizontal_bias="0.152"
-                    app:layout_constraintLeft_toLeftOf="parent"
-                    app:layout_constraintRight_toRightOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/selector_home"
-                    tools:ignore="ContentDescription,RtlHardcoded" />
+                    app:srcCompat="@color/BRONZE"
+                    app:layout_constraintVertical_bias="0.6" />
 
             </android.support.constraint.ConstraintLayout>
 
@@ -217,7 +225,7 @@
                             android:text="                 닉네임 : 고추장"
                             android:textColor="@android:color/black"
                             android:textSize="14dp"
-                            tools:ignore="SpUsage" />
+                            tools:ignore="HardcodedText,SpUsage" />
 
                         <TextView
                             android:id="@+id/player_grade"
@@ -241,7 +249,7 @@
                             android:text="                 남은 힌트 수 : 0"
                             android:textColor="@android:color/black"
                             android:textSize="14dp"
-                            tools:ignore="SpUsage" />
+                            tools:ignore="HardcodedText,SpUsage" />
 
                         <TextView
                             android:id="@+id/player_point_home"
@@ -253,7 +261,7 @@
                             android:text="                 점수 : 10"
                             android:textColor="@android:color/black"
                             android:textSize="14dp"
-                            tools:ignore="SpUsage" />
+                            tools:ignore="HardcodedText,SpUsage" />
 
                         <TextView
                             android:id="@+id/quiz_correct"

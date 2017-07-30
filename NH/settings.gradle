@@ -1,1 +1,1 @@
-include ':ARMODULE'
+include ':ARMODULE', ':trafficsubway-release'

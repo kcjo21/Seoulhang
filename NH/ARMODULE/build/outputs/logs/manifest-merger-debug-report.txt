@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\NH\ARMODULE\src\main\AndroidManifest.xml:2:1-117:12
+ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\NH\ARMODULE\src\main\AndroidManifest.xml:2:1-118:12
 	package
 		ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\NH\ARMODULE\src\main\AndroidManifest.xml:3:5-31
 	android:versionName
@@ -122,7 +122,7 @@ ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\NH\ARMODULE\src\main\AndroidMa
 	android:name
 		ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\NH\ARMODULE\src\main\AndroidManifest.xml:46:22-73
 application
-ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\NH\ARMODULE\src\main\AndroidManifest.xml:48:5-115:19
+ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\NH\ARMODULE\src\main\AndroidManifest.xml:48:5-116:19
 MERGED from [com.android.support:design:25.3.1] C:\Users\cwh62\.android\build-cache\a964cb925b13ae3f74c511d2e1b4ff26decb84fd\output\AndroidManifest.xml:29:5-20
 MERGED from [com.android.support:appcompat-v7:25.3.1] C:\Users\cwh62\.android\build-cache\30535fa162e5037dde8eb4764dd9444ceb4c5dcb\output\AndroidManifest.xml:29:5-20
 MERGED from [com.android.support:animated-vector-drawable:25.3.1] C:\Users\cwh62\.android\build-cache\08f4c98575faa3083ae31858b35b3d18e95c1281\output\AndroidManifest.xml:26:5-20
@@ -249,9 +249,13 @@ ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\NH\ARMODULE\src\main\AndroidMa
 	android:name
 		ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\NH\ARMODULE\src\main\AndroidManifest.xml:112:13-47
 activity#com.szb.ARMODULE.start_pack.JoinActivity
-ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\NH\ARMODULE\src\main\AndroidManifest.xml:114:9-70
+ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\NH\ARMODULE\src\main\AndroidManifest.xml:114:9-61
 	android:name
 		ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\NH\ARMODULE\src\main\AndroidManifest.xml:114:19-58
+activity#com.szb.ARMODULE.Home.frag.Frag_Map
+ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\NH\ARMODULE\src\main\AndroidManifest.xml:115:9-65
+	android:name
+		ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\NH\ARMODULE\src\main\AndroidManifest.xml:115:19-53
 meta-data#android.support.VERSION
 ADDED from [com.android.support:design:25.3.1] C:\Users\cwh62\.android\build-cache\a964cb925b13ae3f74c511d2e1b4ff26decb84fd\output\AndroidManifest.xml:25:5-27:34
 MERGED from [com.android.support:appcompat-v7:25.3.1] C:\Users\cwh62\.android\build-cache\30535fa162e5037dde8eb4764dd9444ceb4c5dcb\output\AndroidManifest.xml:25:5-27:34
