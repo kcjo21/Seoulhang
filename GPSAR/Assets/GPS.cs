@@ -94,7 +94,7 @@ public class GPS : MonoBehaviour {
             obj = GameObject.Find("3d");
             obj.SetActive(false);
             region_code = " 해당 역 없음";
-            region_name = " 해당 역 없음";
+            region_name = "-";
         }
 
         yield break;

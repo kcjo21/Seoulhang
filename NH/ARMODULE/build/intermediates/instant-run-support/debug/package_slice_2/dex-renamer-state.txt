@@ -1,4 +1,0 @@
-#Mon Jul 31 14:07:23 KST 2017
-base.0=C\:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\5\\slice_2
-renamed.0=classes.dex
-file.0=C\:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\NH\\ARMODULE\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\5\\slice_2\\classes.dex

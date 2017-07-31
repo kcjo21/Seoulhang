@@ -7,16 +7,12 @@ public class touch : MonoBehaviour {
     private GameObject target;
     AndroidJavaObject mnd;
     bool Touched=false;
-    public AudioClip touch_sound;
-    public new AudioSource audio;
-
-
 
 
     private void Start()
     {
         AndroidJNI.AttachCurrentThread();
-        this.audio = this.gameObject.AddComponent<AudioSource>();
+    
         
     }
     void Update()
@@ -29,11 +25,9 @@ public class touch : MonoBehaviour {
             {
 
                /* var tt = GameObject.Find("Get_text");      //오브젝트의 애니메이션을 불러온다.
-                tt.GetComponent<Animation>().Play("Get");     //텍스트 애니메이션 "Get"을 실행한다.*/
+                tt.GetComponent<Animation>().Play("Get");     //텍스트 애니메이션 "Get"을 실행한다. */
                 this.GetComponent<Animation>().Play("Rotate");   //오브젝트 애니메이션 "Rotate"를 실행한다.
-                this.audio.clip = this.touch_sound;
-                this.audio.volume = 1.0f;
-                this.audio.Play();                     //터치 소리를 실행한다.
+                this.GetComponent<AudioSource>().Play() ;                     //터치 소리를 실행한다.*
 
                                                                 
 
