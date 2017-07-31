@@ -51,10 +51,12 @@
 
     <application
         android:name="com.szb.ARMODULE.RealmInit"
+        android:allowBackup="true"
         android:banner="@drawable/app_banner"
         android:icon="@drawable/app_icon"
         android:isGame="true"
         android:label="@string/app_name"
+        android:supportsRtl="true"
         android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
         <activity
             android:name="com.szb.ARMODULE.UnityPlayerNativeActivity"
@@ -117,6 +119,19 @@
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity android:name="com.szb.ARMODULE.start_pack.JoinActivity" />
         <activity android:name="com.szb.ARMODULE.Home.frag.Frag_Map" />
+        <activity
+            android:name="kr.go.seoul.trafficsubway.TrafficSubwayDetailTypeA"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="kr.go.seoul.trafficsubway.TrafficSubwayInfoTypeA"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Dialog" />
+        <activity
+            android:name="kr.go.seoul.trafficsubway.TrafficSubwayDetailTypeB"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="kr.go.seoul.trafficsubway.TrafficSubwayInfoTypeB"
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest> <!-- android:installLocation="preferExternal" -->

@@ -26,6 +26,9 @@
     <string name="Email">Email</string>
     <string name="Ename">Enter your name.</string>
     <string name="Ephone">Enter your phone number.</string>
+    <string name="GPSMessage">Your GPS is disabled! We need GPS Data. Would you like to enable it?</string>
+    <string name="GPSN">No</string>
+    <string name="GPSY">Yes</string>
     <string name="Login">Login</string>
     <string name="Name">Name</string>
     <string name="Password">Password</string>

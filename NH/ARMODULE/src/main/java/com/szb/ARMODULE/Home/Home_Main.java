@@ -161,33 +161,33 @@ public class Home_Main extends AppCompatActivity {
         });
 
         networkClient.getfinishitem(loginid, new Callback<List<InventoryDTO>>() {
-                    @Override
-                    public void onResponse(Call<List<InventoryDTO>> call, Response<List<InventoryDTO>> response) {
-                        Log.d("인포", "123");
-                        switch (response.code()) {
-                            case 200:
-                                Log.d("인포", "어댑터 세팅");
-                                infos = response.body();
+            @Override
+            public void onResponse(Call<List<InventoryDTO>> call, Response<List<InventoryDTO>> response) {
+                Log.d("인포", "123");
+                switch (response.code()) {
+                    case 200:
+                        Log.d("인포", "어댑터 세팅");
+                        infos = response.body();
 
-                                InventoryDTO inventoryDTO = infos.get(0);
+                        InventoryDTO inventoryDTO = infos.get(0);
 
-                                String grade_i = inventoryDTO.getGrade();
-                                String playername = inventoryDTO.getPlayername();
-                                String point_i = Integer.toString(inventoryDTO.getPoint());
-                                String hint_i = Integer.toString(inventoryDTO.getHint());
+                        String grade_i = inventoryDTO.getGrade();
+                        String playername = inventoryDTO.getPlayername();
+                        String point_i = Integer.toString(inventoryDTO.getPoint());
+                        String hint_i = Integer.toString(inventoryDTO.getHint());
 
-                                player_name.setText(getResources().getString(R.string.side_닉네임,playername));
-                                hint_left.setText(getResources().getString(R.string.side_힌트수,hint_i));
-                                player_grade.setText(getResources().getString(R.string.side_등급,grade_i));
-                                player_point_home.setText(getResources().getString(R.string.side_점수,point_i));
+                        player_name.setText(getResources().getString(R.string.side_닉네임,playername));
+                        hint_left.setText(getResources().getString(R.string.side_힌트수,hint_i));
+                        player_grade.setText(getResources().getString(R.string.side_등급,grade_i));
+                        player_point_home.setText(getResources().getString(R.string.side_점수,point_i));
 
 
-                                break;
+                        break;
 
-                            default:
-                                break;
-                        }
-                    }
+                    default:
+                        break;
+                }
+            }
             @Override
             public void onFailure(Call<List<InventoryDTO>> call, Throwable t) {
                 Log.e("ACC", "s?? " + t.getMessage());
@@ -348,7 +348,7 @@ public class Home_Main extends AppCompatActivity {
     };
 
     @Override public void onBackPressed() {
-         backPressCloseHandler.onBackPressed();
+        backPressCloseHandler.onBackPressed();
     }
 
     @Override

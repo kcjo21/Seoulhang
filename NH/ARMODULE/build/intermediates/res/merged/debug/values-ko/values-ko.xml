@@ -26,6 +26,9 @@
     <string name="Email">Email</string>
     <string name="Ename">이름을 입력해주세요.</string>
     <string name="Ephone">Enter your phone number.</string>
+    <string name="GPSMessage">이 게임은 GPS 위치 데이터를 필요로 합니다. GPS를 설정하시겠습니까?</string>
+    <string name="GPSN">아니요</string>
+    <string name="GPSY">예</string>
     <string name="Login">Login</string>
     <string name="Name">Name</string>
     <string name="Password">Password</string>

@@ -1,6 +1,9 @@
 package com.szb.ARMODULE;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.location.LocationManager;
 import android.os.Bundle;
 import android.util.Log;
 
@@ -27,6 +30,37 @@ public class GameActivity extends UnityPlayerActivity {
         // TODO Auto-generated method stub
         super.onCreate(arg0);
 
+        //GPS 여부 체크
+        LocationManager locationManager = (LocationManager) getSystemService(LOCATION_SERVICE);
+        if(!locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER)) {
+            createGpsDisabledAlert();
+        }
+    }
+
+    private void createGpsDisabledAlert(){
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setMessage(R.string.GPSMessage)
+                .setCancelable(false).setPositiveButton(R.string.GPSY,
+                new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int id) {
+                        showGpsOptions();
+                    }
+                })
+                .setNegativeButton(R.string.GPSN,
+                        new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int id) {
+                                dialog.cancel();;
+                            }
+                        });
+        AlertDialog alert = builder.create();
+        alert.show();
+    }
+
+    private  void showGpsOptions(){
+        Intent gpsOptionsIntent = new Intent(android.provider.Settings.ACTION_LOCATION_SOURCE_SETTINGS);
+        startActivity(gpsOptionsIntent);
     }
 
     @Override

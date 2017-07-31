@@ -98,4 +98,7 @@
     <string name="Ephone">Enter your phone number.</string>
     <string name="checkplease">perform a check for overlapping Identification.</string>
     <string name="회원가입성공">Congratulations!</string>
+    <string name="GPSMessage">Your GPS is disabled! We need GPS Data. Would you like to enable it?</string>
+    <string name="GPSY">Yes</string>
+    <string name="GPSN">No</string>
 </resources>
