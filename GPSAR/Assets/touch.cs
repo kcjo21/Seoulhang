@@ -56,6 +56,7 @@ public class touch : MonoBehaviour {
         {
             //있으면 오브젝트를 저장한다.
             target = hit.collider.gameObject;
+            GameObject.Find("Button").SetActive(false);
         }
 
         return target;

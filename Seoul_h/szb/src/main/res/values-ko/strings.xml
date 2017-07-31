@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">놀행</string>
+    <string name="app_name">서울행</string>
     <string name="ARCam">ARCam</string>
     <string name="Signup">Signup</string>
     <string name="Login">Login</string>

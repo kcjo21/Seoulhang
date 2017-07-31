@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidManifest.xml:2:1-86:12
+ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidManifest.xml:2:1-84:12
 	package
 		ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidManifest.xml:3:5-26
 		INJECTED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidManifest.xml
@@ -257,14 +257,6 @@ uses-permission#android.permission.ACCESS_WIFI_STATE
 ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidManifest.xml:83:3-74
 	android:name
 		ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidManifest.xml:83:20-71
-uses-permission#android.permission.READ_EXTERNAL_STORAGE
-ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidManifest.xml:84:3-78
-	android:name
-		ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidManifest.xml:84:20-75
-uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
-ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidManifest.xml:85:3-78
-	android:name
-		ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidManifest.xml:85:20-76
 meta-data#android.support.VERSION
 ADDED from [com.android.support:design:25.3.1] C:\Users\cwh62\.android\build-cache\2296c6d153ca9492798042173aaf4756857c6a9d\output\AndroidManifest.xml:25:5-27:34
 MERGED from [com.android.support:appcompat-v7:25.3.1] C:\Users\cwh62\.android\build-cache\1860e7502bea0f552aaa4935120bb2accced6b21\output\AndroidManifest.xml:25:5-27:34

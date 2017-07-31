@@ -37,7 +37,7 @@
     <string name="Submit">Submit</string>
     <string name="action_settings">action_settings</string>
     <string name="age">Age</string>
-    <string name="app_name">NOLHANG</string>
+    <string name="app_name">SeoulHang</string>
     <string name="can_not_connent_to_server">Cannot connect Server.</string>
     <string name="checkplease">perform a check for overlapping Identification.</string>
     <string name="close_drawer">close drawerclose drawerclose drawerclose drawerclose drawer</string>
@@ -121,7 +121,7 @@
     </string>
     <string name="힌트없음">You have no hint bonus left.</string>
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-        <!-- Customize your theme here. -->
+        
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>

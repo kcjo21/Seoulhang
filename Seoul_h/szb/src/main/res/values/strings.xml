@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">놀행</string>
+    <string name="app_name">서울행</string>
     <string name="ARCam">ARCam</string>
     <string name="Signup">Signup</string>
     <string name="Login">Login</string>
@@ -98,4 +98,7 @@
     <string name="EEmail">이메일을 입력해주세요.</string>
     <string name="checkplease">ID중복확인을 해주십시오.</string>
     <string name="회원가입성공">회원가입을 축하합니다!</string>
+    <string name="GPSMessage">이 게임은 GPS 위치 데이터를 필요로 합니다. GPS를 설정하시겠습니까?</string>
+    <string name="GPSN">아니요</string>
+    <string name="GPSY">예</string>
 </resources>

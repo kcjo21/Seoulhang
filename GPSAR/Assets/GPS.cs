@@ -9,7 +9,6 @@ using System.IO;
 public class GPS : MonoBehaviour {
 
     public static GPS Instance { set; get; }
-    public GameObject obj;
     public double latitude;
     public double longitude;
     public string region_code;
@@ -22,6 +21,7 @@ public class GPS : MonoBehaviour {
         Instance = this;
         DontDestroyOnLoad(gameObject);
         StartCoroutine(StartLocationService());
+        GameObject.Find("3d").SetActive(false);
     }
 
 
@@ -75,7 +75,7 @@ public class GPS : MonoBehaviour {
         _dbc = new SqliteConnection(_constr);
         _dbc.Open();
         _dbcm = _dbc.CreateCommand();
-        _dbcm.CommandText = "SELECT region_code,station_name FROM GPSDATA WHERE (abs(lat-" + latitude + "))*(abs(lat-" + latitude + "))+(abs(long-" + longitude + "))*(abs(long-" + longitude + "))<=(0.005)*(0.005)"; //현재위치에서 500m안에 있는 역
+        _dbcm.CommandText = "SELECT region_code,station_name FROM GPSDATA WHERE (abs(lat-" + latitude + "))*(abs(lat-" + latitude + "))+(abs(long-" + longitude + "))*(abs(long-" + longitude + "))<=(0.002)*(0.002)"; //현재위치에서 500m안에 있는 역
         _dbr = _dbcm.ExecuteReader();
         while (_dbr.Read())
         {
@@ -89,13 +89,15 @@ public class GPS : MonoBehaviour {
         region_code = region_c;
         region_name = region_n;
 
-        if (region_c == "" || region_n == "")
+        if (region_c == "" || region_n == "")         //gps에 해당되지 않는 위치일시 오브젝트 비활성화
         {
-            obj = GameObject.Find("3d");
-            obj.SetActive(false);
             region_code = " 해당 역 없음";
             region_name = "-";
         }
+        else
+        {
+            GameObject.Find("GameObject").transform.Find("3d").gameObject.SetActive(true);
+        } 
 
         yield break;
     }
