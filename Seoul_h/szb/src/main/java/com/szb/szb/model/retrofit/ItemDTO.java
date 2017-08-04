@@ -13,6 +13,7 @@ public class ItemDTO {
     private int hintflag;
     private String hint;
     private int hintcount;
+    private String questiontype;
 
 
 
@@ -23,6 +24,7 @@ public class ItemDTO {
     public int getHintflag() {return this.hintflag;}
     public String getHint() {return this.hint;}
     public int getHintcount() {return this.hintcount;}
+    public String getquestiontype() {return this.questiontype;}
 
     public void setQuestion(String question) {this.question = question;}
     public void setQuestioncode(int questioncode) {
@@ -33,4 +35,5 @@ public class ItemDTO {
     public void setHintflag(int hintflag) {this. hintflag = hintflag;}
     public void setHint(String hint) {this.hint = hint;}
     public void setHintcount(int hintcount) {this.hintcount = hintcount;}
+    public void setQuestiontype(String questiontype) {this.questiontype = questiontype;}
 }

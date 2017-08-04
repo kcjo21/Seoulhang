@@ -90,6 +90,7 @@ public class MainActivity extends Activity {
                 networkClient = NetworkClient.getInstance(ip);
                 Log.e("ACC","TEAM id IS !!! "+ loginid);
 
+                loginid = "123123";
                 Intent intent = new Intent(MainActivity.this,Home_Main.class);
                 startActivity(intent);
                 finish();

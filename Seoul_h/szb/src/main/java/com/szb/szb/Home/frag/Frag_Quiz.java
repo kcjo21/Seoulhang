@@ -75,7 +75,6 @@ public class Frag_Quiz extends Fragment {
         Log.e("ACC", "TEAM id IS !!! frag quiz" + loginid);
 
 
-
         mRecyclerView.setHasFixedSize(true);
         mLayoutManager = new LinearLayoutManager(getActivity());
         mRecyclerView.setLayoutManager(mLayoutManager);  //레이아웃 매니저를 사용한다.
@@ -83,10 +82,12 @@ public class Frag_Quiz extends Fragment {
         mAdapter = new RecyclerAdapter(myDataset);
         mRecyclerView.setAdapter(mAdapter);       //어탭더 정의
 
-        myDataset.add(new MyData("서울역","서울역", R.drawable.app_icon, "ㅇㅇㅇㅇ","ㅇㅇㅇㅇ",loginid,networkClient,getActivity(), "ㅇㅇㅇ", mRecyclerView));
-        myDataset.add(new MyData("서울역","서울역", R.drawable.app_icon, "ㅇㅇㅇㅇ","ㅇㅇㅇㅇ",loginid,networkClient,getActivity(), "ㅇㅇㅇ", mRecyclerView));
+
         noquiz.setVisibility(View.GONE);
 
+
+        myDataset.add(new MyData("ox","11","11", R.drawable.app_icon, "123123123","123123",loginid,networkClient,getActivity(), "123123", mRecyclerView));
+        myDataset.add(new MyData("default","11","11", R.drawable.app_icon, "123123123","123123",loginid,networkClient,getActivity(), "123123", mRecyclerView));
 
 
 
@@ -114,6 +115,7 @@ public class Frag_Quiz extends Fragment {
 
                         for (int i = 1; i < inventories.size(); i++) {
                             ItemDTO itemDTO = inventories.get(i);
+                            String qt = itemDTO.getquestiontype();
                             String qc = Integer.toString(itemDTO.getQuestioncode()); //문제번호
                             String rn = itemDTO.getRegionname(); //지역번호
                             String quiz = itemDTO.getQuestion(); //문제
@@ -121,7 +123,7 @@ public class Frag_Quiz extends Fragment {
                             String hint_q = itemDTO.getHint();
                             int image = imageSelector.imageSelector(rn);
 
-                            myDataset.add(new MyData(qc,rn, image, quiz,answer_q,loginid,networkClient,getActivity(), hint_q, mRecyclerView));//각 인자들을 어댑터클래스의 데이터베이스에 전달.
+                            myDataset.add(new MyData(qt,qc,rn, image, quiz,answer_q,loginid,networkClient,getActivity(), hint_q, mRecyclerView));//각 인자들을 어댑터클래스의 데이터베이스에 전달.
 
                             Log.d("퀴즈번호", "" + itemDTO.getQuestioncode());
                             Log.d("퀴즈지역", "" + itemDTO.getRegionname());

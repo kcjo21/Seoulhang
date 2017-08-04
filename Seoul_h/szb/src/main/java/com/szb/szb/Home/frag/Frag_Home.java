@@ -100,7 +100,7 @@ public class Frag_Home extends Fragment {
         mRecyclerView.setNestedScrollingEnabled(false);
         mRecyclerView.setVisibility(View.VISIBLE);
         no_quiz.setVisibility(View.GONE);
-        myDataset.add(new MyData("서울역","서울역", R.drawable.app_icon, "ㅇㅇㅇㅇ","ㅇㅇㅇㅇ",loginid,networkClient,getActivity(), "ㅇㅇㅇ", mRecyclerView));
+        myDataset.add(new MyData("ox","서울역","서울역", R.drawable.app_icon, "ㅇㅇㅇㅇ","ㅇㅇㅇㅇ",loginid,networkClient,getActivity(), "ㅇㅇㅇ", mRecyclerView));
 
         networkClient = NetworkClient.getInstance(ip);
         networkClient.getstartitem(loginid, new Callback<List<ItemDTO>>() {
@@ -133,6 +133,7 @@ public class Frag_Home extends Fragment {
                             mRecyclerView.setVisibility(View.VISIBLE); //만약 풀 수 있는 문제가 없다면 "문제가 없습니다" 텍스트를 띄워준다.
                             no_quiz.setVisibility(View.GONE);
                         }
+                            String qt = itemDTO.getquestiontype();
                             String qc = Integer.toString(itemDTO.getQuestioncode()); //문제번호
                             String rn = itemDTO.getRegionname(); //지역번호
                             String quiz = itemDTO.getQuestion(); //문제
@@ -140,7 +141,7 @@ public class Frag_Home extends Fragment {
                             String hint_q = itemDTO.getHint();
                             int image = imageSelector.imageSelector(rn);
 
-                            myDataset.add(new MyData(qc,rn, image, quiz,answer_q,loginid,networkClient,getActivity(), hint_q, mRecyclerView));//각 인자들을 어댑터클래스의 데이터베이스에 전달.
+                            myDataset.add(new MyData(qt,qc,rn, image, quiz,answer_q,loginid,networkClient,getActivity(), hint_q, mRecyclerView));//각 인자들을 어댑터클래스의 데이터베이스에 전달.
 
                             Log.d("퀴즈번호", "" + itemDTO.getQuestioncode());
                             Log.d("퀴즈지역", "" + itemDTO.getRegionname());

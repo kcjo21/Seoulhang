@@ -154,6 +154,35 @@
                         android:orientation="horizontal"
                         android:weightSum="100">
 
+                        <RadioGroup
+                            android:id="@+id/Answer_ox"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="74"
+                            android:orientation="horizontal"
+                            android:visibility="gone">
+
+                            <RadioButton
+                                android:id="@+id/rd_o"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center_vertical|center_horizontal"
+                                android:text="O "
+                                android:textColor="@android:color/black"
+                                tools:ignore="HardcodedText" />
+
+                            <RadioButton
+                                android:id="@+id/rd_x"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center_vertical|center_horizontal"
+                                android:text="X "
+                                android:textColor="@android:color/black"
+                                tools:ignore="HardcodedText" />
+                        </RadioGroup>
+
                         <EditText
                             android:id="@+id/Answer"
                             android:layout_width="0dp"
