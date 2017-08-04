@@ -120,7 +120,7 @@
     <string name="정답을입력하세요">정답을 입력하세요.</string>
     <string name="정답이다">정답입니다!</string>
     <string name="중복확인">중복확인</string>
-    <string name="지역별달성률">지역별 정보</string>
+    <string name="지역별달성률">지역별 정보 및 달성률</string>
     <string name="챌린저">챌린저</string>
     <string name="초보자">초보자</string>
     <string name="최근문제">최근 문제</string>
@@ -142,7 +142,7 @@
     </string>
     <string name="힌트없음">남은 힌트가 없습니다!</string>
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-        
+        <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>

@@ -91,7 +91,16 @@ public class Frag_Home extends Fragment {
         home_main = (Home_Main)getActivity();
         no_quiz = (TextView)layout.findViewById(R.id.no_quiz);
 
-
+        mRecyclerView.setHasFixedSize(true);
+        mLayoutManager = new LinearLayoutManager(getActivity());
+        mRecyclerView.setLayoutManager(mLayoutManager);  //레이아웃 매니저를 사용한다.
+        myDataset = new ArrayList<>();
+        mAdapter = new RecyclerAdapter(myDataset);
+        mRecyclerView.setAdapter(mAdapter);       //어탭더 정의
+        mRecyclerView.setNestedScrollingEnabled(false);
+        mRecyclerView.setVisibility(View.VISIBLE);
+        no_quiz.setVisibility(View.GONE);
+        myDataset.add(new MyData("서울역","서울역", R.drawable.app_icon, "ㅇㅇㅇㅇ","ㅇㅇㅇㅇ",loginid,networkClient,getActivity(), "ㅇㅇㅇ", mRecyclerView));
 
         networkClient = NetworkClient.getInstance(ip);
         networkClient.getstartitem(loginid, new Callback<List<ItemDTO>>() {

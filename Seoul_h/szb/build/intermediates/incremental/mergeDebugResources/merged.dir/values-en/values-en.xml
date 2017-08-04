@@ -96,10 +96,10 @@
     <string name="점수_40">Score 40</string>
     <string name="점수_450">Score 450</string>
     <string name="점수_90">Score 90</string>
-    <string name="정답을입력하세요">Please enter your answer.</string>
+    <string name="정답을입력하세요">Enter your answer.</string>
     <string name="정답이다">Correct!</string>
     <string name="중복확인">Check</string>
-    <string name="지역별달성률">Information by Region</string>
+    <string name="지역별달성률">Local Information And Achievement Rate</string>
     <string name="챌린저">Challenger</string>
     <string name="초보자">Unrank</string>
     <string name="최근문제">New Quiz</string>
@@ -121,7 +121,7 @@
     </string>
     <string name="힌트없음">You have no hint bonus left.</string>
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-        
+        <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>

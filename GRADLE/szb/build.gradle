@@ -43,15 +43,18 @@ android {
 	} }
 
 	buildTypes {
-		debug {
-			jniDebuggable true
-		}
-		release {
-			// Set minifyEnabled to true if you want to run ProGuard on your project
-			minifyEnabled false
-			proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-unity.txt'
-			signingConfig signingConfigs.release
-		}
+  		debug {
+ 			minifyEnabled false
+ 			useProguard false
+ 			proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-unity.txt'
+  			jniDebuggable true
+  		}
+  		release {
+ 			minifyEnabled true
+ 			useProguard true
+  			proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-unity.txt'
+  			signingConfig signingConfigs.release
+  		}
 	}
 
 }

@@ -29,7 +29,7 @@
     <string name="코드번호">코드번호</string>
     <string name="남은힌트">힌트</string>
     <string name="해결한문제">해결한 문제</string>
-    <string name="지역별달성률">지역별 정보</string>
+    <string name="지역별달성률">지역별 정보 및 달성률</string>
     <string name="현재해결한문제없음">현재 해결한 문제가 없습니다.</string>
     <string name="코드를입력">코드를 입력하세요.</string>
     <string name="풀수있는문제없음">현재 풀 수 있는 문제가 없습니다. 새로운 문제를 획득해주세요.</string>

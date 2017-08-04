@@ -27,7 +27,6 @@
                 android:layout_height="match_parent"
                 android:layout_weight="20"
                 android:gravity="center_vertical|center_horizontal"
-                android:text="@string/달성률"
                 android:textSize="@dimen/size" />
 
             <ProgressBar

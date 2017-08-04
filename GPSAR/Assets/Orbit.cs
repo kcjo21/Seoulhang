@@ -14,10 +14,10 @@ public class Orbit : MonoBehaviour {
         switch (fb)
         {
             case 0:
-                z = -280;
+                z = -700;
                 break;
             case 1:
-                z = 280;
+                z = 700;
                 break;
             case 2:
                 z = -560;
@@ -39,5 +39,10 @@ public class Orbit : MonoBehaviour {
 	void Update () {
         transform.Rotate(Vector3.up, 100 * Time.deltaTime);
         transform.position = new Vector3(x, y, z);
-	}
+        if (!SystemInfo.supportsGyroscope)
+        {
+            x = 0; y = 0; z = 500;
+        }
+        transform.position = new Vector3(x, y, z);
+    }
 }

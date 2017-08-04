@@ -38,7 +38,7 @@ public class GyroAR : MonoBehaviour
                 break;
             }
         }//백 카메라
-
+        
         if (cam == null)
         {
             Debug.Log("This device does not have back Camera");

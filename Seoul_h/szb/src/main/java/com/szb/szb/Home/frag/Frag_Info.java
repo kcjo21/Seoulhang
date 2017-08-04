@@ -80,11 +80,26 @@ public class Frag_Info extends Fragment
         info_hint = (TextView)layout.findViewById(R.id.info_hint);
         info_grade = (ImageView)layout.findViewById(R.id.info_grade);
         no_quiz = (TextView)layout.findViewById(R.id.no_quiz);
-
-
-
-
         String ip = ipm.getip();
+
+
+
+        mRecyclerView.setHasFixedSize(true);
+        mLayoutManager = new LinearLayoutManager(getActivity());
+        mRecyclerView.setLayoutManager(mLayoutManager);
+        myDataset=new ArrayList<>();
+        mAdapter = new RecyclerAdapter_I(myDataset);
+        mRecyclerView.setAdapter(mAdapter);
+        myDataset.add(new MyData_I("1234","1234","123"));
+        groupData = new ArrayList<MyData_G>();
+        childData = new ArrayList<ArrayList<MyData_H>>();
+        groupData.add(new MyData_G("1234"));
+        childData.add(new ArrayList<MyData_H>());
+        childData.get(0).add(new MyData_H(getResources().getString(R.string.달성률) + " " + 100 + "%", 100, R.drawable.five, "sdoqkwdowqkdowpq", expListView));
+        listAdapter = new ExpandableListViewAdapter(getContext(), groupData, childData);
+        expListView.setAdapter(listAdapter);// 리스트어댑터 세팅
+
+
 
         networkClient = NetworkClient.getInstance(ip);
         Log.d("인포",loginid);

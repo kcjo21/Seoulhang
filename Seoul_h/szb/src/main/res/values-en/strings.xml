@@ -29,12 +29,12 @@
     <string name="코드번호">Code</string>
     <string name="남은힌트">Hint</string>
     <string name="해결한문제">Quiz Solved</string>
-    <string name="지역별달성률">Information by Region</string>
+    <string name="지역별달성률">Local Information And Achievement Rate</string>
     <string name="현재해결한문제없음">No Quiz Solved.</string>
     <string name="코드를입력">Please enter your code.</string>
     <string name="풀수있는문제없음">You have no Quiz to solve. Please collect new Quizzes</string>
     <string name="최근문제">New Quiz</string>
-    <string name="정답을입력하세요">Please enter your answer.</string>
+    <string name="정답을입력하세요">Enter your answer.</string>
     <string name="내순위">My Rank</string>
     <string name="환영">Wellcome! %s</string>
     <string name="홈으로가기">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Go to Home</string>

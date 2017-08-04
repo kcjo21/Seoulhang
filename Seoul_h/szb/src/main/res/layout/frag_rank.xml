@@ -11,7 +11,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="3"
+        android:layout_weight="3.5"
         android:orientation="horizontal"
         android:weightSum="100">
 
@@ -97,18 +97,16 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="2"
+        android:layout_weight="1.5"
         android:background="@color/Carkviewline"
         android:orientation="horizontal"></LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_marginBottom="5dp"
         android:layout_marginLeft="5dp"
         android:layout_marginRight="5dp"
-        android:layout_marginTop="5dp"
-        android:layout_weight="3"
+        android:layout_weight="4"
         android:orientation="horizontal"
         android:weightSum="100">
 
@@ -157,6 +155,6 @@
         android:id="@+id/rvr"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="84" />
+        android:layout_weight="83" />
 
 </LinearLayout>

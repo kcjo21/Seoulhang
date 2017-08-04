@@ -76,6 +76,19 @@ public class Frag_Quiz extends Fragment {
 
 
 
+        mRecyclerView.setHasFixedSize(true);
+        mLayoutManager = new LinearLayoutManager(getActivity());
+        mRecyclerView.setLayoutManager(mLayoutManager);  //레이아웃 매니저를 사용한다.
+        myDataset = new ArrayList<>();
+        mAdapter = new RecyclerAdapter(myDataset);
+        mRecyclerView.setAdapter(mAdapter);       //어탭더 정의
+
+        myDataset.add(new MyData("서울역","서울역", R.drawable.app_icon, "ㅇㅇㅇㅇ","ㅇㅇㅇㅇ",loginid,networkClient,getActivity(), "ㅇㅇㅇ", mRecyclerView));
+        myDataset.add(new MyData("서울역","서울역", R.drawable.app_icon, "ㅇㅇㅇㅇ","ㅇㅇㅇㅇ",loginid,networkClient,getActivity(), "ㅇㅇㅇ", mRecyclerView));
+        noquiz.setVisibility(View.GONE);
+
+
+
 
         networkClient.getstartitem(loginid, new Callback<List<ItemDTO>>() {
             @Override

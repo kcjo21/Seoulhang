@@ -9,8 +9,11 @@
       </intent-filter>
       <meta-data android:name="unityplayer.UnityActivity" android:value="true" />
     </activity>
+    <meta-data android:name="unity.build-id" android:value="ca2fb8a1-e1a0-40c6-bf4d-d5cb09601fe2" />
+    <meta-data android:name="unity.splash-mode" android:value="0" />
+    <meta-data android:name="unity.splash-enable" android:value="True" />
   </application>
-  <uses-sdk android:minSdkVersion="23" android:targetSdkVersion="25" />
+  <uses-sdk android:minSdkVersion="22" android:targetSdkVersion="25" />
   <uses-feature android:glEsVersion="0x00020000" />
   <uses-feature android:name="android.hardware.vulkan" android:required="false" />
   <uses-permission android:name="android.permission.INTERNET" />

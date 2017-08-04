@@ -73,6 +73,16 @@ public class Frag_Rank extends Fragment
         String ip = ipm.getip();
         Log.e("확인",loginid);
 
+        mRecyclerView.setHasFixedSize(true);
+        mLayoutManager = new LinearLayoutManager(getActivity());
+        mRecyclerView.setLayoutManager(mLayoutManager);
+        myDataset=new ArrayList<>();
+        mAdapter = new RecyclerAdapter_R(myDataset);
+        mRecyclerView.setAdapter(mAdapter);
+
+
+        myDataset.add(new MyData_R("1", "1234", "1234123", "22","Bronze"));
+
 
 
         networkClient = NetworkClient.getInstance(ip);
