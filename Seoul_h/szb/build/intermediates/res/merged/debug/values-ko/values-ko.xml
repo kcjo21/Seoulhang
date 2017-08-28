@@ -58,6 +58,7 @@
     <string name="age">나이</string>
     <string name="app_name">서울행</string>
     <string name="can_not_connent_to_server">서버에 연결할 수 없습니다.</string>
+    <string name="checkEmail">형식에 맞지 않는 메일주소입니다.</string>
     <string name="checkplease">ID중복확인을 해주십시오.</string>
     <string name="close_drawer">close drawerclose drawerclose drawerclose drawerclose drawer</string>
     <string name="email">E-mail</string>
@@ -94,6 +95,7 @@
     <string name="브론즈">브론즈</string>
     <string name="비밀번호">비밀번호</string>
     <string name="비밀번호일치">비밀번호가 일치하지 않습니다.</string>
+    <string name="비밀번호찾기">비밀번호 찾기</string>
     <string name="비밀번호확인">비밀번호 확인</string>
     <string name="사용가능">사용가능</string>
     <string name="새문제">새 문제를 획득하였습니다!</string>
@@ -103,6 +105,7 @@
     <string name="순위">순위</string>
     <string name="승급">승급했습니다!</string>
     <string name="실버">실버</string>
+    <string name="아이디찾기">아이디 찾기</string>
     <string name="여">여</string>
     <string name="연락처">연락처</string>
     <string name="오답">오답입니다!</string>

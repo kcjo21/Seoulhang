@@ -21,7 +21,8 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
-        android:contentDescription="" />
+        android:contentDescription=""
+        tools:ignore="ContentDescription" />
 
     <android.support.constraint.ConstraintLayout
         android:id="@+id/constraintLayout3"
@@ -33,7 +34,7 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/title_t"
-        app:layout_constraintVertical_bias="0.996">
+        app:layout_constraintVertical_bias="1.0">
 
     </android.support.constraint.ConstraintLayout>
 
@@ -74,7 +75,8 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.363"
-        app:layout_constraintHorizontal_bias="0.497" />
+        app:layout_constraintHorizontal_bias="0.497"
+        tools:ignore="ContentDescription" />
 
     <ImageView
         android:id="@+id/title_t"
@@ -132,24 +134,73 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
-        android:layout_marginTop="26dp"
-        android:text="회원가입"
-        android:textSize="16sp"
+        android:layout_marginTop="16dp"
+        android:text="@string/회원가입"
+        android:textSize="16dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="@+id/constraintLayout3"
-        app:layout_constraintTop_toBottomOf="@+id/Login" />
+        app:layout_constraintTop_toBottomOf="@+id/Login"
+        tools:ignore="SpUsage"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp" />
 
-    <TextView
-        android:id="@+id/find_t"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+    <LinearLayout
+        android:layout_width="210dp"
+        android:layout_height="20dp"
+        android:layout_marginBottom="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
-        android:layout_marginTop="23dp"
-        android:text="아이디/비밀번호 찾기"
-        android:textSize="16sp"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal"
+        android:weightSum="100"
+        app:layout_constraintBottom_toBottomOf="@+id/constraintLayout3"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/join_tm" />
+        app:layout_constraintTop_toBottomOf="@+id/join_tm"
+        app:layout_constraintVertical_bias="0.13">
+
+        <TextView
+            android:id="@+id/find_id"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="45"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="@string/아이디찾기"
+            android:textSize="16dp"
+            app:layout_constraintHorizontal_bias="0.976"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/textView5"
+            app:layout_constraintTop_toBottomOf="@+id/Login"
+            tools:ignore="RtlHardcoded,SpUsage" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="10"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="|"
+            app:layout_constraintBottom_toBottomOf="@+id/constraintLayout3"
+            app:layout_constraintRight_toLeftOf="@+id/find_pass_t"
+            app:layout_constraintTop_toBottomOf="@+id/join_tm"
+            app:layout_constraintVertical_bias="0.142"
+            tools:ignore="HardcodedText,RtlHardcoded" />
+
+        <TextView
+            android:id="@+id/find_pass_t"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="45"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="@string/비밀번호찾기"
+            android:textSize="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Login"
+            app:layout_constraintVertical_bias="0.0"
+            tools:ignore="RtlHardcoded,SpUsage" />
+
+    </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>

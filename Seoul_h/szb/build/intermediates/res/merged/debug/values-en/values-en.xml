@@ -39,6 +39,7 @@
     <string name="age">Age</string>
     <string name="app_name">SeoulHang</string>
     <string name="can_not_connent_to_server">Cannot connect Server.</string>
+    <string name="checkEmail">Incorrect email address in format.</string>
     <string name="checkplease">perform a check for overlapping Identification.</string>
     <string name="close_drawer">close drawerclose drawerclose drawerclose drawerclose drawer</string>
     <string name="email">E-mail</string>
@@ -73,6 +74,7 @@
     <string name="브론즈">Bronze</string>
     <string name="비밀번호">Password</string>
     <string name="비밀번호일치">password do not match.</string>
+    <string name="비밀번호찾기">Password</string>
     <string name="비밀번호확인">Confirm</string>
     <string name="사용가능">Available.</string>
     <string name="새문제">You got a new quiz!</string>
@@ -82,10 +84,11 @@
     <string name="순위">Rank</string>
     <string name="승급">You are Advanced!</string>
     <string name="실버">Silver</string>
+    <string name="아이디찾기">Find Id</string>
     <string name="여">women</string>
     <string name="연락처">Phone</string>
     <string name="오답">Incorrect..</string>
-    <string name="이름">이름</string>
+    <string name="이름">Name</string>
     <string name="이미가지고있는문제">You already have got this quiz.</string>
     <string name="점수">Score</string>
     <string name="점수_0">Score 0</string>
@@ -114,14 +117,14 @@
     <string name="홈으로가기">                Go to Home</string>
     <string name="확인">Confirm</string>
     <string name="환영">Wellcome! %s</string>
-    <string name="회원가입">JOIN</string>
+    <string name="회원가입">Register</string>
     <string name="회원가입성공">Congratulations!</string>
     <string name="힌트">
         <item>힌트1</item>
     </string>
     <string name="힌트없음">You have no hint bonus left.</string>
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-        <!-- Customize your theme here. -->
+        
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>

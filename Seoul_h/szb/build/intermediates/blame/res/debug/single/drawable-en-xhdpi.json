@@ -64,12 +64,12 @@
         "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\src\\main\\res\\drawable-en-xhdpi\\col2.png"
     },
     {
-        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\build\\intermediates\\res\\merged\\debug\\drawable-en-xhdpi\\free.png",
-        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\src\\main\\res\\drawable-en-xhdpi\\free.png"
-    },
-    {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\build\\intermediates\\res\\merged\\debug\\drawable-en-xhdpi\\help_tuto_on.png",
         "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\src\\main\\res\\drawable-en-xhdpi\\help_tuto_on.png"
+    },
+    {
+        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\build\\intermediates\\res\\merged\\debug\\drawable-en-xhdpi\\free.png",
+        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\src\\main\\res\\drawable-en-xhdpi\\free.png"
     },
     {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\build\\intermediates\\res\\merged\\debug\\drawable-en-xhdpi\\hint_button.png",

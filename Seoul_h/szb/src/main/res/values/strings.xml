@@ -101,4 +101,7 @@
     <string name="GPSMessage">이 게임은 GPS 위치 데이터를 필요로 합니다. GPS를 설정하시겠습니까?</string>
     <string name="GPSN">아니요</string>
     <string name="GPSY">예</string>
+    <string name="checkEmail">형식에 맞지 않는 메일 주소입니다.</string>
+    <string name="아이디찾기">아이디 찾기</string>
+    <string name="비밀번호찾기">비밀번호 찾기</string>
 </resources>

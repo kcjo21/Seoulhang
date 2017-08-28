@@ -55,6 +55,8 @@
 
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <meta-data
         android:name="android.support.VERSION"
@@ -110,8 +112,14 @@
         <activity
             android:name="com.szb.szb.start_pack.Setting"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
-        <activity android:name="com.szb.szb.start_pack.JoinActivity" />
+        <activity android:name="com.szb.szb.start_pack.registerpack.JoinActivity" />
         <activity android:name="com.szb.szb.Home.frag.Frag_Map" />
+        <activity
+            android:name="com.szb.szb.start_pack.registerpack.FindIdActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name="com.szb.szb.start_pack.registerpack.FindPassActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
             android:name="kr.go.seoul.trafficsubway.TrafficSubwayDetailTypeA"
             android:screenOrientation="portrait" />

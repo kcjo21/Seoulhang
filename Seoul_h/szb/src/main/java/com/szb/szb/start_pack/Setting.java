@@ -139,7 +139,4 @@ public class Setting extends AppCompatActivity {
                 return true;
         }return super.onKeyDown(keyCode, event);}  //BACK버튼 비활성화
 
-
-
-
 }

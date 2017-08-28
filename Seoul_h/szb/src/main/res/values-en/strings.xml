@@ -74,14 +74,14 @@
     <string name="점수_450">Score 450</string>
     <string name="여" >women</string>
     <string name="남">men</string>
-    <string name="이름">이름</string>
+    <string name="이름">Name</string>
     <string name="비밀번호" >Password</string>
     <string name="비밀번호확인" >Confirm</string>
     <string name="성별" >Gender</string>
     <string name="age" >Age</string>
     <string name="연락처" >Phone</string>
     <string name="email" >E-mail</string>
-    <string name="회원가입" >JOIN</string>
+    <string name="회원가입" >Register</string>
     <string name="id" >ID</string>
     <string name="please_check_already_id">this id already exist.</string>
     <string name="please_check_name">this nickname already exsist.</string>
@@ -101,4 +101,7 @@
     <string name="GPSMessage">Your GPS is disabled! We need GPS Data. Would you like to enable it?</string>
     <string name="GPSY">Yes</string>
     <string name="GPSN">No</string>
+    <string name="checkEmail">Incorrect email address in format.</string>
+    <string name="아이디찾기">Find Id</string>
+    <string name="비밀번호찾기">Password</string>
 </resources>

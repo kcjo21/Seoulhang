@@ -25,6 +25,9 @@ import com.szb.szb.model.retrofit.PlayerDTO;
 import com.szb.szb.network.Ipm;
 import com.szb.szb.network.NetworkClient;
 import com.szb.szb.start_pack.loginpackage.Logm;
+import com.szb.szb.start_pack.registerpack.FindIdActivity;
+import com.szb.szb.start_pack.registerpack.FindPassActivity;
+import com.szb.szb.start_pack.registerpack.JoinActivity;
 
 import java.util.Random;
 
@@ -37,7 +40,8 @@ public class MainActivity extends Activity {
     Button Login;
     TextView loginId;
     TextView join;
-    TextView find;
+    TextView findid;
+    TextView findPass;
     String loginid;
     NetworkClient networkClient;
     Ipm ipm;
@@ -61,7 +65,8 @@ public class MainActivity extends Activity {
         setContentView(R.layout.activity_main);
         loginId = (TextView)findViewById(R.id.loginId);
         join = (TextView)findViewById(R.id.join_tm);
-        find = (TextView)findViewById(R.id.find_t);
+        findid = (TextView)findViewById(R.id.find_id);
+        findPass = (TextView)findViewById(R.id.find_pass_t);
         Login = (Button)findViewById(R.id.Login);
         ipm = new Ipm();
         logm = new Logm();
@@ -72,6 +77,23 @@ public class MainActivity extends Activity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this,JoinActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+
+        findid.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this,FindIdActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+        findPass.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this,FindPassActivity.class);
                 startActivity(intent);
                 finish();
             }
