@@ -2,6 +2,7 @@ package com.szb.szb.network;
 
 import android.util.Log;
 
+import com.szb.szb.model.retrofit.FindDTO;
 import com.szb.szb.model.retrofit.HintDTO;
 import com.szb.szb.model.retrofit.InventoryDTO;
 import com.szb.szb.model.retrofit.ItemDTO;
@@ -50,8 +51,8 @@ public class NetworkClient {
         return instance;
     }
 
-    public void login(String player, Callback<PlayerDTO> cb){
-        Call<PlayerDTO> call = service.login(player);
+    public void login(String player, String password, Callback<PlayerDTO> cb){
+        Call<PlayerDTO> call = service.login(player,password);
         call.enqueue(cb);
     }
 
@@ -97,12 +98,21 @@ public class NetworkClient {
         call.enqueue(callback);
     }
 
-    public void getjoin(String player, String password, String name, String gender, Integer age, String phone, String email, Callback<String> callback){
-        Call<String> call = service.getjoin(player, password, name, gender, age, phone, email);
+    public void getjoin(String player, String password, String name, String gender, Integer age, String email, Callback<String> callback){
+        Call<String> call = service.getjoin(player, password, name, gender, age, email);
         call.enqueue(callback);
     }
     public void checkid(String player,Callback<String> callback){
         Call<String> call = service.checkid(player);
+        call.enqueue(callback);
+    }
+
+    public void findid(String name, String email, Callback<FindDTO> callback){
+        Call<FindDTO> call = service.findid(name, email);
+        call.enqueue(callback);
+    }
+    public void findpassword(String name, String email,String id, Callback<FindDTO> callback){
+        Call<FindDTO> call = service.findpassword(name, email, id);
         call.enqueue(callback);
     }
 }

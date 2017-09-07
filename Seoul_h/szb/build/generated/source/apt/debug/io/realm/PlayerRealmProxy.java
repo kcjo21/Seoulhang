@@ -36,13 +36,16 @@ public class PlayerRealmProxy extends com.szb.szb.model.database.Player
 
         public long idIndex;
         public long languageIndex;
+        public long passwordIndex;
 
         PlayerColumnInfo(String path, Table table) {
-            final Map<String, Long> indicesMap = new HashMap<String, Long>(2);
+            final Map<String, Long> indicesMap = new HashMap<String, Long>(3);
             this.idIndex = getValidColumnIndex(path, table, "Player", "id");
             indicesMap.put("id", this.idIndex);
             this.languageIndex = getValidColumnIndex(path, table, "Player", "language");
             indicesMap.put("language", this.languageIndex);
+            this.passwordIndex = getValidColumnIndex(path, table, "Player", "password");
+            indicesMap.put("password", this.passwordIndex);
 
             setIndicesMap(indicesMap);
         }
@@ -52,6 +55,7 @@ public class PlayerRealmProxy extends com.szb.szb.model.database.Player
             final PlayerColumnInfo otherInfo = (PlayerColumnInfo) other;
             this.idIndex = otherInfo.idIndex;
             this.languageIndex = otherInfo.languageIndex;
+            this.passwordIndex = otherInfo.passwordIndex;
 
             setIndicesMap(otherInfo.getIndicesMap());
         }
@@ -69,6 +73,7 @@ public class PlayerRealmProxy extends com.szb.szb.model.database.Player
         List<String> fieldNames = new ArrayList<String>();
         fieldNames.add("id");
         fieldNames.add("language");
+        fieldNames.add("password");
         FIELD_NAMES = Collections.unmodifiableList(fieldNames);
     }
 
@@ -138,11 +143,40 @@ public class PlayerRealmProxy extends com.szb.szb.model.database.Player
         proxyState.getRow$realm().setLong(columnInfo.languageIndex, value);
     }
 
+    @SuppressWarnings("cast")
+    public String realmGet$password() {
+        proxyState.getRealm$realm().checkIfValid();
+        return (java.lang.String) proxyState.getRow$realm().getString(columnInfo.passwordIndex);
+    }
+
+    public void realmSet$password(String value) {
+        if (proxyState.isUnderConstruction()) {
+            if (!proxyState.getAcceptDefaultValue$realm()) {
+                return;
+            }
+            final Row row = proxyState.getRow$realm();
+            if (value == null) {
+                row.getTable().setNull(columnInfo.passwordIndex, row.getIndex(), true);
+                return;
+            }
+            row.getTable().setString(columnInfo.passwordIndex, row.getIndex(), value, true);
+            return;
+        }
+
+        proxyState.getRealm$realm().checkIfValid();
+        if (value == null) {
+            proxyState.getRow$realm().setNull(columnInfo.passwordIndex);
+            return;
+        }
+        proxyState.getRow$realm().setString(columnInfo.passwordIndex, value);
+    }
+
     public static RealmObjectSchema createRealmObjectSchema(RealmSchema realmSchema) {
         if (!realmSchema.contains("Player")) {
             RealmObjectSchema realmObjectSchema = realmSchema.create("Player");
             realmObjectSchema.add(new Property("id", RealmFieldType.STRING, !Property.PRIMARY_KEY, !Property.INDEXED, !Property.REQUIRED));
             realmObjectSchema.add(new Property("language", RealmFieldType.INTEGER, !Property.PRIMARY_KEY, !Property.INDEXED, Property.REQUIRED));
+            realmObjectSchema.add(new Property("password", RealmFieldType.STRING, !Property.PRIMARY_KEY, !Property.INDEXED, !Property.REQUIRED));
             return realmObjectSchema;
         }
         return realmSchema.get("Player");
@@ -153,6 +187,7 @@ public class PlayerRealmProxy extends com.szb.szb.model.database.Player
             Table table = sharedRealm.getTable("class_Player");
             table.addColumn(RealmFieldType.STRING, "id", Table.NULLABLE);
             table.addColumn(RealmFieldType.INTEGER, "language", Table.NOT_NULLABLE);
+            table.addColumn(RealmFieldType.STRING, "password", Table.NULLABLE);
             table.setPrimaryKey("");
             return table;
         }
@@ -163,14 +198,14 @@ public class PlayerRealmProxy extends com.szb.szb.model.database.Player
         if (sharedRealm.hasTable("class_Player")) {
             Table table = sharedRealm.getTable("class_Player");
             final long columnCount = table.getColumnCount();
-            if (columnCount != 2) {
-                if (columnCount < 2) {
-                    throw new RealmMigrationNeededException(sharedRealm.getPath(), "Field count is less than expected - expected 2 but was " + columnCount);
+            if (columnCount != 3) {
+                if (columnCount < 3) {
+                    throw new RealmMigrationNeededException(sharedRealm.getPath(), "Field count is less than expected - expected 3 but was " + columnCount);
                 }
                 if (allowExtraColumns) {
-                    RealmLog.debug("Field count is more than expected - expected 2 but was %1$d", columnCount);
+                    RealmLog.debug("Field count is more than expected - expected 3 but was %1$d", columnCount);
                 } else {
-                    throw new RealmMigrationNeededException(sharedRealm.getPath(), "Field count is more than expected - expected 2 but was " + columnCount);
+                    throw new RealmMigrationNeededException(sharedRealm.getPath(), "Field count is more than expected - expected 3 but was " + columnCount);
                 }
             }
             Map<String, RealmFieldType> columnTypes = new HashMap<String, RealmFieldType>();
@@ -201,6 +236,15 @@ public class PlayerRealmProxy extends com.szb.szb.model.database.Player
             }
             if (table.isColumnNullable(columnInfo.languageIndex)) {
                 throw new RealmMigrationNeededException(sharedRealm.getPath(), "Field 'language' does support null values in the existing Realm file. Use corresponding boxed type for field 'language' or migrate using RealmObjectSchema.setNullable().");
+            }
+            if (!columnTypes.containsKey("password")) {
+                throw new RealmMigrationNeededException(sharedRealm.getPath(), "Missing field 'password' in existing Realm file. Either remove field or migrate using io.realm.internal.Table.addColumn().");
+            }
+            if (columnTypes.get("password") != RealmFieldType.STRING) {
+                throw new RealmMigrationNeededException(sharedRealm.getPath(), "Invalid type 'String' for field 'password' in existing Realm file.");
+            }
+            if (!table.isColumnNullable(columnInfo.passwordIndex)) {
+                throw new RealmMigrationNeededException(sharedRealm.getPath(), "Field 'password' is required. Either set @Required to field 'password' or migrate using RealmObjectSchema.setNullable().");
             }
             return columnInfo;
         } else {
@@ -235,6 +279,13 @@ public class PlayerRealmProxy extends com.szb.szb.model.database.Player
                 ((PlayerRealmProxyInterface) obj).realmSet$language((int) json.getInt("language"));
             }
         }
+        if (json.has("password")) {
+            if (json.isNull("password")) {
+                ((PlayerRealmProxyInterface) obj).realmSet$password(null);
+            } else {
+                ((PlayerRealmProxyInterface) obj).realmSet$password((String) json.getString("password"));
+            }
+        }
         return obj;
     }
 
@@ -259,6 +310,13 @@ public class PlayerRealmProxy extends com.szb.szb.model.database.Player
                     throw new IllegalArgumentException("Trying to set non-nullable field 'language' to null.");
                 } else {
                     ((PlayerRealmProxyInterface) obj).realmSet$language((int) reader.nextInt());
+                }
+            } else if (name.equals("password")) {
+                if (reader.peek() == JsonToken.NULL) {
+                    reader.skipValue();
+                    ((PlayerRealmProxyInterface) obj).realmSet$password(null);
+                } else {
+                    ((PlayerRealmProxyInterface) obj).realmSet$password((String) reader.nextString());
                 }
             } else {
                 reader.skipValue();
@@ -295,6 +353,7 @@ public class PlayerRealmProxy extends com.szb.szb.model.database.Player
             cache.put(newObject, (RealmObjectProxy) realmObject);
             ((PlayerRealmProxyInterface) realmObject).realmSet$id(((PlayerRealmProxyInterface) newObject).realmGet$id());
             ((PlayerRealmProxyInterface) realmObject).realmSet$language(((PlayerRealmProxyInterface) newObject).realmGet$language());
+            ((PlayerRealmProxyInterface) realmObject).realmSet$password(((PlayerRealmProxyInterface) newObject).realmGet$password());
             return realmObject;
         }
     }
@@ -313,6 +372,10 @@ public class PlayerRealmProxy extends com.szb.szb.model.database.Player
             Table.nativeSetString(tableNativePtr, columnInfo.idIndex, rowIndex, realmGet$id, false);
         }
         Table.nativeSetLong(tableNativePtr, columnInfo.languageIndex, rowIndex, ((PlayerRealmProxyInterface)object).realmGet$language(), false);
+        String realmGet$password = ((PlayerRealmProxyInterface)object).realmGet$password();
+        if (realmGet$password != null) {
+            Table.nativeSetString(tableNativePtr, columnInfo.passwordIndex, rowIndex, realmGet$password, false);
+        }
         return rowIndex;
     }
 
@@ -335,6 +398,10 @@ public class PlayerRealmProxy extends com.szb.szb.model.database.Player
                     Table.nativeSetString(tableNativePtr, columnInfo.idIndex, rowIndex, realmGet$id, false);
                 }
                 Table.nativeSetLong(tableNativePtr, columnInfo.languageIndex, rowIndex, ((PlayerRealmProxyInterface)object).realmGet$language(), false);
+                String realmGet$password = ((PlayerRealmProxyInterface)object).realmGet$password();
+                if (realmGet$password != null) {
+                    Table.nativeSetString(tableNativePtr, columnInfo.passwordIndex, rowIndex, realmGet$password, false);
+                }
             }
         }
     }
@@ -355,6 +422,12 @@ public class PlayerRealmProxy extends com.szb.szb.model.database.Player
             Table.nativeSetNull(tableNativePtr, columnInfo.idIndex, rowIndex, false);
         }
         Table.nativeSetLong(tableNativePtr, columnInfo.languageIndex, rowIndex, ((PlayerRealmProxyInterface)object).realmGet$language(), false);
+        String realmGet$password = ((PlayerRealmProxyInterface)object).realmGet$password();
+        if (realmGet$password != null) {
+            Table.nativeSetString(tableNativePtr, columnInfo.passwordIndex, rowIndex, realmGet$password, false);
+        } else {
+            Table.nativeSetNull(tableNativePtr, columnInfo.passwordIndex, rowIndex, false);
+        }
         return rowIndex;
     }
 
@@ -379,6 +452,12 @@ public class PlayerRealmProxy extends com.szb.szb.model.database.Player
                     Table.nativeSetNull(tableNativePtr, columnInfo.idIndex, rowIndex, false);
                 }
                 Table.nativeSetLong(tableNativePtr, columnInfo.languageIndex, rowIndex, ((PlayerRealmProxyInterface)object).realmGet$language(), false);
+                String realmGet$password = ((PlayerRealmProxyInterface)object).realmGet$password();
+                if (realmGet$password != null) {
+                    Table.nativeSetString(tableNativePtr, columnInfo.passwordIndex, rowIndex, realmGet$password, false);
+                } else {
+                    Table.nativeSetNull(tableNativePtr, columnInfo.passwordIndex, rowIndex, false);
+                }
             }
         }
     }
@@ -403,6 +482,7 @@ public class PlayerRealmProxy extends com.szb.szb.model.database.Player
         }
         ((PlayerRealmProxyInterface) unmanagedObject).realmSet$id(((PlayerRealmProxyInterface) realmObject).realmGet$id());
         ((PlayerRealmProxyInterface) unmanagedObject).realmSet$language(((PlayerRealmProxyInterface) realmObject).realmGet$language());
+        ((PlayerRealmProxyInterface) unmanagedObject).realmSet$password(((PlayerRealmProxyInterface) realmObject).realmGet$password());
         return unmanagedObject;
     }
 

@@ -10,7 +10,7 @@
     <string name="Submit">Submit</string>
     <string name="Signin">Signin</string>
     <string name="action_settings">action_settings</string>
-    <string name="please_check_id">아이디를 확인해주세요</string>
+    <string name="please_check_id">아이디 또는 비밀번호가 일치하지 않습니다.</string>
     <string name="can_not_connent_to_server">서버에 연결할 수 없습니다.</string>
     <string name="open_drawer">open draweropen draweropen draweropen draweropen draweropen drawer</string>
     <string name="close_drawer">close drawerclose drawerclose drawerclose drawerclose drawer</string>
@@ -31,7 +31,7 @@
     <string name="해결한문제">해결한 문제</string>
     <string name="지역별달성률">지역별 정보 및 달성률</string>
     <string name="현재해결한문제없음">현재 해결한 문제가 없습니다.</string>
-    <string name="코드를입력">코드를 입력하세요.</string>
+    <string name="코드를입력">아이디를 입력하세요.</string>
     <string name="풀수있는문제없음">현재 풀 수 있는 문제가 없습니다. 새로운 문제를 획득해주세요.</string>
     <string name="최근문제">최근 문제</string>
     <string name="정답을입력하세요">정답을 입력하세요.</string>
@@ -104,4 +104,6 @@
     <string name="checkEmail">형식에 맞지 않는 메일주소입니다.</string>
     <string name="아이디찾기">아이디 찾기</string>
     <string name="비밀번호찾기">비밀번호 찾기</string>
+    <string name="비밀번호입력">비밀번호를 입력하세요.</string>
+    <string name="확인메일보냄">인증 메일을 성공적으로 보냈습니다.</string>
 </resources>

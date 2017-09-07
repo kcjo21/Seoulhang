@@ -38,7 +38,6 @@ public class JoinActivity extends Activity {
     RadioButton men;
     RadioButton women;
     EditText age;
-    EditText phone;
     EditText email;
     String gender="남";
     Ipm ipm;
@@ -52,7 +51,7 @@ public class JoinActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_join);
         ipm = new Ipm();
-        check_tf=false;
+        check_tf=false; // 성별 체크 유무 확인.
 
         commit = (Button)findViewById(R.id.commit);
         cancel = (Button)findViewById(R.id.cancel);
@@ -63,7 +62,6 @@ public class JoinActivity extends Activity {
         men = (RadioButton)findViewById(R.id.men);
         women = (RadioButton)findViewById(R.id.women);
         age = (EditText)findViewById(R.id.age_t);
-        phone = (EditText) findViewById(R.id.phone_t);
         email = (EditText) findViewById(R.id.email_t);
         check = (Button) findViewById(R.id.check_b);
         alert = (TextView)findViewById(R.id.alert);
@@ -180,7 +178,6 @@ public class JoinActivity extends Activity {
                 else if(!password.getText().toString().equals(passwordconfirm.getText().toString()))alert.setText(getResources().getString(R.string.비밀번호일치));
                 else if(name.getText().length()<=0)alert.setText(getResources().getString(R.string.Ename));
                 else if(age.getText().length()<=0)alert.setText(getResources().getString(R.string.Eage));
-                else if(phone.getText().length()<=0)alert.setText(getResources().getString(R.string.Ephone));
                 else if(email.getText().length()<=0)alert.setText(getResources().getString(R.string.EEmail));
                 else if(!checkEmail(email.getText().toString()))alert.setText(getResources().getString(R.string.checkEmail));
 
@@ -191,10 +188,9 @@ public class JoinActivity extends Activity {
                     final String scpass = passwordconfirm.getText().toString();
                     String sname = name.getText().toString();
                     int sage = Integer.parseInt(age.getText().toString());
-                    String sphone = phone.getText().toString();
                     String semail = email.getText().toString();
 
-                    networkClient.getjoin(sid, spass, sname, gender, sage, sphone, semail, new Callback<String>() {
+                    networkClient.getjoin(sid, spass, sname, gender, sage, semail, new Callback<String>() {
                         @Override
                         public void onResponse(Call<String> call, Response<String> response) {
                             if (spass.equals(scpass)) {

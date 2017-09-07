@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -42,7 +43,9 @@ public class MainActivity extends Activity {
     TextView join;
     TextView findid;
     TextView findPass;
+    EditText password;
     String loginid;
+    String loginpass;
     NetworkClient networkClient;
     Ipm ipm;
     Logm logm;
@@ -68,8 +71,10 @@ public class MainActivity extends Activity {
         findid = (TextView)findViewById(R.id.find_id);
         findPass = (TextView)findViewById(R.id.find_pass_t);
         Login = (Button)findViewById(R.id.Login);
+        password = (EditText)findViewById(R.id.loginPass);
         ipm = new Ipm();
         logm = new Logm();
+
 
 
 
@@ -107,20 +112,17 @@ public class MainActivity extends Activity {
             @Override
             public void onClick(View view) {
                 loginid = loginId.getText().toString();
+                loginpass =  password.getText().toString();
                 String ip = ipm.getip();
                 logm.setPlayerid(loginid);
                 networkClient = NetworkClient.getInstance(ip);
                 Log.e("ACC","TEAM id IS !!! "+ loginid);
 
-                loginid = "123123";
-                Intent intent = new Intent(MainActivity.this,Home_Main.class);
-                startActivity(intent);
-                finish();
-
-                 networkClient.login(loginid,new Callback<PlayerDTO>() {
+                 networkClient.login(loginid,loginpass,new Callback<PlayerDTO>() {
                     @Override
                     public void onResponse(Call<PlayerDTO> call, Response<PlayerDTO> response) {
                         Log.e("아이디",loginid);
+                        Log.e("비밀번호",loginpass);
                         switch (response.code()){
                             case 200:
                                 //json 데이터를 파싱하는 것을 수월하게 해준다.

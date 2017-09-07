@@ -10,7 +10,6 @@ public class JoinDTO {
     private String name;
     private String gender;
     private int age;
-    private String phone;
     private String email;
 
 
@@ -19,7 +18,6 @@ public class JoinDTO {
     public String getname() {return name;}
     public String getgender() {return gender;}
     public int getage() {return age;}
-    public String getphone() {return phone;}
     public String getemail() {return email;}
 
     public void setId(String id) {
@@ -29,7 +27,6 @@ public class JoinDTO {
     public void setName(String name) { this.name = name;}
     public void setGender(String gender) { this.gender = gender;}
     public void setAge(Integer age) { this.age = age;}
-    public void setPhone(String phone) { this.phone = phone;}
     public void setemail(String email) { this.email = email;}
 
 }

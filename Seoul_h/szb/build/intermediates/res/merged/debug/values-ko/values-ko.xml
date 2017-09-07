@@ -17,6 +17,7 @@
     <color name="colorAccent">#FF4081</color>
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
+    <color name="silver_a">#64c0c0c0</color>
     <dimen name="size">14dp</dimen>
     <string name="ARCam">ARCam</string>
     <string name="EEmail">이메일을 입력해주세요.</string>
@@ -70,7 +71,7 @@
     <string name="num">num</string>
     <string name="open_drawer">open draweropen draweropen draweropen draweropen draweropen drawer</string>
     <string name="please_check_already_id">이미 같은 아이디가 존재합니다.</string>
-    <string name="please_check_id">아이디를 확인해주세요</string>
+    <string name="please_check_id">아이디 또는 비밀번호가 일치하지 않습니다.</string>
     <string name="please_check_name">이미 같은 닉네임이 존재합니다.</string>
     <string name="region">Region</string>
     <string msgid="146198913615257606" name="search_menu_title">"검색"</string>
@@ -95,6 +96,7 @@
     <string name="브론즈">브론즈</string>
     <string name="비밀번호">비밀번호</string>
     <string name="비밀번호일치">비밀번호가 일치하지 않습니다.</string>
+    <string name="비밀번호입력">비밀번호를 입력하세요.</string>
     <string name="비밀번호찾기">비밀번호 찾기</string>
     <string name="비밀번호확인">비밀번호 확인</string>
     <string name="사용가능">사용가능</string>
@@ -129,7 +131,7 @@
     <string name="최근문제">최근 문제</string>
     <string name="취소">취소</string>
     <string name="카메라켜기">                카메라 켜기</string>
-    <string name="코드를입력">코드를 입력하세요.</string>
+    <string name="코드를입력">아이디를 입력하세요.</string>
     <string name="코드번호">코드번호</string>
     <string name="풀수있는문제없음">현재 풀 수 있는 문제가 없습니다. 새로운 문제를 획득해주세요.</string>
     <string name="플래티넘">플래티넘</string>
@@ -137,6 +139,7 @@
     <string name="현재해결한문제없음">현재 해결한 문제가 없습니다.</string>
     <string name="홈으로가기">                홈으로 가기</string>
     <string name="확인">확인</string>
+    <string name="확인메일보냄">인증 메일을 성공적으로 보냈습니다.</string>
     <string name="환영">%s님 환영합니다!</string>
     <string name="회원가입">회원가입</string>
     <string name="회원가입성공">회원가입을 축하합니다!</string>
@@ -145,7 +148,7 @@
     </string>
     <string name="힌트없음">남은 힌트가 없습니다!</string>
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-        <!-- Customize your theme here. -->
+        
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>

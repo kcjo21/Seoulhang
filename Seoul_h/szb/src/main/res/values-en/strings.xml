@@ -10,7 +10,7 @@
     <string name="Submit">Submit</string>
     <string name="Signin">Signin</string>
     <string name="action_settings">action_settings</string>
-    <string name="please_check_id">Please check your ID</string>
+    <string name="please_check_id">Please check your ID or Password.</string>
     <string name="can_not_connent_to_server">Cannot connect Server.</string>
     <string name="open_drawer">open draweropen draweropen draweropen draweropen draweropen drawer</string>
     <string name="close_drawer">close drawerclose drawerclose drawerclose drawerclose drawer</string>
@@ -31,7 +31,7 @@
     <string name="해결한문제">Quiz Solved</string>
     <string name="지역별달성률">Local Information And Achievement Rate</string>
     <string name="현재해결한문제없음">No Quiz Solved.</string>
-    <string name="코드를입력">Please enter your code.</string>
+    <string name="코드를입력">Please enter your ID.</string>
     <string name="풀수있는문제없음">You have no Quiz to solve. Please collect new Quizzes</string>
     <string name="최근문제">New Quiz</string>
     <string name="정답을입력하세요">Enter your answer.</string>
@@ -104,4 +104,6 @@
     <string name="checkEmail">Incorrect email address in format.</string>
     <string name="아이디찾기">Find Id</string>
     <string name="비밀번호찾기">Password</string>
+    <string name="비밀번호입력">Please enter your code.</string>
+    <string name="확인메일보냄">Athentication email Successfully sent.</string>
 </resources>

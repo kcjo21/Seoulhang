@@ -7,6 +7,7 @@ package com.szb.szb.model.retrofit;
 public class PlayerDTO {
     private String id;
     private int language;
+    private String password;
 
 
 
@@ -14,11 +15,13 @@ public class PlayerDTO {
 
     public String getId() { return id; }
     public int getLanguage() {return language;}
+    public String getPassword(){return password;}
 
     public void setId(String id) {
         this.id = id;
     }
     public void setLanguage(int language) {this.language = language;}
+    public void setPassword(String password) {this.password = password;}
 
     @Override
     public String toString(){
