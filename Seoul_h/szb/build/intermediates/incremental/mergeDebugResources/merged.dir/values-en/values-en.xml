@@ -87,6 +87,7 @@
     <string name="승급">You are Advanced!</string>
     <string name="실버">Silver</string>
     <string name="아이디찾기">Find Id</string>
+    <string name="아이디찾을수없음">No matching ID.</string>
     <string name="여">women</string>
     <string name="연락처">Phone</string>
     <string name="오답">Incorrect..</string>

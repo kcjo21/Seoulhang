@@ -20,6 +20,9 @@ import com.szb.szb.network.Ipm;
 import com.szb.szb.network.NetworkClient;
 import com.szb.szb.start_pack.MainActivity;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -63,42 +66,32 @@ public class FindIdActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Thread t = new Thread(new Runnable() {
-                    @Override
-                    public void run() { // Thread 로 작업할 내용을 구현
-                        while(true) {
-                            value = value + add;
-                            if (value>=100 || value<=0) {
-                                add = -add;
-                            }
+                if (name.getText().length() <= 0) {
+                    Toast toast = Toast.makeText(getApplicationContext(), getResources().getString(R.string.Ename), Toast.LENGTH_LONG);
+                    toast.show();
+                } else if (Email.getText().length() <= 0) {
+                Toast toast = Toast.makeText(getApplicationContext(), getResources().getString(R.string.EEmail), Toast.LENGTH_LONG);
+                toast.show();
+                } else if (!checkEmail(Email.getText().toString())) {
+                    Toast toast = Toast.makeText(getApplicationContext(), getResources().getString(R.string.checkEmail), Toast.LENGTH_LONG);
+                    toast.show();
+                }
 
-                            handler.post(new Runnable() {
-                                @Override
-                                public void run() { // 화면에 변경하는 작업을 구현
-                                    commit.setEnabled(false);
-                                    cancel.setEnabled(false);
-                                    name.setEnabled(false);
-                                    Email.setEnabled(false);
-                                    loadinglay.setVisibility(View.VISIBLE);
-                                    progressBar.setProgress(value);
-                                }
-                            });
+                else {
+                    commit.setEnabled(false);
 
-                            try {
-                                Thread.sleep(100); // 시간지연
-                            } catch (InterruptedException e) {    }
-                        } // end of while
-                    }
-                });
-                t.start(); // 쓰레드 시작
+                    cancel.setEnabled(false);
+                    name.setEnabled(false);
+                    Email.setEnabled(false);
+                    loadinglay.setVisibility(View.VISIBLE);
 
-                String sname = name.getText().toString();
-                String semail = Email.getText().toString();
-                String ip = ipm.getip();
-                networkClient = NetworkClient.getInstance(ip);
-                networkClient.findid(sname, semail, new Callback<FindDTO>() {
-                    @Override
-                    public void onResponse(Call<FindDTO> call, Response<FindDTO> response) {
+                    String sname = name.getText().toString();
+                    String semail = Email.getText().toString();
+                    String ip = ipm.getip();
+                    networkClient = NetworkClient.getInstance(ip);
+                    networkClient.findid(sname, semail, new Callback<FindDTO>() {
+                        @Override
+                        public void onResponse(Call<FindDTO> call, Response<FindDTO> response) {
                             switch (response.code()) {
                                 case 200:
                                     Intent intent = new Intent(FindIdActivity.this, MainActivity.class);
@@ -106,21 +99,29 @@ public class FindIdActivity extends AppCompatActivity {
                                     finish();
                                     break;
                                 default:
+                                    Toast toast = Toast.makeText(getApplicationContext(), getResources().getString(R.string.아이디찾을수없음), Toast.LENGTH_LONG);
+                                    toast.show();
                                     break;
 
                             }
-                        Toast toast = Toast.makeText(getApplicationContext(), getResources().getString(R.string.확인메일보냄), Toast.LENGTH_LONG);
-                        toast.show();
-                    }
+                            Toast toast = Toast.makeText(getApplicationContext(), getResources().getString(R.string.확인메일보냄), Toast.LENGTH_LONG);
+                            toast.show();
+                        }
 
-                    @Override
-                    public void onFailure(Call<FindDTO> call, Throwable t) {
-                        Log.e("ACC", "s?? " + t.getMessage());
-                        Toast toast = Toast.makeText(getApplicationContext(), getResources().getString(R.string.can_not_connent_to_server), Toast.LENGTH_LONG);
-                        toast.show();
+                        @Override
+                        public void onFailure(Call<FindDTO> call, Throwable t) {
+                            Log.e("ACC", "s?? " + t.getMessage());
+                            Toast toast = Toast.makeText(getApplicationContext(), getResources().getString(R.string.can_not_connent_to_server), Toast.LENGTH_LONG);
+                            toast.show();
+                            commit.setEnabled(true);
+                            cancel.setEnabled(true);
+                            name.setEnabled(true);
+                            Email.setEnabled(true);
+                            loadinglay.setVisibility(View.GONE);
 
-                    }
-                });
+                        }
+                    });
+                }
             }
         });
     }
@@ -130,4 +131,14 @@ public class FindIdActivity extends AppCompatActivity {
             case KeyEvent.KEYCODE_BACK:
                 return true;
         }return super.onKeyDown(keyCode, event);}  //BACK버튼 비활성화
+
+    public static boolean checkEmail(String email){
+
+        String regex = "^[_a-zA-Z0-9-\\.]+@[\\.a-zA-Z0-9-]+\\.[a-zA-Z]+$";
+        Pattern p = Pattern.compile(regex);
+        Matcher m = p.matcher(email);
+        boolean isTrue = m.matches();
+        return isTrue;
+
+    }
 }

@@ -106,4 +106,5 @@
     <string name="비밀번호찾기">Password</string>
     <string name="비밀번호입력">Please enter your code.</string>
     <string name="확인메일보냄">Athentication email Successfully sent.</string>
+    <string name="아이디찾을수없음">No matching ID.</string>
 </resources>
