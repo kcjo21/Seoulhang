@@ -76,7 +76,7 @@
     <string name="여">여</string>
     <string name="이름">이름</string>
     <string name="비밀번호">비밀번호</string>
-    <string name="비밀번호확인">비밀번호 확인</string>
+    <string name="비밀번호확인">비밀번호\\n확인</string>
     <string name="성별">성별</string>
     <string name="age">나이</string>
     <string name="연락처">연락처</string>
@@ -105,6 +105,13 @@
     <string name="아이디찾기">아이디 찾기</string>
     <string name="비밀번호찾기">비밀번호 찾기</string>
     <string name="비밀번호입력">비밀번호를 입력하세요.</string>
-    <string name="확인메일보냄">인증 메일을 성공적으로 보냈습니다.</string>
+    <string name="확인메일보냄">인증 메일이 성공적으로 보내졌습니다.</string>
     <string name="아이디찾을수없음">일치하는 아이디가 없습니다.</string>
+    <string name="코드입력">인증코드를 입력해주세요.</string>
+    <string name="인증번호">인증번호</string>
+    <string name="새비밀번호">새 비밀번호를 입력하세요.</string>
+    <string name="코드불일치">인증코드가 일치하지 않습니다.</string>
+    <string name="회원탈퇴">회원탈퇴</string>
+    <string name="회원탈퇴비밀번호">회원탈퇴를 위해 비밀번호를 입력해주세요.</string>
+    <string name="탈퇴재확인">정말로 탈퇴하시겠습니까?</string>
 </resources>

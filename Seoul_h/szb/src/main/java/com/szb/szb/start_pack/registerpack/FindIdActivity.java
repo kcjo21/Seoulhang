@@ -37,9 +37,6 @@ public class FindIdActivity extends AppCompatActivity {
     ConstraintLayout loadinglay;
     NetworkClient networkClient;
     Ipm ipm;
-    Handler handler = new Handler();
-    int value = 0; // progressBar 값
-    int add = 1; // 증가량, 방향
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -58,4 +58,13 @@ public interface NetworkService {
     @GET("/name/{name}/email/{email}/id/{id}")
     Call<FindDTO> findpassword(@Path("name") String name, @Path("email") String email, @Path("id") String id);
 
+    @GET("/id/{id}/code/{code}")
+    Call<FindDTO> entercode(@Path("id") String id, @Path("code") String code);
+
+    @GET("/id/{id}/password/{password}")
+    Call<FindDTO> newpassword(@Path ("id") String id, @Path("password") String password);
+
+    @GET("/id/{id}/password/{password}")
+    Call<FindDTO> withdrawal(@Path ("id") String id, @Path("paasword") String password);
+
 }

@@ -121,6 +121,15 @@
             android:name="com.szb.szb.start_pack.registerpack.FindPassActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
+            android:name="com.szb.szb.start_pack.registerpack.CodeinsertActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name="com.szb.szb.start_pack.registerpack.NewpasswordActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name="com.szb.szb.start_pack.registerpack.EditprofileActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
             android:name="kr.go.seoul.trafficsubway.TrafficSubwayDetailTypeA"
             android:screenOrientation="portrait" />
         <activity

@@ -42,8 +42,8 @@ public class FindPassActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        ipm = new Ipm();
         setContentView(R.layout.activity_find_pass);
+        ipm = new Ipm();
         commit = (Button) findViewById(R.id.commit);
         cancel = (Button) findViewById(R.id.cancel);
         Id = (EditText) findViewById(R.id.id_fpt);
@@ -97,18 +97,27 @@ public class FindPassActivity extends AppCompatActivity {
                         public void onResponse(Call<FindDTO> call, Response<FindDTO> response) {
                             switch (response.code()) {
                                 case 200:
-                                    Intent intent = new Intent(FindPassActivity.this, MainActivity.class);
+                                    Log.e("에러","케이스200");
+                                    Intent intent = new Intent(FindPassActivity.this, CodeinsertActivity.class);
+                                    intent.putExtra("id",Id.getText().toString());
                                     startActivity(intent);
+                                    Toast toast = Toast.makeText(getApplicationContext(), getResources().getString(R.string.확인메일보냄), Toast.LENGTH_LONG);
+                                    toast.show();
                                     finish();
                                     break;
                                 default:
-                                    Toast toast = Toast.makeText(getApplicationContext(), getResources().getString(R.string.아이디찾을수없음), Toast.LENGTH_LONG);
-                                    toast.show();
+                                    Log.e("에러","케이스205");
+                                    Toast toast2 = Toast.makeText(getApplicationContext(), getResources().getString(R.string.아이디찾을수없음), Toast.LENGTH_LONG);
+                                    toast2.show();
+                                    commit.setEnabled(true);
+                                    cancel.setEnabled(true);
+                                    Name.setEnabled(true);
+                                    Id.setEnabled(true);
+                                    Email.setEnabled(true);
+                                    loadinglay.setVisibility(View.GONE);
                                     break;
 
                             }
-                            Toast toast = Toast.makeText(getApplicationContext(), getResources().getString(R.string.확인메일보냄), Toast.LENGTH_LONG);
-                            toast.show();
                         }
 
                         @Override

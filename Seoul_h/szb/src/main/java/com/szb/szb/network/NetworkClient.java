@@ -115,4 +115,15 @@ public class NetworkClient {
         Call<FindDTO> call = service.findpassword(name, email, id);
         call.enqueue(callback);
     }
+    public void entercode(String id, String code, Callback<FindDTO> callback){
+        Call<FindDTO> call = service.entercode(id, code);
+        call.enqueue(callback);
+    }
+    public void newpassword(String id, String password, Callback<FindDTO> callback){
+        Call<FindDTO> call = service.newpassword(id, password);
+        call.enqueue(callback);
+    }
+    public void withdrawal(String id, String password, Callback<FindDTO> callback){
+        Call<FindDTO> call = service.withdrawal(id, password);
+    }
 }

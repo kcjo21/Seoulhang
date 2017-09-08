@@ -26,6 +26,7 @@ import com.szb.szb.model.retrofit.PlayerDTO;
 import com.szb.szb.network.Ipm;
 import com.szb.szb.network.NetworkClient;
 import com.szb.szb.start_pack.loginpackage.Logm;
+import com.szb.szb.start_pack.registerpack.EditprofileActivity;
 import com.szb.szb.start_pack.registerpack.FindIdActivity;
 import com.szb.szb.start_pack.registerpack.FindPassActivity;
 import com.szb.szb.start_pack.registerpack.JoinActivity;
@@ -117,6 +118,10 @@ public class MainActivity extends Activity {
                 logm.setPlayerid(loginid);
                 networkClient = NetworkClient.getInstance(ip);
                 Log.e("ACC","TEAM id IS !!! "+ loginid);
+
+                Intent intent = new Intent(MainActivity.this, EditprofileActivity.class);
+                startActivity(intent);
+                finish();
 
                  networkClient.login(loginid,loginpass,new Callback<PlayerDTO>() {
                     @Override

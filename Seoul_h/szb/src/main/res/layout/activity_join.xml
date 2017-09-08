@@ -20,7 +20,7 @@
         android:gravity="center_vertical|center_horizontal"
         android:text="@string/회원가입"
         android:textColor="@android:color/black"
-        android:textSize="30sp"
+        android:textSize="30dp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -29,8 +29,8 @@
 
     <android.support.constraint.ConstraintLayout
         android:id="@+id/constraintLayout"
-        android:layout_width="324dp"
-        android:layout_height="394dp"
+        android:layout_width="310dp"
+        android:layout_height="400dp"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginLeft="8dp"

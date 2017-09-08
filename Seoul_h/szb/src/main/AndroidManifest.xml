@@ -109,9 +109,19 @@
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity android:name=".start_pack.registerpack.JoinActivity" />
         <activity android:name=".Home.frag.Frag_Map" />
-        <activity android:name=".start_pack.registerpack.FindIdActivity"
+        <activity
+            android:name=".start_pack.registerpack.FindIdActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
-        <activity android:name=".start_pack.registerpack.FindPassActivity"
+        <activity
+            android:name=".start_pack.registerpack.FindPassActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".start_pack.registerpack.CodeinsertActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".start_pack.registerpack.NewpasswordActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity android:name=".start_pack.registerpack.EditprofileActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
     </application>
 
