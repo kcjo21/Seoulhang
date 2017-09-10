@@ -1,7 +1,6 @@
 package com.szb.szb.start_pack.registerpack;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -10,20 +9,19 @@ import android.view.KeyEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Toast;
 
+import com.szb.szb.BaseActivity;
 import com.szb.szb.R;
 import com.szb.szb.model.retrofit.FindDTO;
 import com.szb.szb.network.Ipm;
 import com.szb.szb.network.NetworkClient;
-import com.szb.szb.start_pack.MainActivity;
 
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class CodeinsertActivity extends AppCompatActivity {
+public class CodeinsertActivity extends BaseActivity {
 
     EditText codes;
     Button commit;

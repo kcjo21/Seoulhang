@@ -59,7 +59,7 @@ public class SplashActivity extends AppCompatActivity {
         public void run() {
             SharedPreferences first = getSharedPreferences("a",MODE_PRIVATE);
             if(first.getInt("First",0)!=1){
-                startActivity(new Intent(getApplication(),Setting.class));
+                startActivity(new Intent(getApplication(),SettingActivity.class));
                 SplashActivity.this.finish();
             }
             else

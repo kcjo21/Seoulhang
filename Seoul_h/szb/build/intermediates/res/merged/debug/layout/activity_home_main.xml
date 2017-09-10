@@ -182,7 +182,7 @@
                     tools:ignore="NestedWeights">
 
                     <LinearLayout
-                        android:id="@+id/side_top_lay"
+                        android:id="@+id/info_setting_lay"
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
                         android:layout_weight="8"
@@ -194,15 +194,16 @@
                         tools:ignore="RtlHardcoded">
 
                         <TextView
-                            android:id="@+id/side_top"
+                            android:id="@+id/info_setting"
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
-                            android:layout_weight="79"
+                            android:layout_weight="100"
+                            android:background="@drawable/text_edit_profile"
                             android:gravity="left|center_vertical|center_horizontal"
+                            android:text="@string/내정보설정"
                             android:textColor="@android:color/black"
                             android:textColorLink="@android:color/black"
-                            android:textSize="18dp"
-                            android:textStyle="bold"
+                            android:textSize="14dp"
                             tools:ignore="HardcodedText,NestedWeights,RtlHardcoded,SpUsage" />
 
                     </LinearLayout>
@@ -223,7 +224,6 @@
                             android:layout_weight="20"
                             android:background="@drawable/text_name"
                             android:gravity="center_vertical"
-                            android:text="                 닉네임 : 고추장"
                             android:textColor="@android:color/black"
                             android:textSize="14dp"
                             tools:ignore="HardcodedText,SpUsage" />
@@ -235,7 +235,6 @@
                             android:layout_weight="20"
                             android:background="@drawable/text_grade"
                             android:gravity="center_vertical"
-                            android:text="                 등급 : 브론즈"
                             android:textColor="@android:color/black"
                             android:textSize="14dp"
                             tools:ignore="HardcodedText,SpUsage" />
@@ -247,7 +246,6 @@
                             android:layout_weight="20"
                             android:background="@drawable/text_hint"
                             android:gravity="center_vertical"
-                            android:text="                 남은 힌트 수 : 0"
                             android:textColor="@android:color/black"
                             android:textSize="14dp"
                             tools:ignore="HardcodedText,SpUsage" />
@@ -259,13 +257,12 @@
                             android:layout_weight="20"
                             android:background="@drawable/text_point"
                             android:gravity="center_vertical"
-                            android:text="                 점수 : 10"
                             android:textColor="@android:color/black"
                             android:textSize="14dp"
                             tools:ignore="HardcodedText,SpUsage" />
 
                         <TextView
-                            android:id="@+id/quiz_correct"
+                            android:id="@+id/border"
                             android:layout_width="match_parent"
                             android:layout_height="0dp"
                             android:layout_weight="20"

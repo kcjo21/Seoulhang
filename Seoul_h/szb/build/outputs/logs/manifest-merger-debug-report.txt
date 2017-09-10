@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidManifest.xml:2:1-128:12
+ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidManifest.xml:2:1-130:12
 	package
 		ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidManifest.xml:4:5-26
 		INJECTED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidManifest.xml
@@ -148,7 +148,7 @@ ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidMa
 	android:name
 		ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidManifest.xml:60:22-77
 application
-ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidManifest.xml:62:5-126:19
+ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidManifest.xml:62:5-128:19
 MERGED from [Seoul_h:trafficsubway-release:unspecified] C:\Users\cwh62\.android\build-cache\6b9e2a149949f92f777fbd1da03ab97e95934703\output\AndroidManifest.xml:13:5-30:19
 MERGED from [com.android.support:design:25.3.1] C:\Users\cwh62\.android\build-cache\2296c6d153ca9492798042173aaf4756857c6a9d\output\AndroidManifest.xml:29:5-20
 MERGED from [com.android.support:appcompat-v7:25.3.1] C:\Users\cwh62\.android\build-cache\1860e7502bea0f552aaa4935120bb2accced6b21\output\AndroidManifest.xml:29:5-20
@@ -251,50 +251,52 @@ ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidMa
 		ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidManifest.xml:106:13-69
 	android:name
 		ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidManifest.xml:105:13-56
-activity#com.szb.szb.start_pack.Setting
+activity#com.szb.szb.start_pack.SettingActivity
 ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidManifest.xml:107:9-109:72
 	android:theme
 		ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidManifest.xml:109:13-69
 	android:name
-		ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidManifest.xml:108:13-47
+		ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidManifest.xml:108:13-55
 activity#com.szb.szb.start_pack.registerpack.JoinActivity
-ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidManifest.xml:110:9-74
+ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidManifest.xml:110:9-111:71
+	android:theme
+		ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidManifest.xml:111:13-69
 	android:name
 		ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidManifest.xml:110:19-71
 activity#com.szb.szb.Home.frag.Frag_Map
-ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidManifest.xml:111:9-56
+ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidManifest.xml:112:9-56
 	android:name
-		ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidManifest.xml:111:19-53
+		ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidManifest.xml:112:19-53
 activity#com.szb.szb.start_pack.registerpack.FindIdActivity
-ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidManifest.xml:112:9-114:72
+ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidManifest.xml:113:9-115:72
 	android:theme
-		ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidManifest.xml:114:13-69
+		ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidManifest.xml:115:13-69
 	android:name
-		ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidManifest.xml:113:13-67
+		ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidManifest.xml:114:13-67
 activity#com.szb.szb.start_pack.registerpack.FindPassActivity
-ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidManifest.xml:115:9-117:72
+ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidManifest.xml:116:9-118:72
 	android:theme
+		ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidManifest.xml:118:13-69
+	android:name
 		ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidManifest.xml:117:13-69
-	android:name
-		ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidManifest.xml:116:13-69
 activity#com.szb.szb.start_pack.registerpack.CodeinsertActivity
-ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidManifest.xml:118:9-120:72
+ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidManifest.xml:119:9-121:72
 	android:theme
-		ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidManifest.xml:120:13-69
+		ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidManifest.xml:121:13-69
 	android:name
-		ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidManifest.xml:119:13-71
+		ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidManifest.xml:120:13-71
 activity#com.szb.szb.start_pack.registerpack.NewpasswordActivity
-ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidManifest.xml:121:9-123:72
+ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidManifest.xml:122:9-124:72
 	android:theme
-		ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidManifest.xml:123:13-69
+		ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidManifest.xml:124:13-69
 	android:name
-		ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidManifest.xml:122:13-72
+		ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidManifest.xml:123:13-72
 activity#com.szb.szb.start_pack.registerpack.EditprofileActivity
-ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidManifest.xml:124:9-125:72
+ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidManifest.xml:125:9-127:72
 	android:theme
-		ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidManifest.xml:125:13-69
+		ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidManifest.xml:127:13-69
 	android:name
-		ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidManifest.xml:124:19-78
+		ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidManifest.xml:126:13-72
 activity#kr.go.seoul.trafficsubway.TrafficSubwayDetailTypeA
 ADDED from [Seoul_h:trafficsubway-release:unspecified] C:\Users\cwh62\.android\build-cache\6b9e2a149949f92f777fbd1da03ab97e95934703\output\AndroidManifest.xml:17:9-19:52
 	android:screenOrientation

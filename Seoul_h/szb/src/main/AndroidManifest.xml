@@ -105,9 +105,10 @@
             android:name=".start_pack.TutorialActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
-            android:name=".start_pack.Setting"
+            android:name=".start_pack.SettingActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
-        <activity android:name=".start_pack.registerpack.JoinActivity" />
+        <activity android:name=".start_pack.registerpack.JoinActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
         <activity android:name=".Home.frag.Frag_Map" />
         <activity
             android:name=".start_pack.registerpack.FindIdActivity"
@@ -121,7 +122,8 @@
         <activity
             android:name=".start_pack.registerpack.NewpasswordActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
-        <activity android:name=".start_pack.registerpack.EditprofileActivity"
+        <activity
+            android:name=".start_pack.registerpack.EditprofileActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
     </application>
 

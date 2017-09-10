@@ -2,9 +2,9 @@ package com.szb.szb.start_pack;
 
 
 import android.animation.ObjectAnimator;
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.util.Log;
 import android.view.View;
 import android.view.animation.Animation;
@@ -19,6 +19,7 @@ import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.bumptech.glide.request.animation.ViewPropertyAnimation;
 import com.bumptech.glide.request.target.GlideDrawableImageViewTarget;
+import com.szb.szb.BaseActivity;
 import com.szb.szb.Home.BackPressCloseHandler;
 import com.szb.szb.Home.Home_Main;
 import com.szb.szb.R;
@@ -26,7 +27,6 @@ import com.szb.szb.model.retrofit.PlayerDTO;
 import com.szb.szb.network.Ipm;
 import com.szb.szb.network.NetworkClient;
 import com.szb.szb.start_pack.loginpackage.Logm;
-import com.szb.szb.start_pack.registerpack.EditprofileActivity;
 import com.szb.szb.start_pack.registerpack.FindIdActivity;
 import com.szb.szb.start_pack.registerpack.FindPassActivity;
 import com.szb.szb.start_pack.registerpack.JoinActivity;
@@ -38,7 +38,7 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 
-public class MainActivity extends Activity {
+public class MainActivity extends BaseActivity {
     Button Login;
     TextView loginId;
     TextView join;
@@ -118,8 +118,9 @@ public class MainActivity extends Activity {
                 logm.setPlayerid(loginid);
                 networkClient = NetworkClient.getInstance(ip);
                 Log.e("ACC","TEAM id IS !!! "+ loginid);
+               // progressON(getResources().getString(R.string.Loading)); //응답대기 애니메이션
 
-                Intent intent = new Intent(MainActivity.this, EditprofileActivity.class);
+                Intent intent = new Intent(MainActivity.this, Home_Main.class);
                 startActivity(intent);
                 finish();
 
@@ -144,6 +145,7 @@ public class MainActivity extends Activity {
 
                             default:
                                 Log.e("TAG", "다른 아이디");
+                                progressOFF();
                                 Toast toast = Toast.makeText(getApplicationContext(), getResources().getString(R.string.please_check_id), Toast.LENGTH_LONG);
                                 toast.show();
                                 break;
@@ -153,6 +155,7 @@ public class MainActivity extends Activity {
                     @Override
                     public void onFailure(Call<PlayerDTO> call, Throwable t) {
                         Log.e("ACC","s?? " + t.getMessage());
+                        progressOFF();
                         Toast toast = Toast.makeText(getApplicationContext(), getResources().getString(R.string.can_not_connent_to_server), Toast.LENGTH_LONG);
                         toast.show();
 
@@ -205,4 +208,5 @@ public class MainActivity extends Activity {
         }
 
     };
+
 }

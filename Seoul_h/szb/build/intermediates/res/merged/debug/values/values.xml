@@ -683,6 +683,7 @@
     <string name="GPSMessage">이 게임은 GPS 위치 데이터를 필요로 합니다. GPS를 설정하시겠습니까?</string>
     <string name="GPSN">아니요</string>
     <string name="GPSY">예</string>
+    <string name="Loading">응답대기중...</string>
     <string name="Login">Login</string>
     <string name="Name">Name</string>
     <string name="Password">Password</string>
@@ -758,6 +759,7 @@
     <string name="남">남</string>
     <string name="남은힌트">힌트</string>
     <string name="내순위">내 순위</string>
+    <string name="내정보설정">                내 정보수정</string>
     <string name="닉네임">닉네임</string>
     <string name="다이아몬드">다이아몬드</string>
     <string name="달성률">달성률 </string>
@@ -800,6 +802,7 @@
     <string name="점수_90">90점</string>
     <string name="정답을입력하세요">정답을 입력하세요.</string>
     <string name="정답이다">정답입니다!</string>
+    <string name="정보수정질문">정보를 수정하시겠습니까?</string>
     <string name="중복확인">중복확인</string>
     <string name="지역별달성률">지역별 정보 및 달성률</string>
     <string name="챌린저">챌린저</string>
@@ -808,7 +811,6 @@
     <string name="취소">취소</string>
     <string name="카메라켜기">                카메라 켜기</string>
     <string name="코드를입력">아이디를 입력하세요.</string>
-    <string name="코드번호">코드번호</string>
     <string name="코드불일치">인증코드가 일치하지 않습니다.</string>
     <string name="코드입력">인증코드를 입력해주세요.</string>
     <string name="탈퇴재확인">정말로 탈퇴하시겠습니까?</string>

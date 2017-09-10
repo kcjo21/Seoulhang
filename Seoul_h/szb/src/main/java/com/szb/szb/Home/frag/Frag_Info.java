@@ -54,7 +54,7 @@ public class Frag_Info extends Fragment
     private List<InventoryDTO> infos;
     Ipm ipm;
     Logm logm;
-    ImageSelector_2 imageSelector_2;
+    Methods methods;
 
     public Frag_Info()
     {
@@ -179,7 +179,7 @@ public class Frag_Info extends Fragment
                         rates = response.body();
                         groupData = new ArrayList<MyData_G>();
                         childData = new ArrayList<ArrayList<MyData_H>>();
-                        imageSelector_2 = new ImageSelector_2();
+                        methods = new Methods();
 
                         for (int i = 0; i < rates.size(); i++) {
 
@@ -188,7 +188,7 @@ public class Frag_Info extends Fragment
                             int rates_q = rateDTO.getRate();
                             String regionname = rateDTO.getRegionname();
                             String exp = rateDTO.getExplain();
-                            int image = imageSelector_2.imageSelector_2(regionname);
+                            int image = methods.imageSelector_2(regionname);
                             // 그룹 생성
                             groupData.add(new MyData_G(regionname));
                             childData.add(new ArrayList<MyData_H>());

@@ -1,6 +1,8 @@
 package com.szb.szb.Home.frag;
 
 import android.app.Activity;
+import android.app.Application;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.support.annotation.IdRes;
@@ -211,6 +213,9 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
         holder.Submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                final Methods methods;
+                methods = new Methods();
+                methods.progressON(mDataset.get(position).activity, mDataset.get(position).activity.getResources().getString(R.string.Loading)); //응답대기 애니메이션
                 String answer="";
                 ipm = new Ipm();
                 String ip = ipm.getip();
@@ -232,6 +237,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
                         public void onResponse(Call<Integer> call, Response<Integer> response) {
                             switch (response.code()) {
                                 case 200:
+                                    methods.progressOFF();
                                     grade_check = response.body();
                                     Log.e("확인","aaa"+grade_check);
                                     AlertDialog.Builder alert = new AlertDialog.Builder(Frag_Quiz.activity);
@@ -247,10 +253,12 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
                                         }
                                     });
                                     if(grade_check == 2) {
+                                        methods.progressOFF();
                                         alert.setMessage(R.string.승급);
                                         alert.show();
                                     }
                                     else if(grade_check == 1) {
+                                        methods.progressOFF();
                                         alert.setMessage(R.string.정답이다);
                                         alert.show();
                                     }
@@ -262,7 +270,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
 
                         @Override
                         public void onFailure(Call<Integer> call, Throwable t) {
-
+                            methods.progressOFF();
                         }
                     });
 
@@ -277,6 +285,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
                             dialog.dismiss();     //닫기
                         }
                     });
+                    methods.progressOFF();
                     alert.setMessage(R.string.오답);
                     alert.show();
                 }

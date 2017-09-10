@@ -7,6 +7,7 @@ import android.content.res.Configuration;
 import android.os.Bundle;
 import android.support.constraint.ConstraintLayout;
 import android.support.v4.app.FragmentStatePagerAdapter;
+import android.support.v4.view.GravityCompat;
 import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBar;
@@ -14,10 +15,13 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.text.InputType;
+import android.text.method.PasswordTransformationMethod;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -35,10 +39,11 @@ import com.szb.szb.R;
 import com.szb.szb.model.retrofit.InventoryDTO;
 import com.szb.szb.network.Ipm;
 import com.szb.szb.network.NetworkClient;
-import com.szb.szb.start_pack.Setting;
+import com.szb.szb.start_pack.SettingActivity;
 import com.szb.szb.start_pack.TutorialActivity;
 import com.szb.szb.start_pack.loginpackage.Dialog_grade;
 import com.szb.szb.start_pack.loginpackage.Logm;
+import com.szb.szb.start_pack.registerpack.EditprofileActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -59,7 +64,7 @@ public class Home_Main extends AppCompatActivity {
     private List<InventoryDTO> infos;
     Ipm ipm;
     Logm logm;
-    TextView side_top;
+    TextView info_setting;
     TextView move_home;
     TextView move_camera;
     TextView grade;
@@ -82,7 +87,7 @@ public class Home_Main extends AppCompatActivity {
         logm = new Logm();
         final String loginid = logm.getPlayerid();
         final ArrayList<String> items = new ArrayList<String>();
-        side_top = (TextView)findViewById(R.id.side_top);
+        info_setting = (TextView)findViewById(R.id.info_setting);
         move_home = (TextView)findViewById(R.id.move_home);
         move_camera = (TextView)findViewById(R.id.camera_on);
         grade = (TextView)findViewById(R.id.grade_chart);
@@ -95,12 +100,31 @@ public class Home_Main extends AppCompatActivity {
         SharedPreferences pref = getSharedPreferences("lang",MODE_PRIVATE);
         int setlang = pref.getInt("setlang",0);
 
-        player_name.setText(getResources().getString(R.string.side_닉네임,"playername"));
-        hint_left.setText(getResources().getString(R.string.side_힌트수,"1234"));
-        player_grade.setText(getResources().getString(R.string.side_등급,"1234"));
-        player_point_home.setText(getResources().getString(R.string.side_점수,"1234"));
-        side_top.setText(getResources().getString(R.string.side_코드번호,loginid));
+        info_setting.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                final android.app.AlertDialog.Builder alert = new android.app.AlertDialog.Builder(Home_Main.this);
+                alert.setCancelable(false);
+                alert.setMessage(R.string.정보수정질문);
 
+
+                alert.setPositiveButton(R.string.취소, new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int whichButton) {
+                        dialog.dismiss();
+                    }
+                });
+                alert.setNegativeButton(R.string.확인,new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int whichButton) {
+                        Intent intent = new Intent(Home_Main.this,EditprofileActivity.class);
+                        startActivity(intent);
+                        finish();
+
+                    }
+                });
+                final android.app.AlertDialog dialog = alert.create();
+                dialog.show();
+            }
+        });
 
 
         move_home.setOnClickListener(new View.OnClickListener() {
@@ -130,7 +154,7 @@ public class Home_Main extends AppCompatActivity {
         setting.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Home_Main.this,Setting.class);
+                Intent intent = new Intent(Home_Main.this,SettingActivity.class);
                 startActivity(intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK));
                 finish();
             }
@@ -346,7 +370,12 @@ public class Home_Main extends AppCompatActivity {
     };
 
     @Override public void onBackPressed() {
-        backPressCloseHandler.onBackPressed();
+        if(dlDrawer.isDrawerOpen(GravityCompat.START)){
+            dlDrawer.closeDrawers(); //네비게이션이 열려있는지 확인하고 열려있다면 back키로 닫기 가능.
+        }
+        else {
+            backPressCloseHandler.onBackPressed(); //네비게이션이 닫혀있다면 backPressCloseHandler 정상작동.
+        }
     }
 
     @Override

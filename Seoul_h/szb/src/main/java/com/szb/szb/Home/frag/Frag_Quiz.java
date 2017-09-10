@@ -42,7 +42,7 @@ public class Frag_Quiz extends Fragment {
     LinearLayout noquiz;
     NetworkClient networkClient;
     private List<ItemDTO> inventories;
-    ImageSelector imageSelector;
+    Methods methods;
     Ipm ipm;
     Logm logm;
 
@@ -74,6 +74,16 @@ public class Frag_Quiz extends Fragment {
         networkClient = NetworkClient.getInstance(ip);
         Log.e("ACC", "TEAM id IS !!! frag quiz" + loginid);
 
+        mRecyclerView.setHasFixedSize(true);
+        mLayoutManager = new LinearLayoutManager(getActivity());
+        mRecyclerView.setLayoutManager(mLayoutManager);  //레이아웃 매니저를 사용한다.
+        myDataset = new ArrayList<>();
+        mAdapter = new RecyclerAdapter(myDataset);
+        mRecyclerView.setAdapter(mAdapter);       //어탭더 정의
+
+        myDataset.add(new MyData("1","23","11", R.drawable.app_icon, "123","123","1234",networkClient,getActivity(), "1234", mRecyclerView));
+        noquiz.setVisibility(View.GONE);
+
 
 
         networkClient.getstartitem(loginid, new Callback<List<ItemDTO>>() {
@@ -93,10 +103,10 @@ public class Frag_Quiz extends Fragment {
 
                         ItemDTO check=inventories.get(0);
                         if(check.getQuestioncode()==0&&check.getRegionname().equals("0"))
-                        noquiz.setVisibility(View.VISIBLE);
+                        noquiz.setVisibility(View.VISIBLE); //만약 풀 수 있는 문제가 없다면 "문제가 없습니다" 텍스트를 띄워준다.
                         else
-                            noquiz.setVisibility(View.GONE); //만약 풀 수 있는 문제가 없다면 "문제가 없습니다" 텍스트를 띄워준다.
-                        imageSelector = new ImageSelector();
+                            noquiz.setVisibility(View.GONE);
+                        methods = new Methods();
 
                         for (int i = 1; i < inventories.size(); i++) {
                             ItemDTO itemDTO = inventories.get(i);
@@ -106,7 +116,7 @@ public class Frag_Quiz extends Fragment {
                             String quiz = itemDTO.getQuestion(); //문제
                             String answer_q = itemDTO.getAnswer(); //정답
                             String hint_q = itemDTO.getHint();
-                            int image = imageSelector.imageSelector(rn);
+                            int image = methods.imageSelector(rn);
 
                             myDataset.add(new MyData(qt,qc,rn, image, quiz,answer_q,loginid,networkClient,getActivity(), hint_q, mRecyclerView));//각 인자들을 어댑터클래스의 데이터베이스에 전달.
 

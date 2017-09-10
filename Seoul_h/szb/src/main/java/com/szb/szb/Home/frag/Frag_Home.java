@@ -38,7 +38,6 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 import static android.app.Activity.RESULT_OK;
-import static com.szb.szb.R.id.home_rev;
 
 
 /**
@@ -55,7 +54,7 @@ public class Frag_Home extends Fragment {
     private List<ItemDTO> inventories;
     private List<InventoryDTO> infos;
     NetworkClient networkClient;
-    ImageSelector imageSelector;
+    Methods methods;
     TextView no_quiz;
     Button submit;
     Button gethint;
@@ -121,7 +120,7 @@ public class Frag_Home extends Fragment {
 
 
 
-                        imageSelector = new ImageSelector();
+                        methods = new Methods();
 
                             ItemDTO itemDTO = inventories.get(0);
 
@@ -139,7 +138,7 @@ public class Frag_Home extends Fragment {
                             String quiz = itemDTO.getQuestion(); //문제
                             String answer_q = itemDTO.getAnswer(); //정답
                             String hint_q = itemDTO.getHint();
-                            int image = imageSelector.imageSelector(rn);
+                            int image = methods.imageSelector(rn);
 
                             myDataset.add(new MyData(qt,qc,rn, image, quiz,answer_q,loginid,networkClient,getActivity(), hint_q, mRecyclerView));//각 인자들을 어댑터클래스의 데이터베이스에 전달.
 

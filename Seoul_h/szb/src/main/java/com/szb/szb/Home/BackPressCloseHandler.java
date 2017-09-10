@@ -1,12 +1,12 @@
 package com.szb.szb.Home;
 
 import android.app.Activity;
+import android.support.v4.widget.DrawerLayout;
 import android.widget.Toast;
 
 public class BackPressCloseHandler {           //백키 핸들러
     private long backKeyPressedTime = 0;
     private Toast toast;
-
     private Activity activity;
 
     public BackPressCloseHandler(Activity context) {
@@ -16,6 +16,7 @@ public class BackPressCloseHandler {           //백키 핸들러
 
 
     public void onBackPressed() {
+
         if (System.currentTimeMillis() > backKeyPressedTime + 2000) {
             backKeyPressedTime = System.currentTimeMillis();
             showGuide();

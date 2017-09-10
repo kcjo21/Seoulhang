@@ -1,19 +1,17 @@
 package com.szb.szb.start_pack.registerpack;
 
 import android.content.Intent;
-import android.os.Handler;
 import android.support.constraint.ConstraintLayout;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
+import com.szb.szb.BaseActivity;
 import com.szb.szb.R;
 import com.szb.szb.model.retrofit.FindDTO;
 import com.szb.szb.network.Ipm;
@@ -27,14 +25,13 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class FindIdActivity extends AppCompatActivity {
+public class FindIdActivity extends BaseActivity {
 
     EditText name;
     EditText Email;
     Button commit;
     Button cancel;
     ProgressBar progressBar;
-    ConstraintLayout loadinglay;
     NetworkClient networkClient;
     Ipm ipm;
 
@@ -48,7 +45,6 @@ public class FindIdActivity extends AppCompatActivity {
         name = (EditText)findViewById(R.id.name_fit);
         Email = (EditText)findViewById(R.id.email_fit);
         progressBar = (ProgressBar)findViewById(R.id.progressBar);
-        loadinglay = (ConstraintLayout)findViewById(R.id.loadinglay);
 
         cancel.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -75,12 +71,8 @@ public class FindIdActivity extends AppCompatActivity {
                 }
 
                 else {
-                    commit.setEnabled(false);
 
-                    cancel.setEnabled(false);
-                    name.setEnabled(false);
-                    Email.setEnabled(false);
-                    loadinglay.setVisibility(View.VISIBLE);
+                    progressON(getResources().getString(R.string.Loading)); //응답대기 프로그레스 애니메이션:
 
                     String sname = name.getText().toString();
                     String semail = Email.getText().toString();
@@ -91,18 +83,21 @@ public class FindIdActivity extends AppCompatActivity {
                         public void onResponse(Call<FindDTO> call, Response<FindDTO> response) {
                             switch (response.code()) {
                                 case 200:
+                                    progressOFF();
                                     Intent intent = new Intent(FindIdActivity.this, MainActivity.class);
                                     startActivity(intent);
+                                    Toast toast = Toast.makeText(getApplicationContext(), getResources().getString(R.string.확인메일보냄), Toast.LENGTH_LONG);
+                                    toast.show();
                                     finish();
                                     break;
                                 default:
-                                    Toast toast = Toast.makeText(getApplicationContext(), getResources().getString(R.string.아이디찾을수없음), Toast.LENGTH_LONG);
-                                    toast.show();
+                                    progressOFF();
+                                    Toast toast_2 = Toast.makeText(getApplicationContext(), getResources().getString(R.string.아이디찾을수없음), Toast.LENGTH_LONG);
+                                    toast_2.show();
                                     break;
 
                             }
-                            Toast toast = Toast.makeText(getApplicationContext(), getResources().getString(R.string.확인메일보냄), Toast.LENGTH_LONG);
-                            toast.show();
+
                         }
 
                         @Override
@@ -110,11 +105,7 @@ public class FindIdActivity extends AppCompatActivity {
                             Log.e("ACC", "s?? " + t.getMessage());
                             Toast toast = Toast.makeText(getApplicationContext(), getResources().getString(R.string.can_not_connent_to_server), Toast.LENGTH_LONG);
                             toast.show();
-                            commit.setEnabled(true);
-                            cancel.setEnabled(true);
-                            name.setEnabled(true);
-                            Email.setEnabled(true);
-                            loadinglay.setVisibility(View.GONE);
+                            progressOFF();
 
                         }
                     });

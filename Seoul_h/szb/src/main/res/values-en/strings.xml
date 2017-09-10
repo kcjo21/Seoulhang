@@ -26,7 +26,6 @@
     <string name="등급">Tier</string>
     <string name="순위">Rank</string>
     <string name="점수">Score</string>
-    <string name="코드번호">Code</string>
     <string name="남은힌트">Hint</string>
     <string name="해결한문제">Quiz Solved</string>
     <string name="지역별달성률">Local Information And Achievement Rate</string>
@@ -114,4 +113,7 @@
     <string name="회원탈퇴">Withdrawal</string>
     <string name="회원탈퇴비밀번호">Please enter your password for membership withdrawal.</string>
     <string name="탈퇴재확인">Are you sure you want to leave?</string>
+    <string name="Loading">LOADING...</string>
+    <string name="내정보설정">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Edit Profile</string>
+    <string name="정보수정질문">Do you want to edit your infomaion?</string>
 </resources>

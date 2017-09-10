@@ -110,9 +110,11 @@
             android:name="com.szb.szb.start_pack.TutorialActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
-            android:name="com.szb.szb.start_pack.Setting"
+            android:name="com.szb.szb.start_pack.SettingActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
-        <activity android:name="com.szb.szb.start_pack.registerpack.JoinActivity" />
+        <activity
+            android:name="com.szb.szb.start_pack.registerpack.JoinActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity android:name="com.szb.szb.Home.frag.Frag_Map" />
         <activity
             android:name="com.szb.szb.start_pack.registerpack.FindIdActivity"

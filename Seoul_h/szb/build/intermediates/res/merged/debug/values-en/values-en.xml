@@ -30,6 +30,7 @@
     <string name="GPSMessage">Your GPS is disabled! We need GPS Data. Would you like to enable it?</string>
     <string name="GPSN">No</string>
     <string name="GPSY">Yes</string>
+    <string name="Loading">LOADING...</string>
     <string name="Login">Login</string>
     <string name="Name">Name</string>
     <string name="Password">Password</string>
@@ -64,6 +65,7 @@
     <string name="남">men</string>
     <string name="남은힌트">Hint</string>
     <string name="내순위">My Rank</string>
+    <string name="내정보설정">                Edit Profile</string>
     <string name="닉네임">Name</string>
     <string name="다이아몬드">Diamond</string>
     <string name="달성률"><font size="1">Achievement rate </font></string>
@@ -106,6 +108,7 @@
     <string name="점수_90">Score 90</string>
     <string name="정답을입력하세요">Enter your answer.</string>
     <string name="정답이다">Correct!</string>
+    <string name="정보수정질문">Do you want to edit your infomaion?</string>
     <string name="중복확인">Check</string>
     <string name="지역별달성률">Local Information And Achievement Rate</string>
     <string name="챌린저">Challenger</string>
@@ -114,7 +117,6 @@
     <string name="취소">Cancel</string>
     <string name="카메라켜기">                Turn on Camera</string>
     <string name="코드를입력">Please enter your ID.</string>
-    <string name="코드번호">Code</string>
     <string name="코드불일치">The authentication code does not match.</string>
     <string name="코드입력">Enter authentication code.</string>
     <string name="탈퇴재확인">Are you sure you want to leave?</string>
