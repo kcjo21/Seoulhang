@@ -41,8 +41,6 @@ public class CodeinsertActivity extends BaseActivity {
         cancel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(CodeinsertActivity.this, FindPassActivity.class);
-                startActivity(intent);
                 finish();
             }
         });

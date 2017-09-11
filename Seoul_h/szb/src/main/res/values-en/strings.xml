@@ -116,4 +116,7 @@
     <string name="Loading">LOADING...</string>
     <string name="내정보설정">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Edit Profile</string>
     <string name="정보수정질문">Do you want to edit your infomaion?</string>
+    <string name="정보수정">Edit Profile</string>
+    <string name="비밀번호변경">I want to Change my Password.</string>
+    <string name="비밀번호변경완료">Password changed Successfully!</string>
 </resources>

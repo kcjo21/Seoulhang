@@ -16,12 +16,12 @@
         "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\src\\main\\res\\drawable-xhdpi\\new_five.png"
     },
     {
-        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\free.png",
-        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\src\\main\\res\\drawable-xhdpi\\free.png"
-    },
-    {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\my_rank.png",
         "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\src\\main\\res\\drawable-xhdpi\\my_rank.png"
+    },
+    {
+        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\free.png",
+        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\src\\main\\res\\drawable-xhdpi\\free.png"
     },
     {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\side_camera_on.png",
@@ -36,16 +36,16 @@
         "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\src\\main\\res\\drawable-xhdpi\\skip.png"
     },
     {
-        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\hint_button.png",
-        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\src\\main\\res\\drawable-xhdpi\\hint_button.png"
+        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\title_t.png",
+        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\src\\main\\res\\drawable-xhdpi\\title_t.png"
     },
     {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\subtitle_top.png",
         "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\src\\main\\res\\drawable-xhdpi\\subtitle_top.png"
     },
     {
-        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\title_t.png",
-        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\src\\main\\res\\drawable-xhdpi\\title_t.png"
+        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\hint_button.png",
+        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\src\\main\\res\\drawable-xhdpi\\hint_button.png"
     },
     {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\side_setting_on.png",
@@ -76,16 +76,16 @@
         "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\src\\main\\res\\drawable-xhdpi\\seven.png"
     },
     {
-        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\camera_mode_on.png",
-        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\src\\main\\res\\drawable-xhdpi\\camera_mode_on.png"
+        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\bronze.png",
+        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\src\\main\\res\\drawable-xhdpi\\bronze.png"
     },
     {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\text_hint.png",
         "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\src\\main\\res\\drawable-xhdpi\\text_hint.png"
     },
     {
-        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\bronze.png",
-        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\src\\main\\res\\drawable-xhdpi\\bronze.png"
+        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\camera_mode_on.png",
+        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\src\\main\\res\\drawable-xhdpi\\camera_mode_on.png"
     },
     {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\side_home.png",
@@ -150,6 +150,10 @@
     {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\indicator_off.png",
         "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\src\\main\\res\\drawable-xhdpi\\indicator_off.png"
+    },
+    {
+        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\text_edit_profile.png",
+        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\src\\main\\res\\drawable-xhdpi\\text_edit_profile.png"
     },
     {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\namdaemoon.png",

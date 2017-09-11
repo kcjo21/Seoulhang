@@ -791,7 +791,14 @@
                     "endOffset": 3463
                 },
                 "from": {
-                    "file": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\src\\main\\res\\values-en\\strings.xml"
+                    "file": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\src\\main\\res\\values-en\\strings.xml",
+                    "position": {
+                        "startLine": 116,
+                        "startColumn": 4,
+                        "startOffset": 7065,
+                        "endColumn": 142,
+                        "endOffset": 7203
+                    }
                 }
             },
             {
@@ -919,8 +926,8 @@
                     "startLine": 78,
                     "startColumn": 4,
                     "startOffset": 4069,
-                    "endColumn": 57,
-                    "endOffset": 4122
+                    "endColumn": 64,
+                    "endOffset": 4129
                 },
                 "from": {
                     "file": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\src\\main\\res\\values-en\\strings.xml"
@@ -930,9 +937,9 @@
                 "to": {
                     "startLine": 79,
                     "startColumn": 4,
-                    "startOffset": 4127,
-                    "endColumn": 58,
-                    "endOffset": 4181
+                    "startOffset": 4134,
+                    "endColumn": 67,
+                    "endOffset": 4197
                 },
                 "from": {
                     "file": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\src\\main\\res\\values-en\\strings.xml"
@@ -942,9 +949,9 @@
                 "to": {
                     "startLine": 80,
                     "startColumn": 4,
-                    "startOffset": 4186,
-                    "endColumn": 43,
-                    "endOffset": 4225
+                    "startOffset": 4202,
+                    "endColumn": 57,
+                    "endOffset": 4255
                 },
                 "from": {
                     "file": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\src\\main\\res\\values-en\\strings.xml"
@@ -954,9 +961,9 @@
                 "to": {
                     "startLine": 81,
                     "startColumn": 4,
-                    "startOffset": 4230,
-                    "endColumn": 42,
-                    "endOffset": 4268
+                    "startOffset": 4260,
+                    "endColumn": 58,
+                    "endOffset": 4314
                 },
                 "from": {
                     "file": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\src\\main\\res\\values-en\\strings.xml"
@@ -966,9 +973,9 @@
                 "to": {
                     "startLine": 82,
                     "startColumn": 4,
-                    "startOffset": 4273,
+                    "startOffset": 4319,
                     "endColumn": 43,
-                    "endOffset": 4312
+                    "endOffset": 4358
                 },
                 "from": {
                     "file": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\src\\main\\res\\values-en\\strings.xml"
@@ -978,9 +985,9 @@
                 "to": {
                     "startLine": 83,
                     "startColumn": 4,
-                    "startOffset": 4317,
-                    "endColumn": 51,
-                    "endOffset": 4364
+                    "startOffset": 4363,
+                    "endColumn": 42,
+                    "endOffset": 4401
                 },
                 "from": {
                     "file": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\src\\main\\res\\values-en\\strings.xml"
@@ -990,9 +997,9 @@
                 "to": {
                     "startLine": 84,
                     "startColumn": 4,
-                    "startOffset": 4369,
-                    "endColumn": 62,
-                    "endOffset": 4427
+                    "startOffset": 4406,
+                    "endColumn": 43,
+                    "endOffset": 4445
                 },
                 "from": {
                     "file": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\src\\main\\res\\values-en\\strings.xml"
@@ -1002,9 +1009,9 @@
                 "to": {
                     "startLine": 85,
                     "startColumn": 4,
-                    "startOffset": 4432,
-                    "endColumn": 144,
-                    "endOffset": 4572
+                    "startOffset": 4450,
+                    "endColumn": 51,
+                    "endOffset": 4497
                 },
                 "from": {
                     "file": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\src\\main\\res\\values-en\\strings.xml"
@@ -1014,9 +1021,9 @@
                 "to": {
                     "startLine": 86,
                     "startColumn": 4,
-                    "startOffset": 4577,
-                    "endColumn": 54,
-                    "endOffset": 4627
+                    "startOffset": 4502,
+                    "endColumn": 62,
+                    "endOffset": 4560
                 },
                 "from": {
                     "file": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\src\\main\\res\\values-en\\strings.xml"
@@ -1026,9 +1033,9 @@
                 "to": {
                     "startLine": 87,
                     "startColumn": 4,
-                    "startOffset": 4632,
-                    "endColumn": 37,
-                    "endOffset": 4665
+                    "startOffset": 4565,
+                    "endColumn": 144,
+                    "endOffset": 4705
                 },
                 "from": {
                     "file": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\src\\main\\res\\values-en\\strings.xml"
@@ -1038,9 +1045,9 @@
                 "to": {
                     "startLine": 88,
                     "startColumn": 4,
-                    "startOffset": 4670,
-                    "endColumn": 35,
-                    "endOffset": 4701
+                    "startOffset": 4710,
+                    "endColumn": 54,
+                    "endOffset": 4760
                 },
                 "from": {
                     "file": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\src\\main\\res\\values-en\\strings.xml"
@@ -1050,9 +1057,9 @@
                 "to": {
                     "startLine": 89,
                     "startColumn": 4,
-                    "startOffset": 4706,
-                    "endColumn": 48,
-                    "endOffset": 4750
+                    "startOffset": 4765,
+                    "endColumn": 37,
+                    "endOffset": 4798
                 },
                 "from": {
                     "file": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\src\\main\\res\\values-en\\strings.xml"
@@ -1062,9 +1069,9 @@
                 "to": {
                     "startLine": 90,
                     "startColumn": 4,
-                    "startOffset": 4755,
-                    "endColumn": 37,
-                    "endOffset": 4788
+                    "startOffset": 4803,
+                    "endColumn": 35,
+                    "endOffset": 4834
                 },
                 "from": {
                     "file": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\src\\main\\res\\values-en\\strings.xml"
@@ -1074,9 +1081,9 @@
                 "to": {
                     "startLine": 91,
                     "startColumn": 4,
-                    "startOffset": 4793,
-                    "endColumn": 41,
-                    "endOffset": 4830
+                    "startOffset": 4839,
+                    "endColumn": 48,
+                    "endOffset": 4883
                 },
                 "from": {
                     "file": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\src\\main\\res\\values-en\\strings.xml"
@@ -1086,9 +1093,9 @@
                 "to": {
                     "startLine": 92,
                     "startColumn": 4,
-                    "startOffset": 4835,
-                    "endColumn": 52,
-                    "endOffset": 4883
+                    "startOffset": 4888,
+                    "endColumn": 37,
+                    "endOffset": 4921
                 },
                 "from": {
                     "file": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\src\\main\\res\\values-en\\strings.xml"
@@ -1098,9 +1105,9 @@
                 "to": {
                     "startLine": 93,
                     "startColumn": 4,
-                    "startOffset": 4888,
-                    "endColumn": 35,
-                    "endOffset": 4919
+                    "startOffset": 4926,
+                    "endColumn": 41,
+                    "endOffset": 4963
                 },
                 "from": {
                     "file": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\src\\main\\res\\values-en\\strings.xml"
@@ -1110,9 +1117,9 @@
                 "to": {
                     "startLine": 94,
                     "startColumn": 4,
-                    "startOffset": 4924,
-                    "endColumn": 37,
-                    "endOffset": 4957
+                    "startOffset": 4968,
+                    "endColumn": 52,
+                    "endOffset": 5016
                 },
                 "from": {
                     "file": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\src\\main\\res\\values-en\\strings.xml"
@@ -1122,9 +1129,9 @@
                 "to": {
                     "startLine": 95,
                     "startColumn": 4,
-                    "startOffset": 4962,
-                    "endColumn": 42,
-                    "endOffset": 5000
+                    "startOffset": 5021,
+                    "endColumn": 35,
+                    "endOffset": 5052
                 },
                 "from": {
                     "file": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\src\\main\\res\\values-en\\strings.xml"
@@ -1134,9 +1141,9 @@
                 "to": {
                     "startLine": 96,
                     "startColumn": 4,
-                    "startOffset": 5005,
-                    "endColumn": 35,
-                    "endOffset": 5036
+                    "startOffset": 5057,
+                    "endColumn": 37,
+                    "endOffset": 5090
                 },
                 "from": {
                     "file": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\src\\main\\res\\values-en\\strings.xml"
@@ -1146,9 +1153,9 @@
                 "to": {
                     "startLine": 97,
                     "startColumn": 4,
-                    "startOffset": 5041,
-                    "endColumn": 69,
-                    "endOffset": 5106
+                    "startOffset": 5095,
+                    "endColumn": 42,
+                    "endOffset": 5133
                 },
                 "from": {
                     "file": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\src\\main\\res\\values-en\\strings.xml"
@@ -1158,9 +1165,9 @@
                 "to": {
                     "startLine": 98,
                     "startColumn": 4,
-                    "startOffset": 5111,
-                    "endColumn": 37,
-                    "endOffset": 5144
+                    "startOffset": 5138,
+                    "endColumn": 35,
+                    "endOffset": 5169
                 },
                 "from": {
                     "file": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\src\\main\\res\\values-en\\strings.xml"
@@ -1170,9 +1177,9 @@
                 "to": {
                     "startLine": 99,
                     "startColumn": 4,
-                    "startOffset": 5149,
-                    "endColumn": 36,
-                    "endOffset": 5181
+                    "startOffset": 5174,
+                    "endColumn": 69,
+                    "endOffset": 5239
                 },
                 "from": {
                     "file": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\src\\main\\res\\values-en\\strings.xml"
@@ -1182,9 +1189,9 @@
                 "to": {
                     "startLine": 100,
                     "startColumn": 4,
-                    "startOffset": 5186,
-                    "endColumn": 40,
-                    "endOffset": 5222
+                    "startOffset": 5244,
+                    "endColumn": 37,
+                    "endOffset": 5277
                 },
                 "from": {
                     "file": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\src\\main\\res\\values-en\\strings.xml"
@@ -1194,9 +1201,9 @@
                 "to": {
                     "startLine": 101,
                     "startColumn": 4,
-                    "startOffset": 5227,
-                    "endColumn": 42,
-                    "endOffset": 5265
+                    "startOffset": 5282,
+                    "endColumn": 36,
+                    "endOffset": 5314
                 },
                 "from": {
                     "file": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\src\\main\\res\\values-en\\strings.xml"
@@ -1206,9 +1213,9 @@
                 "to": {
                     "startLine": 102,
                     "startColumn": 4,
-                    "startOffset": 5270,
-                    "endColumn": 44,
-                    "endOffset": 5310
+                    "startOffset": 5319,
+                    "endColumn": 40,
+                    "endOffset": 5355
                 },
                 "from": {
                     "file": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\src\\main\\res\\values-en\\strings.xml"
@@ -1218,9 +1225,9 @@
                 "to": {
                     "startLine": 103,
                     "startColumn": 4,
-                    "startOffset": 5315,
-                    "endColumn": 44,
-                    "endOffset": 5355
+                    "startOffset": 5360,
+                    "endColumn": 42,
+                    "endOffset": 5398
                 },
                 "from": {
                     "file": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\src\\main\\res\\values-en\\strings.xml"
@@ -1230,20 +1237,8 @@
                 "to": {
                     "startLine": 104,
                     "startColumn": 4,
-                    "startOffset": 5360,
+                    "startOffset": 5403,
                     "endColumn": 44,
-                    "endOffset": 5400
-                },
-                "from": {
-                    "file": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\src\\main\\res\\values-en\\strings.xml"
-                }
-            },
-            {
-                "to": {
-                    "startLine": 105,
-                    "startColumn": 4,
-                    "startOffset": 5405,
-                    "endColumn": 42,
                     "endOffset": 5443
                 },
                 "from": {
@@ -1252,7 +1247,7 @@
             },
             {
                 "to": {
-                    "startLine": 106,
+                    "startLine": 105,
                     "startColumn": 4,
                     "startOffset": 5448,
                     "endColumn": 44,
@@ -1264,11 +1259,23 @@
             },
             {
                 "to": {
-                    "startLine": 107,
+                    "startLine": 106,
                     "startColumn": 4,
                     "startOffset": 5493,
+                    "endColumn": 44,
+                    "endOffset": 5533
+                },
+                "from": {
+                    "file": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\src\\main\\res\\values-en\\strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 107,
+                    "startColumn": 4,
+                    "startOffset": 5538,
                     "endColumn": 42,
-                    "endOffset": 5531
+                    "endOffset": 5576
                 },
                 "from": {
                     "file": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\src\\main\\res\\values-en\\strings.xml"
@@ -1278,9 +1285,9 @@
                 "to": {
                     "startLine": 108,
                     "startColumn": 4,
-                    "startOffset": 5536,
-                    "endColumn": 55,
-                    "endOffset": 5587
+                    "startOffset": 5581,
+                    "endColumn": 44,
+                    "endOffset": 5621
                 },
                 "from": {
                     "file": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\src\\main\\res\\values-en\\strings.xml"
@@ -1290,9 +1297,9 @@
                 "to": {
                     "startLine": 109,
                     "startColumn": 4,
-                    "startOffset": 5592,
-                    "endColumn": 41,
-                    "endOffset": 5629
+                    "startOffset": 5626,
+                    "endColumn": 42,
+                    "endOffset": 5664
                 },
                 "from": {
                     "file": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\src\\main\\res\\values-en\\strings.xml"
@@ -1302,28 +1309,21 @@
                 "to": {
                     "startLine": 110,
                     "startColumn": 4,
-                    "startOffset": 5634,
-                    "endColumn": 70,
-                    "endOffset": 5700
+                    "startOffset": 5669,
+                    "endColumn": 55,
+                    "endOffset": 5720
                 },
                 "from": {
-                    "file": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\src\\main\\res\\values-en\\strings.xml",
-                    "position": {
-                        "startLine": 117,
-                        "startColumn": 4,
-                        "startOffset": 7209,
-                        "endColumn": 70,
-                        "endOffset": 7275
-                    }
+                    "file": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\src\\main\\res\\values-en\\strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 111,
                     "startColumn": 4,
-                    "startOffset": 5705,
-                    "endColumn": 38,
-                    "endOffset": 5739
+                    "startOffset": 5725,
+                    "endColumn": 41,
+                    "endOffset": 5762
                 },
                 "from": {
                     "file": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\src\\main\\res\\values-en\\strings.xml"
@@ -1333,9 +1333,9 @@
                 "to": {
                     "startLine": 112,
                     "startColumn": 4,
-                    "startOffset": 5744,
-                    "endColumn": 73,
-                    "endOffset": 5813
+                    "startOffset": 5767,
+                    "endColumn": 45,
+                    "endOffset": 5808
                 },
                 "from": {
                     "file": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\src\\main\\res\\values-en\\strings.xml"
@@ -1345,9 +1345,9 @@
                 "to": {
                     "startLine": 113,
                     "startColumn": 4,
-                    "startOffset": 5818,
-                    "endColumn": 42,
-                    "endOffset": 5856
+                    "startOffset": 5813,
+                    "endColumn": 70,
+                    "endOffset": 5879
                 },
                 "from": {
                     "file": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\src\\main\\res\\values-en\\strings.xml"
@@ -1357,9 +1357,9 @@
                 "to": {
                     "startLine": 114,
                     "startColumn": 4,
-                    "startOffset": 5861,
+                    "startOffset": 5884,
                     "endColumn": 38,
-                    "endOffset": 5895
+                    "endOffset": 5918
                 },
                 "from": {
                     "file": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\src\\main\\res\\values-en\\strings.xml"
@@ -1369,9 +1369,9 @@
                 "to": {
                     "startLine": 115,
                     "startColumn": 4,
-                    "startOffset": 5900,
-                    "endColumn": 41,
-                    "endOffset": 5937
+                    "startOffset": 5923,
+                    "endColumn": 73,
+                    "endOffset": 5992
                 },
                 "from": {
                     "file": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\src\\main\\res\\values-en\\strings.xml"
@@ -1381,9 +1381,9 @@
                 "to": {
                     "startLine": 116,
                     "startColumn": 4,
-                    "startOffset": 5942,
-                    "endColumn": 37,
-                    "endOffset": 5975
+                    "startOffset": 5997,
+                    "endColumn": 42,
+                    "endOffset": 6035
                 },
                 "from": {
                     "file": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\src\\main\\res\\values-en\\strings.xml"
@@ -1393,9 +1393,9 @@
                 "to": {
                     "startLine": 117,
                     "startColumn": 4,
-                    "startOffset": 5980,
-                    "endColumn": 64,
-                    "endOffset": 6040
+                    "startOffset": 6040,
+                    "endColumn": 38,
+                    "endOffset": 6074
                 },
                 "from": {
                     "file": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\src\\main\\res\\values-en\\strings.xml"
@@ -1405,9 +1405,9 @@
                 "to": {
                     "startLine": 118,
                     "startColumn": 4,
-                    "startOffset": 6045,
-                    "endColumn": 55,
-                    "endOffset": 6096
+                    "startOffset": 6079,
+                    "endColumn": 41,
+                    "endOffset": 6116
                 },
                 "from": {
                     "file": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\src\\main\\res\\values-en\\strings.xml"
@@ -1417,9 +1417,9 @@
                 "to": {
                     "startLine": 119,
                     "startColumn": 4,
-                    "startOffset": 6101,
-                    "endColumn": 73,
-                    "endOffset": 6170
+                    "startOffset": 6121,
+                    "endColumn": 37,
+                    "endOffset": 6154
                 },
                 "from": {
                     "file": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\src\\main\\res\\values-en\\strings.xml"
@@ -1429,9 +1429,9 @@
                 "to": {
                     "startLine": 120,
                     "startColumn": 4,
-                    "startOffset": 6175,
-                    "endColumn": 59,
-                    "endOffset": 6230
+                    "startOffset": 6159,
+                    "endColumn": 64,
+                    "endOffset": 6219
                 },
                 "from": {
                     "file": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\src\\main\\res\\values-en\\strings.xml"
@@ -1441,9 +1441,9 @@
                 "to": {
                     "startLine": 121,
                     "startColumn": 4,
-                    "startOffset": 6235,
-                    "endColumn": 65,
-                    "endOffset": 6296
+                    "startOffset": 6224,
+                    "endColumn": 55,
+                    "endOffset": 6275
                 },
                 "from": {
                     "file": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\src\\main\\res\\values-en\\strings.xml"
@@ -1453,9 +1453,9 @@
                 "to": {
                     "startLine": 122,
                     "startColumn": 4,
-                    "startOffset": 6301,
-                    "endColumn": 90,
-                    "endOffset": 6387
+                    "startOffset": 6280,
+                    "endColumn": 73,
+                    "endOffset": 6349
                 },
                 "from": {
                     "file": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\src\\main\\res\\values-en\\strings.xml"
@@ -1465,9 +1465,9 @@
                 "to": {
                     "startLine": 123,
                     "startColumn": 4,
-                    "startOffset": 6392,
-                    "endColumn": 41,
-                    "endOffset": 6429
+                    "startOffset": 6354,
+                    "endColumn": 59,
+                    "endOffset": 6409
                 },
                 "from": {
                     "file": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\src\\main\\res\\values-en\\strings.xml"
@@ -1477,8 +1477,8 @@
                 "to": {
                     "startLine": 124,
                     "startColumn": 4,
-                    "startOffset": 6434,
-                    "endColumn": 45,
+                    "startOffset": 6414,
+                    "endColumn": 65,
                     "endOffset": 6475
                 },
                 "from": {
@@ -1490,8 +1490,8 @@
                     "startLine": 125,
                     "startColumn": 4,
                     "startOffset": 6480,
-                    "endColumn": 53,
-                    "endOffset": 6529
+                    "endColumn": 90,
+                    "endOffset": 6566
                 },
                 "from": {
                     "file": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\src\\main\\res\\values-en\\strings.xml"
@@ -1501,9 +1501,9 @@
                 "to": {
                     "startLine": 126,
                     "startColumn": 4,
-                    "startOffset": 6534,
-                    "endColumn": 60,
-                    "endOffset": 6590
+                    "startOffset": 6571,
+                    "endColumn": 41,
+                    "endOffset": 6608
                 },
                 "from": {
                     "file": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\src\\main\\res\\values-en\\strings.xml"
@@ -1513,9 +1513,9 @@
                 "to": {
                     "startLine": 127,
                     "startColumn": 4,
-                    "startOffset": 6595,
-                    "endColumn": 38,
-                    "endOffset": 6629
+                    "startOffset": 6613,
+                    "endColumn": 45,
+                    "endOffset": 6654
                 },
                 "from": {
                     "file": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\src\\main\\res\\values-en\\strings.xml"
@@ -1525,9 +1525,9 @@
                 "to": {
                     "startLine": 128,
                     "startColumn": 4,
-                    "startOffset": 6634,
-                    "endColumn": 82,
-                    "endOffset": 6712
+                    "startOffset": 6659,
+                    "endColumn": 53,
+                    "endOffset": 6708
                 },
                 "from": {
                     "file": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\src\\main\\res\\values-en\\strings.xml"
@@ -1537,9 +1537,9 @@
                 "to": {
                     "startLine": 129,
                     "startColumn": 4,
-                    "startOffset": 6717,
-                    "endColumn": 43,
-                    "endOffset": 6756
+                    "startOffset": 6713,
+                    "endColumn": 60,
+                    "endOffset": 6769
                 },
                 "from": {
                     "file": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\src\\main\\res\\values-en\\strings.xml"
@@ -1549,9 +1549,9 @@
                 "to": {
                     "startLine": 130,
                     "startColumn": 4,
-                    "startOffset": 6761,
-                    "endColumn": 41,
-                    "endOffset": 6798
+                    "startOffset": 6774,
+                    "endColumn": 38,
+                    "endOffset": 6808
                 },
                 "from": {
                     "file": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\src\\main\\res\\values-en\\strings.xml"
@@ -1561,9 +1561,9 @@
                 "to": {
                     "startLine": 131,
                     "startColumn": 4,
-                    "startOffset": 6803,
-                    "endColumn": 51,
-                    "endOffset": 6850
+                    "startOffset": 6813,
+                    "endColumn": 82,
+                    "endOffset": 6891
                 },
                 "from": {
                     "file": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\src\\main\\res\\values-en\\strings.xml"
@@ -1573,9 +1573,9 @@
                 "to": {
                     "startLine": 132,
                     "startColumn": 4,
-                    "startOffset": 6855,
+                    "startOffset": 6896,
                     "endColumn": 43,
-                    "endOffset": 6894
+                    "endOffset": 6935
                 },
                 "from": {
                     "file": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\src\\main\\res\\values-en\\strings.xml"
@@ -1585,9 +1585,9 @@
                 "to": {
                     "startLine": 133,
                     "startColumn": 4,
-                    "startOffset": 6899,
-                    "endColumn": 90,
-                    "endOffset": 6985
+                    "startOffset": 6940,
+                    "endColumn": 41,
+                    "endOffset": 6977
                 },
                 "from": {
                     "file": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\src\\main\\res\\values-en\\strings.xml"
@@ -1597,22 +1597,9 @@
                 "to": {
                     "startLine": 134,
                     "startColumn": 4,
-                    "startOffset": 6990,
-                    "endLine": 136,
-                    "endColumn": 13,
-                    "endOffset": 7047
-                },
-                "from": {
-                    "file": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\src\\main\\res\\values-en\\hint_item.xml"
-                }
-            },
-            {
-                "to": {
-                    "startLine": 137,
-                    "startColumn": 4,
-                    "startOffset": 7052,
-                    "endColumn": 61,
-                    "endOffset": 7109
+                    "startOffset": 6982,
+                    "endColumn": 51,
+                    "endOffset": 7029
                 },
                 "from": {
                     "file": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\src\\main\\res\\values-en\\strings.xml"
@@ -1620,12 +1607,61 @@
             },
             {
                 "to": {
-                    "startLine": 138,
+                    "startLine": 135,
                     "startColumn": 4,
-                    "startOffset": 7114,
-                    "endLine": 143,
+                    "startOffset": 7034,
+                    "endColumn": 43,
+                    "endOffset": 7073
+                },
+                "from": {
+                    "file": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\src\\main\\res\\values-en\\strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 136,
+                    "startColumn": 4,
+                    "startOffset": 7078,
+                    "endColumn": 90,
+                    "endOffset": 7164
+                },
+                "from": {
+                    "file": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\src\\main\\res\\values-en\\strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 137,
+                    "startColumn": 4,
+                    "startOffset": 7169,
+                    "endLine": 139,
+                    "endColumn": 13,
+                    "endOffset": 7226
+                },
+                "from": {
+                    "file": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\src\\main\\res\\values-en\\hint_item.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 140,
+                    "startColumn": 4,
+                    "startOffset": 7231,
+                    "endColumn": 61,
+                    "endOffset": 7288
+                },
+                "from": {
+                    "file": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\src\\main\\res\\values-en\\strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 141,
+                    "startColumn": 4,
+                    "startOffset": 7293,
+                    "endLine": 146,
                     "endColumn": 12,
-                    "endOffset": 7393
+                    "endOffset": 7572
                 },
                 "from": {
                     "file": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\src\\main\\res\\values-en\\styles.xml"
@@ -1633,11 +1669,11 @@
             },
             {
                 "to": {
-                    "startLine": 144,
+                    "startLine": 147,
                     "startColumn": 4,
-                    "startOffset": 7398,
+                    "startOffset": 7577,
                     "endColumn": 89,
-                    "endOffset": 7483
+                    "endOffset": 7662
                 },
                 "from": {
                     "file": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\src\\main\\res\\values-en\\styles.xml"
@@ -1645,37 +1681,37 @@
             },
             {
                 "to": {
-                    "startLine": 145,
+                    "startLine": 148,
                     "startColumn": 4,
-                    "startOffset": 7488,
-                    "endLine": 148,
-                    "endColumn": 12,
-                    "endOffset": 7634
-                },
-                "from": {
-                    "file": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\src\\main\\res\\values-en\\styles.xml"
-                }
-            },
-            {
-                "to": {
-                    "startLine": 149,
-                    "startColumn": 4,
-                    "startOffset": 7639,
-                    "endColumn": 79,
-                    "endOffset": 7714
-                },
-                "from": {
-                    "file": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\src\\main\\res\\values-en\\styles.xml"
-                }
-            },
-            {
-                "to": {
-                    "startLine": 150,
-                    "startColumn": 4,
-                    "startOffset": 7719,
+                    "startOffset": 7667,
                     "endLine": 151,
                     "endColumn": 12,
-                    "endOffset": 7816
+                    "endOffset": 7813
+                },
+                "from": {
+                    "file": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\src\\main\\res\\values-en\\styles.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 152,
+                    "startColumn": 4,
+                    "startOffset": 7818,
+                    "endColumn": 79,
+                    "endOffset": 7893
+                },
+                "from": {
+                    "file": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\src\\main\\res\\values-en\\styles.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 153,
+                    "startColumn": 4,
+                    "startOffset": 7898,
+                    "endLine": 154,
+                    "endColumn": 12,
+                    "endOffset": 7995
                 },
                 "from": {
                     "file": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\src\\main\\res\\values-en\\styles.xml"

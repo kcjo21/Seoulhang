@@ -6,6 +6,7 @@ import com.szb.szb.model.retrofit.FindDTO;
 import com.szb.szb.model.retrofit.HintDTO;
 import com.szb.szb.model.retrofit.InventoryDTO;
 import com.szb.szb.model.retrofit.ItemDTO;
+import com.szb.szb.model.retrofit.JoinDTO;
 import com.szb.szb.model.retrofit.PlayerDTO;
 import com.szb.szb.model.retrofit.QuestDTO;
 import com.szb.szb.model.retrofit.RankDTO;
@@ -125,5 +126,9 @@ public class NetworkClient {
     }
     public void withdrawal(String id, String password, Callback<FindDTO> callback){
         Call<FindDTO> call = service.withdrawal(id, password);
+    }
+
+    public void editprofile(String id, String password, String name, String email, Callback<JoinDTO> callback){
+        Call<FindDTO> call= service.editprofile(id, password, name, email);
     }
 }

@@ -6,7 +6,7 @@
     density="420dpi"
     format="10"
     plugin-version="2.3.1"
-    timestamp="1505050129221"
+    timestamp="1505113707040"
     token="-3162558022790275280"
     verifier="COLD_SWAP_REQUESTED" >
 
@@ -23,64 +23,46 @@
         name="verifier"
         duration="0" />
 
+    <artifact
+        location="C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\build\outputs\apk\szb-debug.apk"
+        type="SPLIT_MAIN" />
+
     <build
         build-mode="FULL"
-        timestamp="1505042347124"
+        timestamp="1505113376147"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
-            location="C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\build\intermediates\split-apk\debug\slices\slice_9.apk"
+            location="C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\build\intermediates\split-apk\debug\dep\dependencies.apk"
             type="SPLIT" />
         <artifact
             location="C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\build\intermediates\split-apk\debug\slices\slice_2.apk"
             type="SPLIT" />
         <artifact
-            location="C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\build\intermediates\split-apk\debug\slices\slice_3.apk"
-            type="SPLIT" />
-        <artifact
-            location="C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\build\intermediates\split-apk\debug\slices\slice_7.apk"
-            type="SPLIT" />
-        <artifact
-            location="C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\build\intermediates\split-apk\debug\slices\slice_5.apk"
-            type="SPLIT" />
-        <artifact
             location="C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\build\intermediates\split-apk\debug\slices\slice_0.apk"
             type="SPLIT" />
         <artifact
-            location="C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\build\outputs\apk\szb-debug.apk"
-            type="SPLIT_MAIN" />
-        <artifact
-            location="C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\build\intermediates\split-apk\debug\slices\slice_4.apk"
-            type="SPLIT" />
-        <artifact
-            location="C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\build\intermediates\split-apk\debug\slices\slice_8.apk"
-            type="SPLIT" />
-        <artifact
-            location="C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\build\intermediates\split-apk\debug\slices\slice_6.apk"
+            location="C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\build\intermediates\split-apk\debug\slices\slice_3.apk"
             type="SPLIT" />
         <artifact
             location="C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\build\intermediates\split-apk\debug\slices\slice_1.apk"
             type="SPLIT" />
         <artifact
-            location="C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\build\intermediates\split-apk\debug\dep\dependencies.apk"
+            location="C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\build\intermediates\split-apk\debug\slices\slice_6.apk"
             type="SPLIT" />
-    </build>
-    <build
-        build-mode="COLD"
-        timestamp="1505047268976"
-        verifier="COLD_SWAP_REQUESTED" >
+        <artifact
+            location="C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\build\intermediates\split-apk\debug\slices\slice_4.apk"
+            type="SPLIT" />
+        <artifact
+            location="C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\build\intermediates\split-apk\debug\slices\slice_5.apk"
+            type="SPLIT" />
         <artifact
             location="C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\build\intermediates\split-apk\debug\slices\slice_7.apk"
             type="SPLIT" />
-    </build>
-    <build
-        build-mode="COLD"
-        timestamp="1505048638526"
-        verifier="COLD_SWAP_REQUESTED" >
         <artifact
-            location="C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\build\intermediates\split-apk\debug\slices\slice_9.apk"
+            location="C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\build\intermediates\split-apk\debug\slices\slice_8.apk"
             type="SPLIT" />
         <artifact
-            location="C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\build\intermediates\split-apk\debug\slices\slice_2.apk"
+            location="C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\build\intermediates\split-apk\debug\slices\slice_9.apk"
             type="SPLIT" />
         <artifact
             location="C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\build\outputs\apk\szb-debug.apk"
@@ -88,26 +70,11 @@
     </build>
     <build
         build-mode="COLD"
-        timestamp="1505049920688"
+        timestamp="1505113707040"
         verifier="COLD_SWAP_REQUESTED" >
         <artifact
-            location="C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\build\intermediates\split-apk\debug\slices\slice_0.apk"
-            type="SPLIT" />
+            location="C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\build\outputs\apk\szb-debug.apk"
+            type="SPLIT_MAIN" />
     </build>
-    <build
-        build-mode="COLD"
-        timestamp="1505050058086"
-        verifier="COLD_SWAP_REQUESTED" >
-        <artifact
-            location="C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\build\intermediates\split-apk\debug\slices\slice_3.apk"
-            type="SPLIT" />
-        <artifact
-            location="C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\build\intermediates\split-apk\debug\slices\slice_5.apk"
-            type="SPLIT" />
-    </build>
-    <build
-        build-mode="COLD"
-        timestamp="1505050129221"
-        verifier="COLD_SWAP_REQUESTED" />
 
 </instant-run>

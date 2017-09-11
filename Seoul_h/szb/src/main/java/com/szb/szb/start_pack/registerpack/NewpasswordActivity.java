@@ -42,8 +42,6 @@ public class NewpasswordActivity extends BaseActivity {
         cancel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(NewpasswordActivity.this, CodeinsertActivity.class);
-                startActivity(intent);
                 finish();
             }
         });
@@ -67,13 +65,13 @@ public class NewpasswordActivity extends BaseActivity {
                       public void onResponse(Call<FindDTO> call, Response<FindDTO> response) {
                           switch (response.code()) {
                               case 200:
-                                  Intent intent = new Intent(NewpasswordActivity.this, MainActivity.class);
-                                  startActivity(intent);
+                                  Toast toast_s = Toast.makeText(getApplicationContext(), getResources().getText(R.string.비밀번호변경완료),Toast.LENGTH_LONG);
+                                  toast_s.show();
                                   finish();
                                   break;
                               default:
-                                  Toast toast = Toast.makeText(getApplicationContext(), getResources().getString(R.string.코드불일치), Toast.LENGTH_LONG);
-                                  toast.show();
+                                  Toast toast_f = Toast.makeText(getApplicationContext(), getResources().getString(R.string.코드불일치), Toast.LENGTH_LONG);
+                                  toast_f.show();
                                   break;
                           }
                       }

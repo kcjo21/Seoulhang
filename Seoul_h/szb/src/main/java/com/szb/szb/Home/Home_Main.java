@@ -116,9 +116,8 @@ public class Home_Main extends AppCompatActivity {
                 alert.setNegativeButton(R.string.확인,new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int whichButton) {
                         Intent intent = new Intent(Home_Main.this,EditprofileActivity.class);
-                        startActivity(intent);
-                        finish();
 
+                        startActivity(intent);
                     }
                 });
                 final android.app.AlertDialog dialog = alert.create();
@@ -402,8 +401,9 @@ public class Home_Main extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
-        String playerid=logm.getPlayerid();
         logm = new Logm();
+        String playerid=logm.getPlayerid();
+
         if (id == R.id.camera_button) {
             Intent intent = new Intent(Home_Main.this,GameActivity.class);
             intent.putExtra("playerid",playerid);

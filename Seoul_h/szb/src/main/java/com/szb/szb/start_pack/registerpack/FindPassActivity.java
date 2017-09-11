@@ -95,7 +95,6 @@ public class FindPassActivity extends BaseActivity {
                                     startActivity(intent);
                                     Toast toast = Toast.makeText(getApplicationContext(), getResources().getString(R.string.확인메일보냄), Toast.LENGTH_LONG);
                                     toast.show();
-                                    finish();
                                     break;
                                 default:
                                     Log.e("에러","케이스205");

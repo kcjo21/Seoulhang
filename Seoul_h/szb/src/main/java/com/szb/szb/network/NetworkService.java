@@ -67,4 +67,7 @@ public interface NetworkService {
     @GET("/id/{id}/password/{password}")
     Call<FindDTO> withdrawal(@Path ("id") String id, @Path("paasword") String password);
 
+    @GET("id/{id}/password/{password}/name/{name}/email{email}")
+    Call<FindDTO> editprofile(@Path ("id") String id, @Path("password") String password, @Path("name") String name, @Path("email") String email);
+
 }
