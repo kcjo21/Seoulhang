@@ -14,6 +14,7 @@ import com.szb.szb.model.retrofit.FindDTO;
 import com.szb.szb.network.Ipm;
 import com.szb.szb.network.NetworkClient;
 import com.szb.szb.start_pack.MainActivity;
+import com.szb.szb.start_pack.loginpackage.Logm;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -27,12 +28,14 @@ public class NewpasswordActivity extends BaseActivity {
     Button cancel;
     NetworkClient networkClient;
     Ipm ipm;
+    Logm logm;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_newpassword);
         ipm = new Ipm();
+        logm = new Logm();
         commit = (Button) findViewById(R.id.commit);
         cancel = (Button) findViewById(R.id.cancel);
         password = (EditText)findViewById(R.id.password_fit);
@@ -51,8 +54,7 @@ public class NewpasswordActivity extends BaseActivity {
                 String ip = ipm.getip();
                 String pass = password.getText().toString();
                 String confirm  = password_c.getText().toString();
-                Intent intent = getIntent();
-                String sid = intent.getStringExtra("id");
+                String sid = logm.getPlayerid();
 
                 networkClient = NetworkClient.getInstance(ip);
                 if(!pass.equals(confirm)){

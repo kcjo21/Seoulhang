@@ -116,8 +116,8 @@ public class Home_Main extends AppCompatActivity {
                 alert.setNegativeButton(R.string.확인,new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int whichButton) {
                         Intent intent = new Intent(Home_Main.this,EditprofileActivity.class);
-
                         startActivity(intent);
+                        finish();
                     }
                 });
                 final android.app.AlertDialog dialog = alert.create();

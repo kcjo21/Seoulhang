@@ -103,7 +103,9 @@
                     android:layout_weight="20"
                     android:gravity="center_vertical|center_horizontal"
                     android:textColor="@color/BLUE"
-                    android:visibility="gone" />
+                    android:textSize="14dp"
+                    android:visibility="gone"
+                    tools:ignore="SpUsage" />
             </LinearLayout>
 
             <LinearLayout

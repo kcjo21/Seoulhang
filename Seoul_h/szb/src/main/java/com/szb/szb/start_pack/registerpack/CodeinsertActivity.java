@@ -82,7 +82,6 @@ public class CodeinsertActivity extends BaseActivity {
                         switch (response.code()) {
                             case 200:
                                 Intent intent = new Intent(CodeinsertActivity.this, NewpasswordActivity.class);
-                                intent.putExtra("id",sid);
                                 startActivity(intent);
                                 finish();
                                 break;

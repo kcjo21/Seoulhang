@@ -16,6 +16,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.szb.szb.BaseActivity;
+import com.szb.szb.Home.Home_Main;
 import com.szb.szb.R;
 import com.szb.szb.model.retrofit.JoinDTO;
 import com.szb.szb.network.Ipm;
@@ -142,6 +143,8 @@ public class EditprofileActivity extends BaseActivity {
                     public void onResponse(Call<JoinDTO> call, Response<JoinDTO> response) {
                         switch (response.code()){
                             case 200:
+                                Intent intent = new Intent(EditprofileActivity.this, Home_Main.class);
+                                startActivity(intent);
                                 finish();
                                 break;
                             default:
@@ -161,6 +164,8 @@ public class EditprofileActivity extends BaseActivity {
         Cancel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Intent intent = new Intent(EditprofileActivity.this, Home_Main.class);
+                startActivity(intent);
                 finish();
             }
         });

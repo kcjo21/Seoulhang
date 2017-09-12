@@ -101,7 +101,6 @@ public class MainActivity extends BaseActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this,FindPassActivity.class);
                 startActivity(intent);
-                finish();
             }
         });
 
@@ -120,9 +119,6 @@ public class MainActivity extends BaseActivity {
                 Log.e("ACC","TEAM id IS !!! "+ loginid);
                // progressON(getResources().getString(R.string.Loading)); //응답대기 애니메이션
 
-                Intent intent = new Intent(MainActivity.this, Home_Main.class);
-                startActivity(intent);
-                finish();
 
                  networkClient.login(loginid,loginpass,new Callback<PlayerDTO>() {
                     @Override
