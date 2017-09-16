@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.os.Bundle;
+import android.os.Message;
 import android.support.constraint.ConstraintLayout;
 import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v4.view.GravityCompat;
@@ -23,12 +24,14 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.bumptech.glide.request.target.GlideDrawableImageViewTarget;
+import com.szb.szb.BaseActivity;
 import com.szb.szb.GameActivity;
 import com.szb.szb.Home.frag.Frag_Home;
 import com.szb.szb.Home.frag.Frag_Info;
@@ -47,15 +50,16 @@ import com.szb.szb.start_pack.registerpack.EditprofileActivity;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Handler;
 
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class Home_Main extends AppCompatActivity {
+public class Home_Main extends BaseActivity {
 
     ViewPager viewpager;
-    ConstraintLayout top;
+    LinearLayout top;
     Toolbar toolbar;
     DrawerLayout dlDrawer;
     ActionBarDrawerToggle dtToggle;
@@ -247,7 +251,7 @@ public class Home_Main extends AppCompatActivity {
         dlDrawer.addDrawerListener(dtToggle);            //토글 아이콘 및 드로어 리스너
 
         viewpager = (ViewPager)findViewById(R.id.viewpager);  //뷰 페이저 초기화
-        top = (ConstraintLayout) findViewById(R.id.tap_bar);   //tap_bar 레이아웃 초기화
+        top = (LinearLayout) findViewById(R.id.tap_bar);   //tap_bar 레이아웃 초기화
 
         ImageView bt_home = (ImageView)findViewById(R.id.bt_home);
         ImageView bt_quiz = (ImageView)findViewById(R.id.bt_quiz);
@@ -257,17 +261,16 @@ public class Home_Main extends AppCompatActivity {
 
         viewpager.setAdapter(new pagerAdapter(getSupportFragmentManager()));
         viewpager.setCurrentItem(0);
+        viewpager.setOffscreenPageLimit(3);
 
         bt_home.setOnClickListener(movePageListener);
         bt_home.setTag(0);
         bt_quiz.setOnClickListener(movePageListener);
         bt_quiz.setTag(1);
-        bt_rank.setOnClickListener(movePageListener);
-        bt_rank.setTag(2);
         bt_info.setOnClickListener(movePageListener);
-        bt_info.setTag(3);
-        bt_map.setOnClickListener(movePageListener);
-        bt_map.setTag(4);                                //페이저 리스너에 태그에 할당된 버튼 추가
+        bt_info.setTag(2);
+        bt_rank.setOnClickListener(movePageListener);
+        bt_rank.setTag(3);                                   //페이저 리스너에 태그에 할당된 버튼 추가
 
         bt_home.setSelected(true);  //뷰페이저 초기값 bt_home
 
@@ -281,7 +284,7 @@ public class Home_Main extends AppCompatActivity {
             public void onPageSelected(int position)
             {
                 int i = 0;
-                while(i<5)
+                while(i<4)
                 {
                     if(position==i)
                     {
@@ -314,7 +317,7 @@ public class Home_Main extends AppCompatActivity {
         {   //페이지 이동값 리스너
             int tag = (int) v.getTag();
             int i = 0;
-            while(i<5)
+            while(i<4)
             {
                 if(tag==i)
                 {
@@ -344,11 +347,9 @@ public class Home_Main extends AppCompatActivity {
                 case 1:
                     return new Frag_Quiz();
                 case 2:
-                    return new Frag_Rank();
-                case 3:
                     return new Frag_Info();
-                case 4:
-                    return new Frag_Map();
+                case 3:
+                    return new Frag_Rank();
                 default:
                     return null;
             }
@@ -357,7 +358,7 @@ public class Home_Main extends AppCompatActivity {
         @Override
         public int getCount()
         {
-            return 5;
+            return 4;
         }
 
     }
@@ -452,7 +453,7 @@ public class Home_Main extends AppCompatActivity {
                                     });
                                     alert.setMessage(R.string.새문제);
                                     alert.show();
-                                } else if (check == 0) { //Responce값이 2일 때 이미 가지고 있는 문제
+                                } else if (check == 0) { //Responce값이 0일 때 이미 가지고 있는 문제
                                     Log.e("확인","응"+check);
                                     AlertDialog.Builder alert = new AlertDialog.Builder(Home_Main.this);
                                     alert.setPositiveButton("확인", new DialogInterface.OnClickListener() {
@@ -491,8 +492,6 @@ public class Home_Main extends AppCompatActivity {
 
 
     }
-
-
 
 }
 

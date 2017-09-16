@@ -1,9 +1,14 @@
 package com.szb.szb.Home.frag;
 
 import android.app.Activity;
+import android.app.ActivityManager;
+import android.app.Service;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Looper;
+import android.os.Message;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.LinearLayoutManager;
@@ -23,6 +28,7 @@ import android.widget.Toast;
 import com.szb.szb.GameActivity;
 import com.szb.szb.Home.Home_Main;
 import com.szb.szb.R;
+import com.szb.szb.mappackage.GooglemapsActivity;
 import com.szb.szb.model.retrofit.InventoryDTO;
 import com.szb.szb.model.retrofit.ItemDTO;
 import com.szb.szb.network.Ipm;
@@ -30,6 +36,7 @@ import com.szb.szb.network.NetworkClient;
 import com.szb.szb.start_pack.TutorialActivity;
 import com.szb.szb.start_pack.loginpackage.Logm;
 
+import java.lang.ref.WeakReference;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -44,7 +51,7 @@ import static android.app.Activity.RESULT_OK;
  * Created by cwh62 on 2017-04-11.
  */
 
-public class Frag_Home extends Fragment {
+public class Frag_Home extends BaseFragment {
 
     Home_Main home_main;
     private RecyclerView mRecyclerView;
@@ -62,6 +69,9 @@ public class Frag_Home extends Fragment {
     TextView hello;
     Ipm ipm;
     Logm logm;
+    Handler handler;
+
+
 
     public Frag_Home() {
     }
@@ -73,15 +83,16 @@ public class Frag_Home extends Fragment {
 
     @Override
     public View onCreateView(final LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        LinearLayout layout = (LinearLayout) inflater.inflate(R.layout.frag_home, container, false);
+        final LinearLayout layout = (LinearLayout) inflater.inflate(R.layout.frag_home, container, false);
 
         ipm = new Ipm();
         String ip = ipm.getip();
         logm = new Logm();
         final String loginid = logm.getPlayerid();
-        ImageView about_n = (ImageView)layout.findViewById(R.id.about_n);
+        ImageView map_b = (ImageView)layout.findViewById(R.id.mapview);
         ImageView camera_b = (ImageView) layout.findViewById(R.id.cameraon_b);
         ImageView tuto = (ImageView)layout.findViewById(R.id.tutorial_b);
+        ImageView subway_b = (ImageView)layout.findViewById(R.id.subwayview);
         mRecyclerView = (RecyclerView) layout.findViewById(R.id.home_rev);
         answer = (EditText) layout.findViewById(R.id.Answer);
         submit = (Button) layout.findViewById(R.id.Submit);
@@ -89,17 +100,23 @@ public class Frag_Home extends Fragment {
         hello = (TextView)layout.findViewById(R.id.hello);
         home_main = (Home_Main)getActivity();
         no_quiz = (TextView)layout.findViewById(R.id.no_quiz);
+        handler = new Handler(Looper.getMainLooper());
 
         mRecyclerView.setHasFixedSize(true);
-        mLayoutManager = new LinearLayoutManager(getActivity());
-        mRecyclerView.setLayoutManager(mLayoutManager);  //레이아웃 매니저를 사용한다.
+        mLayoutManager = new LinearLayoutManager(getActivity()){
+            @Override
+            public boolean canScrollVertically(){
+                return false;
+            }
+        };
+      /*  mRecyclerView.setLayoutManager(mLayoutManager);  //레이아웃 매니저를 사용한다.
         myDataset = new ArrayList<>();
         mAdapter = new RecyclerAdapter(myDataset);
         mRecyclerView.setAdapter(mAdapter);       //어탭더 정의
         mRecyclerView.setNestedScrollingEnabled(false);
         mRecyclerView.setVisibility(View.VISIBLE);
         no_quiz.setVisibility(View.GONE);
-        myDataset.add(new MyData("ox","서울역","서울역", R.drawable.app_icon, "ㅇㅇㅇㅇ","ㅇㅇㅇㅇ",loginid,networkClient,getActivity(), "ㅇㅇㅇ", mRecyclerView));
+        myDataset.add(new MyData("ox","서울역","서울역", R.drawable.app_icon, "ㅇㅇㅇㅇ","ㅇㅇㅇㅇ",loginid,networkClient,getActivity(), "ㅇㅇㅇ", mRecyclerView));*/
 
         networkClient = NetworkClient.getInstance(ip);
         networkClient.getstartitem(loginid, new Callback<List<ItemDTO>>() {
@@ -111,14 +128,17 @@ public class Frag_Home extends Fragment {
                         Log.d("퀴즈", "어댑터 세팅");
                         inventories = response.body();
                         mRecyclerView.setHasFixedSize(true);
-                        mLayoutManager = new LinearLayoutManager(getActivity());
+                        mLayoutManager = new LinearLayoutManager(getActivity()){
+                            @Override
+                            public boolean canScrollVertically(){
+                                return false;
+                            }
+                        };                                                       //리사이클러뷰가 단독 아이템이기 때문에 스크롤링을 방지한다.
                         mRecyclerView.setLayoutManager(mLayoutManager);  //레이아웃 매니저를 사용한다.
                         myDataset = new ArrayList<>();
                         mAdapter = new RecyclerAdapter(myDataset);
                         mRecyclerView.setAdapter(mAdapter);       //어탭더 정의
                         mRecyclerView.setNestedScrollingEnabled(false);
-
-
 
                         methods = new Methods();
 
@@ -210,26 +230,32 @@ public class Frag_Home extends Fragment {
                 getActivity().startActivityForResult(intent,0);
             }
         });
-        about_n.setOnClickListener(new View.OnClickListener() {
+        map_b.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                AlertDialog.Builder alert = new AlertDialog.Builder(getContext());
-                alert.setPositiveButton("확인", new DialogInterface.OnClickListener() {
+                final Thread t = new Thread(new Runnable() {
                     @Override
-                    public void onClick(DialogInterface dialog, int which) {
-
-                        dialog.dismiss();     //닫기
+                    public void run() { // Thread 로 작업할 내용을 구현
+                        Looper.prepare();
+                        progressON();
+                        Log.d("쓰레드 시작","시작");
+                        handler.post(new Runnable() {
+                            @Override
+                            public void run() {
+                                Intent intent = new Intent(getActivity(),GooglemapsActivity.class);
+                                startActivity(intent);
+                            }
+                        });
+                        Looper.loop();
                     }
                 });
-                alert.setMessage(R.string.설명);
-                alert.show();
-
+                t.start(); // 쓰레드 시작i
             }
         });
         tuto.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getContext(), TutorialActivity.class);
+                Intent intent = new Intent(getActivity(), TutorialActivity.class);
                 startActivity(intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK));
                 getActivity().finish();
 
@@ -313,7 +339,5 @@ public class Frag_Home extends Fragment {
         }
 
     }
-
-
 
 }

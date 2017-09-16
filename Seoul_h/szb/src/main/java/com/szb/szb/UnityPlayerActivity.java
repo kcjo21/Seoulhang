@@ -1,6 +1,5 @@
 package com.szb.szb;
 
-import com.szb.szb.Home.managerpackage.QuestManager;
 import com.szb.szb.model.database.Quest;
 import com.szb.szb.model.retrofit.QuestDTO;
 import com.szb.szb.start_pack.loginpackage.LoginManager;
@@ -23,8 +22,6 @@ import retrofit2.Response;
 
 public class UnityPlayerActivity extends Activity
 {
-
-    QuestManager questmanager;
     protected UnityPlayer mUnityPlayer; // don't change the name of this variable; referenced from native code
 
     // Setup activity layout
@@ -41,12 +38,11 @@ public class UnityPlayerActivity extends Activity
     }
     public void onTouch(String ObjName){
         int region = Integer.parseInt(ObjName);
-        questmanager = QuestManager.getInstance();
         Bundle extras = getIntent().getExtras();
         String playerid=extras.getString("playerid");
 
         NetworkClient networkClient = NetworkClient.getInstance("http://192.168.129.129:5000");
-        networkClient.getregioncode(playerid, region, new Callback <QuestDTO>() {
+        networkClient.getquestioncode(playerid, region, new Callback <QuestDTO>() {
             @Override
             public void onResponse(Call<QuestDTO> call, Response<QuestDTO> response) {
                 switch (response.code()){
@@ -66,7 +62,6 @@ public class UnityPlayerActivity extends Activity
             }
         });
 
-        Log.e("TAG", "login???? : " + questmanager.toString());
         Log.e("HIHI: ",ObjName);
 
     }

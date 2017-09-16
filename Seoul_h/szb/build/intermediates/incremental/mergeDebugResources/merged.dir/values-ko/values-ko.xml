@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
+<resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2">
     <color name="BLUE">#0070c0</color>
     <color name="BRONZE">#b87333</color>
     <color name="Carkviewline">#dbdbdb</color>
@@ -17,6 +17,7 @@
     <color name="colorAccent">#FF4081</color>
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
+    <color name="light_blue">#3281fc</color>
     <color name="silver_a">#64171717</color>
     <dimen name="size">14dp</dimen>
     <string name="ARCam">ARCam</string>
@@ -30,6 +31,9 @@
     <string name="GPSMessage">이 게임은 GPS 위치 데이터를 필요로 합니다. GPS를 설정하시겠습니까?</string>
     <string name="GPSN">아니요</string>
     <string name="GPSY">예</string>
+    <string name="GPS퍼미션">지도를 사용하시려면 위치정보접근을 허가해야합니다.</string>
+    <string name="GPS퍼미션체크박스">지도를 사용하시려면 스마트폰 설정에서 위치정보접근을 허가해야합니다.</string>
+    <string name="GPS활성여부">GPS를 활성화했는지 확인해주십시오.</string>
     <string name="Loading">응답대기중...</string>
     <string name="Login">Login</string>
     <string name="Name">Name</string>
@@ -63,6 +67,23 @@
     <string name="checkEmail">형식에 맞지 않는 메일주소입니다.</string>
     <string name="checkplease">ID중복확인을 해주십시오.</string>
     <string name="close_drawer">close drawerclose drawerclose drawerclose drawerclose drawer</string>
+    <string msgid="8585111718777012708" name="common_google_play_services_enable_button">"사용 설정"</string>
+    <string msgid="7045129128108380659" name="common_google_play_services_enable_text">"Google Play 서비스를 사용하도록 설정해야 <ns1:g id="APP_NAME">%1$s</ns1:g>이(가) 작동합니다."</string>
+    <string msgid="3147157405986503375" name="common_google_play_services_enable_title">"Google Play 서비스 사용"</string>
+    <string msgid="9115728400623041681" name="common_google_play_services_install_button">"설치"</string>
+    <string msgid="8179894293032530091" name="common_google_play_services_install_text">"기기에 Google Play 서비스가 설치되어 있어야 <ns1:g id="APP_NAME">%1$s</ns1:g>이(가) 실행됩니다."</string>
+    <string msgid="7442193194585196676" name="common_google_play_services_install_title">"Google Play 서비스 설치"</string>
+    <string msgid="180394615667698242" name="common_google_play_services_notification_ticker">"Google Play 서비스 오류"</string>
+    <string msgid="2518680582564677258" name="common_google_play_services_unknown_issue">"<ns1:g id="APP_NAME">%1$s</ns1:g>에서 Google Play 서비스를 사용하는 데 문제가 있습니다. 다시 시도하세요."</string>
+    <string msgid="5501187292256987189" name="common_google_play_services_unsupported_text">"<ns1:g id="APP_NAME">%1$s</ns1:g>은(는) Google Play 서비스 없이는 실행되지 않으나, 기기에서 Google Play 서비스를 지원하지 않습니다."</string>
+    <string msgid="8172070149091615356" name="common_google_play_services_update_button">"업데이트"</string>
+    <string msgid="7773943415006962566" name="common_google_play_services_update_text">"Google Play 서비스를 업데이트해야 <ns1:g id="APP_NAME">%1$s</ns1:g>이(가) 실행됩니다."</string>
+    <string msgid="8706675115216073244" name="common_google_play_services_update_title">"Google Play 서비스 업데이트"</string>
+    <string msgid="7894275749778928941" name="common_google_play_services_updating_text">"현재 업데이트 중인 Google Play 서비스가 있어야 <ns1:g id="APP_NAME">%1$s</ns1:g>이(가) 실행됩니다."</string>
+    <string msgid="2804989272736383918" name="common_google_play_services_wear_update_text">"새 버전의 Google Play 서비스가 필요합니다. 곧 자동으로 업데이트됩니다."</string>
+    <string msgid="5201977337835724196" name="common_open_on_phone">"스마트폰에서 열기"</string>
+    <string msgid="3441753203274453993" name="common_signin_button_text">"로그인"</string>
+    <string msgid="669893613918351210" name="common_signin_button_text_long">"Google 계정으로 로그인"</string>
     <string name="email">E-mail</string>
     <string name="ghkrdls">확인</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
@@ -82,10 +103,12 @@
     <string name="side_코드번호">                코드번호 : %s</string>
     <string name="side_힌트수">                남은 힌트 수 : %s</string>
     <string msgid="2869576371154716097" name="status_bar_notification_info_overflow">"999+"</string>
+    <string name="경도">경도</string>
     <string name="골드">골드</string>
     <string name="남">남</string>
     <string name="남은힌트">힌트</string>
     <string name="내순위">내 순위</string>
+    <string name="내위치">내 위치</string>
     <string name="내정보설정">                내 정보수정</string>
     <string name="닉네임">닉네임</string>
     <string name="다이아몬드">다이아몬드</string>
@@ -98,6 +121,7 @@
     <string name="브론즈">브론즈</string>
     <string name="비밀번호">비밀번호</string>
     <string name="비밀번호변경">비밀번호 변경하기</string>
+    <string name="비밀번호변경비밀번호">비밀번호 변경을 위해 기존 비밀번호를 입력해주세요.</string>
     <string name="비밀번호변경완료">성공적으로 비밀번호를 변경하였습니다!</string>
     <string name="비밀번호일치">비밀번호가 일치하지 않습니다.</string>
     <string name="비밀번호입력">비밀번호를 입력하세요.</string>
@@ -114,12 +138,16 @@
     <string name="실버">실버</string>
     <string name="아이디찾기">아이디 찾기</string>
     <string name="아이디찾을수없음">일치하는 아이디가 없습니다.</string>
+    <string name="알림">알림</string>
     <string name="여">여</string>
     <string name="연락처">연락처</string>
     <string name="오답">오답입니다!</string>
+    <string name="위도">위도</string>
+    <string name="위치정보불가">위치정보 가져올 수 없음.</string>
     <string name="이름">이름</string>
     <string name="이미가지고있는문제">이미 가지고 있는 문제 입니다.</string>
     <string name="인증번호">인증번호</string>
+    <string name="잘못된GPS">잘못된 GPS좌표</string>
     <string name="점수">점수</string>
     <string name="점수_0">0점</string>
     <string name="점수_10">10점</string>
@@ -133,8 +161,10 @@
     <string name="정답이다">정답입니다!</string>
     <string name="정보수정">내 정보수정</string>
     <string name="정보수정질문">정보를 수정하시겠습니까?</string>
+    <string name="주소미발견">주소를 발견하지 못했습니다.</string>
     <string name="중복확인">중복확인</string>
     <string name="지역별달성률">지역별 정보 및 달성률</string>
+    <string name="지오코더">지오코딩 서비스 사용불가.</string>
     <string name="챌린저">챌린저</string>
     <string name="초보자">초보자</string>
     <string name="최근문제">최근 문제</string>
@@ -161,7 +191,7 @@
     </string>
     <string name="힌트없음">남은 힌트가 없습니다!</string>
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-        <!-- Customize your theme here. -->
+        
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>

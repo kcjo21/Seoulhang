@@ -74,7 +74,7 @@ public class Frag_Quiz extends Fragment {
         networkClient = NetworkClient.getInstance(ip);
         Log.e("ACC", "TEAM id IS !!! frag quiz" + loginid);
 
-        mRecyclerView.setHasFixedSize(true);
+       /* mRecyclerView.setHasFixedSize(true);
         mLayoutManager = new LinearLayoutManager(getActivity());
         mRecyclerView.setLayoutManager(mLayoutManager);  //레이아웃 매니저를 사용한다.
         myDataset = new ArrayList<>();
@@ -82,7 +82,7 @@ public class Frag_Quiz extends Fragment {
         mRecyclerView.setAdapter(mAdapter);       //어탭더 정의
 
         myDataset.add(new MyData("1","23","11", R.drawable.app_icon, "123","123","1234",networkClient,getActivity(), "1234", mRecyclerView));
-        noquiz.setVisibility(View.GONE);
+        noquiz.setVisibility(View.GONE);*/
 
 
 
@@ -106,6 +106,7 @@ public class Frag_Quiz extends Fragment {
                         noquiz.setVisibility(View.VISIBLE); //만약 풀 수 있는 문제가 없다면 "문제가 없습니다" 텍스트를 띄워준다.
                         else
                             noquiz.setVisibility(View.GONE);
+
                         methods = new Methods();
 
                         for (int i = 1; i < inventories.size(); i++) {
@@ -123,6 +124,7 @@ public class Frag_Quiz extends Fragment {
                             Log.d("퀴즈번호", "" + itemDTO.getQuestioncode());
                             Log.d("퀴즈지역", "" + itemDTO.getRegionname());
                             Log.d("퀴즈", itemDTO.getQuestion());
+                            Log.d("퀴즈타입",itemDTO.getquestiontype());
                             onResume();
 
                         }

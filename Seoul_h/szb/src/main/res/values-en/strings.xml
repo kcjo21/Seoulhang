@@ -119,4 +119,16 @@
     <string name="정보수정">Edit Profile</string>
     <string name="비밀번호변경">I want to Change my Password.</string>
     <string name="비밀번호변경완료">Password changed Successfully!</string>
+    <string name="비밀번호변경비밀번호">Please enter current password to change password.</string>
+    <string name="위도">Latitude</string>
+    <string name="경도">Longitude</string>
+    <string name="내위치">My location</string>
+    <string name="지오코더">Unable to use Geocoding service.</string>
+    <string name="잘못된GPS">Wrong GPS coordinates.</string>
+    <string name="주소미발견">No address found.</string>
+    <string name="위치정보불가">Unable to get location information.</string>
+    <string name="GPS활성여부">Check whether GPS is activated.</string>
+    <string name="GPS퍼미션체크박스">To use the map, you must permit accessing location information in your smartphone setting</string>
+    <string name="GPS퍼미션">Access to location information must be granted to use the map.</string>
+    <string name="알림">Alert</string>
 </resources>

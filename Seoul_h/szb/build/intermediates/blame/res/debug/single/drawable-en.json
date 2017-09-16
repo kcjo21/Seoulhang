@@ -8,8 +8,16 @@
         "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\src\\main\\res\\drawable-en\\answer_button_selector.xml"
     },
     {
+        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\build\\intermediates\\res\\merged\\debug\\drawable-en\\selector_subway.xml",
+        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\src\\main\\res\\drawable-en\\selector_subway.xml"
+    },
+    {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\build\\intermediates\\res\\merged\\debug\\drawable-en\\selector_camera.xml",
         "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\src\\main\\res\\drawable-en\\selector_camera.xml"
+    },
+    {
+        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\build\\intermediates\\res\\merged\\debug\\drawable-en\\selector_map_image.xml",
+        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\src\\main\\res\\drawable-en\\selector_map_image.xml"
     },
     {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\build\\intermediates\\res\\merged\\debug\\drawable-en\\selector_indicator.xml",
@@ -36,6 +44,14 @@
         "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\src\\main\\res\\drawable-en\\hint_button_selector.xml"
     },
     {
+        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\build\\intermediates\\res\\merged\\debug\\drawable-en\\run.xml",
+        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\src\\main\\res\\drawable-en\\run.xml"
+    },
+    {
+        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\build\\intermediates\\res\\merged\\debug\\drawable-en\\setting_back_xm.xml",
+        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\src\\main\\res\\drawable-en\\setting_back_xm.xml"
+    },
+    {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\build\\intermediates\\res\\merged\\debug\\drawable-en\\side_grade_selector.xml",
         "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\src\\main\\res\\drawable-en\\side_grade_selector.xml"
     },
@@ -46,10 +62,6 @@
     {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\build\\intermediates\\res\\merged\\debug\\drawable-en\\button_on_off.xml",
         "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\src\\main\\res\\drawable-en\\button_on_off.xml"
-    },
-    {
-        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\build\\intermediates\\res\\merged\\debug\\drawable-en\\selector_about.xml",
-        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\src\\main\\res\\drawable-en\\selector_about.xml"
     },
     {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\build\\intermediates\\res\\merged\\debug\\drawable-en\\button_e.xml",

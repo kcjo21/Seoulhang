@@ -28,13 +28,15 @@
             android:elevation="0dp"
             android:outlineProvider="background"
             card:cardBackgroundColor="@color/Green00cc66"
-            card:cardCornerRadius="10dp">
+            card:cardCornerRadius="10dp"
+            tools:ignore="InefficientWeight,ObsoleteLayoutParam,RtlHardcoded">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="horizontal"
-                android:weightSum="100">
+                android:weightSum="100"
+                tools:ignore="DisableBaselineAlignment">
 
                 <LinearLayout
                     android:layout_width="0dp"
@@ -48,7 +50,8 @@
                         android:layout_height="0dp"
                         android:layout_weight="30"
                         android:orientation="horizontal"
-                        android:weightSum="100">
+                        android:weightSum="100"
+                        tools:ignore="NestedWeights">
 
                         <TextView
                             android:id="@+id/quiz_num"
@@ -57,11 +60,11 @@
                             android:layout_weight="30"
                             android:background="@drawable/border_tap"
                             android:gravity="center_vertical|center_horizontal"
-                            android:text="TextView"
                             android:textAlignment="center"
                             android:textColor="@android:color/black"
-                            android:textSize="18dp"
-                            android:textStyle="bold|italic" />
+                            android:textSize="14dp"
+                            android:textStyle="bold|italic"
+                            tools:ignore="HardcodedText,SpUsage" />
 
                         <TextView
                             android:id="@+id/quiz_region"
@@ -70,9 +73,9 @@
                             android:layout_weight="70"
                             android:background="@drawable/border_tap"
                             android:gravity="center_vertical|center_horizontal"
-                            android:text="TextView"
                             android:textColor="@android:color/black"
-                            android:textSize="18dp" />
+                            android:textSize="16dp"
+                            tools:ignore="HardcodedText,SpUsage" />
 
                     </LinearLayout>
 
@@ -82,7 +85,8 @@
                         android:layout_height="0dp"
                         android:layout_weight="70"
                         android:background="@drawable/border_tap"
-                        card:srcCompat="@drawable/app_icon" />
+                        card:srcCompat="@drawable/app_icon"
+                        tools:ignore="ContentDescription" />
 
                 </LinearLayout>
 
@@ -98,7 +102,8 @@
                         android:layout_height="0dp"
                         android:layout_weight="80"
                         android:orientation="vertical"
-                        android:weightSum="100">
+                        android:weightSum="100"
+                        tools:ignore="NestedWeights">
 
                         <TextView
                             android:id="@+id/quiz"
@@ -108,11 +113,11 @@
                             android:background="@drawable/border_tap"
                             android:gravity="left|center_vertical"
                             android:scrollbars="vertical"
-                            android:text="TextView"
                             android:textAlignment="center"
                             android:textColor="@android:color/black"
                             android:textSize="20dp"
-                            android:textStyle="bold" />
+                            android:textStyle="bold"
+                            tools:ignore="HardcodedText,SpUsage" />
 
                         <LinearLayout
                             android:id="@+id/hint_lay"
@@ -130,7 +135,8 @@
                                 android:layout_weight="30"
                                 android:background="@drawable/hint_button_selector"
                                 android:foregroundGravity="right"
-                                android:textSize="10dp" />
+                                android:textSize="10dp"
+                                tools:ignore="SpUsage" />
 
                             <TextView
                                 android:id="@+id/hint_text"
@@ -139,7 +145,8 @@
                                 android:layout_weight="100"
                                 android:scrollbars="vertical"
                                 android:textSize="14dp"
-                                android:visibility="gone" />
+                                android:visibility="gone"
+                                tools:ignore="SpUsage" />
 
                         </LinearLayout>
 
@@ -193,7 +200,8 @@
                             android:hint="@string/정답을입력하세요"
                             android:inputType="textPersonName"
                             android:textColor="@android:color/black"
-                            android:textSize="16dp" />
+                            android:textSize="16dp"
+                            tools:ignore="SpUsage" />
 
                         <Button
                             android:id="@+id/Submit"
@@ -201,7 +209,8 @@
                             android:layout_height="match_parent"
                             android:layout_weight="25"
                             android:background="@drawable/answer_button_selector"
-                            android:textSize="16dp" />
+                            android:textSize="16dp"
+                            tools:ignore="SpUsage" />
                     </LinearLayout>
 
                 </LinearLayout>

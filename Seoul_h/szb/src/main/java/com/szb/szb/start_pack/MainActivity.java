@@ -79,6 +79,8 @@ public class MainActivity extends BaseActivity {
 
 
 
+
+
         join.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -118,6 +120,10 @@ public class MainActivity extends BaseActivity {
                 networkClient = NetworkClient.getInstance(ip);
                 Log.e("ACC","TEAM id IS !!! "+ loginid);
                // progressON(getResources().getString(R.string.Loading)); //응답대기 애니메이션
+
+                Intent intent = new Intent(MainActivity.this,Home_Main.class);
+                startActivity(intent);
+                finish();
 
 
                  networkClient.login(loginid,loginpass,new Callback<PlayerDTO>() {

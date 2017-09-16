@@ -57,8 +57,8 @@ public class NetworkClient {
         call.enqueue(cb);
     }
 
-    public void getregioncode(String player, int region, Callback<QuestDTO> callback){
-        Call <QuestDTO> call = service.getregioncode(player,region);
+    public void getquestioncode(String player, int questioncode, Callback<QuestDTO> callback){
+        Call <QuestDTO> call = service.getquestioncode(player,questioncode);
         call.enqueue(callback);
     }
     public void getstartitem(String player, Callback<List<ItemDTO>> callback){

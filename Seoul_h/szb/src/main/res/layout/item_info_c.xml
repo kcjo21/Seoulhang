@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginBottom="2dp"
@@ -19,7 +20,8 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="horizontal"
-            android:weightSum="100">
+            android:weightSum="100"
+            tools:ignore="UselessParent">
 
             <TextView
                 android:id="@+id/progress"
@@ -27,7 +29,8 @@
                 android:layout_height="match_parent"
                 android:layout_weight="20"
                 android:gravity="center_vertical|center_horizontal"
-                android:textSize="@dimen/size" />
+                android:textSize="@dimen/size"
+                tools:ignore="SpUsage" />
 
             <ProgressBar
                 android:id="@+id/progressBar"
@@ -60,7 +63,8 @@
             android:maxHeight="50dp"
             android:maxWidth="50dp"
             android:scaleType="fitXY"
-            app:srcCompat="@drawable/new_one" />
+            app:srcCompat="@drawable/new_one"
+            tools:ignore="ContentDescription,NestedWeights" />
 
         <TextView
             android:id="@+id/content"
@@ -69,8 +73,8 @@
             android:layout_weight="80"
             android:gravity="center_vertical"
             android:scrollbars="vertical"
-            android:text="지역설명데스네"
-            android:textSize="14dp" />
+            android:textSize="14dp"
+            tools:ignore="SpUsage" />
 
     </LinearLayout>
 

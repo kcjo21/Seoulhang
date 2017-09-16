@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidManifest.xml:2:1-130:12
+ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidManifest.xml:2:1-139:12
 	package
 		ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidManifest.xml:4:5-26
 		INJECTED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidManifest.xml
@@ -23,25 +23,30 @@ ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidMa
 		ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidManifest.xml:6:5-52
 uses-sdk
 ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidManifest.xml:10:5-12:41
-MERGED from [io.realm:realm-android-library:3.0.0] C:\Users\cwh62\.android\build-cache\55a41cbdf3532acaf299a0743be98c8a800c6642\output\AndroidManifest.xml:7:5-9:41
-MERGED from [com.getkeepsafe.relinker:relinker:1.2.2] C:\Users\cwh62\.android\build-cache\2fcbe5ccd3493eea0e283fdcd807cde14a344c95\output\AndroidManifest.xml:7:5-43
-MERGED from [Seoul_h:trafficsubway-release:unspecified] C:\Users\cwh62\.android\build-cache\5e425191267ceac4ae32a2f5caa4cfbf17231d10\output\AndroidManifest.xml:7:5-9:41
-MERGED from [com.android.support:design:25.3.1] C:\Users\cwh62\.android\build-cache\a964cb925b13ae3f74c511d2e1b4ff26decb84fd\output\AndroidManifest.xml:21:5-23:62
-MERGED from [com.android.support:appcompat-v7:25.3.1] C:\Users\cwh62\.android\build-cache\30535fa162e5037dde8eb4764dd9444ceb4c5dcb\output\AndroidManifest.xml:21:5-23:78
-MERGED from [com.android.support:animated-vector-drawable:25.3.1] C:\Users\cwh62\.android\build-cache\08f4c98575faa3083ae31858b35b3d18e95c1281\output\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-vector-drawable:25.3.1] C:\Users\cwh62\.android\build-cache\a48e7699ca11df536298bad207f9985e41bfc9a3\output\AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:recyclerview-v7:25.3.1] C:\Users\cwh62\.android\build-cache\620dd19f5302e83319d10d41c7e861c105d1a552\output\AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:transition:25.3.1] C:\Users\cwh62\.android\build-cache\e7bcabd91e9be61776ee6deeabf4ad00431d94af\output\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\cwh62\.android\build-cache\92a634b20d35602afc0ada097e7692296e7be743\output\AndroidManifest.xml:5:5-7:41
-MERGED from [com.android.support:support-v4:25.3.1] C:\Users\cwh62\.android\build-cache\dfab0000857022765f882ad82a134060c2884a48\output\AndroidManifest.xml:21:5-23:54
-MERGED from [com.android.support:support-fragment:25.3.1] C:\Users\cwh62\.android\build-cache\7fb3f389d2d4782f1a1134380f2a2502f9cd1765\output\AndroidManifest.xml:21:5-23:60
-MERGED from [com.android.support:support-media-compat:25.3.1] C:\Users\cwh62\.android\build-cache\b9560e3b4bf3533e28f738623f79da5b0b01082b\output\AndroidManifest.xml:21:5-23:63
-MERGED from [com.android.support:support-core-ui:25.3.1] C:\Users\cwh62\.android\build-cache\d9b18fef48fd5e82485a5bbd07f75dd4035b33c6\output\AndroidManifest.xml:21:5-23:58
-MERGED from [com.android.support:support-core-utils:25.3.1] C:\Users\cwh62\.android\build-cache\9fa7b88af7d84200db8964cce88dad8c4597effe\output\AndroidManifest.xml:21:5-23:61
-MERGED from [com.android.support:support-compat:25.3.1] C:\Users\cwh62\.android\build-cache\c9f768e2bd6665db786fd41d3cfede66f8412605\output\AndroidManifest.xml:21:5-23:58
-MERGED from [com.android.support:cardview-v7:25.3.1] C:\Users\cwh62\.android\build-cache\67c30f7284b44b6da70ab0049e19bc44c1f97d73\output\AndroidManifest.xml:20:5-43
+MERGED from [io.realm:realm-android-library:3.0.0] C:\Users\cwh62\.android\build-cache\3ac2a6014ae26ebe04c93407509e6c8f2c83993f\output\AndroidManifest.xml:7:5-9:41
+MERGED from [com.getkeepsafe.relinker:relinker:1.2.2] C:\Users\cwh62\.android\build-cache\6f90aee766ce2a17e0fd09c53dd9be66029aed65\output\AndroidManifest.xml:7:5-43
+MERGED from [Seoul_h:trafficsubway-release:unspecified] C:\Users\cwh62\.android\build-cache\6b9e2a149949f92f777fbd1da03ab97e95934703\output\AndroidManifest.xml:7:5-9:41
+MERGED from [com.android.support:design:25.3.1] C:\Users\cwh62\.android\build-cache\2296c6d153ca9492798042173aaf4756857c6a9d\output\AndroidManifest.xml:21:5-23:62
+MERGED from [com.android.support:appcompat-v7:25.3.1] C:\Users\cwh62\.android\build-cache\1860e7502bea0f552aaa4935120bb2accced6b21\output\AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] C:\Users\cwh62\.android\build-cache\6730870617d47df13bc774a65c1c86c27dbc12ef\output\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:25.3.1] C:\Users\cwh62\.android\build-cache\dbe9f5decf0814ca3112de9fa169c05a9ef17fa4\output\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:recyclerview-v7:25.3.1] C:\Users\cwh62\.android\build-cache\16b76ed60be6d6f5795aaad4ab9dc6f5c5e1e53e\output\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:transition:25.3.1] C:\Users\cwh62\.android\build-cache\815ab4dd66c21aac42d85b21215193d8e173701d\output\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\cwh62\.android\build-cache\b7c5330fea9791c5f26caa3071204c7cfbd8be12\output\AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support:cardview-v7:25.3.1] C:\Users\cwh62\.android\build-cache\c0bf160209d4ce27bf1475b9cbf60b683a589dd2\output\AndroidManifest.xml:20:5-43
+MERGED from [com.google.android.gms:play-services-maps:10.2.4] C:\Users\cwh62\.android\build-cache\3dd3a9408507d1f2b289758bedbc8b76894d648a\output\AndroidManifest.xml:23:5-43
+MERGED from [com.google.android.gms:play-services-location:10.2.4] C:\Users\cwh62\.android\build-cache\4b00c91a62c6a8a3e0c6277c6a2dd0483f4b900f\output\AndroidManifest.xml:3:5-43
+MERGED from [com.google.android.gms:play-services-base:10.2.4] C:\Users\cwh62\.android\build-cache\011d84d88a3c829fa6eca95b347476b1121ff788\output\AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-tasks:10.2.4] C:\Users\cwh62\.android\build-cache\234b3fffa5eb48c36a5f371191f95e3772ac0eb1\output\AndroidManifest.xml:3:5-43
+MERGED from [com.google.android.gms:play-services-basement:10.2.4] C:\Users\cwh62\.android\build-cache\169efff17ebdd0f5d85154e1815d67d3320ef059\output\AndroidManifest.xml:17:5-43
+MERGED from [com.android.support:support-v4:25.3.1] C:\Users\cwh62\.android\build-cache\1d58b0c142dde6ca5bd4caefcebf2aaf6f59b020\output\AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-fragment:25.3.1] C:\Users\cwh62\.android\build-cache\346844434def2bfd53b8da18edeb8e5aacd81a1e\output\AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-media-compat:25.3.1] C:\Users\cwh62\.android\build-cache\d53f974551acc596e7d98a5e0edb8ccff702bcd9\output\AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-core-ui:25.3.1] C:\Users\cwh62\.android\build-cache\352ba410ff20b1da33fee40f4ed9f097802381a9\output\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-utils:25.3.1] C:\Users\cwh62\.android\build-cache\584142e303a6d9c843b10f8e894ff496a2a1f28e\output\AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-compat:25.3.1] C:\Users\cwh62\.android\build-cache\d5590ca820c5f03173184f0eb2e60a0a73a2609c\output\AndroidManifest.xml:21:5-23:58
 	tools:overrideLibrary
-		ADDED from [com.android.support:design:25.3.1] C:\Users\cwh62\.android\build-cache\a964cb925b13ae3f74c511d2e1b4ff26decb84fd\output\AndroidManifest.xml:23:9-59
+		ADDED from [com.android.support:design:25.3.1] C:\Users\cwh62\.android\build-cache\2296c6d153ca9492798042173aaf4756857c6a9d\output\AndroidManifest.xml:23:9-59
 	android:targetSdkVersion
 		ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidManifest.xml:12:9-38
 		INJECTED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidManifest.xml
@@ -62,8 +67,11 @@ ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidMa
 		ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidManifest.xml:15:9-34
 uses-feature#0x00020000
 ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidManifest.xml:21:5-54
+MERGED from [com.google.android.gms:play-services-maps:10.2.4] C:\Users\cwh62\.android\build-cache\3dd3a9408507d1f2b289758bedbc8b76894d648a\output\AndroidManifest.xml:21:5-77
 	android:glEsVersion
 		ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidManifest.xml:21:19-51
+	android:required
+		ADDED from [com.google.android.gms:play-services-maps:10.2.4] C:\Users\cwh62\.android\build-cache\3dd3a9408507d1f2b289758bedbc8b76894d648a\output\AndroidManifest.xml:21:52-75
 uses-feature#android.hardware.vulkan
 ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidManifest.xml:22:5-24:36
 	android:required
@@ -72,7 +80,8 @@ ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidMa
 		ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidManifest.xml:23:9-47
 uses-permission#android.permission.INTERNET
 ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidManifest.xml:26:5-67
-MERGED from [Seoul_h:trafficsubway-release:unspecified] C:\Users\cwh62\.android\build-cache\5e425191267ceac4ae32a2f5caa4cfbf17231d10\output\AndroidManifest.xml:11:5-67
+MERGED from [Seoul_h:trafficsubway-release:unspecified] C:\Users\cwh62\.android\build-cache\6b9e2a149949f92f777fbd1da03ab97e95934703\output\AndroidManifest.xml:11:5-67
+MERGED from [com.google.android.gms:play-services-maps:10.2.4] C:\Users\cwh62\.android\build-cache\3dd3a9408507d1f2b289758bedbc8b76894d648a\output\AndroidManifest.xml:20:5-66
 	android:name
 		ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidManifest.xml:26:22-64
 uses-permission#android.permission.ACCESS_FINE_LOCATION
@@ -148,196 +157,231 @@ ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidMa
 	android:name
 		ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidManifest.xml:60:22-77
 application
-ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidManifest.xml:62:5-128:19
-MERGED from [Seoul_h:trafficsubway-release:unspecified] C:\Users\cwh62\.android\build-cache\5e425191267ceac4ae32a2f5caa4cfbf17231d10\output\AndroidManifest.xml:13:5-30:19
-MERGED from [com.android.support:design:25.3.1] C:\Users\cwh62\.android\build-cache\a964cb925b13ae3f74c511d2e1b4ff26decb84fd\output\AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:appcompat-v7:25.3.1] C:\Users\cwh62\.android\build-cache\30535fa162e5037dde8eb4764dd9444ceb4c5dcb\output\AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:animated-vector-drawable:25.3.1] C:\Users\cwh62\.android\build-cache\08f4c98575faa3083ae31858b35b3d18e95c1281\output\AndroidManifest.xml:26:5-20
-MERGED from [com.android.support:support-vector-drawable:25.3.1] C:\Users\cwh62\.android\build-cache\a48e7699ca11df536298bad207f9985e41bfc9a3\output\AndroidManifest.xml:26:5-20
-MERGED from [com.android.support:transition:25.3.1] C:\Users\cwh62\.android\build-cache\e7bcabd91e9be61776ee6deeabf4ad00431d94af\output\AndroidManifest.xml:26:5-20
-MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\cwh62\.android\build-cache\92a634b20d35602afc0ada097e7692296e7be743\output\AndroidManifest.xml:9:5-20
-MERGED from [com.android.support:support-v4:25.3.1] C:\Users\cwh62\.android\build-cache\dfab0000857022765f882ad82a134060c2884a48\output\AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:support-fragment:25.3.1] C:\Users\cwh62\.android\build-cache\7fb3f389d2d4782f1a1134380f2a2502f9cd1765\output\AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:support-media-compat:25.3.1] C:\Users\cwh62\.android\build-cache\b9560e3b4bf3533e28f738623f79da5b0b01082b\output\AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:support-core-ui:25.3.1] C:\Users\cwh62\.android\build-cache\d9b18fef48fd5e82485a5bbd07f75dd4035b33c6\output\AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:support-core-utils:25.3.1] C:\Users\cwh62\.android\build-cache\9fa7b88af7d84200db8964cce88dad8c4597effe\output\AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:support-compat:25.3.1] C:\Users\cwh62\.android\build-cache\c9f768e2bd6665db786fd41d3cfede66f8412605\output\AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:cardview-v7:25.3.1] C:\Users\cwh62\.android\build-cache\67c30f7284b44b6da70ab0049e19bc44c1f97d73\output\AndroidManifest.xml:26:5-20
+ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidManifest.xml:63:5-137:19
+MERGED from [Seoul_h:trafficsubway-release:unspecified] C:\Users\cwh62\.android\build-cache\6b9e2a149949f92f777fbd1da03ab97e95934703\output\AndroidManifest.xml:13:5-30:19
+MERGED from [com.android.support:design:25.3.1] C:\Users\cwh62\.android\build-cache\2296c6d153ca9492798042173aaf4756857c6a9d\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:appcompat-v7:25.3.1] C:\Users\cwh62\.android\build-cache\1860e7502bea0f552aaa4935120bb2accced6b21\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] C:\Users\cwh62\.android\build-cache\6730870617d47df13bc774a65c1c86c27dbc12ef\output\AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:support-vector-drawable:25.3.1] C:\Users\cwh62\.android\build-cache\dbe9f5decf0814ca3112de9fa169c05a9ef17fa4\output\AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:transition:25.3.1] C:\Users\cwh62\.android\build-cache\815ab4dd66c21aac42d85b21215193d8e173701d\output\AndroidManifest.xml:26:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\cwh62\.android\build-cache\b7c5330fea9791c5f26caa3071204c7cfbd8be12\output\AndroidManifest.xml:9:5-20
+MERGED from [com.android.support:cardview-v7:25.3.1] C:\Users\cwh62\.android\build-cache\c0bf160209d4ce27bf1475b9cbf60b683a589dd2\output\AndroidManifest.xml:26:5-20
+MERGED from [com.google.android.gms:play-services-maps:10.2.4] C:\Users\cwh62\.android\build-cache\3dd3a9408507d1f2b289758bedbc8b76894d648a\output\AndroidManifest.xml:24:5-19
+MERGED from [com.google.android.gms:play-services-location:10.2.4] C:\Users\cwh62\.android\build-cache\4b00c91a62c6a8a3e0c6277c6a2dd0483f4b900f\output\AndroidManifest.xml:4:5-19
+MERGED from [com.google.android.gms:play-services-base:10.2.4] C:\Users\cwh62\.android\build-cache\011d84d88a3c829fa6eca95b347476b1121ff788\output\AndroidManifest.xml:18:5-20:19
+MERGED from [com.google.android.gms:play-services-tasks:10.2.4] C:\Users\cwh62\.android\build-cache\234b3fffa5eb48c36a5f371191f95e3772ac0eb1\output\AndroidManifest.xml:4:5-19
+MERGED from [com.google.android.gms:play-services-basement:10.2.4] C:\Users\cwh62\.android\build-cache\169efff17ebdd0f5d85154e1815d67d3320ef059\output\AndroidManifest.xml:19:5-21:19
+MERGED from [com.android.support:support-v4:25.3.1] C:\Users\cwh62\.android\build-cache\1d58b0c142dde6ca5bd4caefcebf2aaf6f59b020\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-fragment:25.3.1] C:\Users\cwh62\.android\build-cache\346844434def2bfd53b8da18edeb8e5aacd81a1e\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-media-compat:25.3.1] C:\Users\cwh62\.android\build-cache\d53f974551acc596e7d98a5e0edb8ccff702bcd9\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-ui:25.3.1] C:\Users\cwh62\.android\build-cache\352ba410ff20b1da33fee40f4ed9f097802381a9\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-utils:25.3.1] C:\Users\cwh62\.android\build-cache\584142e303a6d9c843b10f8e894ff496a2a1f28e\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-compat:25.3.1] C:\Users\cwh62\.android\build-cache\d5590ca820c5f03173184f0eb2e60a0a73a2609c\output\AndroidManifest.xml:29:5-20
 	android:label
-		ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidManifest.xml:67:9-41
+		ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidManifest.xml:68:9-41
 	android:supportsRtl
-		ADDED from [Seoul_h:trafficsubway-release:unspecified] C:\Users\cwh62\.android\build-cache\5e425191267ceac4ae32a2f5caa4cfbf17231d10\output\AndroidManifest.xml:16:9-35
+		ADDED from [Seoul_h:trafficsubway-release:unspecified] C:\Users\cwh62\.android\build-cache\6b9e2a149949f92f777fbd1da03ab97e95934703\output\AndroidManifest.xml:16:9-35
 	android:icon
-		ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidManifest.xml:65:9-42
+		ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidManifest.xml:66:9-42
 	android:allowBackup
-		ADDED from [Seoul_h:trafficsubway-release:unspecified] C:\Users\cwh62\.android\build-cache\5e425191267ceac4ae32a2f5caa4cfbf17231d10\output\AndroidManifest.xml:14:9-35
+		ADDED from [Seoul_h:trafficsubway-release:unspecified] C:\Users\cwh62\.android\build-cache\6b9e2a149949f92f777fbd1da03ab97e95934703\output\AndroidManifest.xml:14:9-35
 	android:banner
-		ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidManifest.xml:64:9-46
+		ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidManifest.xml:65:9-46
 	android:theme
-		ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidManifest.xml:68:9-67
+		ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidManifest.xml:69:9-67
 	android:isGame
-		ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidManifest.xml:66:9-30
+		ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidManifest.xml:67:9-30
 	android:name
-		ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidManifest.xml:63:9-34
+		ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidManifest.xml:64:9-34
 activity#com.szb.szb.UnityPlayerActivity
-ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidManifest.xml:69:9-81:20
+ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidManifest.xml:71:9-83:20
 	android:screenOrientation
-		ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidManifest.xml:74:13-49
+		ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidManifest.xml:76:13-49
 	android:label
-		ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidManifest.xml:72:13-45
+		ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidManifest.xml:74:13-45
 	android:launchMode
-		ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidManifest.xml:73:13-44
+		ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidManifest.xml:75:13-44
 	android:configChanges
-		ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidManifest.xml:71:13-186
+		ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidManifest.xml:73:13-186
 	android:name
-		ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidManifest.xml:70:13-48
+		ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidManifest.xml:72:13-48
 meta-data#unityplayer.UnityActivity
-ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidManifest.xml:75:13-77:40
+ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidManifest.xml:77:13-79:40
 	android:value
-		ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidManifest.xml:77:17-37
+		ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidManifest.xml:79:17-37
 	android:name
-		ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidManifest.xml:76:17-57
+		ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidManifest.xml:78:17-57
 meta-data#unityplayer.ForwardNativeEventsToDalvik
-ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidManifest.xml:78:13-80:41
+ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidManifest.xml:80:13-82:41
 	android:value
-		ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidManifest.xml:80:17-38
+		ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidManifest.xml:82:17-38
 	android:name
-		ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidManifest.xml:79:17-71
+		ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidManifest.xml:81:17-71
 activity#com.szb.szb.GameActivity
-ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidManifest.xml:82:9-86:72
+ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidManifest.xml:84:9-88:72
 	android:process
-		ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidManifest.xml:85:13-43
+		ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidManifest.xml:87:13-43
 	android:launchMode
-		ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidManifest.xml:84:13-44
+		ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidManifest.xml:86:13-44
 	android:theme
-		ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidManifest.xml:86:13-69
+		ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidManifest.xml:88:13-69
 	android:name
-		ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidManifest.xml:83:13-41
+		ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidManifest.xml:85:13-41
 activity#com.szb.szb.Home.Home_Main
-ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidManifest.xml:87:9-91:67
+ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidManifest.xml:89:9-93:67
 	android:windowSoftInputMode
-		ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidManifest.xml:91:13-64
+		ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidManifest.xml:93:13-64
 	android:configChanges
-		ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidManifest.xml:89:13-57
+		ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidManifest.xml:91:13-57
 	android:theme
-		ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidManifest.xml:90:13-69
+		ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidManifest.xml:92:13-69
 	android:name
-		ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidManifest.xml:88:13-43
+		ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidManifest.xml:90:13-43
 activity#com.szb.szb.start_pack.MainActivity
-ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidManifest.xml:92:9-94:72
+ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidManifest.xml:94:9-96:72
 	android:theme
-		ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidManifest.xml:94:13-69
+		ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidManifest.xml:96:13-69
 	android:name
-		ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidManifest.xml:93:13-52
+		ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidManifest.xml:95:13-52
 activity#com.szb.szb.start_pack.SplashActivity
-ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidManifest.xml:95:9-103:20
+ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidManifest.xml:97:9-105:20
 	android:theme
-		ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidManifest.xml:97:13-69
+		ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidManifest.xml:99:13-69
 	android:name
-		ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidManifest.xml:96:13-54
+		ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidManifest.xml:98:13-54
 intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
-ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidManifest.xml:98:13-102:29
+ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidManifest.xml:100:13-104:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidManifest.xml:99:17-69
+ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidManifest.xml:101:17-69
 	android:name
-		ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidManifest.xml:99:25-66
+		ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidManifest.xml:101:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidManifest.xml:101:17-77
+ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidManifest.xml:103:17-77
 	android:name
-		ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidManifest.xml:101:27-74
+		ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidManifest.xml:103:27-74
 activity#com.szb.szb.start_pack.TutorialActivity
-ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidManifest.xml:104:9-106:72
+ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidManifest.xml:106:9-108:72
 	android:theme
-		ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidManifest.xml:106:13-69
+		ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidManifest.xml:108:13-69
 	android:name
-		ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidManifest.xml:105:13-56
+		ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidManifest.xml:107:13-56
 activity#com.szb.szb.start_pack.SettingActivity
-ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidManifest.xml:107:9-109:72
-	android:theme
-		ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidManifest.xml:109:13-69
-	android:name
-		ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidManifest.xml:108:13-55
-activity#com.szb.szb.start_pack.registerpack.JoinActivity
-ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidManifest.xml:110:9-111:71
+ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidManifest.xml:109:9-111:72
 	android:theme
 		ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidManifest.xml:111:13-69
 	android:name
-		ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidManifest.xml:110:19-71
-activity#com.szb.szb.Home.frag.Frag_Map
-ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidManifest.xml:112:9-56
-	android:name
-		ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidManifest.xml:112:19-53
-activity#com.szb.szb.start_pack.registerpack.FindIdActivity
-ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidManifest.xml:113:9-115:72
+		ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidManifest.xml:110:13-55
+activity#com.szb.szb.start_pack.registerpack.JoinActivity
+ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidManifest.xml:112:9-114:72
 	android:theme
-		ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidManifest.xml:115:13-69
+		ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidManifest.xml:114:13-69
 	android:name
-		ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidManifest.xml:114:13-67
-activity#com.szb.szb.start_pack.registerpack.FindPassActivity
+		ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidManifest.xml:113:13-65
+activity#com.szb.szb.Home.frag.Frag_Map
+ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidManifest.xml:115:9-56
+	android:name
+		ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidManifest.xml:115:19-53
+activity#com.szb.szb.start_pack.registerpack.FindIdActivity
 ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidManifest.xml:116:9-118:72
 	android:theme
 		ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidManifest.xml:118:13-69
 	android:name
-		ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidManifest.xml:117:13-69
-activity#com.szb.szb.start_pack.registerpack.CodeinsertActivity
+		ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidManifest.xml:117:13-67
+activity#com.szb.szb.start_pack.registerpack.FindPassActivity
 ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidManifest.xml:119:9-121:72
 	android:theme
 		ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidManifest.xml:121:13-69
 	android:name
-		ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidManifest.xml:120:13-71
-activity#com.szb.szb.start_pack.registerpack.NewpasswordActivity
+		ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidManifest.xml:120:13-69
+activity#com.szb.szb.start_pack.registerpack.CodeinsertActivity
 ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidManifest.xml:122:9-124:72
 	android:theme
 		ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidManifest.xml:124:13-69
 	android:name
-		ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidManifest.xml:123:13-72
-activity#com.szb.szb.start_pack.registerpack.EditprofileActivity
+		ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidManifest.xml:123:13-71
+activity#com.szb.szb.start_pack.registerpack.NewpasswordActivity
 ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidManifest.xml:125:9-127:72
 	android:theme
 		ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidManifest.xml:127:13-69
 	android:name
 		ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidManifest.xml:126:13-72
-activity#kr.go.seoul.trafficsubway.TrafficSubwayDetailTypeA
-ADDED from [Seoul_h:trafficsubway-release:unspecified] C:\Users\cwh62\.android\build-cache\5e425191267ceac4ae32a2f5caa4cfbf17231d10\output\AndroidManifest.xml:17:9-19:52
-	android:screenOrientation
-		ADDED from [Seoul_h:trafficsubway-release:unspecified] C:\Users\cwh62\.android\build-cache\5e425191267ceac4ae32a2f5caa4cfbf17231d10\output\AndroidManifest.xml:19:13-49
-	android:name
-		ADDED from [Seoul_h:trafficsubway-release:unspecified] C:\Users\cwh62\.android\build-cache\5e425191267ceac4ae32a2f5caa4cfbf17231d10\output\AndroidManifest.xml:18:13-78
-activity#kr.go.seoul.trafficsubway.TrafficSubwayInfoTypeA
-ADDED from [Seoul_h:trafficsubway-release:unspecified] C:\Users\cwh62\.android\build-cache\5e425191267ceac4ae32a2f5caa4cfbf17231d10\output\AndroidManifest.xml:20:9-23:59
-	android:screenOrientation
-		ADDED from [Seoul_h:trafficsubway-release:unspecified] C:\Users\cwh62\.android\build-cache\5e425191267ceac4ae32a2f5caa4cfbf17231d10\output\AndroidManifest.xml:22:13-49
+activity#com.szb.szb.start_pack.registerpack.EditprofileActivity
+ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidManifest.xml:128:9-130:72
 	android:theme
-		ADDED from [Seoul_h:trafficsubway-release:unspecified] C:\Users\cwh62\.android\build-cache\5e425191267ceac4ae32a2f5caa4cfbf17231d10\output\AndroidManifest.xml:23:13-56
+		ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidManifest.xml:130:13-69
 	android:name
-		ADDED from [Seoul_h:trafficsubway-release:unspecified] C:\Users\cwh62\.android\build-cache\5e425191267ceac4ae32a2f5caa4cfbf17231d10\output\AndroidManifest.xml:21:13-76
-activity#kr.go.seoul.trafficsubway.TrafficSubwayDetailTypeB
-ADDED from [Seoul_h:trafficsubway-release:unspecified] C:\Users\cwh62\.android\build-cache\5e425191267ceac4ae32a2f5caa4cfbf17231d10\output\AndroidManifest.xml:24:9-26:52
-	android:screenOrientation
-		ADDED from [Seoul_h:trafficsubway-release:unspecified] C:\Users\cwh62\.android\build-cache\5e425191267ceac4ae32a2f5caa4cfbf17231d10\output\AndroidManifest.xml:26:13-49
+		ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidManifest.xml:129:13-72
+activity#com.szb.szb.mappackage.GooglemapsActivity
+ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidManifest.xml:131:9-132:72
+	android:theme
+		ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidManifest.xml:132:13-69
 	android:name
-		ADDED from [Seoul_h:trafficsubway-release:unspecified] C:\Users\cwh62\.android\build-cache\5e425191267ceac4ae32a2f5caa4cfbf17231d10\output\AndroidManifest.xml:25:13-78
-activity#kr.go.seoul.trafficsubway.TrafficSubwayInfoTypeB
-ADDED from [Seoul_h:trafficsubway-release:unspecified] C:\Users\cwh62\.android\build-cache\5e425191267ceac4ae32a2f5caa4cfbf17231d10\output\AndroidManifest.xml:27:9-29:52
-	android:screenOrientation
-		ADDED from [Seoul_h:trafficsubway-release:unspecified] C:\Users\cwh62\.android\build-cache\5e425191267ceac4ae32a2f5caa4cfbf17231d10\output\AndroidManifest.xml:29:13-49
-	android:name
-		ADDED from [Seoul_h:trafficsubway-release:unspecified] C:\Users\cwh62\.android\build-cache\5e425191267ceac4ae32a2f5caa4cfbf17231d10\output\AndroidManifest.xml:28:13-76
-meta-data#android.support.VERSION
-ADDED from [com.android.support:design:25.3.1] C:\Users\cwh62\.android\build-cache\a964cb925b13ae3f74c511d2e1b4ff26decb84fd\output\AndroidManifest.xml:25:5-27:34
-MERGED from [com.android.support:appcompat-v7:25.3.1] C:\Users\cwh62\.android\build-cache\30535fa162e5037dde8eb4764dd9444ceb4c5dcb\output\AndroidManifest.xml:25:5-27:34
-MERGED from [com.android.support:animated-vector-drawable:25.3.1] C:\Users\cwh62\.android\build-cache\08f4c98575faa3083ae31858b35b3d18e95c1281\output\AndroidManifest.xml:22:5-24:34
-MERGED from [com.android.support:support-vector-drawable:25.3.1] C:\Users\cwh62\.android\build-cache\a48e7699ca11df536298bad207f9985e41bfc9a3\output\AndroidManifest.xml:22:5-24:34
-MERGED from [com.android.support:recyclerview-v7:25.3.1] C:\Users\cwh62\.android\build-cache\620dd19f5302e83319d10d41c7e861c105d1a552\output\AndroidManifest.xml:22:5-24:34
-MERGED from [com.android.support:transition:25.3.1] C:\Users\cwh62\.android\build-cache\e7bcabd91e9be61776ee6deeabf4ad00431d94af\output\AndroidManifest.xml:22:5-24:34
-MERGED from [com.android.support:support-v4:25.3.1] C:\Users\cwh62\.android\build-cache\dfab0000857022765f882ad82a134060c2884a48\output\AndroidManifest.xml:25:5-27:34
-MERGED from [com.android.support:support-fragment:25.3.1] C:\Users\cwh62\.android\build-cache\7fb3f389d2d4782f1a1134380f2a2502f9cd1765\output\AndroidManifest.xml:25:5-27:34
-MERGED from [com.android.support:support-media-compat:25.3.1] C:\Users\cwh62\.android\build-cache\b9560e3b4bf3533e28f738623f79da5b0b01082b\output\AndroidManifest.xml:25:5-27:34
-MERGED from [com.android.support:support-core-ui:25.3.1] C:\Users\cwh62\.android\build-cache\d9b18fef48fd5e82485a5bbd07f75dd4035b33c6\output\AndroidManifest.xml:25:5-27:34
-MERGED from [com.android.support:support-core-utils:25.3.1] C:\Users\cwh62\.android\build-cache\9fa7b88af7d84200db8964cce88dad8c4597effe\output\AndroidManifest.xml:25:5-27:34
-MERGED from [com.android.support:support-compat:25.3.1] C:\Users\cwh62\.android\build-cache\c9f768e2bd6665db786fd41d3cfede66f8412605\output\AndroidManifest.xml:25:5-27:34
-MERGED from [com.android.support:cardview-v7:25.3.1] C:\Users\cwh62\.android\build-cache\67c30f7284b44b6da70ab0049e19bc44c1f97d73\output\AndroidManifest.xml:22:5-24:34
+		ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidManifest.xml:131:19-64
+meta-data#com.google.android.maps.v2.API_KEY
+ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidManifest.xml:134:9-136:70
 	android:value
-		ADDED from [com.android.support:design:25.3.1] C:\Users\cwh62\.android\build-cache\a964cb925b13ae3f74c511d2e1b4ff26decb84fd\output\AndroidManifest.xml:27:9-31
+		ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidManifest.xml:136:13-68
 	android:name
-		ADDED from [com.android.support:design:25.3.1] C:\Users\cwh62\.android\build-cache\a964cb925b13ae3f74c511d2e1b4ff26decb84fd\output\AndroidManifest.xml:26:9-47
+		ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\szb\src\main\AndroidManifest.xml:135:13-62
+activity#kr.go.seoul.trafficsubway.TrafficSubwayDetailTypeA
+ADDED from [Seoul_h:trafficsubway-release:unspecified] C:\Users\cwh62\.android\build-cache\6b9e2a149949f92f777fbd1da03ab97e95934703\output\AndroidManifest.xml:17:9-19:52
+	android:screenOrientation
+		ADDED from [Seoul_h:trafficsubway-release:unspecified] C:\Users\cwh62\.android\build-cache\6b9e2a149949f92f777fbd1da03ab97e95934703\output\AndroidManifest.xml:19:13-49
+	android:name
+		ADDED from [Seoul_h:trafficsubway-release:unspecified] C:\Users\cwh62\.android\build-cache\6b9e2a149949f92f777fbd1da03ab97e95934703\output\AndroidManifest.xml:18:13-78
+activity#kr.go.seoul.trafficsubway.TrafficSubwayInfoTypeA
+ADDED from [Seoul_h:trafficsubway-release:unspecified] C:\Users\cwh62\.android\build-cache\6b9e2a149949f92f777fbd1da03ab97e95934703\output\AndroidManifest.xml:20:9-23:59
+	android:screenOrientation
+		ADDED from [Seoul_h:trafficsubway-release:unspecified] C:\Users\cwh62\.android\build-cache\6b9e2a149949f92f777fbd1da03ab97e95934703\output\AndroidManifest.xml:22:13-49
+	android:theme
+		ADDED from [Seoul_h:trafficsubway-release:unspecified] C:\Users\cwh62\.android\build-cache\6b9e2a149949f92f777fbd1da03ab97e95934703\output\AndroidManifest.xml:23:13-56
+	android:name
+		ADDED from [Seoul_h:trafficsubway-release:unspecified] C:\Users\cwh62\.android\build-cache\6b9e2a149949f92f777fbd1da03ab97e95934703\output\AndroidManifest.xml:21:13-76
+activity#kr.go.seoul.trafficsubway.TrafficSubwayDetailTypeB
+ADDED from [Seoul_h:trafficsubway-release:unspecified] C:\Users\cwh62\.android\build-cache\6b9e2a149949f92f777fbd1da03ab97e95934703\output\AndroidManifest.xml:24:9-26:52
+	android:screenOrientation
+		ADDED from [Seoul_h:trafficsubway-release:unspecified] C:\Users\cwh62\.android\build-cache\6b9e2a149949f92f777fbd1da03ab97e95934703\output\AndroidManifest.xml:26:13-49
+	android:name
+		ADDED from [Seoul_h:trafficsubway-release:unspecified] C:\Users\cwh62\.android\build-cache\6b9e2a149949f92f777fbd1da03ab97e95934703\output\AndroidManifest.xml:25:13-78
+activity#kr.go.seoul.trafficsubway.TrafficSubwayInfoTypeB
+ADDED from [Seoul_h:trafficsubway-release:unspecified] C:\Users\cwh62\.android\build-cache\6b9e2a149949f92f777fbd1da03ab97e95934703\output\AndroidManifest.xml:27:9-29:52
+	android:screenOrientation
+		ADDED from [Seoul_h:trafficsubway-release:unspecified] C:\Users\cwh62\.android\build-cache\6b9e2a149949f92f777fbd1da03ab97e95934703\output\AndroidManifest.xml:29:13-49
+	android:name
+		ADDED from [Seoul_h:trafficsubway-release:unspecified] C:\Users\cwh62\.android\build-cache\6b9e2a149949f92f777fbd1da03ab97e95934703\output\AndroidManifest.xml:28:13-76
+meta-data#android.support.VERSION
+ADDED from [com.android.support:design:25.3.1] C:\Users\cwh62\.android\build-cache\2296c6d153ca9492798042173aaf4756857c6a9d\output\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:appcompat-v7:25.3.1] C:\Users\cwh62\.android\build-cache\1860e7502bea0f552aaa4935120bb2accced6b21\output\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] C:\Users\cwh62\.android\build-cache\6730870617d47df13bc774a65c1c86c27dbc12ef\output\AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:support-vector-drawable:25.3.1] C:\Users\cwh62\.android\build-cache\dbe9f5decf0814ca3112de9fa169c05a9ef17fa4\output\AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:recyclerview-v7:25.3.1] C:\Users\cwh62\.android\build-cache\16b76ed60be6d6f5795aaad4ab9dc6f5c5e1e53e\output\AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:transition:25.3.1] C:\Users\cwh62\.android\build-cache\815ab4dd66c21aac42d85b21215193d8e173701d\output\AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:cardview-v7:25.3.1] C:\Users\cwh62\.android\build-cache\c0bf160209d4ce27bf1475b9cbf60b683a589dd2\output\AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:support-v4:25.3.1] C:\Users\cwh62\.android\build-cache\1d58b0c142dde6ca5bd4caefcebf2aaf6f59b020\output\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-fragment:25.3.1] C:\Users\cwh62\.android\build-cache\346844434def2bfd53b8da18edeb8e5aacd81a1e\output\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-media-compat:25.3.1] C:\Users\cwh62\.android\build-cache\d53f974551acc596e7d98a5e0edb8ccff702bcd9\output\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-core-ui:25.3.1] C:\Users\cwh62\.android\build-cache\352ba410ff20b1da33fee40f4ed9f097802381a9\output\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-core-utils:25.3.1] C:\Users\cwh62\.android\build-cache\584142e303a6d9c843b10f8e894ff496a2a1f28e\output\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-compat:25.3.1] C:\Users\cwh62\.android\build-cache\d5590ca820c5f03173184f0eb2e60a0a73a2609c\output\AndroidManifest.xml:25:5-27:34
+	android:value
+		ADDED from [com.android.support:design:25.3.1] C:\Users\cwh62\.android\build-cache\2296c6d153ca9492798042173aaf4756857c6a9d\output\AndroidManifest.xml:27:9-31
+	android:name
+		ADDED from [com.android.support:design:25.3.1] C:\Users\cwh62\.android\build-cache\2296c6d153ca9492798042173aaf4756857c6a9d\output\AndroidManifest.xml:26:9-47
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from [com.google.android.gms:play-services-maps:10.2.4] C:\Users\cwh62\.android\build-cache\3dd3a9408507d1f2b289758bedbc8b76894d648a\output\AndroidManifest.xml:19:5-78
+	android:name
+		ADDED from [com.google.android.gms:play-services-maps:10.2.4] C:\Users\cwh62\.android\build-cache\3dd3a9408507d1f2b289758bedbc8b76894d648a\output\AndroidManifest.xml:19:22-76
+activity#com.google.android.gms.common.api.GoogleApiActivity
+ADDED from [com.google.android.gms:play-services-base:10.2.4] C:\Users\cwh62\.android\build-cache\011d84d88a3c829fa6eca95b347476b1121ff788\output\AndroidManifest.xml:19:9-172
+	android:exported
+		ADDED from [com.google.android.gms:play-services-base:10.2.4] C:\Users\cwh62\.android\build-cache\011d84d88a3c829fa6eca95b347476b1121ff788\output\AndroidManifest.xml:19:146-170
+	android:theme
+		ADDED from [com.google.android.gms:play-services-base:10.2.4] C:\Users\cwh62\.android\build-cache\011d84d88a3c829fa6eca95b347476b1121ff788\output\AndroidManifest.xml:19:86-145
+	android:name
+		ADDED from [com.google.android.gms:play-services-base:10.2.4] C:\Users\cwh62\.android\build-cache\011d84d88a3c829fa6eca95b347476b1121ff788\output\AndroidManifest.xml:19:19-85
+meta-data#com.google.android.gms.version
+ADDED from [com.google.android.gms:play-services-basement:10.2.4] C:\Users\cwh62\.android\build-cache\169efff17ebdd0f5d85154e1815d67d3320ef059\output\AndroidManifest.xml:20:9-121
+	android:value
+		ADDED from [com.google.android.gms:play-services-basement:10.2.4] C:\Users\cwh62\.android\build-cache\169efff17ebdd0f5d85154e1815d67d3320ef059\output\AndroidManifest.xml:20:66-119
+	android:name
+		ADDED from [com.google.android.gms:play-services-basement:10.2.4] C:\Users\cwh62\.android\build-cache\169efff17ebdd0f5d85154e1815d67d3320ef059\output\AndroidManifest.xml:20:20-65

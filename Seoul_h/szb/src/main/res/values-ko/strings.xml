@@ -119,4 +119,16 @@
     <string name="정보수정">내 정보수정</string>
     <string name="비밀번호변경">비밀번호 변경하기</string>
     <string name="비밀번호변경완료">성공적으로 비밀번호를 변경하였습니다!</string>
+    <string name="비밀번호변경비밀번호">비밀번호 변경을 위해 기존 비밀번호를 입력해주세요.</string>
+    <string name="위도">위도</string>
+    <string name="경도">경도</string>
+    <string name="내위치">내 위치</string>
+    <string name="지오코더">지오코딩 서비스 사용불가.</string>
+    <string name="잘못된GPS">잘못된 GPS좌표</string>
+    <string name="주소미발견">주소를 발견하지 못했습니다.</string>
+    <string name="위치정보불가">위치정보 가져올 수 없음.</string>
+    <string name="GPS활성여부">GPS를 활성화했는지 확인해주십시오.</string>
+    <string name="GPS퍼미션체크박스">지도를 사용하시려면 스마트폰 설정에서 위치정보접근을 허가해야합니다.</string>
+    <string name="GPS퍼미션">지도를 사용하시려면 위치정보접근을 허가해야합니다.</string>
+    <string name="알림">알림</string>
 </resources>

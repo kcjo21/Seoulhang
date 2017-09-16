@@ -115,11 +115,11 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
         holder.Submit.setEnabled(false);
         holder.hint_text.setText(mDataset.get(position).hint);
         holder.recyclerView = mDataset.get(position).recyclerView;
-        if(mDataset.get(position).q_type=="ox"){                    //문제형식에 따라 UI변경
+        if(mDataset.get(position).q_type.equals("ox")){                    //문제형식에 따라 UI변경
             holder.Answer_ox.setVisibility(View.VISIBLE);
             holder.Answer.setVisibility(View.GONE);
         }
-        else if(mDataset.get(position).q_type=="default"){
+        else if(mDataset.get(position).q_type.equals("default")){
             holder.Answer.setVisibility(View.VISIBLE);
             holder.Answer_ox.setVisibility(View.GONE);
         }
@@ -184,7 +184,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
 
        holder.quiz.setOnTouchListener(new View.OnTouchListener() {
             @Override
-            public boolean onTouch(View v, MotionEvent event) {
+            public boolean onTouch(View v, MotionEvent event) {  //퀴즈텍스트 스크롤 생성
                 if (holder.quiz.canScrollVertically(1)||holder.quiz.canScrollVertically(-1)) {
                     if (event.getAction() == MotionEvent.ACTION_UP)
                         holder.recyclerView.requestDisallowInterceptTouchEvent(false);
@@ -197,7 +197,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
         });
         holder.hint_text.setOnTouchListener(new View.OnTouchListener() {
             @Override
-            public boolean onTouch(View v, MotionEvent event) {
+            public boolean onTouch(View v, MotionEvent event) {   //힌트 텍스트 스크롤 생성
                 if (holder.hint_text.canScrollVertically(1)||holder.hint_text.canScrollVertically(-1)) {
                     if (event.getAction() == MotionEvent.ACTION_UP)
                         holder.recyclerView.requestDisallowInterceptTouchEvent(false);
@@ -223,7 +223,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
                 int qun = Integer.parseInt(mDataset.get(position).text_num);
                 Log.e("확인",""+qun);
                 Log.e("확인",mDataset.get(position).playerid);
-                if(mDataset.get(position).q_type.equals("ox")){
+                if(mDataset.get(position).q_type.equals("ox")){  //퀴즈타입에 따라 반환값 타입 설정
                     answer = Integer.toString(holder.Answer_ox.getCheckedRadioButtonId());
                 }
                 else if(mDataset.get(position).q_type.equals("default")){

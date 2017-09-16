@@ -14,7 +14,8 @@
         android:layout_height="0dp"
         android:layout_weight="100"
         android:orientation="vertical"
-        android:weightSum="100">
+        android:weightSum="100"
+        tools:ignore="UselessParent">
 
         <LinearLayout
             android:id="@+id/border1"
@@ -23,7 +24,7 @@
             android:layout_weight="1"
             android:background="@color/Carkviewline"
             android:orientation="horizontal"
-            tools:ignore="DuplicateIds"></LinearLayout>
+            tools:ignore="DuplicateIds,NestedWeights"></LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -43,7 +44,7 @@
                 android:textColor="@android:color/black"
                 android:textSize="22dp"
                 android:textStyle="bold"
-                tools:ignore="HardcodedText,NestedWeights" />
+                tools:ignore="HardcodedText,NestedWeights,SpUsage" />
         </LinearLayout>
 
         <LinearLayout
@@ -86,14 +87,14 @@
                     tools:ignore="NestedWeights,RtlHardcoded">
 
                     <ImageView
-                        android:id="@+id/about_n"
+                        android:id="@+id/mapview"
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
                         android:layout_weight="100"
                         android:clickable="true"
                         android:contentDescription=""
                         android:scaleType="fitXY"
-                        app:srcCompat="@drawable/selector_about"
+                        app:srcCompat="@drawable/selector_map_image"
                         tools:ignore="ContentDescription,NestedWeights" />
                 </LinearLayout>
 
@@ -139,7 +140,7 @@
                     android:layout_marginTop="10dp"
                     android:layout_weight="70"
                     android:orientation="horizontal"
-                    tools:ignore="RtlHardcoded">
+                    tools:ignore="NestedWeights,RtlHardcoded">
 
                     <ImageView
                         android:id="@+id/cameraon_b"
@@ -167,12 +168,13 @@
                     tools:ignore="RtlHardcoded">
 
                     <ImageView
-                        android:id="@+id/imageView17"
+                        android:id="@+id/subwayview"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="100"
+                        android:clickable="true"
                         android:scaleType="fitXY"
-                        app:srcCompat="@drawable/timer"
+                        app:srcCompat="@drawable/selector_subway"
                         tools:ignore="ContentDescription,NestedWeights" />
                 </LinearLayout>
             </LinearLayout>
@@ -212,7 +214,8 @@
                 android:layout_weight="7"
                 android:text="@string/최근문제"
                 android:textColor="@android:color/black"
-                android:textSize="14dp" />
+                android:textSize="14dp"
+                tools:ignore="RtlHardcoded,SpUsage" />
 
             <android.support.v7.widget.RecyclerView
                 android:id="@+id/home_rev"
@@ -230,7 +233,8 @@
                 android:gravity="center_vertical|center_horizontal"
                 android:text="@string/풀수있는문제없음"
                 android:textSize="30dp"
-                android:visibility="gone" />
+                android:visibility="gone"
+                tools:ignore="RtlHardcoded,SpUsage" />
 
         </LinearLayout>
 
@@ -239,9 +243,8 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="4"
-            android:background="@color/SIVER"
+            android:background="@color/Carkviewline"
             android:contentDescription=""
-            app:srcCompat="@drawable/subtitle_top"
             tools:ignore="ContentDescription" />
 
     </LinearLayout>

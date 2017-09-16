@@ -6,9 +6,7 @@ import android.content.Intent;
 import android.location.LocationManager;
 import android.os.Bundle;
 import android.util.Log;
-
 import com.szb.szb.Home.Home_Main;
-import com.szb.szb.Home.managerpackage.QuestManager;
 import com.szb.szb.model.retrofit.QuestDTO;
 import com.szb.szb.network.Ipm;
 import com.szb.szb.network.NetworkClient;
@@ -20,7 +18,6 @@ import retrofit2.Response;
 public class GameActivity extends UnityPlayerActivity {
     Ipm ipm;
     NetworkClient networkClient;
-    QuestManager questmanager;
 
 
 
@@ -63,23 +60,20 @@ public class GameActivity extends UnityPlayerActivity {
     }
 
     @Override
-    public void onTouch(String ObjName) {
+    public void onTouch(String questioncode) {
         Intent id = getIntent();
         String playerid = id.getExtras().getString("playerid");
-        questmanager = QuestManager.getInstance();
-        int region = Integer.parseInt(ObjName);
+        int q_code = Integer.parseInt(questioncode);
         Log.e("게임액티비티확인",playerid);
         ipm = new Ipm();
         String ip = ipm.getip();
         networkClient = NetworkClient.getInstance(ip);
-        Log.e ("확인",playerid+region);
-        networkClient.getregioncode(playerid, region, new Callback<QuestDTO>() {
+        Log.e ("확인",playerid+q_code);
+        networkClient.getquestioncode(playerid, q_code, new Callback<QuestDTO>() {
             @Override
             public void onResponse(Call<QuestDTO> call, Response<QuestDTO> response) {
                 switch (response.code()) {
-                    case 200: //json 데이터를 파싱하는 것을 수월하게 해준다.
-                        QuestDTO questDTO = response.body();
-                        questmanager.create(questDTO);
+                    case 200:
                         break;
                     default:
                         break;
@@ -93,7 +87,7 @@ public class GameActivity extends UnityPlayerActivity {
             }
 
         });
-        Log.e("HIHI: ",ObjName);
+        Log.e("QUSTIONNUM: ",questioncode);
         Intent intent = new Intent(GameActivity.this,Home_Main.class);
         intent.putExtra("got",0);
         setResult(RESULT_OK,intent);

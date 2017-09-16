@@ -12,10 +12,10 @@ import android.widget.TextView;
  * Created by cwh62 on 2017-09-10.
  */
 
-class BaseApplication {
+public class BaseApplication {
     private static final BaseApplication ourInstance = new BaseApplication();
 
-    static BaseApplication getInstance() {
+    public static BaseApplication getInstance() {
         return ourInstance;
     }
     private AppCompatDialog progressDialog;

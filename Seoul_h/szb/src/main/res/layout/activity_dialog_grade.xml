@@ -26,9 +26,9 @@
             android:gravity="center_vertical|center_horizontal"
             android:text="@string/등급정보"
             android:textColor="@android:color/black"
-            android:textSize="30sp"
+            android:textSize="30dp"
             android:textStyle="bold"
-            tools:ignore="NestedWeights" />
+            tools:ignore="NestedWeights,SpUsage" />
 
         <LinearLayout
             android:layout_width="match_parent"

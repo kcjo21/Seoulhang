@@ -17,6 +17,7 @@
     <color name="colorAccent">#FF4081</color>
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
+    <color name="light_blue">#3281fc</color>
     <color name="silver_a">#96000000</color>
     <dimen name="size">10dp</dimen>
     <string name="ARCam">ARCam</string>
@@ -30,6 +31,9 @@
     <string name="GPSMessage">Your GPS is disabled! We need GPS Data. Would you like to enable it?</string>
     <string name="GPSN">No</string>
     <string name="GPSY">Yes</string>
+    <string name="GPS퍼미션">Access to location information must be granted to use the map.</string>
+    <string name="GPS퍼미션체크박스">To use the map, you must permit accessing location information in your smartphone setting</string>
+    <string name="GPS활성여부">Check whether GPS is activated.</string>
     <string name="Loading">LOADING...</string>
     <string name="Login">Login</string>
     <string name="Name">Name</string>
@@ -61,10 +65,12 @@
     <string name="side_점수">                Score : %s</string>
     <string name="side_코드번호">                Code : %s</string>
     <string name="side_힌트수">                Hint : %s</string>
+    <string name="경도">Longitude</string>
     <string name="골드">Gold</string>
     <string name="남">men</string>
     <string name="남은힌트">Hint</string>
     <string name="내순위">My Rank</string>
+    <string name="내위치">My location</string>
     <string name="내정보설정">                Edit Profile</string>
     <string name="닉네임">Name</string>
     <string name="다이아몬드">Diamond</string>
@@ -77,6 +83,7 @@
     <string name="브론즈">Bronze</string>
     <string name="비밀번호">Password</string>
     <string name="비밀번호변경">I want to Change my Password.</string>
+    <string name="비밀번호변경비밀번호">Please enter current password to change password.</string>
     <string name="비밀번호변경완료">Password changed Successfully!</string>
     <string name="비밀번호일치">password do not match.</string>
     <string name="비밀번호입력">Please enter your code.</string>
@@ -93,12 +100,16 @@
     <string name="실버">Silver</string>
     <string name="아이디찾기">Find Id</string>
     <string name="아이디찾을수없음">No matching ID.</string>
+    <string name="알림">Alert</string>
     <string name="여">women</string>
     <string name="연락처">Phone</string>
     <string name="오답">Incorrect..</string>
+    <string name="위도">Latitude</string>
+    <string name="위치정보불가">Unable to get location information.</string>
     <string name="이름">Name</string>
     <string name="이미가지고있는문제">You already have got this quiz.</string>
     <string name="인증번호">Code</string>
+    <string name="잘못된GPS">Wrong GPS coordinates.</string>
     <string name="점수">Score</string>
     <string name="점수_0">Score 0</string>
     <string name="점수_10">Score 10</string>
@@ -112,8 +123,10 @@
     <string name="정답이다">Correct!</string>
     <string name="정보수정">Edit Profile</string>
     <string name="정보수정질문">Do you want to edit your infomaion?</string>
+    <string name="주소미발견">No address found.</string>
     <string name="중복확인">Check</string>
     <string name="지역별달성률">Local Information And Achievement Rate</string>
+    <string name="지오코더">Unable to use Geocoding service.</string>
     <string name="챌린저">Challenger</string>
     <string name="초보자">Unrank</string>
     <string name="최근문제">New Quiz</string>
@@ -140,7 +153,7 @@
     </string>
     <string name="힌트없음">You have no hint bonus left.</string>
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-        <!-- Customize your theme here. -->
+        
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>

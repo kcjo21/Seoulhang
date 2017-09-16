@@ -90,10 +90,10 @@ public class EditprofileActivity extends BaseActivity {
                 });
                 final AlertDialog dialog = alert.create();
                 dialog.show();
-                dialog.getButton(AlertDialog.BUTTON_NEGATIVE).setOnClickListener(new View.OnClickListener() {
+                dialog.getButton(AlertDialog.BUTTON_NEGATIVE).setOnClickListener(new View.OnClickListener() { //버튼 눌러도 자동으로 꺼지지 않게 버튼클릭이벤트 오버라이드
                     @Override
                     public void onClick(View v) {
-                        if (password.getText().length()>0) {
+                        if (password.getText().length()>0) {                           //비밀번호 미입력 체크
                             keyboard.hideSoftInputFromWindow(password.getWindowToken(),0);
 
                             AlertDialog.Builder alert = new AlertDialog.Builder(EditprofileActivity.this);
@@ -116,7 +116,7 @@ public class EditprofileActivity extends BaseActivity {
                             dialog.dismiss();
                         }
                         else {
-                            Toast toast = Toast.makeText(getApplicationContext(), getResources().getString(R.string.비밀번호입력), Toast.LENGTH_LONG);
+                            Toast toast = Toast.makeText(getApplicationContext(), getResources().getString(R.string.비밀번호입력), Toast.LENGTH_LONG);  //비밀번호 미입력시 메세지 출력.
                             toast.show();
                         }
 
@@ -127,8 +127,40 @@ public class EditprofileActivity extends BaseActivity {
         Change_pass.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(EditprofileActivity.this, NewpasswordActivity.class);
-                startActivity(intent);
+                final AlertDialog.Builder alert = new AlertDialog.Builder(EditprofileActivity.this);
+                alert.setCancelable(false);
+                alert.setMessage(R.string.비밀번호변경비밀번호);
+
+                final EditText password = new EditText(EditprofileActivity.this);
+                password.setInputType(InputType.TYPE_TEXT_VARIATION_PASSWORD);
+                password.setTransformationMethod(PasswordTransformationMethod.getInstance());
+                password.setMaxLines(1);
+                alert.setView(password);
+
+                alert.setPositiveButton(R.string.취소, new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int whichButton) {
+                        dialog.dismiss();
+                    }
+                });
+                alert.setNegativeButton(R.string.확인,new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int whichButton) {
+                    }
+                });
+                final AlertDialog dialog = alert.create();
+                dialog.show();
+                dialog.getButton(AlertDialog.BUTTON_NEGATIVE).setOnClickListener(new View.OnClickListener() { //버튼 눌러도 자동으로 꺼지지 않게 버튼클릭이벤트 오버라이드
+                    @Override
+                    public void onClick(View v) {
+                        if(password.getText().length()>0) {
+                            Intent intent = new Intent(EditprofileActivity.this, NewpasswordActivity.class);  //비밀번호 변경전에 기존비밀번호를 묻는다.
+                            startActivity(intent);
+                        }
+                        else {
+                            Toast toast = Toast.makeText(getApplicationContext(), getResources().getString(R.string.비밀번호입력), Toast.LENGTH_LONG);
+                            toast.show();
+                        }
+                    }
+                });
             }
         });
         Commit.setOnClickListener(new View.OnClickListener() {
