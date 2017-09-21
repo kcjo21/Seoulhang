@@ -67,6 +67,10 @@ public class JoinActivity extends BaseActivity {
         alert = (TextView)findViewById(R.id.alert);
         check_id = (TextView)findViewById(R.id.check_t);
 
+        String ip = ipm.getip();
+        networkClient = NetworkClient.getInstance(ip);
+
+
 
         cancel.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -108,9 +112,6 @@ public class JoinActivity extends BaseActivity {
             @Override
             public void onClick(View v) {
                 String sid = id.getText().toString();
-                String ip = ipm.getip();
-                networkClient = NetworkClient.getInstance(ip);
-
 
                 networkClient.checkid(sid,new Callback<String>() {
                     @Override
@@ -165,11 +166,6 @@ public class JoinActivity extends BaseActivity {
                     }
                 });
 
-
-
-                String ip = ipm.getip();
-                Log.e("ACC","TEAM id IS !!! "+ ip);
-                networkClient = NetworkClient.getInstance(ip);
                 TextView alert = (TextView)findViewById(R.id.alert);
                 if(id.getText().length()<=0) alert.setText(getResources().getString(R.string.EID));
                 else if(!checkEmail(email.getText().toString()))alert.setText(getResources().getString(R.string.checkEmail));
@@ -201,18 +197,19 @@ public class JoinActivity extends BaseActivity {
                                         Intent intent = new Intent(JoinActivity.this, MainActivity.class);
                                         startActivity(intent);
                                         finish();
+                                        Toast toast = Toast.makeText(getApplicationContext(), getResources().getString(R.string.회원가입성공), Toast.LENGTH_LONG);
+                                        toast.show();
                                         break;
 
                                     case 205:
                                         Log.e("TAG", "입력 제한");
-                                        Toast toast = Toast.makeText(getApplicationContext(), getResources().getString(R.string.please_check_already_id), Toast.LENGTH_LONG);
-                                        toast.show();
+                                        Toast toast_f = Toast.makeText(getApplicationContext(), getResources().getString(R.string.please_check_already_id), Toast.LENGTH_LONG);
+                                        toast_f.show();
                                         break;
 
                                 }
                             }
-                            Toast toast = Toast.makeText(getApplicationContext(), getResources().getString(R.string.회원가입성공), Toast.LENGTH_LONG);
-                            toast.show();
+
                         }
 
                         @Override

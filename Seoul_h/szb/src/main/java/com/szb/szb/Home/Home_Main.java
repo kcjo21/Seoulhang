@@ -112,12 +112,12 @@ public class Home_Main extends BaseActivity {
                 alert.setMessage(R.string.정보수정질문);
 
 
-                alert.setPositiveButton(R.string.취소, new DialogInterface.OnClickListener() {
+                alert.setNegativeButton(R.string.취소, new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int whichButton) {
                         dialog.dismiss();
                     }
                 });
-                alert.setNegativeButton(R.string.확인,new DialogInterface.OnClickListener() {
+                alert.setPositiveButton(R.string.확인,new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int whichButton) {
                         Intent intent = new Intent(Home_Main.this,EditprofileActivity.class);
                         startActivity(intent);

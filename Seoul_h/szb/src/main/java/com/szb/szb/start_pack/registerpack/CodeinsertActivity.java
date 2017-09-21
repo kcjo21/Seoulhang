@@ -38,6 +38,9 @@ public class CodeinsertActivity extends BaseActivity {
         cancel = (Button) findViewById(R.id.cancel);
         codes = (EditText) findViewById(R.id.code_pt);
 
+        String ip = ipm.getip();
+        networkClient = NetworkClient.getInstance(ip);
+
         cancel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -69,8 +72,6 @@ public class CodeinsertActivity extends BaseActivity {
             String sid = intent.getStringExtra("id");
             @Override
             public void onClick(View v) {
-                String ip = ipm.getip();
-                networkClient = NetworkClient.getInstance(ip);
                 String scodes = codes.getText().toString();
 
                 Log.e("아이디",sid);

@@ -124,11 +124,22 @@ public class NetworkClient {
         Call<FindDTO> call = service.newpassword(id, password);
         call.enqueue(callback);
     }
-    public void withdrawal(String id, String password, Callback<FindDTO> callback){
-        Call<FindDTO> call = service.withdrawal(id, password);
+    public void withdrawal(String id, String password, Callback<String> callback){
+        Call<String> call = service.withdrawal(id, password);
+        call.enqueue(callback);
+    }
+    public void realwithdrawal(String id, Callback<String>callback){
+        Call<String> call = service.realwithdrawal(id);
+        call.enqueue(callback);
     }
 
-    public void editprofile(String id, String password, String name, String email, Callback<JoinDTO> callback){
-        Call<FindDTO> call= service.editprofile(id, password, name, email);
+    public void editprofile(String id, String password, String nickname, String email, Callback<String> callback){
+        Call<String> call = service.editprofile(id, password, nickname, email);
+        call.enqueue(callback);
+    }
+
+    public void quiznum(String id, Callback<List<Integer>> callback){
+        Call<List<Integer>> call = service.quiznum(id);
+        call.enqueue(callback);
     }
 }

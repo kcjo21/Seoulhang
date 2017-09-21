@@ -2,9 +2,13 @@ package com.szb.szb.mappackage;
 
 import android.Manifest;
 import android.annotation.TargetApi;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.content.res.AssetManager;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.location.Address;
 import android.location.Geocoder;
 import android.location.Location;
@@ -22,6 +26,7 @@ import android.util.Log;
 import android.view.WindowManager;
 import android.widget.Toast;
 
+import com.bumptech.glide.disklrucache.DiskLruCache;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.location.LocationListener;
@@ -38,10 +43,21 @@ import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.szb.szb.BaseActivity;
 import com.szb.szb.R;
+import com.szb.szb.network.Ipm;
+import com.szb.szb.network.NetworkClient;
+import com.szb.szb.start_pack.loginpackage.Logm;
 
+import java.io.File;
+import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.InputStream;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 
 public class GooglemapsActivity extends BaseActivity
@@ -68,6 +84,16 @@ public class GooglemapsActivity extends BaseActivity
     boolean mMoveMapByUser = true;
     boolean mMoveMapByAPI = true;
 
+    NetworkClient networkClient;
+    Ipm ipm;
+    Logm logm;
+
+    public static final String PATH = "data/data/com.szb.szb/";
+    public static final String DB_NAME = "new_gps.db";
+    ArrayList<GPSDATA> Al = new ArrayList<GPSDATA>();
+
+    private List<Integer> quizList;
+
     LocationRequest locationRequest = new LocationRequest()
             .setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY)
             .setInterval(UPDATE_INTERVAL_MS)
@@ -78,12 +104,55 @@ public class GooglemapsActivity extends BaseActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        initialize_db(getApplicationContext());
+
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON,
                 WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
         setContentView(R.layout.activity_googlemaps);
 
         Log.d(TAG, "onCreate");
         mActivity = this;
+
+        ipm = new Ipm();
+        logm = new Logm();
+        final String sid = logm.getPlayerid();
+        final String ip = ipm.getip();
+        networkClient = NetworkClient.getInstance(ip);
+
+        Log.e("QUIZ NUM","1");
+
+        networkClient.quiznum(sid, new Callback<List<Integer>>() {
+            @Override
+            public void onResponse(Call<List<Integer>> call, Response<List<Integer>> response) {
+                switch (response.code()){
+                    case 200:
+                        Log.d("QUIZ NUM : ","2");
+                        quizList=response.body();
+                        String [] num={};
+                        for(int i=0;i<quizList.size();i++) {
+                            num[i]=quizList.get(i).toString();
+                            Log.d("QUIZ NUM : ", num[i]);
+                        }
+                        quiznumParse(num);
+                        break;
+                    default:
+                        Log.e("Error : ","데이터베이스를 불러올 수 없습니다.");
+                        break;
+                }
+            }
+
+            @Override
+            public void onFailure(Call<List<Integer>> call, Throwable t) {
+                Toast toast = Toast.makeText(getApplicationContext(), getResources().getString(R.string.can_not_connent_to_server), Toast.LENGTH_LONG);
+                toast.show();
+            }
+        });
+
+        String [] num = {"1","2","3","512","322"};
+
+        quiznumParse(num);
+
+
 
 
         mGoogleApiClient = new GoogleApiClient.Builder(this)
@@ -216,6 +285,15 @@ public class GooglemapsActivity extends BaseActivity
 
             }
         });
+
+        for(int i = 0; i<Al.size();i++){
+            MarkerOptions makeroptions = new MarkerOptions();
+            String region_name = Al.get(i).region_name;
+            double latitude = Al.get(i).latitude;
+            double longitude = Al.get(i).longitude;
+            makeroptions.position(new LatLng(latitude,longitude)).title(region_name);
+            mGoogleMap.addMarker(makeroptions);
+        }
     }
 
 
@@ -588,6 +666,69 @@ public class GooglemapsActivity extends BaseActivity
         }
     }
 
+public void quiznumParse(String[] quiznum){
+    SQLiteDatabase db = SQLiteDatabase.openDatabase(PATH+"databases/"+DB_NAME,null, SQLiteDatabase.OPEN_READONLY);
+    Cursor c = db.query("GPSDATA",  null, null, null, null, null, null);
+    boolean already_have = false;
 
+    while(c.moveToNext()) {
+        String region_name = c.getString(c.getColumnIndex("station_name"));
+        String quiz_num = c.getString(c.getColumnIndex("region_code"));
+        double latitude = c.getDouble(c.getColumnIndex("lat"));
+        double longitude = c.getDouble(c.getColumnIndex("long"));
+
+        for (String qn:quiznum) {      //이미 얻은 타겟이 있다면 리스트에 추가하지 않는다.
+            if(qn.equals(quiz_num)){
+                already_have = true;
+            }
+        }
+
+        if(!already_have) {
+            GPSDATA g = new GPSDATA();
+            g.region_name = region_name;
+            g.quiz_num = quiz_num;
+            g.latitude = latitude;
+            g.longitude = longitude;
+            Al.add(g);
+            Log.d("DB확인",g.region_name+" "+g.quiz_num+" "+g.latitude.toString()+ " "+ g.longitude.toString());
+
+        }
+        already_have = false;
+
+    }
+}
+
+public void initialize_db(Context context){
+    File folder = new File(PATH+"databases");
+    folder.mkdirs();
+    File outfile = new File(PATH+"databases/"+DB_NAME);
+
+    if (outfile.length() <= 0) {
+        AssetManager assetManager = context.getResources().getAssets();
+        try {
+            InputStream is = assetManager.open(DB_NAME, AssetManager.ACCESS_BUFFER);
+            long filesize = is.available();
+            byte[] tempdata = new byte[(int) filesize];
+            is.read(tempdata);
+            is.close();
+            outfile.createNewFile();
+            FileOutputStream fo = new FileOutputStream(outfile);
+            fo.write(tempdata);
+            fo.close();
+            Log.d("DB","성공");
+        } catch (IOException e) {
+            e.printStackTrace();
+            Log.d("DB","실패");
+        }
+    }
+
+}
+
+private class GPSDATA{
+    String region_name = "";
+    String quiz_num = "";
+    Double latitude;
+    Double longitude;
+}
 
 }

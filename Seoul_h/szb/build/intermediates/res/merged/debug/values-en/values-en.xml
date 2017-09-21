@@ -49,6 +49,7 @@
     <string name="checkplease">perform a check for overlapping Identification.</string>
     <string name="close_drawer">close drawerclose drawerclose drawerclose drawerclose drawer</string>
     <string name="email">E-mail</string>
+    <string name="facebook_app_id">130262031034086</string>
     <string name="ghkrdls">OK</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="id">ID</string>
@@ -72,7 +73,7 @@
     <string name="내순위">My Rank</string>
     <string name="내위치">My location</string>
     <string name="내정보설정">                Edit Profile</string>
-    <string name="닉네임">Name</string>
+    <string name="닉네임">Nickname</string>
     <string name="다이아몬드">Diamond</string>
     <string name="달성률"><font size="1">Achievement rate </font></string>
     <string name="등급">Tier</string>
@@ -86,7 +87,7 @@
     <string name="비밀번호변경비밀번호">Please enter current password to change password.</string>
     <string name="비밀번호변경완료">Password changed Successfully!</string>
     <string name="비밀번호일치">password do not match.</string>
-    <string name="비밀번호입력">Please enter your code.</string>
+    <string name="비밀번호입력">Please enter your Password.</string>
     <string name="비밀번호찾기">Password</string>
     <string name="비밀번호확인">Confirm</string>
     <string name="사용가능">Available.</string>

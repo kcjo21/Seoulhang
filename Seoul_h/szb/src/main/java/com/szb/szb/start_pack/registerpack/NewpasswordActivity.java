@@ -40,7 +40,8 @@ public class NewpasswordActivity extends BaseActivity {
         cancel = (Button) findViewById(R.id.cancel);
         password = (EditText)findViewById(R.id.password_fit);
         password_c = (EditText)findViewById(R.id.confirm_fit);
-
+        String ip = ipm.getip();
+        networkClient = NetworkClient.getInstance(ip);
 
         cancel.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -51,12 +52,12 @@ public class NewpasswordActivity extends BaseActivity {
         commit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String ip = ipm.getip();
+
                 String pass = password.getText().toString();
                 String confirm  = password_c.getText().toString();
                 String sid = logm.getPlayerid();
 
-                networkClient = NetworkClient.getInstance(ip);
+
                 if(!pass.equals(confirm)){
                     Toast toast = Toast.makeText(getApplicationContext(), getResources().getString(R.string.비밀번호일치), Toast.LENGTH_LONG);
                     toast.show();

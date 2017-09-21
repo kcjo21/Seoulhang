@@ -67,6 +67,22 @@
     <string name="checkEmail">형식에 맞지 않는 메일주소입니다.</string>
     <string name="checkplease">ID중복확인을 해주십시오.</string>
     <string name="close_drawer">close drawerclose drawerclose drawerclose drawerclose drawer</string>
+    <string name="com_facebook_image_download_unknown_error">이미지를 다운로드하는 중 예기치 않은 오류가 발생했습니다.</string>
+    <string name="com_facebook_internet_permission_error_message">WebView에 로그인하려면 인터넷 권한이 필요합니다</string>
+    <string name="com_facebook_internet_permission_error_title">AndroidManifest 오류</string>
+    <string name="com_facebook_like_button_liked">좋아요</string>
+    <string name="com_facebook_like_button_not_liked">좋아요</string>
+    <string name="com_facebook_loading">읽어들이는 중...</string>
+    <string name="com_facebook_loginview_cancel_action">취소</string>
+    <string name="com_facebook_loginview_log_in_button">로그인</string>
+    <string name="com_facebook_loginview_log_in_button_long">Facebook으로 로그인</string>
+    <string name="com_facebook_loginview_log_out_action">로그아웃</string>
+    <string name="com_facebook_loginview_log_out_button">로그아웃</string>
+    <string name="com_facebook_loginview_logged_in_as">로그인할 이름: %1$s</string>
+    <string name="com_facebook_loginview_logged_in_using_facebook">Facebook 계정으로 로그인함</string>
+    <string name="com_facebook_send_button_text">보내기</string>
+    <string name="com_facebook_share_button_text">공유하기</string>
+    <string name="com_facebook_tooltip_default">새로운 기능! 이제 앱과 어떤 정보를 공유할지 자유롭게 선택할 수 있습니다.</string>
     <string msgid="8585111718777012708" name="common_google_play_services_enable_button">"사용 설정"</string>
     <string msgid="7045129128108380659" name="common_google_play_services_enable_text">"Google Play 서비스를 사용하도록 설정해야 <ns1:g id="APP_NAME">%1$s</ns1:g>이(가) 작동합니다."</string>
     <string msgid="3147157405986503375" name="common_google_play_services_enable_title">"Google Play 서비스 사용"</string>
@@ -85,10 +101,12 @@
     <string msgid="3441753203274453993" name="common_signin_button_text">"로그인"</string>
     <string msgid="669893613918351210" name="common_signin_button_text_long">"Google 계정으로 로그인"</string>
     <string name="email">E-mail</string>
+    <string name="facebook_app_id">130262031034086</string>
     <string name="ghkrdls">확인</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="id">ID</string>
     <string name="insert_quiz">Insert Quiz</string>
+    <string name="messenger_send_button_text">보내기</string>
     <string name="nolhang">NOLHANG</string>
     <string name="num">num</string>
     <string name="open_drawer">open draweropen draweropen draweropen draweropen draweropen drawer</string>
@@ -170,7 +188,7 @@
     <string name="최근문제">최근 문제</string>
     <string name="취소">취소</string>
     <string name="카메라켜기">                카메라 켜기</string>
-    <string name="코드를입력">아이디를 입력하세요.</string>
+    <string name="코드를입력">인증코드를 입력하세요.</string>
     <string name="코드불일치">인증코드가 일치하지 않습니다.</string>
     <string name="코드입력">인증코드를 입력해주세요.</string>
     <string name="탈퇴재확인">정말로 탈퇴하시겠습니까?</string>

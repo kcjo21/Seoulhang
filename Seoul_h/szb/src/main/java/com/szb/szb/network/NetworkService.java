@@ -4,6 +4,7 @@ import com.szb.szb.model.retrofit.FindDTO;
 import com.szb.szb.model.retrofit.HintDTO;
 import com.szb.szb.model.retrofit.InventoryDTO;
 import com.szb.szb.model.retrofit.ItemDTO;
+import com.szb.szb.model.retrofit.JoinDTO;
 import com.szb.szb.model.retrofit.PlayerDTO;
 import com.szb.szb.model.retrofit.QuestDTO;
 import com.szb.szb.model.retrofit.RankDTO;
@@ -64,10 +65,16 @@ public interface NetworkService {
     @GET("/id/{id}/password/{password}")
     Call<FindDTO> newpassword(@Path ("id") String id, @Path("password") String password);
 
-    @GET("/id/{id}/password/{password}")
-    Call<FindDTO> withdrawal(@Path ("id") String id, @Path("paasword") String password);
+    @GET("/withdrawal/id/{id}/password/{password}")
+    Call<String> withdrawal(@Path ("id") String id, @Path("password") String password);
 
-    @GET("id/{id}/password/{password}/name/{name}/email{email}")
-    Call<FindDTO> editprofile(@Path ("id") String id, @Path("password") String password, @Path("name") String name, @Path("email") String email);
+    @GET("/realwithdrawal/id/{id}")
+    Call<String> realwithdrawal(@Path("id") String id);
+
+    @GET("/editprofile/id/{id}/password/{password}/nickname/{nickname}/email/{email}")
+    Call<String> editprofile(@Path ("id") String id, @Path("password") String password, @Path("nickname") String name, @Path("email") String email);
+
+    @GET("/quiznum/id/{id}")
+    Call<List<Integer>> quiznum(@Path ("id") String id);
 
 }

@@ -47,6 +47,8 @@ public class FindPassActivity extends BaseActivity {
         Name = (EditText) findViewById(R.id.name_fpt);
         Email = (EditText) findViewById(R.id.email_fpt);
         progressBar = (ProgressBar) findViewById(R.id.progressBar);
+        String ip = ipm.getip();
+        networkClient = NetworkClient.getInstance(ip);
 
         cancel.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -77,12 +79,10 @@ public class FindPassActivity extends BaseActivity {
 
                     progressON(getResources().getString(R.string.Loading)); //응답대기 프로그레스 애니메이션:
 
-
                     String sname = Name.getText().toString();
                     String semail = Email.getText().toString();
                     String sid = Id.getText().toString();
-                    String ip = ipm.getip();
-                    networkClient = NetworkClient.getInstance(ip);
+
                     networkClient.findpassword(sname, semail, sid, new Callback<FindDTO>() {
                         @Override
                         public void onResponse(Call<FindDTO> call, Response<FindDTO> response) {

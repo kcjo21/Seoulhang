@@ -12,73 +12,6 @@
 
 
     <ImageView
-        android:id="@+id/the_sun"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        android:contentDescription=""
-        tools:ignore="ContentDescription" />
-
-    <android.support.constraint.ConstraintLayout
-        android:id="@+id/constraintLayout3"
-        android:layout_width="0dp"
-        android:layout_height="176dp"
-        android:background="@color/Green00cc66"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/title_t"
-        app:layout_constraintVertical_bias="1.0">
-
-    </android.support.constraint.ConstraintLayout>
-
-    <ImageView
-        android:id="@+id/running_man"
-        android:layout_width="60dp"
-        android:layout_height="62dp"
-        android:scaleType="fitStart"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/Login"
-        app:layout_constraintVertical_bias="0.8"
-        app:srcCompat="@android:color/background_light"
-        tools:ignore="ContentDescription" />
-
-    <ImageView
-        android:id="@+id/travel"
-        android:layout_width="142dp"
-        android:layout_height="117dp"
-        android:scaleType="fitXY"
-        app:layout_constraintBottom_toTopOf="@+id/constraintLayout3"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0"
-        tools:ignore="ContentDescription" />
-
-    <ImageView
-        android:id="@+id/title_s"
-        android:layout_width="180dp"
-        android:layout_height="70dp"
-        android:background="@drawable/title_s"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.363"
-        app:layout_constraintHorizontal_bias="0.497"
-        tools:ignore="ContentDescription" />
-
-    <ImageView
         android:id="@+id/title_t"
         android:layout_width="299dp"
         android:layout_height="133dp"
@@ -88,24 +21,22 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.154"
+        app:layout_constraintVertical_bias="0.163"
         app:layout_constraintVertical_weight="50"
-        tools:ignore="ContentDescription"
-        app:layout_constraintHorizontal_bias="0.523" />
+        tools:ignore="ContentDescription" />
 
     <Button
         android:id="@+id/Login"
-        android:layout_width="80dp"
-        android:layout_height="40dp"
+        android:layout_width="88dp"
+        android:layout_height="48dp"
         android:background="@drawable/button_on_off"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/constraintLayout3"
-        app:layout_constraintVertical_bias="0.189"
         tools:ignore="RtlHardcoded"
-        app:layout_constraintHorizontal_bias="0.498" />
+        app:layout_constraintHorizontal_bias="0.498"
+        android:layout_marginBottom="75dp" />
 
     <EditText
         android:id="@+id/loginId"
@@ -119,13 +50,12 @@
         android:textColorLink="@color/cardview_shadow_start_color"
         android:textSize="16dp"
         android:textStyle="italic"
-        app:layout_constraintBottom_toTopOf="@+id/constraintLayout3"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/title_t"
-        app:layout_constraintVertical_bias="0.623"
         tools:ignore="SpUsage"
-        app:layout_constraintHorizontal_bias="0.575" />
+        app:layout_constraintHorizontal_bias="0.497"
+        android:layout_marginTop="212dp" />
 
     <EditText
         android:id="@+id/loginPass"
@@ -144,45 +74,58 @@
         app:layout_constraintTop_toBottomOf="@+id/loginId"
         app:layout_constraintVertical_bias="0.0"
         tools:ignore="SpUsage"
-        app:layout_constraintHorizontal_bias="0.575" />
-
-    <TextView
-        android:id="@+id/join_tm"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
-        android:text="@string/회원가입"
-        android:textSize="14dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="@+id/constraintLayout3"
-        app:layout_constraintTop_toBottomOf="@+id/Login"
-        tools:ignore="SpUsage" />
+        app:layout_constraintHorizontal_bias="0.497" />
 
     <LinearLayout
-        android:layout_width="210dp"
+        android:layout_width="0dp"
         android:layout_height="20dp"
         android:layout_marginBottom="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginTop="8dp"
+        android:gravity="center_vertical|center_horizontal"
         android:orientation="horizontal"
         android:weightSum="100"
-        app:layout_constraintBottom_toBottomOf="@+id/constraintLayout3"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/join_tm"
-        app:layout_constraintVertical_bias="0.13">
+        app:layout_constraintTop_toBottomOf="@+id/Login"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:id="@+id/linearLayout2">
+
+        <TextView
+            android:id="@+id/join_tm"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="30"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="@string/회원가입"
+            android:textSize="14dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            tools:ignore="SpUsage"
+            tools:layout_editor_absoluteY="538dp" />
+
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="|"
+            android:textSize="14dp"
+            app:layout_constraintBottom_toBottomOf="@+id/constraintLayout3"
+            app:layout_constraintRight_toLeftOf="@+id/find_pass_t"
+            app:layout_constraintTop_toBottomOf="@+id/join_tm"
+            app:layout_constraintVertical_bias="0.142"
+            tools:ignore="HardcodedText,RtlHardcoded,SpUsage" />
 
         <TextView
             android:id="@+id/find_id"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="45"
+            android:layout_weight="30"
             android:gravity="center_vertical|center_horizontal"
             android:text="@string/아이디찾기"
             android:textSize="14dp"
@@ -196,20 +139,21 @@
             android:id="@+id/textView5"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="10"
+            android:layout_weight="1"
             android:gravity="center_vertical|center_horizontal"
             android:text="|"
+            android:textSize="14dp"
             app:layout_constraintBottom_toBottomOf="@+id/constraintLayout3"
             app:layout_constraintRight_toLeftOf="@+id/find_pass_t"
             app:layout_constraintTop_toBottomOf="@+id/join_tm"
             app:layout_constraintVertical_bias="0.142"
-            tools:ignore="HardcodedText,RtlHardcoded" />
+            tools:ignore="HardcodedText,RtlHardcoded,SpUsage" />
 
         <TextView
             android:id="@+id/find_pass_t"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="45"
+            android:layout_weight="30"
             android:gravity="center_vertical|center_horizontal"
             android:text="@string/비밀번호찾기"
             android:textSize="14dp"
@@ -220,5 +164,26 @@
             tools:ignore="RtlHardcoded,SpUsage" />
 
     </LinearLayout>
+
+    <Button
+        android:id="@+id/bt_facebook"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Button"
+        app:layout_constraintBottom_toTopOf="@+id/loginId"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title_t"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        tools:ignore="HardcodedText" />
+
+
+
+
 
 </android.support.constraint.ConstraintLayout>
