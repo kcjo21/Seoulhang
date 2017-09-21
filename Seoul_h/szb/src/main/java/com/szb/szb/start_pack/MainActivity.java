@@ -3,13 +3,18 @@ package com.szb.szb.start_pack;
 
 import android.animation.ObjectAnimator;
 import android.content.Intent;
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
+import android.content.pm.Signature;
 import android.os.Bundle;
+import android.util.Base64;
 import android.util.Log;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 import com.facebook.GraphRequest;
@@ -22,7 +27,6 @@ import com.facebook.FacebookException;
 import com.facebook.FacebookSdk;
 import com.facebook.login.LoginManager;
 import com.facebook.login.LoginResult;
-import com.facebook.login.widget.LoginButton;
 import com.szb.szb.BaseActivity;
 import com.szb.szb.Home.BackPressCloseHandler;
 import com.szb.szb.Home.Home_Main;
@@ -30,6 +34,7 @@ import com.szb.szb.R;
 import com.szb.szb.model.retrofit.PlayerDTO;
 import com.szb.szb.network.Ipm;
 import com.szb.szb.network.NetworkClient;
+import com.szb.szb.start_pack.loginpackage.Dialog_Login;
 import com.szb.szb.start_pack.loginpackage.Logm;
 import com.szb.szb.start_pack.registerpack.FindIdActivity;
 import com.szb.szb.start_pack.registerpack.FindPassActivity;
@@ -46,13 +51,14 @@ import retrofit2.Response;
 
 
 public class MainActivity extends BaseActivity {
+    LinearLayout  text_log;
     Button Login;
-    TextView loginId;
+    Button set;
+    EditText loginId_tv;
     TextView join;
     TextView findid;
     TextView findPass;
     EditText password;
-    Button faceboklogin;
     String loginid;
     String loginpass;
     NetworkClient networkClient;
@@ -60,8 +66,7 @@ public class MainActivity extends BaseActivity {
     Logm logm;
     private BackPressCloseHandler backPressCloseHandler;
     CallbackManager callbackManager;
-    LoginButton loginButton;
-
+    private Dialog_Login dialog_login;
 
 
     public static final int ran_bg[] = {
@@ -78,80 +83,139 @@ public class MainActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
-        FacebookSdk.sdkInitialize(getApplicationContext());
+
+        FacebookSdk.sdkInitialize(this);
         setContentView(R.layout.activity_main);
         callbackManager=CallbackManager.Factory.create();
-        loginId = (TextView) findViewById(R.id.loginId);
+        text_log = (LinearLayout) findViewById(R.id.text_log_lay);
+        loginId_tv = (EditText) findViewById(R.id.loginId);
         join = (TextView) findViewById(R.id.join_tm);
         findid = (TextView) findViewById(R.id.find_id);
         findPass = (TextView) findViewById(R.id.find_pass_t);
         Login = (Button) findViewById(R.id.Login);
         password = (EditText) findViewById(R.id.loginPass);
-        faceboklogin = (Button) findViewById(R.id.bt_facebook);
+        set = (Button) findViewById(R.id.bt_set);
         ipm = new Ipm();
         logm = new Logm();
+        backPressCloseHandler = new BackPressCloseHandler(this);
+        Login = (Button) findViewById(R.id.Login);
 
+        LoginManager.getInstance().logOut();
 
-      /*  loginButton = (LoginButton)findViewById(R.id.fb_bt); //페이스북 로그인 버튼
-        //유저 정보, 친구정보, 이메일 정보등을 수집하기 위해서는 허가(퍼미션)를 받아야 합니다.
-        loginButton.setReadPermissions("public_profile", "user_friends","email");
-
-
-        loginButton.registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
+        dialog_login = new Dialog_Login(this, new Dialog_Login.DialogListener() {
             @Override
-            public void onSuccess(LoginResult loginResult) { //로그인 성공시 호출되는 메소드
-                Log.e("토큰",loginResult.getAccessToken().getToken());
-                Log.e("유저아이디",loginResult.getAccessToken().getUserId());
-                Log.e("퍼미션 리스트",loginResult.getAccessToken().getPermissions()+"");
+            public void customDialogListener(int loginType) {
 
-                //loginResult.getAccessToken() 정보를 가지고 유저 정보를 가져올수 있습니다.
-                GraphRequest request =GraphRequest.newMeRequest(loginResult.getAccessToken() ,
-                        new GraphRequest.GraphJSONObjectCallback() {
-                            @Override
-                            public void onCompleted(JSONObject object, GraphResponse response) {
-                                try {
-                                    Log.e("user profile",object.toString());
-                                } catch (Exception e) {
-                                    e.printStackTrace();
+
+                if(loginType==0) {
+
+                    //LoginManager - 요청된 읽기 또는 게시 권한으로 페이스북 로그인 절차를 시작합니다.
+                    LoginManager.getInstance().logInWithReadPermissions(MainActivity.this,
+                            Arrays.asList("public_profile", "user_friends"));
+                    LoginManager.getInstance().registerCallback(callbackManager,
+                            new FacebookCallback<LoginResult>() {
+                                @Override
+                                public void onSuccess(LoginResult loginResult) {
+                                    GraphRequest request = GraphRequest.newMeRequest(loginResult.getAccessToken(),
+                                            new GraphRequest.GraphJSONObjectCallback() {
+                                                @Override
+                                                public void onCompleted(JSONObject object, GraphResponse response) {
+                                                    try {
+                                                        logm.setPlayerid(object.getString("id"));
+                                                        Log.d("페이스북 계정",logm.getPlayerid());
+                                                    }
+                                                    catch (Exception e){
+                                                        e.printStackTrace();
+                                                    }
+                                                }
+                                            });
+                                    Bundle parameters = new Bundle();
+                                    parameters.putString("fields","id,name,email");
+                                    request.setParameters(parameters);
+                                    request.executeAsync();
+                                    dialog_login.dismiss();
+                                    text_log.setVisibility(View.GONE);
+                                    Login.setVisibility(View.VISIBLE);
+                                    Log.e("페이스북 계정 연동 : ", "성공");
                                 }
-                            }
-                        });
-                request.executeAsync();
-            }
 
-            @Override
-            public void onError(FacebookException error) { }
+                                @Override
+                                public void onCancel() {
 
-            @Override
-            public void onCancel() { }
-        });*/
+                                    Log.e("페이스북 계정 연동 : ", "취소됨");
+                                }
+                                @Override
+                                public void onError(FacebookException exception) {
+                                    Log.e("페이스북 계정 연동 : ", "에러 " + exception.getLocalizedMessage());
+                                }
+                    });
+                }
+                else if(loginType==1){
+                    text_log.setVisibility(View.GONE);
+                    Login.setVisibility(View.VISIBLE);
+                    dialog_login.dismiss();
+                }
+                else{
+                    dialog_login.dismiss();
+                }
 
 
-        faceboklogin.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                //LoginManager - 요청된 읽기 또는 게시 권한으로 로그인 절차를 시작합니다.
-                LoginManager.getInstance().logInWithReadPermissions(MainActivity.this,
-                        Arrays.asList("public_profile", "user_friends"));
-                LoginManager.getInstance().registerCallback(callbackManager,
-                        new FacebookCallback<LoginResult>() {
-                            @Override
-                            public void onSuccess(LoginResult loginResult) {
-                                Log.e("onSuccess", "onSuccess");
-                            }
 
-                            @Override
-                            public void onCancel() {
-                                Log.e("onCancel", "onCancel");
-                            }
-
-                            @Override
-                            public void onError(FacebookException exception) {
-                                Log.e("onError", "onError " + exception.getLocalizedMessage());
-                            }
-                        });
             }
         });
+
+        dialog_login.show();
+        dialog_login.setCancelable(false);
+
+
+        set.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {                                   //게임자체 계정으로 로그인합니다.
+                loginid = loginId_tv.getText().toString();
+                loginpass = password.getText().toString();
+                String ip = ipm.getip();
+                logm.setPlayerid(loginid);
+
+                text_log.setVisibility(View.GONE);
+                Login.setVisibility(View.VISIBLE);
+                networkClient = NetworkClient.getInstance(ip);
+                Log.e("ACC", "TEAM id IS !!! " + loginid);
+               // progressON(getResources().getString(R.string.Loading)); //응답대기 애니메이션
+
+                networkClient.login(loginid, loginpass, new Callback<PlayerDTO>() {
+                    @Override
+                    public void onResponse(Call<PlayerDTO> call, Response<PlayerDTO> response) {
+                        Log.e("아이디", loginid);
+                        Log.e("비밀번호", loginpass);
+                        switch (response.code()) {
+                            case 200:
+                                text_log.setVisibility(View.GONE);
+                                Login.setVisibility(View.VISIBLE);
+                                progressOFF();
+                                break;
+
+                            default:
+                                Log.e("TAG", "다른 아이디");
+                                progressOFF();
+                                Toast toast = Toast.makeText(getApplicationContext(), getResources().getString(R.string.please_check_id), Toast.LENGTH_LONG);
+                                toast.show();
+                                break;
+                        }
+                    }
+
+                    @Override
+                    public void onFailure(Call<PlayerDTO> call, Throwable t) {
+                        Log.e("ACC", "s?? " + t.getMessage());
+                        progressOFF();
+                        Toast toast = Toast.makeText(getApplicationContext(), getResources().getString(R.string.can_not_connent_to_server), Toast.LENGTH_LONG);
+                        toast.show();
+
+                    }
+                });
+            }
+        });
+
+
 
 
 
@@ -185,67 +249,13 @@ public class MainActivity extends BaseActivity {
 
             @Override
             public void onClick(View view) {
-                loginid = loginId.getText().toString();
-                loginpass = password.getText().toString();
-                String ip = ipm.getip();
-                logm.setPlayerid(loginid);
-                networkClient = NetworkClient.getInstance(ip);
-                Log.e("ACC", "TEAM id IS !!! " + loginid);
-                // progressON(getResources().getString(R.string.Loading)); //응답대기 애니메이션
-
                 Intent intent = new Intent(MainActivity.this, Home_Main.class);
                 startActivity(intent);
                 finish();
-
-
-                networkClient.login(loginid, loginpass, new Callback<PlayerDTO>() {
-                    @Override
-                    public void onResponse(Call<PlayerDTO> call, Response<PlayerDTO> response) {
-                        Log.e("아이디", loginid);
-                        Log.e("비밀번호", loginpass);
-                        switch (response.code()) {
-                            case 200:
-                                //json 데이터를 파싱하는 것을 수월하게 해준다.
-                                Log.e("case200", loginid);
-
-                                PlayerDTO playerDTO = response.body();
-
-                                Log.e("TAG", "team dto : " + playerDTO.toString());
-                                // teamDTO를 이용하여 realm에 team 데이터를 생성한다.
-                                Intent intent = new Intent(MainActivity.this, Home_Main.class);
-                                startActivity(intent);
-                                finish();
-                                break;
-
-                            default:
-                                Log.e("TAG", "다른 아이디");
-                                progressOFF();
-                                Toast toast = Toast.makeText(getApplicationContext(), getResources().getString(R.string.please_check_id), Toast.LENGTH_LONG);
-                                toast.show();
-                                break;
-                        }
-                    }
-
-                    @Override
-                    public void onFailure(Call<PlayerDTO> call, Throwable t) {
-                        Log.e("ACC", "s?? " + t.getMessage());
-                        progressOFF();
-                        Toast toast = Toast.makeText(getApplicationContext(), getResources().getString(R.string.can_not_connent_to_server), Toast.LENGTH_LONG);
-                        toast.show();
-
-                    }
-                });
             }
         });
 
 
-        // Log.e("TAG", "login???? : " + loginmanager.toString());
-
-
-
-
-        backPressCloseHandler = new BackPressCloseHandler(this);
-        Login = (Button) findViewById(R.id.Login);
     }
 
     @Override

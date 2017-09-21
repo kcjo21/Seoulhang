@@ -81,20 +81,20 @@ public final class R {
         public static final int button = 0x7f0d0056;
         public static final int center = 0x7f0d002f;
         public static final int dark = 0x7f0d004e;
-        public static final int email = 0x7f0d00be;
+        public static final int email = 0x7f0d00c2;
         public static final int hybrid = 0x7f0d0043;
         public static final int icon_only = 0x7f0d004b;
         public static final int light = 0x7f0d004f;
         public static final int none = 0x7f0d0017;
         public static final int normal = 0x7f0d0019;
-        public static final int progressBar = 0x7f0d015d;
+        public static final int progressBar = 0x7f0d0162;
         public static final int radio = 0x7f0d0079;
         public static final int satellite = 0x7f0d0044;
         public static final int standard = 0x7f0d004c;
         public static final int terrain = 0x7f0d0045;
-        public static final int text = 0x7f0d0182;
-        public static final int text2 = 0x7f0d0180;
-        public static final int toolbar = 0x7f0d00cb;
+        public static final int text = 0x7f0d0187;
+        public static final int text2 = 0x7f0d0185;
+        public static final int toolbar = 0x7f0d00cf;
         public static final int wide = 0x7f0d004d;
         public static final int wrap_content = 0x7f0d002c;
     }

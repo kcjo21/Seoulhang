@@ -5,8 +5,6 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.os.Bundle;
-import android.os.Message;
-import android.support.constraint.ConstraintLayout;
 import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.view.ViewPager;
@@ -14,15 +12,11 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AlertDialog;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.text.InputType;
-import android.text.method.PasswordTransformationMethod;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -35,7 +29,6 @@ import com.szb.szb.BaseActivity;
 import com.szb.szb.GameActivity;
 import com.szb.szb.Home.frag.Frag_Home;
 import com.szb.szb.Home.frag.Frag_Info;
-import com.szb.szb.Home.frag.Frag_Map;
 import com.szb.szb.Home.frag.Frag_Quiz;
 import com.szb.szb.Home.frag.Frag_Rank;
 import com.szb.szb.R;
@@ -44,13 +37,12 @@ import com.szb.szb.network.Ipm;
 import com.szb.szb.network.NetworkClient;
 import com.szb.szb.start_pack.SettingActivity;
 import com.szb.szb.start_pack.TutorialActivity;
-import com.szb.szb.start_pack.loginpackage.Dialog_grade;
+import com.szb.szb.start_pack.loginpackage.Dialog_Grade;
 import com.szb.szb.start_pack.loginpackage.Logm;
 import com.szb.szb.start_pack.registerpack.EditprofileActivity;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.logging.Handler;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -77,7 +69,7 @@ public class Home_Main extends BaseActivity {
     TextView player_grade;
     TextView player_point_home;
     TextView player_name;
-    private Dialog_grade dialog_grade;
+    private Dialog_Grade dialog_grade;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -149,7 +141,7 @@ public class Home_Main extends BaseActivity {
         grade.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                dialog_grade = new Dialog_grade(Home_Main.this,commitlistener);
+                dialog_grade = new Dialog_Grade(Home_Main.this,commitlistener);
                 dialog_grade.show();
 
             }
