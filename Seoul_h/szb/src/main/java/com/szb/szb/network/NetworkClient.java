@@ -99,8 +99,8 @@ public class NetworkClient {
         call.enqueue(callback);
     }
 
-    public void getjoin(String player, String password, String name, String gender, Integer age, String email, Callback<String> callback){
-        Call<String> call = service.getjoin(player, password, name, gender, age, email);
+    public void getjoin(String player, String password, String name, String gender, Integer age, String email, String logininfo, Callback<String> callback){
+        Call<String> call = service.getjoin(player, password, name, gender, age, email, logininfo);
         call.enqueue(callback);
     }
     public void checkid(String player,Callback<String> callback){
@@ -140,6 +140,14 @@ public class NetworkClient {
 
     public void quiznum(String id, Callback<List<Integer>> callback){
         Call<List<Integer>> call = service.quiznum(id);
+        call.enqueue(callback);
+    }
+    public void startgame(String id, Callback<Integer> callback){
+        Call<Integer> call = service.startgame(id);
+        call.enqueue(callback);
+    }
+    public void newnickname(String id, String nickname, Callback<String> callback){
+        Call<String> call = service.newnickname(id, nickname);
         call.enqueue(callback);
     }
 }

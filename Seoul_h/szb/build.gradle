@@ -17,6 +17,7 @@ allprojects {
     }
 }
 
+
 apply plugin: 'com.android.application'
 apply plugin: 'realm-android'
 
@@ -29,6 +30,7 @@ dependencies {
     compile 'com.android.support:recyclerview-v7'
     compile project(':trafficsubway-release')
     compile project(':trafficsubway-release')
+    compile group: 'com.kakao.sdk', name: 'usermgmt', version: project.KAKAO_SDK_VERSION
     compile 'com.android.support:appcompat-v7:25.3.1'
     compile 'com.android.support:design:25.3.1'
     compile 'com.squareup.retrofit2:retrofit:2.1.0'

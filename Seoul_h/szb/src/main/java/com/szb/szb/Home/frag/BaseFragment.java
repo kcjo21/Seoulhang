@@ -1,11 +1,8 @@
 package com.szb.szb.Home.frag;
 
-import android.app.Fragment;
 import android.support.v7.app.AppCompatDialog;
 
-
-import com.szb.szb.BaseApplication;
-import com.szb.szb.R;
+import com.szb.szb.RealmInit;
 
 /**
  * Created by cwh62 on 2017-09-10.
@@ -23,7 +20,7 @@ public class BaseFragment extends android.support.v4.app.Fragment{
     public BaseFragment() {
     }
 
-    public void progressON() { BaseApplication.getInstance().progressON(getActivity(), null); }
-    public void progressON(String message) { BaseApplication.getInstance().progressON(getActivity(), message); }
-    public void progressOFF() { BaseApplication.getInstance().progressOFF(); }
+    public void progressON() { RealmInit.getInstance().progressON(getActivity(), null); }
+    public void progressON(String message) { RealmInit.getInstance().progressON(getActivity(), message); }
+    public void progressOFF() { RealmInit.getInstance().progressOFF(); }
 }

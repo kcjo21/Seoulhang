@@ -12,6 +12,10 @@
         "source": "C:\\Users\\cwh62\\.android\\build-cache\\95a0679ee93dc8c53637a6018afbb491f373d077\\output\\res\\drawable-hdpi\\com_facebook_tooltip_black_background.9.png"
     },
     {
+        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\kakaostory_icon.png",
+        "source": "C:\\Users\\cwh62\\.android\\build-cache\\9f3a721d193dd67ce74a7384c0554092457fb3b3\\output\\res\\drawable-hdpi\\kakaostory_icon.png"
+    },
+    {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\com_facebook_button_send_icon.png",
         "source": "C:\\Users\\cwh62\\.android\\build-cache\\95a0679ee93dc8c53637a6018afbb491f373d077\\output\\res\\drawable-hdpi\\com_facebook_button_send_icon.png"
     },
@@ -40,12 +44,20 @@
         "source": "C:\\Users\\cwh62\\.android\\build-cache\\95a0679ee93dc8c53637a6018afbb491f373d077\\output\\res\\drawable-hdpi\\com_facebook_button_like_icon_selected.png"
     },
     {
+        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\kakaoaccount_icon.png",
+        "source": "C:\\Users\\cwh62\\.android\\build-cache\\9f3a721d193dd67ce74a7384c0554092457fb3b3\\output\\res\\drawable-hdpi\\kakaoaccount_icon.png"
+    },
+    {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\messenger_bubble_small_blue.png",
         "source": "C:\\Users\\cwh62\\.android\\build-cache\\95a0679ee93dc8c53637a6018afbb491f373d077\\output\\res\\drawable-hdpi\\messenger_bubble_small_blue.png"
     },
     {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\messenger_bubble_small_white.png",
         "source": "C:\\Users\\cwh62\\.android\\build-cache\\95a0679ee93dc8c53637a6018afbb491f373d077\\output\\res\\drawable-hdpi\\messenger_bubble_small_white.png"
+    },
+    {
+        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\kakaotalk_icon.png",
+        "source": "C:\\Users\\cwh62\\.android\\build-cache\\9f3a721d193dd67ce74a7384c0554092457fb3b3\\output\\res\\drawable-hdpi\\kakaotalk_icon.png"
     },
     {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\com_facebook_tooltip_black_topnub.png",

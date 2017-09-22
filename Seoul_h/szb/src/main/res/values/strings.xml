@@ -133,5 +133,8 @@
     <string name="알림">알림</string>
     <string name="facebook_app_id">130262031034086</string>
     <string name="회원정보수정완료">회원정보수정이 완료되었습니다!</string>
+    <string name="kakao_app_key">45d3abc0fba429258e010957df473e42</string>
+    <string name="닉네임입력">닉네임을 입력해주세요.</string>
+    <string name="같은닉네임존재">이미 사용중인 닉네임입니다.</string>
 
 </resources>

@@ -185,8 +185,9 @@ public class JoinActivity extends BaseActivity {
                     String sname = name.getText().toString();
                     int sage = Integer.parseInt(age.getText().toString());
                     String semail = email.getText().toString();
+                    String logintype = "normal";
 
-                    networkClient.getjoin(sid, spass, sname, gender, sage, semail, new Callback<String>() {
+                    networkClient.getjoin(sid, spass, sname, gender, sage, semail, logintype, new Callback<String>() {
                         @Override
                         public void onResponse(Call<String> call, Response<String> response) {
                             if (spass.equals(scpass)) {

@@ -2,6 +2,7 @@ package com.szb.szb.mappackage;
 
 import android.Manifest;
 import android.annotation.TargetApi;
+import android.app.Activity;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -15,6 +16,7 @@ import android.location.Location;
 import android.location.LocationManager;
 import android.net.Uri;
 import android.os.Build;
+import android.os.Looper;
 import android.provider.Settings;
 import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
@@ -42,6 +44,8 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.szb.szb.BaseActivity;
+import com.szb.szb.Home.BackPressCloseHandler;
+import com.szb.szb.Home.Home_Main;
 import com.szb.szb.R;
 import com.szb.szb.network.Ipm;
 import com.szb.szb.network.NetworkClient;
@@ -51,6 +55,7 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
@@ -64,7 +69,7 @@ public class GooglemapsActivity extends BaseActivity
         implements OnMapReadyCallback,
         GoogleApiClient.ConnectionCallbacks,
         GoogleApiClient.OnConnectionFailedListener,
-        LocationListener{
+        LocationListener {
 
 
     private GoogleApiClient mGoogleApiClient = null;
@@ -83,6 +88,8 @@ public class GooglemapsActivity extends BaseActivity
     Location mCurrentLocatiion;
     boolean mMoveMapByUser = true;
     boolean mMoveMapByAPI = true;
+    public BackPressCloseHandler backPressCloseHandler;
+    private long backKeyPressedTime = 0;
 
     NetworkClient networkClient;
     Ipm ipm;
@@ -90,8 +97,7 @@ public class GooglemapsActivity extends BaseActivity
 
     public static final String PATH = "data/data/com.szb.szb/";
     public static final String DB_NAME = "new_gps.db";
-    ArrayList<GPSDATA> Al = new ArrayList<GPSDATA>();
-
+    private static ArrayList<GPSDATA> Al = new ArrayList<>();
     private List<Integer> quizList;
 
     LocationRequest locationRequest = new LocationRequest()
@@ -118,25 +124,23 @@ public class GooglemapsActivity extends BaseActivity
         final String sid = logm.getPlayerid();
         final String ip = ipm.getip();
         networkClient = NetworkClient.getInstance(ip);
+        backPressCloseHandler = new BackPressCloseHandler(this);
 
-        Log.e("QUIZ NUM","1");
 
         networkClient.quiznum(sid, new Callback<List<Integer>>() {
             @Override
             public void onResponse(Call<List<Integer>> call, Response<List<Integer>> response) {
-                switch (response.code()){
+                switch (response.code()) {
                     case 200:
-                        Log.d("QUIZ NUM : ","2");
-                        quizList=response.body();
-                        String [] num={};
-                        for(int i=0;i<quizList.size();i++) {
-                            num[i]=quizList.get(i).toString();
-                            Log.d("QUIZ NUM : ", num[i]);
+                        quizList = response.body();
+                        for(int i=0;i<quizList.size();i++){
+                            Log.e("확인1234",quizList.get(i).toString());
                         }
-                        quiznumParse(num);
+                        quiznumParse(quizList);                 //획득한 타겟리스트를 quiznumParse로 전달.
+                        Log.d("마커", Al.get(60).region_name + "123");
                         break;
                     default:
-                        Log.e("Error : ","데이터베이스를 불러올 수 없습니다.");
+                        Log.e("Error : ", "데이터베이스를 불러올 수 없습니다.");
                         break;
                 }
             }
@@ -147,12 +151,6 @@ public class GooglemapsActivity extends BaseActivity
                 toast.show();
             }
         });
-
-        String [] num = {"1","2","3","512","322"};
-
-        quiznumParse(num);
-
-
 
 
         mGoogleApiClient = new GoogleApiClient.Builder(this)
@@ -198,7 +196,7 @@ public class GooglemapsActivity extends BaseActivity
 
             Log.d(TAG, "startLocationUpdates : call showDialogForLocationServiceSetting");
             showDialogForLocationServiceSetting();
-        }else {
+        } else {
 
             if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED
                     && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
@@ -216,24 +214,18 @@ public class GooglemapsActivity extends BaseActivity
     }
 
 
-
     private void stopLocationUpdates() {
 
-        Log.d(TAG,"stopLocationUpdates : LocationServices.FusedLocationApi.removeLocationUpdates");
+        Log.d(TAG, "stopLocationUpdates : LocationServices.FusedLocationApi.removeLocationUpdates");
         LocationServices.FusedLocationApi.removeLocationUpdates(mGoogleApiClient, this);
         mRequestingLocationUpdates = false;
     }
 
 
-
     @Override
     public void onMapReady(GoogleMap googleMap) {
 
-        Log.d(TAG, "onMapReady :");
-
         mGoogleMap = googleMap;
-
-
         //런타임 퍼미션 요청 대화상자나 GPS 활성 요청 대화상자 보이기전에
         //지도의 초기위치를 서울로 이동
         setDefaultLocation();
@@ -241,12 +233,12 @@ public class GooglemapsActivity extends BaseActivity
         //mGoogleMap.getUiSettings().setZoomControlsEnabled(false);
         mGoogleMap.getUiSettings().setMyLocationButtonEnabled(true);
         mGoogleMap.animateCamera(CameraUpdateFactory.zoomTo(15));
-        mGoogleMap.setOnMyLocationButtonClickListener(new GoogleMap.OnMyLocationButtonClickListener(){
+        mGoogleMap.setOnMyLocationButtonClickListener(new GoogleMap.OnMyLocationButtonClickListener() {
 
             @Override
             public boolean onMyLocationButtonClick() {
 
-                Log.d( TAG, "onMyLocationButtonClick : 위치에 따른 카메라 이동 활성화");
+                Log.d(TAG, "onMyLocationButtonClick : 위치에 따른 카메라 이동 활성화");
                 mMoveMapByAPI = true;
                 return true;
             }
@@ -256,7 +248,7 @@ public class GooglemapsActivity extends BaseActivity
             @Override
             public void onMapClick(LatLng latLng) {
 
-                Log.d( TAG, "onMapClick :");
+                Log.d(TAG, "onMapClick :");
             }
         });
 
@@ -265,7 +257,7 @@ public class GooglemapsActivity extends BaseActivity
             @Override
             public void onCameraMoveStarted(int i) {
 
-                if (mMoveMapByUser == true && mRequestingLocationUpdates){
+                if (mMoveMapByUser == true && mRequestingLocationUpdates) {
 
                     Log.d(TAG, "onCameraMove : 위치에 따른 카메라 이동 비활성화");
                     mMoveMapByAPI = false;
@@ -285,17 +277,15 @@ public class GooglemapsActivity extends BaseActivity
 
             }
         });
-
-        for(int i = 0; i<Al.size();i++){
-            MarkerOptions makeroptions = new MarkerOptions();
+        MarkerOptions makeroptions = new MarkerOptions();
+        for (int i = 0; i < Al.size(); i++) {
             String region_name = Al.get(i).region_name;
             double latitude = Al.get(i).latitude;
             double longitude = Al.get(i).longitude;
-            makeroptions.position(new LatLng(latitude,longitude)).title(region_name);
+            makeroptions.position(new LatLng(latitude, longitude)).title(region_name);
             mGoogleMap.addMarker(makeroptions);
         }
     }
-
 
     @Override
     public void onLocationChanged(Location location) {
@@ -349,7 +339,7 @@ public class GooglemapsActivity extends BaseActivity
     public void onConnected(Bundle connectionHint) {
 
 
-        if ( mRequestingLocationUpdates == false ) {
+        if ( !mRequestingLocationUpdates ) {
 
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
 
@@ -527,7 +517,7 @@ public class GooglemapsActivity extends BaseActivity
             Log.d(TAG, "checkPermissions : 퍼미션 가지고 있음");
 
 
-            if ( mGoogleApiClient.isConnected() == false) {
+            if ( !mGoogleApiClient.isConnected()) {
 
                 Log.d(TAG, "checkPermissions : 퍼미션 가지고 있음");
                 mGoogleApiClient.connect();
@@ -548,7 +538,7 @@ public class GooglemapsActivity extends BaseActivity
             if (permissionAccepted) {
 
 
-                if ( mGoogleApiClient.isConnected() == false) {
+                if (!mGoogleApiClient.isConnected()) {
 
                     Log.d(TAG, "onRequestPermissionsResult : mGoogleApiClient connect");
                     mGoogleApiClient.connect();
@@ -653,7 +643,7 @@ public class GooglemapsActivity extends BaseActivity
                         Log.d(TAG, "onActivityResult : 퍼미션 가지고 있음");
 
 
-                        if ( mGoogleApiClient.isConnected() == false ) {
+                        if (!mGoogleApiClient.isConnected()) {
 
                             Log.d( TAG, "onActivityResult : mGoogleApiClient connect ");
                             mGoogleApiClient.connect();
@@ -666,31 +656,25 @@ public class GooglemapsActivity extends BaseActivity
         }
     }
 
-public void quiznumParse(String[] quiznum){
+public void quiznumParse(List<Integer> squizList){
     SQLiteDatabase db = SQLiteDatabase.openDatabase(PATH+"databases/"+DB_NAME,null, SQLiteDatabase.OPEN_READONLY);
     Cursor c = db.query("GPSDATA",  null, null, null, null, null, null);
     boolean already_have = false;
 
     while(c.moveToNext()) {
         String region_name = c.getString(c.getColumnIndex("station_name"));
-        String quiz_num = c.getString(c.getColumnIndex("region_code"));
+        int quiz_num = Integer.parseInt(c.getString(c.getColumnIndex("region_code")));
         double latitude = c.getDouble(c.getColumnIndex("lat"));
         double longitude = c.getDouble(c.getColumnIndex("long"));
 
-        for (String qn:quiznum) {      //이미 얻은 타겟이 있다면 리스트에 추가하지 않는다.
-            if(qn.equals(quiz_num)){
+        for (int i= 0 ; i<squizList.size();i++) {      //이미 얻은 타겟이 있다면 리스트에 추가하지 않는다.
+            if(squizList.get(i).equals(quiz_num)){
                 already_have = true;
             }
         }
 
         if(!already_have) {
-            GPSDATA g = new GPSDATA();
-            g.region_name = region_name;
-            g.quiz_num = quiz_num;
-            g.latitude = latitude;
-            g.longitude = longitude;
-            Al.add(g);
-            Log.d("DB확인",g.region_name+" "+g.quiz_num+" "+g.latitude.toString()+ " "+ g.longitude.toString());
+            Al.add(new GPSDATA(region_name,quiz_num,latitude,longitude));
 
         }
         already_have = false;
@@ -724,11 +708,37 @@ public void initialize_db(Context context){
 
 }
 
-private class GPSDATA{
-    String region_name = "";
-    String quiz_num = "";
-    Double latitude;
-    Double longitude;
-}
+    private class GPSDATA{
+        String region_name = "";
+        int quiz_num;
+        Double latitude;
+        Double longitude;
+        private GPSDATA(String region_name, int quiz_num,Double latitude, Double longitude){
+            this.region_name = region_name;
+            this.quiz_num = quiz_num;
+            this.latitude = latitude;
+            this.longitude = longitude;
+        }
+    }
+
+    @Override
+    public void onBackPressed() {
+        Toast toast = new Toast(getApplicationContext());
+
+        if (System.currentTimeMillis() > backKeyPressedTime + 2000) {
+            backKeyPressedTime = System.currentTimeMillis();
+            toast = Toast.makeText(getApplicationContext(), "한번 더 누르시면 종료됩니다.", Toast.LENGTH_SHORT); //백키 토스트 출력
+            toast.show();
+            return;
+        }
+        if (System.currentTimeMillis() <= backKeyPressedTime + 2000) {
+            Intent intent = new Intent(GooglemapsActivity.this,Home_Main.class);
+            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
+            startActivity(intent);
+            finish();
+            toast.cancel();
+        }
+    }
+
 
 }

@@ -132,4 +132,8 @@
     <string name="GPS퍼미션">Access to location information must be granted to use the map.</string>
     <string name="알림">Alert</string>
     <string name="facebook_app_id">130262031034086</string>
+    <string name="회원정보수정완료">Profile modification has been completed!</string>
+    <string name="kakao_app_key">45d3abc0fba429258e010957df473e42</string>
+    <string name="닉네임입력">Please enter your nickname.</string>
+    <string name="같은닉네임존재">" The nickname you entered is already in use."</string>
 </resources>

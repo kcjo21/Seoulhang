@@ -234,6 +234,7 @@ public class Frag_Home extends BaseFragment {
             @Override
             public void onClick(View v) {
                 final Thread t = new Thread(new Runnable() {
+                    Looper mLoop;
                     @Override
                     public void run() { // Thread 로 작업할 내용을 구현
                         Looper.prepare();
@@ -244,9 +245,11 @@ public class Frag_Home extends BaseFragment {
                             public void run() {
                                 Intent intent = new Intent(getActivity(),GooglemapsActivity.class);
                                 startActivity(intent);
+                                getActivity().finish();
                             }
                         });
                         Looper.loop();
+                        handler.getLooper().quit();
                     }
                 });
                 t.start(); // 쓰레드 시작i

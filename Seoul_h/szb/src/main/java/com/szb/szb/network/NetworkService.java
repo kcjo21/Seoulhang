@@ -47,8 +47,9 @@ public interface NetworkService {
     @GET("/setting_language/{player}/language/{language}")
     Call <Integer> setlanguage(@Path("player") String player, @Path("language") int language);
 
-    @GET("/id/{player}/pass/{password}/name/{name}/gender/{gender}/age/{age}/email/{email}")
-    Call <String> getjoin(@Path("player") String player, @Path("password") String password, @Path("name") String name, @Path("gender") String gender, @Path("age") Integer age, @Path("email") String email);
+    @GET("/id/{player}/pass/{password}/name/{name}/gender/{gender}/age/{age}/email/{email}/logininfo/{logininfo}")
+    Call <String> getjoin(@Path("player") String player, @Path("password") String password, @Path("name") String name,
+                          @Path("gender") String gender, @Path("age") Integer age, @Path("email") String email, @Path("logininfo") String logininfo);
 
     @GET("/checkid/{player}")
     Call<String> checkid(@Path("player") String player);
@@ -76,5 +77,11 @@ public interface NetworkService {
 
     @GET("/quiznum/id/{id}")
     Call<List<Integer>> quiznum(@Path ("id") String id);
+
+    @GET("/startgame/id/{id}")
+    Call<Integer> startgame(@Path ("id") String id);
+
+    @GET("/newnickname/id/{id}/nickname/{nickname}")
+    Call<String> newnickname(@Path("id") String id, @Path ("nickname") String nickname);
 
 }

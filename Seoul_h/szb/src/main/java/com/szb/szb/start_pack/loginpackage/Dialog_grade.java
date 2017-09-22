@@ -13,7 +13,7 @@ import com.szb.szb.R;
  * Created by cwh62 on 2017-05-31.
  */
 
-public class Dialog_grade extends Dialog {
+public class Dialog_Grade extends Dialog {
 
 
     private Button commit;
@@ -36,7 +36,7 @@ public class Dialog_grade extends Dialog {
 
 
     }
-    public Dialog_grade(Context context,View.OnClickListener singleListener) {
+    public Dialog_Grade(Context context, View.OnClickListener singleListener) {
         super(context, android.R.style.Theme_Translucent_NoTitleBar);
         this.click = singleListener;
     }
