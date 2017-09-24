@@ -5,38 +5,37 @@
     android:id="@+id/con"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/SKYBLUE"
+    android:background="@color/Green00cc66"
     tools:context=".start_pack.MainActivity"
     tools:layout_editor_absoluteX="0dp"
     tools:layout_editor_absoluteY="25dp">
 
 
     <ImageView
-        android:id="@+id/title_t"
-        android:layout_width="299dp"
-        android:layout_height="133dp"
-        android:background="@drawable/title_t"
-        android:visibility="visible"
+        android:id="@+id/iv_runningman"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.099"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.163"
-        app:layout_constraintVertical_weight="50"
+        app:layout_constraintVertical_bias="0.926"
+        app:srcCompat="@drawable/app_icon"
         tools:ignore="ContentDescription" />
 
     <Button
         android:id="@+id/bt_loginselect"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="Button"
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:background="@drawable/selector_loginbt"
         android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.593"
+        app:layout_constraintVertical_bias="0.499"
         tools:ignore="HardcodedText" />
 
     <LinearLayout
@@ -50,8 +49,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/title_t"
-        app:layout_constraintVertical_bias="0.293">
+        app:layout_constraintTop_toTopOf="parent">
 
         <Button
             android:id="@+id/Login"
@@ -155,10 +153,9 @@
         android:id="@+id/register_lay"
         android:layout_width="match_parent"
         android:layout_height="25dp"
-        android:layout_marginBottom="2dp"
         android:gravity="center_vertical|center_horizontal"
         android:orientation="horizontal"
-        android:visibility="visible"
+        android:visibility="gone"
         android:weightSum="100"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -249,9 +246,13 @@
         android:id="@+id/bt_kakao_main"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:visibility="invisible"
-        tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="0dp">
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.225"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.113">
 
     </com.kakao.usermgmt.LoginButton>
 

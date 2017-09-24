@@ -3,8 +3,10 @@ package com.szb.szb.start_pack;
 
 import android.animation.ObjectAnimator;
 import android.app.AlertDialog;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.text.InputType;
 import android.util.Log;
@@ -15,10 +17,14 @@ import android.view.animation.AnimationUtils;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.engine.DiskCacheStrategy;
+import com.bumptech.glide.request.target.GlideDrawableImageViewTarget;
 import com.facebook.AccessToken;
 import com.facebook.GraphRequest;
 import com.facebook.GraphResponse;
@@ -84,6 +90,7 @@ public class MainActivity extends BaseActivity {
     String loginid;
     String loginpass;
     String LoginTypeChecker;
+    ImageView run;
     com.kakao.usermgmt.LoginButton kakao;
     NetworkClient networkClient;
     Ipm ipm;
@@ -101,7 +108,6 @@ public class MainActivity extends BaseActivity {
 
         super.onCreate(savedInstanceState);
 
-        FacebookSdk.sdkInitialize(this);
         setContentView(R.layout.activity_main);
         callbackManager=CallbackManager.Factory.create();
         login_lay = (LinearLayout) findViewById(R.id.text_log_lay);
@@ -113,6 +119,7 @@ public class MainActivity extends BaseActivity {
         kakao = (LoginButton) findViewById(R.id.bt_kakao_main);
         findid = (TextView) findViewById(R.id.find_id);
         findPass = (TextView) findViewById(R.id.find_pass_t);
+        run = (ImageView) findViewById(R.id.iv_runningman);
         login = (Button) findViewById(R.id.Login);
         password = (EditText) findViewById(R.id.loginPass);
         set = (Button) findViewById(R.id.bt_set);
@@ -122,18 +129,38 @@ public class MainActivity extends BaseActivity {
         logm = new Logm();
         userProfileData = new UserProfileData();
         backPressCloseHandler = new BackPressCloseHandler(this);
-        String ip = ipm.getip();
+        final String ip = ipm.getip();
         networkClient = NetworkClient.getInstance(ip);
         login = (Button) findViewById(R.id.Login);
         loginSelect = (Button)findViewById(R.id.bt_loginselect);
         keyboard = (InputMethodManager) getSystemService(INPUT_METHOD_SERVICE);
+        Session.getCurrentSession().addCallback(kakaocallback);
+        Session.getCurrentSession().checkAndImplicitOpen();
+
+        SharedPreferences sharedPreferences = getSharedPreferences("log",MODE_PRIVATE);  //이전 로그인한 기록이 있으면 세션선택과정 생략
+        final String loginPref = sharedPreferences.getString("logintype","logout");
+        Log.d("Login",loginPref);
+        if(!loginPref.equals("logout")){
+            syncbt_lay.setVisibility(View.VISIBLE);
+            loginSelect.setVisibility(View.GONE);
+            LoginTypeChecker = loginPref;
+        }
+        else {
+            LoginTypeChecker = loginPref;
+        }
+
+        GlideDrawableImageViewTarget ivt_1 = new GlideDrawableImageViewTarget(run);
+        Glide.with(this).load(R.raw.run_gbg).diskCacheStrategy(DiskCacheStrategy.SOURCE).into(ivt_1);
 
 
 
         dialog_login = new Dialog_Login(this, new Dialog_Login.DialogListener() {
+            SharedPreferences sharedPreferences = getApplicationContext().getSharedPreferences("log",MODE_PRIVATE);
+            SharedPreferences.Editor editor = sharedPreferences.edit();
 
             @Override
             public void customDialogListener(int loginType) {
+
 
                 if(loginType==0) {
 
@@ -151,9 +178,10 @@ public class MainActivity extends BaseActivity {
                                                     try {
                                                         logm.setPlayerid(object.getString("id"));
                                                         Log.d("페이스북 계정",logm.getPlayerid());
-                                                        LoginTypeChecker = "facebook";
                                                         userProfileData.setEmail(object.getString("email"));
                                                         userProfileData.setName(object.getString("name"));
+                                                        Toast toast = Toast.makeText(getApplicationContext(), getResources().getString(R.string.loginsuccess,userProfileData.getName()), Toast.LENGTH_LONG);
+                                                        toast.show();
                                                     }
                                                     catch (Exception e){
                                                         e.printStackTrace();
@@ -188,6 +216,7 @@ public class MainActivity extends BaseActivity {
                                     dialog_login.dismiss();
                                 }
                     });
+                    LoginTypeChecker = "facebook";
                 }
                 else if(loginType==1){ //카카오 로그인 연동
                     LoginTypeChecker = "kakao";
@@ -195,12 +224,11 @@ public class MainActivity extends BaseActivity {
                     login_lay.setVisibility(View.GONE);
                     regist_lay.setVisibility(View.GONE);
                     syncbt_lay.setVisibility(View.VISIBLE);
-                    Session.getCurrentSession().addCallback(kakaocallback);
-                    Session.getCurrentSession().checkAndImplicitOpen();
                     kakao.performClick();
                     dialog_login.dismiss();
                 }
                 else{
+                    LoginTypeChecker = "normal";
                     syncbt_lay.setVisibility(View.INVISIBLE);
                     loginSelect.setVisibility(View.GONE);
                     regist_lay.setVisibility(View.VISIBLE);
@@ -208,8 +236,9 @@ public class MainActivity extends BaseActivity {
                     dialog_login.dismiss();
                 }
 
-
-
+                editor.putString("logintype",LoginTypeChecker);   //로그인 상태 저장
+                editor.apply();
+                Log.d("페이스북 계정",LoginTypeChecker);
             }
         });
 
@@ -238,7 +267,13 @@ public class MainActivity extends BaseActivity {
                 }
                 syncbt_lay.setVisibility(View.INVISIBLE);
                 loginSelect.setVisibility(View.VISIBLE);
+                SharedPreferences sharedPreferences = getApplicationContext().getSharedPreferences("log",MODE_PRIVATE);
+                SharedPreferences.Editor editor = sharedPreferences.edit();
+                editor.putString("logintype","logout");   //로그인 상태 로그아웃으로 저장
+                editor.apply();
+                LoginTypeChecker = "logout";
             }
+
         });
 
         logoutnormal.setOnClickListener(new View.OnClickListener() {
@@ -247,6 +282,7 @@ public class MainActivity extends BaseActivity {
                 login_lay.setVisibility(View.INVISIBLE);
                 regist_lay.setVisibility(View.INVISIBLE);
                 loginSelect.setVisibility(View.VISIBLE);
+
             }
         });
 
@@ -255,7 +291,6 @@ public class MainActivity extends BaseActivity {
             @Override
             public void onClick(View v) {
                 dialog_login.show();
-                dialog_login.setCancelable(false);
                 regist_lay.setVisibility(View.GONE);
                 login_lay.setVisibility(View.GONE);
                 syncbt_lay.setVisibility(View.GONE);
@@ -286,14 +321,20 @@ public class MainActivity extends BaseActivity {
                                 LoginTypeChecker = "normal";
                                 login_lay.setVisibility(View.GONE);
                                 syncbt_lay.setVisibility(View.VISIBLE);
+                                Toast toast = Toast.makeText(getApplicationContext(), getResources().getString(R.string.loginsuccess,loginid), Toast.LENGTH_LONG);
+                                toast.show();
+                                SharedPreferences sharedPreferences = getApplicationContext().getSharedPreferences("log",MODE_PRIVATE);
+                                SharedPreferences.Editor editor = sharedPreferences.edit();
+                                editor.putString("logintype",LoginTypeChecker);   //로그인 상태 저장
+                                editor.apply();
                                 progressOFF();
                                 break;
 
                             default:
                                 Log.e("TAG", "다른 아이디");
                                 progressOFF();
-                                Toast toast = Toast.makeText(getApplicationContext(), getResources().getString(R.string.please_check_id), Toast.LENGTH_LONG);
-                                toast.show();
+                                Toast toast_2 = Toast.makeText(getApplicationContext(), getResources().getString(R.string.please_check_id), Toast.LENGTH_LONG);
+                                toast_2.show();
                                 break;
                         }
                     }
@@ -482,26 +523,6 @@ public class MainActivity extends BaseActivity {
     }
 
 
-    Animation tran_R;
-
-    ViewPropertyAnimation.Animator animationObject = new ViewPropertyAnimation.Animator() {
-        @Override
-        public void animate(final View view) {
-            tran_R = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.translate_r);
-            view.setScaleX(3f);
-            view.setScaleY(3f);
-            ObjectAnimator fadeoutX = ObjectAnimator.ofFloat(view, "ScaleX", 2f, 0f);
-            ObjectAnimator fadeoutY = ObjectAnimator.ofFloat(view, "ScaleY", 2f, 0f);
-            fadeoutX.setRepeatCount(-1);
-            fadeoutY.setRepeatCount(-1);
-            fadeoutX.setDuration(20000);
-            fadeoutY.setDuration(20000);
-            fadeoutX.start();
-            fadeoutY.start();
-            view.startAnimation(tran_R);
-        }
-
-    };
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {

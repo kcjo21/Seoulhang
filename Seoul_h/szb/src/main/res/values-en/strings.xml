@@ -137,4 +137,5 @@
     <string name="닉네임입력">Please enter your nickname.</string>
     <string name="같은닉네임존재">" The nickname you entered is already in use."</string>
     <string name="계정연동실패">Account sync failed. Please try again.</string>
+    <string name="loginsuccess">Welcome, %s ! Touch the Start button.</string>
 </resources>

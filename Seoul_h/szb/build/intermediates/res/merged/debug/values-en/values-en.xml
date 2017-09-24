@@ -55,6 +55,7 @@
     <string name="id">ID</string>
     <string name="insert_quiz">Insert Quiz</string>
     <string name="kakao_app_key">45d3abc0fba429258e010957df473e42</string>
+    <string name="loginsuccess">Welcome, %s ! Touch the Start button.</string>
     <string name="nolhang">NOLHANG</string>
     <string name="num">num</string>
     <string name="open_drawer">open draweropen draweropen draweropen draweropen draweropen drawer</string>

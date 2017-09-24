@@ -71,6 +71,8 @@ public class KakaoSignupActivity extends Activity {
                 userProfileData.setId(Long.toString(userProfile.getId()));
                 userProfileData.setEmail(userProfile.getEmail());
                 userProfileData.setName(userProfile.getNickname());
+                Toast toast = Toast.makeText(getApplicationContext(), getResources().getString(R.string.loginsuccess,userProfileData.getName()), Toast.LENGTH_LONG);
+                toast.show();
 
                 Log.d("카카오",userProfileData.getId());
                 redirectMainActivity();

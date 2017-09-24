@@ -9,7 +9,7 @@
     },
     {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\build\\intermediates\\res\\merged\\debug\\drawable\\messenger_button_white_bg_selector.xml",
-        "source": "C:\\Users\\cwh62\\.android\\build-cache\\95a0679ee93dc8c53637a6018afbb491f373d077\\output\\res\\drawable\\messenger_button_white_bg_selector.xml"
+        "source": "C:\\Users\\cwh62\\.android\\build-cache\\1323e2a7232f50a97d38f0ddc433bbfaeaf04b88\\output\\res\\drawable\\messenger_button_white_bg_selector.xml"
     },
     {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_holo_light.xml",
@@ -20,6 +20,10 @@
         "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\src\\main\\res\\drawable\\hint_button_selector.xml"
     },
     {
+        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\build\\intermediates\\res\\merged\\debug\\drawable\\com_facebook_auth_dialog_background.xml",
+        "source": "C:\\Users\\cwh62\\.android\\build-cache\\1323e2a7232f50a97d38f0ddc433bbfaeaf04b88\\output\\res\\drawable\\com_facebook_auth_dialog_background.xml"
+    },
+    {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\build\\intermediates\\res\\merged\\debug\\drawable\\selector_camera.xml",
         "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\src\\main\\res\\drawable\\selector_camera.xml"
     },
@@ -28,20 +32,24 @@
         "source": "C:\\Users\\cwh62\\.android\\build-cache\\6b9e2a149949f92f777fbd1da03ab97e95934703\\output\\res\\drawable\\selector_trafficsub_pop_radio_8.xml"
     },
     {
-        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\build\\intermediates\\res\\merged\\debug\\drawable\\selector_trafficsub_radio_sooin.xml",
-        "source": "C:\\Users\\cwh62\\.android\\build-cache\\6b9e2a149949f92f777fbd1da03ab97e95934703\\output\\res\\drawable\\selector_trafficsub_radio_sooin.xml"
+        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\build\\intermediates\\res\\merged\\debug\\drawable\\common_google_signin_btn_icon_light.xml",
+        "source": "C:\\Users\\cwh62\\.android\\build-cache\\353c8d830c306275ace0a67ed049e72dd1067f85\\output\\res\\drawable\\common_google_signin_btn_icon_light.xml"
     },
     {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\build\\intermediates\\res\\merged\\debug\\drawable\\run.xml",
         "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\src\\main\\res\\drawable\\run.xml"
     },
     {
-        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\build\\intermediates\\res\\merged\\debug\\drawable\\common_google_signin_btn_icon_light.xml",
-        "source": "C:\\Users\\cwh62\\.android\\build-cache\\353c8d830c306275ace0a67ed049e72dd1067f85\\output\\res\\drawable\\common_google_signin_btn_icon_light.xml"
+        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\build\\intermediates\\res\\merged\\debug\\drawable\\selector_trafficsub_radio_sooin.xml",
+        "source": "C:\\Users\\cwh62\\.android\\build-cache\\6b9e2a149949f92f777fbd1da03ab97e95934703\\output\\res\\drawable\\selector_trafficsub_radio_sooin.xml"
     },
     {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_text_cursor_material.xml",
         "source": "C:\\Users\\cwh62\\.android\\build-cache\\1860e7502bea0f552aaa4935120bb2accced6b21\\output\\res\\drawable\\abc_text_cursor_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\build\\intermediates\\res\\merged\\debug\\drawable\\com_facebook_auth_dialog_header_background.xml",
+        "source": "C:\\Users\\cwh62\\.android\\build-cache\\1323e2a7232f50a97d38f0ddc433bbfaeaf04b88\\output\\res\\drawable\\com_facebook_auth_dialog_header_background.xml"
     },
     {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\build\\intermediates\\res\\merged\\debug\\drawable\\common_google_signin_btn_text_dark.xml",
@@ -112,6 +120,10 @@
         "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\src\\main\\res\\drawable\\selector_quiz.xml"
     },
     {
+        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\build\\intermediates\\res\\merged\\debug\\drawable\\selector_loginbt.xml",
+        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\src\\main\\res\\drawable\\selector_loginbt.xml"
+    },
+    {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\build\\intermediates\\res\\merged\\debug\\drawable\\common_google_signin_btn_text_light_normal.xml",
         "source": "C:\\Users\\cwh62\\.android\\build-cache\\353c8d830c306275ace0a67ed049e72dd1067f85\\output\\res\\drawable\\common_google_signin_btn_text_light_normal.xml"
     },
@@ -153,7 +165,7 @@
     },
     {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\build\\intermediates\\res\\merged\\debug\\drawable\\messenger_button_blue_bg_round.xml",
-        "source": "C:\\Users\\cwh62\\.android\\build-cache\\95a0679ee93dc8c53637a6018afbb491f373d077\\output\\res\\drawable\\messenger_button_blue_bg_round.xml"
+        "source": "C:\\Users\\cwh62\\.android\\build-cache\\1323e2a7232f50a97d38f0ddc433bbfaeaf04b88\\output\\res\\drawable\\messenger_button_blue_bg_round.xml"
     },
     {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\build\\intermediates\\res\\merged\\debug\\drawable\\selector_trafficsub_pop_radio_4.xml",
@@ -209,11 +221,11 @@
     },
     {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\build\\intermediates\\res\\merged\\debug\\drawable\\messenger_button_blue_bg_selector.xml",
-        "source": "C:\\Users\\cwh62\\.android\\build-cache\\95a0679ee93dc8c53637a6018afbb491f373d077\\output\\res\\drawable\\messenger_button_blue_bg_selector.xml"
+        "source": "C:\\Users\\cwh62\\.android\\build-cache\\1323e2a7232f50a97d38f0ddc433bbfaeaf04b88\\output\\res\\drawable\\messenger_button_blue_bg_selector.xml"
     },
     {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\build\\intermediates\\res\\merged\\debug\\drawable\\com_facebook_button_send_background.xml",
-        "source": "C:\\Users\\cwh62\\.android\\build-cache\\95a0679ee93dc8c53637a6018afbb491f373d077\\output\\res\\drawable\\com_facebook_button_send_background.xml"
+        "source": "C:\\Users\\cwh62\\.android\\build-cache\\1323e2a7232f50a97d38f0ddc433bbfaeaf04b88\\output\\res\\drawable\\com_facebook_button_send_background.xml"
     },
     {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\build\\intermediates\\res\\merged\\debug\\drawable\\selector_trafficsub_radio_type_a.xml",
@@ -226,6 +238,10 @@
     {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_go_search_api_material.xml",
         "source": "C:\\Users\\cwh62\\.android\\build-cache\\1860e7502bea0f552aaa4935120bb2accced6b21\\output\\res\\drawable\\abc_ic_go_search_api_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\build\\intermediates\\res\\merged\\debug\\drawable\\com_facebook_favicon_blue.xml",
+        "source": "C:\\Users\\cwh62\\.android\\build-cache\\1323e2a7232f50a97d38f0ddc433bbfaeaf04b88\\output\\res\\drawable\\com_facebook_favicon_blue.xml"
     },
     {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_voice_search_api_material.xml",
@@ -317,7 +333,7 @@
     },
     {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\build\\intermediates\\res\\merged\\debug\\drawable\\com_facebook_button_background.xml",
-        "source": "C:\\Users\\cwh62\\.android\\build-cache\\95a0679ee93dc8c53637a6018afbb491f373d077\\output\\res\\drawable\\com_facebook_button_background.xml"
+        "source": "C:\\Users\\cwh62\\.android\\build-cache\\1323e2a7232f50a97d38f0ddc433bbfaeaf04b88\\output\\res\\drawable\\com_facebook_button_background.xml"
     },
     {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\build\\intermediates\\res\\merged\\debug\\drawable\\selector_login_button.xml",
@@ -330,6 +346,10 @@
     {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\build\\intermediates\\res\\merged\\debug\\drawable\\selector_trafficsub_radio_bundang.xml",
         "source": "C:\\Users\\cwh62\\.android\\build-cache\\6b9e2a149949f92f777fbd1da03ab97e95934703\\output\\res\\drawable\\selector_trafficsub_radio_bundang.xml"
+    },
+    {
+        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\build\\intermediates\\res\\merged\\debug\\drawable\\com_facebook_button_login_background.xml",
+        "source": "C:\\Users\\cwh62\\.android\\build-cache\\1323e2a7232f50a97d38f0ddc433bbfaeaf04b88\\output\\res\\drawable\\com_facebook_button_login_background.xml"
     },
     {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\build\\intermediates\\res\\merged\\debug\\drawable\\talk.png",
@@ -389,7 +409,7 @@
     },
     {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\build\\intermediates\\res\\merged\\debug\\drawable\\com_facebook_button_like_background.xml",
-        "source": "C:\\Users\\cwh62\\.android\\build-cache\\95a0679ee93dc8c53637a6018afbb491f373d077\\output\\res\\drawable\\com_facebook_button_like_background.xml"
+        "source": "C:\\Users\\cwh62\\.android\\build-cache\\1323e2a7232f50a97d38f0ddc433bbfaeaf04b88\\output\\res\\drawable\\com_facebook_button_like_background.xml"
     },
     {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\build\\intermediates\\res\\merged\\debug\\drawable\\navigation_empty_icon.xml",
@@ -401,7 +421,11 @@
     },
     {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\build\\intermediates\\res\\merged\\debug\\drawable\\messenger_button_white_bg_round.xml",
-        "source": "C:\\Users\\cwh62\\.android\\build-cache\\95a0679ee93dc8c53637a6018afbb491f373d077\\output\\res\\drawable\\messenger_button_white_bg_round.xml"
+        "source": "C:\\Users\\cwh62\\.android\\build-cache\\1323e2a7232f50a97d38f0ddc433bbfaeaf04b88\\output\\res\\drawable\\messenger_button_white_bg_round.xml"
+    },
+    {
+        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\build\\intermediates\\res\\merged\\debug\\drawable\\com_facebook_send_button_icon.xml",
+        "source": "C:\\Users\\cwh62\\.android\\build-cache\\1323e2a7232f50a97d38f0ddc433bbfaeaf04b88\\output\\res\\drawable\\com_facebook_send_button_icon.xml"
     },
     {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\build\\intermediates\\res\\merged\\debug\\drawable\\account.png",
@@ -469,11 +493,15 @@
     },
     {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\build\\intermediates\\res\\merged\\debug\\drawable\\com_facebook_button_login_silver_background.xml",
-        "source": "C:\\Users\\cwh62\\.android\\build-cache\\95a0679ee93dc8c53637a6018afbb491f373d077\\output\\res\\drawable\\com_facebook_button_login_silver_background.xml"
+        "source": "C:\\Users\\cwh62\\.android\\build-cache\\1323e2a7232f50a97d38f0ddc433bbfaeaf04b88\\output\\res\\drawable\\com_facebook_button_login_silver_background.xml"
     },
     {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\build\\intermediates\\res\\merged\\debug\\drawable\\design_snackbar_background.xml",
         "source": "C:\\Users\\cwh62\\.android\\build-cache\\2296c6d153ca9492798042173aaf4756857c6a9d\\output\\res\\drawable\\design_snackbar_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\build\\intermediates\\res\\merged\\debug\\drawable\\com_facebook_auth_dialog_cancel_background.xml",
+        "source": "C:\\Users\\cwh62\\.android\\build-cache\\1323e2a7232f50a97d38f0ddc433bbfaeaf04b88\\output\\res\\drawable\\com_facebook_auth_dialog_cancel_background.xml"
     },
     {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\build\\intermediates\\res\\merged\\debug\\drawable\\subway_type_mini_input_background.xml",
@@ -498,6 +526,10 @@
     {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\build\\intermediates\\res\\merged\\debug\\drawable\\rank_menu.xml",
         "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\src\\main\\res\\drawable\\rank_menu.xml"
+    },
+    {
+        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\build\\intermediates\\res\\merged\\debug\\drawable\\com_facebook_button_icon.xml",
+        "source": "C:\\Users\\cwh62\\.android\\build-cache\\1323e2a7232f50a97d38f0ddc433bbfaeaf04b88\\output\\res\\drawable\\com_facebook_button_icon.xml"
     },
     {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\build\\intermediates\\res\\merged\\debug\\drawable\\selector_trafficsub_pop_radio_9.xml",
@@ -582,5 +614,9 @@
     {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\build\\intermediates\\res\\merged\\debug\\drawable\\selector_trafficsub_radio_8.xml",
         "source": "C:\\Users\\cwh62\\.android\\build-cache\\6b9e2a149949f92f777fbd1da03ab97e95934703\\output\\res\\drawable\\selector_trafficsub_radio_8.xml"
+    },
+    {
+        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\build\\intermediates\\res\\merged\\debug\\drawable\\com_facebook_button_login_logo.xml",
+        "source": "C:\\Users\\cwh62\\.android\\build-cache\\1323e2a7232f50a97d38f0ddc433bbfaeaf04b88\\output\\res\\drawable\\com_facebook_button_login_logo.xml"
     }
 ]
