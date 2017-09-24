@@ -5,16 +5,11 @@ import android.animation.ObjectAnimator;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.pm.PackageInfo;
-import android.content.pm.PackageInstaller;
-import android.content.pm.PackageManager;
-import android.content.pm.Signature;
 import android.os.Bundle;
 import android.text.InputType;
-import android.text.method.PasswordTransformationMethod;
-import android.util.Base64;
 import android.util.Log;
 import android.view.View;
+import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.view.inputmethod.InputMethodManager;
@@ -23,6 +18,8 @@ import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.facebook.AccessToken;
 import com.facebook.GraphRequest;
 import com.facebook.GraphResponse;
 
@@ -31,18 +28,25 @@ import com.facebook.CallbackManager;
 import com.facebook.FacebookCallback;
 import com.facebook.FacebookException;
 import com.facebook.FacebookSdk;
+import com.facebook.HttpMethod;
 import com.facebook.login.LoginManager;
 import com.facebook.login.LoginResult;
 import com.kakao.auth.AuthType;
 import com.kakao.auth.ISessionCallback;
 import com.kakao.auth.Session;
 
+import com.kakao.network.ErrorResult;
+import com.kakao.usermgmt.LoginButton;
+import com.kakao.usermgmt.UserManagement;
+import com.kakao.usermgmt.callback.LogoutResponseCallback;
+import com.kakao.usermgmt.callback.UnLinkResponseCallback;
 import com.kakao.util.exception.KakaoException;
 import com.kakao.util.helper.log.Logger;
 import com.szb.szb.BaseActivity;
 import com.szb.szb.Home.BackPressCloseHandler;
 import com.szb.szb.Home.Home_Main;
 import com.szb.szb.R;
+import com.szb.szb.RealmInit;
 import com.szb.szb.model.retrofit.PlayerDTO;
 import com.szb.szb.network.Ipm;
 import com.szb.szb.network.NetworkClient;
@@ -57,7 +61,6 @@ import com.szb.szb.start_pack.registerpack.JoinActivity;
 import org.json.JSONObject;
 
 import java.util.Arrays;
-import java.util.Random;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -65,9 +68,14 @@ import retrofit2.Response;
 
 
 public class MainActivity extends BaseActivity {
-    LinearLayout  text_log;
-    Button Login;
+    LinearLayout login_lay;
+    LinearLayout regist_lay;
+    LinearLayout syncbt_lay;
+    Button login;
     Button set;
+    Button loginSelect;
+    Button logoutsync;
+    Button logoutnormal;
     EditText loginId_tv;
     TextView join;
     TextView findid;
@@ -76,7 +84,7 @@ public class MainActivity extends BaseActivity {
     String loginid;
     String loginpass;
     String LoginTypeChecker;
-
+    com.kakao.usermgmt.LoginButton kakao;
     NetworkClient networkClient;
     Ipm ipm;
     Logm logm;
@@ -88,16 +96,6 @@ public class MainActivity extends BaseActivity {
     UserProfileData userProfileData;
 
 
-    public static final int ran_bg[] = {
-            R.drawable.namdaemoon, R.drawable.tajimahal,
-            R.drawable.col, R.drawable.tower,
-            R.drawable.eiffel, R.drawable.free
-    };
-
-    Random random = new Random();
-    int rnd = random.nextInt(6);
-    int bg = ran_bg[rnd];
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -106,30 +104,36 @@ public class MainActivity extends BaseActivity {
         FacebookSdk.sdkInitialize(this);
         setContentView(R.layout.activity_main);
         callbackManager=CallbackManager.Factory.create();
-        text_log = (LinearLayout) findViewById(R.id.text_log_lay);
+        login_lay = (LinearLayout) findViewById(R.id.text_log_lay);
+        kakaocallback =  new SessionCallback();
+        regist_lay = (LinearLayout) findViewById(R.id.register_lay);
+        syncbt_lay = (LinearLayout) findViewById(R.id.syncbtset_lay);
         loginId_tv = (EditText) findViewById(R.id.loginId);
         join = (TextView) findViewById(R.id.join_tm);
+        kakao = (LoginButton) findViewById(R.id.bt_kakao_main);
         findid = (TextView) findViewById(R.id.find_id);
         findPass = (TextView) findViewById(R.id.find_pass_t);
-        Login = (Button) findViewById(R.id.Login);
+        login = (Button) findViewById(R.id.Login);
         password = (EditText) findViewById(R.id.loginPass);
         set = (Button) findViewById(R.id.bt_set);
+        logoutsync = (Button) findViewById(R.id.bt_logout_sync);
+        logoutnormal = (Button) findViewById(R.id.bt_logout_n);
         ipm = new Ipm();
         logm = new Logm();
         userProfileData = new UserProfileData();
         backPressCloseHandler = new BackPressCloseHandler(this);
         String ip = ipm.getip();
         networkClient = NetworkClient.getInstance(ip);
-        Login = (Button) findViewById(R.id.Login);
+        login = (Button) findViewById(R.id.Login);
+        loginSelect = (Button)findViewById(R.id.bt_loginselect);
         keyboard = (InputMethodManager) getSystemService(INPUT_METHOD_SERVICE);
 
 
-        LoginManager.getInstance().logOut();
 
         dialog_login = new Dialog_Login(this, new Dialog_Login.DialogListener() {
+
             @Override
             public void customDialogListener(int loginType) {
-
 
                 if(loginType==0) {
 
@@ -153,6 +157,10 @@ public class MainActivity extends BaseActivity {
                                                     }
                                                     catch (Exception e){
                                                         e.printStackTrace();
+                                                        Toast toast = Toast.makeText(getApplicationContext(), getResources().getString(R.string.계정연동실패), Toast.LENGTH_LONG);
+                                                        toast.show();
+                                                        dialog_login.show();
+
                                                     }
                                                 }
                                             });
@@ -161,8 +169,10 @@ public class MainActivity extends BaseActivity {
                                     request.setParameters(parameters);
                                     request.executeAsync();
                                     dialog_login.dismiss();
-                                    text_log.setVisibility(View.GONE);
-                                    Login.setVisibility(View.VISIBLE);
+                                    loginSelect.setVisibility(View.GONE);
+                                    login_lay.setVisibility(View.GONE);
+                                    regist_lay.setVisibility(View.GONE);
+                                    syncbt_lay.setVisibility(View.VISIBLE);
                                     Log.d("페이스북 계정 연동 : ", "성공");
                                 }
 
@@ -179,18 +189,22 @@ public class MainActivity extends BaseActivity {
                                 }
                     });
                 }
-                else if(loginType==1){
+                else if(loginType==1){ //카카오 로그인 연동
                     LoginTypeChecker = "kakao";
-                    text_log.setVisibility(View.GONE);
-                    Login.setVisibility(View.VISIBLE);
-                    kakaocallback = new SessionCallback();
+                    loginSelect.setVisibility(View.GONE);
+                    login_lay.setVisibility(View.GONE);
+                    regist_lay.setVisibility(View.GONE);
+                    syncbt_lay.setVisibility(View.VISIBLE);
                     Session.getCurrentSession().addCallback(kakaocallback);
                     Session.getCurrentSession().checkAndImplicitOpen();
-                    Session.getCurrentSession().open(AuthType.KAKAO_LOGIN_ALL,MainActivity.this);
-
+                    kakao.performClick();
                     dialog_login.dismiss();
                 }
                 else{
+                    syncbt_lay.setVisibility(View.INVISIBLE);
+                    loginSelect.setVisibility(View.GONE);
+                    regist_lay.setVisibility(View.VISIBLE);
+                    login_lay.setVisibility(View.VISIBLE);
                     dialog_login.dismiss();
                 }
 
@@ -199,8 +213,56 @@ public class MainActivity extends BaseActivity {
             }
         });
 
-        dialog_login.show();
-        dialog_login.setCancelable(false);
+        logoutsync.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(LoginTypeChecker.equals("facebook")){
+                    if(AccessToken.getCurrentAccessToken() == null){
+                        return; // 이미 로그아웃 되어 있음.
+                    }
+                    new GraphRequest(AccessToken.getCurrentAccessToken(), "/me/permissions/",
+                            null, HttpMethod.DELETE, new GraphRequest.Callback() {
+                        @Override
+                        public void onCompleted(GraphResponse response) {
+                            LoginManager.getInstance().logOut();
+                        }
+                    });
+                }
+                else if(LoginTypeChecker.equals("kakao")){
+                    UserManagement.requestLogout(new LogoutResponseCallback() { //카카오 로그아웃 요청
+                        @Override
+                        public void onCompleteLogout() {
+                            redirectSignupActivity();
+                        }
+                    });
+                }
+                syncbt_lay.setVisibility(View.INVISIBLE);
+                loginSelect.setVisibility(View.VISIBLE);
+            }
+        });
+
+        logoutnormal.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                login_lay.setVisibility(View.INVISIBLE);
+                regist_lay.setVisibility(View.INVISIBLE);
+                loginSelect.setVisibility(View.VISIBLE);
+            }
+        });
+
+
+        loginSelect.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog_login.show();
+                dialog_login.setCancelable(false);
+                regist_lay.setVisibility(View.GONE);
+                login_lay.setVisibility(View.GONE);
+                syncbt_lay.setVisibility(View.GONE);
+            }
+        });
+
+
 
 
 
@@ -222,8 +284,8 @@ public class MainActivity extends BaseActivity {
                         switch (response.code()) {
                             case 200:
                                 LoginTypeChecker = "normal";
-                                text_log.setVisibility(View.GONE);
-                                Login.setVisibility(View.VISIBLE);
+                                login_lay.setVisibility(View.GONE);
+                                syncbt_lay.setVisibility(View.VISIBLE);
                                 progressOFF();
                                 break;
 
@@ -278,7 +340,7 @@ public class MainActivity extends BaseActivity {
         });
 
 
-        Login.setOnClickListener(new View.OnClickListener() {
+        login.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View view) {
@@ -477,4 +539,8 @@ public class MainActivity extends BaseActivity {
         intent.setFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
         startActivity(intent);
     }
+
 }
+
+
+

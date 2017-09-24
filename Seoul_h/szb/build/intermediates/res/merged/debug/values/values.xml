@@ -917,6 +917,7 @@
     <string name="title_for_ssl_warning">Security Warning</string>
     <string name="같은닉네임존재">이미 사용중인 닉네임입니다.</string>
     <string name="경도">경도</string>
+    <string name="계정연동실패">계정 동기화에 실패했습니다. 다시 시도해주십시오.</string>
     <string name="골드">골드</string>
     <string name="남">남</string>
     <string name="남은힌트">힌트</string>

@@ -240,6 +240,10 @@
         "source": "C:\\Users\\cwh62\\.android\\build-cache\\6b9e2a149949f92f777fbd1da03ab97e95934703\\output\\res\\drawable\\selector_trafficsub_pop_radio_bundang.xml"
     },
     {
+        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\build\\intermediates\\res\\merged\\debug\\drawable\\selector_facebook.xml",
+        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\src\\main\\res\\drawable\\selector_facebook.xml"
+    },
+    {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\build\\intermediates\\res\\merged\\debug\\drawable\\selector_trafficsub_pop_radio_2.xml",
         "source": "C:\\Users\\cwh62\\.android\\build-cache\\6b9e2a149949f92f777fbd1da03ab97e95934703\\output\\res\\drawable\\selector_trafficsub_pop_radio_2.xml"
     },
@@ -428,6 +432,10 @@
         "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\src\\main\\res\\drawable\\setting_back_xm.xml"
     },
     {
+        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\build\\intermediates\\res\\merged\\debug\\drawable\\selector_kakao.xml",
+        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\src\\main\\res\\drawable\\selector_kakao.xml"
+    },
+    {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\build\\intermediates\\res\\merged\\debug\\drawable\\common_google_signin_btn_text_dark_normal.xml",
         "source": "C:\\Users\\cwh62\\.android\\build-cache\\353c8d830c306275ace0a67ed049e72dd1067f85\\output\\res\\drawable\\common_google_signin_btn_text_dark_normal.xml"
     },
@@ -506,6 +514,10 @@
     {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\build\\intermediates\\res\\merged\\debug\\drawable\\selector_trafficsub_pop_radio_6.xml",
         "source": "C:\\Users\\cwh62\\.android\\build-cache\\6b9e2a149949f92f777fbd1da03ab97e95934703\\output\\res\\drawable\\selector_trafficsub_pop_radio_6.xml"
+    },
+    {
+        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\build\\intermediates\\res\\merged\\debug\\drawable\\selector_seoulhang.xml",
+        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\src\\main\\res\\drawable\\selector_seoulhang.xml"
     },
     {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\build\\intermediates\\res\\merged\\debug\\drawable\\selector_trafficsub_pop_radio_3.xml",

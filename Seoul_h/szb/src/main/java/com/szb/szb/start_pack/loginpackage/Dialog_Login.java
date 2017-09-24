@@ -6,12 +6,14 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
+
+import com.kakao.usermgmt.LoginButton;
 import com.szb.szb.R;
 
 public class Dialog_Login extends Dialog {
 
     private Button facebook;
-    private Button kakao;
+    public Button kakao;
     private Button seoulhang;
     private DialogListener dialogListener;
 
@@ -25,8 +27,8 @@ public class Dialog_Login extends Dialog {
         setContentView(R.layout.activity_dialog_login);
 
         facebook = (Button)findViewById(R.id.bt_facebook);
-        kakao = (Button)findViewById(R.id.bt_kakao);
         seoulhang = (Button)findViewById(R.id.bt_seoulhang);
+        kakao = (Button)findViewById(R.id.bt_kakao);
 
 
         facebook.setOnClickListener(new View.OnClickListener() {
@@ -59,7 +61,5 @@ public class Dialog_Login extends Dialog {
         super(context, android.R.style.Theme_Translucent_NoTitleBar);
         this.dialogListener  = dialogListener;
     }
-
-
 
 }

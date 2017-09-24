@@ -97,7 +97,6 @@ public class GooglemapsActivity extends BaseActivity
 
     public static final String PATH = "data/data/com.szb.szb/";
     public static final String DB_NAME = "new_gps.db";
-    private static ArrayList<GPSDATA> Al = new ArrayList<>();
     private List<Integer> quizList;
 
     LocationRequest locationRequest = new LocationRequest()
@@ -110,7 +109,7 @@ public class GooglemapsActivity extends BaseActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        initialize_db(getApplicationContext());
+        initialize_db(getApplication()); //데이터베이스를 앱을 복사하여 초기화한다.
 
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON,
                 WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
@@ -121,37 +120,7 @@ public class GooglemapsActivity extends BaseActivity
 
         ipm = new Ipm();
         logm = new Logm();
-        final String sid = logm.getPlayerid();
-        final String ip = ipm.getip();
-        networkClient = NetworkClient.getInstance(ip);
         backPressCloseHandler = new BackPressCloseHandler(this);
-
-
-        networkClient.quiznum(sid, new Callback<List<Integer>>() {
-            @Override
-            public void onResponse(Call<List<Integer>> call, Response<List<Integer>> response) {
-                switch (response.code()) {
-                    case 200:
-                        quizList = response.body();
-                        for(int i=0;i<quizList.size();i++){
-                            Log.e("확인1234",quizList.get(i).toString());
-                        }
-                        quiznumParse(quizList);                 //획득한 타겟리스트를 quiznumParse로 전달.
-                        Log.d("마커", Al.get(60).region_name + "123");
-                        break;
-                    default:
-                        Log.e("Error : ", "데이터베이스를 불러올 수 없습니다.");
-                        break;
-                }
-            }
-
-            @Override
-            public void onFailure(Call<List<Integer>> call, Throwable t) {
-                Toast toast = Toast.makeText(getApplicationContext(), getResources().getString(R.string.can_not_connent_to_server), Toast.LENGTH_LONG);
-                toast.show();
-            }
-        });
-
 
         mGoogleApiClient = new GoogleApiClient.Builder(this)
                 .addConnectionCallbacks(this)
@@ -226,9 +195,14 @@ public class GooglemapsActivity extends BaseActivity
     public void onMapReady(GoogleMap googleMap) {
 
         mGoogleMap = googleMap;
+        progressOFF(); //프로그래스 애니메이션 종료
         //런타임 퍼미션 요청 대화상자나 GPS 활성 요청 대화상자 보이기전에
         //지도의 초기위치를 서울로 이동
         setDefaultLocation();
+
+        final String sid = logm.getPlayerid();
+        final String ip = ipm.getip();
+        networkClient = NetworkClient.getInstance(ip);
 
         //mGoogleMap.getUiSettings().setZoomControlsEnabled(false);
         mGoogleMap.getUiSettings().setMyLocationButtonEnabled(true);
@@ -257,7 +231,7 @@ public class GooglemapsActivity extends BaseActivity
             @Override
             public void onCameraMoveStarted(int i) {
 
-                if (mMoveMapByUser == true && mRequestingLocationUpdates) {
+                if (mMoveMapByUser && mRequestingLocationUpdates) {
 
                     Log.d(TAG, "onCameraMove : 위치에 따른 카메라 이동 비활성화");
                     mMoveMapByAPI = false;
@@ -277,14 +251,50 @@ public class GooglemapsActivity extends BaseActivity
 
             }
         });
-        MarkerOptions makeroptions = new MarkerOptions();
-        for (int i = 0; i < Al.size(); i++) {
-            String region_name = Al.get(i).region_name;
-            double latitude = Al.get(i).latitude;
-            double longitude = Al.get(i).longitude;
-            makeroptions.position(new LatLng(latitude, longitude)).title(region_name);
-            mGoogleMap.addMarker(makeroptions);
-        }
+
+        networkClient.quiznum(sid, new Callback<List<Integer>>() {
+            @Override
+            public void onResponse(Call<List<Integer>> call, Response<List<Integer>> response) {
+                switch (response.code()) {
+                    case 200:
+                        quizList = response.body();
+                        SQLiteDatabase db = SQLiteDatabase.openDatabase(PATH+"databases/"+DB_NAME,null, SQLiteDatabase.OPEN_READONLY);
+                        Cursor c = db.query("GPSDATA",  null, null, null, null, null, null);
+                        boolean already_have = false;
+
+                        while(c.moveToNext()) {
+                            String region_name = c.getString(c.getColumnIndex("station_name"));
+                            int quiz_num = Integer.parseInt(c.getString(c.getColumnIndex("region_code")));
+                            double latitude = c.getDouble(c.getColumnIndex("lat"));
+                            double longitude = c.getDouble(c.getColumnIndex("long"));
+
+                            for (int i= 0 ; i<quizList.size();i++) {      //이미 얻은 타겟이 있다면 리스트에 추가하지 않는다.
+                                if(quizList.get(i).equals(quiz_num)){
+                                    already_have = true;
+                                }
+                            }
+
+                            if(!already_have) {
+                                MarkerOptions makeroptions = new MarkerOptions();
+                                makeroptions.position(new LatLng(latitude, longitude)).title(region_name);
+                                mGoogleMap.addMarker(makeroptions);
+                            }
+                            already_have = false;
+
+                        }
+                        break;
+                    default:
+                        Log.e("Error : ", "데이터베이스를 불러올 수 없습니다.");
+                        break;
+                }
+            }
+
+            @Override
+            public void onFailure(Call<List<Integer>> call, Throwable t) {
+                Toast toast = Toast.makeText(getApplicationContext(), getResources().getString(R.string.can_not_connent_to_server), Toast.LENGTH_LONG);
+                toast.show();
+            }
+        });
     }
 
     @Override
@@ -306,14 +316,14 @@ public class GooglemapsActivity extends BaseActivity
     @Override
     protected void onStart() {
 
-        if(mGoogleApiClient != null && mGoogleApiClient.isConnected() == false){
+        if(mGoogleApiClient != null && !mGoogleApiClient.isConnected()){
 
             Log.d(TAG, "onStart: mGoogleApiClient connect");
             mGoogleApiClient.connect();
         }
 
         super.onStart();
-        progressOFF(); //프로그래스 애니메이션 종료
+
     }
 
     @Override
@@ -657,29 +667,7 @@ public class GooglemapsActivity extends BaseActivity
     }
 
 public void quiznumParse(List<Integer> squizList){
-    SQLiteDatabase db = SQLiteDatabase.openDatabase(PATH+"databases/"+DB_NAME,null, SQLiteDatabase.OPEN_READONLY);
-    Cursor c = db.query("GPSDATA",  null, null, null, null, null, null);
-    boolean already_have = false;
 
-    while(c.moveToNext()) {
-        String region_name = c.getString(c.getColumnIndex("station_name"));
-        int quiz_num = Integer.parseInt(c.getString(c.getColumnIndex("region_code")));
-        double latitude = c.getDouble(c.getColumnIndex("lat"));
-        double longitude = c.getDouble(c.getColumnIndex("long"));
-
-        for (int i= 0 ; i<squizList.size();i++) {      //이미 얻은 타겟이 있다면 리스트에 추가하지 않는다.
-            if(squizList.get(i).equals(quiz_num)){
-                already_have = true;
-            }
-        }
-
-        if(!already_have) {
-            Al.add(new GPSDATA(region_name,quiz_num,latitude,longitude));
-
-        }
-        already_have = false;
-
-    }
 }
 
 public void initialize_db(Context context){
@@ -707,19 +695,6 @@ public void initialize_db(Context context){
     }
 
 }
-
-    private class GPSDATA{
-        String region_name = "";
-        int quiz_num;
-        Double latitude;
-        Double longitude;
-        private GPSDATA(String region_name, int quiz_num,Double latitude, Double longitude){
-            this.region_name = region_name;
-            this.quiz_num = quiz_num;
-            this.latitude = latitude;
-            this.longitude = longitude;
-        }
-    }
 
     @Override
     public void onBackPressed() {

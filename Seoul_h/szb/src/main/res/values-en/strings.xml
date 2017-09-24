@@ -103,7 +103,7 @@
     <string name="checkEmail">Incorrect email address in format.</string>
     <string name="아이디찾기">Find Id</string>
     <string name="비밀번호찾기">Password</string>
-    <string name="비밀번호입력">Please enter your Password.</string>
+    <string name="비밀번호입력">Enter your Password.</string>
     <string name="확인메일보냄">Authentication mail has been sent successfully.</string>
     <string name="아이디찾을수없음">No matching ID.</string>
     <string name="코드입력">Enter authentication code.</string>
@@ -136,4 +136,5 @@
     <string name="kakao_app_key">45d3abc0fba429258e010957df473e42</string>
     <string name="닉네임입력">Please enter your nickname.</string>
     <string name="같은닉네임존재">" The nickname you entered is already in use."</string>
+    <string name="계정연동실패">Account sync failed. Please try again.</string>
 </resources>

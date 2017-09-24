@@ -1,16 +1,21 @@
 package com.szb.szb.start_pack.loginpackage;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.Toast;
 
 import com.kakao.auth.ErrorCode;
 import com.kakao.network.ErrorResult;
 import com.kakao.usermgmt.UserManagement;
 import com.kakao.usermgmt.callback.MeResponseCallback;
+import com.kakao.usermgmt.callback.UnLinkResponseCallback;
 import com.kakao.usermgmt.response.model.UserProfile;
 import com.kakao.util.helper.log.Logger;
+import com.szb.szb.R;
 import com.szb.szb.start_pack.MainActivity;
 
 import java.util.ArrayList;
@@ -37,6 +42,8 @@ public class KakaoSignupActivity extends Activity {
                 String msg = "유저정보를 획득하는데 실패하였습니다 :" +errorResult;
                 Logger.d(msg);
                 Log.v("실패","실패");
+                Toast toast = Toast.makeText(getApplicationContext(), getResources().getString(R.string.계정연동실패), Toast.LENGTH_LONG);
+                toast.show();
 
                 ErrorCode result = ErrorCode.valueOf(errorResult.getErrorCode());
                 if(result == ErrorCode.CLIENT_ERROR_CODE){
@@ -80,4 +87,5 @@ public class KakaoSignupActivity extends Activity {
     protected void redirectLoginActivity(){
         finish();
     }
+
 }

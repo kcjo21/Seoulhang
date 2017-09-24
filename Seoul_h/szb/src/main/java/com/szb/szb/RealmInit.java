@@ -1,8 +1,10 @@
 package com.szb.szb;
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.app.Application;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.graphics.drawable.AnimationDrawable;
 import android.graphics.drawable.ColorDrawable;
 import android.support.v7.app.AppCompatDialog;
@@ -17,6 +19,10 @@ import com.kakao.auth.IApplicationConfig;
 import com.kakao.auth.ISessionConfig;
 import com.kakao.auth.KakaoAdapter;
 import com.kakao.auth.KakaoSDK;
+import com.kakao.network.ErrorResult;
+import com.kakao.usermgmt.UserManagement;
+import com.kakao.usermgmt.callback.UnLinkResponseCallback;
+import com.kakao.util.helper.log.Logger;
 
 import java.util.concurrent.atomic.AtomicLong;
 
@@ -173,4 +179,5 @@ public class RealmInit extends Application {
         Realm.setDefaultConfiguration(config);
         realm = Realm.getDefaultInstance();
     }
+
 }
