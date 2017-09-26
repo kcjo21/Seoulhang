@@ -1,9 +1,7 @@
 package com.szb.szb.start_pack;
 
 
-import android.animation.ObjectAnimator;
 import android.app.AlertDialog;
-import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -11,9 +9,6 @@ import android.os.Bundle;
 import android.text.InputType;
 import android.util.Log;
 import android.view.View;
-import android.view.ViewGroup;
-import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
@@ -29,30 +24,24 @@ import com.facebook.AccessToken;
 import com.facebook.GraphRequest;
 import com.facebook.GraphResponse;
 
-import com.bumptech.glide.request.animation.ViewPropertyAnimation;
 import com.facebook.CallbackManager;
 import com.facebook.FacebookCallback;
 import com.facebook.FacebookException;
-import com.facebook.FacebookSdk;
 import com.facebook.HttpMethod;
 import com.facebook.login.LoginManager;
 import com.facebook.login.LoginResult;
-import com.kakao.auth.AuthType;
 import com.kakao.auth.ISessionCallback;
 import com.kakao.auth.Session;
 
-import com.kakao.network.ErrorResult;
 import com.kakao.usermgmt.LoginButton;
 import com.kakao.usermgmt.UserManagement;
 import com.kakao.usermgmt.callback.LogoutResponseCallback;
-import com.kakao.usermgmt.callback.UnLinkResponseCallback;
 import com.kakao.util.exception.KakaoException;
 import com.kakao.util.helper.log.Logger;
 import com.szb.szb.BaseActivity;
 import com.szb.szb.Home.BackPressCloseHandler;
 import com.szb.szb.Home.Home_Main;
 import com.szb.szb.R;
-import com.szb.szb.RealmInit;
 import com.szb.szb.model.retrofit.PlayerDTO;
 import com.szb.szb.network.Ipm;
 import com.szb.szb.network.NetworkClient;
@@ -119,7 +108,6 @@ public class MainActivity extends BaseActivity {
         kakao = (LoginButton) findViewById(R.id.bt_kakao_main);
         findid = (TextView) findViewById(R.id.find_id);
         findPass = (TextView) findViewById(R.id.find_pass_t);
-        run = (ImageView) findViewById(R.id.iv_runningman);
         login = (Button) findViewById(R.id.Login);
         password = (EditText) findViewById(R.id.loginPass);
         set = (Button) findViewById(R.id.bt_set);
@@ -148,10 +136,6 @@ public class MainActivity extends BaseActivity {
         else {
             LoginTypeChecker = loginPref;
         }
-
-        GlideDrawableImageViewTarget ivt_1 = new GlideDrawableImageViewTarget(run);
-        Glide.with(this).load(R.raw.run_gbg).diskCacheStrategy(DiskCacheStrategy.SOURCE).into(ivt_1);
-
 
 
         dialog_login = new Dialog_Login(this, new Dialog_Login.DialogListener() {
@@ -228,7 +212,6 @@ public class MainActivity extends BaseActivity {
                     dialog_login.dismiss();
                 }
                 else{
-                    LoginTypeChecker = "normal";
                     syncbt_lay.setVisibility(View.INVISIBLE);
                     loginSelect.setVisibility(View.GONE);
                     regist_lay.setVisibility(View.VISIBLE);
@@ -282,6 +265,7 @@ public class MainActivity extends BaseActivity {
                 login_lay.setVisibility(View.INVISIBLE);
                 regist_lay.setVisibility(View.INVISIBLE);
                 loginSelect.setVisibility(View.VISIBLE);
+                LoginTypeChecker = "logout";
 
             }
         });
@@ -321,6 +305,7 @@ public class MainActivity extends BaseActivity {
                                 LoginTypeChecker = "normal";
                                 login_lay.setVisibility(View.GONE);
                                 syncbt_lay.setVisibility(View.VISIBLE);
+                                regist_lay.setVisibility(View.GONE);
                                 Toast toast = Toast.makeText(getApplicationContext(), getResources().getString(R.string.loginsuccess,loginid), Toast.LENGTH_LONG);
                                 toast.show();
                                 SharedPreferences sharedPreferences = getApplicationContext().getSharedPreferences("log",MODE_PRIVATE);

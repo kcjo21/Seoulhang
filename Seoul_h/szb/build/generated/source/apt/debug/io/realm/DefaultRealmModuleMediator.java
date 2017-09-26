@@ -28,8 +28,8 @@ class DefaultRealmModuleMediator extends RealmProxyMediator {
     static {
         Set<Class<? extends RealmModel>> modelClasses = new HashSet<Class<? extends RealmModel>>();
         modelClasses.add(com.szb.szb.model.database.Player.class);
-        modelClasses.add(com.szb.szb.model.database.Quest.class);
         modelClasses.add(com.szb.szb.model.database.Inventory.class);
+        modelClasses.add(com.szb.szb.model.database.Quest.class);
         MODEL_CLASSES = Collections.unmodifiableSet(modelClasses);
     }
 
@@ -39,10 +39,10 @@ class DefaultRealmModuleMediator extends RealmProxyMediator {
 
         if (clazz.equals(com.szb.szb.model.database.Player.class)) {
             return io.realm.PlayerRealmProxy.initTable(sharedRealm);
-        } else if (clazz.equals(com.szb.szb.model.database.Quest.class)) {
-            return io.realm.QuestRealmProxy.initTable(sharedRealm);
         } else if (clazz.equals(com.szb.szb.model.database.Inventory.class)) {
             return io.realm.InventoryRealmProxy.initTable(sharedRealm);
+        } else if (clazz.equals(com.szb.szb.model.database.Quest.class)) {
+            return io.realm.QuestRealmProxy.initTable(sharedRealm);
         } else {
             throw getMissingProxyClassException(clazz);
         }
@@ -54,10 +54,10 @@ class DefaultRealmModuleMediator extends RealmProxyMediator {
 
         if (clazz.equals(com.szb.szb.model.database.Player.class)) {
             return io.realm.PlayerRealmProxy.createRealmObjectSchema(realmSchema);
-        } else if (clazz.equals(com.szb.szb.model.database.Quest.class)) {
-            return io.realm.QuestRealmProxy.createRealmObjectSchema(realmSchema);
         } else if (clazz.equals(com.szb.szb.model.database.Inventory.class)) {
             return io.realm.InventoryRealmProxy.createRealmObjectSchema(realmSchema);
+        } else if (clazz.equals(com.szb.szb.model.database.Quest.class)) {
+            return io.realm.QuestRealmProxy.createRealmObjectSchema(realmSchema);
         } else {
             throw getMissingProxyClassException(clazz);
         }
@@ -69,10 +69,10 @@ class DefaultRealmModuleMediator extends RealmProxyMediator {
 
         if (clazz.equals(com.szb.szb.model.database.Player.class)) {
             return io.realm.PlayerRealmProxy.validateTable(sharedRealm, allowExtraColumns);
-        } else if (clazz.equals(com.szb.szb.model.database.Quest.class)) {
-            return io.realm.QuestRealmProxy.validateTable(sharedRealm, allowExtraColumns);
         } else if (clazz.equals(com.szb.szb.model.database.Inventory.class)) {
             return io.realm.InventoryRealmProxy.validateTable(sharedRealm, allowExtraColumns);
+        } else if (clazz.equals(com.szb.szb.model.database.Quest.class)) {
+            return io.realm.QuestRealmProxy.validateTable(sharedRealm, allowExtraColumns);
         } else {
             throw getMissingProxyClassException(clazz);
         }
@@ -84,10 +84,10 @@ class DefaultRealmModuleMediator extends RealmProxyMediator {
 
         if (clazz.equals(com.szb.szb.model.database.Player.class)) {
             return io.realm.PlayerRealmProxy.getFieldNames();
-        } else if (clazz.equals(com.szb.szb.model.database.Quest.class)) {
-            return io.realm.QuestRealmProxy.getFieldNames();
         } else if (clazz.equals(com.szb.szb.model.database.Inventory.class)) {
             return io.realm.InventoryRealmProxy.getFieldNames();
+        } else if (clazz.equals(com.szb.szb.model.database.Quest.class)) {
+            return io.realm.QuestRealmProxy.getFieldNames();
         } else {
             throw getMissingProxyClassException(clazz);
         }
@@ -99,10 +99,10 @@ class DefaultRealmModuleMediator extends RealmProxyMediator {
 
         if (clazz.equals(com.szb.szb.model.database.Player.class)) {
             return io.realm.PlayerRealmProxy.getTableName();
-        } else if (clazz.equals(com.szb.szb.model.database.Quest.class)) {
-            return io.realm.QuestRealmProxy.getTableName();
         } else if (clazz.equals(com.szb.szb.model.database.Inventory.class)) {
             return io.realm.InventoryRealmProxy.getTableName();
+        } else if (clazz.equals(com.szb.szb.model.database.Quest.class)) {
+            return io.realm.QuestRealmProxy.getTableName();
         } else {
             throw getMissingProxyClassException(clazz);
         }
@@ -117,10 +117,10 @@ class DefaultRealmModuleMediator extends RealmProxyMediator {
 
             if (clazz.equals(com.szb.szb.model.database.Player.class)) {
                 return clazz.cast(new io.realm.PlayerRealmProxy());
-            } else if (clazz.equals(com.szb.szb.model.database.Quest.class)) {
-                return clazz.cast(new io.realm.QuestRealmProxy());
             } else if (clazz.equals(com.szb.szb.model.database.Inventory.class)) {
                 return clazz.cast(new io.realm.InventoryRealmProxy());
+            } else if (clazz.equals(com.szb.szb.model.database.Quest.class)) {
+                return clazz.cast(new io.realm.QuestRealmProxy());
             } else {
                 throw getMissingProxyClassException(clazz);
             }
@@ -142,10 +142,10 @@ class DefaultRealmModuleMediator extends RealmProxyMediator {
 
         if (clazz.equals(com.szb.szb.model.database.Player.class)) {
             return clazz.cast(io.realm.PlayerRealmProxy.copyOrUpdate(realm, (com.szb.szb.model.database.Player) obj, update, cache));
-        } else if (clazz.equals(com.szb.szb.model.database.Quest.class)) {
-            return clazz.cast(io.realm.QuestRealmProxy.copyOrUpdate(realm, (com.szb.szb.model.database.Quest) obj, update, cache));
         } else if (clazz.equals(com.szb.szb.model.database.Inventory.class)) {
             return clazz.cast(io.realm.InventoryRealmProxy.copyOrUpdate(realm, (com.szb.szb.model.database.Inventory) obj, update, cache));
+        } else if (clazz.equals(com.szb.szb.model.database.Quest.class)) {
+            return clazz.cast(io.realm.QuestRealmProxy.copyOrUpdate(realm, (com.szb.szb.model.database.Quest) obj, update, cache));
         } else {
             throw getMissingProxyClassException(clazz);
         }
@@ -159,10 +159,10 @@ class DefaultRealmModuleMediator extends RealmProxyMediator {
 
         if (clazz.equals(com.szb.szb.model.database.Player.class)) {
             io.realm.PlayerRealmProxy.insert(realm, (com.szb.szb.model.database.Player) object, cache);
-        } else if (clazz.equals(com.szb.szb.model.database.Quest.class)) {
-            io.realm.QuestRealmProxy.insert(realm, (com.szb.szb.model.database.Quest) object, cache);
         } else if (clazz.equals(com.szb.szb.model.database.Inventory.class)) {
             io.realm.InventoryRealmProxy.insert(realm, (com.szb.szb.model.database.Inventory) object, cache);
+        } else if (clazz.equals(com.szb.szb.model.database.Quest.class)) {
+            io.realm.QuestRealmProxy.insert(realm, (com.szb.szb.model.database.Quest) object, cache);
         } else {
             throw getMissingProxyClassException(clazz);
         }
@@ -182,20 +182,20 @@ class DefaultRealmModuleMediator extends RealmProxyMediator {
 
             if (clazz.equals(com.szb.szb.model.database.Player.class)) {
                 io.realm.PlayerRealmProxy.insert(realm, (com.szb.szb.model.database.Player) object, cache);
-            } else if (clazz.equals(com.szb.szb.model.database.Quest.class)) {
-                io.realm.QuestRealmProxy.insert(realm, (com.szb.szb.model.database.Quest) object, cache);
             } else if (clazz.equals(com.szb.szb.model.database.Inventory.class)) {
                 io.realm.InventoryRealmProxy.insert(realm, (com.szb.szb.model.database.Inventory) object, cache);
+            } else if (clazz.equals(com.szb.szb.model.database.Quest.class)) {
+                io.realm.QuestRealmProxy.insert(realm, (com.szb.szb.model.database.Quest) object, cache);
             } else {
                 throw getMissingProxyClassException(clazz);
             }
             if (iterator.hasNext()) {
                 if (clazz.equals(com.szb.szb.model.database.Player.class)) {
                     io.realm.PlayerRealmProxy.insert(realm, iterator, cache);
-                } else if (clazz.equals(com.szb.szb.model.database.Quest.class)) {
-                    io.realm.QuestRealmProxy.insert(realm, iterator, cache);
                 } else if (clazz.equals(com.szb.szb.model.database.Inventory.class)) {
                     io.realm.InventoryRealmProxy.insert(realm, iterator, cache);
+                } else if (clazz.equals(com.szb.szb.model.database.Quest.class)) {
+                    io.realm.QuestRealmProxy.insert(realm, iterator, cache);
                 } else {
                     throw getMissingProxyClassException(clazz);
                 }
@@ -211,10 +211,10 @@ class DefaultRealmModuleMediator extends RealmProxyMediator {
 
         if (clazz.equals(com.szb.szb.model.database.Player.class)) {
             io.realm.PlayerRealmProxy.insertOrUpdate(realm, (com.szb.szb.model.database.Player) obj, cache);
-        } else if (clazz.equals(com.szb.szb.model.database.Quest.class)) {
-            io.realm.QuestRealmProxy.insertOrUpdate(realm, (com.szb.szb.model.database.Quest) obj, cache);
         } else if (clazz.equals(com.szb.szb.model.database.Inventory.class)) {
             io.realm.InventoryRealmProxy.insertOrUpdate(realm, (com.szb.szb.model.database.Inventory) obj, cache);
+        } else if (clazz.equals(com.szb.szb.model.database.Quest.class)) {
+            io.realm.QuestRealmProxy.insertOrUpdate(realm, (com.szb.szb.model.database.Quest) obj, cache);
         } else {
             throw getMissingProxyClassException(clazz);
         }
@@ -234,20 +234,20 @@ class DefaultRealmModuleMediator extends RealmProxyMediator {
 
             if (clazz.equals(com.szb.szb.model.database.Player.class)) {
                 io.realm.PlayerRealmProxy.insertOrUpdate(realm, (com.szb.szb.model.database.Player) object, cache);
-            } else if (clazz.equals(com.szb.szb.model.database.Quest.class)) {
-                io.realm.QuestRealmProxy.insertOrUpdate(realm, (com.szb.szb.model.database.Quest) object, cache);
             } else if (clazz.equals(com.szb.szb.model.database.Inventory.class)) {
                 io.realm.InventoryRealmProxy.insertOrUpdate(realm, (com.szb.szb.model.database.Inventory) object, cache);
+            } else if (clazz.equals(com.szb.szb.model.database.Quest.class)) {
+                io.realm.QuestRealmProxy.insertOrUpdate(realm, (com.szb.szb.model.database.Quest) object, cache);
             } else {
                 throw getMissingProxyClassException(clazz);
             }
             if (iterator.hasNext()) {
                 if (clazz.equals(com.szb.szb.model.database.Player.class)) {
                     io.realm.PlayerRealmProxy.insertOrUpdate(realm, iterator, cache);
-                } else if (clazz.equals(com.szb.szb.model.database.Quest.class)) {
-                    io.realm.QuestRealmProxy.insertOrUpdate(realm, iterator, cache);
                 } else if (clazz.equals(com.szb.szb.model.database.Inventory.class)) {
                     io.realm.InventoryRealmProxy.insertOrUpdate(realm, iterator, cache);
+                } else if (clazz.equals(com.szb.szb.model.database.Quest.class)) {
+                    io.realm.QuestRealmProxy.insertOrUpdate(realm, iterator, cache);
                 } else {
                     throw getMissingProxyClassException(clazz);
                 }
@@ -262,10 +262,10 @@ class DefaultRealmModuleMediator extends RealmProxyMediator {
 
         if (clazz.equals(com.szb.szb.model.database.Player.class)) {
             return clazz.cast(io.realm.PlayerRealmProxy.createOrUpdateUsingJsonObject(realm, json, update));
-        } else if (clazz.equals(com.szb.szb.model.database.Quest.class)) {
-            return clazz.cast(io.realm.QuestRealmProxy.createOrUpdateUsingJsonObject(realm, json, update));
         } else if (clazz.equals(com.szb.szb.model.database.Inventory.class)) {
             return clazz.cast(io.realm.InventoryRealmProxy.createOrUpdateUsingJsonObject(realm, json, update));
+        } else if (clazz.equals(com.szb.szb.model.database.Quest.class)) {
+            return clazz.cast(io.realm.QuestRealmProxy.createOrUpdateUsingJsonObject(realm, json, update));
         } else {
             throw getMissingProxyClassException(clazz);
         }
@@ -278,10 +278,10 @@ class DefaultRealmModuleMediator extends RealmProxyMediator {
 
         if (clazz.equals(com.szb.szb.model.database.Player.class)) {
             return clazz.cast(io.realm.PlayerRealmProxy.createUsingJsonStream(realm, reader));
-        } else if (clazz.equals(com.szb.szb.model.database.Quest.class)) {
-            return clazz.cast(io.realm.QuestRealmProxy.createUsingJsonStream(realm, reader));
         } else if (clazz.equals(com.szb.szb.model.database.Inventory.class)) {
             return clazz.cast(io.realm.InventoryRealmProxy.createUsingJsonStream(realm, reader));
+        } else if (clazz.equals(com.szb.szb.model.database.Quest.class)) {
+            return clazz.cast(io.realm.QuestRealmProxy.createUsingJsonStream(realm, reader));
         } else {
             throw getMissingProxyClassException(clazz);
         }
@@ -295,10 +295,10 @@ class DefaultRealmModuleMediator extends RealmProxyMediator {
 
         if (clazz.equals(com.szb.szb.model.database.Player.class)) {
             return clazz.cast(io.realm.PlayerRealmProxy.createDetachedCopy((com.szb.szb.model.database.Player) realmObject, 0, maxDepth, cache));
-        } else if (clazz.equals(com.szb.szb.model.database.Quest.class)) {
-            return clazz.cast(io.realm.QuestRealmProxy.createDetachedCopy((com.szb.szb.model.database.Quest) realmObject, 0, maxDepth, cache));
         } else if (clazz.equals(com.szb.szb.model.database.Inventory.class)) {
             return clazz.cast(io.realm.InventoryRealmProxy.createDetachedCopy((com.szb.szb.model.database.Inventory) realmObject, 0, maxDepth, cache));
+        } else if (clazz.equals(com.szb.szb.model.database.Quest.class)) {
+            return clazz.cast(io.realm.QuestRealmProxy.createDetachedCopy((com.szb.szb.model.database.Quest) realmObject, 0, maxDepth, cache));
         } else {
             throw getMissingProxyClassException(clazz);
         }

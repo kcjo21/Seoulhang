@@ -32,16 +32,16 @@
         "source": "C:\\Users\\cwh62\\.android\\build-cache\\6b9e2a149949f92f777fbd1da03ab97e95934703\\output\\res\\drawable\\selector_trafficsub_pop_radio_8.xml"
     },
     {
-        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\build\\intermediates\\res\\merged\\debug\\drawable\\common_google_signin_btn_icon_light.xml",
-        "source": "C:\\Users\\cwh62\\.android\\build-cache\\353c8d830c306275ace0a67ed049e72dd1067f85\\output\\res\\drawable\\common_google_signin_btn_icon_light.xml"
+        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\build\\intermediates\\res\\merged\\debug\\drawable\\selector_trafficsub_radio_sooin.xml",
+        "source": "C:\\Users\\cwh62\\.android\\build-cache\\6b9e2a149949f92f777fbd1da03ab97e95934703\\output\\res\\drawable\\selector_trafficsub_radio_sooin.xml"
     },
     {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\build\\intermediates\\res\\merged\\debug\\drawable\\run.xml",
         "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\src\\main\\res\\drawable\\run.xml"
     },
     {
-        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\build\\intermediates\\res\\merged\\debug\\drawable\\selector_trafficsub_radio_sooin.xml",
-        "source": "C:\\Users\\cwh62\\.android\\build-cache\\6b9e2a149949f92f777fbd1da03ab97e95934703\\output\\res\\drawable\\selector_trafficsub_radio_sooin.xml"
+        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\build\\intermediates\\res\\merged\\debug\\drawable\\common_google_signin_btn_icon_light.xml",
+        "source": "C:\\Users\\cwh62\\.android\\build-cache\\353c8d830c306275ace0a67ed049e72dd1067f85\\output\\res\\drawable\\common_google_signin_btn_icon_light.xml"
     },
     {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_text_cursor_material.xml",
@@ -298,6 +298,10 @@
     {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\build\\intermediates\\res\\merged\\debug\\drawable\\kakao_editable_profile.png",
         "source": "C:\\Users\\cwh62\\.android\\build-cache\\8ab47ee3b040d7a4b0b2f7c61fd09732de7d0e6e\\output\\res\\drawable\\kakao_editable_profile.png"
+    },
+    {
+        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\build\\intermediates\\res\\merged\\debug\\drawable\\edittext_border.xml",
+        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\src\\main\\res\\drawable\\edittext_border.xml"
     },
     {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\build\\intermediates\\res\\merged\\debug\\drawable\\notification_icon_background.xml",
