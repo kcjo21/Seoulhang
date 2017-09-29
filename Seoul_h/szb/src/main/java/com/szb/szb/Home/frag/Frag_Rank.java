@@ -43,7 +43,6 @@ public class Frag_Rank extends Fragment
     Logm logm;
 
     TextView rank;
-    TextView id;
     TextView name;
     TextView mypoint;
     ImageView mygrade;
@@ -151,7 +150,7 @@ public class Frag_Rank extends Fragment
                             String playername = rankDTO.getPlayername();
                             String point = Integer.toString(rankDTO.getPoint());
                             String grade = rankDTO.getGrade();
-                            Log.e("확인1",playername);
+                          //  Log.e("확인1",playername);
                             myDataset.add(new MyData_R(rank_num, playerid, playername, point,grade));
 
                         }

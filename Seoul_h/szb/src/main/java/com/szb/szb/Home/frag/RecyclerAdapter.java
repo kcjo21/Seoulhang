@@ -125,59 +125,80 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
         }
 
 
-        switch (mDataset.get(position).text_region){
-            case "서울역":
+        switch (mDataset.get(position).region_code){
+            case 1:
                 holder.background.setBackgroundResource(R.color.LIGHTGREEN_);
                 break;
-            case "삼성역":
+            case 2:
                 holder.background.setBackgroundResource(R.color.SKYBLUE);
                 break;
-            case "명동역":
+            case 3:
                 holder.background.setBackgroundResource(R.color.ORINGERED);
                 break;
-            case "안국역":
+            case 4:
                 holder.background.setBackgroundResource(R.color.PURPLE);
                 break;
-            case "혜화역":
+            case 5:
                 holder.background.setBackgroundResource(R.color.RED);
                 break;
-            case "인천역":
+            case 6:
                 holder.background.setBackgroundResource(R.color.LIME);
                 break;
-            case "잠실역":
+            case 7:
                 holder.background.setBackgroundResource(R.color.GOLD);
                 break;
-            case "여의도역":
+            case 8:
                 holder.background.setBackgroundResource(R.color.Creamson);
                 break;
-            case "동대문역":
+            case 9:
                 holder.background.setBackgroundResource(R.color.Green00cc66);
                 break;
-            case "Seoul Station":
+            case 10:
                 holder.background.setBackgroundResource(R.color.LIGHTGREEN_);
                 break;
-            case "Samsung Station":
+            case 11:
                 holder.background.setBackgroundResource(R.color.SKYBLUE);
                 break;
-            case "Myeongdong Station":
+            case 12:
                 holder.background.setBackgroundResource(R.color.ORINGERED);
                 break;
-            case "Anguk Station":
+            case 13:
                 holder.background.setBackgroundResource(R.color.PURPLE);
                 break;
-            case "Hyehwa Station":
+            case 14:
                 holder.background.setBackgroundResource(R.color.RED);
                 break;
-            case "Incheon Station":
+            case 15:
                 holder.background.setBackgroundResource(R.color.LIME);
                 break;
-            case "Jamsil Station":
+            case 16:
                 holder.background.setBackgroundResource(R.color.GOLD);
                 break;
-            case "Yeouido Station":
+            case 17:
                 holder.background.setBackgroundResource(R.color.Creamson);
                 break;
-            case "Dongdaemun Station":
+            case 18:
+                holder.background.setBackgroundResource(R.color.Green00cc66);
+                break;
+            case 19:
+                holder.background.setBackgroundResource(R.color.Green00cc66);
+                break;
+            case 20:
+                holder.background.setBackgroundResource(R.color.Green00cc66);
+                break;
+            case 21:
+                holder.background.setBackgroundResource(R.color.Green00cc66);
+                break;
+            case 22:
+                holder.background.setBackgroundResource(R.color.Green00cc66);
+                break;
+            case 23:
+                holder.background.setBackgroundResource(R.color.Green00cc66);
+                break;
+            case 24:
+                holder.background.setBackgroundResource(R.color.Green00cc66);
+                break;
+            case 25:
                 holder.background.setBackgroundResource(R.color.Green00cc66);
                 break;
         }
@@ -383,6 +404,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
 class MyData{
     public String text_num;
     public String text_region;
+    public int region_code;
     public int region_img;
     public String text_quiz;
     public String Answer_q;
@@ -392,10 +414,11 @@ class MyData{
     Activity activity;
     NetworkClient networkClient;
     RecyclerView recyclerView;
-    public MyData(String q_type, String text_num,String text_region,int region_img,String text_quiz,String answer_q,String playerid,NetworkClient networkClient,Activity activity,String hint,RecyclerView recyclerView){
+    public MyData(String q_type, String text_num,String text_region,int region_code,int region_img,String text_quiz,String answer_q,String playerid,NetworkClient networkClient,Activity activity,String hint,RecyclerView recyclerView){
         this.q_type = q_type;
         this.text_num = text_num;
         this.text_region = text_region;
+        this.region_code = region_code;
         this.region_img = region_img;
         this.text_quiz = text_quiz;
         this.Answer_q = answer_q;

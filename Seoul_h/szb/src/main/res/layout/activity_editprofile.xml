@@ -8,7 +8,7 @@
     tools:context="com.szb.szb.start_pack.registerpack.EditprofileActivity">
 
     <TextView
-        android:id="@+id/title"
+        android:id="@+id/title_normal"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
@@ -63,6 +63,7 @@
                 android:id="@+id/ID_lay"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
+                android:layout_marginTop="10dp"
                 android:layout_weight="10"
                 android:orientation="horizontal"
                 android:weightSum="100">
@@ -196,14 +197,14 @@
 
             <Button
                 android:id="@+id/bt_Withdrawal"
-                android:layout_width="75dp"
+                android:layout_width="100dp"
                 android:layout_height="0dp"
                 android:layout_gravity="end"
                 android:layout_marginBottom="20dp"
                 android:layout_weight="8"
                 android:text="@string/회원탈퇴"
                 android:textColor="@android:color/black"
-                android:textSize="7dp"
+                android:textSize="10dp"
                 tools:ignore="RtlHardcoded,SpUsage" />
 
         </LinearLayout>

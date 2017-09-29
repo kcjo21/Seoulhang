@@ -1,50 +1,6 @@
 [
     {
-        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi\\messenger_button_send_round_shadow.png",
-        "source": "C:\\Users\\cwh62\\.android\\build-cache\\95a0679ee93dc8c53637a6018afbb491f373d077\\output\\res\\drawable-xxhdpi\\messenger_button_send_round_shadow.png"
-    },
-    {
-        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi\\messenger_bubble_large_white.png",
-        "source": "C:\\Users\\cwh62\\.android\\build-cache\\95a0679ee93dc8c53637a6018afbb491f373d077\\output\\res\\drawable-xxhdpi\\messenger_bubble_large_white.png"
-    },
-    {
-        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi\\kakaotalk_icon.png",
-        "source": "C:\\Users\\cwh62\\.android\\build-cache\\9f3a721d193dd67ce74a7384c0554092457fb3b3\\output\\res\\drawable-xxhdpi\\kakaotalk_icon.png"
-    },
-    {
-        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi\\messenger_bubble_small_blue.png",
-        "source": "C:\\Users\\cwh62\\.android\\build-cache\\95a0679ee93dc8c53637a6018afbb491f373d077\\output\\res\\drawable-xxhdpi\\messenger_bubble_small_blue.png"
-    },
-    {
-        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi\\com_facebook_button_send_icon.png",
-        "source": "C:\\Users\\cwh62\\.android\\build-cache\\95a0679ee93dc8c53637a6018afbb491f373d077\\output\\res\\drawable-xxhdpi\\com_facebook_button_send_icon.png"
-    },
-    {
-        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi\\com_facebook_button_icon.png",
-        "source": "C:\\Users\\cwh62\\.android\\build-cache\\95a0679ee93dc8c53637a6018afbb491f373d077\\output\\res\\drawable-xxhdpi\\com_facebook_button_icon.png"
-    },
-    {
-        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi\\com_facebook_button_like_icon_selected.png",
-        "source": "C:\\Users\\cwh62\\.android\\build-cache\\95a0679ee93dc8c53637a6018afbb491f373d077\\output\\res\\drawable-xxhdpi\\com_facebook_button_like_icon_selected.png"
-    },
-    {
-        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi\\kakaoaccount_icon.png",
-        "source": "C:\\Users\\cwh62\\.android\\build-cache\\9f3a721d193dd67ce74a7384c0554092457fb3b3\\output\\res\\drawable-xxhdpi\\kakaoaccount_icon.png"
-    },
-    {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi\\title_login.png",
         "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\src\\main\\res\\drawable-xxhdpi\\title_login.png"
-    },
-    {
-        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi\\messenger_bubble_large_blue.png",
-        "source": "C:\\Users\\cwh62\\.android\\build-cache\\95a0679ee93dc8c53637a6018afbb491f373d077\\output\\res\\drawable-xxhdpi\\messenger_bubble_large_blue.png"
-    },
-    {
-        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi\\messenger_bubble_small_white.png",
-        "source": "C:\\Users\\cwh62\\.android\\build-cache\\95a0679ee93dc8c53637a6018afbb491f373d077\\output\\res\\drawable-xxhdpi\\messenger_bubble_small_white.png"
-    },
-    {
-        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\szb\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi\\kakaostory_icon.png",
-        "source": "C:\\Users\\cwh62\\.android\\build-cache\\9f3a721d193dd67ce74a7384c0554092457fb3b3\\output\\res\\drawable-xxhdpi\\kakaostory_icon.png"
     }
 ]

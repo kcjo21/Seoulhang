@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
 import android.os.Message;
+import android.os.SystemClock;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.LinearLayoutManager;
@@ -70,7 +71,7 @@ public class Frag_Home extends BaseFragment {
     Ipm ipm;
     Logm logm;
     Handler handler;
-
+    private long mLastClickTime = 0;
 
 
     public Frag_Home() {
@@ -109,14 +110,7 @@ public class Frag_Home extends BaseFragment {
                 return false;
             }
         };
-      /*  mRecyclerView.setLayoutManager(mLayoutManager);  //레이아웃 매니저를 사용한다.
-        myDataset = new ArrayList<>();
-        mAdapter = new RecyclerAdapter(myDataset);
-        mRecyclerView.setAdapter(mAdapter);       //어탭더 정의
-        mRecyclerView.setNestedScrollingEnabled(false);
-        mRecyclerView.setVisibility(View.VISIBLE);
-        no_quiz.setVisibility(View.GONE);
-        myDataset.add(new MyData("ox","서울역","서울역", R.drawable.app_icon, "ㅇㅇㅇㅇ","ㅇㅇㅇㅇ",loginid,networkClient,getActivity(), "ㅇㅇㅇ", mRecyclerView));*/
+
 
         networkClient = NetworkClient.getInstance(ip);
         networkClient.getstartitem(loginid, new Callback<List<ItemDTO>>() {
@@ -155,12 +149,13 @@ public class Frag_Home extends BaseFragment {
                             String qt = itemDTO.getquestiontype();
                             String qc = Integer.toString(itemDTO.getQuestioncode()); //문제번호
                             String rn = itemDTO.getRegionname(); //지역번호
+                            int rc = itemDTO.getRegioncode();
                             String quiz = itemDTO.getQuestion(); //문제
                             String answer_q = itemDTO.getAnswer(); //정답
                             String hint_q = itemDTO.getHint();
-                            int image = methods.imageSelector(rn);
+                            int image = methods.imageSelector(rc);
 
-                            myDataset.add(new MyData(qt,qc,rn, image, quiz,answer_q,loginid,networkClient,getActivity(), hint_q, mRecyclerView));//각 인자들을 어댑터클래스의 데이터베이스에 전달.
+                            myDataset.add(new MyData(qt,qc,rn,rc, image, quiz,answer_q,loginid,networkClient,getActivity(), hint_q, mRecyclerView));//각 인자들을 어댑터클래스의 데이터베이스에 전달.
 
                             Log.d("퀴즈번호", "" + itemDTO.getQuestioncode());
                             Log.d("퀴즈지역", "" + itemDTO.getRegionname());
@@ -223,8 +218,14 @@ public class Frag_Home extends BaseFragment {
         camera_b.setOnClickListener(new View.OnClickListener() {
             String playerid = logm.getPlayerid();
 
+
             @Override
             public void onClick(View v) {
+                Log.d("게임아이디frag",playerid);
+                if (SystemClock.elapsedRealtime() - mLastClickTime < 1000){
+                    return;
+                }
+                mLastClickTime = SystemClock.elapsedRealtime();
                 Intent intent = new Intent(getActivity(),GameActivity.class);
                 intent.putExtra("playerid",playerid);
                 getActivity().startActivityForResult(intent,0);
@@ -233,8 +234,11 @@ public class Frag_Home extends BaseFragment {
         map_b.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                if (SystemClock.elapsedRealtime() - mLastClickTime < 1000){
+                    return;
+                }
+                mLastClickTime = SystemClock.elapsedRealtime();
                 final Thread t = new Thread(new Runnable() {
-                    Looper mLoop;
                     @Override
                     public void run() { // Thread 로 작업할 내용을 구현
                         Looper.prepare();
@@ -258,6 +262,10 @@ public class Frag_Home extends BaseFragment {
         tuto.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                if (SystemClock.elapsedRealtime() - mLastClickTime < 1000){
+                    return;
+                }
+                mLastClickTime = SystemClock.elapsedRealtime();
                 Intent intent = new Intent(getActivity(), TutorialActivity.class);
                 startActivity(intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK));
                 getActivity().finish();

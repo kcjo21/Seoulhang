@@ -5,7 +5,7 @@ package com.szb.szb.model.retrofit;
  */
 
 public class ItemDTO {
-
+    private int regioncode;
     private String regionname;
     private int questioncode;
     private String question;
@@ -16,7 +16,7 @@ public class ItemDTO {
     private String questiontype;
 
 
-
+    public int getRegioncode() {return this.regioncode;}
     public String getQuestion() {return this.question;}
     public int getQuestioncode() {return this.questioncode;}
     public String getRegionname() {return this.regionname;}
@@ -26,6 +26,7 @@ public class ItemDTO {
     public int getHintcount() {return this.hintcount;}
     public String getquestiontype() {return this.questiontype;}
 
+    public void setRegioncode(int regioncode) {this.regioncode = regioncode;}
     public void setQuestion(String question) {this.question = question;}
     public void setQuestioncode(int questioncode) {
         this.questioncode = questioncode;

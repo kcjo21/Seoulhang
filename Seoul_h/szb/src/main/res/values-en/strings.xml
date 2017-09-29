@@ -14,7 +14,6 @@
     <string name="can_not_connent_to_server">Cannot connect Server.</string>
     <string name="open_drawer">open draweropen draweropen draweropen draweropen draweropen drawer</string>
     <string name="close_drawer">close drawerclose drawerclose drawerclose drawerclose drawer</string>
-    <string name="nolhang">NOLHANG</string>
     <string name="insert_quiz">Insert Quiz</string>
     <string name="region">Region</string>
     <string name="num">num</string>
@@ -36,7 +35,6 @@
     <string name="정답을입력하세요">Enter your answer.</string>
     <string name="내순위">My Rank</string>
     <string name="환영">Wellcome! %s</string>
-    <string name="홈으로가기">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Go to Home</string>
     <string name="카메라켜기">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Turn on Camera</string>
     <string name="등급표">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Tier Information</string>
     <string name="설정">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Setting</string>
@@ -90,7 +88,7 @@
     <string name="비밀번호일치">password do not match.</string>
     <string name="사용가능">Available.</string>
     <string name="EID">Enter your ID.</string>
-    <string name="EPass">Please enter the 8~20 digit passwords</string>
+    <string name="EPass">Please enter a combination of 6-18 alphanumeric characters and combinations of special characters.</string>
     <string name="Ename">Enter your name.</string>
     <string name="EEmail">Enter your E-mail adrress.</string>
     <string name="Eage">Enter your age.</string>
@@ -110,7 +108,7 @@
     <string name="인증번호">Code</string>
     <string name="새비밀번호">Please enter a new password.</string>
     <string name="코드불일치">The authentication code does not match.</string>
-    <string name="회원탈퇴">Withdrawal</string>
+    <string name="회원탈퇴">Leave</string>
     <string name="회원탈퇴비밀번호">Please enter your password for membership withdrawal.</string>
     <string name="탈퇴재확인">Are you sure you want to leave?</string>
     <string name="Loading">LOADING...</string>
@@ -138,4 +136,15 @@
     <string name="같은닉네임존재">" The nickname you entered is already in use."</string>
     <string name="계정연동실패">Account sync failed. Please try again.</string>
     <string name="loginsuccess">Welcome, %s ! Touch the Start button.</string>
+    <string name="naverclientid">S25ZUcloW2JU4Xk2SJTD</string>
+    <string name="naversecret">IxuQXBjLMf</string>
+    <string name="facebook_with">Signed in with Facebook.</string>
+    <string name="facebook_leave_msg">If you leave, all information in the account will be deleted.</string>
+    <string name="mapview_text">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;MapView</string>
+    <string name="subway_text">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Subway map</string>
+    <string name="홈">SEOULHANG</string>
+    <string name="퀴즈">QUIZ</string>
+    <string name="랭킹">RANKING</string>
+    <string name="내정보">INFOMATION</string>
+    <string name="탈퇴성공">Your withdrawal has been processed.</string>
 </resources>

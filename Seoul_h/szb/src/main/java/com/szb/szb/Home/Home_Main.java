@@ -5,6 +5,9 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Looper;
+import android.os.SystemClock;
 import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.view.ViewPager;
@@ -22,9 +25,6 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.bumptech.glide.Glide;
-import com.bumptech.glide.load.engine.DiskCacheStrategy;
-import com.bumptech.glide.request.target.GlideDrawableImageViewTarget;
 import com.szb.szb.BaseActivity;
 import com.szb.szb.GameActivity;
 import com.szb.szb.Home.frag.Frag_Home;
@@ -32,6 +32,7 @@ import com.szb.szb.Home.frag.Frag_Info;
 import com.szb.szb.Home.frag.Frag_Quiz;
 import com.szb.szb.Home.frag.Frag_Rank;
 import com.szb.szb.R;
+import com.szb.szb.mappackage.GooglemapsActivity;
 import com.szb.szb.model.retrofit.InventoryDTO;
 import com.szb.szb.network.Ipm;
 import com.szb.szb.network.NetworkClient;
@@ -61,7 +62,7 @@ public class Home_Main extends BaseActivity {
     Ipm ipm;
     Logm logm;
     TextView info_setting;
-    TextView move_home;
+    TextView mapview;
     TextView move_camera;
     TextView grade;
     TextView setting;
@@ -69,22 +70,22 @@ public class Home_Main extends BaseActivity {
     TextView player_grade;
     TextView player_point_home;
     TextView player_name;
+    ImageView iv_title;
     private Dialog_Grade dialog_grade;
+    Handler handler;
+    private long mLastClickTime = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_main);
-        ImageView run = (ImageView)findViewById(R.id.runing);
-        GlideDrawableImageViewTarget imageViewTarget = new GlideDrawableImageViewTarget(run);
-        Glide.with(this).load(R.raw.run).diskCacheStrategy(DiskCacheStrategy.SOURCE).into(imageViewTarget);
         ipm = new Ipm();
         String ip = ipm.getip();
         logm = new Logm();
         final String loginid = logm.getPlayerid();
         final ArrayList<String> items = new ArrayList<String>();
         info_setting = (TextView)findViewById(R.id.info_setting);
-        move_home = (TextView)findViewById(R.id.move_home);
+        mapview = (TextView)findViewById(R.id.map_view);
         move_camera = (TextView)findViewById(R.id.camera_on);
         grade = (TextView)findViewById(R.id.grade_chart);
         setting = (TextView)findViewById(R.id.setting);
@@ -92,13 +93,19 @@ public class Home_Main extends BaseActivity {
         player_grade = (TextView)findViewById(R.id.player_grade);
         player_point_home = (TextView)findViewById(R.id.player_point_home);
         player_name = (TextView)findViewById(R.id.player_name);
+        iv_title = (ImageView) findViewById(R.id.iv_title);
+        handler = new Handler(Looper.getMainLooper());
 
         SharedPreferences pref = getSharedPreferences("lang",MODE_PRIVATE);
-        int setlang = pref.getInt("setlang",0);
+        final int setlang = pref.getInt("setlang",0);
 
         info_setting.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                if (SystemClock.elapsedRealtime() - mLastClickTime < 1000){
+                    return;
+                }
+                mLastClickTime = SystemClock.elapsedRealtime();
                 final android.app.AlertDialog.Builder alert = new android.app.AlertDialog.Builder(Home_Main.this);
                 alert.setCancelable(false);
                 alert.setMessage(R.string.정보수정질문);
@@ -122,16 +129,41 @@ public class Home_Main extends BaseActivity {
         });
 
 
-        move_home.setOnClickListener(new View.OnClickListener() {
+        mapview.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                viewpager.setCurrentItem(0);
-                dlDrawer.closeDrawers();
+                if (SystemClock.elapsedRealtime() - mLastClickTime < 1000){
+                    return;
+                }
+                mLastClickTime = SystemClock.elapsedRealtime();
+                final Thread t = new Thread(new Runnable() {
+                    @Override
+                    public void run() { // Thread 로 작업할 내용을 구현
+                        Looper.prepare();
+                        progressON();
+                        Log.d("쓰레드 시작","시작");
+                        handler.post(new Runnable() {
+                            @Override
+                            public void run() {
+                                Intent intent = new Intent(Home_Main.this,GooglemapsActivity.class);
+                                startActivity(intent);
+                                finish();
+                            }
+                        });
+                        Looper.loop();
+                        handler.getLooper().quit();
+                    }
+                });
+                t.start(); // 쓰레드 시작i
             }
         });
         move_camera.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                if (SystemClock.elapsedRealtime() - mLastClickTime < 1000){
+                    return;
+                }
+                mLastClickTime = SystemClock.elapsedRealtime();
                 Intent intent = new Intent(Home_Main.this,GameActivity.class);
                 intent.putExtra("playerid",loginid);
                 startActivityForResult(intent,0);  //문제 소유여부 확인을 위해 forResult로 액티비티 실행
@@ -141,6 +173,10 @@ public class Home_Main extends BaseActivity {
         grade.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                if (SystemClock.elapsedRealtime() - mLastClickTime < 1000){
+                    return;
+                }
+                mLastClickTime = SystemClock.elapsedRealtime();
                 dialog_grade = new Dialog_Grade(Home_Main.this,commitlistener);
                 dialog_grade.show();
 
@@ -149,6 +185,10 @@ public class Home_Main extends BaseActivity {
         setting.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                if (SystemClock.elapsedRealtime() - mLastClickTime < 1000){
+                    return;
+                }
+                mLastClickTime = SystemClock.elapsedRealtime();
                 Intent intent = new Intent(Home_Main.this,SettingActivity.class);
                 startActivity(intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK));
                 finish();
@@ -225,7 +265,7 @@ public class Home_Main extends BaseActivity {
 
         backPressCloseHandler = new BackPressCloseHandler(this); //뒤로가기 이벤트 핸들러
 
-        toolbar = (Toolbar) findViewById(R.id.toolbar);
+        toolbar = (Toolbar) findViewById(R.id.toolbar_title);
         dlDrawer = (DrawerLayout) findViewById(R.id.drawer_layout); //툴바 및 드로어레이아웃 초기화
         setSupportActionBar(toolbar);       //툴바를 액션바로 취급
         final ActionBar actionBar = getSupportActionBar();
@@ -249,7 +289,6 @@ public class Home_Main extends BaseActivity {
         ImageView bt_quiz = (ImageView)findViewById(R.id.bt_quiz);
         ImageView bt_info = (ImageView)findViewById(R.id.bt_info);
         ImageView bt_rank = (ImageView)findViewById(R.id.bt_rank);
-        ImageView bt_map = (ImageView)findViewById(R.id.bt_map);  //이미지 뷰에 각  레이아웃 할당
 
         viewpager.setAdapter(new pagerAdapter(getSupportFragmentManager()));
         viewpager.setCurrentItem(0);
@@ -280,8 +319,21 @@ public class Home_Main extends BaseActivity {
                 {
                     if(position==i)
                     {
+                        switch (position){
+                            case 0:
+                                iv_title.setImageResource(R.drawable.title_home);
+                                break;
+                            case 1:
+                                iv_title.setImageResource(R.drawable.title_quiz);
+                                break;
+                            case 2:
+                                iv_title.setImageResource(R.drawable.title_info);
+                                break;
+                            case 3:
+                                iv_title.setImageResource(R.drawable.title_rank);
+                                break;
+                        }
                         top.findViewWithTag(i).setSelected(true);
-
                     }
                     else
                     {
@@ -294,7 +346,6 @@ public class Home_Main extends BaseActivity {
             @Override
             public void onPageScrollStateChanged(int state)
             {
-
             }
         });
 
@@ -396,10 +447,12 @@ public class Home_Main extends BaseActivity {
         int id = item.getItemId();
         logm = new Logm();
         String playerid=logm.getPlayerid();
+        Log.d("게임아이디",playerid);
 
         if (id == R.id.camera_button) {
             Intent intent = new Intent(Home_Main.this,GameActivity.class);
             intent.putExtra("playerid",playerid);
+            Log.d("게임아이디",playerid);
             startActivityForResult(intent,0);  //문제 소유여부 확인을 위해 forResult로 액티비티 실행
             return true;
         }

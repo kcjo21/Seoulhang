@@ -11,12 +11,14 @@ public class RateDTO {
     private String explain;
     @SerializedName("region_name")
     private String regionname;
+    private int regioncode;
 
 
 
     public int getRate() { return this.rate;}
     public String getExplain() {return this.explain;}
     public String getRegionname() {return this.regionname;}
+    public int getRegioncode() {return this.regioncode;}
 
 
     public void setRate(int rate) {
@@ -24,4 +26,5 @@ public class RateDTO {
     }
     public void setExplain(String explain) {this.explain = explain;}
     public void setRegionname(String regionname) {this.regionname = regionname;}
+    public void setRegioncode(int regioncode) {this.regioncode = regioncode;}
 }

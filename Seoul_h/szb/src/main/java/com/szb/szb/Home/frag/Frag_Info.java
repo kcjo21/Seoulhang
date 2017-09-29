@@ -15,6 +15,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.szb.szb.Home.Home_Main;
 import com.szb.szb.R;
 import com.szb.szb.model.retrofit.InventoryDTO;
 import com.szb.szb.model.retrofit.RateDTO;
@@ -40,7 +41,6 @@ public class Frag_Info extends Fragment
     private RecyclerView.LayoutManager mLayoutManager;
     private ArrayList<MyData_I> myDataset;
     NetworkClient networkClient;
-    TextView info_code;
     TextView info_name;
     TextView info_point;
     TextView info_hint;
@@ -69,12 +69,13 @@ public class Frag_Info extends Fragment
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
     {
         final LinearLayout layout = (LinearLayout) inflater.inflate(R.layout.frag_info,container, false);
+        View header = getActivity().getLayoutInflater().inflate(R.layout.exl_header, null);
         expListView = (ExpandableListView)layout.findViewById(R.id.exl); // 확장 리스트뷰를 가져온다.
+        expListView.addHeaderView(header);
         mRecyclerView = (RecyclerView) layout.findViewById(R.id.rvi);
         logm = new Logm();
         final String loginid = logm.getPlayerid();
         ipm = new Ipm();
-        info_code = (TextView)layout.findViewById(R.id.info_code);
         info_name = (TextView)layout.findViewById(R.id.info_name);
         info_point = (TextView)layout.findViewById(R.id.info_point);
         info_hint = (TextView)layout.findViewById(R.id.info_hint);
@@ -118,12 +119,10 @@ public class Frag_Info extends Fragment
 
                         InventoryDTO inventoryDTO = infos.get(0);
                         String grade_i = inventoryDTO.getGrade();
-                        String playercode = inventoryDTO.getPlayercode();
                         String playername = inventoryDTO.getPlayername();
                         String point_i = Integer.toString(inventoryDTO.getPoint());
                         String hint_i = Integer.toString(inventoryDTO.getHint());
 
-                        info_code.setText(playercode);
                         info_name.setText(playername);
                         info_point.setText(point_i);
                         info_hint.setText(hint_i);
@@ -188,7 +187,8 @@ public class Frag_Info extends Fragment
                             int rates_q = rateDTO.getRate();
                             String regionname = rateDTO.getRegionname();
                             String exp = rateDTO.getExplain();
-                            int image = methods.imageSelector_2(regionname);
+                            int regioncode = rateDTO.getRegioncode();
+                            int image = methods.imageSelector_2(regioncode);
                             // 그룹 생성
                             groupData.add(new MyData_G(regionname));
                             childData.add(new ArrayList<MyData_H>());
@@ -217,11 +217,5 @@ public class Frag_Info extends Fragment
             }
         });
         return layout;
-
-
     }
-
-
-
-
 }

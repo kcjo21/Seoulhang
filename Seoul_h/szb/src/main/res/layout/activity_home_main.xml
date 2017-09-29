@@ -8,11 +8,23 @@
     tools:layout_editor_absoluteX="0dp"
     tools:layout_editor_absoluteY="25dp">
 
+    <ImageView
+        android:id="@+id/iv_title"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toTopOf="@+id/drawer_layout"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/title_home"
+        tools:ignore="ContentDescription" />
+
     <android.support.v7.widget.Toolbar
-        android:id="@+id/toolbar"
+        android:id="@+id/toolbar_title"
         android:layout_width="0dp"
         android:layout_height="50dp"
-        android:background="@drawable/title"
+        android:gravity="bottom"
         android:minHeight="50dp"
         android:theme="?attr/actionBarTheme"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -22,33 +34,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
 
-    <ImageView
-        android:id="@+id/runing"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:contentDescription=""
-        app:layout_constraintBottom_toTopOf="@+id/drawer_layout"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintLeft_toLeftOf="@+id/toolbar"
-        app:layout_constraintRight_toLeftOf="@+id/title_text"
-        app:layout_constraintTop_toTopOf="@+id/toolbar"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@android:color/background_light"
-        tools:ignore="ContentDescription" />
-
-    <ImageView
-        android:id="@+id/title_text"
-        android:layout_width="60dp"
-        android:layout_height="50dp"
-        app:layout_constraintBottom_toTopOf="@+id/drawer_layout"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintLeft_toLeftOf="@+id/toolbar"
-        app:layout_constraintRight_toRightOf="@+id/toolbar"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/title_text_home"
-        tools:ignore="ContentDescription" />
-
     <android.support.v4.widget.DrawerLayout
         android:id="@+id/drawer_layout"
         android:layout_width="0dp"
@@ -57,7 +42,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar_title"
         app:layout_constraintVertical_bias="0.0"
         tools:context=".start_pack.MainActivity">
 
@@ -157,6 +142,15 @@
                 android:weightSum="100"
                 tools:ignore="UselessParent">
 
+                <ImageView
+                    android:id="@+id/iv_side_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="8"
+                    android:background="@drawable/side_title"
+                    android:scaleType="fitXY"
+                    tools:ignore="ContentDescription,NestedWeights" />
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
@@ -170,10 +164,10 @@
                         android:id="@+id/info_lay"
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
-                        android:layout_weight="57"
+                        android:layout_weight="47"
                         android:clickable="true"
                         android:orientation="vertical"
-                        android:weightSum="120">
+                        android:weightSum="100">
 
                         <TextView
                             android:id="@+id/info_setting"
@@ -232,16 +226,6 @@
                             android:textSize="14dp"
                             tools:ignore="HardcodedText,SpUsage" />
 
-                        <TextView
-                            android:id="@+id/border"
-                            android:layout_width="match_parent"
-                            android:layout_height="0dp"
-                            android:layout_weight="20"
-                            android:background="@color/LIGHTGREEN_"
-                            android:gravity="center_vertical"
-                            android:textSize="14dp"
-                            tools:ignore="SpUsage" />
-
                     </LinearLayout>
 
                     <LinearLayout
@@ -254,14 +238,27 @@
                         android:orientation="vertical"></LinearLayout>
 
                     <TextView
-                        android:id="@+id/move_home"
+                        android:id="@+id/map_view"
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
                         android:layout_weight="10"
-                        android:background="@drawable/side_home_selector"
+                        android:background="@drawable/side_map_selector"
                         android:clickable="true"
                         android:gravity="center_vertical"
-                        android:text="@string/홈으로가기"
+                        android:text="@string/mapview_text"
+                        android:textColor="@android:color/black"
+                        android:textSize="14dp"
+                        tools:ignore="HardcodedText,SpUsage" />
+
+                    <TextView
+                        android:id="@+id/subway_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="10"
+                        android:background="@drawable/side_subway_selector"
+                        android:clickable="true"
+                        android:gravity="center_vertical"
+                        android:text="@string/subway_text"
                         android:textColor="@android:color/black"
                         android:textSize="14dp"
                         tools:ignore="HardcodedText,SpUsage" />
@@ -328,21 +325,35 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
-                    android:layout_weight="20"
-                    android:background="@color/LIGHTGREEN_"
+                    android:layout_weight="12"
+                    android:background="@color/Carkviewline"
                     android:baselineAligned="false"
                     android:clickable="true"
-                    android:orientation="horizontal"
+                    android:gravity="bottom|end"
+                    android:orientation="vertical"
                     android:weightSum="100">
 
-                    <ImageView
-                        android:id="@+id/logos"
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="100"
-                        android:scaleType="fitXY"
-                        app:srcCompat="@drawable/subtitle"
-                        tools:ignore="ContentDescription,InefficientWeight,NestedWeights" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="70"
+                        android:background="@android:color/background_light"
+                        android:gravity="center_vertical|end"
+                        android:orientation="horizontal"
+                        android:weightSum="100">
+
+                        <ImageButton
+                            android:id="@+id/imageButton"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginEnd="5dp"
+                            android:layout_weight="18"
+                            android:background="@android:color/background_light"
+                            android:scaleType="centerCrop"
+                            app:srcCompat="@drawable/logout_icon"
+                            tools:ignore="ContentDescription,NestedWeights" />
+
+                    </LinearLayout>
 
                 </LinearLayout>
 

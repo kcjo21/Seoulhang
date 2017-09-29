@@ -7,23 +7,16 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.graphics.drawable.AnimationDrawable;
 import android.graphics.drawable.ColorDrawable;
+import android.os.SystemClock;
 import android.support.v7.app.AppCompatDialog;
 import android.text.TextUtils;
 import android.util.Log;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.kakao.auth.ApprovalType;
-import com.kakao.auth.AuthType;
-import com.kakao.auth.IApplicationConfig;
-import com.kakao.auth.ISessionConfig;
-import com.kakao.auth.KakaoAdapter;
-import com.kakao.auth.KakaoSDK;
-import com.kakao.network.ErrorResult;
-import com.kakao.usermgmt.UserManagement;
-import com.kakao.usermgmt.callback.UnLinkResponseCallback;
-import com.kakao.util.helper.log.Logger;
-
+import com.crashlytics.android.Crashlytics;
+import io.fabric.sdk.android.Fabric;
 import java.util.concurrent.atomic.AtomicLong;
 
 import io.realm.Realm;
@@ -100,55 +93,11 @@ public class RealmInit extends Application {
     }
 
 
-    private static class KakaoSDKAdapter extends KakaoAdapter {
-
-        @Override
-        public ISessionConfig getSessionConfig() {
-            return new ISessionConfig() {
-                @Override
-                public AuthType[] getAuthTypes() {
-                    return new AuthType[]{AuthType.KAKAO_LOGIN_ALL};
-                }
-
-                @Override
-                public boolean isUsingWebviewTimer() {
-                    return false;
-                }
-
-                @Override
-                public boolean isSecureMode() {
-                    return false;
-                }
-
-                @Override
-                public ApprovalType getApprovalType() {
-                    return ApprovalType.INDIVIDUAL;
-                }
-
-                @Override
-                public boolean isSaveFormData() {
-                    return true;
-                }
-
-            };
-        }
-
-        @Override
-        public IApplicationConfig getApplicationConfig() {
-            return new IApplicationConfig() {
-                @Override
-                public Context getApplicationContext() {
-                    return RealmInit.getInstance();
-                }
-            };
-        }
-
-    }
     @Override
     public void onCreate() {
         super.onCreate();
+        Fabric.with(this, new Crashlytics());
         RealmInit.ourInstance = this;
-        KakaoSDK.init(new KakaoSDKAdapter());
         Log.e("debug","Application created!");
         Realm.init(this);
         RealmConfiguration realmConfiguration = new RealmConfiguration.Builder().build();
@@ -181,3 +130,5 @@ public class RealmInit extends Application {
     }
 
 }
+
+

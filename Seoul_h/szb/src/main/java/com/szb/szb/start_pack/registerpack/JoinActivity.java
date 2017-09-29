@@ -1,12 +1,17 @@
 package com.szb.szb.start_pack.registerpack;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.inputmethodservice.Keyboard;
 import android.os.Bundle;
+import android.os.SystemClock;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
@@ -35,16 +40,13 @@ public class JoinActivity extends BaseActivity {
     EditText password;
     EditText passwordconfirm;
     EditText name;
-    RadioButton men;
-    RadioButton women;
-    EditText age;
     EditText email;
-    String gender="남";
     Ipm ipm;
     Button check;
     TextView alert;
     TextView check_id;
     Boolean check_tf;
+    private long mLastClickTime = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,9 +61,6 @@ public class JoinActivity extends BaseActivity {
         password = (EditText)findViewById(R.id.password_t);
         passwordconfirm = (EditText)findViewById(R.id.password_ct);
         name = (EditText)findViewById(R.id.name_t);
-        men = (RadioButton)findViewById(R.id.men);
-        women = (RadioButton)findViewById(R.id.women);
-        age = (EditText)findViewById(R.id.age_t);
         email = (EditText) findViewById(R.id.email_t);
         check = (Button) findViewById(R.id.check_b);
         alert = (TextView)findViewById(R.id.alert);
@@ -70,13 +69,13 @@ public class JoinActivity extends BaseActivity {
         String ip = ipm.getip();
         networkClient = NetworkClient.getInstance(ip);
 
-
-
         cancel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(JoinActivity.this, MainActivity.class);
-                startActivity(intent);
+                if (SystemClock.elapsedRealtime() - mLastClickTime < 1000){
+                    return;
+                }
+                mLastClickTime = SystemClock.elapsedRealtime();
                 finish();
             }
         });
@@ -111,7 +110,14 @@ public class JoinActivity extends BaseActivity {
 
             @Override
             public void onClick(View v) {
+                if (SystemClock.elapsedRealtime() - mLastClickTime < 1000){
+                    return;
+                }
+                mLastClickTime = SystemClock.elapsedRealtime();
                 String sid = id.getText().toString();
+                InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+                imm.hideSoftInputFromWindow(id.getWindowToken(), 0);
+
 
                 networkClient.checkid(sid,new Callback<String>() {
                     @Override
@@ -151,29 +157,19 @@ public class JoinActivity extends BaseActivity {
 
             @Override
             public void onClick(View view) {
+                if (SystemClock.elapsedRealtime() - mLastClickTime < 1000){
+                    return;
+                }
+                mLastClickTime = SystemClock.elapsedRealtime();
 
-                men.setChecked(true);
-                men.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        gender = "남";
-                    }
-                });
-                women.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        gender = "여";
-                    }
-                });
 
                 TextView alert = (TextView)findViewById(R.id.alert);
                 if(id.getText().length()<=0) alert.setText(getResources().getString(R.string.EID));
                 else if(!checkEmail(email.getText().toString()))alert.setText(getResources().getString(R.string.checkEmail));
                 else if(!check_tf)alert.setText(getResources().getString(R.string.checkplease));
-                else if(password.getText().length()<=0)alert.setText(getResources().getString(R.string.EPass));
+                else if(!textValidate(password.getText().toString()))alert.setText(getResources().getString(R.string.EPass));
                 else if(!password.getText().toString().equals(passwordconfirm.getText().toString()))alert.setText(getResources().getString(R.string.비밀번호일치));
                 else if(name.getText().length()<=0)alert.setText(getResources().getString(R.string.Ename));
-                else if(age.getText().length()<=0)alert.setText(getResources().getString(R.string.Eage));
                 else if(email.getText().length()<=0)alert.setText(getResources().getString(R.string.EEmail));
                 else if(!checkEmail(email.getText().toString()))alert.setText(getResources().getString(R.string.checkEmail));
 
@@ -183,20 +179,16 @@ public class JoinActivity extends BaseActivity {
                     final String spass = password.getText().toString();
                     final String scpass = passwordconfirm.getText().toString();
                     String sname = name.getText().toString();
-                    int sage = Integer.parseInt(age.getText().toString());
                     String semail = email.getText().toString();
                     String logintype = "normal";
 
-                    networkClient.getjoin(sid, spass, sname, gender, sage, semail, logintype, new Callback<String>() {
+                    networkClient.getjoin(sid, spass, sname, semail, logintype, new Callback<String>() {
                         @Override
                         public void onResponse(Call<String> call, Response<String> response) {
                             if (spass.equals(scpass)) {
                                 switch (response.code()) {
                                     case 200:
                                         String joinDTO = response.body();
-                                        Log.e("TAG", "team dto : " + joinDTO.toString());
-                                        Intent intent = new Intent(JoinActivity.this, MainActivity.class);
-                                        startActivity(intent);
                                         finish();
                                         Toast toast = Toast.makeText(getApplicationContext(), getResources().getString(R.string.회원가입성공), Toast.LENGTH_LONG);
                                         toast.show();
@@ -225,7 +217,7 @@ public class JoinActivity extends BaseActivity {
             }
         });
     }
-    public static boolean checkEmail(String email){
+    public static boolean checkEmail(String email){ //이메일 유효성 체크
 
         String regex = "^[_a-zA-Z0-9-\\.]+@[\\.a-zA-Z0-9-]+\\.[a-zA-Z]+$";
         Pattern p = Pattern.compile(regex);
@@ -234,6 +226,14 @@ public class JoinActivity extends BaseActivity {
         return isTrue;
 
     }
+    public boolean textValidate(String str) {  //영어+숫자+특수문자 혼합해서 6~18자 사이 비밀번호를 체크
+        String Passwrod_PATTERN = "^(?=.*[0-9])(?=.*[a-z])(?=.*[@#$%^&+=])(?=\\S+$).{6,18}$";
+        Pattern pattern = Pattern.compile(Passwrod_PATTERN);
+        Matcher matcher = pattern.matcher(str);
+        return matcher.matches();
+    }
+
+
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
         switch (keyCode) {

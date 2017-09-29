@@ -2,6 +2,7 @@ package com.szb.szb.start_pack.registerpack;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.SystemClock;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
@@ -34,6 +35,7 @@ public class FindPassActivity extends BaseActivity {
     ProgressBar progressBar;
     NetworkClient networkClient;
     Ipm ipm;
+    private long mLastClickTime = 0;
 
 
     @Override
@@ -53,14 +55,22 @@ public class FindPassActivity extends BaseActivity {
         cancel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(FindPassActivity.this, MainActivity.class);
-                startActivity(intent);
+                if (SystemClock.elapsedRealtime() - mLastClickTime < 1000){
+                    return;
+                }
+                mLastClickTime = SystemClock.elapsedRealtime();
+
                 finish();
             }
         });
         commit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                if (SystemClock.elapsedRealtime() - mLastClickTime < 1000){
+                    return;
+                }
+                mLastClickTime = SystemClock.elapsedRealtime();
+
 
                 if (Id.getText().length() <= 0) {
                     Toast toast = Toast.makeText(getApplicationContext(), getResources().getString(R.string.EID), Toast.LENGTH_LONG);

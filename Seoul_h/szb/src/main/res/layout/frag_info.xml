@@ -29,21 +29,10 @@
             tools:ignore="NestedWeights,SpUsage" />
 
         <TextView
-            android:id="@+id/playercode"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="25"
-            android:gravity="center_vertical|center_horizontal"
-            android:text="@string/age"
-            android:textColor="@android:color/black"
-            android:textSize="14dp"
-            tools:ignore="SpUsage" />
-
-        <TextView
             android:id="@+id/playernick"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="30"
+            android:layout_weight="40"
             android:gravity="center_vertical|center_horizontal"
             android:text="@string/닉네임"
             android:textColor="@android:color/black"
@@ -54,7 +43,7 @@
             android:id="@+id/point"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="15"
+            android:layout_weight="25"
             android:gravity="center_vertical|center_horizontal"
             android:text="@string/점수"
             android:textColor="@android:color/black"
@@ -65,7 +54,7 @@
             android:id="@+id/hint"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="15"
+            android:layout_weight="20"
             android:gravity="center_vertical|center_horizontal"
             android:text="@string/남은힌트"
             android:textColor="@android:color/black"
@@ -92,25 +81,16 @@
             android:layout_height="match_parent"
             android:layout_weight="15"
             android:gravity="center_vertical|center_horizontal"
+            android:scaleType="fitXY"
             android:textColor="@android:color/black"
             android:textSize="14dp"
-            tools:ignore="NestedWeights,SpUsage" />
-
-        <TextView
-            android:id="@+id/info_code"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="25"
-            android:gravity="center_vertical|center_horizontal"
-            android:textColor="@android:color/black"
-            android:textSize="18dp"
-            tools:ignore="SpUsage" />
+            tools:ignore="ContentDescription,NestedWeights,SpUsage" />
 
         <TextView
             android:id="@+id/info_name"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="30"
+            android:layout_weight="40"
             android:gravity="center_vertical|center_horizontal"
             android:textColor="@android:color/black"
             android:textSize="18dp"
@@ -120,7 +100,7 @@
             android:id="@+id/info_point"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="15"
+            android:layout_weight="25"
             android:gravity="center_vertical|center_horizontal"
             android:textColor="@android:color/black"
             android:textSize="20dp"
@@ -130,7 +110,7 @@
             android:id="@+id/info_hint"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="15"
+            android:layout_weight="20"
             android:gravity="center_vertical|center_horizontal"
             android:textColor="@android:color/black"
             android:textSize="24dp"
@@ -145,90 +125,13 @@
         android:background="@color/Carkviewline"
         android:orientation="horizontal"></LinearLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_marginLeft="5dp"
-        android:layout_marginRight="5dp"
-        android:layout_weight="4"
-        android:orientation="vertical">
-
-        <TextView
-            android:id="@+id/solved"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:gravity="center_vertical"
-            android:text="@string/해결한문제"
-            android:textColor="@android:color/black"
-            android:textSize="14dp"
-            tools:ignore="DuplicateIds,RtlHardcoded,SpUsage" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="39"
-        android:orientation="horizontal"
-        android:weightSum="100">
-
-        <android.support.v7.widget.RecyclerView
-            android:id="@+id/rvi"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginBottom="5dp"
-            android:layout_marginLeft="5dp"
-            android:layout_marginRight="5dp"
-            android:layout_weight="100"
-            android:visibility="visible"
-            tools:ignore="NestedWeights" />
-
-        <TextView
-            android:id="@+id/no_quiz"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="100"
-            android:gravity="center_vertical|center_horizontal"
-            android:text="@string/현재해결한문제없음"
-            android:textSize="30dp"
-            android:visibility="gone"
-            tools:ignore="SpUsage" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1.5"
-        android:background="@color/Carkviewline"
-        android:orientation="horizontal"></LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_marginLeft="5dp"
-        android:layout_marginRight="5dp"
-        android:layout_weight="4"
-        android:orientation="vertical">
-
-        <TextView
-            android:id="@+id/rate"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginLeft="10dp"
-            android:gravity="center_vertical"
-            android:text="@string/지역별달성률"
-            android:textColor="@android:color/black"
-            android:textSize="14dp"
-            tools:ignore="RtlHardcoded,SpUsage" />
-    </LinearLayout>
-
     <ExpandableListView
         android:id="@+id/exl"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginLeft="5dp"
         android:layout_marginRight="5dp"
-        android:layout_weight="38.5"
+        android:layout_weight="87"
         android:scrollbars="none" />
 
 </LinearLayout>

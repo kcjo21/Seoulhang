@@ -114,17 +114,19 @@ public class Frag_Quiz extends Fragment {
                             String qt = itemDTO.getquestiontype();
                             String qc = Integer.toString(itemDTO.getQuestioncode()); //문제번호
                             String rn = itemDTO.getRegionname(); //지역번호
+                            int rc = itemDTO.getRegioncode();
                             String quiz = itemDTO.getQuestion(); //문제
                             String answer_q = itemDTO.getAnswer(); //정답
                             String hint_q = itemDTO.getHint();
-                            int image = methods.imageSelector(rn);
+                            int image = methods.imageSelector(rc);
 
-                            myDataset.add(new MyData(qt,qc,rn, image, quiz,answer_q,loginid,networkClient,getActivity(), hint_q, mRecyclerView));//각 인자들을 어댑터클래스의 데이터베이스에 전달.
+                            myDataset.add(new MyData(qt,qc,rn,rc, image, quiz,answer_q,loginid,networkClient,getActivity(), hint_q, mRecyclerView));//각 인자들을 어댑터클래스의 데이터베이스에 전달.
 
                             Log.d("퀴즈번호", "" + itemDTO.getQuestioncode());
                             Log.d("퀴즈지역", "" + itemDTO.getRegionname());
                             Log.d("퀴즈", itemDTO.getQuestion());
                             Log.d("퀴즈타입",itemDTO.getquestiontype());
+                            Log.d("퀴즈정답",answer_q);
                             onResume();
 
                         }

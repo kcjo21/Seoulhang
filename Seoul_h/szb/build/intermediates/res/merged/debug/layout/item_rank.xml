@@ -31,9 +31,9 @@
                 android:layout_height="match_parent"
                 android:layout_weight="15"
                 android:gravity="center_vertical|center_horizontal"
-                android:text="TextView"
                 android:textColor="@android:color/black"
-                android:textSize="30dp" />
+                android:textSize="30dp"
+                tools:ignore="SpUsage" />
 
             <ImageView
                 android:id="@+id/grade"
@@ -41,9 +41,10 @@
                 android:layout_height="match_parent"
                 android:layout_weight="15"
                 android:gravity="center_vertical|center_horizontal"
-                android:text="TextView"
+                android:scaleType="fitXY"
                 android:textColor="@android:color/black"
-                android:textSize="14dp" />
+                android:textSize="14dp"
+                tools:ignore="ContentDescription,SpUsage" />
 
             <TextView
                 android:id="@+id/playernick"
@@ -51,9 +52,9 @@
                 android:layout_height="match_parent"
                 android:layout_weight="55"
                 android:gravity="center_vertical|center_horizontal"
-                android:text="TextView"
                 android:textColor="@android:color/black"
-                android:textSize="18dp" />
+                android:textSize="18dp"
+                tools:ignore="SpUsage" />
 
             <TextView
                 android:id="@+id/point"
@@ -61,9 +62,9 @@
                 android:layout_height="match_parent"
                 android:layout_weight="15"
                 android:gravity="center_vertical|center_horizontal"
-                android:text="TextView"
                 android:textColor="@android:color/black"
-                android:textSize="20dp" />
+                android:textSize="20dp"
+                tools:ignore="SpUsage" />
 
         </LinearLayout>
 

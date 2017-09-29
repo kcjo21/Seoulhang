@@ -1,6 +1,5 @@
 package com.szb.szb.start_pack.loginpackage;
 
-import com.kakao.usermgmt.UserManagement;
 
 /**
  * Created by cwh62 on 2017-09-23.

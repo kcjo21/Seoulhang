@@ -99,8 +99,8 @@ public class NetworkClient {
         call.enqueue(callback);
     }
 
-    public void getjoin(String player, String password, String name, String gender, Integer age, String email, String logininfo, Callback<String> callback){
-        Call<String> call = service.getjoin(player, password, name, gender, age, email, logininfo);
+    public void getjoin(String player, String password, String name, String email, String logininfo, Callback<String> callback){
+        Call<String> call = service.getjoin(player, password, name, email, logininfo);
         call.enqueue(callback);
     }
     public void checkid(String player,Callback<String> callback){

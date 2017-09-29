@@ -2,6 +2,7 @@ package com.szb.szb.start_pack.registerpack;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.SystemClock;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
@@ -28,6 +29,7 @@ public class CodeinsertActivity extends BaseActivity {
     Button cancel;
     NetworkClient networkClient;
     Ipm ipm;
+    private long mLastClickTime = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,6 +46,10 @@ public class CodeinsertActivity extends BaseActivity {
         cancel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                if (SystemClock.elapsedRealtime() - mLastClickTime < 1000){
+                    return;
+                }
+                mLastClickTime = SystemClock.elapsedRealtime();
                 finish();
             }
         });
@@ -68,10 +74,15 @@ public class CodeinsertActivity extends BaseActivity {
             }
         });
         commit.setOnClickListener(new View.OnClickListener() {
+
             Intent intent = getIntent();
             String sid = intent.getStringExtra("id");
             @Override
             public void onClick(View v) {
+                if (SystemClock.elapsedRealtime() - mLastClickTime < 1000){
+                    return;
+                }
+                mLastClickTime = SystemClock.elapsedRealtime();
                 String scodes = codes.getText().toString();
 
                 Log.e("아이디",sid);

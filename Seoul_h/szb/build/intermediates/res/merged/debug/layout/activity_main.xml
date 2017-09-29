@@ -5,7 +5,7 @@
     android:id="@+id/con"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/background_light"
+    android:background="@color/SKYBLUE"
     tools:context=".start_pack.MainActivity"
     tools:layout_editor_absoluteX="0dp"
     tools:layout_editor_absoluteY="25dp">
@@ -13,33 +13,16 @@
 
     <ImageView
         android:id="@+id/iv_title"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_width="250dp"
+        android:layout_height="150dp"
         android:scaleType="center"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintVertical_bias="0.089"
         app:srcCompat="@drawable/title_login"
         tools:ignore="ContentDescription" />
-
-    <Button
-        android:id="@+id/bt_loginselect"
-        android:layout_width="200dp"
-        android:layout_height="40dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginStart="10dp"
-        android:background="@drawable/selector_loginbt"
-        android:visibility="visible"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.499"
-        tools:ignore="HardcodedText" />
 
     <LinearLayout
         android:id="@+id/syncbtset_lay"
@@ -79,94 +62,19 @@
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/text_log_lay"
-        android:layout_width="300dp"
-        android:layout_height="250dp"
-        android:gravity="center_vertical|center_horizontal"
-        android:orientation="vertical"
-        android:visibility="gone"
-        android:weightSum="200"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.498">
-
-        <EditText
-            android:id="@+id/loginId"
-            style="@android:style/Widget.DeviceDefault.AutoCompleteTextView"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="50"
-            android:background="@drawable/edittext_border"
-            android:ems="10"
-            android:hint="@string/EID"
-            android:inputType="text"
-            android:textColor="@android:color/black"
-            android:textColorHint="@android:color/black"
-            android:textSize="16dp"
-            android:textStyle="italic"
-            android:visibility="visible"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/title_t"
-            tools:ignore="SpUsage" />
-
-        <EditText
-            android:id="@+id/loginPass"
-            style="@android:style/Widget.DeviceDefault.AutoCompleteTextView"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="50"
-            android:background="@drawable/edittext_border"
-            android:ems="10"
-            android:hint="@string/비밀번호입력"
-            android:inputType="textPassword"
-            android:textColor="@android:color/black"
-            android:textColorHint="@android:color/black"
-            android:textSize="16dp"
-            android:textStyle="italic"
-            android:visibility="visible"
-            app:layout_constraintBottom_toTopOf="@+id/Login"
-            app:layout_constraintHorizontal_bias="0.497"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/loginId"
-            app:layout_constraintVertical_bias="0.0"
-            tools:ignore="SpUsage" />
-
-        <Button
-            android:id="@+id/bt_set"
-            android:layout_width="200dp"
-            android:layout_height="0dp"
-            android:layout_weight="30"
-            android:text="Button"
-            tools:ignore="HardcodedText"
-            tools:layout_editor_absoluteX="0dp"
-            tools:layout_editor_absoluteY="0dp" />
-
-        <Button
-            android:id="@+id/bt_logout_n"
-            android:layout_width="200dp"
-            android:layout_height="0dp"
-            android:layout_weight="30"
-            android:text="Button"
-            tools:ignore="HardcodedText" />
-    </LinearLayout>
-
-    <LinearLayout
         android:id="@+id/register_lay"
-        android:layout_width="match_parent"
-        android:layout_height="25dp"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
         android:gravity="center_vertical|center_horizontal"
         android:orientation="horizontal"
-        android:visibility="gone"
+        android:visibility="visible"
         android:weightSum="100"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent">
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
 
         <TextView
             android:id="@+id/join_tm"
@@ -248,19 +156,122 @@
 
     </LinearLayout>
 
-    <com.kakao.usermgmt.LoginButton
-        android:id="@+id/bt_kakao_main"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:visibility="gone"
+    <LinearLayout
+        android:id="@+id/text_log_lay"
+        android:layout_width="300dp"
+        android:layout_height="200dp"
+        android:gravity="center_vertical|center_horizontal"
+        android:orientation="vertical"
+        android:visibility="visible"
+        android:weightSum="200"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.225"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.113">
+        app:layout_constraintVertical_bias="0.49">
 
-    </com.kakao.usermgmt.LoginButton>
+        <EditText
+            android:id="@+id/loginId"
+            style="@android:style/Widget.DeviceDefault.AutoCompleteTextView"
+            android:layout_width="275dp"
+            android:layout_height="0dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_weight="50"
+            android:background="@drawable/edittext_border"
+            android:ems="10"
+            android:hint="@string/EID"
+            android:inputType="text"
+            android:textColor="@android:color/black"
+            android:textSize="16dp"
+            android:visibility="visible"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/title_t"
+            tools:ignore="SpUsage" />
+
+        <EditText
+            android:id="@+id/loginPass"
+            style="@android:style/Widget.DeviceDefault.AutoCompleteTextView"
+            android:layout_width="275dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_weight="50"
+            android:background="@drawable/edittext_border"
+            android:ems="10"
+            android:hint="@string/비밀번호입력"
+            android:inputType="textPassword"
+            android:textColor="@android:color/black"
+            android:textSize="16dp"
+            android:visibility="visible"
+            app:layout_constraintBottom_toTopOf="@+id/Login"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/loginId"
+            app:layout_constraintVertical_bias="0.0"
+            tools:ignore="SpUsage" />
+
+        <Button
+            android:id="@+id/bt_set"
+            android:layout_width="275dp"
+            android:layout_height="0dp"
+            android:layout_weight="50"
+            android:background="@drawable/selector_seoulhang"
+            tools:ignore="HardcodedText"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="0dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/loginbutton_lay"
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:gravity="center_vertical|center_horizontal"
+        android:orientation="vertical"
+        android:weightSum="100"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_log_lay"
+        app:layout_constraintVertical_bias="0.0">
+
+        <Button
+            android:id="@+id/bt_googleLogin"
+            android:layout_width="275dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="10dp"
+            android:layout_weight="50"
+            android:background="@drawable/selector_google"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.499"
+            tools:ignore="HardcodedText" />
+
+        <Button
+            android:id="@+id/bt_facebookLogin"
+            android:layout_width="275dp"
+            android:layout_height="0dp"
+            android:layout_weight="50"
+            android:background="@drawable/selector_facebook"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.499"
+            tools:ignore="HardcodedText" />
+
+    </LinearLayout>
 
 
 </android.support.constraint.ConstraintLayout>

@@ -31,7 +31,7 @@
     <android.support.constraint.ConstraintLayout
         android:id="@+id/constraintLayout"
         android:layout_width="310dp"
-        android:layout_height="400dp"
+        android:layout_height="350dp"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginLeft="8dp"
@@ -40,11 +40,11 @@
         android:layout_marginTop="8dp"
         android:background="@drawable/setting_back_xm"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.721">
+        app:layout_constraintVertical_bias="0.524">
 
         <LinearLayout
             android:layout_width="0dp"
@@ -63,6 +63,7 @@
                 android:id="@+id/ID_lay"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
+                android:layout_marginTop="10dp"
                 android:layout_weight="10"
                 android:orientation="horizontal"
                 android:weightSum="100">
@@ -82,7 +83,7 @@
                     android:id="@+id/id_t"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="55"
+                    android:layout_weight="50"
                     android:inputType="text"
                     android:textSize="16dp"
                     tools:ignore="LabelFor,SpUsage" />
@@ -91,7 +92,7 @@
                     android:id="@+id/check_b"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="20"
+                    android:layout_weight="25"
                     android:text="@string/중복확인"
                     android:textSize="10sp"
                     tools:ignore="SmallSp" />
@@ -100,7 +101,7 @@
                     android:id="@+id/check_t"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="20"
+                    android:layout_weight="25"
                     android:gravity="center_vertical|center_horizontal"
                     android:textColor="@color/BLUE"
                     android:textSize="14dp"
@@ -202,101 +203,6 @@
             </LinearLayout>
 
             <LinearLayout
-                android:id="@+id/gender_lay"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="10"
-                android:orientation="horizontal"
-                android:weightSum="100">
-
-                <TextView
-                    android:id="@+id/gender"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="25"
-                    android:gravity="center_vertical|center_horizontal"
-                    android:text="@string/성별"
-                    android:textColor="@android:color/black"
-                    android:textSize="14dp"
-                    tools:ignore="NestedWeights,RtlHardcoded,SpUsage" />
-
-                <RadioGroup
-                    android:id="@+id/gender_r"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="70"
-                    android:gravity="center_vertical|center_horizontal"
-                    android:orientation="horizontal"
-                    android:weightSum="100"
-                    app:layout_constraintBottom_toTopOf="@+id/linearLayout"
-                    app:layout_constraintHorizontal_bias="0.496"
-                    app:layout_constraintLeft_toLeftOf="parent"
-                    app:layout_constraintRight_toRightOf="parent">
-
-                    <RadioButton
-                        android:id="@+id/men"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="10dp"
-                        android:layout_marginRight="20dp"
-                        android:checked="true"
-                        android:soundEffectsEnabled="true"
-                        android:text="@string/남"
-                        android:textColor="@android:color/black"
-                        app:layout_constraintHorizontal_bias="0.0"
-                        app:layout_constraintLeft_toLeftOf="parent"
-                        app:layout_constraintRight_toLeftOf="@+id/eng_1"
-                        app:layout_constraintTop_toTopOf="@+id/eng_1"
-                        tools:ignore="HardcodedText,RtlHardcoded,SpUsage" />
-
-                    <RadioButton
-                        android:id="@+id/women"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginRight="10dp"
-                        android:soundEffectsEnabled="true"
-                        android:text="@string/여"
-                        android:textColor="@android:color/black"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintRight_toRightOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/lang_text"
-                        app:layout_constraintVertical_bias="0.191"
-                        tools:ignore="HardcodedText,RtlHardcoded,SpUsage" />
-
-                </RadioGroup>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/Age_lay"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="10"
-                android:orientation="horizontal"
-                android:weightSum="100">
-
-                <TextView
-                    android:id="@+id/age"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="25"
-                    android:gravity="center_vertical|center_horizontal"
-                    android:text="@string/age"
-                    android:textColor="@android:color/black"
-                    android:textSize="14dp"
-                    tools:ignore="NestedWeights,RtlHardcoded,SpUsage" />
-
-                <EditText
-                    android:id="@+id/age_t"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="75"
-                    android:inputType="number"
-                    android:textSize="16dp"
-                    tools:ignore="LabelFor,SpUsage" />
-            </LinearLayout>
-
-            <LinearLayout
                 android:id="@+id/Email_lay"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
@@ -334,13 +240,13 @@
 
         <TextView
             android:id="@+id/alert"
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="0dp"
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
             android:textColor="@color/RED"
             app:layout_constraintBottom_toTopOf="@+id/linearLayout"
-            app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent" />
 

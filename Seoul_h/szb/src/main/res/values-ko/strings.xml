@@ -14,7 +14,6 @@
     <string name="can_not_connent_to_server">서버에 연결할 수 없습니다.</string>
     <string name="open_drawer">open draweropen draweropen draweropen draweropen draweropen drawer</string>
     <string name="close_drawer">close drawerclose drawerclose drawerclose drawerclose drawer</string>
-    <string name="nolhang">NOLHANG</string>
     <string name="insert_quiz">Insert Quiz</string>
     <string name="region">Region</string>
     <string name="num">num</string>
@@ -36,7 +35,6 @@
     <string name="정답을입력하세요">정답을 입력하세요.</string>
     <string name="내순위">내 순위</string>
     <string name="환영">%s님 환영합니다!</string>
-    <string name="홈으로가기">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;홈으로 가기</string>
     <string name="카메라켜기">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;카메라 켜기</string>
     <string name="등급표">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;등급표</string>
     <string name="설정">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;설정</string>
@@ -90,7 +88,7 @@
     <string name="비밀번호일치">비밀번호가 일치하지 않습니다.</string>
     <string name="사용가능">사용가능</string>
     <string name="EID">아이디를 입력해주세요.</string>
-    <string name="EPass">8~20자리 비밀번호를 입력해주세요.</string>
+    <string name="EPass">6~18자리 영문+숫자+특수문자를 혼합한 비밀번호를 입력해주세요.</string>
     <string name="Ename">이름을 입력해주세요.</string>
     <string name="EEmail">이메일을 입력해주세요.</string>
     <string name="Eage">나이를 입력해주세요.</string>
@@ -138,4 +136,15 @@
     <string name="닉네임입력">닉네임을 입력해주세요.</string>
     <string name="계정연동실패">계정 동기화에 실패했습니다. 다시 시도해주십시오.</string>
     <string name="loginsuccess">%s님 환영합니다. 시작버튼을 눌러주세요!</string>
+    <string name="naverclientid">S25ZUcloW2JU4Xk2SJTD</string>
+    <string name="naversecret">IxuQXBjLMf</string>
+    <string name="facebook_with">페이스북으로 로그인됨.</string>
+    <string name="facebook_leave_msg">탈퇴하시면 계정의 모든 정보가 삭제됩니다.</string>
+    <string name="mapview_text">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;지도 보기</string>
+    <string name="subway_text">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;지하철 노선도</string>
+    <string name="홈">서울행</string>
+    <string name="퀴즈">퀴즈</string>
+    <string name="랭킹">랭킹</string>
+    <string name="내정보">내 정보</string>
+    <string name="탈퇴성공">회원탈퇴가 정상적으로 처리되었습니다.</string>
 </resources>

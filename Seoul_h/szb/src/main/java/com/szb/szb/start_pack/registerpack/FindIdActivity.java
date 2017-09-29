@@ -1,6 +1,7 @@
 package com.szb.szb.start_pack.registerpack;
 
 import android.content.Intent;
+import android.os.SystemClock;
 import android.support.constraint.ConstraintLayout;
 import android.os.Bundle;
 import android.util.Log;
@@ -34,6 +35,7 @@ public class FindIdActivity extends BaseActivity {
     ProgressBar progressBar;
     NetworkClient networkClient;
     Ipm ipm;
+    private long mLastClickTime = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,8 +51,11 @@ public class FindIdActivity extends BaseActivity {
         cancel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(FindIdActivity.this, MainActivity.class);
-                startActivity(intent);
+                if (SystemClock.elapsedRealtime() - mLastClickTime < 1000){
+                    return;
+                }
+                mLastClickTime = SystemClock.elapsedRealtime();
+
                 finish();
             }
         });
@@ -58,6 +63,11 @@ public class FindIdActivity extends BaseActivity {
         commit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                if (SystemClock.elapsedRealtime() - mLastClickTime < 1000){
+                    return;
+                }
+                mLastClickTime = SystemClock.elapsedRealtime();
+
 
                 if (name.getText().length() <= 0) {
                     Toast toast = Toast.makeText(getApplicationContext(), getResources().getString(R.string.Ename), Toast.LENGTH_LONG);
@@ -84,8 +94,6 @@ public class FindIdActivity extends BaseActivity {
                             switch (response.code()) {
                                 case 200:
                                     progressOFF();
-                                    Intent intent = new Intent(FindIdActivity.this, MainActivity.class);
-                                    startActivity(intent);
                                     Toast toast = Toast.makeText(getApplicationContext(), getResources().getString(R.string.확인메일보냄), Toast.LENGTH_LONG);
                                     toast.show();
                                     finish();

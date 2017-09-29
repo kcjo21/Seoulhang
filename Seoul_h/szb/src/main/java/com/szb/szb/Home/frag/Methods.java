@@ -18,87 +18,115 @@ public class Methods {
 
     private AppCompatDialog progressDialog;
 
-    public int imageSelector(String region){
+    public int imageSelector(int region){
         switch (region){
-            case "서울역":
+            case 1:
                 return R.drawable.one;
-            case "삼성역":
-                return R.drawable.two;
-            case "명동역":
-                return R.drawable.three;
-            case "안국역":
-                return R.drawable.four;
-            case "혜화역":
-                return R.drawable.five;
-            case "인천역":
-                return R.drawable.six;
-            case "잠실역":
-                return R.drawable.seven;
-            case "여의도역":
-                return R.drawable.eight;
-            case "동대문역":
-                return R.drawable.nine;
-            case "Seoul Station":
+            case 2:
                 return R.drawable.one;
-            case "Samsung Station":
-                return R.drawable.two;
-            case "Myeongdong Station":
-                return R.drawable.three;
-            case "Anguk Station":
-                return R.drawable.four;
-            case "Hyehwa Station":
-                return R.drawable.five;
-            case "Incheon Station":
-                return R.drawable.six;
-            case "Jamsil Station":
-                return R.drawable.seven;
-            case "Yeouido Station":
-                return R.drawable.eight;
-            case "Dongdaemun Station":
-                return R.drawable.nine;
+            case 3:
+                return R.drawable.one;
+            case 4:
+                return R.drawable.one;
+            case 5:
+                return R.drawable.one;
+            case 6:
+                return R.drawable.one;
+            case 7:
+                return R.drawable.one;
+            case 8:
+                return R.drawable.one;
+            case 9:
+                return R.drawable.one;
+            case 10:
+                return R.drawable.one;
+            case 11:
+                return R.drawable.one;
+            case 12:
+                return R.drawable.one;
+            case 13:
+                return R.drawable.one;
+            case 14:
+                return R.drawable.one;
+            case 15:
+                return R.drawable.one;
+            case 16:
+                return R.drawable.one;
+            case 17:
+                return R.drawable.one;
+            case 18:
+                return R.drawable.one;
+            case 19:
+                return R.drawable.one;
+            case 20:
+                return R.drawable.one;
+            case 21:
+                return R.drawable.one;
+            case 22:
+                return R.drawable.one;
+            case 23:
+                return R.drawable.one;
+            case 24:
+                return R.drawable.one;
+            case 25:
+                return R.drawable.one;
             default:
                 return 0;
         }
 
     }
-    public int imageSelector_2(String region){
+    public int imageSelector_2(int region){
         switch (region){
-            case "서울역":
-                return R.drawable.new_one;
-            case "삼성역":
-                return R.drawable.new_two;
-            case "명동역":
-                return R.drawable.new_three;
-            case "안국역":
-                return R.drawable.new_four;
-            case "혜화역":
-                return R.drawable.new_five;
-            case "인천역":
-                return R.drawable.new_six;
-            case "잠실역":
-                return R.drawable.new_seven;
-            case "여의도역":
-                return R.drawable.new_eight;
-            case "동대문역":
-                return R.drawable.new_nine;
-            case "Seoul Station":
-                return R.drawable.new_one;
-            case "Samsung Station":
-                return R.drawable.new_two;
-            case "Myeongdong Station":
-                return R.drawable.new_three;
-            case "Anguk Station":
-                return R.drawable.new_four;
-            case "Hyehwa Station":
-                return R.drawable.new_five;
-            case "Incheon Station":
-                return R.drawable.new_six;
-            case "Jamsil Station":
-                return R.drawable.new_seven;
-            case "Yeouido Station":
-                return R.drawable.new_eight;
-            case "Dongdaemun Station":
-                return R.drawable.new_nine;
+            case 1:
+                return R.drawable.one;
+            case 2:
+                return R.drawable.one;
+            case 3:
+                return R.drawable.one;
+            case 4:
+                return R.drawable.one;
+            case 5:
+                return R.drawable.one;
+            case 6:
+                return R.drawable.one;
+            case 7:
+                return R.drawable.one;
+            case 8:
+                return R.drawable.one;
+            case 9:
+                return R.drawable.one;
+            case 10:
+                return R.drawable.one;
+            case 11:
+                return R.drawable.one;
+            case 12:
+                return R.drawable.one;
+            case 13:
+                return R.drawable.one;
+            case 14:
+                return R.drawable.one;
+            case 15:
+                return R.drawable.one;
+            case 16:
+                return R.drawable.one;
+            case 17:
+                return R.drawable.one;
+            case 18:
+                return R.drawable.one;
+            case 19:
+                return R.drawable.one;
+            case 20:
+                return R.drawable.one;
+            case 21:
+                return R.drawable.one;
+            case 22:
+                return R.drawable.one;
+            case 23:
+                return R.drawable.one;
+            case 24:
+                return R.drawable.one;
+            case 25:
+                return R.drawable.one;
             default:
                 return 0;
         }

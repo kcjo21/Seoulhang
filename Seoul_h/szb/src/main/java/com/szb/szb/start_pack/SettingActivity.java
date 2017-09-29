@@ -5,6 +5,7 @@ import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.content.res.Resources;
 import android.os.Bundle;
+import android.os.SystemClock;
 import android.support.v7.app.AppCompatActivity;
 import android.util.DisplayMetrics;
 import android.util.Log;
@@ -27,6 +28,8 @@ public class SettingActivity extends AppCompatActivity {
     Button cancel;
     TextView lang_text;
     int lang=0;
+    private long mLastClickTime = 0;
+
 
 
     @Override
@@ -85,6 +88,11 @@ public class SettingActivity extends AppCompatActivity {
         commit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+                if (SystemClock.elapsedRealtime() - mLastClickTime < 1000){
+                    return;
+                }
+                mLastClickTime = SystemClock.elapsedRealtime();
                 SharedPreferences a = getSharedPreferences("lang",MODE_PRIVATE);
                 SharedPreferences.Editor editor = a.edit();
                 editor.putInt("setlang",lang);
@@ -125,6 +133,11 @@ public class SettingActivity extends AppCompatActivity {
         cancel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+                if (SystemClock.elapsedRealtime() - mLastClickTime < 1000){
+                    return;
+                }
+                mLastClickTime = SystemClock.elapsedRealtime();
                 Intent intent = new Intent(SettingActivity.this, Home_Main.class);
                 startActivity(intent);
                 finish();

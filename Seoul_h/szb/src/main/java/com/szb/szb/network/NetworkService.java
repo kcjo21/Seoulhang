@@ -47,9 +47,8 @@ public interface NetworkService {
     @GET("/setting_language/{player}/language/{language}")
     Call <Integer> setlanguage(@Path("player") String player, @Path("language") int language);
 
-    @GET("/id/{player}/pass/{password}/name/{name}/gender/{gender}/age/{age}/email/{email}/logininfo/{logininfo}")
-    Call <String> getjoin(@Path("player") String player, @Path("password") String password, @Path("name") String name,
-                          @Path("gender") String gender, @Path("age") Integer age, @Path("email") String email, @Path("logininfo") String logininfo);
+    @GET("/id/{player}/pass/{password}/name/{name}/email/{email}/logininfo/{logininfo}")
+    Call <String> getjoin(@Path("player") String player, @Path("password") String password, @Path("name") String name, @Path("email") String email, @Path("logininfo") String logininfo);
 
     @GET("/checkid/{player}")
     Call<String> checkid(@Path("player") String player);
