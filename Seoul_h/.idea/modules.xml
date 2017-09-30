@@ -3,7 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Seoul_h.iml" filepath="$PROJECT_DIR$/Seoul_h.iml" />
-      <module fileurl="file://$PROJECT_DIR$/szb/szb.iml" filepath="$PROJECT_DIR$/szb/szb.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hbag/hbag.iml" filepath="$PROJECT_DIR$/hbag/hbag.iml" />
       <module fileurl="file://$PROJECT_DIR$/trafficsubway-release/trafficsubway-release.iml" filepath="$PROJECT_DIR$/trafficsubway-release/trafficsubway-release.iml" />
     </modules>
   </component>
