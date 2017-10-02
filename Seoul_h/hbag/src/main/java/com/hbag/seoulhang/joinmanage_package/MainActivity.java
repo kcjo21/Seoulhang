@@ -7,6 +7,8 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Looper;
 import android.os.SystemClock;
 import android.support.annotation.NonNull;
 import android.text.InputType;
@@ -15,11 +17,12 @@ import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
-
+import com.dd.processbutton.iml.ActionProcessButton;
 import com.facebook.GraphRequest;
 import com.facebook.GraphResponse;
 
@@ -40,6 +43,7 @@ import com.hbag.seoulhang.appbase_package.BaseActivity;
 import com.hbag.seoulhang.home_package.BackPressCloseHandler;
 import com.hbag.seoulhang.home_package.Home_Main;
 import com.hbag.seoulhang.R;
+import com.hbag.seoulhang.home_package.LogoutDialog;
 import com.hbag.seoulhang.model.retrofit.PlayerDTO;
 import com.hbag.seoulhang.network.Ipm;
 import com.hbag.seoulhang.network.NetworkClient;
@@ -50,6 +54,7 @@ import com.hbag.seoulhang.joinmanage_package.register_package.JoinActivity;
 
 import org.json.JSONObject;
 import java.util.Arrays;
+
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -68,9 +73,9 @@ public class MainActivity extends BaseActivity implements
     LinearLayout syncbt_lay;
     LinearLayout loginbt_lay;
     ImageView title_login;
-    Button login;
+    ActionProcessButton login;
     Button set;
-    Button logoutsync;
+    ImageButton logoutsync;
     Button bt_facebookLogin;
     Button bt_googleSignbt;
     EditText loginId_tv;
@@ -79,6 +84,7 @@ public class MainActivity extends BaseActivity implements
     TextView findPass;
     EditText password;
     String loginid;
+    LogoutDialog logoutDialog;
     NetworkClient networkClient;
     Ipm ipm;
     private BackPressCloseHandler backPressCloseHandler;
@@ -86,6 +92,8 @@ public class MainActivity extends BaseActivity implements
     InputMethodManager keyboard;
     private long mLastClickTime = 0;
     UserProfileData_singleton profile;
+    SharedPreferences sharedPreferences;
+    SharedPreferences.Editor editor;
 
 
     @Override
@@ -105,25 +113,24 @@ public class MainActivity extends BaseActivity implements
         join = (TextView) findViewById(R.id.join_tm);
         findid = (TextView) findViewById(R.id.find_id);
         findPass = (TextView) findViewById(R.id.find_pass_t);
-        login = (Button) findViewById(R.id.Login);
+        login = (ActionProcessButton) findViewById(R.id.Login);
         set = (Button) findViewById(R.id.bt_set);
-        logoutsync = (Button) findViewById(R.id.bt_logout_sync);
+        logoutsync = (ImageButton) findViewById(R.id.bt_logout_sync);
         bt_facebookLogin = (Button) findViewById(R.id.bt_facebookLogin);
         bt_googleSignbt = (Button) findViewById(R.id.bt_googleLogin);
         ipm = new Ipm();
         backPressCloseHandler = new BackPressCloseHandler(this);
         final String ip = ipm.getip();
         networkClient = NetworkClient.getInstance(ip);
-        login = (Button) findViewById(R.id.Login);
         keyboard = (InputMethodManager) getSystemService(INPUT_METHOD_SERVICE);
         profile = UserProfileData_singleton.getInstance();
 
 
-        final SharedPreferences sharedPreferences = getSharedPreferences("log",MODE_PRIVATE);
-        final String loginPref = sharedPreferences.getString("logintype","");     //이전 접속 상태를 불러온다.
+        sharedPreferences = getSharedPreferences("log",MODE_PRIVATE);
+        String loginPref = sharedPreferences.getString("logintype","");     //이전 접속 상태를 불러온다.
+        editor = sharedPreferences.edit();
         Log.d("Login",loginPref);
-        final SharedPreferences.Editor editor = sharedPreferences.edit();
-        if(!loginPref.equals("logout")) {
+        if(loginPref.equals("facebook")||loginPref.equals("google")||loginPref.equals("normal")) {
             UI_State1(1);
         }
 
@@ -220,25 +227,8 @@ public class MainActivity extends BaseActivity implements
                     return;
                 }
                 mLastClickTime = SystemClock.elapsedRealtime();
-                Log.d("페이스북 로그아웃",profile.getLoginType());
-                if(profile.getLoginType().equals("facebook")){
-                    LoginManager.getInstance().logOut();
-
-                }
-                else if(profile.getLoginType().equals("google")){
-                    Auth.GoogleSignInApi.signOut(mGoogleApiClient).setResultCallback(
-                            new ResultCallback<Status>() {
-                                @Override
-                                public void onResult(@NonNull Status status) {
-                                    Log.d("구글 로그아웃",profile.getLoginType());
-                                }
-                            }
-                    );
-                }
-                UI_State1(0);
-                editor.putString("logintype","logout");   //로그인 상태 로그아웃으로 저장
-                editor.apply();
-                profile.setLoginType("logout");
+                logoutDialog = new LogoutDialog(MainActivity.this, clicklistener);
+                logoutDialog.show();
             }
 
         });
@@ -281,7 +271,6 @@ public class MainActivity extends BaseActivity implements
                                 toast.show();
                                 editor.putString("id",sLoginid);
                                 editor.apply();             //디바이스 내부에 아이디를 저장시킵니다.
-                                editor.apply();  //로그인 타입 상태를 저장시킵니다.
                               //  progressOFF();
                                 break;
 
@@ -355,15 +344,17 @@ public class MainActivity extends BaseActivity implements
 
             @Override
             public void onClick(View view) {
+                login.setProgress(1);
                 if (SystemClock.elapsedRealtime() - mLastClickTime < 300){
                     return;
                 }
                 mLastClickTime = SystemClock.elapsedRealtime();
 
 
-                String email = profile.getEmail();
-                String name = profile.getName();
-                String logintype = profile.getLoginType();
+                final String email = profile.getEmail();
+                final String name = profile.getName();
+                final String logintype = profile.getLoginType();
+                mLastClickTime = SystemClock.elapsedRealtime();
 
                 switch (logintype){
                     case "normal":
@@ -421,6 +412,7 @@ public class MainActivity extends BaseActivity implements
                     public void onResponse(Call<Integer> call, Response<Integer> response) {
                         switch (response.code()){
                             case 200:
+                                login.setProgress(100);
                                 Log.d("닉네임 입력 필요: ",loginid);
                                 int hasNickname = response.body();
                                 String nick = Integer.toString(hasNickname);
@@ -446,10 +438,11 @@ public class MainActivity extends BaseActivity implements
                                                 public void onResponse(Call<String> call, Response<String> response) {
                                                     switch (response.code()) {
                                                         case 200:
-                                                            Intent intent = new Intent(MainActivity.this, Home_Main.class);
-                                                            startActivity(intent);
-                                                            finish();
+                                                                Intent intent = new Intent(MainActivity.this, Home_Main.class);
+                                                                startActivity(intent);
+                                                                finish();
                                                             break;
+
                                                         default:
                                                             Toast toast = Toast.makeText(getApplicationContext(), getResources().getString(R.string.같은닉네임존재), Toast.LENGTH_LONG);
                                                             toast.show();
@@ -470,9 +463,10 @@ public class MainActivity extends BaseActivity implements
 
                                 }
                                 else {
-                                    Intent intent = new Intent(MainActivity.this, Home_Main.class);
-                                    startActivity(intent);
-                                    finish();
+                                        Intent intent = new Intent(MainActivity.this, Home_Main.class);
+                                        startActivity(intent);
+                                        finish();
+                                        break;
                                 }
 
                                 break;
@@ -487,10 +481,10 @@ public class MainActivity extends BaseActivity implements
                         toast.show();
                     }
                 });
-
-
             }
+
         });
+
 
         if(!loginPref.equals("logout")){   //이전 접속데이터로 즉시 로그인한다.
             profile.setLoginType(loginPref);
@@ -554,6 +548,9 @@ public class MainActivity extends BaseActivity implements
                 UI_State1(1);
             }
             else{
+                UI_State1(0);
+                Toast toast = Toast.makeText(getApplicationContext(), getResources().getString(R.string.로그인실패), Toast.LENGTH_LONG);
+                toast.show();
                 Log.d("구글로그인","실패");
             }
         }
@@ -593,6 +590,45 @@ public class MainActivity extends BaseActivity implements
         loginId_tv.setText("");
         password.setText("");
     }
+
+    private View.OnClickListener clicklistener = new View.OnClickListener() { //로그아웃 다이알로그의 리스너
+        @Override
+        public void onClick(View v) {
+
+            int tag = (int)v.getTag();     //다이알로그 버튼의 태그값을 이용하여 뷰 판단
+
+            switch (tag){
+                case 1:
+                    logoutDialog.dismiss();
+                    break;
+                case 2:
+                    Log.d("페이스북 로그아웃",profile.getLoginType());
+                    if(profile.getLoginType().equals("facebook")){
+                        LoginManager.getInstance().logOut();
+
+                    }
+                    else if(profile.getLoginType().equals("google")){
+                        Auth.GoogleSignInApi.signOut(mGoogleApiClient).setResultCallback(
+                                new ResultCallback<Status>() {
+                                    @Override
+                                    public void onResult(@NonNull Status status) {
+                                        Log.d("구글 로그아웃",profile.getLoginType());
+                                    }
+                                }
+                        );
+                    }
+                    UI_State1(0);
+                    editor.putString("logintype","logout");   //로그인 상태 로그아웃으로 저장
+                    editor.apply();
+                    profile.setLoginType("logout");
+                    logoutDialog.dismiss();
+                    break;
+                default:
+                    break;
+            }
+
+        }
+    };
 
 
 }

@@ -1,5 +1,6 @@
 package com.hbag.seoulhang.home_package;
 
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -18,9 +19,12 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewTreeObserver;
+import android.view.animation.DecelerateInterpolator;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -50,7 +54,13 @@ import com.hbag.seoulhang.joinmanage_package.SettingActivity;
 import com.hbag.seoulhang.joinmanage_package.TutorialActivity;
 import com.hbag.seoulhang.joinmanage_package.login_package.UserProfileData_singleton;
 import com.hbag.seoulhang.joinmanage_package.register_package.EditprofileActivity;
+import com.takusemba.spotlight.OnSpotlightEndedListener;
+import com.takusemba.spotlight.OnSpotlightStartedListener;
+import com.takusemba.spotlight.OnTargetStateChangedListener;
+import com.takusemba.spotlight.SimpleTarget;
+import com.takusemba.spotlight.Spotlight;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import retrofit2.Call;
@@ -81,12 +91,20 @@ public class Home_Main extends BaseActivity implements
     TextView player_name;
     TextView tv_side_title;
     ImageView iv_title;
+    ImageView bt_home;
+    ImageView bt_quiz;
+    ImageView bt_info;
+    ImageView bt_rank;
+    TextView drawerposition;
+    TextView cameraposition;
     ImageButton side_logout_bt;
     private GradeDialog dialog_grade;
     private LogoutDialog logoutDialog;
     Handler handler;
     private GoogleApiClient mGoogleApiClient;
     private long mLastClickTime = 0;
+    List<SimpleTarget> spotTarget;
+    boolean firstwindow = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -96,6 +114,8 @@ public class Home_Main extends BaseActivity implements
         ipm = new Ipm();
         String ip = ipm.getip();
         final String loginid = profile.getId();
+        drawerposition = (TextView)findViewById(R.id.drawer_position);
+        cameraposition = (TextView)findViewById(R.id.camera_position);
         info_setting = (TextView)findViewById(R.id.info_setting);
         mapview = (TextView)findViewById(R.id.map_view);
         move_camera = (TextView)findViewById(R.id.camera_on);
@@ -109,11 +129,15 @@ public class Home_Main extends BaseActivity implements
         tv_side_title = (TextView) findViewById(R.id.tv_side_title);
         side_logout_bt = (ImageButton) findViewById(R.id.logout_bt);
         handler = new Handler(Looper.getMainLooper());
+        spotTarget = new ArrayList<>();
 
         final SharedPreferences pref = getSharedPreferences("lang",MODE_PRIVATE);
         final int setlang = pref.getInt("setlang",0);
 
         String logintype = profile.getLoginType();
+
+
+        //Log.d("디버그",profile.getLoginType()+" "+profile.getId()+" "+profile.getEmail()+" "+profile.getName());
 
         switch (logintype){       //로그인 매체에 따라 네비게이션 상단타이틀과 UI색상 변경
             case "facebook":
@@ -317,7 +341,7 @@ public class Home_Main extends BaseActivity implements
 
         if(first_flag != 1) {
             Intent intent = new Intent(Home_Main.this, TutorialActivity.class);
-            startActivity(intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK));
+            startActivity(intent);
             finish();
         }
 
@@ -345,10 +369,10 @@ public class Home_Main extends BaseActivity implements
         viewpager = (ViewPager)findViewById(R.id.viewpager);  //뷰 페이저 초기화
         top = (LinearLayout) findViewById(R.id.tap_bar);   //tap_bar 레이아웃 초기화
 
-        ImageView bt_home = (ImageView)findViewById(R.id.bt_home);
-        ImageView bt_quiz = (ImageView)findViewById(R.id.bt_quiz);
-        ImageView bt_info = (ImageView)findViewById(R.id.bt_info);
-        ImageView bt_rank = (ImageView)findViewById(R.id.bt_rank);
+        bt_home = (ImageView)findViewById(R.id.bt_home);
+        bt_quiz = (ImageView)findViewById(R.id.bt_quiz);
+        bt_info = (ImageView)findViewById(R.id.bt_info);
+        bt_rank = (ImageView)findViewById(R.id.bt_rank);
 
         viewpager.setAdapter(new pagerAdapter(getSupportFragmentManager()));
         viewpager.setCurrentItem(0);
@@ -505,6 +529,8 @@ public class Home_Main extends BaseActivity implements
                     Toast toast = Toast.makeText(getApplicationContext(), getResources().getString(R.string.Logout_msg), Toast.LENGTH_LONG);
                     toast.show();
 
+                    cleanProfile(); //프로필 정보 제거
+
                     Log.d("로그아웃","Home_main"+profile.getLoginType());
                     Intent intent = new Intent(Home_Main.this, MainActivity.class);
                     startActivity(intent);
@@ -576,7 +602,7 @@ public class Home_Main extends BaseActivity implements
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         final String playerid=profile.getId();
         String ip =ipm.getip();
-        Log.e("아이디ㅇㅇ",playerid);
+        Log.d("유니티 통신완료 ID : ",playerid);
 
         if(requestCode == 0){
             if(resultCode == RESULT_OK) {
@@ -584,14 +610,14 @@ public class Home_Main extends BaseActivity implements
                 networkClient.checkplayer(playerid,new Callback<Integer>() {
                     @Override
                     public void onResponse(Call<Integer> call, Response<Integer> response) {
-                        Log.e("아이디dd",playerid);
+                        Log.d("유니티 통신완료 재확인 ID : ",playerid);
                         switch (response.code()){
                             case 200:
                                 int check = response.body();
-                                Log.e("확인","check"+check);
+                                Log.d("확인","check"+check);
                                 if (check == 1) {  //Responce의값이 1일 때 새 문제 획득
                                     AlertDialog.Builder alert = new AlertDialog.Builder(Home_Main.this);
-                                    alert.setPositiveButton("확인", new DialogInterface.OnClickListener() {
+                                    alert.setPositiveButton(getResources().getString(R.string.dialog_ok), new DialogInterface.OnClickListener() {
                                         @Override
                                         public void onClick(DialogInterface dialog, int which) {
                                             Intent intent = new Intent(getApplicationContext(),Home_Main.class);
@@ -603,9 +629,9 @@ public class Home_Main extends BaseActivity implements
                                     alert.setMessage(R.string.새문제);
                                     alert.show();
                                 } else if (check == 0) { //Responce값이 0일 때 이미 가지고 있는 문제
-                                    Log.e("확인","응"+check);
+                                    Log.d("확인"," "+check);
                                     AlertDialog.Builder alert = new AlertDialog.Builder(Home_Main.this);
-                                    alert.setPositiveButton("확인", new DialogInterface.OnClickListener() {
+                                    alert.setPositiveButton(getResources().getString(R.string.dialog_ok), new DialogInterface.OnClickListener() {
                                         @Override
                                         public void onClick(DialogInterface dialog, int which) {
 
@@ -647,6 +673,104 @@ public class Home_Main extends BaseActivity implements
         // be available.
         Log.d("EditprofileActivity", "onConnectionFailed:" + connectionResult);
     }
+
+    public void cleanProfile(){
+        profile.setId("");
+        profile.setNickname("");
+        profile.setEmail("");
+        profile.setName("");
+    }
+
+
+    @Override
+    public void onWindowFocusChanged(boolean hasFocus){
+
+        if(!firstwindow) {   //포커스 변경 시 중복 생성을 방지한다.
+
+            targetMaker(bt_home, 80F, getResources().getString(R.string.홈), getResources().getString(R.string.home_descrip));
+            targetMaker(bt_quiz, 80F, getResources().getString(R.string.퀴즈), getResources().getString(R.string.quiz_descrip));
+            targetMaker(bt_info, 80F, getResources().getString(R.string.내정보), getResources().getString(R.string.info_descrip));
+            targetMaker(bt_rank, 80F, getResources().getString(R.string.순위표), getResources().getString(R.string.rank_descrip));
+            targetMaker(drawerposition, 80F, getResources().getString(R.string.메뉴버튼), getResources().getString(R.string.menu_descrip));
+            targetMaker(cameraposition, 80F, getResources().getString(R.string.카메라버튼), getResources().getString(R.string.camera_descrip));
+
+            SharedPreferences pref = getSharedPreferences("spot", MODE_PRIVATE);
+            if (pref.getInt("firstSpot", 0) == 0) {
+                spotLightExcute(0);
+            }
+            firstwindow = true;
+        }
+
+
+    }
+
+    public void targetMaker(View point, float radius, String title, String description){
+
+        SimpleTarget simpleTarget = new SimpleTarget.Builder(this)
+                .setPoint(point)
+                .setRadius(radius)
+                .setTitle(title)
+                .setDescription(description)
+                .setOnSpotlightStartedListener(new OnTargetStateChangedListener<SimpleTarget>() {
+                    @Override
+                    public void onStarted(SimpleTarget target) {
+
+                    }
+
+                    @Override
+                    public void onEnded(SimpleTarget target) {
+
+                    }
+                }).build();
+        spotTarget.add(simpleTarget);
+
+    }
+
+    public void spotLightExcute(int state){   //spotlight를 상황에 따라 실행
+        switch(state) {
+            case 0:
+                Spotlight.with(this)
+                        .setDuration(500L)
+                        .setAnimation(new DecelerateInterpolator(2f))
+                        .setTargets(spotTarget.get(2),spotTarget.get(3),spotTarget.get(4),spotTarget.get(5),spotTarget.get(6),spotTarget.get(7),spotTarget.get(0),spotTarget.get(1))
+                        .setOnSpotlightStartedListener(new OnSpotlightStartedListener() {
+                            @Override
+                            public void onStarted() {
+                                bt_home.setImageResource(R.drawable.home_2);
+                                bt_quiz.setImageResource(R.drawable.quiz_2);
+                                bt_info.setImageResource(R.drawable.info_2);
+                                bt_rank.setImageResource(R.drawable.rank_2);
+                            }
+                        })
+                        .setOnSpotlightEndedListener(new OnSpotlightEndedListener() {
+                            @Override
+                            public void onEnded() {
+                                bt_home.setImageResource(R.drawable.selector_home);
+                                bt_quiz.setImageResource(R.drawable.selector_quiz);
+                                bt_info.setImageResource(R.drawable.selector_info);
+                                bt_rank.setImageResource(R.drawable.selector_rank);
+                                SharedPreferences sharedPreferences = getSharedPreferences("spot",MODE_PRIVATE);
+                                SharedPreferences.Editor firststateEditor = sharedPreferences.edit();
+                                firststateEditor.putInt("firstSpot",1);
+                                firststateEditor.apply();
+                                Intent intent = new Intent(Home_Main.this,Home_Main.class);
+                                startActivity(intent.setFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION));
+                                overridePendingTransition(0, 0);
+                                finish();
+
+                            }
+                        }).start();
+                break;
+            case 1:
+                break;
+            default:
+                break;
+
+
+        }
+
+    }
+
 
 }
 

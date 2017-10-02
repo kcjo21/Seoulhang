@@ -1,14 +1,17 @@
 package com.hbag.seoulhang.home_package.home_fragment;
 
 import android.content.DialogInterface;
+import android.support.v4.view.MotionEventCompat;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.getkeepsafe.relinker.elf.Elf;
 import com.hbag.seoulhang.R;
 
 import java.util.ArrayList;
@@ -19,12 +22,14 @@ import java.util.ArrayList;
 
 public class RecyclerAdapter_I extends RecyclerView.Adapter<RecyclerAdapter_I.ViewHoler> {
     private ArrayList<MyData_I> mDataset;
+    View view;
 
     public static class ViewHoler extends RecyclerView.ViewHolder{
         public TextView quiz_num;
         public TextView quiz_region;
         public TextView quiz;
         public LinearLayout item_lay;
+
 
         public ViewHoler(View view){
             super(view);
@@ -42,12 +47,13 @@ public class RecyclerAdapter_I extends RecyclerView.Adapter<RecyclerAdapter_I.Vi
     @Override
     public RecyclerAdapter_I.ViewHoler onCreateViewHolder(ViewGroup parent, int viewType){
         View v = LayoutInflater.from(parent.getContext()).inflate((R.layout.item_info),parent,false);
+        view= v;
         RecyclerAdapter_I.ViewHoler vh = new RecyclerAdapter_I.ViewHoler(v);
         return vh;
     }
 
     @Override
-    public void onBindViewHolder(RecyclerAdapter_I.ViewHoler holder, final int position){
+    public void onBindViewHolder(final RecyclerAdapter_I.ViewHoler holder, final int position){
         holder.quiz_num.setText(mDataset.get(position).quiz_num);
         holder.quiz_region.setText(mDataset.get(position).quiz_region);
         holder.quiz.setText(mDataset.get(position).quiz);
@@ -67,6 +73,7 @@ public class RecyclerAdapter_I extends RecyclerView.Adapter<RecyclerAdapter_I.Vi
         });
 
 
+
     }
     @Override
     public int getItemCount(){
@@ -84,4 +91,5 @@ class MyData_I{
         this.quiz_region = quiz_region;
         this.quiz = quiz;
     }
+
 }

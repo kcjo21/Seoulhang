@@ -74,18 +74,6 @@ public class Frag_Quiz extends Fragment {
         networkClient = NetworkClient.getInstance(ip);
         Log.e("ACC", "TEAM id IS !!! frag quiz" + loginid);
 
-       /* mRecyclerView.setHasFixedSize(true);
-        mLayoutManager = new LinearLayoutManager(getActivity());
-        mRecyclerView.setLayoutManager(mLayoutManager);  //레이아웃 매니저를 사용한다.
-        myDataset = new ArrayList<>();
-        mAdapter = new RecyclerAdapter(myDataset);
-        mRecyclerView.setAdapter(mAdapter);       //어탭더 정의
-
-        myDataset.add(new MyData("1","23","11", R.drawable.app_icon, "123","123","1234",networkClient,getActivity(), "1234", mRecyclerView));
-        noquiz.setVisibility(View.GONE);*/
-
-
-
         networkClient.getstartitem(loginid, new Callback<List<ItemDTO>>() {
             @Override
             public void onResponse(Call<List<ItemDTO>> call, Response<List<ItemDTO>> response) {

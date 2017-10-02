@@ -6,6 +6,6 @@
         android:id="@+id/camera_button"
         android:icon="@drawable/camera"
         android:title="@string/ARCam"
-        app:showAsAction="ifRoom" />
+        app:showAsAction="always" />
 
 </menu>

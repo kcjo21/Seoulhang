@@ -1,7 +1,9 @@
 package com.hbag.seoulhang.home_package.home_fragment;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
@@ -127,19 +129,21 @@ public class Frag_Rank extends Fragment
                                 break;
                         }
                         int rank_int = Integer.parseInt(myDataset.get(0).rank);
-                        if(rank_int==1)
-                            my_rank_lay.setBackgroundResource(R.drawable.gold);
-                        else if(rank_int==2)
-                            my_rank_lay.setBackgroundResource(R.drawable.silver);
-                        else if(rank_int==3)
-                            my_rank_lay.setBackgroundResource(R.drawable.bronze);
-                        else if(rank_int>3&&rank_int<11)
-                            my_rank_lay.setBackgroundResource(R.color.SKYBLUE);
-                        else if(rank_int>10&&rank_int<31)
-                            my_rank_lay.setBackgroundResource(R.color.Green00cc66);
-                        else
-                            my_rank_lay.setBackgroundResource(R.color.cardview_light_background);
-                        myDataset.remove(0); //리스트에 존재하는 자신의 정보를 제거한다.
+                        if(rank_int==1) {
+                            rank.setText("");
+                            rank.setBackgroundResource(R.drawable.num_1);
+                        }
+                        else if(rank_int==2) {
+                            rank.setText("");
+                            rank.setBackgroundResource(R.drawable.num_2);
+                        }
+                        else if(rank_int==3) {
+                            rank.setText("");
+                            rank.setBackgroundResource(R.drawable.num_3);
+                        }
+
+
+                        myDataset.remove(0); //본 랭크 데이터를 전달하기 위해 리스트에 존재하는 자신의 정보를 제거한다.
 
 
                         for (int i = 1; i < rankings.size(); i++) {

@@ -188,6 +188,10 @@
         "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\src\\main\\res\\layout\\activity_editprofile_social.xml"
     },
     {
+        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\layout\\layout_spotlight.xml",
+        "source": "C:\\Users\\cwh62\\.android\\build-cache\\ce57fa08144d3fd3d3b64cdfb66fd4ade0c88abf\\output\\res\\layout\\layout_spotlight.xml"
+    },
+    {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\layout\\activity_codeinsert.xml",
         "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\src\\main\\res\\layout\\activity_codeinsert.xml"
     },

@@ -64,8 +64,8 @@ public class GameActivity extends UnityPlayerActivity {
     @Override
     public void onTouch(String questioncode) {
         Intent id = getIntent();
-        String playerid = id.getExtras().getString("playerid");
-        int q_code = Integer.parseInt(questioncode);
+        final String playerid = id.getExtras().getString("playerid");
+        final int q_code = Integer.parseInt(questioncode);
         Log.e("게임액티비티확인",playerid);
         ipm = new Ipm();
         String ip = ipm.getip();
@@ -76,6 +76,7 @@ public class GameActivity extends UnityPlayerActivity {
             public void onResponse(Call<QuestDTO> call, Response<QuestDTO> response) {
                 switch (response.code()) {
                     case 200:
+                        Log.d("디버그",playerid+" "+q_code);
                         break;
                     default:
                         break;

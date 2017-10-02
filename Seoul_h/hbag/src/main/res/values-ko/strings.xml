@@ -26,8 +26,8 @@
     <string name="순위">순위</string>
     <string name="점수">점수</string>
     <string name="남은힌트">힌트</string>
-    <string name="해결한문제">해결한 문제</string>
-    <string name="지역별달성률">지역별 정보 및 달성률</string>
+    <string name="해결한문제">&#160;해결한 문제</string>
+    <string name="지역별달성률">&#160;지역별 정보 및 달성률</string>
     <string name="현재해결한문제없음">현재 해결한 문제가 없습니다.</string>
     <string name="코드를입력">인증코드를 입력하세요.</string>
     <string name="풀수있는문제없음">현재 풀 수 있는 문제가 없습니다. 새로운 문제를 획득해주세요.</string>
@@ -51,7 +51,7 @@
     <string name="이미가지고있는문제">이미 가지고 있는 문제 입니다.</string>
     <string name="등급차트">챌린저 = 450점 \n마스터 = 340점 \n다이아몬드 = 240점 \n플래티넘 = 160점 \n골드 = 90점 \n실버 = 40점 \n브론즈 = 10점</string>
     <string name="설명">사진을 찾아서 문제를 획득하고, 점수를 얻으십시오.\n점수에 따라 등급이 결정되고, 순위에 따라 상품이 지급됩니다.</string>
-    <string name="등급정보">등급표</string>
+    <string name="등급정보">Rating Table</string>
     <string name="ghkrdls">확인</string>
     <string name="초보자">초보자</string>
     <string name="브론즈">브론즈</string>
@@ -142,7 +142,7 @@
     <string name="facebook_leave_msg">탈퇴하시면 계정의 모든 정보가 삭제됩니다.</string>
     <string name="mapview_text">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;지도 보기</string>
     <string name="subway_text">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;지하철 노선도</string>
-    <string name="홈">서울행</string>
+    <string name="홈">홈</string>
     <string name="퀴즈">퀴즈</string>
     <string name="랭킹">랭킹</string>
     <string name="내정보">내 정보</string>
@@ -151,4 +151,22 @@
     <string name="google_with">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;구글계정으로 로그인 중</string>
     <string name="normal_with">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;일반계정으로 로그인 중</string>
     <string name="Logout_msg">로그아웃되었습니다.</string>
+    <string name="dialog_ok">확인</string>
+    <string name="로그인실패">로그인에 실패했습니다. 다시 시도해주세요.</string>
+    <string name="home_descrip">첫 시작 페이지입니다. 가장 최근에 획득한 문제가 표시되며, 지도보기, 카메라실행 등을 할 수 있습니다.</string>
+    <string name="quiz_descrip">획득한 퀴즈를 확인할 수 있습니다. 퀴즈는 획득한 순서대로 나열되며, 주관식, OX 퀴즈로 구성되어있습니다. 또한, 힌트보너스를 가지고 있다면, 힌트를 볼 수 있습니다.</string>
+    <string name="info_descrip">현재까지 획득한 점수와 남은 힌트보너스를 확인할 수 있습니다. 지금까지 풀어온 퀴즈들을 확인할 수 있으며 서울시 내의 구 단위로 달성률과 해당 구의 설명을 볼 수 있습니다.</string>
+    <string name="rank_descrip">순위와 등급, 점수를 확인할 수 있습니다. 또한, 전체 순위표를 확인할 수 있습니다.</string>
+    <string name="순위표">순위표</string>
+    <string name="메뉴버튼">메뉴</string>
+    <string name="menu_descrip">터치하면 보조메뉴가 열립니다. 보조메뉴에서는 프로필수정, 언어설정 등을 할 수 있으며, 지도, 카메라, 지하철 기능을 실행할 수 있습니다. 또한, 등급표 열람이 가능하며, 간략한 사용자 정보를 표시합니다.</string>
+    <string name="camera_descrip">만일 주변에 타겟이 있다면, 이 버튼을 눌러 카메라를 실행하세요. 카메라를 통해 타겟을 획득할 수 있습니다.</string>
+    <string name="map_view_descrip">타겟의 위치를 지도로 확인할 수 있습니다.</string>
+    <string name="replay">다시 보기</string>
+    <string name="replay_descrip">이 설명을 다시 보고 싶으시면, 이 버튼을 눌러주세요.</string>
+    <string name="map_view">지도 보기</string>
+    <string name="카메라버튼">카메라</string>
+    <string name="완료">완료!</string>
+    <string name="실패">실패..</string>
+    <string name="시작하기">시작!</string>
 </resources>

@@ -3,10 +3,12 @@ package com.hbag.seoulhang.home_package.home_fragment;
 import android.app.Activity;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.view.MotionEventCompat;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ExpandableListAdapter;
@@ -35,11 +37,11 @@ import retrofit2.Response;
 
 public class Frag_Info extends Fragment
 {
-    private RecyclerView mRecyclerView;
-    private RecyclerView.Adapter mAdapter;
-    private RecyclerView.LayoutManager mLayoutManager;
+    RecyclerView mRecyclerView;
+    RecyclerView.Adapter mAdapter;
+    RecyclerView.LayoutManager mLayoutManager;
     UserProfileData_singleton profile;
-    private ArrayList<MyData_I> myDataset;
+    ArrayList<MyData_I> myDataset;
     NetworkClient networkClient;
     TextView info_name;
     TextView info_point;
@@ -51,7 +53,6 @@ public class Frag_Info extends Fragment
     public ArrayList<MyData_G> groupData;
     private ArrayList<ArrayList<MyData_H>> childData;
     private List<RateDTO> rates;
-    private List<InventoryDTO> infos;
     Ipm ipm;
     Methods methods;
 
@@ -68,7 +69,7 @@ public class Frag_Info extends Fragment
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
     {
         final LinearLayout layout = (LinearLayout) inflater.inflate(R.layout.frag_info,container, false);
-        View header = getActivity().getLayoutInflater().inflate(R.layout.exl_header, null);
+        final View header = getActivity().getLayoutInflater().inflate(R.layout.exl_header, null);
         expListView = (ExpandableListView)layout.findViewById(R.id.exl); // 확장 리스트뷰를 가져온다.
         profile = UserProfileData_singleton.getInstance();
         expListView.addHeaderView(header);
@@ -83,8 +84,34 @@ public class Frag_Info extends Fragment
         String ip = ipm.getip();
 
 
+        mRecyclerView.setHasFixedSize(true);
+        mLayoutManager = new LinearLayoutManager(getActivity());
+        mRecyclerView.setLayoutManager(mLayoutManager);
+        myDataset=new ArrayList<>();
+        mAdapter = new RecyclerAdapter_I(myDataset);
+        mRecyclerView.setAdapter(mAdapter);
 
-        networkClient = NetworkClient.getInstance(ip);
+
+        myDataset.add(new MyData_I("12312","123123","12123123"));
+        myDataset.add(new MyData_I("12312","123123","12123123"));
+        myDataset.add(new MyData_I("12312","123123","12123123"));
+        myDataset.add(new MyData_I("12312","123123","12123123"));
+        myDataset.add(new MyData_I("12312","123123","12123123"));
+        myDataset.add(new MyData_I("12312","123123","12123123"));
+        myDataset.add(new MyData_I("12312","123123","12123123"));
+        myDataset.add(new MyData_I("12312","123123","12123123"));
+        myDataset.add(new MyData_I("12312","123123","12123123"));
+        myDataset.add(new MyData_I("12312","123123","12123123"));
+        myDataset.add(new MyData_I("12312","123123","12123123"));
+        myDataset.add(new MyData_I("12312","123123","12123123"));
+        myDataset.add(new MyData_I("12312","123123","12123123"));
+
+
+
+
+
+
+       /* networkClient = NetworkClient.getInstance(ip);
         Log.d("인포",loginid);
         networkClient.getfinishitem(loginid, new Callback<List<InventoryDTO>>() {
             @Override
@@ -163,7 +190,7 @@ public class Frag_Info extends Fragment
                 Log.e("ACC", "s?? " + t.getMessage());
 
             }
-        });
+        });*/
 
         networkClient = NetworkClient.getInstance(ip);
 
@@ -175,8 +202,8 @@ public class Frag_Info extends Fragment
                     case 200:
                         Log.d("인포", "어댑터 세팅");
                         rates = response.body();
-                        groupData = new ArrayList<MyData_G>();
-                        childData = new ArrayList<ArrayList<MyData_H>>();
+                        groupData = new ArrayList<>();
+                        childData = new ArrayList<>();
                         methods = new Methods();
 
                         for (int i = 0; i < rates.size(); i++) {
@@ -194,7 +221,7 @@ public class Frag_Info extends Fragment
                             // 차일드 생성
                             Activity activity = getActivity();
                             if (isAdded() && activity != null) {
-                                childData.get(i).add(new MyData_H(getResources().getString(R.string.달성률) + " " + rates_q + "%", rates_q, image, exp, expListView));
+                                childData.get(i).add(new MyData_H(getResources().getString(R.string.달성률) + " " + rates_q + "%", rates_q, R.drawable.new_eight, exp, expListView));
                             }
                             Log.e("확인",""+rates_q);
 
@@ -217,4 +244,7 @@ public class Frag_Info extends Fragment
         });
         return layout;
     }
+
+
+
 }

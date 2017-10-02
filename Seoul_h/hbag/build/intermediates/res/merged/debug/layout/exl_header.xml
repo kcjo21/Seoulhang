@@ -9,12 +9,15 @@
     <TextView
         android:id="@+id/solved"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
+        android:layout_height="23dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="2dp"
         android:layout_weight="3.5"
+        android:background="@color/SBLUE"
         android:gravity="center_vertical"
         android:text="@string/해결한문제"
-        android:textColor="@android:color/black"
+        android:textColor="@android:color/white"
         android:textSize="14dp"
         tools:ignore="SpUsage" />
 
@@ -39,11 +42,12 @@
         android:layout_marginLeft="5dp"
         android:layout_marginRight="5dp"
         android:layout_weight="39"
+        android:nestedScrollingEnabled="false"
         android:visibility="visible" />
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="10dp"
         android:layout_weight="1"
         android:background="@color/Carkviewline"
         android:orientation="horizontal"></LinearLayout>
@@ -51,12 +55,15 @@
     <TextView
         android:id="@+id/rate"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginStart="10dp"
+        android:layout_height="23dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
         android:layout_weight="3.5"
+        android:background="@color/SBLUE"
         android:gravity="center_vertical"
         android:text="@string/지역별달성률"
-        android:textColor="@android:color/black"
+        android:textColor="@android:color/white"
         android:textSize="14dp"
         tools:ignore="SpUsage" />
 

@@ -8,6 +8,7 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.view.KeyEvent;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 
@@ -17,6 +18,7 @@ import com.hbag.seoulhang.joinmanage_package.tutorial_package.tuto_a;
 import com.hbag.seoulhang.joinmanage_package.tutorial_package.tuto_b;
 import com.hbag.seoulhang.joinmanage_package.tutorial_package.tuto_c;
 import com.hbag.seoulhang.joinmanage_package.tutorial_package.tuto_d;
+import com.nightonke.wowoviewpager.WoWoViewPagerAdapter;
 
 public class TutorialActivity extends AppCompatActivity {
     private ViewPager tpager;
@@ -33,13 +35,15 @@ public class TutorialActivity extends AppCompatActivity {
         editor.putInt("First",infoFirst);
         editor.apply();
 
-        indi = (LinearLayout) findViewById(R.id.indi);
-        tpager = (ViewPager)findViewById(R.id.tutovp);
+
+
+
+
         ImageView vp1 = (ImageView)findViewById(R.id.vp1);
         ImageView vp2 = (ImageView)findViewById(R.id.vp2);
         ImageView vp3 = (ImageView)findViewById(R.id.vp3);
         ImageView vp4 = (ImageView)findViewById(R.id.vp4);
-        ImageView skip = (ImageView)findViewById(R.id.skip_b);
+        Button skip = (Button) findViewById(R.id.skip_b);
 
 
 

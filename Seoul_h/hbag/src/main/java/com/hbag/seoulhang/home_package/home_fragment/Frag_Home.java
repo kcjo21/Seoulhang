@@ -3,10 +3,12 @@ package com.hbag.seoulhang.home_package.home_fragment;
 import android.app.Activity;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
 import android.os.SystemClock;
+import android.support.annotation.Nullable;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -15,6 +17,7 @@ import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.ViewTreeObserver;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -41,6 +44,7 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 import static android.app.Activity.RESULT_OK;
+import static android.content.Context.MODE_PRIVATE;
 
 
 /**
@@ -63,6 +67,10 @@ public class Frag_Home extends BaseFragment {
     Button gethint;
     EditText answer;
     TextView hello;
+    ImageView map_b;
+    ImageView tuto;
+    ImageView camera_b;
+    ImageView subway_b;
     Ipm ipm;
     Handler handler;
     private long mLastClickTime = 0;
@@ -85,10 +93,10 @@ public class Frag_Home extends BaseFragment {
         ipm = new Ipm();
         String ip = ipm.getip();
         final String loginid = profile.getId();
-        ImageView map_b = (ImageView)layout.findViewById(R.id.mapview);
-        ImageView camera_b = (ImageView) layout.findViewById(R.id.cameraon_b);
-        ImageView tuto = (ImageView)layout.findViewById(R.id.tutorial_b);
-        ImageView subway_b = (ImageView)layout.findViewById(R.id.subwayview);
+        map_b = (ImageView)layout.findViewById(R.id.mapview);
+        camera_b = (ImageView) layout.findViewById(R.id.cameraon_b);
+        tuto = (ImageView)layout.findViewById(R.id.tutorial_b);
+        subway_b = (ImageView)layout.findViewById(R.id.subwayview);
         mRecyclerView = (RecyclerView) layout.findViewById(R.id.home_rev);
         answer = (EditText) layout.findViewById(R.id.Answer);
         submit = (Button) layout.findViewById(R.id.Submit);
@@ -105,6 +113,17 @@ public class Frag_Home extends BaseFragment {
                 return false;
             }
         };
+
+
+        //튜토리얼 spotlight 타겟에 추가한다.
+      map_b.getViewTreeObserver().addOnGlobalFocusChangeListener(new ViewTreeObserver.OnGlobalFocusChangeListener() {
+          @Override
+          public void onGlobalFocusChanged(View oldFocus, View newFocus) {
+              ((Home_Main)getActivity()).targetMaker(map_b,220F,getResources().getString(R.string.map_view),getResources().getString(R.string.map_view_descrip));
+              ((Home_Main)getActivity()).targetMaker(tuto,150F,getResources().getString(R.string.replay),getResources().getString(R.string.replay_descrip));
+              map_b.getViewTreeObserver().removeOnGlobalFocusChangeListener(this);
+          }
+      });
 
 
         networkClient = NetworkClient.getInstance(ip);
@@ -261,10 +280,7 @@ public class Frag_Home extends BaseFragment {
                     return;
                 }
                 mLastClickTime = SystemClock.elapsedRealtime();
-                Intent intent = new Intent(getActivity(), TutorialActivity.class);
-                startActivity(intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK));
-                getActivity().finish();
-
+                    ((Home_Main) getActivity()).spotLightExcute(0);
             }
         });
 
@@ -345,5 +361,6 @@ public class Frag_Home extends BaseFragment {
         }
 
     }
+
 
 }

@@ -136,6 +136,7 @@ public class EditprofileActivity extends BaseActivity implements
                                                         Log.d("페이스북 퍼미션 삭제", "성공");
                                                         Toast toast = Toast.makeText(getApplicationContext(), getResources().getString(R.string.탈퇴성공), Toast.LENGTH_LONG);
                                                         toast.show();
+                                                        cleanProfile();
                                                         Intent intent = new Intent(EditprofileActivity.this, MainActivity.class);
                                                         startActivity(intent);
                                                         finish();
@@ -157,6 +158,7 @@ public class EditprofileActivity extends BaseActivity implements
                                                 Log.d("구글퍼미션 삭제", "성공");
                                                 Toast toast = Toast.makeText(getApplicationContext(), getResources().getString(R.string.탈퇴성공), Toast.LENGTH_LONG);
                                                 toast.show();
+                                                cleanProfile();
                                                 Intent intent = new Intent(EditprofileActivity.this, MainActivity.class);
                                                 startActivity(intent);
                                                 finish();
@@ -307,6 +309,7 @@ public class EditprofileActivity extends BaseActivity implements
                                                                     case 200:
                                                                         editor.putString("logintype","logout");
                                                                         editor.apply();
+                                                                        cleanProfile();
                                                                         Intent intent = new Intent(EditprofileActivity.this, MainActivity.class);
                                                                         startActivity(intent);
                                                                         finish();
@@ -477,6 +480,13 @@ public class EditprofileActivity extends BaseActivity implements
         // An unresolvable error has occurred and Google APIs (including Sign-In) will not
         // be available.
         Log.d("EditprofileActivity", "onConnectionFailed:" + connectionResult);
+    }
+
+    public void cleanProfile(){
+        profile.setEmail("");
+        profile.setId("");
+        profile.setName("");
+        profile.setNickname("");
     }
 
 

@@ -1,5 +1,6 @@
 package com.hbag.seoulhang.home_package.home_fragment;
 
+import android.graphics.Color;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -80,18 +81,18 @@ public class RecyclerAdapter_R extends RecyclerView.Adapter<RecyclerAdapter_R.Vi
                 break;
         }
         int rank_int = Integer.parseInt(mDataset.get(position).rank);
-        if(rank_int==1)
-            holder.rank_lay.setBackgroundResource(R.drawable.gold);
-        else if(rank_int==2)
-            holder.rank_lay.setBackgroundResource(R.drawable.silver);
-        else if(rank_int==3)
-            holder.rank_lay.setBackgroundResource(R.drawable.bronze);
-        else if(rank_int>3&&rank_int<11)
-            holder.rank_lay.setBackgroundResource(R.color.SKYBLUE);
-        else if(rank_int>10&&rank_int<31)
-            holder.rank_lay.setBackgroundResource(R.color.Green00cc66);
-        else
-            holder.rank_lay.setBackgroundResource(R.color.cardview_light_background);
+        if(rank_int==1) {
+            holder.rank.setText("");
+            holder.rank.setBackgroundResource(R.drawable.num_1);
+        }
+        else if(rank_int==2) {
+            holder.rank.setText("");
+            holder.rank.setBackgroundResource(R.drawable.num_2);
+        }
+        else if(rank_int==3) {
+            holder.rank.setText("");
+            holder.rank.setBackgroundResource(R.drawable.num_3);
+        }
 
     }
     @Override

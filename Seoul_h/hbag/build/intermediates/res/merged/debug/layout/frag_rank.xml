@@ -11,6 +11,9 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="2dp"
         android:layout_weight="3.5"
         android:orientation="horizontal"
         android:weightSum="100">
@@ -19,12 +22,11 @@
             android:id="@+id/rank"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_marginLeft="2dp"
-            android:layout_marginRight="2dp"
             android:layout_weight="100"
+            android:background="@color/SBLUE"
             android:gravity="center_vertical|center_horizontal"
             android:text="@string/내순위"
-            android:textColor="@android:color/black"
+            android:textColor="@android:color/white"
             android:textSize="14dp"
             tools:ignore="HardcodedText,NestedWeights,SpUsage" />
 
@@ -35,66 +37,55 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginBottom="5dp"
-        android:layout_marginLeft="5dp"
-        android:layout_marginRight="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginStart="5dp"
         android:layout_marginTop="2dp"
         android:layout_weight="8"
+        android:background="@drawable/p_tapbar"
+        android:baselineAligned="false"
         android:orientation="horizontal"
-        android:weightSum="100"
-        android:baselineAligned="false">
+        android:weightSum="100">
 
-        <LinearLayout
+        <TextView
+            android:id="@+id/my_rank"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_marginBottom="1dp"
-            android:layout_marginEnd="1dp"
-            android:layout_weight="100"
-            android:orientation="horizontal"
-            android:weightSum="100"
-            tools:ignore="NestedWeights,UselessParent">
+            android:layout_weight="15"
+            android:gravity="center_vertical|center_horizontal"
+            android:textColor="@android:color/black"
+            android:textSize="14dp"
+            tools:ignore="NestedWeights,SpUsage" />
 
-            <TextView
-                android:id="@+id/my_rank"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="15"
-                android:gravity="center_vertical|center_horizontal"
-                android:textColor="@android:color/black"
-                android:textSize="30dp"
-                tools:ignore="SpUsage" />
+        <ImageView
+            android:id="@+id/my_grade"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="15"
+            android:gravity="center_vertical|center_horizontal"
+            android:scaleType="fitCenter"
+            android:textColor="@android:color/black"
+            android:textSize="14dp"
+            tools:ignore="ContentDescription,SpUsage" />
 
-            <ImageView
-                android:id="@+id/my_grade"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="15"
-                android:gravity="center_vertical|center_horizontal"
-                android:scaleType="fitXY"
-                android:textColor="@android:color/black"
-                android:textSize="14dp"
-                tools:ignore="ContentDescription,SpUsage" />
+        <TextView
+            android:id="@+id/my_name"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="55"
+            android:gravity="center_vertical|center_horizontal"
+            android:textColor="@android:color/black"
+            android:textSize="14dp"
+            tools:ignore="SpUsage" />
 
-            <TextView
-                android:id="@+id/my_name"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="55"
-                android:gravity="center_vertical|center_horizontal"
-                android:textColor="@android:color/black"
-                android:textSize="18dp"
-                tools:ignore="SpUsage" />
-
-            <TextView
-                android:id="@+id/my_point"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="15"
-                android:gravity="center_vertical|center_horizontal"
-                android:textColor="@android:color/black"
-                android:textSize="20dp"
-                tools:ignore="SpUsage" />
-
-        </LinearLayout>
+        <TextView
+            android:id="@+id/my_point"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="15"
+            android:gravity="center_vertical|center_horizontal"
+            android:textColor="@android:color/black"
+            android:textSize="14dp"
+            tools:ignore="SpUsage" />
 
     </LinearLayout>
 
@@ -108,52 +99,55 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_marginLeft="5dp"
-        android:layout_marginRight="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
         android:layout_weight="4"
+        android:background="@color/SBLUE"
         android:orientation="horizontal"
         android:weightSum="100">
 
         <TextView
-            android:id="@+id/textView"
+            android:id="@+id/tv_rank"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="15"
             android:gravity="center_vertical|center_horizontal"
             android:text="@string/순위"
-            android:textColor="@android:color/black"
+            android:textColor="@android:color/white"
             android:textSize="14dp"
             tools:ignore="NestedWeights,SpUsage" />
 
         <TextView
+            android:id="@+id/tv_grade"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="15"
             android:gravity="center_vertical|center_horizontal"
             android:text="@string/등급"
-            android:textColor="@android:color/black"
+            android:textColor="@android:color/white"
             android:textSize="14dp"
             tools:ignore="SpUsage" />
 
         <TextView
-            android:id="@+id/textView3"
+            android:id="@+id/tv_nickname"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="55"
             android:gravity="center_vertical|center_horizontal"
             android:text="@string/닉네임"
-            android:textColor="@android:color/black"
+            android:textColor="@android:color/white"
             android:textSize="14dp"
             tools:ignore="SpUsage" />
 
         <TextView
-            android:id="@+id/textView4"
+            android:id="@+id/tv_score"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="15"
             android:gravity="center_vertical|center_horizontal"
             android:text="@string/점수"
-            android:textColor="@android:color/black"
+            android:textColor="@android:color/white"
             android:textSize="14dp"
             tools:ignore="SpUsage" />
     </LinearLayout>
