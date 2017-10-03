@@ -127,7 +127,7 @@ public class MainActivity extends BaseActivity implements
 
 
         sharedPreferences = getSharedPreferences("log",MODE_PRIVATE);
-        String loginPref = sharedPreferences.getString("logintype","");     //이전 접속 상태를 불러온다.
+        final String loginPref = sharedPreferences.getString("logintype","");     //이전 접속 상태를 불러온다.
         editor = sharedPreferences.edit();
         Log.d("Login",loginPref);
         if(loginPref.equals("facebook")||loginPref.equals("google")||loginPref.equals("normal")) {
@@ -354,12 +354,12 @@ public class MainActivity extends BaseActivity implements
                 final String email = profile.getEmail();
                 final String name = profile.getName();
                 final String logintype = profile.getLoginType();
-                mLastClickTime = SystemClock.elapsedRealtime();
 
                 switch (logintype){
                     case "normal":
                         loginid = sharedPreferences.getString("id","");
                         profile.setId(loginid);
+                        startLogin();
                         break;
                     case "facebook":
                         loginid = profile.getId();
@@ -369,8 +369,10 @@ public class MainActivity extends BaseActivity implements
                                 switch (response.code()) {
                                     case 200:
                                         Log.d("페이스북으로 회원가입",loginid);
+                                        startLogin();
                                         break;
                                     default:
+                                        startLogin();
                                         break;
                                 }
                             }
@@ -382,6 +384,7 @@ public class MainActivity extends BaseActivity implements
                             }
                         });
                         break;
+
                     case "google":
                         Log.d("구글",name);
                         loginid = profile.getId();
@@ -392,8 +395,10 @@ public class MainActivity extends BaseActivity implements
                                 switch (response.code()){
                                     case 200:
                                         Log.d("구글회원가입",loginid);
+                                        startLogin();
                                         break;
                                     default:
+                                        startLogin();
                                         break;
                                 }
                             }
@@ -405,82 +410,9 @@ public class MainActivity extends BaseActivity implements
                             }
                         });
                         break;
+                    default:
+                        break;
                 }
-
-                networkClient.startgame(loginid, new Callback<Integer>() {
-                    @Override
-                    public void onResponse(Call<Integer> call, Response<Integer> response) {
-                        switch (response.code()){
-                            case 200:
-                                login.setProgress(100);
-                                Log.d("닉네임 입력 필요: ",loginid);
-                                int hasNickname = response.body();
-                                String nick = Integer.toString(hasNickname);
-                                if(hasNickname == 1) {
-                                    Log.d("닉네임 확인",nick);
-                                    final AlertDialog.Builder alert = new AlertDialog.Builder(MainActivity.this);
-
-                                    alert.setCancelable(false);
-                                    alert.setMessage(R.string.닉네임입력);
-
-                                    final EditText nickname = new EditText(MainActivity.this);
-
-                                    nickname.setInputType(InputType.TYPE_CLASS_TEXT);
-                                    nickname.setMaxLines(1);
-
-                                    alert.setView(nickname);
-                                    alert.setPositiveButton(R.string.확인, new DialogInterface.OnClickListener() {
-                                        public void onClick(DialogInterface dialog, int whichButton) {
-                                            String snickname = nickname.getText().toString();
-                                            keyboard.hideSoftInputFromWindow(nickname.getWindowToken(), 0);
-                                            networkClient.newnickname(loginid, snickname, new Callback<String>() {
-                                                @Override
-                                                public void onResponse(Call<String> call, Response<String> response) {
-                                                    switch (response.code()) {
-                                                        case 200:
-                                                                Intent intent = new Intent(MainActivity.this, Home_Main.class);
-                                                                startActivity(intent);
-                                                                finish();
-                                                            break;
-
-                                                        default:
-                                                            Toast toast = Toast.makeText(getApplicationContext(), getResources().getString(R.string.같은닉네임존재), Toast.LENGTH_LONG);
-                                                            toast.show();
-                                                            break;
-                                                    }
-                                                }
-
-                                                @Override
-                                                public void onFailure(Call<String> call, Throwable t) {
-                                                    Toast toast = Toast.makeText(getApplicationContext(), getResources().getString(R.string.can_not_connent_to_server), Toast.LENGTH_LONG);
-                                                    toast.show();
-                                                }
-                                            });
-                                        }
-                                    });
-                                    alert.create();
-                                    alert.show();
-
-                                }
-                                else {
-                                        Intent intent = new Intent(MainActivity.this, Home_Main.class);
-                                        startActivity(intent);
-                                        finish();
-                                        break;
-                                }
-
-                                break;
-                            default:
-                                break;
-                        }
-                    }
-
-                    @Override
-                    public void onFailure(Call<Integer> call, Throwable t) {
-                        Toast toast = Toast.makeText(getApplicationContext(), getResources().getString(R.string.can_not_connent_to_server), Toast.LENGTH_LONG);
-                        toast.show();
-                    }
-                });
             }
 
         });
@@ -629,6 +561,83 @@ public class MainActivity extends BaseActivity implements
 
         }
     };
+
+    public void startLogin(){
+        networkClient.startgame(loginid, new Callback<Integer>() {
+            @Override
+            public void onResponse(Call<Integer> call, Response<Integer> response) {
+                switch (response.code()){
+                    case 200:
+                        login.setProgress(100);
+                        Log.d("닉네임 입력 필요: ",loginid);
+                        int hasNickname = response.body();
+                        String nick = Integer.toString(hasNickname);
+                        if(hasNickname == 1) {
+                            Log.d("닉네임 확인",nick);
+                            final AlertDialog.Builder alert = new AlertDialog.Builder(MainActivity.this);
+
+                            alert.setCancelable(false);
+                            alert.setMessage(R.string.닉네임입력);
+
+                            final EditText nickname = new EditText(MainActivity.this);
+
+                            nickname.setInputType(InputType.TYPE_CLASS_TEXT);
+                            nickname.setMaxLines(1);
+
+                            alert.setView(nickname);
+                            alert.setPositiveButton(R.string.확인, new DialogInterface.OnClickListener() {
+                                public void onClick(DialogInterface dialog, int whichButton) {
+                                    String snickname = nickname.getText().toString();
+                                    keyboard.hideSoftInputFromWindow(nickname.getWindowToken(), 0);
+                                    networkClient.newnickname(loginid, snickname, new Callback<String>() {
+                                        @Override
+                                        public void onResponse(Call<String> call, Response<String> response) {
+                                            switch (response.code()) {
+                                                case 200:
+                                                    Intent intent = new Intent(MainActivity.this, Home_Main.class);
+                                                    startActivity(intent);
+                                                    finish();
+                                                    break;
+
+                                                default:
+                                                    Toast toast = Toast.makeText(getApplicationContext(), getResources().getString(R.string.같은닉네임존재), Toast.LENGTH_LONG);
+                                                    toast.show();
+                                                    break;
+                                            }
+                                        }
+
+                                        @Override
+                                        public void onFailure(Call<String> call, Throwable t) {
+                                            Toast toast = Toast.makeText(getApplicationContext(), getResources().getString(R.string.can_not_connent_to_server), Toast.LENGTH_LONG);
+                                            toast.show();
+                                        }
+                                    });
+                                }
+                            });
+                            alert.create();
+                            alert.show();
+
+                        }
+                        else {
+                            Intent intent = new Intent(MainActivity.this, Home_Main.class);
+                            startActivity(intent);
+                            finish();
+                            break;
+                        }
+
+                        break;
+                    default:
+                        break;
+                }
+            }
+
+            @Override
+            public void onFailure(Call<Integer> call, Throwable t) {
+                Toast toast = Toast.makeText(getApplicationContext(), getResources().getString(R.string.can_not_connent_to_server), Toast.LENGTH_LONG);
+                toast.show();
+            }
+        });
+    }
 
 
 }

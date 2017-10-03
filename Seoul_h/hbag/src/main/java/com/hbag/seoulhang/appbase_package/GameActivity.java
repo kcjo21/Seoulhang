@@ -76,7 +76,7 @@ public class GameActivity extends UnityPlayerActivity {
             public void onResponse(Call<QuestDTO> call, Response<QuestDTO> response) {
                 switch (response.code()) {
                     case 200:
-                        Log.d("디버그",playerid+" "+q_code);
+                        Log.d("유니티디버그",playerid+" "+q_code);
                         break;
                     default:
                         break;

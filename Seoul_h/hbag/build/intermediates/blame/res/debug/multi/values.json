@@ -5753,7 +5753,14 @@
                     "endOffset": 75504
                 },
                 "from": {
-                    "file": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\generated\\fabric\\res\\debug\\values\\com_crashlytics_build_id.xml"
+                    "file": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\generated\\fabric\\res\\debug\\values\\com_crashlytics_build_id.xml",
+                    "position": {
+                        "startLine": 8,
+                        "startColumn": 0,
+                        "startOffset": 311,
+                        "endColumn": 162,
+                        "endOffset": 473
+                    }
                 }
             },
             {
@@ -7457,14 +7464,7 @@
                     "endOffset": 86794
                 },
                 "from": {
-                    "file": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 170,
-                        "startColumn": 4,
-                        "startOffset": 10053,
-                        "endColumn": 36,
-                        "endOffset": 10085
-                    }
+                    "file": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\src\\main\\res\\values\\strings.xml"
                 }
             },
             {
@@ -7488,14 +7488,7 @@
                     "endOffset": 86864
                 },
                 "from": {
-                    "file": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 169,
-                        "startColumn": 4,
-                        "startOffset": 10016,
-                        "endColumn": 35,
-                        "endOffset": 10047
-                    }
+                    "file": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\src\\main\\res\\values\\strings.xml"
                 }
             },
             {
@@ -7579,14 +7572,7 @@
                     "endOffset": 87133
                 },
                 "from": {
-                    "file": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 168,
-                        "startColumn": 4,
-                        "startOffset": 9980,
-                        "endColumn": 34,
-                        "endOffset": 10010
-                    }
+                    "file": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\src\\main\\res\\values\\strings.xml"
                 }
             },
             {

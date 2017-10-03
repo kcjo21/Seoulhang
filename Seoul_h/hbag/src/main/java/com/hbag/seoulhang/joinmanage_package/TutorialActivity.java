@@ -21,13 +21,14 @@ import com.hbag.seoulhang.joinmanage_package.tutorial_package.tuto_d;
 import com.nightonke.wowoviewpager.WoWoViewPagerAdapter;
 
 public class TutorialActivity extends AppCompatActivity {
-    private ViewPager tpager;
+    ViewPager tpager;
     LinearLayout indi;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tutorial);
+        tpager = (ViewPager)findViewById(R.id.tutovp);
 
         int infoFirst = 1;
         SharedPreferences a = getSharedPreferences("a",MODE_PRIVATE);

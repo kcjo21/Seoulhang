@@ -228,7 +228,6 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
             }
         });
 
-
         holder.Submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -243,13 +242,18 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
                 Log.e("확인",""+qun);
                 Log.e("확인",mDataset.get(position).playerid);
                 if(mDataset.get(position).q_type.equals("ox")){  //퀴즈타입에 따라 반환값 타입 설정
-                    answer = Integer.toString(holder.Answer_ox.getCheckedRadioButtonId());
+                    if(holder.bt_o.isChecked()){
+                        answer = "o";
+                    }
+                    else{
+                        answer = "x";
+                    }
                 }
                 else if(mDataset.get(position).q_type.equals("default")){
                     answer = holder.Answer.getText().toString();
                 }
 
-                if (answer.equals(mDataset.get(position).Answer_q)) {  //해당 position에 있는 답과 입력값 비교
+                if (answer.equalsIgnoreCase(mDataset.get(position).Answer_q)) {  //해당 position에 있는 답과 입력값 비교
                     Log.e("확인",mDataset.get(position).playerid+ mDataset.get(position).text_num);
                     mDataset.get(position).networkClient.checkanswer(mDataset.get(position).playerid, qun, new Callback<Integer>() {
                         @Override
