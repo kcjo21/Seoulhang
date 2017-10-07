@@ -1,8 +1,12 @@
 package com.hbag.seoulhang.joinmanage_package.register_package;
 
 import android.content.Context;
+import android.graphics.Color;
+import android.graphics.PorterDuff;
 import android.os.Bundle;
 import android.os.SystemClock;
+import android.support.annotation.Nullable;
+import android.support.design.widget.TextInputLayout;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
@@ -14,6 +18,8 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.dd.processbutton.iml.ActionProcessButton;
+import com.dd.processbutton.iml.GenerateProcessButton;
 import com.hbag.seoulhang.appbase_package.BaseActivity;
 import com.hbag.seoulhang.R;
 import com.hbag.seoulhang.network.Ipm;
@@ -37,9 +43,7 @@ public class JoinActivity extends BaseActivity {
     EditText name;
     EditText email;
     Ipm ipm;
-    Button check;
-    TextView alert;
-    TextView check_id;
+    ActionProcessButton check;
     Boolean check_tf;
     private long mLastClickTime = 0;
 
@@ -57,9 +61,8 @@ public class JoinActivity extends BaseActivity {
         passwordconfirm = (EditText)findViewById(R.id.password_ct);
         name = (EditText)findViewById(R.id.name_t);
         email = (EditText) findViewById(R.id.email_t);
-        check = (Button) findViewById(R.id.check_b);
-        alert = (TextView)findViewById(R.id.alert);
-        check_id = (TextView)findViewById(R.id.check_t);
+        check = (ActionProcessButton) findViewById(R.id.check_b);
+
 
         String ip = ipm.getip();
         networkClient = NetworkClient.getInstance(ip);
@@ -78,18 +81,11 @@ public class JoinActivity extends BaseActivity {
         id.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-                check.setEnabled(false);
             }
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-                check.setVisibility(View.VISIBLE);
-                check_id.setVisibility(View.GONE);
-                alert.setText("");
-                int sizeid = id.getText().length();
-                if(sizeid>0)
-                    check.setEnabled(true);
-                else check.setEnabled(false);
+                check.setProgress(0);
 
             }
 
@@ -110,38 +106,47 @@ public class JoinActivity extends BaseActivity {
                 }
                 mLastClickTime = SystemClock.elapsedRealtime();
                 String sid = id.getText().toString();
-                InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
-                imm.hideSoftInputFromWindow(id.getWindowToken(), 0);
+                check.setProgress(50);
+                id.requestFocus();
 
+                if(id.getText().length()<=0){
+                    id.setError((getResources().getString(R.string.EID)));
+                    check.setProgress(-1);
+                }
+                else if(!checkId(id.getText().toString())){
+                    id.setError(getString(R.string.not_good_id));
+                    check.setProgress(-1);
+                }
 
-                networkClient.checkid(sid,new Callback<String>() {
-                    @Override
-                    public void onResponse(Call<String> call, Response<String> response) {
+                else{
+
+                    networkClient.checkid(sid, new Callback<String>() {
+                        @Override
+                        public void onResponse(Call<String> call, Response<String> response) {
                             switch (response.code()) {
 
                                 case 200:
-                                   check.setVisibility(View.GONE);
-                                    check_id.setVisibility(View.VISIBLE);
-                                    check_id.setText(getResources().getString(R.string.사용가능));
-                                    check_tf=true;
+                                    check.setProgress(100);
+                                    check_tf = true;
                                     break;
 
                                 default:
-                                    alert.setText(getResources().getString(R.string.please_check_already_id));
+                                    check.setProgress(-1);
+                                    id.setError(getString(R.string.please_check_already_id));
                                     break;
                             }
-                    }
+                        }
 
-                    @Override
-                    public void onFailure(Call<String> call, Throwable t) {
-                        Log.e("ACC","s?? " + t.getMessage());
-                        Toast toast = Toast.makeText(getApplicationContext(), getResources().getString(R.string.can_not_connent_to_server), Toast.LENGTH_LONG);
-                        toast.show();
+                        @Override
+                        public void onFailure(Call<String> call, Throwable t) {
+                            check.setProgress(-1);
+                            Log.e("ACC", "s?? " + t.getMessage());
+                            Toast toast = Toast.makeText(getApplicationContext(), getResources().getString(R.string.can_not_connent_to_server), Toast.LENGTH_LONG);
+                            toast.show();
 
-                    }
-                });
-
-
+                        }
+                    });
+                }
             }
         });
 
@@ -157,18 +162,17 @@ public class JoinActivity extends BaseActivity {
                 }
                 mLastClickTime = SystemClock.elapsedRealtime();
 
+                boolean isFailed = false;
 
-                TextView alert = (TextView)findViewById(R.id.alert);
-                if(id.getText().length()<=0) alert.setText(getResources().getString(R.string.EID));
-                else if(!checkEmail(email.getText().toString()))alert.setText(getResources().getString(R.string.checkEmail));
-                else if(!check_tf)alert.setText(getResources().getString(R.string.checkplease));
-                else if(!textValidate(password.getText().toString()))alert.setText(getResources().getString(R.string.EPass));
-                else if(!password.getText().toString().equals(passwordconfirm.getText().toString()))alert.setText(getResources().getString(R.string.비밀번호일치));
-                else if(name.getText().length()<=0)alert.setText(getResources().getString(R.string.Ename));
-                else if(email.getText().length()<=0)alert.setText(getResources().getString(R.string.EEmail));
-                else if(!checkEmail(email.getText().toString()))alert.setText(getResources().getString(R.string.checkEmail));
 
-                else {
+                if(id.getText().length()<=0){ id.setError((getResources().getString(R.string.EID))); isFailed = true;}
+                if(!textValidate(password.getText().toString())){password.setError(getResources().getString(R.string.EPass));isFailed = true;}
+                if(!password.getText().toString().equals(passwordconfirm.getText().toString())){passwordconfirm.setError(getResources().getString(R.string.비밀번호일치)); isFailed = true;}
+                if(name.getText().length()<=0){ name.setError(getResources().getString(R.string.Ename)); isFailed = true;}
+                if(email.getText().length()<=0){email.setError(getResources().getString(R.string.EEmail)); isFailed = true;}
+                if(!checkEmail(email.getText().toString())){email.setError(getResources().getString(R.string.checkEmail)); isFailed = true;}
+
+                if(!isFailed) {
 
                     String sid = id.getText().toString();
                     final String spass = password.getText().toString();
@@ -183,7 +187,6 @@ public class JoinActivity extends BaseActivity {
                             if (spass.equals(scpass)) {
                                 switch (response.code()) {
                                     case 200:
-                                        String joinDTO = response.body();
                                         finish();
                                         Toast toast = Toast.makeText(getApplicationContext(), getResources().getString(R.string.회원가입성공), Toast.LENGTH_LONG);
                                         toast.show();
@@ -212,20 +215,27 @@ public class JoinActivity extends BaseActivity {
             }
         });
     }
-    public static boolean checkEmail(String email){ //이메일 유효성 체크
+    public boolean checkEmail(String email){ //이메일 유효성 체크
 
         String regex = "^[_a-zA-Z0-9-\\.]+@[\\.a-zA-Z0-9-]+\\.[a-zA-Z]+$";
         Pattern p = Pattern.compile(regex);
         Matcher m = p.matcher(email);
-        boolean isTrue = m.matches();
-        return isTrue;
+        return m.matches();
 
     }
-    public boolean textValidate(String str) {  //영어+숫자+특수문자 혼합해서 6~18자 사이 비밀번호를 체크
-        String Passwrod_PATTERN = "^(?=.*[0-9])(?=.*[a-z])(?=.*[@#$%^&+=])(?=\\S+$).{6,18}$";
-        Pattern pattern = Pattern.compile(Passwrod_PATTERN);
-        Matcher matcher = pattern.matcher(str);
-        return matcher.matches();
+    public boolean textValidate(String password) {  //영어+숫자+특수문자 혼합해서 6~18자 사이 비밀번호를 체크
+        String regex = "^(?=.*[0-9])(?=.*[a-z])(?=.*[@#$%^&+=])(?=\\S+$).{6,18}$";
+        Pattern p = Pattern.compile(regex);
+        Matcher m = p.matcher(password);
+        return m.matches();
+    }
+
+    public boolean checkId(String id){ //첫글자는 영어, 나머지 아이디는 영어와 숫자로 구성된 5~12자 아이디
+        String regex = "^[a-zA-Z]{1}[a-zA-Z0-9_]{4,11}$";
+        Pattern p = Pattern.compile(regex);
+        Matcher m = p.matcher(id);
+        return m.matches();
+
     }
 
 

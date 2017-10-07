@@ -20,6 +20,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.hbag.seoulhang.home_package.Home_Main;
@@ -44,24 +45,23 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
     private ArrayList<MyData> mDataset;
     private HintDTO hints;
     private int grade_check;
-    Ipm ipm;
-
+    private Ipm ipm;
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
 
-        public TextView quiz_num;
-        public TextView quiz_region;
-        public ImageView quiz_image;
-        public TextView quiz;
-        public EditText Answer;
-        public RadioGroup Answer_ox;
-        public Button Submit;
-        public TextView hint_text;
-        public Button get_hint;
-        public LinearLayout background;
-        public RecyclerView recyclerView;
-        public RadioButton bt_o;
-        public RadioButton bt_x;
+        private TextView quiz_num;
+        private TextView quiz_region;
+        private ImageView quiz_image;
+        private TextView quiz;
+        private EditText Answer;
+        private RadioGroup Answer_ox;
+        private Button Submit;
+        private TextView hint_text;
+        private Button get_hint;
+        private LinearLayout background;
+        private RecyclerView recyclerView;
+        private RadioButton bt_o;
+        private RadioButton bt_x;
 
 
 
@@ -245,7 +245,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
                     if(holder.bt_o.isChecked()){
                         answer = "o";
                     }
-                    else{
+                    else if(holder.bt_x.isChecked()){
                         answer = "x";
                     }
                 }
@@ -316,16 +316,35 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
             }
         });
 
+        ipm = new Ipm();
+        final String loginid = mDataset.get(position).playerid;
+        final String ip = ipm.getip();
+        final int qcode = Integer.parseInt(mDataset.get(position).text_num);
+        NetworkClient.getInstance(ip);
+
+        mDataset.get(position).networkClient.gethint(loginid, qcode, new Callback<HintDTO>() {
+            @Override
+            public void onResponse(Call<HintDTO> call, Response<HintDTO> response) {
+                hints=response.body();
+                if (hints.getHintcount()==1 || hints.getHintflag()==1) {
+                    holder.get_hint.setVisibility(View.GONE);
+                    holder.hint_text.setVisibility(View.VISIBLE);
+                }
+            }
+
+            @Override
+            public void onFailure(Call<HintDTO> call, Throwable t) {
+
+            }
+        });
+
 
 
         holder.get_hint.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ipm = new Ipm();
+
                 LoginManager.getInstance();
-                String loginid = mDataset.get(position).playerid;
-                String ip = ipm.getip();
-                int qcode = Integer.parseInt(mDataset.get(position).text_num);
                 NetworkClient.getInstance(ip);
                 mDataset.get(position).networkClient.gethint(loginid,qcode, new Callback<HintDTO>() {
                     @Override

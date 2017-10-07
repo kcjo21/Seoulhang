@@ -10,19 +10,14 @@
     <TextView
         android:id="@+id/title_social"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:gravity="center_vertical|center_horizontal"
+        android:layout_height="50dp"
+        android:layout_marginStart="20dp"
+        android:gravity="center_vertical"
         android:text="@string/정보수정"
         android:textColor="@android:color/black"
-        android:textSize="30dp"
+        android:textSize="20dp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -30,76 +25,64 @@
 
     <android.support.constraint.ConstraintLayout
         android:id="@+id/constraintLayout"
-        android:layout_width="310dp"
-        android:layout_height="150dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_width="0dp"
+        android:layout_height="300dp"
+        android:layout_margin="5dp"
         android:background="@drawable/setting_back_xm"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.545"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.498"
-        app:layout_constraintHorizontal_bias="0.494">
+        app:layout_constraintTop_toBottomOf="@+id/title_social"
+        app:layout_constraintVertical_bias="0.401">
 
         <LinearLayout
             android:layout_width="0dp"
-            android:layout_height="350dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginRight="8dp"
-            android:layout_marginStart="8dp"
+            android:layout_height="0dp"
             android:orientation="vertical"
-            android:weightSum="83"
+            android:weightSum="100"
+            app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
-            <LinearLayout
-                android:id="@+id/name_lay"
+            <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_marginTop="10dp"
-                android:layout_weight="10"
-                android:orientation="horizontal"
-                android:weightSum="100">
-
-                <TextView
-                    android:id="@+id/name_social"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="25"
-                    android:gravity="center_vertical|center_horizontal"
-                    android:text="@string/닉네임"
-                    android:textColor="@android:color/black"
-                    android:textSize="14dp"
-                    tools:ignore="NestedWeights,RtlHardcoded,SpUsage" />
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="30dp"
+                android:layout_weight="40"
+                android:theme="@style/AppTheme.NoActionBar"
+                tools:layout_editor_absoluteX="8dp"
+                tools:layout_editor_absoluteY="50dp">
 
                 <EditText
                     android:id="@+id/name_t_social"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="75"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/닉네임"
                     android:inputType="text"
+                    android:maxLines="1"
                     android:textSize="16dp"
-                    tools:ignore="LabelFor,SpUsage" />
-            </LinearLayout>
+                    tools:ignore="SpUsage" />
+            </android.support.design.widget.TextInputLayout>
 
             <Button
                 android:id="@+id/bt_Withdrawal_social"
-                android:layout_width="75dp"
+                android:layout_width="100dp"
                 android:layout_height="0dp"
                 android:layout_gravity="end"
                 android:layout_marginBottom="20dp"
-                android:layout_weight="8"
+                android:layout_marginEnd="10dp"
+                android:layout_weight="18"
+                android:backgroundTint="@color/SBLUE"
                 android:text="@string/회원탈퇴"
-                android:textColor="@android:color/black"
+                android:textColor="@color/white"
                 android:textSize="7dp"
-                tools:ignore="RtlHardcoded,SpUsage" />
+                tools:ignore="RtlHardcoded,SpUsage"
+                tools:targetApi="lollipop" />
 
         </LinearLayout>
 
@@ -111,11 +94,11 @@
             android:layout_marginTop="230dp"
             android:orientation="horizontal"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.969">
+            app:layout_constraintVertical_bias="0.9">
 
             <Button
                 android:id="@+id/commit_social"
@@ -124,10 +107,10 @@
                 android:layout_marginBottom="5dp"
                 android:layout_marginEnd="5dp"
                 android:layout_weight="10"
-                android:backgroundTint="@android:color/holo_blue_bright"
+                android:backgroundTint="@color/SBLUE"
                 android:backgroundTintMode="src_atop"
                 android:text="@string/확인"
-                android:textColor="@android:color/black"
+                android:textColor="@color/white"
                 android:textSize="14dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
@@ -143,10 +126,10 @@
                 android:layout_marginBottom="5dp"
                 android:layout_marginEnd="5dp"
                 android:layout_weight="10"
-                android:backgroundTint="@android:color/holo_blue_bright"
+                android:backgroundTint="@color/SBLUE"
                 android:backgroundTintMode="src_atop"
                 android:text="@string/취소"
-                android:textColor="@android:color/black"
+                android:textColor="@color/white"
                 android:textSize="14dp"
                 android:visibility="visible"
                 app:layout_constraintBottom_toBottomOf="parent"

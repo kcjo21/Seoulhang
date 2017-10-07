@@ -2,18 +2,17 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
     android:orientation="vertical"
     android:weightSum="100">
 
     <TextView
         android:id="@+id/solved"
         android:layout_width="match_parent"
-        android:layout_height="23dp"
+        android:layout_height="0dp"
         android:layout_marginEnd="5dp"
         android:layout_marginStart="5dp"
-        android:layout_marginTop="2dp"
-        android:layout_weight="3.5"
+        android:layout_weight="4.5"
         android:background="@color/SBLUE"
         android:gravity="center_vertical"
         android:text="@string/해결한문제"
@@ -24,30 +23,30 @@
     <TextView
         android:id="@+id/no_quiz"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="0dp"
         android:layout_marginBottom="50dp"
         android:layout_marginTop="50dp"
-        android:layout_weight="39"
+        android:layout_weight="92"
         android:gravity="center_vertical|center_horizontal"
         android:text="@string/현재해결한문제없음"
-        android:textSize="30dp"
+        android:textSize="20dp"
         android:visibility="gone"
         tools:ignore="SpUsage" />
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/rvi"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="0dp"
         android:layout_marginBottom="5dp"
         android:layout_marginLeft="5dp"
         android:layout_marginRight="5dp"
-        android:layout_weight="39"
+        android:layout_weight="90"
         android:nestedScrollingEnabled="false"
         android:visibility="visible" />
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="10dp"
+        android:layout_height="0dp"
         android:layout_weight="1"
         android:background="@color/Carkviewline"
         android:orientation="horizontal"></LinearLayout>
@@ -55,11 +54,11 @@
     <TextView
         android:id="@+id/rate"
         android:layout_width="match_parent"
-        android:layout_height="23dp"
+        android:layout_height="0dp"
         android:layout_marginEnd="5dp"
         android:layout_marginStart="5dp"
         android:layout_marginTop="5dp"
-        android:layout_weight="3.5"
+        android:layout_weight="4.5"
         android:background="@color/SBLUE"
         android:gravity="center_vertical"
         android:text="@string/지역별달성률"

@@ -22,6 +22,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -66,7 +67,6 @@ public class Frag_Home extends BaseFragment {
     Button submit;
     Button gethint;
     EditText answer;
-    TextView hello;
     ImageView map_b;
     ImageView tuto;
     ImageView camera_b;
@@ -101,7 +101,6 @@ public class Frag_Home extends BaseFragment {
         answer = (EditText) layout.findViewById(R.id.Answer);
         submit = (Button) layout.findViewById(R.id.Submit);
         gethint = (Button) layout.findViewById(R.id.button_hint);
-        hello = (TextView)layout.findViewById(R.id.hello);
         home_main = (Home_Main)getActivity();
         no_quiz = (TextView)layout.findViewById(R.id.no_quiz);
         handler = new Handler(Looper.getMainLooper());
@@ -119,8 +118,8 @@ public class Frag_Home extends BaseFragment {
       map_b.getViewTreeObserver().addOnGlobalFocusChangeListener(new ViewTreeObserver.OnGlobalFocusChangeListener() {
           @Override
           public void onGlobalFocusChanged(View oldFocus, View newFocus) {
-              ((Home_Main)getActivity()).targetMaker(map_b,220F,getResources().getString(R.string.map_view),getResources().getString(R.string.map_view_descrip));
-              ((Home_Main)getActivity()).targetMaker(tuto,150F,getResources().getString(R.string.replay),getResources().getString(R.string.replay_descrip));
+              ((Home_Main)getActivity()).targetMaker(map_b,map_b.getWidth(),getResources().getString(R.string.map_view),getResources().getString(R.string.map_view_descrip));
+              ((Home_Main)getActivity()).targetMaker(tuto,tuto.getHeight(),getResources().getString(R.string.replay),getResources().getString(R.string.replay_descrip));
               map_b.getViewTreeObserver().removeOnGlobalFocusChangeListener(this);
           }
       });
@@ -193,41 +192,6 @@ public class Frag_Home extends BaseFragment {
 
             }
         });
-
-        networkClient = NetworkClient.getInstance(ip);
-        Log.d("인포",loginid);
-        networkClient.getfinishitem(loginid, new Callback<List<InventoryDTO>>() {
-            @Override
-            public void onResponse(Call<List<InventoryDTO>> call, Response<List<InventoryDTO>> response) {
-                Log.d("인포", "123");
-                switch (response.code()) {
-                    case 200:
-                        Log.d("인포", "어댑터 세팅");
-                        infos = response.body();
-
-                        InventoryDTO inventoryDTO = infos.get(0);
-                        String playername = inventoryDTO.getPlayername();
-                        Activity activity = getActivity();
-                        if (isAdded() && activity != null) {
-                            hello.setText(getResources().getString(R.string.환영,playername));
-                        }
-
-
-
-
-                        break;
-
-                    default:
-                        break;
-                }
-            }
-            @Override
-            public void onFailure(Call<List<InventoryDTO>> call, Throwable t) {
-                Log.e("ACC", "s?? " + t.getMessage());
-
-            }
-        });
-
 
         camera_b.setOnClickListener(new View.OnClickListener() {
             String playerid = profile.getId();

@@ -18,7 +18,6 @@ import com.hbag.seoulhang.joinmanage_package.tutorial_package.tuto_a;
 import com.hbag.seoulhang.joinmanage_package.tutorial_package.tuto_b;
 import com.hbag.seoulhang.joinmanage_package.tutorial_package.tuto_c;
 import com.hbag.seoulhang.joinmanage_package.tutorial_package.tuto_d;
-import com.nightonke.wowoviewpager.WoWoViewPagerAdapter;
 
 public class TutorialActivity extends AppCompatActivity {
     ViewPager tpager;

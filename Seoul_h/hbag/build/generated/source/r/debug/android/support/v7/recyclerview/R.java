@@ -14,12 +14,12 @@ public final class R {
         public static final int stackFromEnd = 0x7f010144;
     }
     public static final class dimen {
-        public static final int item_touch_helper_max_drag_scroll_per_frame = 0x7f0900a2;
-        public static final int item_touch_helper_swipe_escape_max_velocity = 0x7f0900a3;
-        public static final int item_touch_helper_swipe_escape_velocity = 0x7f0900a4;
+        public static final int item_touch_helper_max_drag_scroll_per_frame = 0x7f090099;
+        public static final int item_touch_helper_swipe_escape_max_velocity = 0x7f09009a;
+        public static final int item_touch_helper_swipe_escape_velocity = 0x7f09009b;
     }
     public static final class id {
-        public static final int item_touch_helper_previous_elevation = 0x7f0d0005;
+        public static final int item_touch_helper_previous_elevation = 0x7f0a0007;
     }
     public static final class styleable {
         public static final int[] RecyclerView = { 0x010100c4, 0x010100f1, 0x7f010141, 0x7f010142, 0x7f010143, 0x7f010144 };

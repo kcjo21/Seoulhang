@@ -73,6 +73,8 @@ public class SettingActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 lang_text.setText("언어를 선택하세요.");
+                commit.setText("확인");
+                cancel.setText("취소");
                 lang = 0;
                 Log.e("세팅",""+lang);
             }
@@ -81,6 +83,8 @@ public class SettingActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 lang_text.setText("Select Your Language");
+                commit.setText("CONFIRM");
+                cancel.setText("CANCEL");
                 lang = 1;
                 Log.e("세팅",""+lang);
             }

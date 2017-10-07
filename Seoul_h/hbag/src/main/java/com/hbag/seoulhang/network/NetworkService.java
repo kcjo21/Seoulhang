@@ -20,7 +20,7 @@ public interface NetworkService {
     Call<PlayerDTO> login(@Path("player") String player,@Path("password") String password);
 
     @GET("/collect/{player}/call_code/{question_code}")
-    Call<QuestDTO> getquestioncode(@Path("player") String player, @Path("question_code") int questioncode);
+    Call<QuestDTO> getquestioncode(@Path("player") String player, @Path("question_code") int question_code);
 
     @GET("/start_player/{player}")
     Call<List<ItemDTO>> getstartitem(@Path("player") String player);

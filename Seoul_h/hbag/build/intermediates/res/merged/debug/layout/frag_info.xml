@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="?android:attr/colorLongPressedHighlight"
+    android:background="@color/white"
     android:orientation="vertical"
     android:weightSum="100">
 
@@ -14,7 +14,7 @@
         android:layout_marginEnd="5dp"
         android:layout_marginStart="5dp"
         android:layout_marginTop="2dp"
-        android:layout_weight="3.5"
+        android:layout_weight="4.5"
         android:background="@color/SBLUE"
         android:orientation="horizontal"
         android:weightSum="100">
@@ -24,8 +24,9 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="15"
-            android:gravity="center_vertical|center_horizontal"
+            android:gravity="center"
             android:text="@string/등급"
+            android:textAlignment="center"
             android:textColor="@android:color/white"
             android:textSize="14dp"
             tools:ignore="NestedWeights,SpUsage" />
@@ -35,8 +36,9 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="40"
-            android:gravity="center_vertical|center_horizontal"
+            android:gravity="center"
             android:text="@string/닉네임"
+            android:textAlignment="center"
             android:textColor="@android:color/white"
             android:textSize="14dp"
             tools:ignore="SpUsage" />
@@ -46,8 +48,9 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="25"
-            android:gravity="center_vertical|center_horizontal"
+            android:gravity="center"
             android:text="@string/점수"
+            android:textAlignment="center"
             android:textColor="@android:color/white"
             android:textSize="14dp"
             tools:ignore="SpUsage" />
@@ -55,10 +58,11 @@
         <TextView
             android:id="@+id/hint"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_weight="20"
-            android:gravity="center_vertical|center_horizontal"
+            android:gravity="center"
             android:text="@string/남은힌트"
+            android:textAlignment="center"
             android:textColor="@android:color/white"
             android:textSize="14dp"
             tools:ignore="SpUsage" />
@@ -120,11 +124,19 @@
 
     </LinearLayout>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.5"
+        android:background="@color/Carkviewline"
+        android:orientation="horizontal"></LinearLayout>
+
     <ExpandableListView
         android:id="@+id/exl"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="87"
+        android:layout_marginTop="5dp"
+        android:layout_weight="86"
         android:divider="@android:color/white"
         android:groupIndicator="@drawable/selector_arrow"
         android:overScrollMode="always"

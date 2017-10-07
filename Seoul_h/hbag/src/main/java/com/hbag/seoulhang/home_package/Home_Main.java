@@ -687,12 +687,12 @@ public class Home_Main extends BaseActivity implements
 
         if(!firstwindow) {   //포커스 변경 시 중복 생성을 방지한다.
 
-            targetMaker(bt_home, 80F, getResources().getString(R.string.홈), getResources().getString(R.string.home_descrip));
-            targetMaker(bt_quiz, 80F, getResources().getString(R.string.퀴즈), getResources().getString(R.string.quiz_descrip));
-            targetMaker(bt_info, 80F, getResources().getString(R.string.내정보), getResources().getString(R.string.info_descrip));
-            targetMaker(bt_rank, 80F, getResources().getString(R.string.순위표), getResources().getString(R.string.rank_descrip));
-            targetMaker(drawerposition, 80F, getResources().getString(R.string.메뉴버튼), getResources().getString(R.string.menu_descrip));
-            targetMaker(cameraposition, 80F, getResources().getString(R.string.카메라버튼), getResources().getString(R.string.camera_descrip));
+            targetMaker(bt_home, bt_home.getWidth(), getResources().getString(R.string.홈), getResources().getString(R.string.home_descrip));
+            targetMaker(bt_quiz, bt_quiz.getWidth(), getResources().getString(R.string.퀴즈), getResources().getString(R.string.quiz_descrip));
+            targetMaker(bt_info, bt_info.getWidth(), getResources().getString(R.string.내정보), getResources().getString(R.string.info_descrip));
+            targetMaker(bt_rank, bt_rank.getWidth(), getResources().getString(R.string.순위표), getResources().getString(R.string.rank_descrip));
+            targetMaker(drawerposition, bt_home.getWidth(), getResources().getString(R.string.메뉴버튼), getResources().getString(R.string.menu_descrip));
+            targetMaker(cameraposition, bt_home.getWidth(), getResources().getString(R.string.카메라버튼), getResources().getString(R.string.camera_descrip));
 
             SharedPreferences pref = getSharedPreferences("spot", MODE_PRIVATE);
             if (pref.getInt("firstSpot", 0) == 0) {

@@ -20,14 +20,16 @@
     <color name="light_blue">#3281fc</color>
     <color name="silver_a">#96000000</color>
     <dimen name="size">10dp</dimen>
+    <item name="masked" type="id"/>
+    <item name="visible" type="id"/>
     <string name="ARCam">ARCam</string>
     <string name="EEmail">Enter your E-mail adrress.</string>
     <string name="EID">Enter your ID.</string>
     <string name="EPass">Please enter a combination of 6-18 alphanumeric characters and combinations of special characters.</string>
     <string name="Eage">Enter your age.</string>
     <string name="Email">Email</string>
-    <string name="Ename">Enter your name.</string>
-    <string name="Ephone">Enter your phone number.</string>
+    <string name="Ename">Enter your Name.</string>
+    <string name="Enname">Enter your Nickname.</string>
     <string name="GPSMessage">Your GPS is disabled! We need GPS Data. Would you like to enable it?</string>
     <string name="GPSN">No</string>
     <string name="GPSY">Yes</string>
@@ -50,6 +52,7 @@
     <string name="checkEmail">Incorrect email address in format.</string>
     <string name="checkplease">perform a check for overlapping Identification.</string>
     <string name="close_drawer">close drawerclose drawerclose drawerclose drawerclose drawer</string>
+    <string name="currentpass">Please enter your current password.</string>
     <string name="dialog_ok">OK</string>
     <string name="email">E-mail</string>
     <string name="facebook_app_id">130262031034086</string>
@@ -71,7 +74,8 @@
     <string name="menu_descrip">Touch to open the Navigation menu. In the Navigation menu, you can edit the profile, set the language, and perform map, camera and subway functions. You can also view the rating table and display brief user information.</string>
     <string name="naverclientid">S25ZUcloW2JU4Xk2SJTD</string>
     <string name="naversecret">IxuQXBjLMf</string>
-    <string name="normal_with">                Signed in with SeoulHang Account</string>
+    <string name="normal_with">                Signed in with Account</string>
+    <string name="not_good_id">Please enter a 5 ~ 12 character ID consisting of only english and numbers, and The first letter of the ID must be in English.</string>
     <string name="num">num</string>
     <string name="open_drawer">open draweropen draweropen draweropen draweropen draweropen drawer</string>
     <string name="please_check_already_id">this id already exist.</string>
@@ -117,7 +121,7 @@
     <string name="비밀번호변경완료">Password changed Successfully!</string>
     <string name="비밀번호일치">password do not match.</string>
     <string name="비밀번호입력">Enter your Password.</string>
-    <string name="비밀번호찾기">Password</string>
+    <string name="비밀번호찾기">Find Password</string>
     <string name="비밀번호확인">Confirm</string>
     <string name="사용가능">Available.</string>
     <string name="새문제">You got a new quiz!</string>
@@ -180,7 +184,7 @@
     <string name="홈">HOME</string>
     <string name="확인">Confirm</string>
     <string name="확인메일보냄">Authentication mail has been sent successfully.</string>
-    <string name="환영">Wellcome! %s</string>
+    <string name="확인중">...</string>
     <string name="회원가입">Register</string>
     <string name="회원가입성공">Congratulations!</string>
     <string name="회원정보수정완료">Profile modification has been completed!</string>
@@ -200,8 +204,13 @@
     <style name="AppTheme.NoActionBar">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">false</item>
+        <item name="colorControlNormal">#4d4e4e</item>
+        <item name="colorControlActivated">#FF0697FC</item>
     </style>
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
     <style name="UnityThemeSelector" parent="android:Theme.Light.NoTitleBar.Fullscreen">
+        <item name="colorControlNormal">#2196F3</item>
+
+        <item name="colorControlActivated">#009688</item>
     </style>
 </resources>

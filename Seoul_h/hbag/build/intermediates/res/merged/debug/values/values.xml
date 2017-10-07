@@ -98,9 +98,6 @@
     <bool name="abc_config_actionMenuItemAllCaps">true</bool>
     <bool name="abc_config_closeDialogWhenTouchOutside">true</bool>
     <bool name="abc_config_showMenuShortcutsWhenKeyboardPresent">false</bool>
-    <bool name="default_dashPath">true</bool>
-    <bool name="default_draggable">true</bool>
-    <bool name="default_dynamicPath">false</bool>
     <color name="BLUE">#0070c0</color>
     <color name="BRONZE">#b87333</color>
     <color name="Carkviewline">#dbdbdb</color>
@@ -175,7 +172,6 @@
     <color name="common_google_signin_btn_text_light_focused">#90000000</color>
     <color name="common_google_signin_btn_text_light_pressed">#DE000000</color>
     <color name="default_background">#14c3a2</color>
-    <color name="default_pathColor">#ffffff</color>
     <color name="default_text_color">#a4e2d3</color>
     <color name="design_bottom_navigation_shadow_color">#14000000</color>
     <color name="design_fab_shadow_end_color">@android:color/transparent</color>
@@ -587,22 +583,6 @@
             <enum name="screen" value="15"/>
         </attr></declare-styleable>
     <declare-styleable name="ViewStubCompat"><attr name="android:layout"/><attr name="android:inflatedId"/><attr name="android:id"/></declare-styleable>
-    <declare-styleable name="WoWoGifView"><attr format="reference" name="wowo_src"/></declare-styleable>
-    <declare-styleable name="WoWoPathView"><attr format="boolean|reference" name="wowo_dashPath"/><attr format="dimension|reference" name="wowo_dashPathSegmentLength"/><attr format="dimension|reference" name="wowo_dashPathPaddingLength"/><attr format="boolean|reference" name="wowo_dynamicPath"/><attr format="dimension|reference" name="wowo_dynamicPathSpeed"/><attr format="color|reference" name="wowo_pathColor"/><attr format="dimension|reference" name="wowo_pathWidth"/><attr format="reference" name="wowo_headImageSrc"/><attr format="dimension|reference" name="wowo_headImageWidth"/><attr format="dimension|reference" name="wowo_headImageHeight"/></declare-styleable>
-    <declare-styleable name="WoWoSvgView"><attr format="integer|reference" name="wowo_imageSizeX"/><attr format="integer|reference" name="wowo_imageSizeY"/><attr format="string|reference" name="wowo_traceTime"/><attr format="string|reference" name="wowo_traceTimePerGlyph"/><attr format="string|reference" name="wowo_fillStart"/><attr format="string|reference" name="wowo_fillTime"/><attr format="reference" name="wowo_glyphStrings"/><attr format="reference" name="wowo_traceColors"/><attr format="reference" name="wowo_traceResidueColors"/><attr format="dimension|reference" name="wowo_traceMarkerLength"/><attr format="reference" name="wowo_fillColors"/></declare-styleable>
-    <declare-styleable name="WoWoViewPager"><attr format="enum|reference" name="wowo_gearbox">
-            <enum name="zero" value="0"/>
-            <enum name="positive1" value="1"/>
-            <enum name="positive2" value="2"/>
-            <enum name="positive3" value="3"/>
-            <enum name="positive4" value="4"/>
-            <enum name="positive5" value="5"/>
-            <enum name="positive6" value="6"/>
-            <enum name="positive7" value="7"/>
-        </attr><attr format="boolean|reference" name="wowo_draggable"/><attr format="integer|reference" name="wowo_scrollDuration"/><attr format="enum|reference" name="wowo_direction">
-            <enum name="horizontal" value="0"/>
-            <enum name="vertical" value="1"/>
-        </attr></declare-styleable>
     <declare-styleable name="com_facebook_like_view"><attr format="color" name="com_facebook_foreground_color"/><attr format="string" name="com_facebook_object_id"/><attr name="com_facebook_object_type">
             
             <enum name="unknown" value="0"/>
@@ -737,15 +717,6 @@
     <dimen name="com_facebook_share_button_text_size">16.0sp</dimen>
     <dimen name="com_facebook_tooltip_horizontal_padding">10dp</dimen>
     <dimen name="corner_radius">2dp</dimen>
-    <dimen name="default_dashPathPaddingLength">10px</dimen>
-    <dimen name="default_dashPathSegmentLength">20px</dimen>
-    <dimen name="default_dynamicPathSpeed">3px</dimen>
-    <dimen name="default_headImageHeight">0dp</dimen>
-    <dimen name="default_headImageWidth">0dp</dimen>
-    <dimen name="default_pathWidth">2dp</dimen>
-    <dimen name="default_svgImageSizeX">512px</dimen>
-    <dimen name="default_svgImageSizeY">512px</dimen>
-    <dimen name="default_svgTraceMarkerLength">16dp</dimen>
     <dimen name="design_appbar_elevation">4dp</dimen>
     <dimen name="design_bottom_navigation_active_item_max_width">168dp</dimen>
     <dimen name="design_bottom_navigation_active_text_size">14sp</dimen>
@@ -821,6 +792,7 @@
     <item name="action_menu_presenter" type="id"/>
     <item name="home" type="id"/>
     <item name="item_touch_helper_previous_elevation" type="id"/>
+    <item name="masked" type="id"/>
     <item name="progress_circular" type="id"/>
     <item name="progress_horizontal" type="id"/>
     <item name="split_action_bar" type="id"/>
@@ -830,24 +802,12 @@
     <item name="transition_scene_layoutid_cache" type="id"/>
     <item name="up" type="id"/>
     <item name="view_offset_helper" type="id"/>
+    <item name="visible" type="id"/>
     <integer name="abc_config_activityDefaultDur">220</integer>
     <integer name="abc_config_activityShortDur">150</integer>
     <integer name="app_bar_elevation_anim_duration">150</integer>
     <integer name="bottom_sheet_slide_duration">150</integer>
     <integer name="cancel_button_image_alpha">127</integer>
-    <integer name="default_direction">0</integer>
-    <integer name="default_gearbox">3</integer>
-    <integer name="default_gifResource">0</integer>
-    <integer name="default_headImageSrc">0</integer>
-    <integer name="default_scrollDuration">-1</integer>
-    <integer name="default_svgFillColors">0</integer>
-    <integer name="default_svgFillStartTime">1200</integer>
-    <integer name="default_svgFillTime">1000</integer>
-    <integer name="default_svgGlyphStrings">0</integer>
-    <integer name="default_svgTraceColors">0</integer>
-    <integer name="default_svgTraceResidueColors">0</integer>
-    <integer name="default_svgTraceTime">2000</integer>
-    <integer name="default_svgTraceTimePerGlyph">1000</integer>
     <integer name="design_snackbar_text_max_lines">2</integer>
     <integer name="google_play_services_version">11020000</integer>
     <integer name="hide_password_duration">320</integer>
@@ -860,7 +820,7 @@
     <string name="Eage">나이를 입력해주세요.</string>
     <string name="Email">Email</string>
     <string name="Ename">이름을 입력해주세요.</string>
-    <string name="Ephone">핸드폰 번호를 입력해주세요.</string>
+    <string name="Enname">닉네임을 입력해주세요.</string>
     <string name="GPSMessage">이 게임은 GPS 위치 데이터를 필요로 합니다. GPS를 설정하시겠습니까?</string>
     <string name="GPSN">아니요</string>
     <string name="GPSY">예</string>
@@ -917,7 +877,7 @@
     <string name="checkEmail">형식에 맞지 않는 메일 주소입니다.</string>
     <string name="checkplease">ID중복확인을 해주십시오.</string>
     <string name="close_drawer">close drawerclose drawerclose drawerclose drawerclose drawer</string>
-    <string name="com.crashlytics.android.build_id" ns1:ignore="UnusedResources,TypographyDashes" translatable="false">30487a6f-3902-4dad-a439-8a96147318e0</string>
+    <string name="com.crashlytics.android.build_id" ns1:ignore="UnusedResources,TypographyDashes" translatable="false">743d0fed-2570-4f61-a188-c45272d5f8c9</string>
     <string name="com_facebook_device_auth_instructions">Visit &lt;b>facebook.com/device&lt;/b> and enter the code shown above.</string>
     <string name="com_facebook_image_download_unknown_error">Unexpected error while downloading an image.</string>
     <string name="com_facebook_internet_permission_error_message">WebView login requires INTERNET permission</string>
@@ -958,6 +918,7 @@
     <string name="common_open_on_phone">Open on phone</string>
     <string name="common_signin_button_text">Sign in</string>
     <string name="common_signin_button_text_long">Sign in with Google</string>
+    <string name="currentpass">현재 비밀번호를 입력해주세요.</string>
     <string name="default_web_client_id" translatable="false">760341892608-fkdjif0bj9gg9jmnc39np87h61scroeb.apps.googleusercontent.com</string>
     <string name="define_processbutton">processbutton</string>
     <string name="dialog_ok">확인</string>
@@ -996,6 +957,7 @@
     <string name="naverclientid">S25ZUcloW2JU4Xk2SJTD</string>
     <string name="naversecret">IxuQXBjLMf</string>
     <string name="normal_with">                일반계정으로 로그인 중</string>
+    <string name="not_good_id">영문과 숫자로만 이루어진 5~12자 아이디를 입력해주세요. 첫 글자는 반드시 영문입니다.</string>
     <string name="num">num</string>
     <string name="open_drawer">open draweropen draweropen draweropen draweropen draweropen drawer</string>
     <string name="password_toggle_content_description">Toggle password visibility</string>
@@ -1049,7 +1011,7 @@
     <string name="비밀번호일치">비밀번호가 일치하지 않습니다.</string>
     <string name="비밀번호입력">비밀번호를 입력하세요.</string>
     <string name="비밀번호찾기">비밀번호 찾기</string>
-    <string name="비밀번호확인">비밀번호\\n확인</string>
+    <string name="비밀번호확인">비밀번호 확인</string>
     <string name="사용가능">사용가능</string>
     <string name="새문제">새 문제를 획득하였습니다!</string>
     <string name="새비밀번호">새 비밀번호를 입력하세요.</string>
@@ -1089,7 +1051,7 @@
     <string name="정보수정">내 정보수정</string>
     <string name="정보수정질문">정보를 수정하시겠습니까?</string>
     <string name="주소미발견">주소를 발견하지 못했습니다.</string>
-    <string name="중복확인">중복확인</string>
+    <string name="중복확인">확인</string>
     <string name="지역별달성률"> 지역별 정보 및 달성률</string>
     <string name="지오코더">지오코딩 서비스 사용불가.</string>
     <string name="챌린저">챌린저</string>
@@ -1111,7 +1073,7 @@
     <string name="홈">홈</string>
     <string name="확인">확인</string>
     <string name="확인메일보냄">인증 메일이 성공적으로 보내졌습니다.</string>
-    <string name="환영">%s님 환영합니다!</string>
+    <string name="확인중">...</string>
     <string name="회원가입">회원가입</string>
     <string name="회원가입성공">회원가입을 축하합니다!</string>
     <string name="회원정보수정완료">회원정보수정이 완료되었습니다!</string>
@@ -2557,7 +2519,7 @@
     <style name="ThemeOverlay.AppCompat.Dialog.Alert" parent="Base.ThemeOverlay.AppCompat.Dialog.Alert"/>
     <style name="ThemeOverlay.AppCompat.Light" parent="Base.ThemeOverlay.AppCompat.Light"/>
     <style name="UnityThemeSelector" parent="android:Theme.Light.NoTitleBar.Fullscreen">
-</style>
+    </style>
     <style name="Widget.AppCompat.ActionBar" parent="Base.Widget.AppCompat.ActionBar">
     </style>
     <style name="Widget.AppCompat.ActionBar.Solid" parent="Base.Widget.AppCompat.ActionBar.Solid">

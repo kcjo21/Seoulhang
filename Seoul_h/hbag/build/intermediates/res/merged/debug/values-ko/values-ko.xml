@@ -20,6 +20,8 @@
     <color name="light_blue">#3281fc</color>
     <color name="silver_a">#64171717</color>
     <dimen name="size">14dp</dimen>
+    <item name="masked" type="id"/>
+    <item name="visible" type="id"/>
     <string name="ARCam">ARCam</string>
     <string name="EEmail">이메일을 입력해주세요.</string>
     <string name="EID">아이디를 입력해주세요.</string>
@@ -27,7 +29,7 @@
     <string name="Eage">나이를 입력해주세요.</string>
     <string name="Email">Email</string>
     <string name="Ename">이름을 입력해주세요.</string>
-    <string name="Ephone">Enter your phone number.</string>
+    <string name="Enname">닉네임을 입력해주세요.</string>
     <string name="GPSMessage">이 게임은 GPS 위치 데이터를 필요로 합니다. GPS를 설정하시겠습니까?</string>
     <string name="GPSN">아니요</string>
     <string name="GPSY">예</string>
@@ -109,6 +111,7 @@
     <string msgid="5201977337835724196" name="common_open_on_phone">"스마트폰에서 열기"</string>
     <string msgid="3441753203274453993" name="common_signin_button_text">"로그인"</string>
     <string msgid="669893613918351210" name="common_signin_button_text_long">"Google 계정으로 로그인"</string>
+    <string name="currentpass">현재 비밀번호를 입력해주세요.</string>
     <string name="dialog_ok">확인</string>
     <string name="email">E-mail</string>
     <string name="facebook_app_id">130262031034086</string>
@@ -132,6 +135,7 @@
     <string name="naverclientid">S25ZUcloW2JU4Xk2SJTD</string>
     <string name="naversecret">IxuQXBjLMf</string>
     <string name="normal_with">                일반계정으로 로그인 중</string>
+    <string name="not_good_id">영문과 숫자로만 이루어진 5~12자 아이디를 입력해주세요. 첫 글자는 반드시 영문입니다.</string>
     <string name="num">num</string>
     <string name="open_drawer">open draweropen draweropen draweropen draweropen draweropen drawer</string>
     <string name="please_check_already_id">이미 같은 아이디가 존재합니다.</string>
@@ -220,7 +224,7 @@
     <string name="정보수정">내 정보수정</string>
     <string name="정보수정질문">정보를 수정하시겠습니까?</string>
     <string name="주소미발견">주소를 발견하지 못했습니다.</string>
-    <string name="중복확인">중복확인</string>
+    <string name="중복확인">확인</string>
     <string name="지역별달성률"> 지역별 정보 및 달성률</string>
     <string name="지오코더">지오코딩 서비스 사용불가.</string>
     <string name="챌린저">챌린저</string>
@@ -242,7 +246,7 @@
     <string name="홈">홈</string>
     <string name="확인">확인</string>
     <string name="확인메일보냄">인증 메일이 성공적으로 보내졌습니다.</string>
-    <string name="환영">%s님 환영합니다!</string>
+    <string name="확인중">...</string>
     <string name="회원가입">회원가입</string>
     <string name="회원가입성공">회원가입을 축하합니다!</string>
     <string name="회원정보수정완료">회원정보수정이 완료되었습니다!</string>
@@ -257,13 +261,19 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+
     </style>
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
     <style name="AppTheme.NoActionBar">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">false</item>
+        <item name="colorControlNormal">#4d4e4e</item>
+        <item name="colorControlActivated">#FF0697FC</item>
     </style>
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
     <style name="UnityThemeSelector" parent="android:Theme.Light.NoTitleBar.Fullscreen">
+        <item name="colorControlNormal">#2196F3</item>
+
+        <item name="colorControlActivated">#009688</item>
     </style>
 </resources>

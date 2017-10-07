@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/SKYBLUE"
     tools:context="com.hbag.seoulhang.joinmanage_package.SettingActivity">
 
     <android.support.constraint.ConstraintLayout
@@ -95,10 +94,9 @@
                 android:layout_marginRight="5dp"
                 android:layout_marginTop="5dp"
                 android:layout_weight="10"
-                android:backgroundTint="@android:color/holo_blue_bright"
-                android:backgroundTintMode="src_atop"
+                android:background="@drawable/card_view_button"
                 android:text="@string/확인"
-                android:textColor="@android:color/black"
+                android:textColor="@color/white"
                 android:textSize="14dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
@@ -115,10 +113,9 @@
                 android:layout_marginRight="5dp"
                 android:layout_marginTop="5dp"
                 android:layout_weight="10"
-                android:backgroundTint="@android:color/holo_blue_bright"
-                android:backgroundTintMode="src_atop"
+                android:background="@drawable/card_view_button"
                 android:text="@string/취소"
-                android:textColor="@android:color/black"
+                android:textColor="@color/white"
                 android:textSize="14dp"
                 android:visibility="gone"
                 app:layout_constraintBottom_toBottomOf="parent"

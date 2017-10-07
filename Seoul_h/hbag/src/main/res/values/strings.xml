@@ -34,7 +34,6 @@
     <string name="최근문제">최근 문제</string>
     <string name="정답을입력하세요">정답을 입력하세요.</string>
     <string name="내순위">내 순위</string>
-    <string name="환영">%s님 환영합니다!</string>
     <string name="카메라켜기">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;카메라 켜기</string>
     <string name="등급표">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;등급표</string>
     <string name="설정">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;설정</string>
@@ -73,7 +72,7 @@
     <string name="여">여</string>
     <string name="이름">이름</string>
     <string name="비밀번호">비밀번호</string>
-    <string name="비밀번호확인">비밀번호\\n확인</string>
+    <string name="비밀번호확인">비밀번호 확인</string>
     <string name="성별">성별</string>
     <string name="age">나이</string>
     <string name="연락처">연락처</string>
@@ -84,14 +83,13 @@
     <string name="please_check_name">이미 같은 닉네임이 존재합니다.</string>
     <string name="확인">확인</string>
     <string name="취소">취소</string>
-    <string name="중복확인">중복확인</string>
+    <string name="중복확인">확인</string>
     <string name="비밀번호일치">비밀번호가 일치하지 않습니다.</string>
     <string name="사용가능">사용가능</string>
     <string name="EID">아이디를 입력해주세요.</string>
     <string name="EPass">6~18자리 영문+숫자+특수문자를 혼합한 비밀번호를 입력해주세요.</string>
     <string name="Ename">이름을 입력해주세요.</string>
     <string name="Eage">나이를 입력해주세요.</string>
-    <string name="Ephone">핸드폰 번호를 입력해주세요.</string>
     <string name="EEmail">이메일을 입력해주세요.</string>
     <string name="checkplease">ID중복확인을 해주십시오.</string>
     <string name="회원가입성공">회원가입을 축하합니다!</string>
@@ -169,5 +167,9 @@
     <string name="완료">완료!</string>
     <string name="실패">실패..</string>
     <string name="시작하기">시작!</string>
+    <string name="확인중">...</string>
+    <string name="not_good_id">영문과 숫자로만 이루어진 5~12자 아이디를 입력해주세요. 첫 글자는 반드시 영문입니다.</string>
+    <string name="currentpass">현재 비밀번호를 입력해주세요.</string>
+    <string name="Enname">닉네임을 입력해주세요.</string>
 
 </resources>

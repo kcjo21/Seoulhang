@@ -188,37 +188,43 @@ public class EditprofileActivity extends BaseActivity implements
 
                 @Override
                 public void onClick(View v) {
-                    if (SystemClock.elapsedRealtime() - mLastClickTime < 1000){
+                    if (SystemClock.elapsedRealtime() - mLastClickTime < 1000) {
                         return;
                     }
                     mLastClickTime = SystemClock.elapsedRealtime();
                     String sname = Name.getText().toString();
                     String smail = profile.getEmail();
-                    Log.d("회원정보수정", sname);
-                    networkClient.editprofile(sid, "", sname, smail, new Callback<String>() {
-                        @Override
-                        public void onResponse(Call<String> call, Response<String> response) {
-                            switch (response.code()) {
-                                case 200:
-                                    Toast toast = Toast.makeText(getApplicationContext(), getResources().getString(R.string.회원정보수정완료), Toast.LENGTH_LONG);
-                                    toast.show();
-                                    Intent intent = new Intent(EditprofileActivity.this, Home_Main.class);
-                                    startActivity(intent);
-                                    finish();
-                                    break;
-                                default:
-                                    break;
+
+                    if (Name.getText().length() <= 0) {
+                        Name.setError(getResources().getString(R.string.Enname));
+                    } else {
+
+                        Log.d("회원정보수정", sname);
+                        networkClient.editprofile(sid, "", sname, smail, new Callback<String>() {
+                            @Override
+                            public void onResponse(Call<String> call, Response<String> response) {
+                                switch (response.code()) {
+                                    case 200:
+                                        Toast toast = Toast.makeText(getApplicationContext(), getResources().getString(R.string.회원정보수정완료), Toast.LENGTH_LONG);
+                                        toast.show();
+                                        Intent intent = new Intent(EditprofileActivity.this, Home_Main.class);
+                                        startActivity(intent);
+                                        finish();
+                                        break;
+                                    default:
+                                        break;
+                                }
                             }
-                        }
 
-                        @Override
-                        public void onFailure(Call<String> call, Throwable t) {
-                            Toast toast = Toast.makeText(getApplicationContext(), getResources().getString(R.string.can_not_connent_to_server), Toast.LENGTH_LONG);
-                            toast.show();
-                        }
-                    });
-
+                            @Override
+                            public void onFailure(Call<String> call, Throwable t) {
+                                Toast toast = Toast.makeText(getApplicationContext(), getResources().getString(R.string.can_not_connent_to_server), Toast.LENGTH_LONG);
+                                toast.show();
+                            }
+                        });
+                    }
                 }
+
             });
             Cancel.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -425,31 +431,40 @@ public class EditprofileActivity extends BaseActivity implements
                     String sname = Name.getText().toString();
                     String spass = Password.getText().toString();
                     String semail = Email.getText().toString();
-                    Log.d("회원정보수정", sname + spass + semail);
-                    networkClient.editprofile(sid, spass, sname, semail, new Callback<String>() {
-                        @Override
-                        public void onResponse(Call<String> call, Response<String> response) {
-                            switch (response.code()) {
-                                case 200:
-                                    Toast toast = Toast.makeText(getApplicationContext(), getResources().getString(R.string.회원정보수정완료), Toast.LENGTH_LONG);
-                                    toast.show();
-                                    Intent intent = new Intent(EditprofileActivity.this, Home_Main.class);
-                                    startActivity(intent);
-                                    finish();
-                                    break;
-                                default:
-                                    Toast toast_f = Toast.makeText(getApplicationContext(), getResources().getString(R.string.비밀번호일치), Toast.LENGTH_LONG);
-                                    toast_f.show();
-                                    break;
-                            }
-                        }
+                    boolean isFailed = false;
 
-                        @Override
-                        public void onFailure(Call<String> call, Throwable t) {
-                            Toast toast = Toast.makeText(getApplicationContext(), getResources().getString(R.string.can_not_connent_to_server), Toast.LENGTH_LONG);
-                            toast.show();
-                        }
-                    });
+                    if(!textValidate(Password.getText().toString())){Password.setError(getResources().getString(R.string.currentpass));isFailed = true;}
+                    if(Name.getText().length()<=0){ Name.setError(getResources().getString(R.string.Enname)); isFailed = true;}
+                    if(Email.getText().length()<=0){Email.setError(getResources().getString(R.string.EEmail)); isFailed = true;}
+                    if(!checkEmail(Email.getText().toString())){Email.setError(getResources().getString(R.string.checkEmail)); isFailed = true;}
+
+                    if(!isFailed) {
+
+                        Log.d("회원정보수정", sname + spass + semail);
+                        networkClient.editprofile(sid, spass, sname, semail, new Callback<String>() {
+                            @Override
+                            public void onResponse(Call<String> call, Response<String> response) {
+                                switch (response.code()) {
+                                    case 200:
+                                        Toast toast = Toast.makeText(getApplicationContext(), getResources().getString(R.string.회원정보수정완료), Toast.LENGTH_LONG);
+                                        toast.show();
+                                        Intent intent = new Intent(EditprofileActivity.this, Home_Main.class);
+                                        startActivity(intent);
+                                        finish();
+                                        break;
+                                    default:
+                                        Password.setError(getString(R.string.비밀번호일치));
+                                        break;
+                                }
+                            }
+
+                            @Override
+                            public void onFailure(Call<String> call, Throwable t) {
+                                Toast toast = Toast.makeText(getApplicationContext(), getResources().getString(R.string.can_not_connent_to_server), Toast.LENGTH_LONG);
+                                toast.show();
+                            }
+                        });
+                    }
 
                 }
             });

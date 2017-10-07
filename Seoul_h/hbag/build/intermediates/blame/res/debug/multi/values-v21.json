@@ -2018,9 +2018,9 @@
                     "startLine": 279,
                     "startColumn": 4,
                     "startOffset": 20451,
-                    "endLine": 280,
+                    "endLine": 283,
                     "endColumn": 8,
-                    "endOffset": 20554
+                    "endOffset": 20660
                 },
                 "from": {
                     "file": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\src\\main\\res\\values-v21\\styles.xml",
@@ -2028,20 +2028,20 @@
                         "startLine": 2,
                         "startColumn": 0,
                         "startOffset": 53,
-                        "endLine": 3,
+                        "endLine": 6,
                         "endColumn": 8,
-                        "endOffset": 157
+                        "endOffset": 266
                     }
                 }
             },
             {
                 "to": {
-                    "startLine": 281,
+                    "startLine": 284,
                     "startColumn": 4,
-                    "startOffset": 20559,
-                    "endLine": 283,
+                    "startOffset": 20665,
+                    "endLine": 286,
                     "endColumn": 12,
-                    "endOffset": 20729
+                    "endOffset": 20835
                 },
                 "from": {
                     "file": "C:\\Users\\cwh62\\.android\\build-cache\\1860e7502bea0f552aaa4935120bb2accced6b21\\output\\res\\values-v21\\values-v21.xml",
@@ -2057,12 +2057,12 @@
             },
             {
                 "to": {
-                    "startLine": 284,
+                    "startLine": 287,
                     "startColumn": 4,
-                    "startOffset": 20734,
-                    "endLine": 288,
+                    "startOffset": 20840,
+                    "endLine": 291,
                     "endColumn": 12,
-                    "endOffset": 21070
+                    "endOffset": 21176
                 },
                 "from": {
                     "file": "C:\\Users\\cwh62\\.android\\build-cache\\1860e7502bea0f552aaa4935120bb2accced6b21\\output\\res\\values-v21\\values-v21.xml",
@@ -2078,12 +2078,12 @@
             },
             {
                 "to": {
-                    "startLine": 289,
+                    "startLine": 292,
                     "startColumn": 4,
-                    "startOffset": 21075,
-                    "endLine": 291,
+                    "startOffset": 21181,
+                    "endLine": 294,
                     "endColumn": 12,
-                    "endOffset": 21268
+                    "endOffset": 21374
                 },
                 "from": {
                     "file": "C:\\Users\\cwh62\\.android\\build-cache\\2296c6d153ca9492798042173aaf4756857c6a9d\\output\\res\\values-v21\\values-v21.xml",

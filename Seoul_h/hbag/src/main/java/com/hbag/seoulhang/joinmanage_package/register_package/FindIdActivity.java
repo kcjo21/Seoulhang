@@ -125,13 +125,5 @@ public class FindIdActivity extends BaseActivity {
                 return true;
         }return super.onKeyDown(keyCode, event);}  //BACK버튼 비활성화
 
-    public static boolean checkEmail(String email){
 
-        String regex = "^[_a-zA-Z0-9-\\.]+@[\\.a-zA-Z0-9-]+\\.[a-zA-Z]+$";
-        Pattern p = Pattern.compile(regex);
-        Matcher m = p.matcher(email);
-        boolean isTrue = m.matches();
-        return isTrue;
-
-    }
 }

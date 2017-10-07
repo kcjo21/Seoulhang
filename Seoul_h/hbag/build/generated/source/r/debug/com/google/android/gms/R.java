@@ -39,66 +39,65 @@ public final class R {
         public static final int zOrderOnTop = 0x7f010122;
     }
     public static final class color {
-        public static final int common_google_signin_btn_text_dark = 0x7f0800a4;
+        public static final int common_google_signin_btn_text_dark = 0x7f0800a3;
         public static final int common_google_signin_btn_text_dark_default = 0x7f080014;
         public static final int common_google_signin_btn_text_dark_disabled = 0x7f080015;
         public static final int common_google_signin_btn_text_dark_focused = 0x7f080016;
         public static final int common_google_signin_btn_text_dark_pressed = 0x7f080017;
-        public static final int common_google_signin_btn_text_light = 0x7f0800a5;
+        public static final int common_google_signin_btn_text_light = 0x7f0800a4;
         public static final int common_google_signin_btn_text_light_default = 0x7f080018;
         public static final int common_google_signin_btn_text_light_disabled = 0x7f080019;
         public static final int common_google_signin_btn_text_light_focused = 0x7f08001a;
         public static final int common_google_signin_btn_text_light_pressed = 0x7f08001b;
-        public static final int common_google_signin_btn_tint = 0x7f0800a6;
+        public static final int common_google_signin_btn_tint = 0x7f0800a5;
     }
     public static final class drawable {
-        public static final int common_full_open_on_phone = 0x7f020090;
-        public static final int common_google_signin_btn_icon_dark = 0x7f020091;
-        public static final int common_google_signin_btn_icon_dark_focused = 0x7f020092;
-        public static final int common_google_signin_btn_icon_dark_normal = 0x7f020093;
-        public static final int common_google_signin_btn_icon_dark_normal_background = 0x7f020094;
-        public static final int common_google_signin_btn_icon_disabled = 0x7f020095;
-        public static final int common_google_signin_btn_icon_light = 0x7f020096;
-        public static final int common_google_signin_btn_icon_light_focused = 0x7f020097;
-        public static final int common_google_signin_btn_icon_light_normal = 0x7f020098;
-        public static final int common_google_signin_btn_icon_light_normal_background = 0x7f020099;
-        public static final int common_google_signin_btn_text_dark = 0x7f02009a;
-        public static final int common_google_signin_btn_text_dark_focused = 0x7f02009b;
-        public static final int common_google_signin_btn_text_dark_normal = 0x7f02009c;
-        public static final int common_google_signin_btn_text_dark_normal_background = 0x7f02009d;
-        public static final int common_google_signin_btn_text_disabled = 0x7f02009e;
-        public static final int common_google_signin_btn_text_light = 0x7f02009f;
-        public static final int common_google_signin_btn_text_light_focused = 0x7f0200a0;
-        public static final int common_google_signin_btn_text_light_normal = 0x7f0200a1;
-        public static final int common_google_signin_btn_text_light_normal_background = 0x7f0200a2;
-        public static final int googleg_disabled_color_18 = 0x7f0200cf;
-        public static final int googleg_standard_color_18 = 0x7f0200d0;
+        public static final int common_full_open_on_phone = 0x7f020091;
+        public static final int common_google_signin_btn_icon_dark = 0x7f020092;
+        public static final int common_google_signin_btn_icon_dark_focused = 0x7f020093;
+        public static final int common_google_signin_btn_icon_dark_normal = 0x7f020094;
+        public static final int common_google_signin_btn_icon_dark_normal_background = 0x7f020095;
+        public static final int common_google_signin_btn_icon_disabled = 0x7f020096;
+        public static final int common_google_signin_btn_icon_light = 0x7f020097;
+        public static final int common_google_signin_btn_icon_light_focused = 0x7f020098;
+        public static final int common_google_signin_btn_icon_light_normal = 0x7f020099;
+        public static final int common_google_signin_btn_icon_light_normal_background = 0x7f02009a;
+        public static final int common_google_signin_btn_text_dark = 0x7f02009b;
+        public static final int common_google_signin_btn_text_dark_focused = 0x7f02009c;
+        public static final int common_google_signin_btn_text_dark_normal = 0x7f02009d;
+        public static final int common_google_signin_btn_text_dark_normal_background = 0x7f02009e;
+        public static final int common_google_signin_btn_text_disabled = 0x7f02009f;
+        public static final int common_google_signin_btn_text_light = 0x7f0200a0;
+        public static final int common_google_signin_btn_text_light_focused = 0x7f0200a1;
+        public static final int common_google_signin_btn_text_light_normal = 0x7f0200a2;
+        public static final int common_google_signin_btn_text_light_normal_background = 0x7f0200a3;
+        public static final int googleg_disabled_color_18 = 0x7f0200d0;
+        public static final int googleg_standard_color_18 = 0x7f0200d1;
     }
     public static final class id {
-        public static final int adjust_height = 0x7f0d0041;
-        public static final int adjust_width = 0x7f0d0042;
-        public static final int auto = 0x7f0d002d;
-        public static final int button = 0x7f0d0060;
-        public static final int center = 0x7f0d002f;
-        public static final int dark = 0x7f0d004e;
-        public static final int email = 0x7f0d00b0;
-        public static final int hybrid = 0x7f0d0043;
-        public static final int icon_only = 0x7f0d004b;
-        public static final int light = 0x7f0d004f;
-        public static final int none = 0x7f0d0017;
-        public static final int normal = 0x7f0d0019;
-        public static final int progressBar = 0x7f0d0176;
-        public static final int radio = 0x7f0d0083;
-        public static final int satellite = 0x7f0d0044;
-        public static final int standard = 0x7f0d004c;
-        public static final int terrain = 0x7f0d0045;
-        public static final int text = 0x7f0d019d;
-        public static final int text2 = 0x7f0d019b;
-        public static final int wide = 0x7f0d004d;
-        public static final int wrap_content = 0x7f0d002c;
+        public static final int adjust_height = 0x7f0a0043;
+        public static final int adjust_width = 0x7f0a0044;
+        public static final int auto = 0x7f0a002f;
+        public static final int button = 0x7f0a0058;
+        public static final int center = 0x7f0a0031;
+        public static final int dark = 0x7f0a0050;
+        public static final int hybrid = 0x7f0a0045;
+        public static final int icon_only = 0x7f0a004d;
+        public static final int light = 0x7f0a0051;
+        public static final int none = 0x7f0a0019;
+        public static final int normal = 0x7f0a001b;
+        public static final int progressBar = 0x7f0a015c;
+        public static final int radio = 0x7f0a007b;
+        public static final int satellite = 0x7f0a0046;
+        public static final int standard = 0x7f0a004e;
+        public static final int terrain = 0x7f0a0047;
+        public static final int text = 0x7f0a0183;
+        public static final int text2 = 0x7f0a0181;
+        public static final int wide = 0x7f0a004f;
+        public static final int wrap_content = 0x7f0a002e;
     }
     public static final class integer {
-        public static final int google_play_services_version = 0x7f0c0013;
+        public static final int google_play_services_version = 0x7f0d0006;
     }
     public static final class string {
         public static final int common_google_play_services_enable_button = 0x7f07002a;

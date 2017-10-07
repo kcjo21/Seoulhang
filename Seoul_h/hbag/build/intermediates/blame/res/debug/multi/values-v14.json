@@ -262,9 +262,9 @@
                     "startLine": 31,
                     "startColumn": 4,
                     "startOffset": 2146,
-                    "endLine": 32,
+                    "endLine": 35,
                     "endColumn": 8,
-                    "endOffset": 2245
+                    "endOffset": 2351
                 },
                 "from": {
                     "file": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\src\\main\\res\\values-v14\\styles.xml",
@@ -272,9 +272,9 @@
                         "startLine": 2,
                         "startColumn": 0,
                         "startOffset": 53,
-                        "endLine": 3,
+                        "endLine": 6,
                         "endColumn": 8,
-                        "endOffset": 153
+                        "endOffset": 262
                     }
                 }
             }
