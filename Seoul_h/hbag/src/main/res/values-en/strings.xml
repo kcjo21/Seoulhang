@@ -171,4 +171,13 @@
     <string name="not_good_id">Please enter a 5 ~ 12 character ID consisting of only english and numbers, and The first letter of the ID must be in English.</string>
     <string name="currentpass">Please enter your current password.</string>
     <string name="Enname">Enter your Nickname.</string>
+    <string name="welcome">Welcome %s!</string>
+    <string name="tuto_2">\'SeoulHang\' is an educational / tourism game\n using Augmented Reality.</string>
+    <string name="tuto_3">Go to the location on the map,\n turn on the camera and look around.</string>
+    <string name="tuto_4">If you find a target, touch it to get a quiz.\n Solve the quiz to get a higher score and rank.</string>
+    <string name="unity_permission_camera">Permission is required to use the camera function.</string>
+    <string name="unity_permission_gps">GPS data is required to determine your current location.</string>
+    <string name="unity_permission_phone">Your smartphone status information is required to determine if your device can play this game</string>
+    <string name="unity_permission_storage">Permission to read external storage is required to check the target\'s location information</string>
+    <string name="unity_denied">If data access is not allowed, the game will not function normally.</string>
 </resources>

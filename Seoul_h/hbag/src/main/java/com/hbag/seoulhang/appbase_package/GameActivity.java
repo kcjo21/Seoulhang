@@ -1,14 +1,21 @@
 package com.hbag.seoulhang.appbase_package;
 
+import android.Manifest;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.location.LocationManager;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
 import android.util.Log;
+import android.widget.Toast;
 
 import com.hbag.seoulhang.R;
 import com.hbag.seoulhang.home_package.Home_Main;
+import com.hbag.seoulhang.map_package.GooglemapsActivity;
 import com.hbag.seoulhang.model.retrofit.QuestDTO;
 import com.hbag.seoulhang.network.Ipm;
 import com.hbag.seoulhang.network.NetworkClient;
@@ -20,6 +27,8 @@ import retrofit2.Response;
 public class GameActivity extends UnityPlayerActivity {
     Ipm ipm;
     NetworkClient networkClient;
+    private static final int MY_PERMISSIONS_REQUEST_READ_CONTACTS = 2002;
+    int count_msg = 0;
 
 
 
@@ -33,6 +42,76 @@ public class GameActivity extends UnityPlayerActivity {
         if(!locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER)) {
             createGpsDisabledAlert();
         }
+
+        boolean CameraLocationRationale = ActivityCompat
+                .shouldShowRequestPermissionRationale(this,
+                        Manifest.permission.CAMERA);
+        boolean GPSLocationRationale = ActivityCompat
+                .shouldShowRequestPermissionRationale(this,
+                        Manifest.permission.ACCESS_FINE_LOCATION);
+        boolean PhoneLocationRationale = ActivityCompat
+                .shouldShowRequestPermissionRationale(this,
+                        Manifest.permission.READ_PHONE_STATE);
+        boolean StorageLocationRationale = ActivityCompat
+                .shouldShowRequestPermissionRationale(this,
+                        Manifest.permission.READ_EXTERNAL_STORAGE);
+
+        int permissionCamera = ContextCompat.checkSelfPermission(GameActivity.this,
+                Manifest.permission.CAMERA);
+        int permissionGPS = ContextCompat.checkSelfPermission(GameActivity.this,
+                Manifest.permission.ACCESS_FINE_LOCATION);
+        int permissionPhone = ContextCompat.checkSelfPermission(GameActivity.this,
+                Manifest.permission.READ_PHONE_STATE);
+        int permissionStorage = ContextCompat.checkSelfPermission(GameActivity.this,
+                Manifest.permission.READ_EXTERNAL_STORAGE);
+
+
+        if (permissionCamera == PackageManager.PERMISSION_DENIED && CameraLocationRationale) {
+            showDialogForPermission(getResources().getString(R.string.unity_permission_camera));
+            count_msg++;
+        }
+        if (permissionGPS == PackageManager.PERMISSION_DENIED && GPSLocationRationale) {
+            showDialogForPermission(getResources().getString(R.string.unity_permission_gps));
+            count_msg++;
+        }
+        if (permissionPhone == PackageManager.PERMISSION_DENIED && PhoneLocationRationale) {
+            showDialogForPermission(getResources().getString(R.string.unity_permission_phone));
+            count_msg++;
+        }
+        if (permissionStorage == PackageManager.PERMISSION_DENIED && StorageLocationRationale) {
+            showDialogForPermission(getResources().getString(R.string.unity_permission_storage));
+            count_msg++;
+        }
+        if(count_msg==0) {
+            ActivityCompat.requestPermissions(GameActivity.this, new String[]{
+                    Manifest.permission.CAMERA,
+                    Manifest.permission.ACCESS_FINE_LOCATION,
+                    Manifest.permission.READ_PHONE_STATE,
+                    Manifest.permission.READ_EXTERNAL_STORAGE}, MY_PERMISSIONS_REQUEST_READ_CONTACTS);
+        }
+
+
+    }
+    private void showDialogForPermission(String msg) {
+
+        android.support.v7.app.AlertDialog.Builder builder = new android.support.v7.app.AlertDialog.Builder(GameActivity.this);
+        builder.setTitle(getResources().getString(R.string.알림));
+        builder.setMessage(msg);
+        builder.setCancelable(false);
+        builder.setPositiveButton(getResources().getString(R.string.GPSY), new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int id) {
+                count_msg--;
+                if(count_msg==0) {
+                    ActivityCompat.requestPermissions(GameActivity.this, new String[]{
+                            Manifest.permission.CAMERA,
+                            Manifest.permission.ACCESS_FINE_LOCATION,
+                            Manifest.permission.READ_PHONE_STATE,
+                            Manifest.permission.READ_EXTERNAL_STORAGE}, MY_PERMISSIONS_REQUEST_READ_CONTACTS);
+                }
+            }
+        });
+
+        builder.create().show();
     }
 
     private void createGpsDisabledAlert(){
@@ -97,6 +176,28 @@ public class GameActivity extends UnityPlayerActivity {
         finish();
     }
 
+    @Override
+    public void onRequestPermissionsResult(int requestCode,
+                                           @NonNull String permissions[],
+                                           @NonNull int[] grantResults) {
 
+        switch (requestCode) {
+            case MY_PERMISSIONS_REQUEST_READ_CONTACTS: {
+                // If request is cancelled, the result arrays are empty.
+                if (grantResults.length > 0
+                        && (grantResults[0] == PackageManager.PERMISSION_DENIED
+                        || grantResults[1] == PackageManager.PERMISSION_DENIED
+                        || grantResults[2] == PackageManager.PERMISSION_DENIED
+                        || grantResults[3] == PackageManager.PERMISSION_DENIED)) {
+                    Toast toast = Toast.makeText(getApplicationContext(), getResources().getString(R.string.unity_denied), Toast.LENGTH_LONG);
+                    toast.show();
+                    finish();
+                }
 
+            }
+
+            // other 'case' lines to check for other
+            // permissions this app might request
+        }
+    }
 }

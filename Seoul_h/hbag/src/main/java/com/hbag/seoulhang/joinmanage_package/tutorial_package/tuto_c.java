@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
@@ -29,21 +30,7 @@ public class tuto_c extends Fragment
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
-        LinearLayout layout = (LinearLayout) inflater.inflate(R.layout.fragment_tuto_c, container, false);
-        Locale systemLocale = getContext().getResources().getConfiguration().locale;
-        String strLanguage = systemLocale.getLanguage(); // ko
-
-        if(strLanguage=="ko") {
-            ImageView tuto_c = (ImageView) layout.findViewById(R.id.tuto_c);
-            GlideDrawableImageViewTarget c = new GlideDrawableImageViewTarget(tuto_c);
-            Glide.with(this).load(R.raw.tuto_3).diskCacheStrategy(DiskCacheStrategy.SOURCE).into(c);
-        }
-        if(strLanguage=="en") {
-            ImageView tuto_c = (ImageView) layout.findViewById(R.id.tuto_c);
-            GlideDrawableImageViewTarget c = new GlideDrawableImageViewTarget(tuto_c);
-            Glide.with(this).load(R.raw.tuto_3_en).diskCacheStrategy(DiskCacheStrategy.SOURCE).into(c);
-
-        }
+        RelativeLayout layout = (RelativeLayout) inflater.inflate(R.layout.fragment_tuto_c, container, false);
         return layout;
     }
 }

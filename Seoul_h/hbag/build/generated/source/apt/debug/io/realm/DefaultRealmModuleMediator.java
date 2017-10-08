@@ -27,8 +27,8 @@ class DefaultRealmModuleMediator extends RealmProxyMediator {
     private static final Set<Class<? extends RealmModel>> MODEL_CLASSES;
     static {
         Set<Class<? extends RealmModel>> modelClasses = new HashSet<Class<? extends RealmModel>>();
-        modelClasses.add(com.hbag.seoulhang.model.database.Player.class);
         modelClasses.add(com.hbag.seoulhang.model.database.Inventory.class);
+        modelClasses.add(com.hbag.seoulhang.model.database.Player.class);
         modelClasses.add(com.hbag.seoulhang.model.database.Quest.class);
         MODEL_CLASSES = Collections.unmodifiableSet(modelClasses);
     }
@@ -37,10 +37,10 @@ class DefaultRealmModuleMediator extends RealmProxyMediator {
     public Table createTable(Class<? extends RealmModel> clazz, SharedRealm sharedRealm) {
         checkClass(clazz);
 
-        if (clazz.equals(com.hbag.seoulhang.model.database.Player.class)) {
-            return io.realm.PlayerRealmProxy.initTable(sharedRealm);
-        } else if (clazz.equals(com.hbag.seoulhang.model.database.Inventory.class)) {
+        if (clazz.equals(com.hbag.seoulhang.model.database.Inventory.class)) {
             return io.realm.InventoryRealmProxy.initTable(sharedRealm);
+        } else if (clazz.equals(com.hbag.seoulhang.model.database.Player.class)) {
+            return io.realm.PlayerRealmProxy.initTable(sharedRealm);
         } else if (clazz.equals(com.hbag.seoulhang.model.database.Quest.class)) {
             return io.realm.QuestRealmProxy.initTable(sharedRealm);
         } else {
@@ -52,10 +52,10 @@ class DefaultRealmModuleMediator extends RealmProxyMediator {
     public RealmObjectSchema createRealmObjectSchema(Class<? extends RealmModel> clazz, RealmSchema realmSchema) {
         checkClass(clazz);
 
-        if (clazz.equals(com.hbag.seoulhang.model.database.Player.class)) {
-            return io.realm.PlayerRealmProxy.createRealmObjectSchema(realmSchema);
-        } else if (clazz.equals(com.hbag.seoulhang.model.database.Inventory.class)) {
+        if (clazz.equals(com.hbag.seoulhang.model.database.Inventory.class)) {
             return io.realm.InventoryRealmProxy.createRealmObjectSchema(realmSchema);
+        } else if (clazz.equals(com.hbag.seoulhang.model.database.Player.class)) {
+            return io.realm.PlayerRealmProxy.createRealmObjectSchema(realmSchema);
         } else if (clazz.equals(com.hbag.seoulhang.model.database.Quest.class)) {
             return io.realm.QuestRealmProxy.createRealmObjectSchema(realmSchema);
         } else {
@@ -67,10 +67,10 @@ class DefaultRealmModuleMediator extends RealmProxyMediator {
     public ColumnInfo validateTable(Class<? extends RealmModel> clazz, SharedRealm sharedRealm, boolean allowExtraColumns) {
         checkClass(clazz);
 
-        if (clazz.equals(com.hbag.seoulhang.model.database.Player.class)) {
-            return io.realm.PlayerRealmProxy.validateTable(sharedRealm, allowExtraColumns);
-        } else if (clazz.equals(com.hbag.seoulhang.model.database.Inventory.class)) {
+        if (clazz.equals(com.hbag.seoulhang.model.database.Inventory.class)) {
             return io.realm.InventoryRealmProxy.validateTable(sharedRealm, allowExtraColumns);
+        } else if (clazz.equals(com.hbag.seoulhang.model.database.Player.class)) {
+            return io.realm.PlayerRealmProxy.validateTable(sharedRealm, allowExtraColumns);
         } else if (clazz.equals(com.hbag.seoulhang.model.database.Quest.class)) {
             return io.realm.QuestRealmProxy.validateTable(sharedRealm, allowExtraColumns);
         } else {
@@ -82,10 +82,10 @@ class DefaultRealmModuleMediator extends RealmProxyMediator {
     public List<String> getFieldNames(Class<? extends RealmModel> clazz) {
         checkClass(clazz);
 
-        if (clazz.equals(com.hbag.seoulhang.model.database.Player.class)) {
-            return io.realm.PlayerRealmProxy.getFieldNames();
-        } else if (clazz.equals(com.hbag.seoulhang.model.database.Inventory.class)) {
+        if (clazz.equals(com.hbag.seoulhang.model.database.Inventory.class)) {
             return io.realm.InventoryRealmProxy.getFieldNames();
+        } else if (clazz.equals(com.hbag.seoulhang.model.database.Player.class)) {
+            return io.realm.PlayerRealmProxy.getFieldNames();
         } else if (clazz.equals(com.hbag.seoulhang.model.database.Quest.class)) {
             return io.realm.QuestRealmProxy.getFieldNames();
         } else {
@@ -97,10 +97,10 @@ class DefaultRealmModuleMediator extends RealmProxyMediator {
     public String getTableName(Class<? extends RealmModel> clazz) {
         checkClass(clazz);
 
-        if (clazz.equals(com.hbag.seoulhang.model.database.Player.class)) {
-            return io.realm.PlayerRealmProxy.getTableName();
-        } else if (clazz.equals(com.hbag.seoulhang.model.database.Inventory.class)) {
+        if (clazz.equals(com.hbag.seoulhang.model.database.Inventory.class)) {
             return io.realm.InventoryRealmProxy.getTableName();
+        } else if (clazz.equals(com.hbag.seoulhang.model.database.Player.class)) {
+            return io.realm.PlayerRealmProxy.getTableName();
         } else if (clazz.equals(com.hbag.seoulhang.model.database.Quest.class)) {
             return io.realm.QuestRealmProxy.getTableName();
         } else {
@@ -115,10 +115,10 @@ class DefaultRealmModuleMediator extends RealmProxyMediator {
             objectContext.set((BaseRealm) baseRealm, row, columnInfo, acceptDefaultValue, excludeFields);
             checkClass(clazz);
 
-            if (clazz.equals(com.hbag.seoulhang.model.database.Player.class)) {
-                return clazz.cast(new io.realm.PlayerRealmProxy());
-            } else if (clazz.equals(com.hbag.seoulhang.model.database.Inventory.class)) {
+            if (clazz.equals(com.hbag.seoulhang.model.database.Inventory.class)) {
                 return clazz.cast(new io.realm.InventoryRealmProxy());
+            } else if (clazz.equals(com.hbag.seoulhang.model.database.Player.class)) {
+                return clazz.cast(new io.realm.PlayerRealmProxy());
             } else if (clazz.equals(com.hbag.seoulhang.model.database.Quest.class)) {
                 return clazz.cast(new io.realm.QuestRealmProxy());
             } else {
@@ -140,10 +140,10 @@ class DefaultRealmModuleMediator extends RealmProxyMediator {
         // generated by RealmProxy or the original type extending directly from RealmObject
         @SuppressWarnings("unchecked") Class<E> clazz = (Class<E>) ((obj instanceof RealmObjectProxy) ? obj.getClass().getSuperclass() : obj.getClass());
 
-        if (clazz.equals(com.hbag.seoulhang.model.database.Player.class)) {
-            return clazz.cast(io.realm.PlayerRealmProxy.copyOrUpdate(realm, (com.hbag.seoulhang.model.database.Player) obj, update, cache));
-        } else if (clazz.equals(com.hbag.seoulhang.model.database.Inventory.class)) {
+        if (clazz.equals(com.hbag.seoulhang.model.database.Inventory.class)) {
             return clazz.cast(io.realm.InventoryRealmProxy.copyOrUpdate(realm, (com.hbag.seoulhang.model.database.Inventory) obj, update, cache));
+        } else if (clazz.equals(com.hbag.seoulhang.model.database.Player.class)) {
+            return clazz.cast(io.realm.PlayerRealmProxy.copyOrUpdate(realm, (com.hbag.seoulhang.model.database.Player) obj, update, cache));
         } else if (clazz.equals(com.hbag.seoulhang.model.database.Quest.class)) {
             return clazz.cast(io.realm.QuestRealmProxy.copyOrUpdate(realm, (com.hbag.seoulhang.model.database.Quest) obj, update, cache));
         } else {
@@ -157,10 +157,10 @@ class DefaultRealmModuleMediator extends RealmProxyMediator {
         // generated by RealmProxy or the original type extending directly from RealmObject
         @SuppressWarnings("unchecked") Class<RealmModel> clazz = (Class<RealmModel>) ((object instanceof RealmObjectProxy) ? object.getClass().getSuperclass() : object.getClass());
 
-        if (clazz.equals(com.hbag.seoulhang.model.database.Player.class)) {
-            io.realm.PlayerRealmProxy.insert(realm, (com.hbag.seoulhang.model.database.Player) object, cache);
-        } else if (clazz.equals(com.hbag.seoulhang.model.database.Inventory.class)) {
+        if (clazz.equals(com.hbag.seoulhang.model.database.Inventory.class)) {
             io.realm.InventoryRealmProxy.insert(realm, (com.hbag.seoulhang.model.database.Inventory) object, cache);
+        } else if (clazz.equals(com.hbag.seoulhang.model.database.Player.class)) {
+            io.realm.PlayerRealmProxy.insert(realm, (com.hbag.seoulhang.model.database.Player) object, cache);
         } else if (clazz.equals(com.hbag.seoulhang.model.database.Quest.class)) {
             io.realm.QuestRealmProxy.insert(realm, (com.hbag.seoulhang.model.database.Quest) object, cache);
         } else {
@@ -180,20 +180,20 @@ class DefaultRealmModuleMediator extends RealmProxyMediator {
             // generated by RealmProxy or the original type extending directly from RealmObject
             @SuppressWarnings("unchecked") Class<RealmModel> clazz = (Class<RealmModel>) ((object instanceof RealmObjectProxy) ? object.getClass().getSuperclass() : object.getClass());
 
-            if (clazz.equals(com.hbag.seoulhang.model.database.Player.class)) {
-                io.realm.PlayerRealmProxy.insert(realm, (com.hbag.seoulhang.model.database.Player) object, cache);
-            } else if (clazz.equals(com.hbag.seoulhang.model.database.Inventory.class)) {
+            if (clazz.equals(com.hbag.seoulhang.model.database.Inventory.class)) {
                 io.realm.InventoryRealmProxy.insert(realm, (com.hbag.seoulhang.model.database.Inventory) object, cache);
+            } else if (clazz.equals(com.hbag.seoulhang.model.database.Player.class)) {
+                io.realm.PlayerRealmProxy.insert(realm, (com.hbag.seoulhang.model.database.Player) object, cache);
             } else if (clazz.equals(com.hbag.seoulhang.model.database.Quest.class)) {
                 io.realm.QuestRealmProxy.insert(realm, (com.hbag.seoulhang.model.database.Quest) object, cache);
             } else {
                 throw getMissingProxyClassException(clazz);
             }
             if (iterator.hasNext()) {
-                if (clazz.equals(com.hbag.seoulhang.model.database.Player.class)) {
-                    io.realm.PlayerRealmProxy.insert(realm, iterator, cache);
-                } else if (clazz.equals(com.hbag.seoulhang.model.database.Inventory.class)) {
+                if (clazz.equals(com.hbag.seoulhang.model.database.Inventory.class)) {
                     io.realm.InventoryRealmProxy.insert(realm, iterator, cache);
+                } else if (clazz.equals(com.hbag.seoulhang.model.database.Player.class)) {
+                    io.realm.PlayerRealmProxy.insert(realm, iterator, cache);
                 } else if (clazz.equals(com.hbag.seoulhang.model.database.Quest.class)) {
                     io.realm.QuestRealmProxy.insert(realm, iterator, cache);
                 } else {
@@ -209,10 +209,10 @@ class DefaultRealmModuleMediator extends RealmProxyMediator {
         // generated by RealmProxy or the original type extending directly from RealmObject
         @SuppressWarnings("unchecked") Class<RealmModel> clazz = (Class<RealmModel>) ((obj instanceof RealmObjectProxy) ? obj.getClass().getSuperclass() : obj.getClass());
 
-        if (clazz.equals(com.hbag.seoulhang.model.database.Player.class)) {
-            io.realm.PlayerRealmProxy.insertOrUpdate(realm, (com.hbag.seoulhang.model.database.Player) obj, cache);
-        } else if (clazz.equals(com.hbag.seoulhang.model.database.Inventory.class)) {
+        if (clazz.equals(com.hbag.seoulhang.model.database.Inventory.class)) {
             io.realm.InventoryRealmProxy.insertOrUpdate(realm, (com.hbag.seoulhang.model.database.Inventory) obj, cache);
+        } else if (clazz.equals(com.hbag.seoulhang.model.database.Player.class)) {
+            io.realm.PlayerRealmProxy.insertOrUpdate(realm, (com.hbag.seoulhang.model.database.Player) obj, cache);
         } else if (clazz.equals(com.hbag.seoulhang.model.database.Quest.class)) {
             io.realm.QuestRealmProxy.insertOrUpdate(realm, (com.hbag.seoulhang.model.database.Quest) obj, cache);
         } else {
@@ -232,20 +232,20 @@ class DefaultRealmModuleMediator extends RealmProxyMediator {
             // generated by RealmProxy or the original type extending directly from RealmObject
             @SuppressWarnings("unchecked") Class<RealmModel> clazz = (Class<RealmModel>) ((object instanceof RealmObjectProxy) ? object.getClass().getSuperclass() : object.getClass());
 
-            if (clazz.equals(com.hbag.seoulhang.model.database.Player.class)) {
-                io.realm.PlayerRealmProxy.insertOrUpdate(realm, (com.hbag.seoulhang.model.database.Player) object, cache);
-            } else if (clazz.equals(com.hbag.seoulhang.model.database.Inventory.class)) {
+            if (clazz.equals(com.hbag.seoulhang.model.database.Inventory.class)) {
                 io.realm.InventoryRealmProxy.insertOrUpdate(realm, (com.hbag.seoulhang.model.database.Inventory) object, cache);
+            } else if (clazz.equals(com.hbag.seoulhang.model.database.Player.class)) {
+                io.realm.PlayerRealmProxy.insertOrUpdate(realm, (com.hbag.seoulhang.model.database.Player) object, cache);
             } else if (clazz.equals(com.hbag.seoulhang.model.database.Quest.class)) {
                 io.realm.QuestRealmProxy.insertOrUpdate(realm, (com.hbag.seoulhang.model.database.Quest) object, cache);
             } else {
                 throw getMissingProxyClassException(clazz);
             }
             if (iterator.hasNext()) {
-                if (clazz.equals(com.hbag.seoulhang.model.database.Player.class)) {
-                    io.realm.PlayerRealmProxy.insertOrUpdate(realm, iterator, cache);
-                } else if (clazz.equals(com.hbag.seoulhang.model.database.Inventory.class)) {
+                if (clazz.equals(com.hbag.seoulhang.model.database.Inventory.class)) {
                     io.realm.InventoryRealmProxy.insertOrUpdate(realm, iterator, cache);
+                } else if (clazz.equals(com.hbag.seoulhang.model.database.Player.class)) {
+                    io.realm.PlayerRealmProxy.insertOrUpdate(realm, iterator, cache);
                 } else if (clazz.equals(com.hbag.seoulhang.model.database.Quest.class)) {
                     io.realm.QuestRealmProxy.insertOrUpdate(realm, iterator, cache);
                 } else {
@@ -260,10 +260,10 @@ class DefaultRealmModuleMediator extends RealmProxyMediator {
         throws JSONException {
         checkClass(clazz);
 
-        if (clazz.equals(com.hbag.seoulhang.model.database.Player.class)) {
-            return clazz.cast(io.realm.PlayerRealmProxy.createOrUpdateUsingJsonObject(realm, json, update));
-        } else if (clazz.equals(com.hbag.seoulhang.model.database.Inventory.class)) {
+        if (clazz.equals(com.hbag.seoulhang.model.database.Inventory.class)) {
             return clazz.cast(io.realm.InventoryRealmProxy.createOrUpdateUsingJsonObject(realm, json, update));
+        } else if (clazz.equals(com.hbag.seoulhang.model.database.Player.class)) {
+            return clazz.cast(io.realm.PlayerRealmProxy.createOrUpdateUsingJsonObject(realm, json, update));
         } else if (clazz.equals(com.hbag.seoulhang.model.database.Quest.class)) {
             return clazz.cast(io.realm.QuestRealmProxy.createOrUpdateUsingJsonObject(realm, json, update));
         } else {
@@ -276,10 +276,10 @@ class DefaultRealmModuleMediator extends RealmProxyMediator {
         throws IOException {
         checkClass(clazz);
 
-        if (clazz.equals(com.hbag.seoulhang.model.database.Player.class)) {
-            return clazz.cast(io.realm.PlayerRealmProxy.createUsingJsonStream(realm, reader));
-        } else if (clazz.equals(com.hbag.seoulhang.model.database.Inventory.class)) {
+        if (clazz.equals(com.hbag.seoulhang.model.database.Inventory.class)) {
             return clazz.cast(io.realm.InventoryRealmProxy.createUsingJsonStream(realm, reader));
+        } else if (clazz.equals(com.hbag.seoulhang.model.database.Player.class)) {
+            return clazz.cast(io.realm.PlayerRealmProxy.createUsingJsonStream(realm, reader));
         } else if (clazz.equals(com.hbag.seoulhang.model.database.Quest.class)) {
             return clazz.cast(io.realm.QuestRealmProxy.createUsingJsonStream(realm, reader));
         } else {
@@ -293,10 +293,10 @@ class DefaultRealmModuleMediator extends RealmProxyMediator {
         // generated by RealmProxy or the original type extending directly from RealmObject
         @SuppressWarnings("unchecked") Class<E> clazz = (Class<E>) realmObject.getClass().getSuperclass();
 
-        if (clazz.equals(com.hbag.seoulhang.model.database.Player.class)) {
-            return clazz.cast(io.realm.PlayerRealmProxy.createDetachedCopy((com.hbag.seoulhang.model.database.Player) realmObject, 0, maxDepth, cache));
-        } else if (clazz.equals(com.hbag.seoulhang.model.database.Inventory.class)) {
+        if (clazz.equals(com.hbag.seoulhang.model.database.Inventory.class)) {
             return clazz.cast(io.realm.InventoryRealmProxy.createDetachedCopy((com.hbag.seoulhang.model.database.Inventory) realmObject, 0, maxDepth, cache));
+        } else if (clazz.equals(com.hbag.seoulhang.model.database.Player.class)) {
+            return clazz.cast(io.realm.PlayerRealmProxy.createDetachedCopy((com.hbag.seoulhang.model.database.Player) realmObject, 0, maxDepth, cache));
         } else if (clazz.equals(com.hbag.seoulhang.model.database.Quest.class)) {
             return clazz.cast(io.realm.QuestRealmProxy.createDetachedCopy((com.hbag.seoulhang.model.database.Quest) realmObject, 0, maxDepth, cache));
         } else {

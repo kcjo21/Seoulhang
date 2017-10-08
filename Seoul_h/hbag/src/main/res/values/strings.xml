@@ -171,5 +171,14 @@
     <string name="not_good_id">영문과 숫자로만 이루어진 5~12자 아이디를 입력해주세요. 첫 글자는 반드시 영문입니다.</string>
     <string name="currentpass">현재 비밀번호를 입력해주세요.</string>
     <string name="Enname">닉네임을 입력해주세요.</string>
+    <string name="welcome">%s님 환영합니다!</string>
+    <string name="tuto_2">서울행은 증강현실을 이용한\n 교육/관광용 게임입니다.</string>
+    <string name="tuto_3">지도에 나와 있는 위치로 가서\n 카메라를 켜고 주변을 둘러보세요.</string>
+    <string name="tuto_4">목표를 발견하면 터치하여 퀴즈를 획득하세요.\n 퀴즈를 풀어서 점수를 쌓고 순위를 올리세요.</string>
+    <string name="unity_permission_gps">현재위치를 파악하기 위해 GPS 데이터가 필요합니다.</string>
+    <string name="unity_permission_phone">게임 구동 가능 여부를 확인하기 위해 스마트폰 상태 정보가 필요합니다.</string>
+    <string name="unity_permission_storage">타겟 위치를 확인하기 위해 내부 저장소를 읽을 권한이 필요합니다.</string>
+    <string name="unity_permission_camera">카메라 기능을 사용하기 위해 권한이 필요합니다.</string>
+    <string name="unity_denied">데이터 접근 권한이 없으면 정상 작동이 불가능합니다.</string>
 
 </resources>

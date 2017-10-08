@@ -1,42 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/cardview_light_background"
-    android:orientation="vertical"
+    android:background="@android:color/black"
     android:weightSum="100"
     tools:context="com.hbag.seoulhang.joinmanage_package.TutorialActivity">
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="10">
-
-        <Button
-            android:id="@+id/button4"
-            android:layout_width="50dp"
-            android:layout_height="match_parent"
-            android:text="Button"
-            tools:ignore="HardcodedText" />
-
-        <Button
-            android:id="@+id/skip_b"
-            android:layout_width="50dp"
-            android:layout_height="match_parent"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentTop="true"
-            android:layout_gravity="end"
-            android:text="Button"
-            tools:ignore="HardcodedText" />
-    </RelativeLayout>
 
     <android.support.v4.view.ViewPager
         android:id="@+id/tutovp"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="80"
+        android:layout_height="match_parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -44,60 +19,38 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0"></android.support.v4.view.ViewPager>
 
-    <LinearLayout
-        android:id="@+id/indi"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="10"
+        android:layout_height="75dp">
+
+        <Button
+            android:id="@+id/skip_b"
+            android:layout_width="75dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:layout_gravity="end"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/bt_skip"
+            tools:ignore="HardcodedText" />
+    </RelativeLayout>
+
+    <me.relex.circleindicator.CircleIndicator
+        android:id="@+id/indicator"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
         android:gravity="center_vertical|center_horizontal"
         android:orientation="horizontal"
-        android:weightSum="100">
+        app:ci_drawable="@drawable/white_radius"
+        app:ci_gravity="center_vertical|center_horizontal"
+        app:ci_height="7dp"
+        app:ci_margin="10dp"
+        app:ci_orientation="horizontal"
+        app:ci_width="7dp">
 
-        <ImageView
-            android:id="@+id/vp1"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="10"
-            android:scaleType="center"
-            android:scaleX="0.5"
-            android:scaleY="0.5"
-            app:srcCompat="@drawable/selector_indicator"
-            tools:ignore="ContentDescription,NestedWeights" />
-
-        <ImageView
-            android:id="@+id/vp2"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="10"
-            android:scaleType="center"
-            android:scaleX="0.5"
-            android:scaleY="0.5"
-            app:srcCompat="@drawable/selector_indicator"
-            tools:ignore="ContentDescription" />
-
-        <ImageView
-            android:id="@+id/vp3"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="10"
-            android:scaleType="center"
-            android:scaleX="0.5"
-            android:scaleY="0.5"
-            app:srcCompat="@drawable/selector_indicator"
-            tools:ignore="ContentDescription" />
-
-        <ImageView
-            android:id="@+id/vp4"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="10"
-            android:scaleType="center"
-            android:scaleX="0.5"
-            android:scaleY="0.5"
-            app:srcCompat="@drawable/selector_indicator"
-            tools:ignore="ContentDescription" />
-
-    </LinearLayout>
+    </me.relex.circleindicator.CircleIndicator>
 
 
-</LinearLayout>
+</RelativeLayout>

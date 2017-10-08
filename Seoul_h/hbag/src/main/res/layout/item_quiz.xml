@@ -18,6 +18,7 @@
         android:layout_margin="3dp"
         android:background="@drawable/card_view_round"
         android:elevation="0dp"
+        card:cardBackgroundColor="@color/white"
         card:cardCornerRadius="10dp"
         tools:ignore="InefficientWeight,ObsoleteLayoutParam,RtlHardcoded">
 

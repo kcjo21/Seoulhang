@@ -1,8 +1,9 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/LIGHTGREEN_"
     android:weightSum="100"
     tools:context="com.hbag.seoulhang.joinmanage_package.tutorial_package.tuto_b">
 
@@ -10,7 +11,24 @@
 
     <ImageView
         android:id="@+id/tuto_b"
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
-        android:layout_weight="100" />
-</LinearLayout>
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="200dp"
+        android:background="@drawable/tuto_2"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/tv_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/tuto_b"
+        android:layout_marginTop="50dp"
+        android:gravity="center_vertical|center_horizontal"
+        android:text="@string/tuto_2"
+        android:textColor="@color/white"
+        android:textSize="18dp"
+        tools:ignore="SpUsage" />
+</RelativeLayout>

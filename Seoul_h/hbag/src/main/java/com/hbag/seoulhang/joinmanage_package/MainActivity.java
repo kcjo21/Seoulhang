@@ -84,6 +84,7 @@ public class MainActivity extends BaseActivity implements
     TextView findPass;
     EditText password;
     String loginid;
+    String snickname;
     LogoutDialog logoutDialog;
     NetworkClient networkClient;
     Ipm ipm;
@@ -126,11 +127,11 @@ public class MainActivity extends BaseActivity implements
         profile = UserProfileData_singleton.getInstance();
 
 
-        sharedPreferences = getSharedPreferences("log",MODE_PRIVATE);
-        final String loginPref = sharedPreferences.getString("logintype","");     //이전 접속 상태를 불러온다.
+        sharedPreferences = getSharedPreferences("log", MODE_PRIVATE);
+        final String loginPref = sharedPreferences.getString("logintype", "");     //이전 접속 상태를 불러온다.
         editor = sharedPreferences.edit();
-        Log.d("Login",loginPref);
-        if(loginPref.equals("facebook")||loginPref.equals("google")||loginPref.equals("normal")) {
+        Log.d("Login", loginPref);
+        if (loginPref.equals("facebook") || loginPref.equals("google") || loginPref.equals("normal")) {
             UI_State1(1);
         }
 
@@ -150,7 +151,7 @@ public class MainActivity extends BaseActivity implements
 
             @Override
             public void onClick(View v) {
-                if (SystemClock.elapsedRealtime() - mLastClickTime < 600){
+                if (SystemClock.elapsedRealtime() - mLastClickTime < 600) {
                     return;
                 }
                 Intent intent = Auth.GoogleSignInApi.getSignInIntent(mGoogleApiClient);
@@ -159,11 +160,10 @@ public class MainActivity extends BaseActivity implements
         });
 
 
-
         bt_facebookLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (SystemClock.elapsedRealtime() - mLastClickTime < 600){
+                if (SystemClock.elapsedRealtime() - mLastClickTime < 600) {
                     return;
                 }
                 mLastClickTime = SystemClock.elapsedRealtime();
@@ -171,7 +171,7 @@ public class MainActivity extends BaseActivity implements
 
                 //LoginManager - 요청된 읽기 또는 게시 권한으로 페이스북 로그인 절차를 시작합니다.
                 LoginManager.getInstance().logInWithReadPermissions(MainActivity.this,
-                        Arrays.asList("public_profile","email"));
+                        Arrays.asList("public_profile", "email"));
                 LoginManager.getInstance().registerCallback(callbackManager,
                         new FacebookCallback<LoginResult>() {
                             @Override
@@ -182,13 +182,12 @@ public class MainActivity extends BaseActivity implements
                                             public void onCompleted(JSONObject object, GraphResponse response) {
                                                 try {
                                                     profile.setId(object.getString("id"));
-                                                    Log.d("페이스북 계정",profile.getId());
+                                                    Log.d("페이스북 계정", profile.getId());
                                                     profile.setEmail(object.getString("email"));
                                                     profile.setName(object.getString("name"));
-                                                    Toast toast = Toast.makeText(getApplicationContext(), getResources().getString(R.string.loginsuccess,profile.getName()), Toast.LENGTH_LONG);
+                                                    Toast toast = Toast.makeText(getApplicationContext(), getResources().getString(R.string.loginsuccess, profile.getName()), Toast.LENGTH_LONG);
                                                     toast.show();
-                                                }
-                                                catch (Exception e){
+                                                } catch (Exception e) {
                                                     e.printStackTrace();
                                                     Toast toast = Toast.makeText(getApplicationContext(), getResources().getString(R.string.계정연동실패), Toast.LENGTH_LONG);
                                                     toast.show();
@@ -197,7 +196,7 @@ public class MainActivity extends BaseActivity implements
                                             }
                                         });
                                 Bundle parameters = new Bundle();
-                                parameters.putString("fields","id,name,email");
+                                parameters.putString("fields", "id,name,email");
                                 request.setParameters(parameters);
                                 request.executeAsync();
                                 Log.d("페이스북 계정 연동 : ", "성공");
@@ -209,13 +208,14 @@ public class MainActivity extends BaseActivity implements
 
                                 Log.e("페이스북 계정 연동 : ", "취소됨");
                             }
+
                             @Override
                             public void onError(FacebookException exception) {
                                 Log.e("페이스북 계정 연동 : ", "에러 " + exception.getLocalizedMessage());
                             }
                         });
                 profile.setLoginType("facebook");
-                editor.putString("logintype",profile.getLoginType());   //로그인 상태 저장
+                editor.putString("logintype", profile.getLoginType());   //로그인 상태 저장
                 editor.apply();
             }
         });
@@ -223,7 +223,7 @@ public class MainActivity extends BaseActivity implements
         logoutsync.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (SystemClock.elapsedRealtime() - mLastClickTime < 600){
+                if (SystemClock.elapsedRealtime() - mLastClickTime < 600) {
                     return;
                 }
                 mLastClickTime = SystemClock.elapsedRealtime();
@@ -237,7 +237,7 @@ public class MainActivity extends BaseActivity implements
         set.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {//게임자체 계정으로 로그인합니다.
-                if (SystemClock.elapsedRealtime() - mLastClickTime < 600){
+                if (SystemClock.elapsedRealtime() - mLastClickTime < 600) {
                     return;
                 }
                 InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
@@ -254,7 +254,7 @@ public class MainActivity extends BaseActivity implements
                 Log.e("비밀번호", sPassword);
 
                 Log.e("ACC", "TEAM id IS !!! " + loginid);
-               // progressON(getResources().getString(R.string.Loading)); //응답대기 애니메이션
+                // progressON(getResources().getString(R.string.Loading)); //응답대기 애니메이션
 
                 networkClient.login(sLoginid, sPassword, new Callback<PlayerDTO>() {
                     @Override
@@ -264,19 +264,19 @@ public class MainActivity extends BaseActivity implements
                         switch (response.code()) {
                             case 200:
                                 profile.setLoginType("normal");
-                                editor.putString("logintype","normal");
+                                editor.putString("logintype", "normal");
                                 editor.apply();
                                 UI_State1(1);
-                                Toast toast = Toast.makeText(getApplicationContext(), getResources().getString(R.string.loginsuccess,loginid), Toast.LENGTH_LONG);
+                                Toast toast = Toast.makeText(getApplicationContext(), getResources().getString(R.string.loginsuccess, loginid), Toast.LENGTH_LONG);
                                 toast.show();
-                                editor.putString("id",sLoginid);
+                                editor.putString("id", sLoginid);
                                 editor.apply();             //디바이스 내부에 아이디를 저장시킵니다.
-                              //  progressOFF();
+                                //  progressOFF();
                                 break;
 
                             default:
                                 Log.e("TAG", "다른 아이디");
-                               // progressOFF();
+                                // progressOFF();
                                 Toast toast_2 = Toast.makeText(getApplicationContext(), getResources().getString(R.string.please_check_id), Toast.LENGTH_LONG);
                                 toast_2.show();
                                 break;
@@ -286,7 +286,7 @@ public class MainActivity extends BaseActivity implements
                     @Override
                     public void onFailure(Call<PlayerDTO> call, Throwable t) {
                         Log.e("ACC", "s?? " + t.getMessage());
-                      //  progressOFF();
+                        //  progressOFF();
                         Toast toast = Toast.makeText(getApplicationContext(), getResources().getString(R.string.can_not_connent_to_server), Toast.LENGTH_LONG);
                         toast.show();
 
@@ -296,13 +296,10 @@ public class MainActivity extends BaseActivity implements
         });
 
 
-
-
-
         join.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (SystemClock.elapsedRealtime() - mLastClickTime < 600){
+                if (SystemClock.elapsedRealtime() - mLastClickTime < 600) {
                     return;
                 }
                 mLastClickTime = SystemClock.elapsedRealtime();
@@ -315,7 +312,7 @@ public class MainActivity extends BaseActivity implements
         findid.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (SystemClock.elapsedRealtime() - mLastClickTime < 600){
+                if (SystemClock.elapsedRealtime() - mLastClickTime < 600) {
                     return;
                 }
                 clean_tv();
@@ -327,7 +324,7 @@ public class MainActivity extends BaseActivity implements
         findPass.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (SystemClock.elapsedRealtime() - mLastClickTime < 600){
+                if (SystemClock.elapsedRealtime() - mLastClickTime < 600) {
                     return;
                 }
                 clean_tv();
@@ -338,14 +335,12 @@ public class MainActivity extends BaseActivity implements
         });
 
 
-
-
         login.setOnClickListener(new View.OnClickListener() { //페이스북 또는 네이버로 시작버튼 누를시 회원가입처리
 
             @Override
             public void onClick(View view) {
                 login.setProgress(1);
-                if (SystemClock.elapsedRealtime() - mLastClickTime < 300){
+                if (SystemClock.elapsedRealtime() - mLastClickTime < 300) {
                     return;
                 }
                 mLastClickTime = SystemClock.elapsedRealtime();
@@ -355,9 +350,9 @@ public class MainActivity extends BaseActivity implements
                 final String name = profile.getName();
                 final String logintype = profile.getLoginType();
 
-                switch (logintype){
+                switch (logintype) {
                     case "normal":
-                        loginid = sharedPreferences.getString("id","");
+                        loginid = sharedPreferences.getString("id", "");
                         profile.setId(loginid);
                         startLogin();
                         break;
@@ -368,7 +363,7 @@ public class MainActivity extends BaseActivity implements
                             public void onResponse(Call<String> call, Response<String> response) {
                                 switch (response.code()) {
                                     case 200:
-                                        Log.d("페이스북으로 회원가입",loginid);
+                                        Log.d("페이스북으로 회원가입", loginid);
                                         startLogin();
                                         break;
                                     default:
@@ -386,15 +381,15 @@ public class MainActivity extends BaseActivity implements
                         break;
 
                     case "google":
-                        Log.d("구글",name);
+                        Log.d("구글", name);
                         loginid = profile.getId();
                         profile.setId(loginid);
                         networkClient.getjoin(loginid, " ", name, email, logintype, new Callback<String>() {
                             @Override
                             public void onResponse(Call<String> call, Response<String> response) {
-                                switch (response.code()){
+                                switch (response.code()) {
                                     case 200:
-                                        Log.d("구글회원가입",loginid);
+                                        Log.d("구글회원가입", loginid);
                                         startLogin();
                                         break;
                                     default:
@@ -418,10 +413,10 @@ public class MainActivity extends BaseActivity implements
         });
 
 
-        if(!loginPref.equals("logout")){   //이전 접속데이터로 즉시 로그인한다.
+        if (!loginPref.equals("logout")) {   //이전 접속데이터로 즉시 로그인한다.
             profile.setLoginType(loginPref);
             String LoginTypeChecker = profile.getLoginType();
-            switch (LoginTypeChecker){
+            switch (LoginTypeChecker) {
                 case "facebook":
                     bt_facebookLogin.performClick();
                     break;
@@ -431,19 +426,17 @@ public class MainActivity extends BaseActivity implements
                     UI_State1(1);
                     break;
                 case "normal":
-                    String sLoginid= sharedPreferences.getString("id","");
-                    Toast toast = Toast.makeText(getApplicationContext(), getResources().getString(R.string.loginsuccess,sLoginid), Toast.LENGTH_LONG);
+                    String sLoginid = sharedPreferences.getString("id", "");
+                    Toast toast = Toast.makeText(getApplicationContext(), getResources().getString(R.string.loginsuccess, sLoginid), Toast.LENGTH_LONG);
                     toast.show();
                     UI_State1(1);
                     break;
                 default:
                     break;
             }
-        }
-        else {
+        } else {
             profile.setLoginType(loginPref);
         }
-
 
 
     }
@@ -454,36 +447,34 @@ public class MainActivity extends BaseActivity implements
     }
 
 
-
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
 
-        if(requestCode == RC_SIGN_IN){                               //구글에서 유저정보를 받아온다.
+        if (requestCode == RC_SIGN_IN) {                               //구글에서 유저정보를 받아온다.
             GoogleSignInResult result = Auth.GoogleSignInApi.getSignInResultFromIntent(data);
-            if(result.isSuccess()){
+            if (result.isSuccess()) {
                 GoogleSignInAccount acct = result.getSignInAccount();
                 profile.setName(acct.getDisplayName());
                 profile.setEmail(acct.getEmail());
                 profile.setId(acct.getId());
 
-                Log.d("구글로그인",profile.getId()
-                        +" "+profile.getName()
-                        +" "+profile.getEmail());
+                Log.d("구글로그인", profile.getId()
+                        + " " + profile.getName()
+                        + " " + profile.getEmail());
                 profile.setLoginType("google");
-                SharedPreferences sharedPreferences = getSharedPreferences("log",MODE_PRIVATE);
-                SharedPreferences.Editor editor =  sharedPreferences.edit();
-                editor.putString("logintype",profile.getLoginType());   //로그인 상태 저장
+                SharedPreferences sharedPreferences = getSharedPreferences("log", MODE_PRIVATE);
+                SharedPreferences.Editor editor = sharedPreferences.edit();
+                editor.putString("logintype", profile.getLoginType());   //로그인 상태 저장
                 editor.apply();
-                Toast toast = Toast.makeText(getApplicationContext(), getResources().getString(R.string.loginsuccess,profile.getName()), Toast.LENGTH_LONG);
+                Toast toast = Toast.makeText(getApplicationContext(), getResources().getString(R.string.loginsuccess, profile.getName()), Toast.LENGTH_LONG);
                 toast.show();
                 UI_State1(1);
-            }
-            else{
+            } else {
                 UI_State1(0);
                 Toast toast = Toast.makeText(getApplicationContext(), getResources().getString(R.string.로그인실패), Toast.LENGTH_LONG);
                 toast.show();
-                Log.d("구글로그인","실패");
+                Log.d("구글로그인", "실패");
             }
         }
         callbackManager.onActivityResult(requestCode, resultCode, data);
@@ -504,6 +495,7 @@ public class MainActivity extends BaseActivity implements
                 login_lay.setVisibility(View.VISIBLE);
                 loginbt_lay.setVisibility(View.VISIBLE);
                 title_login.setVisibility(View.VISIBLE);
+                login.setProgress(0);
                 break;
             case 1:                                           //최종시작화면 표시
                 syncbt_lay.setVisibility(View.VISIBLE);
@@ -511,6 +503,7 @@ public class MainActivity extends BaseActivity implements
                 login_lay.setVisibility(View.GONE);
                 loginbt_lay.setVisibility(View.GONE);
                 title_login.setVisibility(View.GONE);
+                login.setProgress(0);
                 break;
             default:
                 break;
@@ -518,7 +511,7 @@ public class MainActivity extends BaseActivity implements
 
     }
 
-    public void clean_tv(){ //로그인창의 텍스트뷰를 비운다.
+    public void clean_tv() { //로그인창의 텍스트뷰를 비운다.
         loginId_tv.setText("");
         password.setText("");
     }
@@ -527,30 +520,29 @@ public class MainActivity extends BaseActivity implements
         @Override
         public void onClick(View v) {
 
-            int tag = (int)v.getTag();     //다이알로그 버튼의 태그값을 이용하여 뷰 판단
+            int tag = (int) v.getTag();     //다이알로그 버튼의 태그값을 이용하여 뷰 판단
 
-            switch (tag){
+            switch (tag) {
                 case 1:
                     logoutDialog.dismiss();
                     break;
                 case 2:
-                    Log.d("페이스북 로그아웃",profile.getLoginType());
-                    if(profile.getLoginType().equals("facebook")){
+                    Log.d("페이스북 로그아웃", profile.getLoginType());
+                    if (profile.getLoginType().equals("facebook")) {
                         LoginManager.getInstance().logOut();
 
-                    }
-                    else if(profile.getLoginType().equals("google")){
+                    } else if (profile.getLoginType().equals("google")) {
                         Auth.GoogleSignInApi.signOut(mGoogleApiClient).setResultCallback(
                                 new ResultCallback<Status>() {
                                     @Override
                                     public void onResult(@NonNull Status status) {
-                                        Log.d("구글 로그아웃",profile.getLoginType());
+                                        Log.d("구글 로그아웃", profile.getLoginType());
                                     }
                                 }
                         );
                     }
                     UI_State1(0);
-                    editor.putString("logintype","logout");   //로그인 상태 로그아웃으로 저장
+                    editor.putString("logintype", "logout");   //로그인 상태 로그아웃으로 저장
                     editor.apply();
                     profile.setLoginType("logout");
                     logoutDialog.dismiss();
@@ -562,7 +554,7 @@ public class MainActivity extends BaseActivity implements
         }
     };
 
-    public void startLogin(){
+    public void startLogin() {
         networkClient.startgame(loginid, new Callback<Integer>() {
             @Override
             public void onResponse(Call<Integer> call, Response<Integer> response) {
@@ -583,11 +575,21 @@ public class MainActivity extends BaseActivity implements
 
                             nickname.setInputType(InputType.TYPE_CLASS_TEXT);
                             nickname.setMaxLines(1);
-
                             alert.setView(nickname);
+
                             alert.setPositiveButton(R.string.확인, new DialogInterface.OnClickListener() {
-                                public void onClick(DialogInterface dialog, int whichButton) {
-                                    String snickname = nickname.getText().toString();
+                                @Override
+                                public void onClick(DialogInterface dialog, int which) {
+                                }
+                            });
+                            final AlertDialog dialog = alert.create();
+                            dialog.show();
+                            dialog.getButton(AlertDialog.BUTTON_POSITIVE).setOnClickListener(new View.OnClickListener() {
+                                @Override
+                                public void onClick(View v) {
+                                    snickname = nickname.getText().toString();
+                                    Log.d("닉네임",snickname);
+                                    Log.d("닉네임",loginid);
                                     keyboard.hideSoftInputFromWindow(nickname.getWindowToken(), 0);
                                     networkClient.newnickname(loginid, snickname, new Callback<String>() {
                                         @Override
@@ -597,8 +599,8 @@ public class MainActivity extends BaseActivity implements
                                                     Intent intent = new Intent(MainActivity.this, Home_Main.class);
                                                     startActivity(intent);
                                                     finish();
+                                                    dialog.dismiss();
                                                     break;
-
                                                 default:
                                                     Toast toast = Toast.makeText(getApplicationContext(), getResources().getString(R.string.같은닉네임존재), Toast.LENGTH_LONG);
                                                     toast.show();
@@ -612,10 +614,9 @@ public class MainActivity extends BaseActivity implements
                                             toast.show();
                                         }
                                     });
+
                                 }
                             });
-                            alert.create();
-                            alert.show();
 
                         }
                         else {
@@ -624,7 +625,6 @@ public class MainActivity extends BaseActivity implements
                             finish();
                             break;
                         }
-
                         break;
                     default:
                         break;
@@ -638,9 +638,5 @@ public class MainActivity extends BaseActivity implements
             }
         });
     }
-
-
 }
-
-
 
