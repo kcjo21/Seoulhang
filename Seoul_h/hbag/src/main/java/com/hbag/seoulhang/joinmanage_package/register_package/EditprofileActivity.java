@@ -79,6 +79,7 @@ public class EditprofileActivity extends BaseActivity implements
             Commit = (Button) findViewById(R.id.commit_social);
             Cancel = (Button) findViewById(R.id.cancel_social);
             Name = (EditText) findViewById(R.id.name_t_social);
+            Name.setText(profile.getNickname());
             title = (TextView) findViewById(R.id.title_social);
             Withdrawal = (Button) findViewById(R.id.bt_Withdrawal_social);
             if(loginType.equals("google")){
@@ -200,7 +201,7 @@ public class EditprofileActivity extends BaseActivity implements
                     } else {
 
                         Log.d("회원정보수정", sname);
-                        networkClient.editprofile(sid, "", sname, smail, new Callback<String>() {
+                        networkClient.editprofile(sid, " ", sname, smail, new Callback<String>() {
                             @Override
                             public void onResponse(Call<String> call, Response<String> response) {
                                 switch (response.code()) {
@@ -212,6 +213,7 @@ public class EditprofileActivity extends BaseActivity implements
                                         finish();
                                         break;
                                     default:
+                                        Name.setError(getString(R.string.같은닉네임존재));
                                         break;
                                 }
                             }
@@ -250,6 +252,8 @@ public class EditprofileActivity extends BaseActivity implements
             id = (TextView) findViewById(R.id.id_t);
             Log.e("아이디", sid);
             id.setText(sid); //아이디는 로그인값으로 기본설정.
+            Name.setText(profile.getNickname());
+            Email.setText(profile.getEmail());  //플레이어의 기본정보로 세팅해둔다.
             Withdrawal.setOnClickListener(new View.OnClickListener() {
 
                 @Override
@@ -433,7 +437,9 @@ public class EditprofileActivity extends BaseActivity implements
                     String semail = Email.getText().toString();
                     boolean isFailed = false;
 
-                    if(!textValidate(Password.getText().toString())){Password.setError(getResources().getString(R.string.currentpass));isFailed = true;}
+
+                    if(Password.getText().length()<=0){Password.setError(getString(R.string.currentpass)); isFailed=true;}
+                    else if(!textValidate(Password.getText().toString())){Password.setError(getResources().getString(R.string.EPass));isFailed = true;}
                     if(Name.getText().length()<=0){ Name.setError(getResources().getString(R.string.Enname)); isFailed = true;}
                     if(Email.getText().length()<=0){Email.setError(getResources().getString(R.string.EEmail)); isFailed = true;}
                     if(!checkEmail(Email.getText().toString())){Email.setError(getResources().getString(R.string.checkEmail)); isFailed = true;}
@@ -446,15 +452,20 @@ public class EditprofileActivity extends BaseActivity implements
                             public void onResponse(Call<String> call, Response<String> response) {
                                 switch (response.code()) {
                                     case 200:
-                                        Toast toast = Toast.makeText(getApplicationContext(), getResources().getString(R.string.회원정보수정완료), Toast.LENGTH_LONG);
-                                        toast.show();
-                                        Intent intent = new Intent(EditprofileActivity.this, Home_Main.class);
-                                        startActivity(intent);
-                                        finish();
+                                        String code = response.body();
+                                        if(code.equals("password_error")){
+                                            Password.setError(getString(R.string.password_not_good));
+                                        }
+                                        else {
+                                            Toast toast = Toast.makeText(getApplicationContext(), getResources().getString(R.string.회원정보수정완료), Toast.LENGTH_LONG);
+                                            toast.show();
+                                            Intent intent = new Intent(EditprofileActivity.this, Home_Main.class);
+                                            startActivity(intent);
+                                            finish();
+                                        }
                                         break;
                                     default:
-                                        Password.setError(getString(R.string.비밀번호일치));
-                                        break;
+                                        Name.setError(getString(R.string.같은닉네임존재));
                                 }
                             }
 

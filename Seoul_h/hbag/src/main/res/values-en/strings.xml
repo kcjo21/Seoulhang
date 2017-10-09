@@ -31,7 +31,7 @@
     <string name="현재해결한문제없음">No Quiz Solved.</string>
     <string name="코드를입력">Please enter your ID.</string>
     <string name="풀수있는문제없음">You have no Quiz to solve. Please collect new Quizzes</string>
-    <string name="최근문제">New Quiz</string>
+    <string name="최근문제">Most popular Area top 10</string>
     <string name="정답을입력하세요">Enter your answer.</string>
     <string name="내순위">My Rank</string>
     <string name="카메라켜기">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Turn on Camera</string>
@@ -180,4 +180,5 @@
     <string name="unity_permission_phone">Your smartphone status information is required to determine if your device can play this game</string>
     <string name="unity_permission_storage">Permission to read external storage is required to check the target\'s location information</string>
     <string name="unity_denied">If data access is not allowed, the game will not function normally.</string>
+    <string name="password_not_good">Passwords do not match.</string>
 </resources>

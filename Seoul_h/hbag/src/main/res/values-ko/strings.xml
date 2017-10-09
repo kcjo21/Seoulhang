@@ -31,7 +31,7 @@
     <string name="현재해결한문제없음">현재 해결한 문제가 없습니다.</string>
     <string name="코드를입력">인증코드를 입력하세요.</string>
     <string name="풀수있는문제없음">현재 풀 수 있는 문제가 없습니다. 새로운 문제를 획득해주세요.</string>
-    <string name="최근문제">최근 문제</string>
+    <string name="최근문제">인기 지역 TOP 10</string>
     <string name="정답을입력하세요">정답을 입력하세요.</string>
     <string name="내순위">내 순위</string>
     <string name="카메라켜기">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;카메라 켜기</string>
@@ -180,4 +180,5 @@
     <string name="unity_permission_gps">현재위치를 파악하기 위해 GPS 데이터가 필요합니다.</string>
     <string name="unity_permission_camera">카메라 기능을 사용하기 위해 권한이 필요합니다.</string>
     <string name="unity_denied">데이터 접근 권한이 없으면 정상 작동이 불가능합니다.</string>
+    <string name="password_not_good">패스워드가 일치하지 않습니다.</string>
 </resources>

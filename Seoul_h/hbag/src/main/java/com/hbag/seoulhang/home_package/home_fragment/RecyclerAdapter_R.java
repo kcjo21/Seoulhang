@@ -21,12 +21,12 @@ public class RecyclerAdapter_R extends RecyclerView.Adapter<RecyclerAdapter_R.Vi
     private ArrayList<MyData_R> mDataset;
 
     public static class ViewHoler extends RecyclerView.ViewHolder{
-        public TextView playercode;
-        public TextView playername;
-        public TextView rank;
-        public TextView point;
-        public ImageView grade;
-        public LinearLayout rank_lay;
+        TextView playercode;
+        TextView playername;
+        TextView rank;
+        TextView point;
+        ImageView grade;
+        LinearLayout rank_lay;
 
         public ViewHoler(View view){
             super(view);

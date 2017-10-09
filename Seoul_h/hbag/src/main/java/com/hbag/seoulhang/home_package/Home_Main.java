@@ -47,6 +47,7 @@ import com.hbag.seoulhang.home_package.home_fragment.Frag_Rank;
 import com.hbag.seoulhang.R;
 import com.hbag.seoulhang.map_package.GooglemapsActivity;
 import com.hbag.seoulhang.model.retrofit.InventoryDTO;
+import com.hbag.seoulhang.model.retrofit.PlayerDTO;
 import com.hbag.seoulhang.network.Ipm;
 import com.hbag.seoulhang.network.NetworkClient;
 import com.hbag.seoulhang.joinmanage_package.MainActivity;
@@ -136,8 +137,6 @@ public class Home_Main extends BaseActivity implements
 
         String logintype = profile.getLoginType();
 
-
-        //Log.d("디버그",profile.getLoginType()+" "+profile.getId()+" "+profile.getEmail()+" "+profile.getName());
 
         switch (logintype){       //로그인 매체에 따라 네비게이션 상단타이틀과 UI색상 변경
             case "facebook":
@@ -313,14 +312,19 @@ public class Home_Main extends BaseActivity implements
                         InventoryDTO inventoryDTO = infos.get(0);
 
                         String grade_i = inventoryDTO.getGrade();
-                        String playername = inventoryDTO.getPlayername();
+                        String nickname = inventoryDTO.getNickname();
+                        String email = inventoryDTO.getEmail();
                         String point_i = Integer.toString(inventoryDTO.getPoint());
                         String hint_i = Integer.toString(inventoryDTO.getHint());
 
-                        player_name.setText(getResources().getString(R.string.side_닉네임,playername));
+                        player_name.setText(getResources().getString(R.string.side_닉네임,nickname));
                         hint_left.setText(getResources().getString(R.string.side_힌트수,hint_i));
                         player_grade.setText(getResources().getString(R.string.side_등급,grade_i));
                         player_point_home.setText(getResources().getString(R.string.side_점수,point_i));
+
+                        profile.setId(loginid);
+                        profile.setNickname(nickname);
+                        profile.setEmail(email);
 
 
                         break;

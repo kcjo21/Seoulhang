@@ -159,56 +159,36 @@
             android:background="@color/Carkviewline"
             android:orientation="horizontal"></LinearLayout>
 
-        <LinearLayout
-            android:id="@+id/lastquiz"
+        <TextView
+            android:id="@+id/top_10"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="53"
-            android:background="@drawable/border_tap"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="5"
             android:gravity="center_vertical"
-            android:orientation="vertical">
+            android:text="@string/최근문제"
+            android:textColor="@android:color/black"
+            android:textSize="14dp"
+            tools:ignore="RtlHardcoded,SpUsage" />
 
-            <TextView
-                android:id="@+id/new_quiz"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_marginLeft="10dp"
-                android:layout_weight="8"
-                android:gravity="center_vertical"
-                android:text="@string/최근문제"
-                android:textColor="@android:color/black"
-                android:textSize="14dp"
-                tools:ignore="RtlHardcoded,SpUsage" />
+        <LinearLayout
+            android:id="@+id/bottom"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="50"
+            android:background="@color/Carkviewline"
+            android:gravity="top"
+            android:orientation="vertical">
 
             <android.support.v7.widget.RecyclerView
                 android:id="@+id/home_rev"
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="92"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="true"
+                android:orientation="horizontal"
                 android:visibility="visible" />
 
-            <TextView
-                android:id="@+id/no_quiz"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_marginLeft="10dp"
-                android:layout_weight="92"
-                android:gravity="center_vertical|center_horizontal"
-                android:text="@string/풀수있는문제없음"
-                android:textSize="30dp"
-                android:visibility="gone"
-                tools:ignore="RtlHardcoded,SpUsage" />
-
         </LinearLayout>
-
-        <ImageView
-            android:id="@+id/imageView2"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="2"
-            android:background="@color/Carkviewline"
-            android:contentDescription=""
-            tools:ignore="ContentDescription" />
 
     </LinearLayout>
 

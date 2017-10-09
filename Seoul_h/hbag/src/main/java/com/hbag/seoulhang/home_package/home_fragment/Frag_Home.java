@@ -58,12 +58,10 @@ public class Frag_Home extends BaseFragment {
     private RecyclerView mRecyclerView;
     private RecyclerView.Adapter mAdapter;
     private RecyclerView.LayoutManager mLayoutManager;
-    private ArrayList<MyData> myDataset;
+    private ArrayList<MyData_T> myDataset;
     private List<ItemDTO> inventories;
-    private List<InventoryDTO> infos;
     NetworkClient networkClient;
     Methods methods;
-    TextView no_quiz;
     Button submit;
     Button gethint;
     EditText answer;
@@ -102,16 +100,7 @@ public class Frag_Home extends BaseFragment {
         submit = (Button) layout.findViewById(R.id.Submit);
         gethint = (Button) layout.findViewById(R.id.button_hint);
         home_main = (Home_Main)getActivity();
-        no_quiz = (TextView)layout.findViewById(R.id.no_quiz);
         handler = new Handler(Looper.getMainLooper());
-
-        mRecyclerView.setHasFixedSize(true);
-        mLayoutManager = new LinearLayoutManager(getActivity()){
-            @Override
-            public boolean canScrollVertically(){
-                return false;
-            }
-        };
 
 
         //튜토리얼 spotlight 타겟에 추가한다.
@@ -134,53 +123,38 @@ public class Frag_Home extends BaseFragment {
                     case 200:
                         Log.d("퀴즈", "어댑터 세팅");
                         inventories = response.body();
-                        mRecyclerView.setHasFixedSize(true);
-                        mLayoutManager = new LinearLayoutManager(getActivity()){
-                            @Override
-                            public boolean canScrollVertically(){
-                                return false;
-                            }
-                        };                                                       //리사이클러뷰가 단독 아이템이기 때문에 스크롤링을 방지한다.
-                        mRecyclerView.setLayoutManager(mLayoutManager);  //레이아웃 매니저를 사용한다.
+                        mRecyclerView.setHasFixedSize(false);
+                        mLayoutManager = new LinearLayoutManager(getActivity(),LinearLayoutManager.HORIZONTAL, false);
+                        mLayoutManager.canScrollHorizontally();
+                        mRecyclerView.setLayoutManager(mLayoutManager);  //레이아웃 매니저를 세팅한다.
                         myDataset = new ArrayList<>();
-                        mAdapter = new RecyclerAdapter(myDataset);
+                        mAdapter = new RecyclerAdapter_T(myDataset);
                         mRecyclerView.setAdapter(mAdapter);       //어탭더 정의
-                        mRecyclerView.setNestedScrollingEnabled(false);
 
                         methods = new Methods();
 
-                            ItemDTO itemDTO = inventories.get(0);
 
-                        if((itemDTO.getQuestioncode()==0&&itemDTO.getRegionname().equals("0"))) {
-                            no_quiz.setVisibility(View.VISIBLE);
-                            mRecyclerView.setVisibility(View.GONE);
-                        }
-                        else{
-                            mRecyclerView.setVisibility(View.VISIBLE); //만약 풀 수 있는 문제가 없다면 "문제가 없습니다" 텍스트를 띄워준다.
-                            no_quiz.setVisibility(View.GONE);
-                        }
-                            String qt = itemDTO.getquestiontype();
-                            String qc = Integer.toString(itemDTO.getQuestioncode()); //문제번호
-                            String rn = itemDTO.getRegionname(); //지역번호
-                            int rc = itemDTO.getRegioncode();
-                            String quiz = itemDTO.getQuestion(); //문제
-                            String answer_q = itemDTO.getAnswer(); //정답
-                            String hint_q = itemDTO.getHint();
-                            int image = methods.imageSelector(rc);
+                        ItemDTO itemDTO = inventories.get(0);
 
-                            myDataset.add(new MyData(qt,qc,rn,rc, image, quiz,answer_q,loginid,networkClient,getActivity(), hint_q, mRecyclerView));//각 인자들을 어댑터클래스의 데이터베이스에 전달.
+                        String qt = itemDTO.getquestiontype();
+                        String qc = Integer.toString(itemDTO.getQuestioncode()); //문제번호
+                        String rn = itemDTO.getRegionname(); //지역번호
+                        int rc = itemDTO.getRegioncode();
+                        String quiz = itemDTO.getQuestion(); //문제
+                        String answer_q = itemDTO.getAnswer(); //정답
+                        String hint_q = itemDTO.getHint();
+                        int image = methods.imageSelector(rc);
 
-                            Log.d("퀴즈번호", "" + itemDTO.getQuestioncode());
-                            Log.d("퀴즈지역", "" + itemDTO.getRegionname());
-                            Log.d("퀴즈", itemDTO.getQuestion());
-                            onResume();
+                        myDataset.add(new MyData_T("1","강화도",23));//각 인자들을 어댑터클래스의 데이터베이스에 전달.
+                        myDataset.add(new MyData_T("2","영흥도",23));//각 인자들을 어댑터클래스의 데이터베이스에 전달.
+                        myDataset.add(new MyData_T("3","영종도",23));//각 인자들을 어댑터클래스의 데이터베이스에 전달.
+                        myDataset.add(new MyData_T("4","섹스도",23));//각 인자들을 어댑터클래스의 데이터베이스에 전달.
 
-
-
-
-
+                        Log.d("퀴즈번호", "" + itemDTO.getQuestioncode());
+                        Log.d("퀴즈지역", "" + itemDTO.getRegionname());
+                        Log.d("퀴즈", itemDTO.getQuestion());
+                        onResume();
                         break;
-
                     default:
                         break;
                 }
@@ -248,21 +222,12 @@ public class Frag_Home extends BaseFragment {
             }
         });
 
-
-        mRecyclerView.setOnTouchListener(new View.OnTouchListener() {
-            @Override
-            public boolean onTouch(View v, MotionEvent event) {
-                return true;
-            }
-        });
-
         return layout;
     }
 
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         final String playerid=profile.getId();
         String ip =ipm.getip();
-        Log.e("아이디ㅇㅇ",playerid);
 
         if(requestCode == 0){
             if(resultCode == RESULT_OK) {
@@ -270,14 +235,14 @@ public class Frag_Home extends BaseFragment {
                 networkClient.checkplayer(playerid,new Callback<Integer>() {
                     @Override
                     public void onResponse(Call<Integer> call, Response<Integer> response) {
-                        Log.e("아이디dd",playerid);
+                        Log.d("퀴즈획득 아이디 : ",playerid);
                         switch (response.code()){
                             case 200:
                                 int check = response.body();
-                                Log.e("확인","check"+check);
+                                Log.d("퀴즈획득 체크코드 :","check"+check);
                                 if (check == 1) {  //Responce의값이 1일 때 새 문제 획득
                                     AlertDialog.Builder alert = new AlertDialog.Builder(getActivity());
-                                    alert.setPositiveButton("확인", new DialogInterface.OnClickListener() {
+                                    alert.setPositiveButton(getString(R.string.ghkrdls), new DialogInterface.OnClickListener() {
                                         @Override
                                         public void onClick(DialogInterface dialog, int which) {
                                             Intent intent = new Intent(getActivity(),Home_Main.class);
@@ -289,9 +254,8 @@ public class Frag_Home extends BaseFragment {
                                     alert.setMessage(R.string.새문제);
                                     alert.show();
                                 } else if (check == 0) { //Responce값이 2일 때 이미 가지고 있는 문제
-                                    Log.e("확인","응"+check);
                                     AlertDialog.Builder alert = new AlertDialog.Builder(getActivity());
-                                    alert.setPositiveButton("확인", new DialogInterface.OnClickListener() {
+                                    alert.setPositiveButton(getString(R.string.ghkrdls), new DialogInterface.OnClickListener() {
                                         @Override
                                         public void onClick(DialogInterface dialog, int which) {
 

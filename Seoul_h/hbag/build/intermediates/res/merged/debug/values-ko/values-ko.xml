@@ -138,6 +138,7 @@
     <string name="not_good_id">영문과 숫자로만 이루어진 5~12자 아이디를 입력해주세요. 첫 글자는 반드시 영문입니다.</string>
     <string name="num">num</string>
     <string name="open_drawer">open draweropen draweropen draweropen draweropen draweropen drawer</string>
+    <string name="password_not_good">패스워드가 일치하지 않습니다.</string>
     <string name="please_check_already_id">이미 같은 아이디가 존재합니다.</string>
     <string name="please_check_id">아이디 또는 비밀번호가 일치하지 않습니다.</string>
     <string name="please_check_name">이미 같은 닉네임이 존재합니다.</string>
@@ -238,7 +239,7 @@
     <string name="지오코더">지오코딩 서비스 사용불가.</string>
     <string name="챌린저">챌린저</string>
     <string name="초보자">초보자</string>
-    <string name="최근문제">최근 문제</string>
+    <string name="최근문제">인기 지역 TOP 10</string>
     <string name="취소">취소</string>
     <string name="카메라버튼">카메라</string>
     <string name="카메라켜기">                카메라 켜기</string>

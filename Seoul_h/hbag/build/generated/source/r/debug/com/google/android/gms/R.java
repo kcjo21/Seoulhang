@@ -39,17 +39,17 @@ public final class R {
         public static final int zOrderOnTop = 0x7f01012b;
     }
     public static final class color {
-        public static final int common_google_signin_btn_text_dark = 0x7f0800a3;
+        public static final int common_google_signin_btn_text_dark = 0x7f0800a5;
         public static final int common_google_signin_btn_text_dark_default = 0x7f080014;
         public static final int common_google_signin_btn_text_dark_disabled = 0x7f080015;
         public static final int common_google_signin_btn_text_dark_focused = 0x7f080016;
         public static final int common_google_signin_btn_text_dark_pressed = 0x7f080017;
-        public static final int common_google_signin_btn_text_light = 0x7f0800a4;
+        public static final int common_google_signin_btn_text_light = 0x7f0800a6;
         public static final int common_google_signin_btn_text_light_default = 0x7f080018;
         public static final int common_google_signin_btn_text_light_disabled = 0x7f080019;
         public static final int common_google_signin_btn_text_light_focused = 0x7f08001a;
         public static final int common_google_signin_btn_text_light_pressed = 0x7f08001b;
-        public static final int common_google_signin_btn_tint = 0x7f0800a5;
+        public static final int common_google_signin_btn_tint = 0x7f0800a7;
     }
     public static final class drawable {
         public static final int common_full_open_on_phone = 0x7f020093;
@@ -86,13 +86,13 @@ public final class R {
         public static final int light = 0x7f0a0053;
         public static final int none = 0x7f0a0019;
         public static final int normal = 0x7f0a001b;
-        public static final int progressBar = 0x7f0a015d;
+        public static final int progressBar = 0x7f0a015b;
         public static final int radio = 0x7f0a007d;
         public static final int satellite = 0x7f0a0048;
         public static final int standard = 0x7f0a0050;
         public static final int terrain = 0x7f0a0049;
-        public static final int text = 0x7f0a0184;
-        public static final int text2 = 0x7f0a0182;
+        public static final int text = 0x7f0a0187;
+        public static final int text2 = 0x7f0a0185;
         public static final int wide = 0x7f0a0051;
         public static final int wrap_content = 0x7f0a002e;
     }

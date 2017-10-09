@@ -42,6 +42,7 @@ public class Frag_Info extends Fragment
     RecyclerView.LayoutManager mLayoutManager;
     UserProfileData_singleton profile;
     ArrayList<MyData_I> myDataset;
+    private List<InventoryDTO> infos;
     NetworkClient networkClient;
     TextView info_name;
     TextView info_point;
@@ -84,34 +85,10 @@ public class Frag_Info extends Fragment
         String ip = ipm.getip();
 
 
-        mRecyclerView.setHasFixedSize(true);
-        mLayoutManager = new LinearLayoutManager(getActivity());
-        mRecyclerView.setLayoutManager(mLayoutManager);
-        myDataset=new ArrayList<>();
-        mAdapter = new RecyclerAdapter_I(myDataset);
-        mRecyclerView.setAdapter(mAdapter);
-
-
-        myDataset.add(new MyData_I("12312","123123","12123123"));
-        myDataset.add(new MyData_I("12312","123123","12123123"));
-        myDataset.add(new MyData_I("12312","123123","12123123"));
-        myDataset.add(new MyData_I("12312","123123","12123123"));
-        myDataset.add(new MyData_I("12312","123123","12123123"));
-        myDataset.add(new MyData_I("12312","123123","12123123"));
-        myDataset.add(new MyData_I("12312","123123","12123123"));
-        myDataset.add(new MyData_I("12312","123123","12123123"));
-        myDataset.add(new MyData_I("12312","123123","12123123"));
-        myDataset.add(new MyData_I("12312","123123","12123123"));
-        myDataset.add(new MyData_I("12312","123123","12123123"));
-        myDataset.add(new MyData_I("12312","123123","12123123"));
-        myDataset.add(new MyData_I("12312","123123","12123123"));
 
 
 
-
-
-
-       /* networkClient = NetworkClient.getInstance(ip);
+        networkClient = NetworkClient.getInstance(ip);
         Log.d("인포",loginid);
         networkClient.getfinishitem(loginid, new Callback<List<InventoryDTO>>() {
             @Override
@@ -145,11 +122,11 @@ public class Frag_Info extends Fragment
 
                         InventoryDTO inventoryDTO = infos.get(0);
                         String grade_i = inventoryDTO.getGrade();
-                        String playername = inventoryDTO.getPlayername();
+                        String nickname = inventoryDTO.getNickname();
                         String point_i = Integer.toString(inventoryDTO.getPoint());
                         String hint_i = Integer.toString(inventoryDTO.getHint());
 
-                        info_name.setText(playername);
+                        info_name.setText(nickname);
                         info_point.setText(point_i);
                         info_hint.setText(hint_i);
                         switch (grade_i){
@@ -190,7 +167,7 @@ public class Frag_Info extends Fragment
                 Log.e("ACC", "s?? " + t.getMessage());
 
             }
-        });*/
+        });
 
         networkClient = NetworkClient.getInstance(ip);
 

@@ -82,4 +82,7 @@ public interface NetworkService {
     @GET("/newnickname/id/{id}/nickname/{nickname}")
     Call<String> newnickname(@Path("id") String id, @Path ("nickname") String nickname);
 
+    @GET("/toptenregion/id/{id}")
+    Call<String> toptenregion(@Path("id") String id);
+
 }

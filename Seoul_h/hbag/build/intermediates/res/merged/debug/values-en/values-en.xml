@@ -78,6 +78,7 @@
     <string name="not_good_id">Please enter a 5 ~ 12 character ID consisting of only english and numbers, and The first letter of the ID must be in English.</string>
     <string name="num">num</string>
     <string name="open_drawer">open draweropen draweropen draweropen draweropen draweropen drawer</string>
+    <string name="password_not_good">Passwords do not match.</string>
     <string name="please_check_already_id">this id already exist.</string>
     <string name="please_check_id">Please check your ID or Password.</string>
     <string name="please_check_name">this nickname already exsist.</string>
@@ -176,7 +177,7 @@
     <string name="지오코더">Unable to use Geocoding service.</string>
     <string name="챌린저">Challenger</string>
     <string name="초보자">Unrank</string>
-    <string name="최근문제">New Quiz</string>
+    <string name="최근문제">Most popular Area top 10</string>
     <string name="취소">Cancel</string>
     <string name="카메라버튼">CAMERA</string>
     <string name="카메라켜기">                Turn on Camera</string>

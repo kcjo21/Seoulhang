@@ -149,4 +149,7 @@ public class NetworkClient {
         Call<String> call = service.newnickname(id, nickname);
         call.enqueue(callback);
     }
+    public void toptenregion(String id, Callback<String> callback){
+        Call<String> call = service.toptenregion(id);
+    }
 }

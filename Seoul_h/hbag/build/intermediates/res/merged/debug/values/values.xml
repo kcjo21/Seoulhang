@@ -119,6 +119,7 @@
     <color name="abc_search_url_text_selected">@android:color/black</color>
     <color name="accent_material_dark">@color/material_deep_teal_200</color>
     <color name="accent_material_light">@color/material_deep_teal_500</color>
+    <color name="alpha">#00dbdbdb</color>
     <color name="back_white">#e9e9e9</color>
     <color name="back_wight">#e9e9e9</color>
     <color name="background">#E6000000</color>
@@ -126,6 +127,7 @@
     <color name="background_floating_material_light">@android:color/white</color>
     <color name="background_material_dark">@color/material_grey_850</color>
     <color name="background_material_light">@color/material_grey_50</color>
+    <color name="black_a">#64000000</color>
     <color name="blue_normal">#ff33b5e5</color>
     <color name="blue_pressed">#ff0099cc</color>
     <color name="bright_foreground_disabled_material_dark">#80ffffff</color>
@@ -912,7 +914,7 @@
     <string name="checkEmail">형식에 맞지 않는 메일 주소입니다.</string>
     <string name="checkplease">ID중복확인을 해주십시오.</string>
     <string name="close_drawer">close drawerclose drawerclose drawerclose drawerclose drawer</string>
-    <string name="com.crashlytics.android.build_id" ns1:ignore="UnusedResources,TypographyDashes" translatable="false">e5255d6b-7972-4cf8-8e97-5f3a7d2180f6</string>
+    <string name="com.crashlytics.android.build_id" ns1:ignore="UnusedResources,TypographyDashes" translatable="false">54cda3ee-4cdb-4795-84f9-913208f1e6d2</string>
     <string name="com_facebook_device_auth_instructions">Visit &lt;b>facebook.com/device&lt;/b> and enter the code shown above.</string>
     <string name="com_facebook_image_download_unknown_error">Unexpected error while downloading an image.</string>
     <string name="com_facebook_internet_permission_error_message">WebView login requires INTERNET permission</string>
@@ -995,6 +997,7 @@
     <string name="not_good_id">영문과 숫자로만 이루어진 5~12자 아이디를 입력해주세요. 첫 글자는 반드시 영문입니다.</string>
     <string name="num">num</string>
     <string name="open_drawer">open draweropen draweropen draweropen draweropen draweropen drawer</string>
+    <string name="password_not_good">패스워드가 일치하지 않습니다.</string>
     <string name="password_toggle_content_description">Toggle password visibility</string>
     <string name="path_password_eye" translatable="false">M12,4.5C7,4.5 2.73,7.61 1,12c1.73,4.39 6,7.5 11,7.5s9.27,-3.11 11,-7.5c-1.73,-4.39 -6,-7.5 -11,-7.5zM12,17c-2.76,0 -5,-2.24 -5,-5s2.24,-5 5,-5 5,2.24 5,5 -2.24,5 -5,5zM12,9c-1.66,0 -3,1.34 -3,3s1.34,3 3,3 3,-1.34 3,-3 -1.34,-3 -3,-3z</string>
     <string name="path_password_eye_mask_strike_through" translatable="false">M2,4.27 L19.73,22 L22.27,19.46 L4.54,1.73 L4.54,1 L23,1 L23,23 L1,23 L1,4.27 Z</string>
@@ -1100,7 +1103,7 @@
     <string name="지오코더">지오코딩 서비스 사용불가.</string>
     <string name="챌린저">챌린저</string>
     <string name="초보자">초보자</string>
-    <string name="최근문제">최근 문제</string>
+    <string name="최근문제">인기 지역 TOP 10</string>
     <string name="취소">취소</string>
     <string name="카메라버튼">카메라</string>
     <string name="카메라켜기">                카메라 켜기</string>
