@@ -6,6 +6,7 @@ import com.hbag.seoulhang.model.retrofit.FindDTO;
 import com.hbag.seoulhang.model.retrofit.HintDTO;
 import com.hbag.seoulhang.model.retrofit.InventoryDTO;
 import com.hbag.seoulhang.model.retrofit.ItemDTO;
+import com.hbag.seoulhang.model.retrofit.NoticeDTO;
 import com.hbag.seoulhang.model.retrofit.PlayerDTO;
 import com.hbag.seoulhang.model.retrofit.QuestDTO;
 import com.hbag.seoulhang.model.retrofit.RankDTO;
@@ -152,6 +153,11 @@ public class NetworkClient {
     }
     public void toptenregion(String id, Callback<List<TopDTO>> callback){
         Call<List<TopDTO>> call = service.toptenregion(id);
+        call.enqueue(callback);
+    }
+
+    public void notice(String id,Callback<List<NoticeDTO>> callback){
+        Call<List<NoticeDTO>> call = service.notice(id);
         call.enqueue(callback);
     }
 }

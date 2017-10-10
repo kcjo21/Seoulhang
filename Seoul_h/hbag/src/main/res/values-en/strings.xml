@@ -182,4 +182,5 @@
     <string name="unity_denied">If data access is not allowed, the game will not function normally.</string>
     <string name="password_not_good">Passwords do not match.</string>
     <string name="visitors">visitors</string>
+    <string name="Notice">Notice</string>
 </resources>

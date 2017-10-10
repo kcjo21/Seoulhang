@@ -32,14 +32,18 @@ import com.hbag.seoulhang.R;
 import com.hbag.seoulhang.map_package.GooglemapsActivity;
 import com.hbag.seoulhang.model.retrofit.InventoryDTO;
 import com.hbag.seoulhang.model.retrofit.ItemDTO;
+import com.hbag.seoulhang.model.retrofit.NoticeDTO;
 import com.hbag.seoulhang.model.retrofit.TopDTO;
 import com.hbag.seoulhang.network.Ipm;
 import com.hbag.seoulhang.network.NetworkClient;
 import com.hbag.seoulhang.joinmanage_package.TutorialActivity;
 import com.hbag.seoulhang.joinmanage_package.login_package.UserProfileData_singleton;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
+import java.util.Locale;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -60,6 +64,7 @@ public class Frag_Home extends BaseFragment {
     private RecyclerView.Adapter mAdapter;
     private RecyclerView.LayoutManager mLayoutManager;
     private ArrayList<MyData_T> myDataset;
+    private List<NoticeDTO> notice;
     private List<TopDTO> inventories;
     NetworkClient networkClient;
     Methods methods;
@@ -74,7 +79,6 @@ public class Frag_Home extends BaseFragment {
     Handler handler;
     private long mLastClickTime = 0;
     UserProfileData_singleton profile;
-
 
     public Frag_Home() {
     }
@@ -102,6 +106,7 @@ public class Frag_Home extends BaseFragment {
         gethint = (Button) layout.findViewById(R.id.button_hint);
         home_main = (Home_Main)getActivity();
         handler = new Handler(Looper.getMainLooper());
+        networkClient = NetworkClient.getInstance(ip);
 
 
         //튜토리얼 spotlight 타겟에 추가한다.
@@ -114,8 +119,8 @@ public class Frag_Home extends BaseFragment {
           }
       });
 
-        networkClient = NetworkClient.getInstance(ip);
-        networkClient.toptenregion(loginid, new Callback<List<TopDTO>>() {
+
+        networkClient.toptenregion(loginid, new Callback<List<TopDTO>>() {  //인기 순위 top10 지역을 서버로 부터 불러온다.
             @Override
             public void onResponse(Call<List<TopDTO>> call, Response<List<TopDTO>> response) {
                 Log.d("퀴즈", "123");
@@ -158,6 +163,30 @@ public class Frag_Home extends BaseFragment {
             @Override
             public void onFailure(Call<List<TopDTO>> call, Throwable t) {
                 Log.e("ACC", "s?? " + t.getMessage());
+
+            }
+        });
+
+        networkClient.notice(loginid, new Callback<List<NoticeDTO>>() {
+            @Override
+            public void onResponse(Call<List<NoticeDTO>> call, Response<List<NoticeDTO>> response) {
+                notice = response.body();
+
+
+                for(int j= 0; j<notice.size();j++){
+                    NoticeDTO noticeDTO = notice.get(j);
+                    String title = noticeDTO.getTitle();
+                    String contents = noticeDTO.getContents();
+                    String sDate = noticeDTO.getDate();
+
+                    Log.d("공지 제목",title);
+                    Log.d("공지 내용",contents);
+                    Log.d("공지 날짜",sDate);
+                }
+            }
+
+            @Override
+            public void onFailure(Call<List<NoticeDTO>> call, Throwable t) {
 
             }
         });
@@ -216,6 +245,7 @@ public class Frag_Home extends BaseFragment {
                     ((Home_Main) getActivity()).spotLightExcute(0);
             }
         });
+
 
         return layout;
     }

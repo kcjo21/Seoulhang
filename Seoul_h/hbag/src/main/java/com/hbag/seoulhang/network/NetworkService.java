@@ -4,6 +4,7 @@ import com.hbag.seoulhang.model.retrofit.FindDTO;
 import com.hbag.seoulhang.model.retrofit.HintDTO;
 import com.hbag.seoulhang.model.retrofit.InventoryDTO;
 import com.hbag.seoulhang.model.retrofit.ItemDTO;
+import com.hbag.seoulhang.model.retrofit.NoticeDTO;
 import com.hbag.seoulhang.model.retrofit.PlayerDTO;
 import com.hbag.seoulhang.model.retrofit.QuestDTO;
 import com.hbag.seoulhang.model.retrofit.RankDTO;
@@ -85,5 +86,8 @@ public interface NetworkService {
 
     @GET("/toptenregion/id/{id}")
     Call<List<TopDTO>> toptenregion(@Path("id") String id);
+
+    @GET("/notice/id/{id}")
+    Call<List<NoticeDTO>>notice(@Path("id")String id);
 
 }

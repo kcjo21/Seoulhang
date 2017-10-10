@@ -182,5 +182,6 @@
     <string name="unity_denied">데이터 접근 권한이 없으면 정상 작동이 불가능합니다.</string>
     <string name="password_not_good">패스워드가 일치하지 않습니다.</string>
     <string name="visitors">방문자 수</string>
+    <string name="Notice">알림</string>
 
 </resources>
