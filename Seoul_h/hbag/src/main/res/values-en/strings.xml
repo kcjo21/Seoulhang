@@ -181,4 +181,5 @@
     <string name="unity_permission_storage">Permission to read external storage is required to check the target\'s location information</string>
     <string name="unity_denied">If data access is not allowed, the game will not function normally.</string>
     <string name="password_not_good">Passwords do not match.</string>
+    <string name="visitors">visitors</string>
 </resources>

@@ -101,6 +101,7 @@
     <string name="unity_permission_gps">GPS data is required to determine your current location.</string>
     <string name="unity_permission_phone">Your smartphone status information is required to determine if your device can play this game</string>
     <string name="unity_permission_storage">Permission to read external storage is required to check the target\'s location information</string>
+    <string name="visitors">visitors</string>
     <string name="welcome">Welcome %s!</string>
     <string name="같은닉네임존재">The nickname you entered is already in use.</string>
     <string name="경도">Longitude</string>

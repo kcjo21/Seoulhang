@@ -8,6 +8,7 @@ import com.hbag.seoulhang.model.retrofit.PlayerDTO;
 import com.hbag.seoulhang.model.retrofit.QuestDTO;
 import com.hbag.seoulhang.model.retrofit.RankDTO;
 import com.hbag.seoulhang.model.retrofit.RateDTO;
+import com.hbag.seoulhang.model.retrofit.TopDTO;
 
 import java.util.List;
 
@@ -83,6 +84,6 @@ public interface NetworkService {
     Call<String> newnickname(@Path("id") String id, @Path ("nickname") String nickname);
 
     @GET("/toptenregion/id/{id}")
-    Call<String> toptenregion(@Path("id") String id);
+    Call<List<TopDTO>> toptenregion(@Path("id") String id);
 
 }

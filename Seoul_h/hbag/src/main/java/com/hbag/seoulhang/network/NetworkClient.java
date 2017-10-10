@@ -10,6 +10,7 @@ import com.hbag.seoulhang.model.retrofit.PlayerDTO;
 import com.hbag.seoulhang.model.retrofit.QuestDTO;
 import com.hbag.seoulhang.model.retrofit.RankDTO;
 import com.hbag.seoulhang.model.retrofit.RateDTO;
+import com.hbag.seoulhang.model.retrofit.TopDTO;
 
 import java.util.List;
 import java.util.concurrent.TimeUnit;
@@ -149,7 +150,8 @@ public class NetworkClient {
         Call<String> call = service.newnickname(id, nickname);
         call.enqueue(callback);
     }
-    public void toptenregion(String id, Callback<String> callback){
-        Call<String> call = service.toptenregion(id);
+    public void toptenregion(String id, Callback<List<TopDTO>> callback){
+        Call<List<TopDTO>> call = service.toptenregion(id);
+        call.enqueue(callback);
     }
 }

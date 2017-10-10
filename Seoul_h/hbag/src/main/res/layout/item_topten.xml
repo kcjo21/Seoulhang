@@ -25,7 +25,7 @@
             tools:ignore="ContentDescription" />
 
         <TextView
-            android:id="@+id/tv_num"
+            android:id="@+id/tv_region"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
@@ -33,7 +33,7 @@
             android:layout_toEndOf="@+id/tv_top"
             android:background="@drawable/card_view_button"
             android:gravity="center_vertical|center_horizontal"
-            android:text="1"
+            android:text=" 1 "
             android:textColor="@color/white"
             android:textSize="14dp"
             tools:ignore="HardcodedText,SpUsage" />
@@ -43,15 +43,38 @@
     <TextView
         android:id="@+id/tv_top"
         android:layout_width="wrap_content"
-        android:layout_height="20dp"
+        android:layout_height="wrap_content"
         android:layout_below="@+id/cardView2"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="5dp"
-        android:background="@drawable/card_view_button"
         android:gravity="center_vertical|center_horizontal"
-        android:text="  강화도  "
-        android:textColor="@color/white"
+        android:text=" 강화도 "
+        android:textColor="@android:color/black"
         android:textSize="14dp"
+        android:textStyle="bold"
         tools:ignore="HardcodedText,SpUsage" />
+
+    <TextView
+        android:id="@+id/tv_visit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_top"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:text="방문자수"
+        android:textColor="@color/cardview_dark_background"
+        android:textSize="10dp"
+        tools:ignore="SpUsage" />
+
+    <TextView
+        android:id="@+id/tv_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cardView2"
+        android:layout_toEndOf="@+id/tv_top"
+        android:text="1"
+        android:textColor="@color/SBLUE"
+        android:textSize="14dp"
+        android:layout_alignStart="@+id/cardView2" />
 
 </RelativeLayout>

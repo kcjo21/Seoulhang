@@ -32,6 +32,7 @@ import com.hbag.seoulhang.R;
 import com.hbag.seoulhang.map_package.GooglemapsActivity;
 import com.hbag.seoulhang.model.retrofit.InventoryDTO;
 import com.hbag.seoulhang.model.retrofit.ItemDTO;
+import com.hbag.seoulhang.model.retrofit.TopDTO;
 import com.hbag.seoulhang.network.Ipm;
 import com.hbag.seoulhang.network.NetworkClient;
 import com.hbag.seoulhang.joinmanage_package.TutorialActivity;
@@ -59,7 +60,7 @@ public class Frag_Home extends BaseFragment {
     private RecyclerView.Adapter mAdapter;
     private RecyclerView.LayoutManager mLayoutManager;
     private ArrayList<MyData_T> myDataset;
-    private List<ItemDTO> inventories;
+    private List<TopDTO> inventories;
     NetworkClient networkClient;
     Methods methods;
     Button submit;
@@ -113,11 +114,10 @@ public class Frag_Home extends BaseFragment {
           }
       });
 
-
         networkClient = NetworkClient.getInstance(ip);
-        networkClient.getstartitem(loginid, new Callback<List<ItemDTO>>() {
+        networkClient.toptenregion(loginid, new Callback<List<TopDTO>>() {
             @Override
-            public void onResponse(Call<List<ItemDTO>> call, Response<List<ItemDTO>> response) {
+            public void onResponse(Call<List<TopDTO>> call, Response<List<TopDTO>> response) {
                 Log.d("퀴즈", "123");
                 switch (response.code()) {
                     case 200:
@@ -134,25 +134,20 @@ public class Frag_Home extends BaseFragment {
                         methods = new Methods();
 
 
-                        ItemDTO itemDTO = inventories.get(0);
 
-                        String qt = itemDTO.getquestiontype();
-                        String qc = Integer.toString(itemDTO.getQuestioncode()); //문제번호
-                        String rn = itemDTO.getRegionname(); //지역번호
-                        int rc = itemDTO.getRegioncode();
-                        String quiz = itemDTO.getQuestion(); //문제
-                        String answer_q = itemDTO.getAnswer(); //정답
-                        String hint_q = itemDTO.getHint();
-                        int image = methods.imageSelector(rc);
+                        for(int i = 0 ; i<inventories.size();i++) {
+                            TopDTO topDTO = inventories.get(i);
+                            String sQuestion_num = Integer.toString(topDTO.getQuestioncode());
+                            String sQuestion_name = topDTO.getQuestionname();
+                            String sVisitCount = getResources().getString(R.string.visitors)+" "+Integer.toString(topDTO.getCount());
+                            String sRegion_name = topDTO.getRegion_name();
+                            myDataset.add(new MyData_T(sQuestion_num, sQuestion_name, sRegion_name, sVisitCount));//각 인자들을 어댑터클래스의 데이터베이스에 전달.
+                            Log.d("퀴즈번호 홈 :", "" + sQuestion_name);
+                            Log.d("퀴즈지역 홈 :", "" +sQuestion_num);
+                            Log.d("퀴즈방문자 홈 : ", " "+sVisitCount);
+                        }
 
-                        myDataset.add(new MyData_T("1","강화도",23));//각 인자들을 어댑터클래스의 데이터베이스에 전달.
-                        myDataset.add(new MyData_T("2","영흥도",23));//각 인자들을 어댑터클래스의 데이터베이스에 전달.
-                        myDataset.add(new MyData_T("3","영종도",23));//각 인자들을 어댑터클래스의 데이터베이스에 전달.
-                        myDataset.add(new MyData_T("4","섹스도",23));//각 인자들을 어댑터클래스의 데이터베이스에 전달.
 
-                        Log.d("퀴즈번호", "" + itemDTO.getQuestioncode());
-                        Log.d("퀴즈지역", "" + itemDTO.getRegionname());
-                        Log.d("퀴즈", itemDTO.getQuestion());
                         onResume();
                         break;
                     default:
@@ -161,7 +156,7 @@ public class Frag_Home extends BaseFragment {
             }
 
             @Override
-            public void onFailure(Call<List<ItemDTO>> call, Throwable t) {
+            public void onFailure(Call<List<TopDTO>> call, Throwable t) {
                 Log.e("ACC", "s?? " + t.getMessage());
 
             }

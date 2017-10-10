@@ -163,6 +163,7 @@
     <string name="unity_permission_gps">현재위치를 파악하기 위해 GPS 데이터가 필요합니다.</string>
     <string name="unity_permission_phone">게임 구동 가능 여부를 확인하기 위해 스마트폰 상태 정보가 필요합니다.</string>
     <string name="unity_permission_storage">타겟 위치를 확인하기 위해 내부 저장소를 읽을 권한이 필요합니다.</string>
+    <string name="visitors">방문자 수</string>
     <string name="welcome">%s님 환영합니다!</string>
     <string name="같은닉네임존재">이미 사용중인 닉네임입니다.</string>
     <string name="경도">경도</string>
