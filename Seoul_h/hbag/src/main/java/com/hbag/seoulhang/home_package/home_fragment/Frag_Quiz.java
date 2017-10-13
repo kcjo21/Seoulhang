@@ -3,6 +3,8 @@ package com.hbag.seoulhang.home_package.home_fragment;
 import android.app.Activity;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.CardView;
+import android.support.v7.widget.GridLayout;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
@@ -12,6 +14,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import com.hbag.seoulhang.R;
 import com.hbag.seoulhang.model.retrofit.ItemDTO;
@@ -35,11 +38,8 @@ public class Frag_Quiz extends Fragment {
     private RecyclerView mRecyclerView;
     private RecyclerView.Adapter mAdapter;
     private RecyclerView.LayoutManager mLayoutManager;
-    private ArrayList<MyData> myDataset;
+    private ArrayList<MyData_Q> myDataset;
     UserProfileData_singleton profile;
-    Button submit;
-    Button gethint;
-    EditText answer;
     LinearLayout noquiz;
     NetworkClient networkClient;
     private List<ItemDTO> inventories;
@@ -63,9 +63,6 @@ public class Frag_Quiz extends Fragment {
         profile = UserProfileData_singleton.getInstance();
         final LinearLayout layout = (LinearLayout) inflater.inflate(R.layout.frag_quiz, container, false);
         mRecyclerView = (RecyclerView) layout.findViewById(R.id.rv);
-        answer = (EditText) layout.findViewById(R.id.Answer);
-        submit = (Button) layout.findViewById(R.id.Submit);
-        gethint = (Button) layout.findViewById(R.id.button_hint);
         noquiz = (LinearLayout) layout.findViewById(R.id.no_quizlay);
         ipm = new Ipm();
         activity = getActivity();  //클래스로 전송하기위해 프래그먼트 Activity 저장
@@ -106,9 +103,8 @@ public class Frag_Quiz extends Fragment {
                             String quiz = itemDTO.getQuestion(); //문제
                             String answer_q = itemDTO.getAnswer(); //정답
                             String hint_q = itemDTO.getHint();
-                            int image = methods.imageSelector(rc);
 
-                            myDataset.add(new MyData(qt,qc,rn,rc, image, quiz,answer_q,loginid,networkClient,getActivity(), hint_q, mRecyclerView));//각 인자들을 어댑터클래스의 데이터베이스에 전달.
+                            myDataset.add(new MyData_Q(qt,qc,rn,rc, quiz,answer_q,loginid, hint_q));//각 인자들을 어댑터클래스의 데이터베이스에 전달.
 
                             Log.d("퀴즈번호", "" + itemDTO.getQuestioncode());
                             Log.d("퀴즈지역", "" + itemDTO.getRegionname());

@@ -2,6 +2,7 @@ package com.hbag.seoulhang.appbase_package;
 
 import android.app.Activity;
 import android.app.Application;
+import android.content.Context;
 import android.graphics.drawable.AnimationDrawable;
 import android.graphics.drawable.ColorDrawable;
 import android.support.v7.app.AppCompatDialog;
@@ -150,7 +151,6 @@ public class RealmInit extends Application {
         return m.matches();
 
     }
-
 }
 
 

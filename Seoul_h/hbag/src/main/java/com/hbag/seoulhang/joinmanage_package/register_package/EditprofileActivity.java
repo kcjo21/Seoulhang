@@ -32,9 +32,9 @@ import com.google.android.gms.common.api.Status;
 import com.hbag.seoulhang.appbase_package.BaseActivity;
 import com.hbag.seoulhang.home_package.Home_Main;
 import com.hbag.seoulhang.R;
+import com.hbag.seoulhang.joinmanage_package.LoginActivity;
 import com.hbag.seoulhang.network.Ipm;
 import com.hbag.seoulhang.network.NetworkClient;
-import com.hbag.seoulhang.joinmanage_package.MainActivity;
 import com.hbag.seoulhang.joinmanage_package.login_package.UserProfileData_singleton;
 
 import retrofit2.Call;
@@ -122,6 +122,7 @@ public class EditprofileActivity extends BaseActivity implements
                                 public void onResponse(Call<String> call, Response<String> response) {
                                     switch (response.code()){
                                         case 200:
+                                            progressON();
 
                                             if(loginType.equals("facebook")) {                          //페이스북 회원탈퇴시 퍼미션해제 및 로그아웃 및 DB내 정보삭제
                                                 if(AccessToken.getCurrentAccessToken() == null){
@@ -138,9 +139,10 @@ public class EditprofileActivity extends BaseActivity implements
                                                         Toast toast = Toast.makeText(getApplicationContext(), getResources().getString(R.string.탈퇴성공), Toast.LENGTH_LONG);
                                                         toast.show();
                                                         cleanProfile();
-                                                        Intent intent = new Intent(EditprofileActivity.this, MainActivity.class);
+                                                        Intent intent = new Intent(EditprofileActivity.this, LoginActivity.class);
                                                         startActivity(intent);
                                                         finish();
+                                                        progressOFF();
                                                     }
                                                 }).executeAsync();
                                             }
@@ -160,9 +162,10 @@ public class EditprofileActivity extends BaseActivity implements
                                                 Toast toast = Toast.makeText(getApplicationContext(), getResources().getString(R.string.탈퇴성공), Toast.LENGTH_LONG);
                                                 toast.show();
                                                 cleanProfile();
-                                                Intent intent = new Intent(EditprofileActivity.this, MainActivity.class);
+                                                Intent intent = new Intent(EditprofileActivity.this, LoginActivity.class);
                                                 startActivity(intent);
                                                 finish();
+                                                progressOFF();
                                             }
                                             break;
                                         default:
@@ -173,6 +176,7 @@ public class EditprofileActivity extends BaseActivity implements
 
                                 @Override
                                 public void onFailure(Call<String> call, Throwable t) {
+                                    progressOFF();
                                     Toast toast = Toast.makeText(getApplicationContext(), getResources().getString(R.string.can_not_connent_to_server), Toast.LENGTH_LONG);
                                     toast.show();
                                 }
@@ -317,14 +321,16 @@ public class EditprofileActivity extends BaseActivity implements
                                                             public void onResponse(Call<String> call, Response<String> response) {
                                                                 switch (response.code()) {
                                                                     case 200:
+                                                                        progressON();
                                                                         editor.putString("logintype","logout");
                                                                         editor.apply();
                                                                         cleanProfile();
-                                                                        Intent intent = new Intent(EditprofileActivity.this, MainActivity.class);
+                                                                        Intent intent = new Intent(EditprofileActivity.this, LoginActivity.class);
                                                                         startActivity(intent);
                                                                         finish();
                                                                         Toast toast = Toast.makeText(getApplicationContext(), getResources().getString(R.string.탈퇴성공), Toast.LENGTH_LONG);
                                                                         toast.show();
+                                                                        progressOFF();
                                                                         break;
                                                                     default:
                                                                         break;
@@ -332,6 +338,7 @@ public class EditprofileActivity extends BaseActivity implements
                                                             }
                                                             @Override
                                                             public void onFailure(Call<String> call, Throwable t) {
+                                                                progressOFF();
                                                                 Toast toast = Toast.makeText(getApplicationContext(), getResources().getString(R.string.can_not_connent_to_server), Toast.LENGTH_LONG);
                                                                 toast.show();
                                                             }
@@ -348,6 +355,7 @@ public class EditprofileActivity extends BaseActivity implements
                                     }
                                     @Override
                                     public void onFailure(Call<String> call, Throwable t) {
+                                        progressOFF();
                                         Toast toast = Toast.makeText(getApplicationContext(), getResources().getString(R.string.can_not_connent_to_server), Toast.LENGTH_LONG);
                                         toast.show();
                                     }

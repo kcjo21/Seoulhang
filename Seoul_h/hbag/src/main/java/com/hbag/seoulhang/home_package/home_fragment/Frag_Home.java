@@ -1,49 +1,46 @@
 package com.hbag.seoulhang.home_package.home_fragment;
 
-import android.app.Activity;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
 import android.os.SystemClock;
-import android.support.annotation.Nullable;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
+import android.util.TypedValue;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.ViewTreeObserver;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.widget.ViewFlipper;
 
 import com.hbag.seoulhang.appbase_package.GameActivity;
 import com.hbag.seoulhang.home_package.Home_Main;
 import com.hbag.seoulhang.R;
 import com.hbag.seoulhang.map_package.GooglemapsActivity;
-import com.hbag.seoulhang.model.retrofit.InventoryDTO;
-import com.hbag.seoulhang.model.retrofit.ItemDTO;
 import com.hbag.seoulhang.model.retrofit.NoticeDTO;
 import com.hbag.seoulhang.model.retrofit.TopDTO;
 import com.hbag.seoulhang.network.Ipm;
 import com.hbag.seoulhang.network.NetworkClient;
-import com.hbag.seoulhang.joinmanage_package.TutorialActivity;
 import com.hbag.seoulhang.joinmanage_package.login_package.UserProfileData_singleton;
 
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
-import java.util.Locale;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -68,17 +65,16 @@ public class Frag_Home extends BaseFragment {
     private List<TopDTO> inventories;
     NetworkClient networkClient;
     Methods methods;
-    Button submit;
-    Button gethint;
-    EditText answer;
     ImageView map_b;
     ImageView tuto;
     ImageView camera_b;
     ImageView subway_b;
+    ViewFlipper viewFlipper;
     Ipm ipm;
     Handler handler;
     private long mLastClickTime = 0;
     UserProfileData_singleton profile;
+    int autoflip;
 
     public Frag_Home() {
     }
@@ -92,6 +88,7 @@ public class Frag_Home extends BaseFragment {
     public View onCreateView(final LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         final LinearLayout layout = (LinearLayout) inflater.inflate(R.layout.frag_home, container, false);
 
+
         profile = UserProfileData_singleton.getInstance();
         ipm = new Ipm();
         String ip = ipm.getip();
@@ -101,12 +98,15 @@ public class Frag_Home extends BaseFragment {
         tuto = (ImageView)layout.findViewById(R.id.tutorial_b);
         subway_b = (ImageView)layout.findViewById(R.id.subwayview);
         mRecyclerView = (RecyclerView) layout.findViewById(R.id.home_rev);
-        answer = (EditText) layout.findViewById(R.id.Answer);
-        submit = (Button) layout.findViewById(R.id.Submit);
-        gethint = (Button) layout.findViewById(R.id.button_hint);
         home_main = (Home_Main)getActivity();
+        viewFlipper =  (ViewFlipper)layout.findViewById(R.id.vf_notice);
         handler = new Handler(Looper.getMainLooper());
         networkClient = NetworkClient.getInstance(ip);
+
+        final SharedPreferences setting = getActivity().getSharedPreferences("prefrence_setting",MODE_PRIVATE);
+        autoflip = setting.getInt("auto_notice",0);
+
+
 
 
         //튜토리얼 spotlight 타겟에 추가한다.
@@ -144,9 +144,9 @@ public class Frag_Home extends BaseFragment {
                             TopDTO topDTO = inventories.get(i);
                             String sQuestion_num = Integer.toString(topDTO.getQuestioncode());
                             String sQuestion_name = topDTO.getQuestionname();
-                            String sVisitCount = getResources().getString(R.string.visitors)+" "+Integer.toString(topDTO.getCount());
+                            String sVisitCount = getResources().getString(R.string.visitors, topDTO.getCount());
                             String sRegion_name = topDTO.getRegion_name();
-                            myDataset.add(new MyData_T(sQuestion_num, sQuestion_name, sRegion_name, sVisitCount));//각 인자들을 어댑터클래스의 데이터베이스에 전달.
+                            myDataset.add(new MyData_T(sQuestion_num, sQuestion_name, sRegion_name, sVisitCount, mRecyclerView));//각 인자들을 어댑터클래스의 데이터베이스에 전달.
                             Log.d("퀴즈번호 홈 :", "" + sQuestion_name);
                             Log.d("퀴즈지역 홈 :", "" +sQuestion_num);
                             Log.d("퀴즈방문자 홈 : ", " "+sVisitCount);
@@ -171,17 +171,74 @@ public class Frag_Home extends BaseFragment {
             @Override
             public void onResponse(Call<List<NoticeDTO>> call, Response<List<NoticeDTO>> response) {
                 notice = response.body();
+                Animation showIn = AnimationUtils.loadAnimation(getContext(), R.anim.center_in_left);
+                Animation showOut = AnimationUtils.loadAnimation(getContext(), R.anim.center_out_left);
 
 
-                for(int j= 0; j<notice.size();j++){
+                for (int j = 0; j < notice.size(); j++) {
                     NoticeDTO noticeDTO = notice.get(j);
                     String title = noticeDTO.getTitle();
                     String contents = noticeDTO.getContents();
                     String sDate = noticeDTO.getDate();
+                    TextView tv_notice = new TextView(getContext());
+                    tv_notice.setText(sDate + '\n' + title);
+                    tv_notice.setTextSize(TypedValue.COMPLEX_UNIT_DIP, 14);
+                    tv_notice.setTextColor(Color.parseColor("#000000"));
+                    tv_notice.setGravity(Gravity.CENTER_HORIZONTAL | Gravity.CENTER_VERTICAL);
+                    viewFlipper.addView(tv_notice);
 
-                    Log.d("공지 제목",title);
-                    Log.d("공지 내용",contents);
-                    Log.d("공지 날짜",sDate);
+
+                    Log.d("공지 제목", title);
+                    Log.d("공지 내용", contents);
+                    Log.d("공지 날짜", sDate);
+                }
+                TextView tv_notice = new TextView(getContext());
+                tv_notice.setText(":+'\n'+title1231241212412412412");
+                tv_notice.setTextSize(TypedValue.COMPLEX_UNIT_DIP, 14);
+                tv_notice.setTextColor(Color.parseColor("#000000"));
+                tv_notice.setGravity(Gravity.CENTER_HORIZONTAL | Gravity.CENTER_VERTICAL);
+                viewFlipper.addView(tv_notice);
+                viewFlipper.setInAnimation(showIn);
+                viewFlipper.setOutAnimation(showOut);
+                if (autoflip == 1) {
+                    viewFlipper.setFlipInterval(5000);
+                    viewFlipper.startFlipping();
+                }
+                else {
+                    viewFlipper.setOnTouchListener(new View.OnTouchListener() {
+                        float xAtDown;
+                        float xAtUp;
+
+                        @Override
+                        public boolean onTouch(View v, MotionEvent event) {
+                            viewFlipper.requestDisallowInterceptTouchEvent(true);
+                            if (event.getAction() == MotionEvent.ACTION_DOWN) {
+                                xAtDown = event.getX(); // 터치 시작지점 x좌표 저장
+                            } else if (event.getAction() == MotionEvent.ACTION_UP) {
+                                xAtUp = event.getX(); // 터치 끝난지점 x좌표 저장
+
+                                if (xAtUp < xAtDown) {
+                                    // 왼쪽 방향 에니메이션 지정
+                                    viewFlipper.setInAnimation(AnimationUtils.loadAnimation(getContext(),
+                                            R.anim.center_in_left));
+                                    viewFlipper.setOutAnimation(AnimationUtils.loadAnimation(getContext(),
+                                            R.anim.center_out_left));
+
+                                    // 다음 view 보여줌
+                                    viewFlipper.showNext();
+                                } else if (xAtUp > xAtDown) {
+                                    // 오른쪽 방향 에니메이션 지정
+                                    viewFlipper.setInAnimation(AnimationUtils.loadAnimation(getContext(),
+                                            R.anim.center_in_right));
+                                    viewFlipper.setOutAnimation(AnimationUtils.loadAnimation(getContext(),
+                                            R.anim.center_out_right));
+                                    // 전 view 보여줌
+                                    viewFlipper.showPrevious();
+                                }
+                            }
+                            return true;
+                        }
+                    });
                 }
             }
 

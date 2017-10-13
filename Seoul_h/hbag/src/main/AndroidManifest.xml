@@ -37,7 +37,6 @@
     <uses-feature
         android:name="android.hardware.location"
         android:required="false" />
-
     <uses-feature
         android:name="android.hardware.camera"
         android:required="false" />
@@ -56,8 +55,6 @@
     <uses-feature
         android:name="android.hardware.touchscreen.multitouch.distinct"
         android:required="false" />
-
-
 
     <application
         android:name=".appbase_package.RealmInit"
@@ -90,7 +87,7 @@
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"
             android:windowSoftInputMode="stateHidden|adjustPan" />
         <activity
-            android:name=".joinmanage_package.MainActivity"
+            android:name=".joinmanage_package.LoginActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
             android:name=".joinmanage_package.SplashActivity"
@@ -138,8 +135,9 @@
         <meta-data
             android:name="com.kakao.sdk.AppKey"
             android:value="@string/kakao_app_key" />
-
-        <meta-data android:name="unityplayer.SkipPermissionsDialog" android:value="true" />
+        <meta-data
+            android:name="unityplayer.SkipPermissionsDialog"
+            android:value="true" />
 
         <activity
             android:name="com.facebook.FacebookActivity"
@@ -147,9 +145,14 @@
             android:label="@string/app_name"
             android:screenOrientation="portrait" />
 
+        <activity
+            android:name=".home_package.home_fragment.Quiz_Dragger"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+
         <meta-data
             android:name="io.fabric.ApiKey"
             android:value="2247d6cb8deb36e71828bc0c53c6098f0c87c5d4" />
+
 
     </application>
 

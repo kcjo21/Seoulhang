@@ -89,7 +89,7 @@ public class NewpasswordActivity extends BaseActivity {
                                   finish();
                                   break;
                               default:
-                                  Toast toast_f = Toast.makeText(getApplicationContext(), getResources().getString(R.string.비밀번호일치), Toast.LENGTH_LONG);
+                                  Toast toast_f = Toast.makeText(getApplicationContext(), getResources().getString(R.string.can_not_connent_to_server), Toast.LENGTH_LONG);
                                   toast_f.show();
                                   break;
                           }

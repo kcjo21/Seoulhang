@@ -14,6 +14,7 @@ import android.widget.Toast;
 
 import com.hbag.seoulhang.appbase_package.BaseActivity;
 import com.hbag.seoulhang.R;
+import com.hbag.seoulhang.joinmanage_package.login_package.UserProfileData_singleton;
 import com.hbag.seoulhang.model.retrofit.FindDTO;
 import com.hbag.seoulhang.network.Ipm;
 import com.hbag.seoulhang.network.NetworkClient;
@@ -27,6 +28,7 @@ public class CodeinsertActivity extends BaseActivity {
     EditText codes;
     Button commit;
     Button cancel;
+    UserProfileData_singleton profile;
     NetworkClient networkClient;
     Ipm ipm;
     private long mLastClickTime = 0;
@@ -39,6 +41,7 @@ public class CodeinsertActivity extends BaseActivity {
         commit = (Button) findViewById(R.id.commit);
         cancel = (Button) findViewById(R.id.cancel);
         codes = (EditText) findViewById(R.id.code_pt);
+        profile = UserProfileData_singleton.getInstance();
 
         String ip = ipm.getip();
         networkClient = NetworkClient.getInstance(ip);
@@ -93,6 +96,7 @@ public class CodeinsertActivity extends BaseActivity {
                     public void onResponse(Call<FindDTO> call, Response<FindDTO> response) {
                         switch (response.code()) {
                             case 200:
+                                profile.setId(sid);
                                 Intent intent = new Intent(CodeinsertActivity.this, NewpasswordActivity.class);
                                 startActivity(intent);
                                 finish();

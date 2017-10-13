@@ -103,7 +103,7 @@
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"
             android:windowSoftInputMode="stateHidden|adjustPan" />
         <activity
-            android:name="com.hbag.seoulhang.joinmanage_package.MainActivity"
+            android:name="com.hbag.seoulhang.joinmanage_package.LoginActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
             android:name="com.hbag.seoulhang.joinmanage_package.SplashActivity"
@@ -161,6 +161,9 @@
             android:label="@string/app_name"
             android:screenOrientation="portrait"
             android:theme="@style/com_facebook_activity_theme" />
+        <activity
+            android:name="com.hbag.seoulhang.home_package.home_fragment.Quiz_Dragger"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
 
         <meta-data
             android:name="io.fabric.ApiKey"

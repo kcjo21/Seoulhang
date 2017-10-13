@@ -30,7 +30,7 @@
     <string name="Email">Email</string>
     <string name="Ename">Enter your Name.</string>
     <string name="Enname">Enter your Nickname.</string>
-    <string name="GPSMessage">Your GPS is disabled! We need GPS Data. Would you like to enable it?</string>
+    <string name="GPSMessage">Your GPS is disabled! We need GPS Data.\nWould you like to enable it?</string>
     <string name="GPSN">No</string>
     <string name="GPSY">Yes</string>
     <string name="GPS퍼미션">Access to location information must be granted to use the map.</string>
@@ -42,6 +42,7 @@
     <string name="Name">Name</string>
     <string name="Notice">Notice</string>
     <string name="Password">Password</string>
+    <string name="Setting">Setting</string>
     <string name="Signin">Signin</string>
     <string name="Signup">Signup</string>
     <string name="Submit">Submit</string>
@@ -59,16 +60,20 @@
     <string name="facebook_app_id">130262031034086</string>
     <string name="facebook_leave_msg">If you leave, all information in the account will be deleted.</string>
     <string name="facebook_with">                Signed in with Facebook</string>
+    <string name="first_set_msg">Please set-up initial settings.</string>
+    <string name="flip">Notice Auto Switching</string>
     <string name="ghkrdls">OK</string>
     <string name="google_auth_key">AIzaSyAM_yLXX5PM6rGttCC86w50OCIHPTtir30</string>
     <string name="google_with">                Signed in with Google</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="hint_msg">Do you want to see the hint?\nOne hint bonus is required.</string>
     <string name="home_descrip">This is the first start page. The most recently acquired quiz is displayed, and you can view the map, run the camera, and more.</string>
     <string name="id">ID</string>
     <string name="info_descrip">You can see the score you have earned so far and the remaining hint bonus. You can see the quizzes that have been solved so far, and you can see the achievement rate per district and the description of the district in Seoul city.</string>
     <string name="insert_quiz">Insert Quiz</string>
     <string name="kakao_app_key">45d3abc0fba429258e010957df473e42</string>
-    <string name="loginsuccess">Welcome, %s ! Touch the Start button.</string>
+    <string name="lang_descrip">Set the language.</string>
+    <string name="loginsuccess">Welcome, %s!\nTouch the Start button.</string>
     <string name="map_view">MAP</string>
     <string name="map_view_descrip">You can see the location of target on a map.</string>
     <string name="mapview_text">                MapView</string>
@@ -76,7 +81,8 @@
     <string name="naverclientid">S25ZUcloW2JU4Xk2SJTD</string>
     <string name="naversecret">IxuQXBjLMf</string>
     <string name="normal_with">                Signed in with Account</string>
-    <string name="not_good_id">Please enter a 5 ~ 12 character ID consisting of only english and numbers, and The first letter of the ID must be in English.</string>
+    <string name="not_good_id">Please enter a 5 ~ 12 character ID consisting of only english and numbers,\nand The first letter of the ID must be in English.</string>
+    <string name="notice_descrip">Select whether to flip notification\nautomatically or manually.</string>
     <string name="num">num</string>
     <string name="open_drawer">open draweropen draweropen draweropen draweropen draweropen drawer</string>
     <string name="password_not_good">Passwords do not match.</string>
@@ -84,29 +90,32 @@
     <string name="please_check_id">Please check your ID or Password.</string>
     <string name="please_check_name">this nickname already exsist.</string>
     <string name="quiz_descrip">You can check the acquired quiz. Quizzes are listed in the order they are acquired, consisting of a Short-answer type quiz and an OX quiz. Also, if you have a hint bonus, you can see the hint.</string>
+    <string name="quiz_num">Quiz No.</string>
+    <string name="quiz_region">Location</string>
     <string name="rank_descrip">You can check your rankings, grades, and scores. You can also check the overall leaderboard.</string>
     <string name="region">Region</string>
     <string name="replay">REPLAY</string>
     <string name="replay_descrip">If you want to see this description again, touch this button.</string>
+    <string name="setting_lang">Language</string>
     <string name="side_닉네임">                Name : %s</string>
     <string name="side_등급">                Tier : %s</string>
     <string name="side_점수">                Score : %s</string>
     <string name="side_코드번호">                Code : %s</string>
     <string name="side_힌트수">                Hint : %s</string>
     <string name="subway_text">                Subway map</string>
-    <string name="tuto_2">\'SeoulHang\' is an educational / tourism game\n using Augmented Reality.</string>
-    <string name="tuto_3">Go to the location on the map,\n turn on the camera and look around.</string>
-    <string name="tuto_4">If you find a target, touch it to get a quiz.\n Solve the quiz to get a higher score and rank.</string>
+    <string name="tuto_2">\'SeoulHang\' is an educational / tourism game\nusing Augmented Reality.</string>
+    <string name="tuto_3">Go to the location on the map,\nturn on the camera and look around.</string>
+    <string name="tuto_4">If you find a target, touch it to get a quiz.\nSolve the quiz to get a higher score and rank.</string>
     <string name="unity_denied">If data access is not allowed, the game will not function normally.</string>
     <string name="unity_permission_camera">Permission is required to use the camera function.</string>
     <string name="unity_permission_gps">GPS data is required to determine your current location.</string>
     <string name="unity_permission_phone">Your smartphone status information is required to determine if your device can play this game</string>
     <string name="unity_permission_storage">Permission to read external storage is required to check the target\'s location information</string>
-    <string name="visitors">visitors</string>
+    <string name="visitors">%d Visits</string>
     <string name="welcome">Welcome %s!</string>
     <string name="같은닉네임존재">The nickname you entered is already in use.</string>
     <string name="경도">Longitude</string>
-    <string name="계정연동실패">Account sync failed. Please try again.</string>
+    <string name="계정연동실패">Account sync failed.\nPlease try again.</string>
     <string name="골드">Gold</string>
     <string name="남">men</string>
     <string name="남은힌트">Hint</string>
@@ -123,7 +132,7 @@
     <string name="등급차트">Challenger = Score 450 \nMaster = Score 340 \nDiamond = Score 240 \nPlatinum = Score 160 \nGold = Score 90 \nSilver = Score 40 \nBronze = Score 10</string>
     <string name="등급표">                Rating Table</string>
     <string name="랭킹">RANKING</string>
-    <string name="로그인실패">Failed to sign in. please try again.</string>
+    <string name="로그인실패">Failed to sign in.\nplease try again.</string>
     <string name="마스터">Master</string>
     <string name="메뉴버튼">MENU</string>
     <string name="브론즈">Bronze</string>
@@ -189,7 +198,7 @@
     <string name="퀴즈">QUIZ</string>
     <string name="탈퇴성공">Your withdrawal has been processed.</string>
     <string name="탈퇴재확인">Are you sure you want to leave?</string>
-    <string name="풀수있는문제없음">You have no Quiz to solve. Please collect new Quizzes</string>
+    <string name="풀수있는문제없음">You have no quiz to solve.\nPlease collect new quizzes</string>
     <string name="플래티넘">Platinum</string>
     <string name="해결한문제"> Quiz Solved</string>
     <string name="현재해결한문제없음">No Quiz Solved.</string>
@@ -207,7 +216,7 @@
     </string>
     <string name="힌트없음">You have no hint bonus left.</string>
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-        <!-- Customize your theme here. -->
+        
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>

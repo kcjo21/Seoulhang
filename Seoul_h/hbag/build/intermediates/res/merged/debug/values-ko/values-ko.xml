@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2">
-    <color name="BLUE">#0070c0</color>
+    <color name="BLUE">#003f6c</color>
     <color name="BRONZE">#b87333</color>
     <color name="Carkviewline">#dbdbdb</color>
-    <color name="Creamson">#dc143c</color>
+    <color name="Creamson">#bb2933</color>
     <color name="GOLD">#ffd700</color>
     <color name="Green00cc66">#00cc66</color>
     <color name="LIGHTGREEN_">#00cc99</color>
@@ -30,7 +30,7 @@
     <string name="Email">Email</string>
     <string name="Ename">이름을 입력해주세요.</string>
     <string name="Enname">닉네임을 입력해주세요.</string>
-    <string name="GPSMessage">이 게임은 GPS 위치 데이터를 필요로 합니다. GPS를 설정하시겠습니까?</string>
+    <string name="GPSMessage">이 게임은 GPS 위치 데이터를 필요로 합니다.\nGPS를 설정하시겠습니까?</string>
     <string name="GPSN">아니요</string>
     <string name="GPSY">예</string>
     <string name="GPS퍼미션">지도를 사용하시려면 위치정보접근을 허가해야합니다.</string>
@@ -40,8 +40,9 @@
     <string name="Login">Login</string>
     <string name="Logout_msg">로그아웃되었습니다.</string>
     <string name="Name">Name</string>
-    <string name="Notice">알림</string>
+    <string name="Notice">한 줄 공지</string>
     <string name="Password">Password</string>
+    <string name="Setting">설정</string>
     <string name="Signin">Signin</string>
     <string name="Signup">Signup</string>
     <string name="Submit">Submit</string>
@@ -118,16 +119,20 @@
     <string name="facebook_app_id">130262031034086</string>
     <string name="facebook_leave_msg">탈퇴하시면 계정의 모든 정보가 삭제됩니다.</string>
     <string name="facebook_with">                페이스북으로 로그인 중</string>
+    <string name="first_set_msg">초기 설정을 진행해주세요.</string>
+    <string name="flip">한 줄 공지 자동전환</string>
     <string name="ghkrdls">확인</string>
     <string name="google_auth_key">AIzaSyAM_yLXX5PM6rGttCC86w50OCIHPTtir30</string>
     <string name="google_with">                구글계정으로 로그인 중</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="hint_msg">힌트를 보시겠습니까?\n힌트 보너스가 1소모됩니다.</string>
     <string name="home_descrip">첫 시작 페이지입니다. 가장 최근에 획득한 문제가 표시되며, 지도보기, 카메라실행 등을 할 수 있습니다.</string>
     <string name="id">ID</string>
     <string name="info_descrip">현재까지 획득한 점수와 남은 힌트보너스를 확인할 수 있습니다. 지금까지 풀어온 퀴즈들을 확인할 수 있으며 서울시 내의 구 단위로 달성률과 해당 구의 설명을 볼 수 있습니다.</string>
     <string name="insert_quiz">Insert Quiz</string>
     <string name="kakao_app_key">45d3abc0fba429258e010957df473e42</string>
-    <string name="loginsuccess">%s님 환영합니다. 시작버튼을 눌러주세요!</string>
+    <string name="lang_descrip">언어를 선택합니다.</string>
+    <string name="loginsuccess">%s님 환영합니다.\n시작버튼을 눌러주세요!</string>
     <string name="map_view">지도 보기</string>
     <string name="map_view_descrip">타겟의 위치를 지도로 확인할 수 있습니다.</string>
     <string name="mapview_text">                지도 보기</string>
@@ -136,7 +141,8 @@
     <string name="naverclientid">S25ZUcloW2JU4Xk2SJTD</string>
     <string name="naversecret">IxuQXBjLMf</string>
     <string name="normal_with">                일반계정으로 로그인 중</string>
-    <string name="not_good_id">영문과 숫자로만 이루어진 5~12자 아이디를 입력해주세요. 첫 글자는 반드시 영문입니다.</string>
+    <string name="not_good_id">영문과 숫자로만 이루어진 5~12자 아이디를 입력해주세요.\n첫 글자는 반드시 영문입니다.</string>
+    <string name="notice_descrip">한 줄 공지를 자동으로 전환시킵니다.\n비활성화시 수동으로 페이지를 넘깁니다.</string>
     <string name="num">num</string>
     <string name="open_drawer">open draweropen draweropen draweropen draweropen draweropen drawer</string>
     <string name="password_not_good">패스워드가 일치하지 않습니다.</string>
@@ -144,11 +150,14 @@
     <string name="please_check_id">아이디 또는 비밀번호가 일치하지 않습니다.</string>
     <string name="please_check_name">이미 같은 닉네임이 존재합니다.</string>
     <string name="quiz_descrip">획득한 퀴즈를 확인할 수 있습니다. 퀴즈는 획득한 순서대로 나열되며, 주관식, OX 퀴즈로 구성되어있습니다. 또한, 힌트보너스를 가지고 있다면, 힌트를 볼 수 있습니다.</string>
+    <string name="quiz_num">퀴즈 번호</string>
+    <string name="quiz_region">획득 장소</string>
     <string name="rank_descrip">순위와 등급, 점수를 확인할 수 있습니다. 또한, 전체 순위표를 확인할 수 있습니다.</string>
     <string name="region">Region</string>
     <string name="replay">다시 보기</string>
     <string name="replay_descrip">이 설명을 다시 보고 싶으시면, 이 버튼을 눌러주세요.</string>
     <string msgid="146198913615257606" name="search_menu_title">"검색"</string>
+    <string name="setting_lang">언어 설정</string>
     <string name="side_닉네임">                닉네임 : %s</string>
     <string name="side_등급">                등급 : %s</string>
     <string name="side_점수">                점수 : %s</string>
@@ -156,19 +165,19 @@
     <string name="side_힌트수">                남은 힌트 수 : %s</string>
     <string msgid="2869576371154716097" name="status_bar_notification_info_overflow">"999+"</string>
     <string name="subway_text">                지하철 노선도</string>
-    <string name="tuto_2">서울행은 증강현실을 이용한\n 교육/관광용 게임입니다.</string>
-    <string name="tuto_3">지도에 나와 있는 위치로 가서\n 카메라를 켜고 주변을 둘러보세요.</string>
-    <string name="tuto_4">목표를 발견하면 터치하여 퀴즈를 획득하세요.\n 퀴즈를 풀어서 점수를 쌓고 순위를 올리세요.</string>
+    <string name="tuto_2">서울행은 증강현실을 이용한\n교육/관광용 게임입니다.</string>
+    <string name="tuto_3">지도에 나와 있는 위치로 가서\n카메라를 켜고 주변을 둘러보세요.</string>
+    <string name="tuto_4">목표를 발견하면 터치하여 퀴즈를 획득하세요.\n퀴즈를 풀어서 점수를 쌓고 순위를 올리세요.</string>
     <string name="unity_denied">데이터 접근 권한이 없으면 정상 작동이 불가능합니다.</string>
     <string name="unity_permission_camera">카메라 기능을 사용하기 위해 권한이 필요합니다.</string>
     <string name="unity_permission_gps">현재위치를 파악하기 위해 GPS 데이터가 필요합니다.</string>
     <string name="unity_permission_phone">게임 구동 가능 여부를 확인하기 위해 스마트폰 상태 정보가 필요합니다.</string>
     <string name="unity_permission_storage">타겟 위치를 확인하기 위해 내부 저장소를 읽을 권한이 필요합니다.</string>
-    <string name="visitors">방문자 수</string>
+    <string name="visitors">방문자 수 %d</string>
     <string name="welcome">%s님 환영합니다!</string>
     <string name="같은닉네임존재">이미 사용중인 닉네임입니다.</string>
     <string name="경도">경도</string>
-    <string name="계정연동실패">계정 동기화에 실패했습니다. 다시 시도해주십시오.</string>
+    <string name="계정연동실패">계정 동기화에 실패했습니다.\n다시 시도해주십시오.</string>
     <string name="골드">골드</string>
     <string name="남">남</string>
     <string name="남은힌트">힌트</string>
@@ -185,7 +194,7 @@
     <string name="등급차트">챌린저 = 450점 \n마스터 = 340점 \n다이아몬드 = 240점 \n플래티넘 = 160점 \n골드 = 90점 \n실버 = 40점 \n브론즈 = 10점</string>
     <string name="등급표">                등급표</string>
     <string name="랭킹">랭킹</string>
-    <string name="로그인실패">로그인에 실패했습니다. 다시 시도해주세요.</string>
+    <string name="로그인실패">로그인에 실패했습니다.\n다시 시도해주세요.</string>
     <string name="마스터">마스터</string>
     <string name="메뉴버튼">메뉴</string>
     <string name="브론즈">브론즈</string>
@@ -251,7 +260,7 @@
     <string name="퀴즈">퀴즈</string>
     <string name="탈퇴성공">회원탈퇴가 정상적으로 처리되었습니다.</string>
     <string name="탈퇴재확인">정말로 탈퇴하시겠습니까?</string>
-    <string name="풀수있는문제없음">현재 풀 수 있는 문제가 없습니다. 새로운 문제를 획득해주세요.</string>
+    <string name="풀수있는문제없음">현재 풀 수 있는 문제가 없습니다.\n새로운 문제를 획득해주세요.</string>
     <string name="플래티넘">플래티넘</string>
     <string name="해결한문제"> 해결한 문제</string>
     <string name="현재해결한문제없음">현재 해결한 문제가 없습니다.</string>
@@ -269,7 +278,7 @@
     </string>
     <string name="힌트없음">남은 힌트가 없습니다!</string>
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-        <!-- Customize your theme here. -->
+        
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>

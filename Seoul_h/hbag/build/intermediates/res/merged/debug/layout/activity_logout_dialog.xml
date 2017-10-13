@@ -29,24 +29,26 @@
         android:weightSum="100">
 
         <Button
-            android:id="@+id/bt_yes"
+            android:id="@+id/bt_no"
             style="@style/Widget.AppCompat.Button"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_marginEnd="20dp"
             android:layout_marginStart="10dp"
             android:layout_weight="40"
-            android:background="@drawable/selector_logout_yes"
+            android:background="@drawable/selector_logout_no"
             tools:ignore="NestedWeights" />
 
         <Button
-            android:id="@+id/bt_no"
+            android:id="@+id/bt_yes"
             style="@style/Widget.AppCompat.Button"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_marginEnd="10dp"
             android:layout_marginStart="20dp"
             android:layout_weight="40"
-            android:background="@drawable/selector_logout_no" />
+            android:background="@drawable/selector_logout_yes"
+            tools:ignore="NestedWeights" />
+
     </LinearLayout>
 </LinearLayout>

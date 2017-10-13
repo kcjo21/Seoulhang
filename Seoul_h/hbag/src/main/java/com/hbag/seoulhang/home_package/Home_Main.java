@@ -1,6 +1,5 @@
 package com.hbag.seoulhang.home_package;
 
-import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -19,11 +18,9 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
-import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.ViewTreeObserver;
 import android.view.animation.DecelerateInterpolator;
 import android.widget.ImageButton;
 import android.widget.ImageView;
@@ -45,12 +42,11 @@ import com.hbag.seoulhang.home_package.home_fragment.Frag_Info;
 import com.hbag.seoulhang.home_package.home_fragment.Frag_Quiz;
 import com.hbag.seoulhang.home_package.home_fragment.Frag_Rank;
 import com.hbag.seoulhang.R;
+import com.hbag.seoulhang.joinmanage_package.LoginActivity;
 import com.hbag.seoulhang.map_package.GooglemapsActivity;
 import com.hbag.seoulhang.model.retrofit.InventoryDTO;
-import com.hbag.seoulhang.model.retrofit.PlayerDTO;
 import com.hbag.seoulhang.network.Ipm;
 import com.hbag.seoulhang.network.NetworkClient;
-import com.hbag.seoulhang.joinmanage_package.MainActivity;
 import com.hbag.seoulhang.joinmanage_package.SettingActivity;
 import com.hbag.seoulhang.joinmanage_package.TutorialActivity;
 import com.hbag.seoulhang.joinmanage_package.login_package.UserProfileData_singleton;
@@ -536,7 +532,7 @@ public class Home_Main extends BaseActivity implements
                     cleanProfile(); //프로필 정보 제거
 
                     Log.d("로그아웃","Home_main"+profile.getLoginType());
-                    Intent intent = new Intent(Home_Main.this, MainActivity.class);
+                    Intent intent = new Intent(Home_Main.this, LoginActivity.class);
                     startActivity(intent);
                     finish();
                     break;

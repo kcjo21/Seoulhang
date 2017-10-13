@@ -163,7 +163,7 @@
             android:id="@+id/top_10"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
             android:layout_weight="5"
             android:gravity="center_vertical"
             android:text="@string/최근문제"
@@ -171,54 +171,46 @@
             android:textSize="14dp"
             tools:ignore="RtlHardcoded,SpUsage" />
 
-        <LinearLayout
-            android:id="@+id/bottom"
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/home_rev"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="50"
+            android:layout_weight="35"
+            android:nestedScrollingEnabled="true"
+            android:orientation="horizontal"
+            android:visibility="visible"
+            tools:targetApi="lollipop" />
+
+        <LinearLayout
+            android:id="@+id/border4"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@color/Carkviewline"
+            android:orientation="horizontal"></LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_notice_title"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginStart="10dp"
+            android:layout_weight="5"
             android:background="@color/white"
-            android:gravity="top"
-            android:orientation="vertical"
-            android:weightSum="100">
+            android:gravity="center_vertical"
+            android:text="@string/Notice"
+            android:textColor="@android:color/black" />
 
-            <android.support.v7.widget.RecyclerView
-                android:id="@+id/home_rev"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="75"
-                android:nestedScrollingEnabled="true"
-                android:orientation="horizontal"
-                android:visibility="visible" />
+        <ViewFlipper
+            android:id="@+id/vf_notice"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="9"
+            android:background="@drawable/notice_back"
+            android:clickable="true"
+            android:gravity="center_vertical|center_horizontal"
+            android:textColor="@android:color/black">
 
-            <LinearLayout
-                android:id="@+id/border4"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:background="@color/Carkviewline"
-                android:orientation="horizontal"></LinearLayout>
-
-            <TextView
-                android:id="@+id/tv_alert"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_marginStart="10dp"
-                android:layout_weight="10"
-                android:background="@color/white"
-                android:gravity="center_vertical"
-                android:text="@string/Notice"
-                android:textColor="@android:color/black" />
-
-            <android.support.v4.view.ViewPager
-                android:id="@+id/vp_notice"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="14"
-                android:gravity="center_vertical|center_horizontal"
-                android:text="TextView"
-                android:textColor="@drawable/border_side" />
-
-        </LinearLayout>
+        </ViewFlipper>
 
     </LinearLayout>
 

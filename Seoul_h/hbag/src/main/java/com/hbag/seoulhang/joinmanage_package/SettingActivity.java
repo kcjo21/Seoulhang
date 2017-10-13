@@ -12,8 +12,11 @@ import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CompoundButton;
 import android.widget.RadioButton;
+import android.widget.Switch;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.hbag.seoulhang.home_package.Home_Main;
 import com.hbag.seoulhang.R;
@@ -24,10 +27,14 @@ public class SettingActivity extends AppCompatActivity {
 
     RadioButton ko;
     RadioButton eng;
+    Switch auto_Notice;
     Button commit;
     Button cancel;
     TextView lang_text;
+    TextView lang_descrip;
+    TextView notice_descrip;
     int lang=0;
+    int toggled;
     private long mLastClickTime = 0;
 
 
@@ -43,12 +50,46 @@ public class SettingActivity extends AppCompatActivity {
         commit = (Button)findViewById(R.id.commit);
         cancel = (Button)findViewById(R.id.cancel);
         lang_text = (TextView)findViewById(R.id.lang_text);
+        auto_Notice = (Switch)findViewById(R.id.auto_notice_toggle);
+        lang_descrip = (TextView)findViewById(R.id.lang_descrip);
+        notice_descrip = (TextView)findViewById(R.id.notice_descrip);
 
 
         SharedPreferences preferences = getSharedPreferences("a",MODE_PRIVATE);
         int first_flag = preferences.getInt("First",0);
 
+        final SharedPreferences setting = getSharedPreferences("prefrence_setting",MODE_PRIVATE);
+        final SharedPreferences.Editor editor = setting.edit();
+        toggled = setting.getInt("auto_notice",0);
+        if(toggled==1){
+            auto_Notice.setChecked(true);
+        }
+        else{
+            auto_Notice.setChecked(false);
+        }
+
+
+
+        auto_Notice.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+
+                if(auto_Notice.isChecked()){
+                    editor.putInt("auto_notice",1);
+                    editor.apply();
+                }
+                else if(!auto_Notice.isChecked()){
+                    editor.putInt("auto_notice",0);
+                    editor.apply();
+
+                }
+            }
+        });
+
+
         if(first_flag !=1){
+            Toast toast = Toast.makeText(this, getResources().getString(R.string.first_set_msg), Toast.LENGTH_LONG);
+            toast.show();
             cancel.setVisibility(View.GONE);
         }
         else
@@ -58,12 +99,10 @@ public class SettingActivity extends AppCompatActivity {
 
         if(pref.getInt("setlang",0)==0){
             ko.setChecked(true);
-            lang_text.setText("언어를 선택하세요.");
             lang = 0;
         }
         else {
             eng.setChecked(true);
-            lang_text.setText("Select Your Language");
             lang = 1;
         }
 
@@ -72,7 +111,10 @@ public class SettingActivity extends AppCompatActivity {
         ko.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                lang_text.setText("언어를 선택하세요.");
+                lang_text.setText("언어 설정");
+                auto_Notice.setText("알림 자동 전환");
+                notice_descrip.setText("한 줄 공지를 자동으로 전환시킵니다.\n비활성화시 수동으로 페이지를 넘깁니다");
+                lang_descrip.setText("언어를 선택합니다.");
                 commit.setText("확인");
                 cancel.setText("취소");
                 lang = 0;
@@ -82,7 +124,10 @@ public class SettingActivity extends AppCompatActivity {
         eng.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                lang_text.setText("Select Your Language");
+                lang_text.setText("Language");
+                auto_Notice.setText("Notice Auto Switching");
+                lang_descrip.setText("Set the language.");
+                notice_descrip.setText("Select whether to flip notification\nautomatically or manually.");
                 commit.setText("CONFIRM");
                 cancel.setText("CANCEL");
                 lang = 1;
@@ -121,7 +166,7 @@ public class SettingActivity extends AppCompatActivity {
 
                 SharedPreferences first = getSharedPreferences("a",MODE_PRIVATE);
                 if(first.getInt("First",0)!=1) {
-                    Intent intent = new Intent(SettingActivity.this, MainActivity.class);
+                    Intent intent = new Intent(SettingActivity.this, LoginActivity.class);
                     startActivity(intent);
                     finish();
                 }
