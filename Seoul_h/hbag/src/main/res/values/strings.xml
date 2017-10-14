@@ -15,7 +15,7 @@
     <string name="open_drawer">open draweropen draweropen draweropen draweropen draweropen drawer</string>
     <string name="close_drawer">close drawerclose drawerclose drawerclose drawerclose drawer</string>
     <string name="insert_quiz">Insert Quiz</string>
-    <string name="region">Region</string>
+    <string name="region">지역</string>
     <string name="num">num</string>
 
     <!-- TODO: Remove or change this placeholder text -->
@@ -139,7 +139,6 @@
     <string name="facebook_with">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;페이스북으로 로그인 중</string>
     <string name="facebook_leave_msg">탈퇴하시면 계정의 모든 정보가 삭제됩니다.</string>
     <string name="mapview_text">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;지도 보기</string>
-    <string name="subway_text">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;지하철 노선도</string>
     <string name="홈">홈</string>
     <string name="퀴즈">퀴즈</string>
     <string name="랭킹">랭킹</string>
@@ -192,5 +191,8 @@
     <string name="quiz_num">퀴즈 번호</string>
     <string name="quiz_region">획득 장소</string>
     <string name="hint_msg">힌트를 보시겠습니까?\n힌트 보너스가 1 소모됩니다.</string>
+    <string name="Hint_info">"힌트 : "</string>
+    <string name="score">"점수 : "</string>
+    <string name="side_tuto">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;앱 소개 다시 보기</string>
 
 </resources>

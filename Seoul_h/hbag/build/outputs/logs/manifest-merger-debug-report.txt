@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\hbag\src\main\AndroidManifest.xml:2:1-159:12
+ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\hbag\src\main\AndroidManifest.xml:2:1-162:12
 	package
 		ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\hbag\src\main\AndroidManifest.xml:4:5-33
 		INJECTED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\hbag\src\main\AndroidManifest.xml
@@ -184,7 +184,7 @@ ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\hbag\src\main\AndroidM
 	android:name
 		ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\hbag\src\main\AndroidManifest.xml:56:9-72
 application
-ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\hbag\src\main\AndroidManifest.xml:59:5-157:19
+ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\hbag\src\main\AndroidManifest.xml:59:5-160:19
 MERGED from [Seoul_h:trafficsubway-release:unspecified] C:\Users\cwh62\.android\build-cache\6b9e2a149949f92f777fbd1da03ab97e95934703\output\AndroidManifest.xml:13:5-30:19
 MERGED from [com.crashlytics.sdk.android:crashlytics:2.6.8] C:\Users\cwh62\.android\build-cache\8b9aeab50438fb337cb0d0dbbdc3dada61e350f6\output\AndroidManifest.xml:11:5-20
 MERGED from [com.crashlytics.sdk.android:beta:1.2.5] C:\Users\cwh62\.android\build-cache\1357ba52f9b895aac7257a71cca701e399c6964b\output\AndroidManifest.xml:11:5-20
@@ -393,18 +393,24 @@ MERGED from [com.facebook.android:facebook-android-sdk:4.26.0] C:\Users\cwh62\.a
 		ADDED from [com.facebook.android:facebook-android-sdk:4.26.0] C:\Users\cwh62\.android\build-cache\1323e2a7232f50a97d38f0ddc433bbfaeaf04b88\output\AndroidManifest.xml:32:13-63
 	android:name
 		ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\hbag\src\main\AndroidManifest.xml:143:13-57
-activity#com.hbag.seoulhang.home_package.home_fragment.Quiz_Dragger
-ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\hbag\src\main\AndroidManifest.xml:148:9-150:71
+activity#com.hbag.seoulhang.home_package.home_fragment.Dragger_Quiz
+ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\hbag\src\main\AndroidManifest.xml:147:9-149:72
 	android:theme
-		ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\hbag\src\main\AndroidManifest.xml:150:13-69
+		ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\hbag\src\main\AndroidManifest.xml:149:13-69
 	android:name
-		ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\hbag\src\main\AndroidManifest.xml:149:13-68
+		ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\hbag\src\main\AndroidManifest.xml:148:13-68
+activity#com.hbag.seoulhang.home_package.home_fragment.Dragger_Achieve
+ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\hbag\src\main\AndroidManifest.xml:152:9-153:72
+	android:theme
+		ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\hbag\src\main\AndroidManifest.xml:153:13-69
+	android:name
+		ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\hbag\src\main\AndroidManifest.xml:152:19-77
 meta-data#io.fabric.ApiKey
-ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\hbag\src\main\AndroidManifest.xml:152:9-154:72
+ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\hbag\src\main\AndroidManifest.xml:155:9-157:72
 	android:value
-		ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\hbag\src\main\AndroidManifest.xml:154:13-69
+		ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\hbag\src\main\AndroidManifest.xml:157:13-69
 	android:name
-		ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\hbag\src\main\AndroidManifest.xml:153:13-44
+		ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\hbag\src\main\AndroidManifest.xml:156:13-44
 activity#kr.go.seoul.trafficsubway.TrafficSubwayDetailTypeA
 ADDED from [Seoul_h:trafficsubway-release:unspecified] C:\Users\cwh62\.android\build-cache\6b9e2a149949f92f777fbd1da03ab97e95934703\output\AndroidManifest.xml:17:9-19:52
 	android:screenOrientation

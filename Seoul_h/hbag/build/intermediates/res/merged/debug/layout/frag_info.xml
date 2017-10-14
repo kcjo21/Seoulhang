@@ -8,138 +8,131 @@
     android:orientation="vertical"
     android:weightSum="100">
 
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/Carkviewline"
+        android:gravity="center_vertical|center_horizontal"
+        android:text="q"
+        android:textColor="@android:color/black"
+        tools:ignore="HardcodedText" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="15"
+        android:background="@color/white"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/info_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/info_name"
+            android:layout_below="@+id/info_name"
+            android:layout_marginTop="5dp"
+            android:text="cwh6272@naver.com"
+            android:textColor="@android:color/black"
+            android:textSize="12dp"
+            tools:ignore="HardcodedText,SpUsage" />
+
+        <TextView
+            android:id="@+id/info_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/info_grade"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_toEndOf="@+id/info_grade"
+            android:text="닉네임입니다."
+            android:textColor="@android:color/black"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText,SpUsage" />
+
+        <ImageView
+            android:id="@+id/info_grade"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginEnd="20dp"
+            android:layout_marginStart="20dp"
+            android:contentDescription="@string/등급"
+            app:srcCompat="@drawable/tier_gold" />
+
+        <TextView
+            android:id="@+id/info_point"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/info_name"
+            android:layout_alignBottom="@+id/info_name"
+            android:layout_marginStart="30dp"
+            android:layout_toEndOf="@+id/info_email"
+            android:maxLines="1"
+            android:text="점수 : 99"
+            android:textColor="@android:color/black"
+            android:textSize="14dp"
+            tools:ignore="HardcodedText,SpUsage" />
+
+        <TextView
+            android:id="@+id/info_hint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/info_email"
+            android:layout_marginStart="30dp"
+            android:layout_toEndOf="@+id/info_email"
+            android:maxLines="1"
+            android:text="힌트 : 99"
+            android:textColor="@android:color/black"
+            android:textSize="14dp"
+            tools:ignore="HardcodedText,SpUsage" />
+    </RelativeLayout>
+
     <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/Carkviewline"
+        android:orientation="horizontal"></LinearLayout>
+
+    <TextView
+        android:id="@+id/border_text"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_weight="4.5"
+        android:background="@color/SBLUE"
+        android:gravity="center_vertical|center_horizontal"
+        android:text="@string/해결한문제"
+        android:textColor="@color/white"
+        android:textSize="14dp"
+        tools:ignore="SpUsage" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rvi"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginEnd="5dp"
         android:layout_marginStart="5dp"
-        android:layout_marginTop="2dp"
-        android:layout_weight="4.5"
-        android:background="@color/SBLUE"
-        android:orientation="horizontal"
-        android:weightSum="100">
+        android:layout_weight="78.5"
+        android:visibility="visible" />
 
-        <TextView
-            android:id="@+id/grade"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="15"
-            android:gravity="center"
-            android:text="@string/등급"
-            android:textAlignment="center"
-            android:textColor="@android:color/white"
-            android:textSize="14dp"
-            tools:ignore="NestedWeights,SpUsage" />
-
-        <TextView
-            android:id="@+id/playernick"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="40"
-            android:gravity="center"
-            android:text="@string/닉네임"
-            android:textAlignment="center"
-            android:textColor="@android:color/white"
-            android:textSize="14dp"
-            tools:ignore="SpUsage" />
-
-        <TextView
-            android:id="@+id/point"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="25"
-            android:gravity="center"
-            android:text="@string/점수"
-            android:textAlignment="center"
-            android:textColor="@android:color/white"
-            android:textSize="14dp"
-            tools:ignore="SpUsage" />
-
-        <TextView
-            android:id="@+id/hint"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="20"
-            android:gravity="center"
-            android:text="@string/남은힌트"
-            android:textAlignment="center"
-            android:textColor="@android:color/white"
-            android:textSize="14dp"
-            tools:ignore="SpUsage" />
-
-    </LinearLayout>
-
-    <LinearLayout
+    <TextView
+        android:id="@+id/no_quiz"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_marginBottom="5dp"
-        android:layout_marginLeft="5dp"
-        android:layout_marginRight="5dp"
-        android:layout_marginTop="2dp"
-        android:layout_weight="8"
-        android:background="@drawable/p_tapbar"
-        android:orientation="horizontal"
-        android:weightSum="100">
-
-        <ImageView
-            android:id="@+id/info_grade"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="15"
-            android:gravity="center_vertical|center_horizontal"
-            android:scaleType="fitCenter"
-            android:textColor="@android:color/black"
-            android:textSize="14dp"
-            tools:ignore="ContentDescription,NestedWeights,SpUsage" />
-
-        <TextView
-            android:id="@+id/info_name"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="40"
-            android:gravity="center_vertical|center_horizontal"
-            android:textColor="@android:color/black"
-            android:textSize="14dp"
-            tools:ignore="SpUsage" />
-
-        <TextView
-            android:id="@+id/info_point"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="25"
-            android:gravity="center_vertical|center_horizontal"
-            android:textColor="@android:color/black"
-            android:textSize="14dp"
-            tools:ignore="SpUsage" />
-
-        <TextView
-            android:id="@+id/info_hint"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="20"
-            android:gravity="center_vertical|center_horizontal"
-            android:textColor="@android:color/black"
-            android:textSize="14dp"
-            tools:ignore="SpUsage" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1.5"
-        android:background="@color/Carkviewline"
-        android:orientation="horizontal"></LinearLayout>
-
-    <ExpandableListView
-        android:id="@+id/exl"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_marginTop="5dp"
-        android:layout_weight="86"
-        android:divider="@android:color/white"
-        android:groupIndicator="@drawable/selector_arrow"
-        android:overScrollMode="always"
-        android:scrollbars="none" />
-
+        android:layout_marginEnd="5dp"
+        android:layout_marginStart="5dp"
+        android:layout_weight="78.5"
+        android:gravity="center_vertical|center_horizontal"
+        android:text="@string/현재해결한문제없음"
+        android:textSize="20dp"
+        android:visibility="gone"
+        tools:ignore="SpUsage" />
 </LinearLayout>

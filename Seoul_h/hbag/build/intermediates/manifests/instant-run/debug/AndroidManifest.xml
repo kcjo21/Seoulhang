@@ -162,7 +162,10 @@
             android:screenOrientation="portrait"
             android:theme="@style/com_facebook_activity_theme" />
         <activity
-            android:name="com.hbag.seoulhang.home_package.home_fragment.Quiz_Dragger"
+            android:name="com.hbag.seoulhang.home_package.home_fragment.Dragger_Quiz"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name="com.hbag.seoulhang.home_package.home_fragment.Dragger_Achieve"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
 
         <meta-data

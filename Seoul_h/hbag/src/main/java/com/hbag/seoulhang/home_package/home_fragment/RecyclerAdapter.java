@@ -1,8 +1,6 @@
 package com.hbag.seoulhang.home_package.home_fragment;
 
-import android.app.Activity;
 import android.content.Intent;
-import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,7 +8,6 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.hbag.seoulhang.R;
-import com.hbag.seoulhang.network.NetworkClient;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -66,7 +63,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
         holder.tap.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), Quiz_Dragger.class);
+                Intent intent = new Intent(getApplicationContext(), Dragger_Quiz.class);
                 intent.putExtra("position",position);
                 intent.putExtra("dataset",mDataset);
                 getApplicationContext().startActivity(intent);

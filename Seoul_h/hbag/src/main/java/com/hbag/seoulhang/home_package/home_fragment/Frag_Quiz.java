@@ -87,10 +87,16 @@ public class Frag_Quiz extends Fragment {
                         mRecyclerView.setAdapter(mAdapter);       //어탭더 정의
 
                         ItemDTO check=inventories.get(0);
-                        if(check.getQuestioncode()==0&&check.getRegionname().equals("0"))
-                        noquiz.setVisibility(View.VISIBLE); //만약 풀 수 있는 문제가 없다면 "문제가 없습니다" 텍스트를 띄워준다.
-                        else
+
+                        //만약 풀 수 있는 문제가 없다면 "문제가 없습니다" 텍스트를 띄워준다.
+                        if(check.getQuestioncode()==0&&check.getRegionname().equals("0")) {
+                            noquiz.setVisibility(View.VISIBLE);
+                            mRecyclerView.setVisibility(View.GONE);
+                        }
+                        else {
+                            mRecyclerView.setVisibility(View.VISIBLE);
                             noquiz.setVisibility(View.GONE);
+                        }
 
                         methods = new Methods();
 

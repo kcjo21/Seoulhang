@@ -68,7 +68,7 @@ public class Frag_Home extends BaseFragment {
     ImageView map_b;
     ImageView tuto;
     ImageView camera_b;
-    ImageView subway_b;
+    ImageView achv_b;
     ViewFlipper viewFlipper;
     Ipm ipm;
     Handler handler;
@@ -96,7 +96,7 @@ public class Frag_Home extends BaseFragment {
         map_b = (ImageView)layout.findViewById(R.id.mapview);
         camera_b = (ImageView) layout.findViewById(R.id.cameraon_b);
         tuto = (ImageView)layout.findViewById(R.id.tutorial_b);
-        subway_b = (ImageView)layout.findViewById(R.id.subwayview);
+        achv_b = (ImageView)layout.findViewById(R.id.achv_b);
         mRecyclerView = (RecyclerView) layout.findViewById(R.id.home_rev);
         home_main = (Home_Main)getActivity();
         viewFlipper =  (ViewFlipper)layout.findViewById(R.id.vf_notice);
@@ -116,6 +116,23 @@ public class Frag_Home extends BaseFragment {
               ((Home_Main)getActivity()).targetMaker(map_b,map_b.getWidth(),getResources().getString(R.string.map_view),getResources().getString(R.string.map_view_descrip));
               ((Home_Main)getActivity()).targetMaker(tuto,tuto.getHeight(),getResources().getString(R.string.replay),getResources().getString(R.string.replay_descrip));
               map_b.getViewTreeObserver().removeOnGlobalFocusChangeListener(this);
+
+              Log.d("ITPANGPANG","onWindowFocusChanged");
+
+
+              int width = map_b.getWidth();
+              int height = map_b.getHeight();
+              Log.d("size_map", "x=>" + width + ",y=>" + height);
+              width = camera_b.getWidth();
+              height = camera_b.getHeight();
+              Log.d("size_camera", "x=>" + width + ",y=>" + height);
+              width = tuto.getWidth();
+              height = tuto.getHeight();
+              Log.d("size_tuto", "x=>" + width + ",y=>" + height);
+              width = achv_b.getWidth();
+              height = achv_b.getHeight();
+              Log.d("size_achv", "x=>" + width + ",y=>" + height);
+
           }
       });
 
@@ -245,6 +262,14 @@ public class Frag_Home extends BaseFragment {
             @Override
             public void onFailure(Call<List<NoticeDTO>> call, Throwable t) {
 
+            }
+        });
+
+        achv_b.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(),Dragger_Achieve.class);
+                startActivity(intent);
             }
         });
 

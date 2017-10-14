@@ -139,7 +139,6 @@
     <string name="facebook_with">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Signed in with Facebook</string>
     <string name="facebook_leave_msg">If you leave, all information in the account will be deleted.</string>
     <string name="mapview_text">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;MapView</string>
-    <string name="subway_text">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Subway map</string>
     <string name="홈">HOME</string>
     <string name="퀴즈">QUIZ</string>
     <string name="랭킹">RANKING</string>
@@ -192,4 +191,7 @@
     <string name="quiz_num">Quiz No.</string>
     <string name="quiz_region">Location</string>
     <string name="hint_msg">Do you want to see the hint?\nOne hint bonus is required.</string>
+    <string name="Hint_info">"Hints : "</string>
+    <string name="score">"Score : "</string>
+    <string name="side_tuto">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Review app introduction</string>
 </resources>

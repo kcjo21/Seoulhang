@@ -79,7 +79,6 @@ public class Home_Main extends BaseActivity implements
     Ipm ipm;
     TextView info_setting;
     TextView mapview;
-    TextView move_camera;
     TextView grade;
     TextView setting;
     TextView hint_left;
@@ -87,6 +86,7 @@ public class Home_Main extends BaseActivity implements
     TextView player_point_home;
     TextView player_name;
     TextView tv_side_title;
+    TextView tutorial_view;
     ImageView iv_title;
     ImageView bt_home;
     ImageView bt_quiz;
@@ -115,7 +115,6 @@ public class Home_Main extends BaseActivity implements
         cameraposition = (TextView)findViewById(R.id.camera_position);
         info_setting = (TextView)findViewById(R.id.info_setting);
         mapview = (TextView)findViewById(R.id.map_view);
-        move_camera = (TextView)findViewById(R.id.camera_on);
         grade = (TextView)findViewById(R.id.grade_chart);
         setting = (TextView)findViewById(R.id.setting);
         hint_left = (TextView)findViewById(R.id.hint_left);
@@ -124,6 +123,7 @@ public class Home_Main extends BaseActivity implements
         player_name = (TextView)findViewById(R.id.player_name);
         iv_title = (ImageView) findViewById(R.id.iv_title);
         tv_side_title = (TextView) findViewById(R.id.tv_side_title);
+        tutorial_view = (TextView) findViewById(R.id.tutorial_view);
         side_logout_bt = (ImageButton) findViewById(R.id.logout_bt);
         handler = new Handler(Looper.getMainLooper());
         spotTarget = new ArrayList<>();
@@ -194,6 +194,15 @@ public class Home_Main extends BaseActivity implements
             }
         });
 
+        tutorial_view.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Home_Main.this, TutorialActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+
 
         mapview.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -223,19 +232,7 @@ public class Home_Main extends BaseActivity implements
                 t.start(); // 쓰레드 시작i
             }
         });
-        move_camera.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (SystemClock.elapsedRealtime() - mLastClickTime < 1000){
-                    return;
-                }
-                mLastClickTime = SystemClock.elapsedRealtime();
-                Intent intent = new Intent(Home_Main.this,GameActivity.class);
-                intent.putExtra("playerid",loginid);
-                startActivityForResult(intent,0);  //문제 소유여부 확인을 위해 forResult로 액티비티 실행
 
-            }
-        });
         grade.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

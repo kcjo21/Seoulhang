@@ -47,15 +47,11 @@ public class Frag_Info extends Fragment
     TextView info_name;
     TextView info_point;
     TextView info_hint;
+    TextView info_email;
     ImageView info_grade;
     TextView no_quiz;
-    public ExpandableListAdapter listAdapter;
-    public ExpandableListView expListView;
-    public ArrayList<MyData_G> groupData;
-    private ArrayList<ArrayList<MyData_H>> childData;
-    private List<RateDTO> rates;
     Ipm ipm;
-    Methods methods;
+
 
     public Frag_Info()
     {
@@ -70,22 +66,17 @@ public class Frag_Info extends Fragment
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
     {
         final LinearLayout layout = (LinearLayout) inflater.inflate(R.layout.frag_info,container, false);
-        final View header = getActivity().getLayoutInflater().inflate(R.layout.exl_header, null);
-        expListView = (ExpandableListView)layout.findViewById(R.id.exl); // 확장 리스트뷰를 가져온다.
         profile = UserProfileData_singleton.getInstance();
-        expListView.addHeaderView(header);
         mRecyclerView = (RecyclerView) layout.findViewById(R.id.rvi);
-        final String loginid = profile.getId();
         ipm = new Ipm();
+        final String loginid = profile.getId();
         info_name = (TextView)layout.findViewById(R.id.info_name);
         info_point = (TextView)layout.findViewById(R.id.info_point);
         info_hint = (TextView)layout.findViewById(R.id.info_hint);
+        info_email = (TextView)layout.findViewById(R.id.info_email);
         info_grade = (ImageView)layout.findViewById(R.id.info_grade);
         no_quiz = (TextView)layout.findViewById(R.id.no_quiz);
         String ip = ipm.getip();
-
-
-
 
 
         networkClient = NetworkClient.getInstance(ip);
@@ -115,20 +106,28 @@ public class Frag_Info extends Fragment
                             if(!qcode.equals("0"))
                             myDataset.add(new MyData_I(qcode,rname,q));
                         }
+
                         InventoryDTO check=infos.get(0);
-                        if(check.getQuestioncode()==0&&check.getRegionname().equals("0"))
+                        if(check.getQuestioncode()==0&&check.getRegionname().equals("0")) {
                             no_quiz.setVisibility(View.VISIBLE);
-                        else no_quiz.setVisibility(View.GONE);
+                            mRecyclerView.setVisibility(View.GONE);
+                        }
+                        else{
+                            mRecyclerView.setVisibility(View.VISIBLE);
+                            no_quiz.setVisibility(View.GONE);
+                        }
 
                         InventoryDTO inventoryDTO = infos.get(0);
                         String grade_i = inventoryDTO.getGrade();
                         String nickname = inventoryDTO.getNickname();
-                        String point_i = Integer.toString(inventoryDTO.getPoint());
-                        String hint_i = Integer.toString(inventoryDTO.getHint());
+                        String point_i = getResources().getString(R.string.score)+Integer.toString(inventoryDTO.getPoint());
+                        String hint_i = getResources().getString(R.string.Hint_info)+Integer.toString(inventoryDTO.getHint());
+                        String email_i = inventoryDTO.getEmail();
 
                         info_name.setText(nickname);
                         info_point.setText(point_i);
                         info_hint.setText(hint_i);
+                        info_email.setText(email_i);
                         switch (grade_i){
                             case "Unrank":
                                 info_grade.setImageResource(R.drawable.tier_unrank);
@@ -171,54 +170,7 @@ public class Frag_Info extends Fragment
 
         networkClient = NetworkClient.getInstance(ip);
 
-        networkClient.getrate(loginid, new Callback<List<RateDTO>>() {
-            @Override
-            public void onResponse(Call<List<RateDTO>> call, Response<List<RateDTO>> response) {
-                Log.d("인포", "123");
-                switch (response.code()) {
-                    case 200:
-                        Log.d("인포", "어댑터 세팅");
-                        rates = response.body();
-                        groupData = new ArrayList<>();
-                        childData = new ArrayList<>();
-                        methods = new Methods();
 
-                        for (int i = 0; i < rates.size(); i++) {
-
-                            RateDTO rateDTO = rates.get(i);
-
-                            int rates_q = rateDTO.getRate();
-                            String regionname = rateDTO.getRegionname();
-                            String exp = rateDTO.getExplain();
-                            int regioncode = rateDTO.getRegioncode();
-                            int image = methods.imageSelector_2(regioncode);
-                            // 그룹 생성
-                            groupData.add(new MyData_G(regionname));
-                            childData.add(new ArrayList<MyData_H>());
-                            // 차일드 생성
-                            Activity activity = getActivity();
-                            if (isAdded() && activity != null) {
-                                childData.get(i).add(new MyData_H(getResources().getString(R.string.달성률) + " " + rates_q + "%", rates_q, R.drawable.new_eight, exp, expListView));
-                            }
-                            Log.e("확인",""+rates_q);
-
-                        }
-                        listAdapter = new ExpandableListViewAdapter(getContext(), groupData, childData);
-                        expListView.setAdapter(listAdapter);// 리스트어댑터 세팅
-
-                        break;
-
-                    default:
-                        break;
-                }
-            }
-
-            @Override
-            public void onFailure(Call<List<RateDTO>> call, Throwable t) {
-                Log.e("ACC", "s?? " + t.getMessage());
-
-            }
-        });
         return layout;
     }
 

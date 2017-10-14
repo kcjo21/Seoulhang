@@ -43,7 +43,7 @@
             android:layout_weight="100"
             android:gravity="center_vertical|center_horizontal"
             android:text="@string/풀수있는문제없음"
-            android:textSize="30dp"
+            android:textSize="20dp"
             android:visibility="visible"
             tools:ignore="NestedWeights,SpUsage" />
     </LinearLayout>

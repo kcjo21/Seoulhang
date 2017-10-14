@@ -26,11 +26,11 @@
         android:layout_height="1dp"
         android:visibility="invisible"
         app:layout_constraintBottom_toTopOf="@+id/drawer_layout"
-        app:layout_constraintHorizontal_bias="0.073"
+        app:layout_constraintHorizontal_bias="0.06"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.551" />
+        app:layout_constraintVertical_bias="0.53" />
 
     <TextView
         android:id="@+id/camera_position"
@@ -161,7 +161,7 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="90"
-                android:background="@android:color/background_light"
+                android:background="@color/Carkviewline"
                 android:orientation="vertical"
                 android:weightSum="100"
                 tools:ignore="UselessParent">
@@ -181,7 +181,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="80"
-                    android:background="@android:color/background_light"
+                    android:background="@color/Carkviewline"
                     android:orientation="vertical"
                     android:weightSum="100"
                     tools:ignore="NestedWeights">
@@ -282,27 +282,14 @@
                         tools:ignore="HardcodedText,SpUsage" />
 
                     <TextView
-                        android:id="@+id/subway_view"
+                        android:id="@+id/tutorial_view"
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
                         android:layout_weight="10"
                         android:background="@drawable/side_subway_selector"
                         android:clickable="true"
                         android:gravity="center_vertical"
-                        android:text="@string/subway_text"
-                        android:textColor="@android:color/black"
-                        android:textSize="14dp"
-                        tools:ignore="HardcodedText,SpUsage" />
-
-                    <TextView
-                        android:id="@+id/camera_on"
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_weight="10"
-                        android:background="@drawable/side_camera_selector"
-                        android:clickable="true"
-                        android:gravity="center_vertical"
-                        android:text="@string/카메라켜기"
+                        android:text="@string/side_tuto"
                         android:textColor="@android:color/black"
                         android:textSize="14dp"
                         tools:ignore="HardcodedText,SpUsage" />
@@ -368,7 +355,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
                         android:layout_weight="70"
-                        android:background="@android:color/background_light"
+                        android:background="@drawable/tapbar"
                         android:gravity="center_vertical|end"
                         android:orientation="horizontal"
                         android:weightSum="100">
@@ -377,7 +364,7 @@
                             android:id="@+id/logout_bt"
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
-                            android:layout_marginEnd="5dp"
+                            android:layout_margin="5dp"
                             android:layout_weight="18"
                             android:background="@android:color/background_light"
                             android:scaleType="centerCrop"

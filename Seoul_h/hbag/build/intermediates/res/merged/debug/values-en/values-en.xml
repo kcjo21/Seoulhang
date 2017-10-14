@@ -36,6 +36,7 @@
     <string name="GPS퍼미션">Access to location information must be granted to use the map.</string>
     <string name="GPS퍼미션체크박스">To use the map, you must permit accessing location information in your smartphone setting</string>
     <string name="GPS활성여부">Check whether GPS is activated.</string>
+    <string name="Hint_info">"Hints : "</string>
     <string name="Loading">LOADING...</string>
     <string name="Login">Login</string>
     <string name="Logout_msg">You have been signed out.</string>
@@ -96,13 +97,14 @@
     <string name="region">Region</string>
     <string name="replay">REPLAY</string>
     <string name="replay_descrip">If you want to see this description again, touch this button.</string>
+    <string name="score">"Score : "</string>
     <string name="setting_lang">Language</string>
+    <string name="side_tuto">                Review app introduction</string>
     <string name="side_닉네임">                Name : %s</string>
     <string name="side_등급">                Tier : %s</string>
     <string name="side_점수">                Score : %s</string>
     <string name="side_코드번호">                Code : %s</string>
     <string name="side_힌트수">                Hint : %s</string>
-    <string name="subway_text">                Subway map</string>
     <string name="tuto_2">\'SeoulHang\' is an educational / tourism game\nusing Augmented Reality.</string>
     <string name="tuto_3">Go to the location on the map,\nturn on the camera and look around.</string>
     <string name="tuto_4">If you find a target, touch it to get a quiz.\nSolve the quiz to get a higher score and rank.</string>

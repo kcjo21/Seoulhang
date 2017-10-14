@@ -36,6 +36,7 @@
     <string name="GPS퍼미션">지도를 사용하시려면 위치정보접근을 허가해야합니다.</string>
     <string name="GPS퍼미션체크박스">지도를 사용하시려면 스마트폰 설정에서 위치정보접근을 허가해야합니다.</string>
     <string name="GPS활성여부">GPS를 활성화했는지 확인해주십시오.</string>
+    <string name="Hint_info">"힌트 : "</string>
     <string name="Loading">응답대기중...</string>
     <string name="Login">Login</string>
     <string name="Logout_msg">로그아웃되었습니다.</string>
@@ -153,18 +154,19 @@
     <string name="quiz_num">퀴즈 번호</string>
     <string name="quiz_region">획득 장소</string>
     <string name="rank_descrip">순위와 등급, 점수를 확인할 수 있습니다. 또한, 전체 순위표를 확인할 수 있습니다.</string>
-    <string name="region">Region</string>
+    <string name="region">지역</string>
     <string name="replay">다시 보기</string>
     <string name="replay_descrip">이 설명을 다시 보고 싶으시면, 이 버튼을 눌러주세요.</string>
+    <string name="score">"점수 : "</string>
     <string msgid="146198913615257606" name="search_menu_title">"검색"</string>
     <string name="setting_lang">언어 설정</string>
+    <string name="side_tuto">                앱 소개 다시 보기</string>
     <string name="side_닉네임">                닉네임 : %s</string>
     <string name="side_등급">                등급 : %s</string>
     <string name="side_점수">                점수 : %s</string>
     <string name="side_코드번호">                코드번호 : %s</string>
     <string name="side_힌트수">                남은 힌트 수 : %s</string>
     <string msgid="2869576371154716097" name="status_bar_notification_info_overflow">"999+"</string>
-    <string name="subway_text">                지하철 노선도</string>
     <string name="tuto_2">서울행은 증강현실을 이용한\n교육/관광용 게임입니다.</string>
     <string name="tuto_3">지도에 나와 있는 위치로 가서\n카메라를 켜고 주변을 둘러보세요.</string>
     <string name="tuto_4">목표를 발견하면 터치하여 퀴즈를 획득하세요.\n퀴즈를 풀어서 점수를 쌓고 순위를 올리세요.</string>
@@ -190,7 +192,7 @@
     <string name="다이아몬드">다이아몬드</string>
     <string name="달성률">달성률 </string>
     <string name="등급">등급</string>
-    <string name="등급정보">Rating Table</string>
+    <string name="등급정보">등급표</string>
     <string name="등급차트">챌린저 = 450점 \n마스터 = 340점 \n다이아몬드 = 240점 \n플래티넘 = 160점 \n골드 = 90점 \n실버 = 40점 \n브론즈 = 10점</string>
     <string name="등급표">                등급표</string>
     <string name="랭킹">랭킹</string>
