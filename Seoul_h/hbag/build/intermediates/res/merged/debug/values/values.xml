@@ -913,6 +913,7 @@
     <string name="Hint_info">"힌트 : "</string>
     <string name="Loading">응답대기중...</string>
     <string name="Login">Login</string>
+    <string name="Login_title">로그인</string>
     <string name="Logout_msg">로그아웃되었습니다.</string>
     <string name="Name">Name</string>
     <string name="Notice">한 줄 공지</string>
@@ -963,7 +964,7 @@
     <string name="checkEmail">형식에 맞지 않는 메일 주소입니다.</string>
     <string name="checkplease">ID중복확인을 해주십시오.</string>
     <string name="close_drawer">close drawerclose drawerclose drawerclose drawerclose drawer</string>
-    <string name="com.crashlytics.android.build_id" ns1:ignore="UnusedResources,TypographyDashes" translatable="false">5a3640ce-aa8e-4cef-9604-766da82ea279</string>
+    <string name="com.crashlytics.android.build_id" ns1:ignore="UnusedResources,TypographyDashes" translatable="false">54b8d458-5b77-4f51-bc95-ea5d767cc336</string>
     <string name="com_facebook_device_auth_instructions">Visit &lt;b>facebook.com/device&lt;/b> and enter the code shown above.</string>
     <string name="com_facebook_image_download_unknown_error">Unexpected error while downloading an image.</string>
     <string name="com_facebook_internet_permission_error_message">WebView login requires INTERNET permission</string>
@@ -1026,6 +1027,7 @@
     <string name="hint_msg">힌트를 보시겠습니까?\n힌트 보너스가 1 소모됩니다.</string>
     <string name="home_descrip">첫 시작 페이지입니다. 가장 최근에 획득한 문제가 표시되며, 지도보기, 카메라실행 등을 할 수 있습니다.</string>
     <string name="id">ID</string>
+    <string name="id_change"><u>아이디 변경하기</u></string>
     <string name="info_descrip">현재까지 획득한 점수와 남은 힌트보너스를 확인할 수 있습니다. 지금까지 풀어온 퀴즈들을 확인할 수 있으며 서울시 내의 구 단위로 달성률과 해당 구의 설명을 볼 수 있습니다.</string>
     <string name="insert_quiz">Insert Quiz</string>
     <string name="kakao_app_key">45d3abc0fba429258e010957df473e42</string>

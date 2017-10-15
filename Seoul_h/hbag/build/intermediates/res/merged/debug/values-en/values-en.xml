@@ -39,6 +39,7 @@
     <string name="Hint_info">"Hints : "</string>
     <string name="Loading">LOADING...</string>
     <string name="Login">Login</string>
+    <string name="Login_title">Log in</string>
     <string name="Logout_msg">You have been signed out.</string>
     <string name="Name">Name</string>
     <string name="Notice">Notice</string>
@@ -70,6 +71,7 @@
     <string name="hint_msg">Do you want to see the hint?\nOne hint bonus is required.</string>
     <string name="home_descrip">This is the first start page. The most recently acquired quiz is displayed, and you can view the map, run the camera, and more.</string>
     <string name="id">ID</string>
+    <string name="id_change"><u>Change Id</u></string>
     <string name="info_descrip">You can see the score you have earned so far and the remaining hint bonus. You can see the quizzes that have been solved so far, and you can see the achievement rate per district and the description of the district in Seoul city.</string>
     <string name="insert_quiz">Insert Quiz</string>
     <string name="kakao_app_key">45d3abc0fba429258e010957df473e42</string>

@@ -194,5 +194,7 @@
     <string name="Hint_info">"힌트 : "</string>
     <string name="score">"점수 : "</string>
     <string name="side_tuto">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;앱 소개 다시 보기</string>
+    <string name="Login_title">로그인</string>
+    <string name="id_change"><u>아이디 변경하기</u></string>
 
 </resources>

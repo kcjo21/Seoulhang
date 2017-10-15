@@ -430,9 +430,9 @@ public final class R {
         public static final int abc_shareactionprovider_share_with = 0x7f070010;
         public static final int abc_shareactionprovider_share_with_application = 0x7f070011;
         public static final int abc_toolbar_collapse_description = 0x7f070012;
-        public static final int action_settings = 0x7f070057;
-        public static final int app_name = 0x7f070059;
-        public static final int hello_world = 0x7f070115;
+        public static final int action_settings = 0x7f070058;
+        public static final int app_name = 0x7f07005a;
+        public static final int hello_world = 0x7f070117;
     }
     public static final class style {
         public static final int Base_TextAppearance_AppCompat = 0x7f0b0045;

@@ -72,10 +72,10 @@ public class LoginActivity extends BaseActivity implements
     LinearLayout regist_lay;
     LinearLayout syncbt_lay;
     LinearLayout loginbt_lay;
-    ImageView title_login;
+    TextView title_login;
     ActionProcessButton login;
     Button set;
-    ImageButton logoutsync;
+    TextView logoutsync;
     Button bt_facebookLogin;
     Button bt_googleSignbt;
     EditText loginId_tv;
@@ -108,7 +108,7 @@ public class LoginActivity extends BaseActivity implements
         regist_lay = (LinearLayout) findViewById(R.id.register_lay);
         syncbt_lay = (LinearLayout) findViewById(R.id.syncbtset_lay);
         loginbt_lay = (LinearLayout) findViewById(R.id.loginbutton_lay);
-        title_login = (ImageView) findViewById(R.id.iv_title);
+        title_login = (TextView) findViewById(R.id.iv_title);
         password = (EditText) findViewById(R.id.loginPass);
         loginId_tv = (EditText) findViewById(R.id.loginId);
         join = (TextView) findViewById(R.id.join_tm);
@@ -116,7 +116,7 @@ public class LoginActivity extends BaseActivity implements
         findPass = (TextView) findViewById(R.id.find_pass_t);
         login = (ActionProcessButton) findViewById(R.id.Login);
         set = (Button) findViewById(R.id.bt_set);
-        logoutsync = (ImageButton) findViewById(R.id.bt_logout_sync);
+        logoutsync = (TextView) findViewById(R.id.bt_logout_sync);
         bt_facebookLogin = (Button) findViewById(R.id.bt_facebookLogin);
         bt_googleSignbt = (Button) findViewById(R.id.bt_googleLogin);
         ipm = new Ipm();

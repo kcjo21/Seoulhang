@@ -194,4 +194,6 @@
     <string name="Hint_info">"Hints : "</string>
     <string name="score">"Score : "</string>
     <string name="side_tuto">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Review app introduction</string>
+    <string name="Login_title">Log in</string>
+    <string name="id_change"><u>Change Id</u></string>
 </resources>

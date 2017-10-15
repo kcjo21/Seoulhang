@@ -16,14 +16,11 @@ import com.hbag.seoulhang.model.database.Player;
 import java.util.Locale;
 
 public class SplashActivity extends AppCompatActivity {
-    Player player;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         setContentView(R.layout.splash);
         super.onCreate(savedInstanceState);
-        ImageView run = (ImageView)findViewById(R.id.running_man);
-        ImageView load =  (ImageView)findViewById(R.id.load);
         Handler s = new Handler();
         s.postDelayed(new splashhanddler(),2000);
 

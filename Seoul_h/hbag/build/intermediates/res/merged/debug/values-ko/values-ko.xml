@@ -39,6 +39,7 @@
     <string name="Hint_info">"힌트 : "</string>
     <string name="Loading">응답대기중...</string>
     <string name="Login">Login</string>
+    <string name="Login_title">로그인</string>
     <string name="Logout_msg">로그아웃되었습니다.</string>
     <string name="Name">Name</string>
     <string name="Notice">한 줄 공지</string>
@@ -129,6 +130,7 @@
     <string name="hint_msg">힌트를 보시겠습니까?\n힌트 보너스가 1소모됩니다.</string>
     <string name="home_descrip">첫 시작 페이지입니다. 가장 최근에 획득한 문제가 표시되며, 지도보기, 카메라실행 등을 할 수 있습니다.</string>
     <string name="id">ID</string>
+    <string name="id_change"><u>아이디 변경하기</u></string>
     <string name="info_descrip">현재까지 획득한 점수와 남은 힌트보너스를 확인할 수 있습니다. 지금까지 풀어온 퀴즈들을 확인할 수 있으며 서울시 내의 구 단위로 달성률과 해당 구의 설명을 볼 수 있습니다.</string>
     <string name="insert_quiz">Insert Quiz</string>
     <string name="kakao_app_key">45d3abc0fba429258e010957df473e42</string>
