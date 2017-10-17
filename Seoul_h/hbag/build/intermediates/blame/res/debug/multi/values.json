@@ -5561,7 +5561,14 @@
                     "endOffset": 75968
                 },
                 "from": {
-                    "file": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\generated\\fabric\\res\\debug\\values\\com_crashlytics_build_id.xml"
+                    "file": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\generated\\fabric\\res\\debug\\values\\com_crashlytics_build_id.xml",
+                    "position": {
+                        "startLine": 8,
+                        "startColumn": 0,
+                        "startOffset": 311,
+                        "endColumn": 162,
+                        "endOffset": 473
+                    }
                 }
             },
             {
@@ -6317,14 +6324,7 @@
                     "endOffset": 81951
                 },
                 "from": {
-                    "file": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 197,
-                        "startColumn": 4,
-                        "startOffset": 11707,
-                        "endColumn": 53,
-                        "endOffset": 11756
-                    }
+                    "file": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\src\\main\\res\\values\\strings.xml"
                 }
             },
             {

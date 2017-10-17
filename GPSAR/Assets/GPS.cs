@@ -57,11 +57,11 @@ public class GPS : MonoBehaviour {
 
         string region_c = "";
         string region_n = "";
-        string filepath = Application.persistentDataPath + "/new_gps.db";
+        string filepath = Application.persistentDataPath + "/seoulhang.sqlite";
 
         if (!File.Exists(filepath))
         {
-            WWW loadDB = new WWW("jar:file://" + Application.dataPath + "!/assets/" + "new_gps.db");  
+            WWW loadDB = new WWW("jar:file://" + Application.dataPath + "!/assets/" + "seoulhang.sqlite");  
             while (!loadDB.isDone) { }
             File.WriteAllBytes(filepath, loadDB.bytes);
         }
@@ -75,7 +75,7 @@ public class GPS : MonoBehaviour {
         _dbc = new SqliteConnection(_constr);
         _dbc.Open();
         _dbcm = _dbc.CreateCommand();
-        _dbcm.CommandText = "SELECT region_code,station_name FROM GPSDATA WHERE (abs(lat-" + latitude + "))*(abs(lat-" + latitude + "))+(abs(long-" + longitude + "))*(abs(long-" + longitude + "))<=(0.002)*(0.002)"; //현재위치에서 500m안에 있는 역
+        _dbcm.CommandText = "SELECT question_code,question_name FROM questions WHERE (abs(x_coordinate-" + latitude + "))*(abs(x_coordinate-" + latitude + "))+(abs(y_coordinate-" + longitude + "))*(abs(y_coordinate-" + longitude + "))<=(0.002)*(0.002)"; //현재위치에서 500m안에 있는 역
         _dbr = _dbcm.ExecuteReader();
         while (_dbr.Read())
         {
@@ -87,7 +87,9 @@ public class GPS : MonoBehaviour {
 
 
         region_code = region_c;
+        Debug.Log(region_c);
         region_name = region_n;
+        Debug.Log(region_n);
 
         if (region_c == "" || region_n == "")         //gps에 해당되지 않는 위치일시 오브젝트 비활성화
         {
