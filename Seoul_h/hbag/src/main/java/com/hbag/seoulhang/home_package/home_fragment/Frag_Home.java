@@ -205,9 +205,6 @@ public class Frag_Home extends BaseFragment {
                     viewFlipper.addView(tv_notice);
 
 
-                    Log.d("공지 제목", title);
-                    Log.d("공지 내용", contents);
-                    Log.d("공지 날짜", sDate);
                 }
                 TextView tv_notice = new TextView(getContext());
                 tv_notice.setText(":+'\n'+title1231241212412412412");

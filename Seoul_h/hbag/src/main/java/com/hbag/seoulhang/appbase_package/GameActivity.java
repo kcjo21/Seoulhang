@@ -142,10 +142,11 @@ public class GameActivity extends UnityPlayerActivity {
 
     @Override
     public void onTouch(String questioncode) {
+        Log.d("실행됨","실행안됨");
         Intent id = getIntent();
         final String playerid = id.getExtras().getString("playerid");
         final int q_code = Integer.parseInt(questioncode);
-        Log.e("게임액티비티확인",playerid);
+        Log.d("게임액티비티확인",playerid);
         ipm = new Ipm();
         String ip = ipm.getip();
         networkClient = NetworkClient.getInstance(ip);
@@ -169,7 +170,7 @@ public class GameActivity extends UnityPlayerActivity {
             }
 
         });
-        Log.e("QUSTIONNUM: ",questioncode);
+        Log.d("QUSETIONNUM: ",questioncode);
         Intent intent = new Intent(GameActivity.this,Home_Main.class);
         intent.putExtra("got",0);
         setResult(RESULT_OK,intent);

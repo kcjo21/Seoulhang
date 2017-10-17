@@ -83,7 +83,7 @@ public class Frag_Quiz extends Fragment {
                         mLayoutManager = new LinearLayoutManager(getActivity());
                         mRecyclerView.setLayoutManager(mLayoutManager);  //레이아웃 매니저를 사용한다.
                         myDataset = new ArrayList<>();
-                        mAdapter = new RecyclerAdapter(myDataset);
+                        mAdapter = new RecyclerAdapter(myDataset,getActivity());
                         mRecyclerView.setAdapter(mAdapter);       //어탭더 정의
 
                         ItemDTO check=inventories.get(0);

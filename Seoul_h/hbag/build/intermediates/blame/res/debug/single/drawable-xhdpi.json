@@ -8,20 +8,24 @@
         "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\src\\main\\res\\drawable-xhdpi\\side_title_facebook.png"
     },
     {
-        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\nine.png",
-        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\src\\main\\res\\drawable-xhdpi\\nine.png"
-    },
-    {
-        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\side_title_normal.png",
-        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\src\\main\\res\\drawable-xhdpi\\side_title_normal.png"
+        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\eight.png",
+        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\src\\main\\res\\drawable-xhdpi\\eight.png"
     },
     {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\side_setting_on.png",
         "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\src\\main\\res\\drawable-xhdpi\\side_setting_on.png"
     },
     {
-        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\eight.png",
-        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\src\\main\\res\\drawable-xhdpi\\eight.png"
+        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\side_title_normal.png",
+        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\src\\main\\res\\drawable-xhdpi\\side_title_normal.png"
+    },
+    {
+        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\nine.png",
+        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\src\\main\\res\\drawable-xhdpi\\nine.png"
+    },
+    {
+        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\com_facebook_button_send_icon.png",
+        "source": "C:\\Users\\cwh62\\.android\\build-cache\\f95b08119c798034bcb1e4d61bbaee8ec1afef5c\\output\\res\\drawable-xhdpi\\com_facebook_button_send_icon.png"
     },
     {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\quiz_1.png",
@@ -32,6 +36,10 @@
         "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\src\\main\\res\\drawable-xhdpi\\camera_mode.png"
     },
     {
+        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\com_facebook_tooltip_blue_bottomnub.png",
+        "source": "C:\\Users\\cwh62\\.android\\build-cache\\f95b08119c798034bcb1e4d61bbaee8ec1afef5c\\output\\res\\drawable-xhdpi\\com_facebook_tooltip_blue_bottomnub.png"
+    },
+    {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\rank_1.png",
         "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\src\\main\\res\\drawable-xhdpi\\rank_1.png"
     },
@@ -40,12 +48,12 @@
         "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\src\\main\\res\\drawable-xhdpi\\seven.png"
     },
     {
-        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\side_camera_on_on.png",
-        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\src\\main\\res\\drawable-xhdpi\\side_camera_on_on.png"
-    },
-    {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\camera.png",
         "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\src\\main\\res\\drawable-xhdpi\\camera.png"
+    },
+    {
+        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\side_camera_on_on.png",
+        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\src\\main\\res\\drawable-xhdpi\\side_camera_on_on.png"
     },
     {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\run_2.png",
@@ -72,12 +80,20 @@
         "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\src\\main\\res\\drawable-xhdpi\\logout_bt_normal.png"
     },
     {
+        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\messenger_bubble_large_white.png",
+        "source": "C:\\Users\\cwh62\\.android\\build-cache\\f95b08119c798034bcb1e4d61bbaee8ec1afef5c\\output\\res\\drawable-xhdpi\\messenger_bubble_large_white.png"
+    },
+    {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\three.png",
         "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\src\\main\\res\\drawable-xhdpi\\three.png"
     },
     {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\quiz_2.png",
         "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\src\\main\\res\\drawable-xhdpi\\quiz_2.png"
+    },
+    {
+        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\com_facebook_tooltip_black_xout.png",
+        "source": "C:\\Users\\cwh62\\.android\\build-cache\\f95b08119c798034bcb1e4d61bbaee8ec1afef5c\\output\\res\\drawable-xhdpi\\com_facebook_tooltip_black_xout.png"
     },
     {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\camera_mode_on.png",
@@ -104,16 +120,16 @@
         "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\src\\main\\res\\drawable-xhdpi\\help_tuto.png"
     },
     {
-        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\logout_dialog_bt_no_on.png",
-        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\src\\main\\res\\drawable-xhdpi\\logout_dialog_bt_no_on.png"
+        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\sign_in_facebook.png",
+        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\src\\main\\res\\drawable-xhdpi\\sign_in_facebook.png"
     },
     {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\num_1.png",
         "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\src\\main\\res\\drawable-xhdpi\\num_1.png"
     },
     {
-        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\sign_in_facebook.png",
-        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\src\\main\\res\\drawable-xhdpi\\sign_in_facebook.png"
+        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\logout_dialog_bt_no_on.png",
+        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\src\\main\\res\\drawable-xhdpi\\logout_dialog_bt_no_on.png"
     },
     {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\rate.png",
@@ -132,12 +148,16 @@
         "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\src\\main\\res\\drawable-xhdpi\\rank_2.png"
     },
     {
+        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\run_3.png",
+        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\src\\main\\res\\drawable-xhdpi\\run_3.png"
+    },
+    {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\title_rank.png",
         "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\src\\main\\res\\drawable-xhdpi\\title_rank.png"
     },
     {
-        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\run_3.png",
-        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\src\\main\\res\\drawable-xhdpi\\run_3.png"
+        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\com_facebook_tooltip_black_background.9.png",
+        "source": "C:\\Users\\cwh62\\.android\\build-cache\\f95b08119c798034bcb1e4d61bbaee8ec1afef5c\\output\\res\\drawable-xhdpi\\com_facebook_tooltip_black_background.9.png"
     },
     {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\side_subway.png",
@@ -150,6 +170,10 @@
     {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\side_map_view.png",
         "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\src\\main\\res\\drawable-xhdpi\\side_map_view.png"
+    },
+    {
+        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\messenger_bubble_large_blue.png",
+        "source": "C:\\Users\\cwh62\\.android\\build-cache\\f95b08119c798034bcb1e4d61bbaee8ec1afef5c\\output\\res\\drawable-xhdpi\\messenger_bubble_large_blue.png"
     },
     {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\side_grade.png",
@@ -200,8 +224,16 @@
         "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\src\\main\\res\\drawable-xhdpi\\subway_image_on.png"
     },
     {
+        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\com_facebook_close.png",
+        "source": "C:\\Users\\cwh62\\.android\\build-cache\\f95b08119c798034bcb1e4d61bbaee8ec1afef5c\\output\\res\\drawable-xhdpi\\com_facebook_close.png"
+    },
+    {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\map_image_on.png",
         "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\src\\main\\res\\drawable-xhdpi\\map_image_on.png"
+    },
+    {
+        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\com_facebook_tooltip_black_topnub.png",
+        "source": "C:\\Users\\cwh62\\.android\\build-cache\\f95b08119c798034bcb1e4d61bbaee8ec1afef5c\\output\\res\\drawable-xhdpi\\com_facebook_tooltip_black_topnub.png"
     },
     {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\tier_gold.png",
@@ -220,12 +252,20 @@
         "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\src\\main\\res\\drawable-xhdpi\\logout_dialog_text.png"
     },
     {
+        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\com_facebook_button_like_icon_selected.png",
+        "source": "C:\\Users\\cwh62\\.android\\build-cache\\f95b08119c798034bcb1e4d61bbaee8ec1afef5c\\output\\res\\drawable-xhdpi\\com_facebook_button_like_icon_selected.png"
+    },
+    {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\new_four.png",
         "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\src\\main\\res\\drawable-xhdpi\\new_four.png"
     },
     {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\tier_challenger.png",
         "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\src\\main\\res\\drawable-xhdpi\\tier_challenger.png"
+    },
+    {
+        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\com_facebook_tooltip_blue_background.9.png",
+        "source": "C:\\Users\\cwh62\\.android\\build-cache\\f95b08119c798034bcb1e4d61bbaee8ec1afef5c\\output\\res\\drawable-xhdpi\\com_facebook_tooltip_blue_background.9.png"
     },
     {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\new_one.png",
@@ -266,6 +306,10 @@
     {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\text_name.png",
         "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\src\\main\\res\\drawable-xhdpi\\text_name.png"
+    },
+    {
+        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\com_facebook_tooltip_blue_xout.png",
+        "source": "C:\\Users\\cwh62\\.android\\build-cache\\f95b08119c798034bcb1e4d61bbaee8ec1afef5c\\output\\res\\drawable-xhdpi\\com_facebook_tooltip_blue_xout.png"
     },
     {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\four.png",
@@ -312,6 +356,10 @@
         "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\src\\main\\res\\drawable-xhdpi\\new_five.png"
     },
     {
+        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\messenger_bubble_small_blue.png",
+        "source": "C:\\Users\\cwh62\\.android\\build-cache\\f95b08119c798034bcb1e4d61bbaee8ec1afef5c\\output\\res\\drawable-xhdpi\\messenger_bubble_small_blue.png"
+    },
+    {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\new_three.png",
         "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\src\\main\\res\\drawable-xhdpi\\new_three.png"
     },
@@ -352,6 +400,10 @@
         "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\src\\main\\res\\drawable-xhdpi\\run_6.png"
     },
     {
+        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\com_facebook_tooltip_black_bottomnub.png",
+        "source": "C:\\Users\\cwh62\\.android\\build-cache\\f95b08119c798034bcb1e4d61bbaee8ec1afef5c\\output\\res\\drawable-xhdpi\\com_facebook_tooltip_black_bottomnub.png"
+    },
+    {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\silver.png",
         "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\src\\main\\res\\drawable-xhdpi\\silver.png"
     },
@@ -372,6 +424,14 @@
         "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\src\\main\\res\\drawable-xhdpi\\new_six.png"
     },
     {
+        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\com_facebook_button_icon.png",
+        "source": "C:\\Users\\cwh62\\.android\\build-cache\\f95b08119c798034bcb1e4d61bbaee8ec1afef5c\\output\\res\\drawable-xhdpi\\com_facebook_button_icon.png"
+    },
+    {
+        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\com_facebook_tooltip_blue_topnub.png",
+        "source": "C:\\Users\\cwh62\\.android\\build-cache\\f95b08119c798034bcb1e4d61bbaee8ec1afef5c\\output\\res\\drawable-xhdpi\\com_facebook_tooltip_blue_topnub.png"
+    },
+    {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\tier_platinum.png",
         "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\src\\main\\res\\drawable-xhdpi\\tier_platinum.png"
     },
@@ -386,6 +446,10 @@
     {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\two.png",
         "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\src\\main\\res\\drawable-xhdpi\\two.png"
+    },
+    {
+        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\messenger_button_send_round_shadow.png",
+        "source": "C:\\Users\\cwh62\\.android\\build-cache\\f95b08119c798034bcb1e4d61bbaee8ec1afef5c\\output\\res\\drawable-xhdpi\\messenger_button_send_round_shadow.png"
     },
     {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\side_title_google.png",
@@ -418,6 +482,10 @@
     {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\app_icon.png",
         "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\src\\main\\res\\drawable-xhdpi\\app_icon.png"
+    },
+    {
+        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\messenger_bubble_small_white.png",
+        "source": "C:\\Users\\cwh62\\.android\\build-cache\\f95b08119c798034bcb1e4d61bbaee8ec1afef5c\\output\\res\\drawable-xhdpi\\messenger_bubble_small_white.png"
     },
     {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\title_home.png",

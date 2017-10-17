@@ -23,6 +23,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 import com.dd.processbutton.iml.ActionProcessButton;
+import com.facebook.FacebookSdk;
 import com.facebook.GraphRequest;
 import com.facebook.GraphResponse;
 
@@ -126,6 +127,8 @@ public class LoginActivity extends BaseActivity implements
         keyboard = (InputMethodManager) getSystemService(INPUT_METHOD_SERVICE);
         profile = UserProfileData_singleton.getInstance();
 
+        FacebookSdk.sdkInitialize(getApplicationContext());
+
 
         sharedPreferences = getSharedPreferences("log", MODE_PRIVATE);
         final String loginPref = sharedPreferences.getString("logintype", "");     //이전 접속 상태를 불러온다.
@@ -168,7 +171,6 @@ public class LoginActivity extends BaseActivity implements
                     return;
                 }
                 mLastClickTime = SystemClock.elapsedRealtime();
-
 
                 //LoginManager - 요청된 읽기 또는 게시 권한으로 페이스북 로그인 절차를 시작합니다.
                 LoginManager.getInstance().logInWithReadPermissions(LoginActivity.this,

@@ -8,16 +8,14 @@
     android:orientation="vertical"
     android:weightSum="100">
 
-    <TextView
-        android:id="@+id/textView14"
+    <LinearLayout
+        android:id="@+id/border"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
         android:background="@color/Carkviewline"
         android:gravity="center_vertical|center_horizontal"
-        android:text="q"
-        android:textColor="@android:color/black"
-        tools:ignore="HardcodedText" />
+        android:orientation="horizontal" />
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -26,53 +24,61 @@
         android:background="@color/white"
         android:gravity="center_vertical">
 
-        <TextView
-            android:id="@+id/info_email"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignStart="@+id/info_name"
-            android:layout_below="@+id/info_name"
-            android:layout_marginTop="5dp"
-            android:text="cwh6272@naver.com"
-            android:textColor="@android:color/black"
-            android:textSize="12dp"
-            tools:ignore="HardcodedText,SpUsage" />
-
-        <TextView
-            android:id="@+id/info_name"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignTop="@+id/info_grade"
-            android:layout_marginStart="5dp"
-            android:layout_marginTop="10dp"
-            android:layout_toEndOf="@+id/info_grade"
-            android:text="닉네임입니다."
-            android:textColor="@android:color/black"
-            android:textSize="16dp"
-            android:textStyle="bold"
-            tools:ignore="HardcodedText,SpUsage" />
-
         <ImageView
             android:id="@+id/info_grade"
             android:layout_width="50dp"
             android:layout_height="50dp"
+            android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginEnd="20dp"
+            android:layout_centerVertical="false"
+            android:layout_marginLeft="20dp"
             android:layout_marginStart="20dp"
             android:contentDescription="@string/등급"
             app:srcCompat="@drawable/tier_gold" />
 
         <TextView
+            android:id="@+id/info_name"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_toEndOf="@+id/info_grade"
+            android:layout_toRightOf="@+id/info_grade"
+            android:gravity="center_vertical"
+            android:maxWidth="120dp"
+            android:text="가나다라마바사아자차카타파하"
+            android:textColor="@android:color/black"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText,SpUsage" />
+
+        <TextView
+            android:id="@+id/info_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/info_name"
+            android:layout_alignStart="@+id/info_name"
+            android:layout_below="@+id/info_name"
+            android:maxWidth="145dp"
+            android:text="cwh6272cwh6272@naver.com"
+            android:textColor="@android:color/black"
+            android:textSize="10dp"
+            tools:ignore="HardcodedText,SpUsage" />
+
+        <TextView
             android:id="@+id/info_point"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignBaseline="@+id/info_name"
-            android:layout_alignBottom="@+id/info_name"
-            android:layout_marginStart="30dp"
-            android:layout_toEndOf="@+id/info_email"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/info_name"
+            android:layout_marginLeft="45dp"
+            android:layout_marginStart="45dp"
+            android:layout_toEndOf="@+id/info_name"
+            android:layout_toRightOf="@+id/info_name"
             android:maxLines="1"
-            android:text="점수 : 99"
+            android:text="점수 : 9999"
             android:textColor="@android:color/black"
             android:textSize="14dp"
             tools:ignore="HardcodedText,SpUsage" />
@@ -81,14 +87,19 @@
             android:id="@+id/info_hint"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignTop="@+id/info_email"
-            android:layout_marginStart="30dp"
-            android:layout_toEndOf="@+id/info_email"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/info_point"
+            android:layout_marginLeft="45dp"
+            android:layout_marginStart="45dp"
+            android:layout_toEndOf="@+id/info_name"
+            android:layout_toRightOf="@+id/info_name"
             android:maxLines="1"
-            android:text="힌트 : 99"
+            android:text="힌트 : 9999"
             android:textColor="@android:color/black"
             android:textSize="14dp"
             tools:ignore="HardcodedText,SpUsage" />
+
     </RelativeLayout>
 
     <LinearLayout
@@ -104,6 +115,8 @@
         android:layout_height="0dp"
         android:layout_marginBottom="5dp"
         android:layout_marginEnd="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
         android:layout_marginStart="5dp"
         android:layout_marginTop="5dp"
         android:layout_weight="4.5"
@@ -119,6 +132,8 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginEnd="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
         android:layout_marginStart="5dp"
         android:layout_weight="78.5"
         android:visibility="visible" />
@@ -128,6 +143,8 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginEnd="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
         android:layout_marginStart="5dp"
         android:layout_weight="78.5"
         android:gravity="center_vertical|center_horizontal"

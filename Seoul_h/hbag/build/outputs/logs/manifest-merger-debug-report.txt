@@ -35,14 +35,13 @@ MERGED from [com.android.support:design:25.3.1] C:\Users\cwh62\.android\build-ca
 MERGED from [com.android.support:recyclerview-v7:25.3.1] C:\Users\cwh62\.android\build-cache\16b76ed60be6d6f5795aaad4ab9dc6f5c5e1e53e\output\AndroidManifest.xml:20:5-43
 MERGED from [com.android.support:transition:25.3.1] C:\Users\cwh62\.android\build-cache\815ab4dd66c21aac42d85b21215193d8e173701d\output\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\cwh62\.android\build-cache\b7c5330fea9791c5f26caa3071204c7cfbd8be12\output\AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support:cardview-v7:25.3.1] C:\Users\cwh62\.android\build-cache\c0bf160209d4ce27bf1475b9cbf60b683a589dd2\output\AndroidManifest.xml:20:5-43
 MERGED from [com.google.android.gms:play-services-maps:11.0.4] C:\Users\cwh62\.android\build-cache\f25ddd1c1f8056611c76ad7ff186f6088ec69e0a\output\AndroidManifest.xml:23:5-43
 MERGED from [com.google.android.gms:play-services-location:11.0.4] C:\Users\cwh62\.android\build-cache\2db2b8cd8636bd1a8d45172a98240a1da85413a4\output\AndroidManifest.xml:3:5-43
 MERGED from [com.google.android.gms:play-services-auth:11.0.4] C:\Users\cwh62\.android\build-cache\bd1a4cdf40f8c14ca3cecb4db1df799c18a87d3a\output\AndroidManifest.xml:17:5-43
 MERGED from [com.google.android.gms:play-services-auth-base:11.0.4] C:\Users\cwh62\.android\build-cache\d13e0ae8fb3b2ec8c10b05e76404a8fbc2017e52\output\AndroidManifest.xml:4:5-43
 MERGED from [com.google.android.gms:play-services-base:11.0.4] C:\Users\cwh62\.android\build-cache\353c8d830c306275ace0a67ed049e72dd1067f85\output\AndroidManifest.xml:17:5-43
-MERGED from [com.facebook.android:facebook-android-sdk:4.26.0] C:\Users\cwh62\.android\build-cache\1323e2a7232f50a97d38f0ddc433bbfaeaf04b88\output\AndroidManifest.xml:24:5-26:41
-MERGED from [com.android.support:cardview-v7:25.3.1] C:\Users\cwh62\.android\build-cache\c0bf160209d4ce27bf1475b9cbf60b683a589dd2\output\AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:customtabs:25.3.1] C:\Users\cwh62\.android\build-cache\b5281cdc46ca7041398390d40fc2854472c83025\output\AndroidManifest.xml:20:5-44
+MERGED from [com.facebook.android:facebook-android-sdk:4.5.0] C:\Users\cwh62\.android\build-cache\f95b08119c798034bcb1e4d61bbaee8ec1afef5c\output\AndroidManifest.xml:24:5-26:41
 MERGED from [com.github.takusemba:spotlight:1.1.3] C:\Users\cwh62\.android\build-cache\ce57fa08144d3fd3d3b64cdfb66fd4ade0c88abf\output\AndroidManifest.xml:7:5-9:41
 MERGED from [com.android.support:appcompat-v7:25.3.1] C:\Users\cwh62\.android\build-cache\1860e7502bea0f552aaa4935120bb2accced6b21\output\AndroidManifest.xml:21:5-23:78
 MERGED from [com.android.support:animated-vector-drawable:25.3.1] C:\Users\cwh62\.android\build-cache\6730870617d47df13bc774a65c1c86c27dbc12ef\output\AndroidManifest.xml:20:5-44
@@ -194,13 +193,12 @@ MERGED from [io.fabric.sdk.android:fabric:1.3.17] C:\Users\cwh62\.android\build-
 MERGED from [com.android.support:design:25.3.1] C:\Users\cwh62\.android\build-cache\2296c6d153ca9492798042173aaf4756857c6a9d\output\AndroidManifest.xml:29:5-20
 MERGED from [com.android.support:transition:25.3.1] C:\Users\cwh62\.android\build-cache\815ab4dd66c21aac42d85b21215193d8e173701d\output\AndroidManifest.xml:26:5-20
 MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\cwh62\.android\build-cache\b7c5330fea9791c5f26caa3071204c7cfbd8be12\output\AndroidManifest.xml:9:5-20
+MERGED from [com.android.support:cardview-v7:25.3.1] C:\Users\cwh62\.android\build-cache\c0bf160209d4ce27bf1475b9cbf60b683a589dd2\output\AndroidManifest.xml:26:5-20
 MERGED from [com.google.android.gms:play-services-maps:11.0.4] C:\Users\cwh62\.android\build-cache\f25ddd1c1f8056611c76ad7ff186f6088ec69e0a\output\AndroidManifest.xml:24:5-19
 MERGED from [com.google.android.gms:play-services-location:11.0.4] C:\Users\cwh62\.android\build-cache\2db2b8cd8636bd1a8d45172a98240a1da85413a4\output\AndroidManifest.xml:4:5-19
 MERGED from [com.google.android.gms:play-services-auth:11.0.4] C:\Users\cwh62\.android\build-cache\bd1a4cdf40f8c14ca3cecb4db1df799c18a87d3a\output\AndroidManifest.xml:19:5-25:19
 MERGED from [com.google.android.gms:play-services-base:11.0.4] C:\Users\cwh62\.android\build-cache\353c8d830c306275ace0a67ed049e72dd1067f85\output\AndroidManifest.xml:18:5-20:19
-MERGED from [com.facebook.android:facebook-android-sdk:4.26.0] C:\Users\cwh62\.android\build-cache\1323e2a7232f50a97d38f0ddc433bbfaeaf04b88\output\AndroidManifest.xml:28:5-48:19
-MERGED from [com.android.support:cardview-v7:25.3.1] C:\Users\cwh62\.android\build-cache\c0bf160209d4ce27bf1475b9cbf60b683a589dd2\output\AndroidManifest.xml:26:5-20
-MERGED from [com.android.support:customtabs:25.3.1] C:\Users\cwh62\.android\build-cache\b5281cdc46ca7041398390d40fc2854472c83025\output\AndroidManifest.xml:26:5-20
+MERGED from [com.facebook.android:facebook-android-sdk:4.5.0] C:\Users\cwh62\.android\build-cache\f95b08119c798034bcb1e4d61bbaee8ec1afef5c\output\AndroidManifest.xml:28:5-20
 MERGED from [com.github.takusemba:spotlight:1.1.3] C:\Users\cwh62\.android\build-cache\ce57fa08144d3fd3d3b64cdfb66fd4ade0c88abf\output\AndroidManifest.xml:11:5-15:19
 MERGED from [com.android.support:appcompat-v7:25.3.1] C:\Users\cwh62\.android\build-cache\1860e7502bea0f552aaa4935120bb2accced6b21\output\AndroidManifest.xml:29:5-20
 MERGED from [com.android.support:animated-vector-drawable:25.3.1] C:\Users\cwh62\.android\build-cache\6730870617d47df13bc774a65c1c86c27dbc12ef\output\AndroidManifest.xml:26:5-20
@@ -382,15 +380,12 @@ ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\hbag\src\main\AndroidM
 		ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\hbag\src\main\AndroidManifest.xml:139:13-61
 activity#com.facebook.FacebookActivity
 ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\hbag\src\main\AndroidManifest.xml:142:9-146:52
-MERGED from [com.facebook.android:facebook-android-sdk:4.26.0] C:\Users\cwh62\.android\build-cache\1323e2a7232f50a97d38f0ddc433bbfaeaf04b88\output\AndroidManifest.xml:29:9-32:66
 	android:screenOrientation
 		ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\hbag\src\main\AndroidManifest.xml:146:13-49
 	android:label
 		ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\hbag\src\main\AndroidManifest.xml:145:13-45
 	android:configChanges
 		ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\hbag\src\main\AndroidManifest.xml:144:13-96
-	android:theme
-		ADDED from [com.facebook.android:facebook-android-sdk:4.26.0] C:\Users\cwh62\.android\build-cache\1323e2a7232f50a97d38f0ddc433bbfaeaf04b88\output\AndroidManifest.xml:32:13-63
 	android:name
 		ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\hbag\src\main\AndroidManifest.xml:143:13-57
 activity#com.hbag.seoulhang.home_package.home_fragment.Dragger_Quiz
@@ -442,7 +437,6 @@ ADDED from [com.android.support:design:25.3.1] C:\Users\cwh62\.android\build-cac
 MERGED from [com.android.support:recyclerview-v7:25.3.1] C:\Users\cwh62\.android\build-cache\16b76ed60be6d6f5795aaad4ab9dc6f5c5e1e53e\output\AndroidManifest.xml:22:5-24:34
 MERGED from [com.android.support:transition:25.3.1] C:\Users\cwh62\.android\build-cache\815ab4dd66c21aac42d85b21215193d8e173701d\output\AndroidManifest.xml:22:5-24:34
 MERGED from [com.android.support:cardview-v7:25.3.1] C:\Users\cwh62\.android\build-cache\c0bf160209d4ce27bf1475b9cbf60b683a589dd2\output\AndroidManifest.xml:22:5-24:34
-MERGED from [com.android.support:customtabs:25.3.1] C:\Users\cwh62\.android\build-cache\b5281cdc46ca7041398390d40fc2854472c83025\output\AndroidManifest.xml:22:5-24:34
 MERGED from [com.android.support:appcompat-v7:25.3.1] C:\Users\cwh62\.android\build-cache\1860e7502bea0f552aaa4935120bb2accced6b21\output\AndroidManifest.xml:25:5-27:34
 MERGED from [com.android.support:animated-vector-drawable:25.3.1] C:\Users\cwh62\.android\build-cache\6730870617d47df13bc774a65c1c86c27dbc12ef\output\AndroidManifest.xml:22:5-24:34
 MERGED from [com.android.support:support-vector-drawable:25.3.1] C:\Users\cwh62\.android\build-cache\dbe9f5decf0814ca3112de9fa169c05a9ef17fa4\output\AndroidManifest.xml:22:5-24:34
@@ -490,18 +484,6 @@ ADDED from [com.google.android.gms:play-services-base:11.0.4] C:\Users\cwh62\.an
 		ADDED from [com.google.android.gms:play-services-base:11.0.4] C:\Users\cwh62\.android\build-cache\353c8d830c306275ace0a67ed049e72dd1067f85\output\AndroidManifest.xml:19:86-145
 	android:name
 		ADDED from [com.google.android.gms:play-services-base:11.0.4] C:\Users\cwh62\.android\build-cache\353c8d830c306275ace0a67ed049e72dd1067f85\output\AndroidManifest.xml:19:19-85
-activity#com.facebook.CustomTabMainActivity
-ADDED from [com.facebook.android:facebook-android-sdk:4.26.0] C:\Users\cwh62\.android\build-cache\1323e2a7232f50a97d38f0ddc433bbfaeaf04b88\output\AndroidManifest.xml:33:9-71
-	android:name
-		ADDED from [com.facebook.android:facebook-android-sdk:4.26.0] C:\Users\cwh62\.android\build-cache\1323e2a7232f50a97d38f0ddc433bbfaeaf04b88\output\AndroidManifest.xml:33:19-68
-provider#com.facebook.internal.FacebookInitProvider
-ADDED from [com.facebook.android:facebook-android-sdk:4.26.0] C:\Users\cwh62\.android\build-cache\1323e2a7232f50a97d38f0ddc433bbfaeaf04b88\output\AndroidManifest.xml:44:9-47:40
-	android:authorities
-		ADDED from [com.facebook.android:facebook-android-sdk:4.26.0] C:\Users\cwh62\.android\build-cache\1323e2a7232f50a97d38f0ddc433bbfaeaf04b88\output\AndroidManifest.xml:46:13-72
-	android:exported
-		ADDED from [com.facebook.android:facebook-android-sdk:4.26.0] C:\Users\cwh62\.android\build-cache\1323e2a7232f50a97d38f0ddc433bbfaeaf04b88\output\AndroidManifest.xml:47:13-37
-	android:name
-		ADDED from [com.facebook.android:facebook-android-sdk:4.26.0] C:\Users\cwh62\.android\build-cache\1323e2a7232f50a97d38f0ddc433bbfaeaf04b88\output\AndroidManifest.xml:45:13-70
 uses-permission#android.permission.WAKE_LOCK
 ADDED from [com.google.firebase:firebase-analytics:11.0.4] C:\Users\cwh62\.android\build-cache\80c31c72aafdcb747d400efa205ed63b278c4c53\output\AndroidManifest.xml:22:5-67
 MERGED from [com.google.firebase:firebase-analytics-impl:11.0.4] C:\Users\cwh62\.android\build-cache\ceb709029468e7bb97124aab30935b0a1cbaf783\output\AndroidManifest.xml:22:5-67

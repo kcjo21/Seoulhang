@@ -33,32 +33,9 @@ public class UnityPlayerActivity extends Activity
         mUnityPlayer.requestFocus();
     }
     public void onTouch(String ObjName){
-        int region = Integer.parseInt(ObjName);
+       // int region = Integer.parseInt(ObjName);
         Bundle extras = getIntent().getExtras();
         String playerid=extras.getString("playerid");
-
-        NetworkClient networkClient = NetworkClient.getInstance("http://192.168.129.129:5000");
-        networkClient.getquestioncode(playerid, region, new Callback <QuestDTO>() {
-            @Override
-            public void onResponse(Call<QuestDTO> call, Response<QuestDTO> response) {
-                switch (response.code()){
-                    case 200:
-                        //json 데이터를 파싱하는 것을 수월하게 해준다.
-                        QuestDTO questDTO = response.body();
-                        break;
-                    default:
-                        break;
-                }
-            }
-
-            @Override
-            public void onFailure(Call<QuestDTO> call, Throwable t) {
-                Log.e("ACC","s?? " + t.getMessage());
-
-            }
-        });
-
-        Log.e("HIHI: ",ObjName);
 
     }
     public void onQuit(){

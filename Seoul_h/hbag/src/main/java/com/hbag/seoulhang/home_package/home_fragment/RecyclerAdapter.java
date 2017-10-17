@@ -1,5 +1,6 @@
 package com.hbag.seoulhang.home_package.home_fragment;
 
+import android.content.Context;
 import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -8,6 +9,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.hbag.seoulhang.R;
+import com.hbag.seoulhang.home_package.Home_Main;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -21,6 +23,7 @@ import static com.facebook.FacebookSdk.getApplicationContext;
 
 public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHolder> {
     private ArrayList<MyData_Q> mDataset;
+    public Context mContext;
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
 
@@ -40,8 +43,9 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
 
     }
 
-    public RecyclerAdapter(ArrayList<MyData_Q> myDataset) {
+    public RecyclerAdapter(ArrayList<MyData_Q> myDataset,Context context) {
         mDataset = myDataset;
+        mContext = context;
 
     }
 
@@ -63,10 +67,10 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
         holder.tap.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), Dragger_Quiz.class);
+                Intent intent = new Intent(mContext, Dragger_Quiz.class);
                 intent.putExtra("position",position);
                 intent.putExtra("dataset",mDataset);
-                getApplicationContext().startActivity(intent);
+                mContext.startActivity(intent);
             }
         });
 

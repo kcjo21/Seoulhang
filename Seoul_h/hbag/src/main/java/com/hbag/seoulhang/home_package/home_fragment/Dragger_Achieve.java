@@ -5,6 +5,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
+import android.view.MotionEvent;
+import android.view.View;
 import android.widget.ExpandableListAdapter;
 import android.widget.ExpandableListView;
 
@@ -47,6 +49,7 @@ public class Dragger_Achieve extends SwipeBackActivity {
         networkClient = NetworkClient.getInstance();
         expListView = (ExpandableListView)findViewById(R.id.exl); // 확장 리스트뷰를 가져온다.
         ipm = new Ipm();
+
 
 
         networkClient.getrate(sid, new Callback<List<RateDTO>>() {
