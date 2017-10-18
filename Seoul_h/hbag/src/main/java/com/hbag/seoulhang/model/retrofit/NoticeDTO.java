@@ -9,7 +9,8 @@ import java.util.Date;
 public class NoticeDTO {
     private String title;
     private String contents;
-    private String date;
+    private String date1;
+    private String date2;
 
 
     public String getTitle() {
@@ -20,9 +21,11 @@ public class NoticeDTO {
         return this.contents;
     }
 
-    public String getDate() {
-        return this.date;
+    public String getDate1() {
+        return this.date1;
     }
+
+    public String getDate2() {return  this.date2;}
 
     public void setTitle(String title) {
         this.title = title;
@@ -31,7 +34,11 @@ public class NoticeDTO {
     public void setContents(String contents) {
         this.contents = contents;
     }
-    public void setDate(String date) {
-        this.date = date;
+    public void setDate1(String date) {
+        this.date1 = date1;
+    }
+
+    public void setDate2(String date2) {
+        this.date2 = date2;
     }
 }

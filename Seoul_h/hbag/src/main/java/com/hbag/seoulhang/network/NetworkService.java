@@ -42,8 +42,8 @@ public interface NetworkService {
     @GET("/rate/{player}")
     Call <List<RateDTO>> getrate(@Path("player") String plyer);
 
-    @GET("/hint_player/{player}/call_code/{questioncode}")
-    Call <HintDTO> gethint(@Path("player") String player, @Path("questioncode") int questioncode);
+    @GET("/hint_player/{player}/call_code/{questioncode}/check/{check}")
+    Call <HintDTO> gethint(@Path("player") String player, @Path("questioncode") int questioncode,@Path("check") String check);
 
     @GET("/setting_language/{player}/language/{language}")
     Call <Integer> setlanguage(@Path("player") String player, @Path("language") int language);
@@ -89,5 +89,8 @@ public interface NetworkService {
 
     @GET("/notice/id/{id}")
     Call<List<NoticeDTO>>notice(@Path("id")String id);
+
+    @GET("grade/id/{id}")
+    Call<List<Integer>>grade(@Path("id")String id);
 
 }

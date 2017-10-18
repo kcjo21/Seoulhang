@@ -182,6 +182,30 @@ public class Dragger_Quiz extends SwipeBackActivity {
         final int qcode = Integer.parseInt(mDataset.get(dataPosition).text_num);
 
 
+        networkClient.gethint(loginid, qcode, "check", new Callback<HintDTO>() {
+            @Override
+            public void onResponse(Call<HintDTO> call, Response<HintDTO> response) {
+                switch (response.code()){
+                    case 200:
+                        HintDTO hintDTO = response.body();
+                        int hint_flag = hintDTO.getHintflag();
+                        if(hint_flag==1) {
+                            get_hint.setVisibility(View.GONE);
+                            hint.setText(mDataset.get(dataPosition).hint);
+                        }
+                        break;
+                    default:
+                        break;
+                }
+            }
+
+            @Override
+            public void onFailure(Call<HintDTO> call, Throwable t) {
+
+            }
+        });
+
+
         get_hint.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -196,14 +220,14 @@ public class Dragger_Quiz extends SwipeBackActivity {
                 alert.setPositiveButton(getResources().getString(R.string.GPSY), new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        networkClient.gethint(loginid,qcode, new Callback<HintDTO>() {
+                        networkClient.gethint(loginid,qcode,"get", new Callback<HintDTO>() {
                             @Override
                             public void onResponse(Call<HintDTO> call, Response<HintDTO> response) {
                                 Log.d("퀴즈", "123");
                                 switch (response.code()) {
                                     case 200:
                                         hints = response.body();
-                                        if (hints.getHintflag()==1||hints.getHintcount()==1) {
+                                        if (hints.getHintcount()==1) {
                                             get_hint.setVisibility(View.GONE);
                                             hint.setText(mDataset.get(dataPosition).hint);
                                         } else {
@@ -274,3 +298,4 @@ public class Dragger_Quiz extends SwipeBackActivity {
         });
     }
 }
+

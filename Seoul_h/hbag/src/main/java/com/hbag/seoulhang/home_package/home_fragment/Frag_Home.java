@@ -196,7 +196,7 @@ public class Frag_Home extends BaseFragment {
                     NoticeDTO noticeDTO = notice.get(j);
                     String title = noticeDTO.getTitle();
                     String contents = noticeDTO.getContents();
-                    String sDate = noticeDTO.getDate();
+                    String sDate = noticeDTO.getDate1();
                     TextView tv_notice = new TextView(getContext());
                     tv_notice.setText(sDate + '\n' + title);
                     tv_notice.setTextSize(TypedValue.COMPLEX_UNIT_DIP, 14);

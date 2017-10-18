@@ -90,8 +90,8 @@ public class NetworkClient {
         call.enqueue(callback);
     }
 
-    public void gethint(String player, int questioncode, Callback<HintDTO> callback){
-        Call<HintDTO> call = service.gethint(player,questioncode);
+    public void gethint(String player, int questioncode, String check, Callback<HintDTO> callback){
+        Call<HintDTO> call = service.gethint(player,questioncode, check);
         call.enqueue(callback);
     }
 
@@ -158,6 +158,11 @@ public class NetworkClient {
 
     public void notice(String id,Callback<List<NoticeDTO>> callback){
         Call<List<NoticeDTO>> call = service.notice(id);
+        call.enqueue(callback);
+    }
+
+    public void grade(String id, Callback<List<Integer>> callback){
+        Call<List<Integer>> call = service.grade(id);
         call.enqueue(callback);
     }
 }
