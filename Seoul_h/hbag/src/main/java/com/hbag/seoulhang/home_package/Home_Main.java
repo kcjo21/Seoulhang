@@ -4,6 +4,8 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
+import android.database.sqlite.SQLiteDatabase;
+import android.database.sqlite.SQLiteException;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
@@ -44,6 +46,8 @@ import com.hbag.seoulhang.home_package.home_fragment.Frag_Rank;
 import com.hbag.seoulhang.R;
 import com.hbag.seoulhang.joinmanage_package.LoginActivity;
 import com.hbag.seoulhang.map_package.GooglemapsActivity;
+import com.hbag.seoulhang.model.retrofit.DataBaseDTO;
+import com.hbag.seoulhang.model.retrofit.FindDTO;
 import com.hbag.seoulhang.model.retrofit.InventoryDTO;
 import com.hbag.seoulhang.network.Ipm;
 import com.hbag.seoulhang.network.NetworkClient;
@@ -67,6 +71,7 @@ import retrofit2.Response;
 public class Home_Main extends BaseActivity implements
         GoogleApiClient.OnConnectionFailedListener{
 
+    SQLiteDatabase sqLiteDatabase;
     ViewPager viewpager;
     LinearLayout top;
     Toolbar toolbar;
@@ -101,16 +106,38 @@ public class Home_Main extends BaseActivity implements
     private GoogleApiClient mGoogleApiClient;
     private long mLastClickTime = 0;
     List<SimpleTarget> spotTarget;
+    List<DataBaseDTO> dbData;
     boolean firstwindow = false;
+    String loginid;
+    String ip;
+
+    public static final String DB_NAME = "seoulhang.sqlite";
+    public static final String TABLE_NAME = "questions";
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_home_main);
+
+        setContentView(R.layout.activity_home_main); //처음 시작이면 튜토리얼 액티비티로 이동
+        SharedPreferences preferences = getSharedPreferences("a",MODE_PRIVATE);
+        int first_flag = preferences.getInt("First",0);
+
+        if(first_flag != 1) {
+            Intent intent = new Intent(Home_Main.this, TutorialActivity.class);
+            startActivity(intent);
+            finish();
+        }
+        else{
+            LoadDateBase();
+        }
+
         profile = UserProfileData_singleton.getInstance();
         ipm = new Ipm();
-        String ip = ipm.getip();
-        final String loginid = profile.getId();
+        ip = ipm.getip();
+        loginid = profile.getId();
+        handler = new Handler(Looper.getMainLooper());
+        Log.d("테스트",loginid);
         drawerposition = (TextView)findViewById(R.id.drawer_position);
         cameraposition = (TextView)findViewById(R.id.camera_position);
         info_setting = (TextView)findViewById(R.id.info_setting);
@@ -125,13 +152,14 @@ public class Home_Main extends BaseActivity implements
         tv_side_title = (TextView) findViewById(R.id.tv_side_title);
         tutorial_view = (TextView) findViewById(R.id.tutorial_view);
         side_logout_bt = (ImageButton) findViewById(R.id.logout_bt);
-        handler = new Handler(Looper.getMainLooper());
         spotTarget = new ArrayList<>();
 
         final SharedPreferences pref = getSharedPreferences("lang",MODE_PRIVATE);
         final int setlang = pref.getInt("setlang",0);
 
         String logintype = profile.getLoginType();
+
+
 
 
         switch (logintype){       //로그인 매체에 따라 네비게이션 상단타이틀과 UI색상 변경
@@ -332,15 +360,6 @@ public class Home_Main extends BaseActivity implements
 
             }
         });
-
-        SharedPreferences preferences = getSharedPreferences("a",MODE_PRIVATE);
-        int first_flag = preferences.getInt("First",0);
-
-        if(first_flag != 1) {
-            Intent intent = new Intent(Home_Main.this, TutorialActivity.class);
-            startActivity(intent);
-            finish();
-        }
 
 
 
@@ -580,7 +599,7 @@ public class Home_Main extends BaseActivity implements
             Intent intent = new Intent(Home_Main.this,GameActivity.class);
             intent.putExtra("playerid",playerid);
             Log.d("게임아이디",playerid);
-            startActivityForResult(intent,0);  //문제 소유여부 확인을 위해 forResult로 액티비티 실행
+            super.startActivityForResult(intent,0);  //문제 소유여부 확인을 위해 forResult로 액티비티 실행
             return true;
         }
         else if(dtToggle.onOptionsItemSelected(item)){
@@ -602,6 +621,7 @@ public class Home_Main extends BaseActivity implements
         Log.d("유니티 통신완료 ID : ",playerid);
 
         if(requestCode == 0){
+            Log.d("유니티 리퀘스트코드 : ",""+requestCode);
             if(resultCode == RESULT_OK) {
                 networkClient = NetworkClient.getInstance(ip);
                 networkClient.checkplayer(playerid,new Callback<Integer>() {
@@ -768,6 +788,103 @@ public class Home_Main extends BaseActivity implements
 
     }
 
+    public void LoadDateBase(){
+
+        final Thread t = new Thread(new Runnable() {
+            @Override
+            public void run() { // Thread 로 progress 진행
+                Looper.prepare();
+                progressON();
+                Log.d("쓰레드 시작","시작");
+                handler.post(new Runnable() {
+                    @Override
+                    public void run() {
+                        NetworkClient networkClient;
+                        networkClient = NetworkClient.getInstance(ip);
+                        Log.d("테스트","1");
+
+                        networkClient.send_db(loginid, new Callback<List<DataBaseDTO>>() {
+                            @Override
+                            public void onResponse(Call<List<DataBaseDTO>> call, Response<List<DataBaseDTO>> response) {
+                                switch (response.code()){
+                                    case 200:
+                                        Log.d("테스트","2");
+                                        try {
+                                            sqLiteDatabase = getApplicationContext().openOrCreateDatabase(DB_NAME, MODE_PRIVATE, null);
+                                            sqLiteDatabase.execSQL("CREATE TABLE IF NOT EXISTS "+TABLE_NAME
+                                                    +"(question_code INTEGER, train_code VARCHAR(64), question_name VARCHAR(64), question_name_en VARCHAR(64), x_coordinate DOUBLE, y_coordinate DOUBLE);");
+                                            sqLiteDatabase.execSQL("DELETE FROM " + TABLE_NAME  );
+                                            int question_code;
+                                            String train_code;
+                                            String question_name;
+                                            String question_name_en;
+                                            Double lat;
+                                            Double lon;
+
+                                            dbData = response.body();
+
+                                            int dbSize = dbData.get(0).getQuestion_length();
+
+                                            for(int i = 0; i<dbSize; i++){
+                                                question_code = dbData.get(i).getQuestion_code();
+                                                train_code = dbData.get(i).getTrain_code();
+                                                question_name = dbData.get(i).getQuestion_name_ko();
+                                                question_name_en = dbData.get(i).getQuestion_name_en();
+                                                lat = dbData.get(i).getX_coordinate();
+                                                lon = dbData.get(i).getY_coordinate();
+                                                sqLiteDatabase.execSQL("INSERT INTO " +TABLE_NAME
+                                                        +" (question_code," +
+                                                        " train_code," +
+                                                        " question_name," +
+                                                        " question_name_en," +
+                                                        "x_coordinate," +
+                                                        " y_coordinate)" +
+                                                        " Values" +
+                                                        " ('"+question_code+"'," +
+                                                        " '"+train_code+"'," +
+                                                        " '"+question_name+"'," +
+                                                        " '"+question_name_en+"', " +
+                                                        "'"+lat+"', " +
+                                                        "'"+lon+"');");
+                                                Log.d("테스트",question_code+" " + train_code +" "+ question_name +" "+ question_name_en +" "+ lat +" "+ lon);
+
+                                            }
+                                            Log.d("경로",sqLiteDatabase.getPath());
+                                            Log.d("테스트",""+sqLiteDatabase.getPageSize());
+
+                                            sqLiteDatabase.close();
+                                            progressOFF();
+                                        }
+                                        catch (SQLiteException se){
+                                            Toast.makeText(getApplicationContext(),  se.getMessage(), Toast.LENGTH_LONG).show();
+                                            Log.e("", se.getMessage());
+                                            progressOFF();
+                                        }
+
+                                        break;
+                                    default:
+                                        progressOFF();
+                                        break;
+                                }
+                            }
+
+                            @Override
+                            public void onFailure(Call<List<DataBaseDTO>> call, Throwable t) {
+                                Toast toast = Toast.makeText(getApplicationContext(), getResources().getString(R.string.can_not_connent_to_server), Toast.LENGTH_LONG);
+                                toast.show();
+                                progressOFF();
+                            }
+                        });
+
+                    }
+                });
+                Looper.loop();
+                handler.getLooper().quit();
+            }
+        });
+        t.start(); // 쓰레드 시작i
+
+    }
 
 }
 

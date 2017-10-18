@@ -1,1 +1,1 @@
-include ':hbag', ':trafficsubway-release'
+include ':hbag'

@@ -50,6 +50,7 @@
     <string name="Submit">Submit</string>
     <string name="action_settings">action_settings</string>
     <string name="age">Age</string>
+    <string name="answer">Choose an Answer</string>
     <string name="app_name">SeoulHang</string>
     <string name="camera_descrip">If there is a target nearby, press this button to run the camera. You can view 3D objects through the camera. After finding the object. Touch it.</string>
     <string name="can_not_connent_to_server">Cannot connect Server.</string>
@@ -69,6 +70,7 @@
     <string name="google_with">                Signed in with Google</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="hint_msg">Do you want to see the hint?\nOne hint bonus is required.</string>
+    <string name="hintmake">Please enter a hint about the quiz.</string>
     <string name="home_descrip">This is the first start page. The most recently acquired quiz is displayed, and you can view the map, run the camera, and more.</string>
     <string name="id">ID</string>
     <string name="id_change"><u>Change Id</u></string>
@@ -77,6 +79,7 @@
     <string name="kakao_app_key">45d3abc0fba429258e010957df473e42</string>
     <string name="lang_descrip">Set the language.</string>
     <string name="loginsuccess">Welcome, %s!\nTouch the Start button.</string>
+    <string name="make_quiz">Make a quiz</string>
     <string name="map_view">MAP</string>
     <string name="map_view_descrip">You can see the location of target on a map.</string>
     <string name="mapview_text">                MapView</string>
@@ -85,6 +88,7 @@
     <string name="naversecret">IxuQXBjLMf</string>
     <string name="normal_with">                Signed in with Account</string>
     <string name="not_good_id">Please enter a 5 ~ 12 character ID consisting of only english and numbers,\nand The first letter of the ID must be in English.</string>
+    <string name="not_good_quiz">A quiz including excessive inappropriate\ncontent may be deleted</string>
     <string name="notice_descrip">Select whether to flip notification\nautomatically or manually.</string>
     <string name="num">num</string>
     <string name="open_drawer">open draweropen draweropen draweropen draweropen draweropen drawer</string>
@@ -95,6 +99,7 @@
     <string name="quiz_descrip">You can check the acquired quiz. Quizzes are listed in the order they are acquired, consisting of a Short-answer type quiz and an OX quiz. Also, if you have a hint bonus, you can see the hint.</string>
     <string name="quiz_num">Quiz No.</string>
     <string name="quiz_region">Location</string>
+    <string name="quizmake">Please enter a quiz.</string>
     <string name="rank_descrip">You can check your rankings, grades, and scores. You can also check the overall leaderboard.</string>
     <string name="region">Region</string>
     <string name="replay">REPLAY</string>

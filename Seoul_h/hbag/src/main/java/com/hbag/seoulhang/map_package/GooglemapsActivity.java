@@ -5,6 +5,7 @@ import android.annotation.TargetApi;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.content.res.AssetManager;
 import android.database.Cursor;
@@ -90,8 +91,8 @@ public class GooglemapsActivity extends BaseActivity
     NetworkClient networkClient;
     Ipm ipm;
 
-    public static final String PATH = "data/data/com.hbag.seoulhang/";
-    public static final String DB_NAME = "new_gps.db";
+    public static final String PATH = "/data/user/0/com.hbag.seoulhang/";
+    public static final String DB_NAME = "seoulhang.sqlite";
     private List<Integer> quizList;
 
     LocationRequest locationRequest = new LocationRequest()
@@ -253,14 +254,15 @@ public class GooglemapsActivity extends BaseActivity
                     case 200:
                         quizList = response.body();
                         SQLiteDatabase db = SQLiteDatabase.openDatabase(PATH+"databases/"+DB_NAME,null, SQLiteDatabase.OPEN_READONLY);
-                        Cursor c = db.query("GPSDATA",  null, null, null, null, null, null);
+                        Cursor c = db.query("questions",  null, null, null, null, null, null);
                         boolean already_have = false;
 
                         while(c.moveToNext()) {
-                            String region_name = c.getString(c.getColumnIndex("station_name"));
-                            int quiz_num = Integer.parseInt(c.getString(c.getColumnIndex("region_code")));
-                            double latitude = c.getDouble(c.getColumnIndex("lat"));
-                            double longitude = c.getDouble(c.getColumnIndex("long"));
+                            String region_name_ko = c.getString(c.getColumnIndex("question_name"));
+                            String region_name_en = c.getString(c.getColumnIndex("question_name_en"));
+                            int quiz_num = Integer.parseInt(c.getString(c.getColumnIndex("question_code")));
+                            double latitude = c.getDouble(c.getColumnIndex("x_coordinate"));
+                            double longitude = c.getDouble(c.getColumnIndex("y_coordinate"));
 
                             for (int i= 0 ; i<quizList.size();i++) {      //이미 얻은 타겟이 있다면 리스트에 추가하지 않는다.
                                 if(quizList.get(i).equals(quiz_num)){
@@ -270,7 +272,14 @@ public class GooglemapsActivity extends BaseActivity
 
                             if(!already_have) {
                                 MarkerOptions makeroptions = new MarkerOptions();
-                                makeroptions.position(new LatLng(latitude, longitude)).title(region_name);
+                                SharedPreferences pref = getSharedPreferences("lang",MODE_PRIVATE);
+                                int setlang = pref.getInt("setlang",0);
+                                if(setlang==0) {
+                                    makeroptions.position(new LatLng(latitude, longitude)).title(region_name_ko);
+                                }
+                                else if(setlang==1){
+                                    makeroptions.position(new LatLng(latitude, longitude)).title(region_name_en);
+                                }
                                 mGoogleMap.addMarker(makeroptions);
                             }
                             already_have = false;

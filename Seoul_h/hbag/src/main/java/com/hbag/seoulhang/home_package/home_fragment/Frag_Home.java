@@ -32,6 +32,7 @@ import android.widget.ViewFlipper;
 import com.hbag.seoulhang.appbase_package.GameActivity;
 import com.hbag.seoulhang.home_package.Home_Main;
 import com.hbag.seoulhang.R;
+import com.hbag.seoulhang.home_package.QuizMake;
 import com.hbag.seoulhang.map_package.GooglemapsActivity;
 import com.hbag.seoulhang.model.retrofit.NoticeDTO;
 import com.hbag.seoulhang.model.retrofit.TopDTO;
@@ -265,7 +266,7 @@ public class Frag_Home extends BaseFragment {
         achv_b.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getActivity(),Dragger_Achieve.class);
+                Intent intent = new Intent(getActivity(),QuizMake.class);
                 startActivity(intent);
             }
         });

@@ -94,7 +94,6 @@
         </activity>
         <activity
             android:name="com.hbag.seoulhang.appbase_package.GameActivity"
-            android:launchMode="singleTask"
             android:process=":unityplayer"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
@@ -172,18 +171,8 @@
             android:value="2247d6cb8deb36e71828bc0c53c6098f0c87c5d4" />
 
         <activity
-            android:name="kr.go.seoul.trafficsubway.TrafficSubwayDetailTypeA"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name="kr.go.seoul.trafficsubway.TrafficSubwayInfoTypeA"
-            android:screenOrientation="portrait"
-            android:theme="@android:style/Theme.Dialog" />
-        <activity
-            android:name="kr.go.seoul.trafficsubway.TrafficSubwayDetailTypeB"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name="kr.go.seoul.trafficsubway.TrafficSubwayInfoTypeB"
-            android:screenOrientation="portrait" />
+            android:name="com.hbag.seoulhang.home_package.QuizMake"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
             android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity"
             android:excludeFromRecents="true"

@@ -57,7 +57,7 @@ public class GPS : MonoBehaviour {
 
         string region_c = "";
         string region_n = "";
-        string filepath = Application.persistentDataPath + "/seoulhang.sqlite";
+        string filepath = "/data/user/0/com.hbag.seoulhang/databases/seoulhang.sqlite";
 
         if (!File.Exists(filepath))
         {

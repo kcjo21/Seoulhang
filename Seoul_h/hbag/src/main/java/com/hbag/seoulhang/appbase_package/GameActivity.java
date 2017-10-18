@@ -151,12 +151,13 @@ public class GameActivity extends UnityPlayerActivity {
         String ip = ipm.getip();
         networkClient = NetworkClient.getInstance(ip);
         Log.e ("확인",playerid+q_code);
-        networkClient.getquestioncode(playerid, q_code, new Callback<QuestDTO>() {
+        networkClient.getquestioncode(playerid, q_code, new Callback<Integer>() {
             @Override
-            public void onResponse(Call<QuestDTO> call, Response<QuestDTO> response) {
+            public void onResponse(Call<Integer> call, Response<Integer> response) {
                 switch (response.code()) {
                     case 200:
                         Log.d("유니티디버그",playerid+" "+q_code);
+                        Log.d("QUSETIONNUM: ",""+q_code);
                         break;
                     default:
                         break;
@@ -164,13 +165,12 @@ public class GameActivity extends UnityPlayerActivity {
             }
 
             @Override
-            public void onFailure(Call<QuestDTO> call, Throwable t) {
+            public void onFailure(Call<Integer> call, Throwable t) {
                 Log.e("ACC", "유니티에러 " + t.getMessage());
 
             }
 
         });
-        Log.d("QUSETIONNUM: ",questioncode);
         Intent intent = new Intent(GameActivity.this,Home_Main.class);
         intent.putExtra("got",0);
         setResult(RESULT_OK,intent);

@@ -196,4 +196,9 @@
     <string name="side_tuto">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Review app introduction</string>
     <string name="Login_title">Log in</string>
     <string name="id_change"><u>Change Id</u></string>
+    <string name="make_quiz">Make a quiz</string>
+    <string name="answer">Choose an Answer</string>
+    <string name="quizmake">Please enter a quiz.</string>
+    <string name="hintmake">Please enter a hint about the quiz.</string>
+    <string name="not_good_quiz">A quiz including excessive inappropriate\ncontent may be deleted</string>
 </resources>

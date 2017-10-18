@@ -37,8 +37,6 @@ apply plugin: 'com.android.application'
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
     compile 'com.android.support:recyclerview-v7'
-    compile project(':trafficsubway-release')
-    compile project(':trafficsubway-release')
     compile('com.crashlytics.sdk.android:crashlytics:2.6.8@aar') {
         transitive = true;
     }

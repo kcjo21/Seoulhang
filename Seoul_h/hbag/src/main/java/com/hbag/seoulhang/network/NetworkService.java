@@ -1,5 +1,6 @@
 package com.hbag.seoulhang.network;
 
+import com.hbag.seoulhang.model.retrofit.DataBaseDTO;
 import com.hbag.seoulhang.model.retrofit.FindDTO;
 import com.hbag.seoulhang.model.retrofit.HintDTO;
 import com.hbag.seoulhang.model.retrofit.InventoryDTO;
@@ -22,7 +23,7 @@ public interface NetworkService {
     Call<PlayerDTO> login(@Path("player") String player,@Path("password") String password);
 
     @GET("/collect/{player}/call_code/{question_code}")
-    Call<QuestDTO> getquestioncode(@Path("player") String player, @Path("question_code") int question_code);
+    Call<Integer> getquestioncode(@Path("player") String player, @Path("question_code") int question_code);
 
     @GET("/start_player/{player}")
     Call<List<ItemDTO>> getstartitem(@Path("player") String player);
@@ -90,7 +91,20 @@ public interface NetworkService {
     @GET("/notice/id/{id}")
     Call<List<NoticeDTO>>notice(@Path("id")String id);
 
-    @GET("grade/id/{id}")
+    @GET("/grade/id/{id}")
     Call<List<Integer>>grade(@Path("id")String id);
+
+    @GET("/make_quiz/id/{id}/question_name/{question_name}/x/{x_coordinate}/y/{y_coordinate}/question/{question}/answer/{answer}/hint/{hint}/locale/{locale}")
+    Call<Integer>make_quiz(@Path("id") String id,
+                          @Path("question_name") String question_name,
+                          @Path("x_coordinate") double x_coordinate,
+                          @Path("y_coordinate") double y_coordinate,
+                          @Path("question") String question,
+                          @Path("answer") String answer,
+                          @Path("hint") String hint,
+                          @Path("locale") String locale);
+
+    @GET("/send_db/id/{id}")
+    Call<List<DataBaseDTO>>send_db(@Path("id") String id);
 
 }

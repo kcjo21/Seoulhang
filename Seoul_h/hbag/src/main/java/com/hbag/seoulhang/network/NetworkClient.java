@@ -2,6 +2,7 @@ package com.hbag.seoulhang.network;
 
 import android.util.Log;
 
+import com.hbag.seoulhang.model.retrofit.DataBaseDTO;
 import com.hbag.seoulhang.model.retrofit.FindDTO;
 import com.hbag.seoulhang.model.retrofit.HintDTO;
 import com.hbag.seoulhang.model.retrofit.InventoryDTO;
@@ -58,8 +59,8 @@ public class NetworkClient {
         call.enqueue(cb);
     }
 
-    public void getquestioncode(String player, int question_code, Callback<QuestDTO> callback){
-        Call <QuestDTO> call = service.getquestioncode(player,question_code);
+    public void getquestioncode(String player, int question_code, Callback<Integer> callback){
+        Call <Integer> call = service.getquestioncode(player,question_code);
         call.enqueue(callback);
     }
     public void getstartitem(String player, Callback<List<ItemDTO>> callback){
@@ -163,6 +164,24 @@ public class NetworkClient {
 
     public void grade(String id, Callback<List<Integer>> callback){
         Call<List<Integer>> call = service.grade(id);
+        call.enqueue(callback);
+    }
+
+    public void make_quiz(String id,
+                          String question_name,
+                          double x_coordinate,
+                          double y_coordinate,
+                          String question,
+                          String answer,
+                          String hint,
+                          String locale,
+                          Callback<Integer> callback){
+        Call<Integer> call = service.make_quiz(id, question_name, x_coordinate, y_coordinate,question, answer, hint, locale);
+        call.enqueue(callback);
+    }
+
+    public void send_db(String id, Callback<List<DataBaseDTO>> callback){
+        Call<List<DataBaseDTO>> call = service.send_db(id);
         call.enqueue(callback);
     }
 }

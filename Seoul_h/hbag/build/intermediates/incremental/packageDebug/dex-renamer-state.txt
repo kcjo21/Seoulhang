@@ -1,4 +1,4 @@
-#Wed Oct 18 12:11:30 KST 2017
+#Wed Oct 18 23:29:42 KST 2017
 base.0=C\:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_32410c8fcd47bb2f6aab0a0111c9bd3e180826da
 renamed.1=classes2.dex
 renamed.0=classes.dex

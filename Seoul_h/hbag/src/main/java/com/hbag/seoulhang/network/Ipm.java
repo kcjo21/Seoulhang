@@ -8,7 +8,7 @@ package com.hbag.seoulhang.network;
  */
 public class Ipm {
     private String ip="http://ec2-13-124-194-255.ap-northeast-2.compute.amazonaws.com:5000";
-    //private String ip="http://192.168.43.34:5000";
+    //private String ip="http://172.30.1.6:5000";
 
     public String getip(){return this.ip;}
     public void setip(String ip){this.ip=ip;}

@@ -21,36 +21,36 @@ public final class R {
     public static final class color {
         public static final int blue_normal = 0x7f08002d;
         public static final int blue_pressed = 0x7f08002e;
-        public static final int green_complete = 0x7f08005b;
-        public static final int holo_blue_bright = 0x7f08005e;
-        public static final int holo_green_light = 0x7f08005f;
-        public static final int holo_orange_light = 0x7f080060;
-        public static final int holo_red_light = 0x7f080061;
-        public static final int purple_progress = 0x7f080078;
-        public static final int red_error = 0x7f080079;
+        public static final int green_complete = 0x7f080059;
+        public static final int holo_blue_bright = 0x7f08005c;
+        public static final int holo_green_light = 0x7f08005d;
+        public static final int holo_orange_light = 0x7f08005e;
+        public static final int holo_red_light = 0x7f08005f;
+        public static final int purple_progress = 0x7f080076;
+        public static final int red_error = 0x7f080077;
     }
     public static final class dimen {
         public static final int corner_radius = 0x7f09006d;
         public static final int layer_padding = 0x7f090099;
     }
     public static final class drawable {
-        public static final int rect_complete = 0x7f020124;
-        public static final int rect_error = 0x7f020125;
-        public static final int rect_normal = 0x7f020126;
-        public static final int rect_pressed = 0x7f020127;
-        public static final int rect_progress = 0x7f020128;
+        public static final int rect_complete = 0x7f0200d8;
+        public static final int rect_error = 0x7f0200d9;
+        public static final int rect_normal = 0x7f0200da;
+        public static final int rect_pressed = 0x7f0200db;
+        public static final int rect_progress = 0x7f0200dc;
     }
     public static final class string {
-        public static final int define_processbutton = 0x7f07010b;
-        public static final int library_processbutton_author = 0x7f070111;
-        public static final int library_processbutton_authorWebsite = 0x7f070112;
-        public static final int library_processbutton_isOpenSource = 0x7f070113;
-        public static final int library_processbutton_libraryDescription = 0x7f070114;
-        public static final int library_processbutton_libraryName = 0x7f070115;
-        public static final int library_processbutton_libraryVersion = 0x7f070116;
-        public static final int library_processbutton_libraryWebsite = 0x7f070117;
-        public static final int library_processbutton_licenseId = 0x7f070118;
-        public static final int library_processbutton_repositoryLink = 0x7f070119;
+        public static final int define_processbutton = 0x7f070110;
+        public static final int library_processbutton_author = 0x7f070116;
+        public static final int library_processbutton_authorWebsite = 0x7f070117;
+        public static final int library_processbutton_isOpenSource = 0x7f070118;
+        public static final int library_processbutton_libraryDescription = 0x7f070119;
+        public static final int library_processbutton_libraryName = 0x7f07011a;
+        public static final int library_processbutton_libraryVersion = 0x7f07011b;
+        public static final int library_processbutton_libraryWebsite = 0x7f07011c;
+        public static final int library_processbutton_licenseId = 0x7f07011d;
+        public static final int library_processbutton_repositoryLink = 0x7f07011e;
     }
     public static final class styleable {
         public static final int[] FlatButton = { 0x7f01010d, 0x7f01010e, 0x7f01010f };

@@ -69,6 +69,7 @@
     <string msgid="1603543279005712093" name="abc_toolbar_collapse_description">"접기"</string>
     <string name="action_settings">action_settings</string>
     <string name="age">나이</string>
+    <string name="answer">정답을 선택하세요.</string>
     <string name="app_name">서울행</string>
     <string name="camera_descrip">만일 주변에 타겟이 있다면, 이 버튼을 눌러 카메라를 실행하세요. 카메라를 통해 타겟을 획득할 수 있습니다.</string>
     <string name="can_not_connent_to_server">서버에 연결할 수 없습니다.</string>
@@ -121,6 +122,7 @@
     <string name="google_with">                구글계정으로 로그인 중</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="hint_msg">힌트를 보시겠습니까?\n힌트 보너스가 1소모됩니다.</string>
+    <string name="hintmake">문제에 대한 힌트를 입력해주세요.</string>
     <string name="home_descrip">첫 시작 페이지입니다. 가장 최근에 획득한 문제가 표시되며, 지도보기, 카메라실행 등을 할 수 있습니다.</string>
     <string name="id">ID</string>
     <string name="id_change"><u>아이디 변경하기</u></string>
@@ -129,6 +131,7 @@
     <string name="kakao_app_key">45d3abc0fba429258e010957df473e42</string>
     <string name="lang_descrip">언어를 선택합니다.</string>
     <string name="loginsuccess">%s님 환영합니다.\n시작버튼을 눌러주세요!</string>
+    <string name="make_quiz">퀴즈 출제</string>
     <string name="map_view">지도 보기</string>
     <string name="map_view_descrip">타겟의 위치를 지도로 확인할 수 있습니다.</string>
     <string name="mapview_text">                지도 보기</string>
@@ -138,6 +141,7 @@
     <string name="naversecret">IxuQXBjLMf</string>
     <string name="normal_with">                일반계정으로 로그인 중</string>
     <string name="not_good_id">영문과 숫자로만 이루어진 5~12자 아이디를 입력해주세요.\n첫 글자는 반드시 영문입니다.</string>
+    <string name="not_good_quiz">과도한 욕설이나 부적절한 내용이\n포함된 퀴즈는 임의로 삭제될 수 있습니다.</string>
     <string name="notice_descrip">한 줄 공지를 자동으로 전환시킵니다.\n비활성화시 수동으로 페이지를 넘깁니다.</string>
     <string name="num">num</string>
     <string name="open_drawer">open draweropen draweropen draweropen draweropen draweropen drawer</string>
@@ -148,6 +152,7 @@
     <string name="quiz_descrip">획득한 퀴즈를 확인할 수 있습니다. 퀴즈는 획득한 순서대로 나열되며, 주관식, OX 퀴즈로 구성되어있습니다. 또한, 힌트보너스를 가지고 있다면, 힌트를 볼 수 있습니다.</string>
     <string name="quiz_num">퀴즈 번호</string>
     <string name="quiz_region">획득 장소</string>
+    <string name="quizmake">문제를 입력해주세요.</string>
     <string name="rank_descrip">순위와 등급, 점수를 확인할 수 있습니다. 또한, 전체 순위표를 확인할 수 있습니다.</string>
     <string name="region">지역</string>
     <string name="replay">다시 보기</string>

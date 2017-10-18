@@ -4,6 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/LIGHTGREEN_"
+    android:gravity="center_vertical|center_horizontal"
     android:weightSum="100"
     tools:context="com.hbag.seoulhang.joinmanage_package.tutorial_package.tuto_b">
 
@@ -15,7 +16,6 @@
         android:layout_height="200dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="100dp"
         android:background="@drawable/tuto_2"
         tools:ignore="ContentDescription" />
 

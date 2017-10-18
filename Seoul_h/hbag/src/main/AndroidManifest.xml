@@ -78,7 +78,6 @@
         </activity>
         <activity
             android:name=".appbase_package.GameActivity"
-            android:launchMode="singleTask"
             android:process=":unityplayer"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
@@ -147,16 +146,17 @@
         <activity
             android:name=".home_package.home_fragment.Dragger_Quiz"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
-
-
-        <activity android:name=".home_package.home_fragment.Dragger_Achieve"
+        <activity
+            android:name=".home_package.home_fragment.Dragger_Achieve"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
 
         <meta-data
             android:name="io.fabric.ApiKey"
             android:value="2247d6cb8deb36e71828bc0c53c6098f0c87c5d4" />
 
-
+        <activity
+            android:name=".home_package.QuizMake"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
     </application>
 
 </manifest>
