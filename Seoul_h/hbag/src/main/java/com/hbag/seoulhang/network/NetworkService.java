@@ -107,4 +107,7 @@ public interface NetworkService {
     @GET("/send_db/id/{id}")
     Call<List<DataBaseDTO>>send_db(@Path("id") String id);
 
+    @GET("/get_grade/id/{id}")
+    Call<List<RankDTO>>get_grade(@Path("id") String id);
+
 }

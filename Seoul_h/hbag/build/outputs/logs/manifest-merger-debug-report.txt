@@ -401,12 +401,12 @@ ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\hbag\src\main\AndroidM
 		ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\hbag\src\main\AndroidManifest.xml:155:13-69
 	android:name
 		ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\hbag\src\main\AndroidManifest.xml:154:13-44
-activity#com.hbag.seoulhang.home_package.QuizMake
+activity#com.hbag.seoulhang.home_package.home_fragment.Dragger_QuizMake
 ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\hbag\src\main\AndroidManifest.xml:157:9-159:71
 	android:theme
 		ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\hbag\src\main\AndroidManifest.xml:159:13-69
 	android:name
-		ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\hbag\src\main\AndroidManifest.xml:158:13-50
+		ADDED from C:\Users\cwh62\Documents\GitHub\new_sh\Seoul_h\hbag\src\main\AndroidManifest.xml:158:13-72
 meta-data#android.support.VERSION
 ADDED from [com.android.support:design:25.3.1] C:\Users\cwh62\.android\build-cache\2296c6d153ca9492798042173aaf4756857c6a9d\output\AndroidManifest.xml:25:5-27:34
 MERGED from [com.android.support:recyclerview-v7:25.3.1] C:\Users\cwh62\.android\build-cache\16b76ed60be6d6f5795aaad4ab9dc6f5c5e1e53e\output\AndroidManifest.xml:22:5-24:34

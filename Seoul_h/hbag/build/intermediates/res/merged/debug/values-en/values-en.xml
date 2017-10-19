@@ -54,6 +54,7 @@
     <string name="app_name">SeoulHang</string>
     <string name="camera_descrip">If there is a target nearby, press this button to run the camera. You can view 3D objects through the camera. After finding the object. Touch it.</string>
     <string name="can_not_connent_to_server">Cannot connect Server.</string>
+    <string name="can_not_make_quiz">Not enough points to make a quiz</string>
     <string name="checkEmail">Incorrect email address in format.</string>
     <string name="checkplease">perform a check for overlapping Identification.</string>
     <string name="close_drawer">close drawerclose drawerclose drawerclose drawerclose drawer</string>
@@ -80,6 +81,8 @@
     <string name="lang_descrip">Set the language.</string>
     <string name="loginsuccess">Welcome, %s!\nTouch the Start button.</string>
     <string name="make_quiz">Make a quiz</string>
+    <string name="make_quiz_check">Points are required when submitting a quiz. Do you want to submit it?</string>
+    <string name="make_quiz_count">You can make %d quizzes.</string>
     <string name="map_view">MAP</string>
     <string name="map_view_descrip">You can see the location of target on a map.</string>
     <string name="mapview_text">                MapView</string>
@@ -111,7 +114,7 @@
     <string name="side_등급">                Tier : %s</string>
     <string name="side_점수">                Score : %s</string>
     <string name="side_코드번호">                Code : %s</string>
-    <string name="side_힌트수">                Hint : %s</string>
+    <string name="succes_make_quiz">Submitted a quiz!</string>
     <string name="tuto_2">\'SeoulHang\' is an educational / tourism game\nusing Augmented Reality.</string>
     <string name="tuto_3">Go to the location on the map,\nturn on the camera and look around.</string>
     <string name="tuto_4">If you find a target, touch it to get a quiz.\nSolve the quiz to get a higher score and rank.</string>
@@ -179,14 +182,7 @@
     <string name="인증번호">Code</string>
     <string name="잘못된GPS">Wrong GPS coordinates.</string>
     <string name="점수">Score</string>
-    <string name="점수_0">Score 0</string>
-    <string name="점수_10">Score 10</string>
-    <string name="점수_160">Score 160</string>
-    <string name="점수_240">Score 240</string>
-    <string name="점수_340">Score 340</string>
-    <string name="점수_40">Score 40</string>
-    <string name="점수_450">Score 450</string>
-    <string name="점수_90">Score 90</string>
+    <string name="점수_grade">Score %d</string>
     <string name="정답을입력하세요">Enter your answer.</string>
     <string name="정답이다">Correct!</string>
     <string name="정보수정">Edit Profile</string>
@@ -220,12 +216,9 @@
     <string name="회원정보수정완료">Profile modification has been completed!</string>
     <string name="회원탈퇴">Leave</string>
     <string name="회원탈퇴비밀번호">Please enter your password for membership withdrawal.</string>
-    <string name="힌트">
-        <item>힌트1</item>
-    </string>
     <string name="힌트없음">You have no hint bonus left.</string>
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-        <!-- Customize your theme here. -->
+        
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>

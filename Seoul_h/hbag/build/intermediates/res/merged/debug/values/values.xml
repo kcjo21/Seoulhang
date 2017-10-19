@@ -916,11 +916,12 @@
     <string name="bottom_sheet_behavior" translatable="false">android.support.design.widget.BottomSheetBehavior</string>
     <string name="camera_descrip">만일 주변에 타겟이 있다면, 이 버튼을 눌러 카메라를 실행하세요. 카메라를 통해 3D 객체를 확인할 수 있습니다. 대상을 찾으면, 터치해서 획득하세요.</string>
     <string name="can_not_connent_to_server">서버에 연결할 수 없습니다.</string>
+    <string name="can_not_make_quiz">포인트가 부족하여 문제를 낼 수 없습니다.</string>
     <string name="character_counter_pattern" translatable="false">%1$d / %2$d</string>
     <string name="checkEmail">형식에 맞지 않는 메일 주소입니다.</string>
     <string name="checkplease">ID중복확인을 해주십시오.</string>
     <string name="close_drawer">close drawerclose drawerclose drawerclose drawerclose drawer</string>
-    <string name="com.crashlytics.android.build_id" ns1:ignore="UnusedResources,TypographyDashes" translatable="false">5169ff45-7541-4863-a1e9-9fbcaeb719de</string>
+    <string name="com.crashlytics.android.build_id" ns1:ignore="UnusedResources,TypographyDashes" translatable="false">e1e55202-b317-41d5-ba69-829a85bdb3e0</string>
     <string name="com_facebook_image_download_unknown_error">Unexpected error while downloading an image.</string>
     <string name="com_facebook_internet_permission_error_message">WebView login requires INTERNET permission</string>
     <string name="com_facebook_internet_permission_error_title">AndroidManifest Error</string>
@@ -993,6 +994,8 @@
     <string name="library_processbutton_repositoryLink">https://github.com/dmytrodanylyk/android-process-button</string>
     <string name="loginsuccess">%s님 환영합니다.\n시작버튼을 눌러주세요!</string>
     <string name="make_quiz">퀴즈 출제</string>
+    <string name="make_quiz_check">퀴즈를 제출하면 전용 포인트가 필요합니다. 제출하시겠습니까?</string>
+    <string name="make_quiz_count">%d개의 문제를 낼 수 있습니다!</string>
     <string name="map_view">지도 보기</string>
     <string name="map_view_descrip">타겟의 위치를 지도로 확인할 수 있습니다.</string>
     <string name="mapview_text">                지도 보기</string>
@@ -1031,8 +1034,8 @@
     <string name="side_등급">                등급 : %s</string>
     <string name="side_점수">                점수 : %s</string>
     <string name="side_코드번호">                코드번호 : %s</string>
-    <string name="side_힌트수">                남은 힌트 수 : %s</string>
     <string name="status_bar_notification_info_overflow">999+</string>
+    <string name="succes_make_quiz">퀴즈를 제출했습니다!</string>
     <string name="tuto_2">서울행은 증강현실을 이용한\n교육/관광용 게임입니다.</string>
     <string name="tuto_3">지도에 나와 있는 위치로 가서\n카메라를 켜고 주변을 둘러보세요.</string>
     <string name="tuto_4">목표를 발견하면 터치하여 퀴즈를 획득하세요.\n퀴즈를 풀어서 점수를 쌓고 순위를 올리세요.</string>
@@ -1100,14 +1103,7 @@
     <string name="인증번호">인증번호</string>
     <string name="잘못된GPS">잘못된 GPS좌표</string>
     <string name="점수">점수</string>
-    <string name="점수_0">0점</string>
-    <string name="점수_10">10점</string>
-    <string name="점수_160">160점</string>
-    <string name="점수_240">240점</string>
-    <string name="점수_340">340점</string>
-    <string name="점수_40">40점</string>
-    <string name="점수_450">450점</string>
-    <string name="점수_90">90점</string>
+    <string name="점수_grade">%d점</string>
     <string name="정답을입력하세요">정답을 입력하세요.</string>
     <string name="정답이다">정답입니다!</string>
     <string name="정보수정">내 정보수정</string>
@@ -1141,9 +1137,6 @@
     <string name="회원정보수정완료">회원정보수정이 완료되었습니다!</string>
     <string name="회원탈퇴">회원탈퇴</string>
     <string name="회원탈퇴비밀번호">회원탈퇴를 위해 비밀번호를 입력해주세요.</string>
-    <string name="힌트">
-        <item>힌트1</item>
-    </string>
     <string name="힌트없음">남은 힌트가 없습니다!</string>
     <style name="AlertDialog.AppCompat" parent="Base.AlertDialog.AppCompat"/>
     <style name="AlertDialog.AppCompat.Light" parent="Base.AlertDialog.AppCompat.Light"/>

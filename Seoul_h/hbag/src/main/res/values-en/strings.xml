@@ -38,7 +38,6 @@
     <string name="등급표">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Rating Table</string>
     <string name="설정">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Setting</string>
     <string name="side_닉네임">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Name&#160;:&#160;%s</string>
-    <string name="side_힌트수">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Hint&#160;:&#160;%s</string>
     <string name="side_등급">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Tier&#160;:&#160;%s</string>
     <string name="side_점수">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Score&#160;:&#160;%s</string>
     <string name="side_코드번호">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Code&#160;:&#160;%s</string>
@@ -60,14 +59,7 @@
     <string name="플래티넘">Platinum</string>
     <string name="골드">Gold</string>
     <string name="다이아몬드">Diamond</string>
-    <string name="점수_0">Score 0</string>
-    <string name="점수_10">Score 10</string>
-    <string name="점수_40">Score 40</string>
-    <string name="점수_90">Score 90</string>
-    <string name="점수_160">Score 160</string>
-    <string name="점수_240">Score 240</string>
-    <string name="점수_340">Score 340</string>
-    <string name="점수_450">Score 450</string>
+    <string name="점수_grade">Score %d</string>
     <string name="여" >women</string>
     <string name="남">men</string>
     <string name="이름">Name</string>
@@ -201,4 +193,8 @@
     <string name="quizmake">Please enter a quiz.</string>
     <string name="hintmake">Please enter a hint about the quiz.</string>
     <string name="not_good_quiz">A quiz including excessive inappropriate\ncontent may be deleted</string>
+    <string name="make_quiz_count">You can make %d quizzes.</string>
+    <string name="can_not_make_quiz">Not enough points to make a quiz</string>
+    <string name="succes_make_quiz">Submitted a quiz!</string>
+    <string name="make_quiz_check">Points are required when submitting a quiz. Do you want to submit it?</string>
 </resources>

@@ -150,6 +150,7 @@ public class Dragger_Quiz extends SwipeBackActivity {
                                     }
                                     break;
                                 default:
+                                    methods.progressOFF();
                                     break;
                             }
                         }

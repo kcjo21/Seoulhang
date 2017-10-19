@@ -193,17 +193,17 @@
                         android:id="@+id/info_lay"
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
-                        android:layout_weight="47"
+                        android:layout_weight="100"
                         android:clickable="true"
                         android:orientation="vertical"
-                        android:weightSum="100">
+                        android:weightSum="102">
 
                         <TextView
                             android:id="@+id/info_setting"
                             android:layout_width="match_parent"
                             android:layout_height="0dp"
-                            android:layout_weight="20"
-                            android:background="@drawable/text_edit_profile"
+                            android:layout_weight="10"
+                            android:background="@drawable/selector_edit_text"
                             android:clickable="true"
                             android:gravity="left|center_vertical|center_horizontal"
                             android:text="@string/내정보설정"
@@ -216,7 +216,7 @@
                             android:id="@+id/player_name"
                             android:layout_width="match_parent"
                             android:layout_height="0dp"
-                            android:layout_weight="20"
+                            android:layout_weight="10"
                             android:background="@drawable/text_name"
                             android:clickable="true"
                             android:gravity="center_vertical"
@@ -228,20 +228,8 @@
                             android:id="@+id/player_grade"
                             android:layout_width="match_parent"
                             android:layout_height="0dp"
-                            android:layout_weight="20"
+                            android:layout_weight="10"
                             android:background="@drawable/text_grade"
-                            android:clickable="true"
-                            android:gravity="center_vertical"
-                            android:textColor="@android:color/black"
-                            android:textSize="14dp"
-                            tools:ignore="HardcodedText,SpUsage" />
-
-                        <TextView
-                            android:id="@+id/hint_left"
-                            android:layout_width="match_parent"
-                            android:layout_height="0dp"
-                            android:layout_weight="20"
-                            android:background="@drawable/text_hint"
                             android:clickable="true"
                             android:gravity="center_vertical"
                             android:textColor="@android:color/black"
@@ -252,7 +240,7 @@
                             android:id="@+id/player_point_home"
                             android:layout_width="match_parent"
                             android:layout_height="0dp"
-                            android:layout_weight="20"
+                            android:layout_weight="10"
                             android:background="@drawable/text_point"
                             android:clickable="true"
                             android:gravity="center_vertical"
@@ -260,86 +248,68 @@
                             android:textSize="14dp"
                             tools:ignore="HardcodedText,SpUsage" />
 
+                        <LinearLayout
+                            android:id="@+id/boder_1"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="2"
+                            android:background="@color/Carkviewline"
+                            android:clickable="true"
+                            android:orientation="vertical"></LinearLayout>
+
+                        <TextView
+                            android:id="@+id/map_view"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="10"
+                            android:background="@drawable/side_map_selector"
+                            android:clickable="true"
+                            android:gravity="center_vertical"
+                            android:text="@string/mapview_text"
+                            android:textColor="@android:color/black"
+                            android:textSize="14dp"
+                            tools:ignore="HardcodedText,SpUsage" />
+
+                        <TextView
+                            android:id="@+id/tutorial_view"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="10"
+                            android:background="@drawable/side_info_tuto_selector"
+                            android:clickable="true"
+                            android:gravity="center_vertical"
+                            android:text="@string/side_tuto"
+                            android:textColor="@android:color/black"
+                            android:textSize="14dp"
+                            tools:ignore="HardcodedText,SpUsage" />
+
+                        <TextView
+                            android:id="@+id/grade_chart"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="10"
+                            android:background="@drawable/side_grade_selector"
+                            android:clickable="true"
+                            android:gravity="center_vertical"
+                            android:text="@string/등급표"
+                            android:textColor="@android:color/black"
+                            android:textSize="14dp"
+                            tools:ignore="HardcodedText,SpUsage" />
+
+                        <TextView
+                            android:id="@+id/setting"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="10"
+                            android:background="@drawable/side_setting_selector"
+                            android:clickable="true"
+                            android:gravity="center_vertical"
+                            android:text="@string/설정"
+                            android:textColor="@android:color/black"
+                            android:textSize="14dp"
+                            tools:ignore="HardcodedText,SpUsage" />
+
                     </LinearLayout>
-
-                    <LinearLayout
-                        android:id="@+id/boder_1"
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_weight="1"
-                        android:background="@color/Carkviewline"
-                        android:clickable="true"
-                        android:orientation="vertical"></LinearLayout>
-
-                    <TextView
-                        android:id="@+id/map_view"
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_weight="10"
-                        android:background="@drawable/side_map_selector"
-                        android:clickable="true"
-                        android:gravity="center_vertical"
-                        android:text="@string/mapview_text"
-                        android:textColor="@android:color/black"
-                        android:textSize="14dp"
-                        tools:ignore="HardcodedText,SpUsage" />
-
-                    <TextView
-                        android:id="@+id/tutorial_view"
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_weight="10"
-                        android:background="@drawable/side_subway_selector"
-                        android:clickable="true"
-                        android:gravity="center_vertical"
-                        android:text="@string/side_tuto"
-                        android:textColor="@android:color/black"
-                        android:textSize="14dp"
-                        tools:ignore="HardcodedText,SpUsage" />
-
-                    <LinearLayout
-                        android:id="@+id/boder_2"
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_weight="1"
-                        android:background="@color/Carkviewline"
-                        android:clickable="true"
-                        android:orientation="vertical"></LinearLayout>
-
-                    <TextView
-                        android:id="@+id/grade_chart"
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_weight="10"
-                        android:background="@drawable/side_grade_selector"
-                        android:clickable="true"
-                        android:gravity="center_vertical"
-                        android:text="@string/등급표"
-                        android:textColor="@android:color/black"
-                        android:textSize="14dp"
-                        tools:ignore="HardcodedText,SpUsage" />
-
-                    <TextView
-                        android:id="@+id/setting"
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_weight="10"
-                        android:background="@drawable/side_setting_selector"
-                        android:clickable="true"
-                        android:gravity="center_vertical"
-                        android:text="@string/설정"
-                        android:textColor="@android:color/black"
-                        android:textSize="14dp"
-                        tools:ignore="HardcodedText,SpUsage" />
-
-                    <LinearLayout
-                        android:id="@+id/boder_3"
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_weight="1"
-                        android:background="@color/Carkviewline"
-                        android:clickable="true"
-                        android:orientation="vertical"></LinearLayout>
 
                 </LinearLayout>
 

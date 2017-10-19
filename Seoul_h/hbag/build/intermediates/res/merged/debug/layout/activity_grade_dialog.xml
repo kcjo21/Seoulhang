@@ -224,89 +224,81 @@
                 tools:ignore="UselessLeaf">
 
                 <TextView
-                    android:id="@+id/textView15"
+                    android:id="@+id/tv_unrank"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="10"
                     android:gravity="center_vertical|center_horizontal"
-                    android:text="@string/점수_0"
                     android:textColor="@android:color/black"
                     android:textSize="14dp"
                     tools:ignore="NestedWeights,SpUsage" />
 
                 <TextView
-                    android:id="@+id/textView16"
+                    android:id="@+id/tv_bronze"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="10"
                     android:gravity="center_vertical|center_horizontal"
-                    android:text="@string/점수_10"
                     android:textColor="@android:color/black"
                     android:textSize="14dp"
                     tools:ignore="SpUsage" />
 
                 <TextView
-                    android:id="@+id/textView17"
+                    android:id="@+id/tv_silver"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="10"
                     android:gravity="center_vertical|center_horizontal"
-                    android:text="@string/점수_40"
                     android:textColor="@android:color/black"
                     android:textSize="14dp"
                     tools:ignore="SpUsage" />
 
                 <TextView
-                    android:id="@+id/textView18"
+                    android:id="@+id/tv_gold"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="10"
                     android:gravity="center_vertical|center_horizontal"
-                    android:text="@string/점수_90"
                     android:textColor="@android:color/black"
                     android:textSize="14dp"
                     tools:ignore="HardcodedText,SpUsage" />
 
                 <TextView
-                    android:id="@+id/textView19"
+                    android:id="@+id/tv_platinum"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="10"
                     android:gravity="center_vertical|center_horizontal"
-                    android:text="@string/점수_160"
                     android:textColor="@android:color/black"
                     android:textSize="14dp"
                     tools:ignore="SpUsage" />
 
                 <TextView
-                    android:id="@+id/textView20"
+                    android:id="@+id/tv_diamond"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="10"
                     android:gravity="center_vertical|center_horizontal"
-                    android:text="@string/점수_240"
                     android:textColor="@android:color/black"
                     android:textSize="14dp"
                     tools:ignore="HardcodedText,SpUsage" />
 
                 <TextView
-                    android:id="@+id/textView21"
+                    android:id="@+id/tv_master"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="10"
                     android:gravity="center_vertical|center_horizontal"
-                    android:text="@string/점수_340"
                     android:textColor="@android:color/black"
                     android:textSize="14dp"
                     tools:ignore="SpUsage" />
 
                 <TextView
-                    android:id="@+id/textView22"
+                    android:id="@+id/tv_challenger"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="10"
                     android:gravity="center_vertical|center_horizontal"
-                    android:text="@string/점수_450"
                     android:textColor="@android:color/black"
                     android:textSize="14dp"
                     tools:ignore="SpUsage" />

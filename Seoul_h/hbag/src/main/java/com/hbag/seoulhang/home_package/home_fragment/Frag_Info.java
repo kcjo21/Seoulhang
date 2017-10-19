@@ -48,6 +48,7 @@ public class Frag_Info extends Fragment
     TextView info_point;
     TextView info_hint;
     TextView info_email;
+    TextView info_makequiz;
     ImageView info_grade;
     TextView no_quiz;
     Ipm ipm;
@@ -74,6 +75,7 @@ public class Frag_Info extends Fragment
         info_point = (TextView)layout.findViewById(R.id.info_point);
         info_hint = (TextView)layout.findViewById(R.id.info_hint);
         info_email = (TextView)layout.findViewById(R.id.info_email);
+        info_makequiz = (TextView)layout.findViewById(R.id.info_makequiz);
         info_grade = (ImageView)layout.findViewById(R.id.info_grade);
         no_quiz = (TextView)layout.findViewById(R.id.no_quiz);
         String ip = ipm.getip();
@@ -123,11 +125,19 @@ public class Frag_Info extends Fragment
                         String point_i = getResources().getString(R.string.score)+Integer.toString(inventoryDTO.getPoint());
                         String hint_i = getResources().getString(R.string.Hint_info)+Integer.toString(inventoryDTO.getHint());
                         String email_i = inventoryDTO.getEmail();
+                        String makequiz_i = getResources().getString(R.string.make_quiz_count,inventoryDTO.getMakequiz());
+
 
                         info_name.setText(nickname);
                         info_point.setText(point_i);
                         info_hint.setText(hint_i);
                         info_email.setText(email_i);
+                        if(inventoryDTO.getMakequiz()>0) {
+                            info_makequiz.setText(makequiz_i);
+                        }
+                        else if(inventoryDTO.getMakequiz()<=0){
+                            info_makequiz.setText(getResources().getString(R.string.can_not_make_quiz));
+                        }
                         switch (grade_i){
                             case "Unrank":
                                 info_grade.setImageResource(R.drawable.tier_unrank);

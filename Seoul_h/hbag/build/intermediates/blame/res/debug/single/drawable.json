@@ -424,6 +424,10 @@
         "source": "C:\\Users\\cwh62\\.android\\build-cache\\353c8d830c306275ace0a67ed049e72dd1067f85\\output\\res\\drawable\\common_google_signin_btn_icon_light.xml"
     },
     {
+        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\drawable\\selector_edit_text.xml",
+        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\src\\main\\res\\drawable\\selector_edit_text.xml"
+    },
+    {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\drawable\\selector_seoulhang.xml",
         "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\src\\main\\res\\drawable\\selector_seoulhang.xml"
     },
@@ -444,12 +448,12 @@
         "source": "C:\\Users\\cwh62\\.android\\build-cache\\1860e7502bea0f552aaa4935120bb2accced6b21\\output\\res\\drawable\\abc_list_selector_background_transition_holo_light.xml"
     },
     {
-        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_seekbar_thumb_material.xml",
-        "source": "C:\\Users\\cwh62\\.android\\build-cache\\1860e7502bea0f552aaa4935120bb2accced6b21\\output\\res\\drawable\\abc_seekbar_thumb_material.xml"
+        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\drawable\\side_info_tuto_selector.xml",
+        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\src\\main\\res\\drawable\\side_info_tuto_selector.xml"
     },
     {
-        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\drawable\\side_subway_selector.xml",
-        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\src\\main\\res\\drawable\\side_subway_selector.xml"
+        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_seekbar_thumb_material.xml",
+        "source": "C:\\Users\\cwh62\\.android\\build-cache\\1860e7502bea0f552aaa4935120bb2accced6b21\\output\\res\\drawable\\abc_seekbar_thumb_material.xml"
     },
     {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\drawable\\design_password_eye.xml",

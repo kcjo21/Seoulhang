@@ -41,7 +41,7 @@ public class Dragger_Achieve extends SwipeBackActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_achieve_dragger);
-        setDragEdge(SwipeBackLayout.DragEdge.LEFT);  //좌측으로 드래깅 세팅
+        setDragEdge(SwipeBackLayout.DragEdge.BOTTOM);  //좌측으로 드래깅 세팅
 
         profile = UserProfileData_singleton.getInstance();
         String sid = profile.getId();

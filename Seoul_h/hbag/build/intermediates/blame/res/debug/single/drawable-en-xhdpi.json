@@ -28,6 +28,10 @@
         "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\src\\main\\res\\drawable-en-xhdpi\\app_icon.png"
     },
     {
+        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\drawable-en-xhdpi\\run_13.png",
+        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\src\\main\\res\\drawable-en-xhdpi\\run_13.png"
+    },
+    {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\drawable-en-xhdpi\\sign_in_seoulhang_ov.png",
         "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\src\\main\\res\\drawable-en-xhdpi\\sign_in_seoulhang_ov.png"
     },
@@ -40,20 +44,12 @@
         "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\src\\main\\res\\drawable-en-xhdpi\\logout_dialog_bt_yes.png"
     },
     {
-        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\drawable-en-xhdpi\\side_camera_on_on.png",
-        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\src\\main\\res\\drawable-en-xhdpi\\side_camera_on_on.png"
-    },
-    {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\drawable-en-xhdpi\\home_2.png",
         "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\src\\main\\res\\drawable-en-xhdpi\\home_2.png"
     },
     {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\drawable-en-xhdpi\\logout_bt_normal.png",
         "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\src\\main\\res\\drawable-en-xhdpi\\logout_bt_normal.png"
-    },
-    {
-        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\drawable-en-xhdpi\\side_subway_on.png",
-        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\src\\main\\res\\drawable-en-xhdpi\\side_subway_on.png"
     },
     {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\drawable-en-xhdpi\\help_tuto_on.png",
@@ -84,10 +80,6 @@
         "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\src\\main\\res\\drawable-en-xhdpi\\tier_diamond.png"
     },
     {
-        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\drawable-en-xhdpi\\text_hint.png",
-        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\src\\main\\res\\drawable-en-xhdpi\\text_hint.png"
-    },
-    {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\drawable-en-xhdpi\\new_four.png",
         "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\src\\main\\res\\drawable-en-xhdpi\\new_four.png"
     },
@@ -96,16 +88,16 @@
         "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\src\\main\\res\\drawable-en-xhdpi\\app_banner.png"
     },
     {
-        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\drawable-en-xhdpi\\side_home.png",
-        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\src\\main\\res\\drawable-en-xhdpi\\side_home.png"
-    },
-    {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\drawable-en-xhdpi\\three.png",
         "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\src\\main\\res\\drawable-en-xhdpi\\three.png"
     },
     {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\drawable-en-xhdpi\\map_image_on.png",
         "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\src\\main\\res\\drawable-en-xhdpi\\map_image_on.png"
+    },
+    {
+        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\drawable-en-xhdpi\\run_12.png",
+        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\src\\main\\res\\drawable-en-xhdpi\\run_12.png"
     },
     {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\drawable-en-xhdpi\\bt_skip.png",
@@ -172,12 +164,12 @@
         "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\src\\main\\res\\drawable-en-xhdpi\\side_setting.png"
     },
     {
-        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\drawable-en-xhdpi\\side_home_on.png",
-        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\src\\main\\res\\drawable-en-xhdpi\\side_home_on.png"
-    },
-    {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\drawable-en-xhdpi\\map_image.png",
         "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\src\\main\\res\\drawable-en-xhdpi\\map_image.png"
+    },
+    {
+        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\drawable-en-xhdpi\\run_11.png",
+        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\src\\main\\res\\drawable-en-xhdpi\\run_11.png"
     },
     {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\drawable-en-xhdpi\\run_7.png",
@@ -224,6 +216,10 @@
         "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\src\\main\\res\\drawable-en-xhdpi\\logout_dialog_bt_yes_on.png"
     },
     {
+        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\drawable-en-xhdpi\\side_info_tuto_on.png",
+        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\src\\main\\res\\drawable-en-xhdpi\\side_info_tuto_on.png"
+    },
+    {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\drawable-en-xhdpi\\new_nine.png",
         "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\src\\main\\res\\drawable-en-xhdpi\\new_nine.png"
     },
@@ -264,10 +260,6 @@
         "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\src\\main\\res\\drawable-en-xhdpi\\new_icon.png"
     },
     {
-        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\drawable-en-xhdpi\\side_subway.png",
-        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\src\\main\\res\\drawable-en-xhdpi\\side_subway.png"
-    },
-    {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\drawable-en-xhdpi\\new_five.png",
         "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\src\\main\\res\\drawable-en-xhdpi\\new_five.png"
     },
@@ -294,6 +286,10 @@
     {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\drawable-en-xhdpi\\logout_dialog_text.png",
         "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\src\\main\\res\\drawable-en-xhdpi\\logout_dialog_text.png"
+    },
+    {
+        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\drawable-en-xhdpi\\side_info_tuto.png",
+        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\src\\main\\res\\drawable-en-xhdpi\\side_info_tuto.png"
     },
     {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\drawable-en-xhdpi\\text_name.png",
@@ -364,12 +360,12 @@
         "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\src\\main\\res\\drawable-en-xhdpi\\side_map_view_on.png"
     },
     {
-        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\drawable-en-xhdpi\\side_camera_on.png",
-        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\src\\main\\res\\drawable-en-xhdpi\\side_camera_on.png"
-    },
-    {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\drawable-en-xhdpi\\p_tapbar.png",
         "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\src\\main\\res\\drawable-en-xhdpi\\p_tapbar.png"
+    },
+    {
+        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\drawable-en-xhdpi\\run_10.png",
+        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\src\\main\\res\\drawable-en-xhdpi\\run_10.png"
     },
     {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\drawable-en-xhdpi\\silver.png",
@@ -438,6 +434,10 @@
     {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\drawable-en-xhdpi\\five.png",
         "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\src\\main\\res\\drawable-en-xhdpi\\five.png"
+    },
+    {
+        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\drawable-en-xhdpi\\text_edit_profile_on.png",
+        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\src\\main\\res\\drawable-en-xhdpi\\text_edit_profile_on.png"
     },
     {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\drawable-en-xhdpi\\tapbar.png",

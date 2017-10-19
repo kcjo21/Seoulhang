@@ -171,7 +171,7 @@
             android:value="2247d6cb8deb36e71828bc0c53c6098f0c87c5d4" />
 
         <activity
-            android:name="com.hbag.seoulhang.home_package.QuizMake"
+            android:name="com.hbag.seoulhang.home_package.home_fragment.Dragger_QuizMake"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
             android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity"

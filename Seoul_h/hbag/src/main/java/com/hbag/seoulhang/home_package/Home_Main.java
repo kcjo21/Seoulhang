@@ -47,7 +47,6 @@ import com.hbag.seoulhang.R;
 import com.hbag.seoulhang.joinmanage_package.LoginActivity;
 import com.hbag.seoulhang.map_package.GooglemapsActivity;
 import com.hbag.seoulhang.model.retrofit.DataBaseDTO;
-import com.hbag.seoulhang.model.retrofit.FindDTO;
 import com.hbag.seoulhang.model.retrofit.InventoryDTO;
 import com.hbag.seoulhang.network.Ipm;
 import com.hbag.seoulhang.network.NetworkClient;
@@ -86,7 +85,6 @@ public class Home_Main extends BaseActivity implements
     TextView mapview;
     TextView grade;
     TextView setting;
-    TextView hint_left;
     TextView player_grade;
     TextView player_point_home;
     TextView player_name;
@@ -100,7 +98,7 @@ public class Home_Main extends BaseActivity implements
     TextView drawerposition;
     TextView cameraposition;
     ImageButton side_logout_bt;
-    private GradeDialog dialog_grade;
+    private Dialog_Grade dialog_grade;
     private LogoutDialog logoutDialog;
     Handler handler;
     private GoogleApiClient mGoogleApiClient;
@@ -144,7 +142,6 @@ public class Home_Main extends BaseActivity implements
         mapview = (TextView)findViewById(R.id.map_view);
         grade = (TextView)findViewById(R.id.grade_chart);
         setting = (TextView)findViewById(R.id.setting);
-        hint_left = (TextView)findViewById(R.id.hint_left);
         player_grade = (TextView)findViewById(R.id.player_grade);
         player_point_home = (TextView)findViewById(R.id.player_point_home);
         player_name = (TextView)findViewById(R.id.player_name);
@@ -268,7 +265,7 @@ public class Home_Main extends BaseActivity implements
                     return;
                 }
                 mLastClickTime = SystemClock.elapsedRealtime();
-                dialog_grade = new GradeDialog(Home_Main.this, clicklistener);
+                dialog_grade = new Dialog_Grade(Home_Main.this, clicklistener);
                 dialog_grade.show();
 
             }
@@ -336,13 +333,10 @@ public class Home_Main extends BaseActivity implements
                         String nickname = inventoryDTO.getNickname();
                         String email = inventoryDTO.getEmail();
                         String point_i = Integer.toString(inventoryDTO.getPoint());
-                        String hint_i = Integer.toString(inventoryDTO.getHint());
 
                         player_name.setText(getResources().getString(R.string.side_닉네임,nickname));
-                        hint_left.setText(getResources().getString(R.string.side_힌트수,hint_i));
                         player_grade.setText(getResources().getString(R.string.side_등급,grade_i));
                         player_point_home.setText(getResources().getString(R.string.side_점수,point_i));
-
                         profile.setId(loginid);
                         profile.setNickname(nickname);
                         profile.setEmail(email);

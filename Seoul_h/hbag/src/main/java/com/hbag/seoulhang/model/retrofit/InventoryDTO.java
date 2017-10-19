@@ -23,6 +23,8 @@ public class InventoryDTO {
     private String email;
     private int point;
     private int hint;
+    @SerializedName("make_quiz")
+    private int makequiz;
 
 
 
@@ -37,7 +39,7 @@ public class InventoryDTO {
     public int getPoint() {return this.point;}
     public int getHint() {return this.hint;}
     public String getGrade() {return this.grade;}
-
+    public int getMakequiz() {return makequiz;}
 
     public void setRegionname(String regionname) {
         this.regionname = regionname;
@@ -54,5 +56,5 @@ public class InventoryDTO {
     public void setPoint(int point) {this.point = point;}
     public void setHint(int hint) {this.hint = hint;}
     public void setGrade(String grade) {this.grade = grade;}
-
+    public void setMakequiz(int makequiz) {this.makequiz = makequiz;}
 }

@@ -9,5 +9,9 @@
     <item android:drawable="@drawable/run_7" android:duration="28"/>
     <item android:drawable="@drawable/run_8" android:duration="28"/>
     <item android:drawable="@drawable/run_9" android:duration="28"/>
+    <item android:drawable="@drawable/run_10" android:duration="28"/>
+    <item android:drawable="@drawable/run_11" android:duration="28"/>
+    <item android:drawable="@drawable/run_12" android:duration="28"/>
+    <item android:drawable="@drawable/run_13" android:duration="28"/>
 
 </animation-list>
