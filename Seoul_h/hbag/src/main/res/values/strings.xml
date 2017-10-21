@@ -27,7 +27,7 @@
     <string name="점수">점수</string>
     <string name="남은힌트">힌트</string>
     <string name="해결한문제">&#160;해결한 문제</string>
-    <string name="지역별달성률">&#160;지역별 정보 및 달성률</string>
+    <string name="지역별달성률">지역별 정보 및 달성률</string>
     <string name="현재해결한문제없음">현재 해결한 문제가 없습니다.</string>
     <string name="코드를입력">인증코드를 입력하세요.</string>
     <string name="풀수있는문제없음">현재 풀 수 있는 문제가 없습니다.\n새로운 문제를 획득해주세요.</string>
@@ -197,5 +197,8 @@
     <string name="can_not_make_quiz">포인트가 부족하여 문제를 낼 수 없습니다.</string>
     <string name="succes_make_quiz">퀴즈를 제출했습니다!</string>
     <string name="make_quiz_check">퀴즈를 제출하면 전용 포인트가 필요합니다. 제출하시겠습니까?</string>
+    <string name="localrate_see">지역별 달성률 보기</string>
+    <string name="close">닫기</string>
+    <string name="you_can_not_get">자신이 제출한 퀴즈는 획득할 수 없습니다.</string>
 
 </resources>

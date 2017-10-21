@@ -20,7 +20,7 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="15"
+        android:layout_weight="20"
         android:background="@color/white"
         android:gravity="center_vertical">
 
@@ -33,6 +33,7 @@
             android:layout_centerVertical="false"
             android:layout_marginLeft="20dp"
             android:layout_marginStart="20dp"
+            android:layout_marginTop="5dp"
             android:contentDescription="@string/등급"
             app:srcCompat="@drawable/tier_gold" />
 
@@ -41,13 +42,14 @@
             android:layout_width="120dp"
             android:layout_height="wrap_content"
             android:layout_below="@+id/info_makequiz"
+            android:layout_marginBottom="1dp"
             android:layout_marginLeft="10dp"
             android:layout_marginStart="10dp"
             android:layout_toEndOf="@+id/info_grade"
             android:layout_toRightOf="@+id/info_grade"
             android:gravity="center_vertical"
             android:maxWidth="120dp"
-            android:text="가나다라마바사아자차카타파하"
+            android:text="가나둘셋넷"
             android:textColor="@android:color/black"
             android:textSize="16dp"
             android:textStyle="bold"
@@ -74,6 +76,8 @@
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
             android:layout_alignStart="@+id/info_name"
+            android:layout_marginBottom="3dp"
+            android:layout_marginTop="5dp"
             android:maxLines="1"
             android:text="@string/make_quiz_count"
             android:textColor="@android:color/black"
@@ -118,12 +122,17 @@
 
     </RelativeLayout>
 
-    <LinearLayout
+    <TextView
+        android:id="@+id/tv_view_rate"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"
-        android:background="@color/Carkviewline"
-        android:orientation="horizontal"></LinearLayout>
+        android:layout_marginLeft="5dp"
+        android:layout_marginStart="5dp"
+        android:layout_weight="6"
+        android:background="@drawable/card_view_round"
+        android:gravity="center_vertical|center_horizontal"
+        android:text="@string/localrate_see"
+        android:textColor="@android:color/black" />
 
     <TextView
         android:id="@+id/border_text"
@@ -151,7 +160,7 @@
         android:layout_marginLeft="5dp"
         android:layout_marginRight="5dp"
         android:layout_marginStart="5dp"
-        android:layout_weight="78.5"
+        android:layout_weight="68.5"
         android:visibility="visible" />
 
     <TextView
@@ -162,7 +171,7 @@
         android:layout_marginLeft="5dp"
         android:layout_marginRight="5dp"
         android:layout_marginStart="5dp"
-        android:layout_weight="78.5"
+        android:layout_weight="68.5"
         android:gravity="center_vertical|center_horizontal"
         android:text="@string/현재해결한문제없음"
         android:textSize="20dp"

@@ -1,16 +1,19 @@
 package com.hbag.seoulhang.home_package.home_fragment;
 
 import android.app.Activity;
+import android.content.Context;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ExpandableListAdapter;
 import android.widget.ExpandableListView;
 
 import com.hbag.seoulhang.R;
+import com.hbag.seoulhang.appbase_package.BaseActivity;
 import com.hbag.seoulhang.joinmanage_package.login_package.UserProfileData_singleton;
 import com.hbag.seoulhang.model.retrofit.RateDTO;
 import com.hbag.seoulhang.network.Ipm;
@@ -25,7 +28,7 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class Dragger_Achieve extends SwipeBackActivity {
+public class Dragger_Achieve extends BaseActivity {
 
     public ExpandableListAdapter listAdapter;
     public ExpandableListView expListView;
@@ -36,12 +39,12 @@ public class Dragger_Achieve extends SwipeBackActivity {
     UserProfileData_singleton profile;
     Ipm ipm;
     Methods methods;
+    Button close;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_achieve_dragger);
-        setDragEdge(SwipeBackLayout.DragEdge.BOTTOM);  //좌측으로 드래깅 세팅
 
         profile = UserProfileData_singleton.getInstance();
         String sid = profile.getId();
@@ -49,6 +52,7 @@ public class Dragger_Achieve extends SwipeBackActivity {
         networkClient = NetworkClient.getInstance();
         expListView = (ExpandableListView)findViewById(R.id.exl); // 확장 리스트뷰를 가져온다.
         ipm = new Ipm();
+        close = (Button)findViewById(R.id.bt_close);
 
 
 
@@ -72,12 +76,12 @@ public class Dragger_Achieve extends SwipeBackActivity {
                             String regionname = rateDTO.getRegionname();
                             String exp = rateDTO.getExplain();
                             int regioncode = rateDTO.getRegioncode();
-                            int image = methods.imageSelector_2(regioncode);
+                            Log.d("리즌",""+regioncode);
                             // 그룹 생성
                             groupData.add(new MyData_G(regionname));
                             childData.add(new ArrayList<MyData_H>());
                             // 차일드 생성
-                            childData.get(i).add(new MyData_H(getResources().getString(R.string.달성률) + " " + rates_q + "%", rates_q, R.drawable.new_eight, exp, expListView));
+                            childData.get(i).add(new MyData_H(getResources().getString(R.string.달성률) + " " + rates_q + "%", rates_q, exp, expListView));
                             Log.e("확인",""+rates_q);
 
                         }
@@ -95,6 +99,13 @@ public class Dragger_Achieve extends SwipeBackActivity {
             public void onFailure(Call<List<RateDTO>> call, Throwable t) {
                 Log.e("ACC", "s?? " + t.getMessage());
 
+            }
+        });
+
+        close.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
             }
         });
     }

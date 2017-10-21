@@ -1,6 +1,10 @@
 package com.hbag.seoulhang.joinmanage_package.login_package;
 
 import android.app.Application;
+import android.util.Log;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by cwh62 on 2017-09-30.
@@ -37,6 +41,4 @@ public class UserProfileData_singleton extends Application{
 
     public String getLoginType() {return  this.loginType;}
     public void setLoginType(String loginType) {this.loginType=loginType;}
-
-
 }

@@ -1,7 +1,11 @@
 package com.hbag.seoulhang.home_package.home_fragment;
 
+import android.annotation.TargetApi;
 import android.content.Context;
+import android.graphics.Color;
+import android.graphics.PorterDuff;
 import android.graphics.Typeface;
+import android.support.v4.content.ContextCompat;
 import android.text.method.ScrollingMovementMethod;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
@@ -10,6 +14,7 @@ import android.view.ViewGroup;
 import android.widget.BaseExpandableListAdapter;
 import android.widget.ExpandableListView;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
@@ -59,11 +64,13 @@ public class ExpandableListViewAdapter extends BaseExpandableListAdapter{
             convertView = infalInflater.inflate(R.layout.item_info_c, null);
         }
 
+        Methods methods = new Methods();
+
         TextView progress = (TextView)convertView.findViewById(R.id.progress);
         ProgressBar progressBar = (ProgressBar)convertView.findViewById(R.id.progressBar);
-        ImageView imageView = (ImageView)convertView.findViewById(R.id.photo);
         final ExpandableListView exl = _listDataChild.get(groupPosition).get(childPosition).exp;
         final TextView content = (TextView)convertView.findViewById(R.id.content);
+        final LinearLayout background = (LinearLayout)convertView.findViewById(R.id.back_rate);
         content.setMovementMethod(ScrollingMovementMethod.getInstance());
         content.setOnTouchListener(new View.OnTouchListener() {
             @Override
@@ -78,10 +85,20 @@ public class ExpandableListViewAdapter extends BaseExpandableListAdapter{
             }
         });
 
+        final int sdk = android.os.Build.VERSION.SDK_INT;
+        if(sdk < android.os.Build.VERSION_CODES.JELLY_BEAN) {
+            background.setBackgroundDrawable(ContextCompat.getDrawable(_context,methods.imageSelector2(_listDataHeader.get(groupPosition).getName())));
+        } else {
+            background.setBackground(ContextCompat.getDrawable(_context,methods.imageSelector2(_listDataHeader.get(groupPosition).getName())));
+        }
+
         progress.setText(_listDataChild.get(groupPosition).get(childPosition).getProgress());
         progressBar.setProgress(_listDataChild.get(groupPosition).get(childPosition).getProgressbar());
-        imageView.setImageResource(_listDataChild.get(groupPosition).get(childPosition).getImage());
         content.setText(_listDataChild.get(groupPosition).get(childPosition).getContent());
+
+        progressBar.getIndeterminateDrawable().setColorFilter(
+                Color.parseColor("#FFFFD700"),
+                PorterDuff.Mode.SCREEN);
 
 
         return convertView;
@@ -152,19 +169,16 @@ public class ExpandableListViewAdapter extends BaseExpandableListAdapter{
 class MyData_H{
     public String progress;
     public int progressbar;
-    public int image;
     public String content;
     public ExpandableListView exp;
-    public MyData_H(String progress,int progressbar,int image,String content,ExpandableListView exp){
+    public MyData_H(String progress,int progressbar,String content,ExpandableListView exp){
         this.progress = progress;
         this.progressbar = progressbar;
-        this.image = image;
         this.content = content;
         this.exp = exp;
     }
     public String getProgress(){return progress;}
     public int getProgressbar(){return progressbar;}
-    public int getImage(){return image;}
     public String getContent(){return content;}
 }
 

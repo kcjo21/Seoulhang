@@ -31,6 +31,7 @@ import java.util.ArrayList;
 public class RecyclerAdapter_T extends RecyclerView.Adapter<RecyclerAdapter_T.ViewHoler>{
     private ArrayList<MyData_T> mDataset;
 
+
     public static class ViewHoler extends RecyclerView.ViewHolder{
 
         TextView question_name;
@@ -93,6 +94,8 @@ public class RecyclerAdapter_T extends RecyclerView.Adapter<RecyclerAdapter_T.Vi
             }
 
 
+
+
         }
 
 
@@ -110,6 +113,8 @@ public class RecyclerAdapter_T extends RecyclerView.Adapter<RecyclerAdapter_T.Vi
     @Override
     public void onBindViewHolder(ViewHoler holder,int position){
 
+        Methods methods = new Methods();
+
         holder.question_name.setText(mDataset.get(position).question_name);
         holder.question_code.setText(mDataset.get(position).question_code);
         holder.region_name.setText(" "+mDataset.get(position).region_name+" ");
@@ -120,6 +125,7 @@ public class RecyclerAdapter_T extends RecyclerView.Adapter<RecyclerAdapter_T.Vi
         params.width = rev_size*7/10-5;
         params.height = rev_size*7/10-5;
         holder.background.setLayoutParams(params);        //DPI별로 이미지뷰 크기를 지정해준다.
+        holder.background.setImageResource(methods.imageSelector(mDataset.get(position).region_name)); // 해당지역의 사진으로 변경
 
 
 

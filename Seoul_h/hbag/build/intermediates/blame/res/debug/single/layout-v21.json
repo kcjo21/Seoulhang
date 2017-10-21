@@ -1,5 +1,9 @@
 [
     {
+        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\layout-v21\\item_info_c.xml",
+        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\src\\main\\res\\layout-v21\\item_info_c.xml"
+    },
+    {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\layout-v21\\notification_action.xml",
         "source": "C:\\Users\\cwh62\\.android\\build-cache\\1860e7502bea0f552aaa4935120bb2accced6b21\\output\\res\\layout-v21\\notification_action.xml"
     },

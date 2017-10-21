@@ -76,6 +76,7 @@
     <string name="can_not_make_quiz">포인트가 부족하여 문제를 낼 수 없습니다.</string>
     <string name="checkEmail">형식에 맞지 않는 메일주소입니다.</string>
     <string name="checkplease">ID중복확인을 해주십시오.</string>
+    <string name="close">닫기</string>
     <string name="close_drawer">close drawerclose drawerclose drawerclose drawerclose drawer</string>
     <string name="com_facebook_image_download_unknown_error">이미지를 다운로드하는 중 예기치 않은 오류가 발생했습니다.</string>
     <string name="com_facebook_internet_permission_error_message">WebView에 로그인하려면 인터넷 권한이 필요합니다</string>
@@ -131,6 +132,7 @@
     <string name="insert_quiz">Insert Quiz</string>
     <string name="kakao_app_key">45d3abc0fba429258e010957df473e42</string>
     <string name="lang_descrip">언어를 선택합니다.</string>
+    <string name="localrate_see">지역별 달성률 보기</string>
     <string name="loginsuccess">%s님 환영합니다.\n시작버튼을 눌러주세요!</string>
     <string name="make_quiz">퀴즈 출제</string>
     <string name="make_quiz_check">퀴즈를 제출하면 전용 포인트가 필요합니다. 제출하시겠습니까?</string>
@@ -180,6 +182,7 @@
     <string name="unity_permission_storage">타겟 위치를 확인하기 위해 내부 저장소를 읽을 권한이 필요합니다.</string>
     <string name="visitors">방문자 수 %d</string>
     <string name="welcome">%s님 환영합니다!</string>
+    <string name="you_can_not_get">자신이 제출한 퀴즈는 획득할 수 없습니다.</string>
     <string name="같은닉네임존재">이미 사용중인 닉네임입니다.</string>
     <string name="경도">경도</string>
     <string name="계정연동실패">계정 동기화에 실패했습니다.\n다시 시도해주십시오.</string>

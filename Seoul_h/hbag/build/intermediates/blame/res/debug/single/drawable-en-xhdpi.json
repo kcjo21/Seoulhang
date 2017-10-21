@@ -4,6 +4,10 @@
         "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\src\\main\\res\\drawable-en-xhdpi\\tier_platinum.png"
     },
     {
+        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\drawable-en-xhdpi\\rate_20.png",
+        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\src\\main\\res\\drawable-en-xhdpi\\rate_20.png"
+    },
+    {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\drawable-en-xhdpi\\new_six.png",
         "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\src\\main\\res\\drawable-en-xhdpi\\new_six.png"
     },
@@ -20,12 +24,24 @@
         "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\src\\main\\res\\drawable-en-xhdpi\\text_point.png"
     },
     {
+        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\drawable-en-xhdpi\\region_enpyeong.png",
+        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\src\\main\\res\\drawable-en-xhdpi\\region_enpyeong.png"
+    },
+    {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\drawable-en-xhdpi\\sign_in_facebook_ov.png",
         "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\src\\main\\res\\drawable-en-xhdpi\\sign_in_facebook_ov.png"
     },
     {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\drawable-en-xhdpi\\app_icon.png",
         "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\src\\main\\res\\drawable-en-xhdpi\\app_icon.png"
+    },
+    {
+        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\drawable-en-xhdpi\\rate_17.png",
+        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\src\\main\\res\\drawable-en-xhdpi\\rate_17.png"
+    },
+    {
+        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\drawable-en-xhdpi\\rate_3.png",
+        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\src\\main\\res\\drawable-en-xhdpi\\rate_3.png"
     },
     {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\drawable-en-xhdpi\\run_13.png",
@@ -44,12 +60,24 @@
         "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\src\\main\\res\\drawable-en-xhdpi\\logout_dialog_bt_yes.png"
     },
     {
+        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\drawable-en-xhdpi\\rate_18.png",
+        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\src\\main\\res\\drawable-en-xhdpi\\rate_18.png"
+    },
+    {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\drawable-en-xhdpi\\home_2.png",
         "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\src\\main\\res\\drawable-en-xhdpi\\home_2.png"
     },
     {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\drawable-en-xhdpi\\logout_bt_normal.png",
         "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\src\\main\\res\\drawable-en-xhdpi\\logout_bt_normal.png"
+    },
+    {
+        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\drawable-en-xhdpi\\region_gangseogu.png",
+        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\src\\main\\res\\drawable-en-xhdpi\\region_gangseogu.png"
+    },
+    {
+        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\drawable-en-xhdpi\\region_sungdongu.png",
+        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\src\\main\\res\\drawable-en-xhdpi\\region_sungdongu.png"
     },
     {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\drawable-en-xhdpi\\help_tuto_on.png",
@@ -62,6 +90,10 @@
     {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\drawable-en-xhdpi\\run_2.png",
         "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\src\\main\\res\\drawable-en-xhdpi\\run_2.png"
+    },
+    {
+        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\drawable-en-xhdpi\\rate_22.png",
+        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\src\\main\\res\\drawable-en-xhdpi\\rate_22.png"
     },
     {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\drawable-en-xhdpi\\run_5.png",
@@ -80,12 +112,28 @@
         "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\src\\main\\res\\drawable-en-xhdpi\\tier_diamond.png"
     },
     {
+        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\drawable-en-xhdpi\\region_mapogu.png",
+        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\src\\main\\res\\drawable-en-xhdpi\\region_mapogu.png"
+    },
+    {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\drawable-en-xhdpi\\new_four.png",
         "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\src\\main\\res\\drawable-en-xhdpi\\new_four.png"
     },
     {
+        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\drawable-en-xhdpi\\rate_2.png",
+        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\src\\main\\res\\drawable-en-xhdpi\\rate_2.png"
+    },
+    {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\drawable-en-xhdpi\\app_banner.png",
         "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\src\\main\\res\\drawable-en-xhdpi\\app_banner.png"
+    },
+    {
+        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\drawable-en-xhdpi\\rate_5.png",
+        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\src\\main\\res\\drawable-en-xhdpi\\rate_5.png"
+    },
+    {
+        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\drawable-en-xhdpi\\region_seochogu.png",
+        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\src\\main\\res\\drawable-en-xhdpi\\region_seochogu.png"
     },
     {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\drawable-en-xhdpi\\three.png",
@@ -108,8 +156,16 @@
         "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\src\\main\\res\\drawable-en-xhdpi\\num_2.png"
     },
     {
+        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\drawable-en-xhdpi\\rate_23.png",
+        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\src\\main\\res\\drawable-en-xhdpi\\rate_23.png"
+    },
+    {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\drawable-en-xhdpi\\logout_bt_facebook.png",
         "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\src\\main\\res\\drawable-en-xhdpi\\logout_bt_facebook.png"
+    },
+    {
+        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\drawable-en-xhdpi\\region_jongrogu.png",
+        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\src\\main\\res\\drawable-en-xhdpi\\region_jongrogu.png"
     },
     {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\drawable-en-xhdpi\\title_info.png",
@@ -132,8 +188,20 @@
         "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\src\\main\\res\\drawable-en-xhdpi\\arrow_indicator_down.png"
     },
     {
+        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\drawable-en-xhdpi\\region_yungdeungpogu.png",
+        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\src\\main\\res\\drawable-en-xhdpi\\region_yungdeungpogu.png"
+    },
+    {
+        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\drawable-en-xhdpi\\region_dobongu.png",
+        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\src\\main\\res\\drawable-en-xhdpi\\region_dobongu.png"
+    },
+    {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\drawable-en-xhdpi\\new_two.png",
         "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\src\\main\\res\\drawable-en-xhdpi\\new_two.png"
+    },
+    {
+        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\drawable-en-xhdpi\\region_gangdonggu.png",
+        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\src\\main\\res\\drawable-en-xhdpi\\region_gangdonggu.png"
     },
     {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\drawable-en-xhdpi\\info_1.png",
@@ -172,6 +240,26 @@
         "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\src\\main\\res\\drawable-en-xhdpi\\run_11.png"
     },
     {
+        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\drawable-en-xhdpi\\rate_19.png",
+        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\src\\main\\res\\drawable-en-xhdpi\\rate_19.png"
+    },
+    {
+        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\drawable-en-xhdpi\\region_dondaemoongu.png",
+        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\src\\main\\res\\drawable-en-xhdpi\\region_dondaemoongu.png"
+    },
+    {
+        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\drawable-en-xhdpi\\rate_1.png",
+        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\src\\main\\res\\drawable-en-xhdpi\\rate_1.png"
+    },
+    {
+        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\drawable-en-xhdpi\\rate_7.png",
+        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\src\\main\\res\\drawable-en-xhdpi\\rate_7.png"
+    },
+    {
+        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\drawable-en-xhdpi\\rate_16.png",
+        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\src\\main\\res\\drawable-en-xhdpi\\rate_16.png"
+    },
+    {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\drawable-en-xhdpi\\run_7.png",
         "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\src\\main\\res\\drawable-en-xhdpi\\run_7.png"
     },
@@ -188,20 +276,40 @@
         "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\src\\main\\res\\drawable-en-xhdpi\\title_home.png"
     },
     {
+        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\drawable-en-xhdpi\\rate_4.png",
+        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\src\\main\\res\\drawable-en-xhdpi\\rate_4.png"
+    },
+    {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\drawable-en-xhdpi\\new_eight.png",
         "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\src\\main\\res\\drawable-en-xhdpi\\new_eight.png"
+    },
+    {
+        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\drawable-en-xhdpi\\region_songpagu.png",
+        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\src\\main\\res\\drawable-en-xhdpi\\region_songpagu.png"
     },
     {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\drawable-en-xhdpi\\camera.png",
         "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\src\\main\\res\\drawable-en-xhdpi\\camera.png"
     },
     {
+        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\drawable-en-xhdpi\\region_gurogu.png",
+        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\src\\main\\res\\drawable-en-xhdpi\\region_gurogu.png"
+    },
+    {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\drawable-en-xhdpi\\seven.png",
         "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\src\\main\\res\\drawable-en-xhdpi\\seven.png"
     },
     {
+        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\drawable-en-xhdpi\\rate_10.png",
+        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\src\\main\\res\\drawable-en-xhdpi\\rate_10.png"
+    },
+    {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\drawable-en-xhdpi\\run_4.png",
         "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\src\\main\\res\\drawable-en-xhdpi\\run_4.png"
+    },
+    {
+        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\drawable-en-xhdpi\\rate_13.png",
+        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\src\\main\\res\\drawable-en-xhdpi\\rate_13.png"
     },
     {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\drawable-en-xhdpi\\run_1.png",
@@ -224,8 +332,16 @@
         "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\src\\main\\res\\drawable-en-xhdpi\\new_nine.png"
     },
     {
+        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\drawable-en-xhdpi\\region_nowongu.png",
+        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\src\\main\\res\\drawable-en-xhdpi\\region_nowongu.png"
+    },
+    {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\drawable-en-xhdpi\\tier_gold.png",
         "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\src\\main\\res\\drawable-en-xhdpi\\tier_gold.png"
+    },
+    {
+        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\drawable-en-xhdpi\\region_junglangu.png",
+        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\src\\main\\res\\drawable-en-xhdpi\\region_junglangu.png"
     },
     {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\drawable-en-xhdpi\\subway_image_on.png",
@@ -234,6 +350,10 @@
     {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\drawable-en-xhdpi\\new_three.png",
         "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\src\\main\\res\\drawable-en-xhdpi\\new_three.png"
+    },
+    {
+        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\drawable-en-xhdpi\\rate_12.png",
+        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\src\\main\\res\\drawable-en-xhdpi\\rate_12.png"
     },
     {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\drawable-en-xhdpi\\sign_in_google.png",
@@ -248,12 +368,24 @@
         "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\src\\main\\res\\drawable-en-xhdpi\\tier_challenger.png"
     },
     {
+        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\drawable-en-xhdpi\\region_geomcheongu.png",
+        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\src\\main\\res\\drawable-en-xhdpi\\region_geomcheongu.png"
+    },
+    {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\drawable-en-xhdpi\\gold.png",
         "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\src\\main\\res\\drawable-en-xhdpi\\gold.png"
     },
     {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\drawable-en-xhdpi\\rank_2.png",
         "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\src\\main\\res\\drawable-en-xhdpi\\rank_2.png"
+    },
+    {
+        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\drawable-en-xhdpi\\rate_11.png",
+        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\src\\main\\res\\drawable-en-xhdpi\\rate_11.png"
+    },
+    {
+        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\drawable-en-xhdpi\\rate_9.png",
+        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\src\\main\\res\\drawable-en-xhdpi\\rate_9.png"
     },
     {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\drawable-en-xhdpi\\new_icon.png",
@@ -284,8 +416,20 @@
         "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\src\\main\\res\\drawable-en-xhdpi\\run_9.png"
     },
     {
+        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\drawable-en-xhdpi\\rate_26.png",
+        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\src\\main\\res\\drawable-en-xhdpi\\rate_26.png"
+    },
+    {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\drawable-en-xhdpi\\logout_dialog_text.png",
         "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\src\\main\\res\\drawable-en-xhdpi\\logout_dialog_text.png"
+    },
+    {
+        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\drawable-en-xhdpi\\region_seodaemoongu.png",
+        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\src\\main\\res\\drawable-en-xhdpi\\region_seodaemoongu.png"
+    },
+    {
+        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\drawable-en-xhdpi\\region_gwanakgu.png",
+        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\src\\main\\res\\drawable-en-xhdpi\\region_gwanakgu.png"
     },
     {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\drawable-en-xhdpi\\side_info_tuto.png",
@@ -296,8 +440,24 @@
         "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\src\\main\\res\\drawable-en-xhdpi\\text_name.png"
     },
     {
+        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\drawable-en-xhdpi\\region_yangcheongu.png",
+        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\src\\main\\res\\drawable-en-xhdpi\\region_yangcheongu.png"
+    },
+    {
+        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\drawable-en-xhdpi\\region_dongjakgu.png",
+        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\src\\main\\res\\drawable-en-xhdpi\\region_dongjakgu.png"
+    },
+    {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\drawable-en-xhdpi\\rank_1.png",
         "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\src\\main\\res\\drawable-en-xhdpi\\rank_1.png"
+    },
+    {
+        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\drawable-en-xhdpi\\rate_25.png",
+        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\src\\main\\res\\drawable-en-xhdpi\\rate_25.png"
+    },
+    {
+        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\drawable-en-xhdpi\\region_userquiz.png",
+        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\src\\main\\res\\drawable-en-xhdpi\\region_userquiz.png"
     },
     {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\drawable-en-xhdpi\\run_8.png",
@@ -306,6 +466,10 @@
     {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\drawable-en-xhdpi\\num_3.png",
         "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\src\\main\\res\\drawable-en-xhdpi\\num_3.png"
+    },
+    {
+        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\drawable-en-xhdpi\\region_sungbukgu.png",
+        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\src\\main\\res\\drawable-en-xhdpi\\region_sungbukgu.png"
     },
     {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\drawable-en-xhdpi\\quiz_1.png",
@@ -318,6 +482,14 @@
     {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\drawable-en-xhdpi\\title_quiz.png",
         "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\src\\main\\res\\drawable-en-xhdpi\\title_quiz.png"
+    },
+    {
+        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\drawable-en-xhdpi\\region_gannamgu.png",
+        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\src\\main\\res\\drawable-en-xhdpi\\region_gannamgu.png"
+    },
+    {
+        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\drawable-en-xhdpi\\rate_8.png",
+        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\src\\main\\res\\drawable-en-xhdpi\\rate_8.png"
     },
     {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\drawable-en-xhdpi\\run_6.png",
@@ -356,6 +528,14 @@
         "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\src\\main\\res\\drawable-en-xhdpi\\text_edit_profile.png"
     },
     {
+        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\drawable-en-xhdpi\\rate_6.png",
+        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\src\\main\\res\\drawable-en-xhdpi\\rate_6.png"
+    },
+    {
+        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\drawable-en-xhdpi\\rate_14.png",
+        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\src\\main\\res\\drawable-en-xhdpi\\rate_14.png"
+    },
+    {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\drawable-en-xhdpi\\side_map_view_on.png",
         "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\src\\main\\res\\drawable-en-xhdpi\\side_map_view_on.png"
     },
@@ -372,12 +552,28 @@
         "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\src\\main\\res\\drawable-en-xhdpi\\silver.png"
     },
     {
+        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\drawable-en-xhdpi\\region_gwangjingu.png",
+        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\src\\main\\res\\drawable-en-xhdpi\\region_gwangjingu.png"
+    },
+    {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\drawable-en-xhdpi\\side_setting_on.png",
         "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\src\\main\\res\\drawable-en-xhdpi\\side_setting_on.png"
     },
     {
+        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\drawable-en-xhdpi\\region_youngsan.png",
+        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\src\\main\\res\\drawable-en-xhdpi\\region_youngsan.png"
+    },
+    {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\drawable-en-xhdpi\\num_1.png",
         "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\src\\main\\res\\drawable-en-xhdpi\\num_1.png"
+    },
+    {
+        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\drawable-en-xhdpi\\region_gangbukgu.png",
+        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\src\\main\\res\\drawable-en-xhdpi\\region_gangbukgu.png"
+    },
+    {
+        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\drawable-en-xhdpi\\rate_15.png",
+        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\src\\main\\res\\drawable-en-xhdpi\\rate_15.png"
     },
     {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\drawable-en-xhdpi\\camera_mode_on.png",
@@ -432,6 +628,14 @@
         "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\src\\main\\res\\drawable-en-xhdpi\\six.png"
     },
     {
+        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\drawable-en-xhdpi\\region_jungu.png",
+        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\src\\main\\res\\drawable-en-xhdpi\\region_jungu.png"
+    },
+    {
+        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\drawable-en-xhdpi\\rate_24.png",
+        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\src\\main\\res\\drawable-en-xhdpi\\rate_24.png"
+    },
+    {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\drawable-en-xhdpi\\five.png",
         "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\src\\main\\res\\drawable-en-xhdpi\\five.png"
     },
@@ -450,5 +654,9 @@
     {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\drawable-en-xhdpi\\two.png",
         "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\src\\main\\res\\drawable-en-xhdpi\\two.png"
+    },
+    {
+        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\drawable-en-xhdpi\\rate_21.png",
+        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\src\\main\\res\\drawable-en-xhdpi\\rate_21.png"
     }
 ]

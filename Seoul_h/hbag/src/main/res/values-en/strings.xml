@@ -27,7 +27,7 @@
     <string name="점수">Score</string>
     <string name="남은힌트">Hint</string>
     <string name="해결한문제">&#160;Quiz Solved</string>
-    <string name="지역별달성률">&#160;Local Information And Achievement Rate</string>
+    <string name="지역별달성률">Local Information and\nAchievement Rate</string>
     <string name="현재해결한문제없음">No Quiz Solved.</string>
     <string name="코드를입력">Please enter your ID.</string>
     <string name="풀수있는문제없음">You have no quiz to solve.\nPlease collect new quizzes</string>
@@ -197,4 +197,7 @@
     <string name="can_not_make_quiz">Not enough points to make a quiz</string>
     <string name="succes_make_quiz">Submitted a quiz!</string>
     <string name="make_quiz_check">Points are required when submitting a quiz. Do you want to submit it?</string>
+    <string name="localrate_see">View achievement by region</string>
+    <string name="close">ESC</string>
+    <string name="you_can_not_get">You can not get the quiz you submitted.</string>
 </resources>

@@ -617,8 +617,10 @@ public class Home_Main extends BaseActivity implements
         if(requestCode == 0){
             Log.d("유니티 리퀘스트코드 : ",""+requestCode);
             if(resultCode == RESULT_OK) {
+                int question_code = data.getIntExtra("got",0);
+                Log.d("유니티","Q_code"+question_code);
                 networkClient = NetworkClient.getInstance(ip);
-                networkClient.checkplayer(playerid,new Callback<Integer>() {
+                networkClient.checkplayer(playerid, question_code,new Callback<Integer>() {
                     @Override
                     public void onResponse(Call<Integer> call, Response<Integer> response) {
                         Log.d("유니티 통신완료 재확인 ID : ",playerid);
@@ -650,6 +652,18 @@ public class Home_Main extends BaseActivity implements
                                         }
                                     });
                                     alert.setMessage(R.string.이미가지고있는문제);
+                                    alert.show();
+                                }
+                                else if (check == 2){ //본인이 낸 퀴즈일 경우
+                                    AlertDialog.Builder alert = new AlertDialog.Builder(Home_Main.this);
+                                    alert.setPositiveButton(getResources().getString(R.string.dialog_ok), new DialogInterface.OnClickListener() {
+                                        @Override
+                                        public void onClick(DialogInterface dialog, int which) {
+
+                                            dialog.dismiss();     //닫기
+                                        }
+                                    });
+                                    alert.setMessage(R.string.you_can_not_get);
                                     alert.show();
                                 }
 

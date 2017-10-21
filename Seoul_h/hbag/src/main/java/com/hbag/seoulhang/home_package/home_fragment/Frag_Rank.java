@@ -96,7 +96,8 @@ public class Frag_Rank extends Fragment
                         String my_playername = my_rankDTO.getPlayername();
                         String my_point = Integer.toString(my_rankDTO.getPoint());
                         String my_grade = my_rankDTO.getGrade();
-                        myDataset.add(new MyData_R(my_rank_num, my_playerid, my_playername, my_point,"Platinum"));
+                        Log.d("계급",my_grade);
+                        myDataset.add(new MyData_R(my_rank_num, my_playerid, my_playername, my_point,my_grade));
                         rank.setText(myDataset.get(0).rank);
                         name.setText(myDataset.get(0).playername);
                         mypoint.setText(myDataset.get(0).point);  //자신의 정보는 따로 세팅한다.
@@ -155,14 +156,6 @@ public class Frag_Rank extends Fragment
                             myDataset.add(new MyData_R(rank_num, playerid, playername, point,grade));
 
                         }
-                        myDataset.add(new MyData_R("123", "1234", "1234", "123","Unrank"));
-                        myDataset.add(new MyData_R("123", "1234", "1234", "123","Bronze"));
-                        myDataset.add(new MyData_R("123", "1234", "1234", "123","Silver"));
-                        myDataset.add(new MyData_R("123", "1234", "1234", "123","Gold"));
-                        myDataset.add(new MyData_R("123", "1234", "1234", "123","Platinum"));
-                        myDataset.add(new MyData_R("123", "1234", "1234", "123","Diamond"));
-                        myDataset.add(new MyData_R("123", "1234", "1234", "123","Master"));
-                        myDataset.add(new MyData_R("123", "1234", "1234", "123","Challenger"));
 
 
 

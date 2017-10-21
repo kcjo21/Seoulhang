@@ -164,6 +164,51 @@ public class Dragger_Quiz extends SwipeBackActivity {
 
                 }
 
+                else if(mDataset.get(dataPosition).q_type.equals("ox")){
+                    networkClient.ox_flag(mDataset.get(dataPosition).playerid, qun, new Callback<String>() {
+                        @Override
+                        public void onResponse(Call<String> call, Response<String> response) {
+                            switch (response.code()){
+                                case 200:
+                                    String check = response.body();
+                                    Log.d("으음",check);
+                                    AlertDialog.Builder alert = new AlertDialog.Builder(Dragger_Quiz.this);
+                                    alert.setPositiveButton("확인", new DialogInterface.OnClickListener() {
+                                        @Override
+                                        public void onClick(DialogInterface dialog, int which) {
+                                            Intent intent = new Intent(Dragger_Quiz.this,Home_Main.class);
+                                            intent.putExtra("playerid",mDataset.get(dataPosition).playerid);
+                                            startActivity(intent);
+                                            finish();
+                                            dialog.dismiss();     //닫기
+                                        }
+                                    });
+                                    if(check.equals("rankup")) {
+                                        methods.progressOFF();
+                                        alert.setMessage(R.string.승급);
+                                        alert.show();
+                                    }
+                                    else if(check.equals("success")) {
+                                        methods.progressOFF();
+                                        alert.setMessage(R.string.오답);
+                                        alert.show();
+                                    }
+                                    break;
+                                default:
+                                    Log.d("oxFlag","default");
+                                    methods.progressOFF();
+                                    break;
+                            }
+                        }
+
+                        @Override
+                        public void onFailure(Call<String> call, Throwable t) {
+                            Log.d("oxFlag","failed");
+                            methods.progressOFF();
+                        }
+                    });
+                }
+
                 else {
                     AlertDialog.Builder alert = new AlertDialog.Builder(Dragger_Quiz.this);
                     alert.setPositiveButton("확인", new DialogInterface.OnClickListener() {

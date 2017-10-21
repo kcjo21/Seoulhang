@@ -4,6 +4,7 @@ import android.Manifest;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.location.LocationManager;
 import android.os.Bundle;
@@ -15,10 +16,17 @@ import android.widget.Toast;
 
 import com.hbag.seoulhang.R;
 import com.hbag.seoulhang.home_package.Home_Main;
+import com.hbag.seoulhang.joinmanage_package.login_package.UserProfileData_singleton;
 import com.hbag.seoulhang.map_package.GooglemapsActivity;
+import com.hbag.seoulhang.model.retrofit.InventoryDTO;
+import com.hbag.seoulhang.model.retrofit.ItemDTO;
 import com.hbag.seoulhang.model.retrofit.QuestDTO;
 import com.hbag.seoulhang.network.Ipm;
 import com.hbag.seoulhang.network.NetworkClient;
+import com.unity3d.player.UnityPlayer;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -27,15 +35,69 @@ import retrofit2.Response;
 public class GameActivity extends UnityPlayerActivity {
     Ipm ipm;
     NetworkClient networkClient;
+    List<ItemDTO> item = new ArrayList<>();
+    List<InventoryDTO> inventory = new ArrayList<>();
+    List<String> quizlist = new ArrayList<>();
     private static final int MY_PERMISSIONS_REQUEST_READ_CONTACTS = 2002;
     int count_msg = 0;
 
 
 
     @Override
-    protected void onCreate(Bundle arg0) {
+    protected void onCreate(final Bundle arg0) {
         // TODO Auto-generated method stub
         super.onCreate(arg0);
+        Intent id = getIntent();
+        final String playerid = id.getExtras().getString("playerid");
+        ipm = new Ipm();
+        String ip = ipm.getip();
+        networkClient = NetworkClient.getInstance(ip);
+
+        networkClient.getstartitem(playerid, new Callback<List<ItemDTO>>() {
+            @Override
+            public void onResponse(Call<List<ItemDTO>> call, Response<List<ItemDTO>> response) {
+                switch (response.code()){
+                    case 200:
+                        item=response.body();
+                        for(int i = 0; i<item.size();i++){
+                            quizlist.add(Integer.toString(item.get(i).getQuestioncode()));
+                        }
+                        networkClient.getfinishitem(playerid, new Callback<List<InventoryDTO>>() {
+                            @Override
+                            public void onResponse(Call<List<InventoryDTO>> call, Response<List<InventoryDTO>> response) {
+                                switch (response.code()){
+                                    case 200:
+                                        inventory=response.body();
+                                        for(int i=0; i<inventory.size();i++){
+                                            quizlist.add(Integer.toString(inventory.get(i).getQuestioncode()));
+                                        }
+                                        break;
+                                    default:
+                                        break;
+                                }
+                            }
+
+                            @Override
+                            public void onFailure(Call<List<InventoryDTO>> call, Throwable t) {
+
+                            }
+                        });
+                        break;
+                    default:
+                        break;
+                }
+                Log.d("퀴즈리스트",""+quizlist.get(0));
+            }
+
+            @Override
+            public void onFailure(Call<List<ItemDTO>> call, Throwable t) {
+
+            }
+        });
+
+
+
+
 
         //GPS 여부 체크
         LocationManager locationManager = (LocationManager) getSystemService(LOCATION_SERVICE);
@@ -147,9 +209,6 @@ public class GameActivity extends UnityPlayerActivity {
         final String playerid = id.getExtras().getString("playerid");
         final int q_code = Integer.parseInt(questioncode);
         Log.d("게임액티비티확인",playerid);
-        ipm = new Ipm();
-        String ip = ipm.getip();
-        networkClient = NetworkClient.getInstance(ip);
         Log.e ("확인",playerid+q_code);
         networkClient.getquestioncode(playerid, q_code, new Callback<Integer>() {
             @Override
@@ -172,7 +231,7 @@ public class GameActivity extends UnityPlayerActivity {
 
         });
         Intent intent = new Intent(GameActivity.this,Home_Main.class);
-        intent.putExtra("got",0);
+        intent.putExtra("got",q_code);
         setResult(RESULT_OK,intent);
         finish();
     }
@@ -199,6 +258,27 @@ public class GameActivity extends UnityPlayerActivity {
 
             // other 'case' lines to check for other
             // permissions this app might request
+        }
+    }
+    @Override
+    public void checkLocale(){
+        SharedPreferences pref = getSharedPreferences("lang",MODE_PRIVATE);
+        int lang = pref.getInt("setlang",0);
+        String sLang="";
+
+        if (lang == 0) {
+            sLang = "ko";
+        }
+        else if (lang ==1) {
+            sLang = "en";
+        }
+
+
+        UnityPlayer.UnitySendMessage("Main Camera","checkLocale",sLang);
+
+        for(int i = 0; i<quizlist.size();i++){
+            String quiz = quizlist.get(i);
+            UnityPlayer.UnitySendMessage("Main Camera","getQuizlist",quiz);
         }
     }
 }

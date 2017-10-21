@@ -1,6 +1,7 @@
 package com.hbag.seoulhang.home_package.home_fragment;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.MotionEventCompat;
@@ -49,6 +50,7 @@ public class Frag_Info extends Fragment
     TextView info_hint;
     TextView info_email;
     TextView info_makequiz;
+    TextView view_rate;
     ImageView info_grade;
     TextView no_quiz;
     Ipm ipm;
@@ -77,6 +79,7 @@ public class Frag_Info extends Fragment
         info_email = (TextView)layout.findViewById(R.id.info_email);
         info_makequiz = (TextView)layout.findViewById(R.id.info_makequiz);
         info_grade = (ImageView)layout.findViewById(R.id.info_grade);
+        view_rate = (TextView) layout.findViewById(R.id.tv_view_rate);
         no_quiz = (TextView)layout.findViewById(R.id.no_quiz);
         String ip = ipm.getip();
 
@@ -105,8 +108,8 @@ public class Frag_Info extends Fragment
                             String qcode = Integer.toString(inventoryDTO.getQuestioncode());
                             String rname = inventoryDTO.getRegionname();
                             String q = inventoryDTO.getQuestion();
-                            if(!qcode.equals("0"))
-                            myDataset.add(new MyData_I(qcode,rname,q));
+                            if (!qcode.equals("0"))
+                                myDataset.add(new MyData_I(qcode, rname, q));
                         }
 
                         InventoryDTO check=infos.get(0);
@@ -178,7 +181,13 @@ public class Frag_Info extends Fragment
             }
         });
 
-        networkClient = NetworkClient.getInstance(ip);
+        view_rate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(),Dragger_Achieve.class);
+                startActivity(intent);
+            }
+        });
 
 
         return layout;

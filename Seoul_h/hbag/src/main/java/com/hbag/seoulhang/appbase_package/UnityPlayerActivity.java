@@ -4,6 +4,7 @@ import com.hbag.seoulhang.model.retrofit.QuestDTO;
 import com.hbag.seoulhang.network.NetworkClient;
 import com.unity3d.player.*;
 import android.app.Activity;
+import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.graphics.PixelFormat;
 import android.os.Bundle;
@@ -86,6 +87,21 @@ public class UnityPlayerActivity extends Activity
         if (event.getAction() == KeyEvent.ACTION_MULTIPLE)
             return mUnityPlayer.injectEvent(event);
         return super.dispatchKeyEvent(event);
+    }
+
+    public void checkLocale(){
+        SharedPreferences pref = getSharedPreferences("lang",MODE_PRIVATE);
+        int lang = pref.getInt("setlang",0);
+        String sLang="";
+
+        if (lang == 0) {
+            sLang = "ko";
+        }
+        else if (lang ==1) {
+            sLang = "en";
+        }
+
+        UnityPlayer.UnitySendMessage("Main Camera","startLocale",sLang);
     }
 
     // Pass any events not handled by (unfocused) views straight to UnityPlayer

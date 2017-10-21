@@ -111,7 +111,7 @@ public class Dragger_QuizMake extends SwipeBackActivity {
         ipm = new Ipm();
         final String ip = ipm.getip();
         final String loginid = profile.getId();
-        final String username = profile.getName();
+        final String username = profile.getNickname();
 
         Answer_ox.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
@@ -155,6 +155,11 @@ public class Dragger_QuizMake extends SwipeBackActivity {
                 dialog.getButton(DialogInterface.BUTTON_POSITIVE).setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
+                        if(latitude==0||longitude==0){
+                            Toast toast = Toast.makeText(getApplicationContext(), getResources().getString(R.string.GPS활성여부), Toast.LENGTH_LONG);
+                            toast.show();
+                            return;
+                        }
                         networkClient.getfinishitem(loginid, new Callback<List<InventoryDTO>>() {
                             @Override
                             public void onResponse(Call<List<InventoryDTO>> call, Response<List<InventoryDTO>> response) {
@@ -180,6 +185,7 @@ public class Dragger_QuizMake extends SwipeBackActivity {
                                                 public void onResponse(Call<Integer> call, Response<Integer> response) {
                                                     switch (response.code()){
                                                         case 200:
+
                                                             Toast toast = Toast.makeText(getApplicationContext(), getResources().getString(R.string.succes_make_quiz), Toast.LENGTH_LONG);
                                                             toast.show();
                                                             Intent intent = new Intent(Dragger_QuizMake.this, Home_Main.class);
@@ -188,6 +194,7 @@ public class Dragger_QuizMake extends SwipeBackActivity {
                                                             finish();
                                                             break;
                                                         default:
+                                                            Log.d("제출", "실패");
                                                             break;
                                                     }
                                                 }

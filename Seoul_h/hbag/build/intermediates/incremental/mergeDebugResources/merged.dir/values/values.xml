@@ -920,8 +920,9 @@
     <string name="character_counter_pattern" translatable="false">%1$d / %2$d</string>
     <string name="checkEmail">형식에 맞지 않는 메일 주소입니다.</string>
     <string name="checkplease">ID중복확인을 해주십시오.</string>
+    <string name="close">닫기</string>
     <string name="close_drawer">close drawerclose drawerclose drawerclose drawerclose drawer</string>
-    <string name="com.crashlytics.android.build_id" ns1:ignore="UnusedResources,TypographyDashes" translatable="false">e1e55202-b317-41d5-ba69-829a85bdb3e0</string>
+    <string name="com.crashlytics.android.build_id" ns1:ignore="UnusedResources,TypographyDashes" translatable="false">74929f2d-8fa1-4359-adf6-5164d37ddb9b</string>
     <string name="com_facebook_image_download_unknown_error">Unexpected error while downloading an image.</string>
     <string name="com_facebook_internet_permission_error_message">WebView login requires INTERNET permission</string>
     <string name="com_facebook_internet_permission_error_title">AndroidManifest Error</string>
@@ -992,6 +993,7 @@
     <string name="library_processbutton_libraryWebsite">http://dmytrodanylyk.com/pages/portfolio/portfolio-process-button.html</string>
     <string name="library_processbutton_licenseId">mit</string>
     <string name="library_processbutton_repositoryLink">https://github.com/dmytrodanylyk/android-process-button</string>
+    <string name="localrate_see">지역별 달성률 보기</string>
     <string name="loginsuccess">%s님 환영합니다.\n시작버튼을 눌러주세요!</string>
     <string name="make_quiz">퀴즈 출제</string>
     <string name="make_quiz_check">퀴즈를 제출하면 전용 포인트가 필요합니다. 제출하시겠습니까?</string>
@@ -1046,6 +1048,7 @@
     <string name="unity_permission_storage">타겟 위치를 확인하기 위해 내부 저장소를 읽을 권한이 필요합니다.</string>
     <string name="visitors">방문자 수 %d</string>
     <string name="welcome">%s님 환영합니다!</string>
+    <string name="you_can_not_get">자신이 제출한 퀴즈는 획득할 수 없습니다.</string>
     <string name="같은닉네임존재">이미 사용중인 닉네임입니다.</string>
     <string name="경도">경도</string>
     <string name="계정연동실패">계정 동기화에 실패했습니다.\n다시 시도해주십시오.</string>
@@ -1110,7 +1113,7 @@
     <string name="정보수정질문">정보를 수정하시겠습니까?</string>
     <string name="주소미발견">주소를 발견하지 못했습니다.</string>
     <string name="중복확인">확인</string>
-    <string name="지역별달성률"> 지역별 정보 및 달성률</string>
+    <string name="지역별달성률">지역별 정보 및 달성률</string>
     <string name="지오코더">지오코딩 서비스 사용불가.</string>
     <string name="챌린저">챌린저</string>
     <string name="초보자">초보자</string>

@@ -129,7 +129,6 @@ public class LoginActivity extends BaseActivity implements
 
         FacebookSdk.sdkInitialize(getApplicationContext());
 
-
         sharedPreferences = getSharedPreferences("log", MODE_PRIVATE);
         final String loginPref = sharedPreferences.getString("logintype", "");     //이전 접속 상태를 불러온다.
         editor = sharedPreferences.edit();

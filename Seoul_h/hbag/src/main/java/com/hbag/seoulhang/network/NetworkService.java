@@ -31,8 +31,8 @@ public interface NetworkService {
     @GET("/finish_player/{player}")
     Call<List<InventoryDTO>> getfinishitem(@Path("player") String player);
 
-    @GET("/check_player/{player}")
-    Call<Integer> checkplayer(@Path("player") String player);
+    @GET("/check_player/{player}/question_code/{question_code}")
+    Call<Integer> checkplayer(@Path("player") String player, @Path("question_code")int question_code);
 
     @GET("/update_player/{player}/call_code/{questioncode}")
     Call<Integer> checkanswer(@Path("player") String player, @Path("questioncode") int questioncode);
@@ -109,5 +109,8 @@ public interface NetworkService {
 
     @GET("/get_grade/id/{id}")
     Call<List<RankDTO>>get_grade(@Path("id") String id);
+
+    @GET("/ok_false/id/{id}/question_code/{question_code}")
+    Call<String>ox_flag(@Path("id")String id, @Path("question_code") int question_code);
 
 }

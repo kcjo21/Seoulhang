@@ -57,6 +57,7 @@
     <string name="can_not_make_quiz">Not enough points to make a quiz</string>
     <string name="checkEmail">Incorrect email address in format.</string>
     <string name="checkplease">perform a check for overlapping Identification.</string>
+    <string name="close">ESC</string>
     <string name="close_drawer">close drawerclose drawerclose drawerclose drawerclose drawer</string>
     <string name="currentpass">Please enter your current password.</string>
     <string name="dialog_ok">OK</string>
@@ -79,6 +80,7 @@
     <string name="insert_quiz">Insert Quiz</string>
     <string name="kakao_app_key">45d3abc0fba429258e010957df473e42</string>
     <string name="lang_descrip">Set the language.</string>
+    <string name="localrate_see">View achievement by region</string>
     <string name="loginsuccess">Welcome, %s!\nTouch the Start button.</string>
     <string name="make_quiz">Make a quiz</string>
     <string name="make_quiz_check">Points are required when submitting a quiz. Do you want to submit it?</string>
@@ -125,6 +127,7 @@
     <string name="unity_permission_storage">Permission to read external storage is required to check the target\'s location information</string>
     <string name="visitors">%d Visits</string>
     <string name="welcome">Welcome %s!</string>
+    <string name="you_can_not_get">You can not get the quiz you submitted.</string>
     <string name="같은닉네임존재">The nickname you entered is already in use.</string>
     <string name="경도">Longitude</string>
     <string name="계정연동실패">Account sync failed.\nPlease try again.</string>
@@ -189,7 +192,7 @@
     <string name="정보수정질문">Do you want to edit your infomaion?</string>
     <string name="주소미발견">No address found.</string>
     <string name="중복확인">Check</string>
-    <string name="지역별달성률"> Local Information And Achievement Rate</string>
+    <string name="지역별달성률">Local Information and\nAchievement Rate</string>
     <string name="지오코더">Unable to use Geocoding service.</string>
     <string name="챌린저">Challenger</string>
     <string name="초보자">Unrank</string>

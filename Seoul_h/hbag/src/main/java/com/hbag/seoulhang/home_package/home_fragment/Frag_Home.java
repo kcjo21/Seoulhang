@@ -61,6 +61,7 @@ public class Frag_Home extends BaseFragment {
     private ArrayList<MyData_T> myDataset;
     private List<NoticeDTO> notice;
     private List<TopDTO> inventories;
+    private List<View> filp_list;
     NetworkClient networkClient;
     Methods methods;
     ImageView map_b;
@@ -86,7 +87,7 @@ public class Frag_Home extends BaseFragment {
     public View onCreateView(final LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         final LinearLayout layout = (LinearLayout) inflater.inflate(R.layout.frag_home, container, false);
 
-
+        filp_list = new ArrayList<>();
         profile = UserProfileData_singleton.getInstance();
         ipm = new Ipm();
         String ip = ipm.getip();
@@ -161,6 +162,7 @@ public class Frag_Home extends BaseFragment {
                             String sQuestion_name = topDTO.getQuestionname();
                             String sVisitCount = getResources().getString(R.string.visitors, topDTO.getCount());
                             String sRegion_name = topDTO.getRegion_name();
+
                             myDataset.add(new MyData_T(sQuestion_num, sQuestion_name, sRegion_name, sVisitCount, mRecyclerView));//각 인자들을 어댑터클래스의 데이터베이스에 전달.
                             Log.d("퀴즈번호 홈 :", "" + sQuestion_name);
                             Log.d("퀴즈지역 홈 :", "" +sQuestion_num);
@@ -191,66 +193,62 @@ public class Frag_Home extends BaseFragment {
 
 
                 for (int j = 0; j < notice.size(); j++) {
+
                     NoticeDTO noticeDTO = notice.get(j);
                     String title = noticeDTO.getTitle();
                     String contents = noticeDTO.getContents();
                     String sDate = noticeDTO.getDate1();
-                    TextView tv_notice = new TextView(getContext());
-                    tv_notice.setText(sDate + '\n' + title);
-                    tv_notice.setTextSize(TypedValue.COMPLEX_UNIT_DIP, 14);
-                    tv_notice.setTextColor(Color.parseColor("#000000"));
-                    tv_notice.setGravity(Gravity.CENTER_HORIZONTAL | Gravity.CENTER_VERTICAL);
-                    viewFlipper.addView(tv_notice);
-
+                    String sDate2 = noticeDTO.getDate2();
+                    ViewCreater(contents, sDate, sDate2);   //플리퍼에 추가할 뷰를 동적 생성
+                    viewFlipper.addView(filp_list.get(j));  //생성한 뷰를 플리퍼에 추가
+                    Log.d("데이트",sDate);
 
                 }
-                TextView tv_notice = new TextView(getContext());
-                tv_notice.setText(":+'\n'+title1231241212412412412");
-                tv_notice.setTextSize(TypedValue.COMPLEX_UNIT_DIP, 14);
-                tv_notice.setTextColor(Color.parseColor("#000000"));
-                tv_notice.setGravity(Gravity.CENTER_HORIZONTAL | Gravity.CENTER_VERTICAL);
-                viewFlipper.addView(tv_notice);
                 viewFlipper.setInAnimation(showIn);
                 viewFlipper.setOutAnimation(showOut);
-                if (autoflip == 1) {
-                    viewFlipper.setFlipInterval(5000);
-                    viewFlipper.startFlipping();
+                if (autoflip == 1) {                   //자동플립 설정시
+                    if(viewFlipper.getChildCount()>1) {
+                        viewFlipper.setFlipInterval(5000);
+                        viewFlipper.startFlipping();
+                    }
                 }
-                else {
-                    viewFlipper.setOnTouchListener(new View.OnTouchListener() {
-                        float xAtDown;
-                        float xAtUp;
+                else {                                  //수동플립 설정시
+                    if(viewFlipper.getChildCount()>1) {
+                        viewFlipper.setOnTouchListener(new View.OnTouchListener() {
+                            float xAtDown;
+                            float xAtUp;
 
-                        @Override
-                        public boolean onTouch(View v, MotionEvent event) {
-                            viewFlipper.requestDisallowInterceptTouchEvent(true);
-                            if (event.getAction() == MotionEvent.ACTION_DOWN) {
-                                xAtDown = event.getX(); // 터치 시작지점 x좌표 저장
-                            } else if (event.getAction() == MotionEvent.ACTION_UP) {
-                                xAtUp = event.getX(); // 터치 끝난지점 x좌표 저장
+                            @Override
+                            public boolean onTouch(View v, MotionEvent event) {
+                                viewFlipper.requestDisallowInterceptTouchEvent(true);
+                                if (event.getAction() == MotionEvent.ACTION_DOWN) {
+                                    xAtDown = event.getX(); // 터치 시작지점 x좌표 저장
+                                } else if (event.getAction() == MotionEvent.ACTION_UP) {
+                                    xAtUp = event.getX(); // 터치 끝난지점 x좌표 저장
 
-                                if (xAtUp < xAtDown) {
-                                    // 왼쪽 방향 에니메이션 지정
-                                    viewFlipper.setInAnimation(AnimationUtils.loadAnimation(getContext(),
-                                            R.anim.center_in_left));
-                                    viewFlipper.setOutAnimation(AnimationUtils.loadAnimation(getContext(),
-                                            R.anim.center_out_left));
+                                    if (xAtUp < xAtDown) {
+                                        // 왼쪽 방향 에니메이션 지정
+                                        viewFlipper.setInAnimation(AnimationUtils.loadAnimation(getContext(),
+                                                R.anim.center_in_left));
+                                        viewFlipper.setOutAnimation(AnimationUtils.loadAnimation(getContext(),
+                                                R.anim.center_out_left));
 
-                                    // 다음 view 보여줌
-                                    viewFlipper.showNext();
-                                } else if (xAtUp > xAtDown) {
-                                    // 오른쪽 방향 에니메이션 지정
-                                    viewFlipper.setInAnimation(AnimationUtils.loadAnimation(getContext(),
-                                            R.anim.center_in_right));
-                                    viewFlipper.setOutAnimation(AnimationUtils.loadAnimation(getContext(),
-                                            R.anim.center_out_right));
-                                    // 전 view 보여줌
-                                    viewFlipper.showPrevious();
+                                        // 다음 view 보여줌
+                                        viewFlipper.showNext();
+                                    } else if (xAtUp > xAtDown) {
+                                        // 오른쪽 방향 에니메이션 지정
+                                        viewFlipper.setInAnimation(AnimationUtils.loadAnimation(getContext(),
+                                                R.anim.center_in_right));
+                                        viewFlipper.setOutAnimation(AnimationUtils.loadAnimation(getContext(),
+                                                R.anim.center_out_right));
+                                        // 전 view 보여줌
+                                        viewFlipper.showPrevious();
+                                    }
                                 }
+                                return true;
                             }
-                            return true;
-                        }
-                    });
+                        });
+                    }
                 }
             }
 
@@ -327,24 +325,29 @@ public class Frag_Home extends BaseFragment {
         return layout;
     }
 
+    @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         final String playerid=profile.getId();
         String ip =ipm.getip();
+        Log.d("유니티 통신완료 ID : ",playerid);
 
         if(requestCode == 0){
+            Log.d("유니티 리퀘스트코드 : ",""+requestCode);
             if(resultCode == RESULT_OK) {
+                int question_code = data.getIntExtra("got",0);
+                Log.d("유니티","Q_code"+question_code);
                 networkClient = NetworkClient.getInstance(ip);
-                networkClient.checkplayer(playerid,new Callback<Integer>() {
+                networkClient.checkplayer(playerid, question_code,new Callback<Integer>() {
                     @Override
                     public void onResponse(Call<Integer> call, Response<Integer> response) {
-                        Log.d("퀴즈획득 아이디 : ",playerid);
+                        Log.d("유니티 통신완료 재확인 ID : ",playerid);
                         switch (response.code()){
                             case 200:
                                 int check = response.body();
-                                Log.d("퀴즈획득 체크코드 :","check"+check);
+                                Log.d("확인","check"+check);
                                 if (check == 1) {  //Responce의값이 1일 때 새 문제 획득
                                     AlertDialog.Builder alert = new AlertDialog.Builder(getActivity());
-                                    alert.setPositiveButton(getString(R.string.ghkrdls), new DialogInterface.OnClickListener() {
+                                    alert.setPositiveButton(getResources().getString(R.string.dialog_ok), new DialogInterface.OnClickListener() {
                                         @Override
                                         public void onClick(DialogInterface dialog, int which) {
                                             Intent intent = new Intent(getActivity(),Home_Main.class);
@@ -355,9 +358,10 @@ public class Frag_Home extends BaseFragment {
                                     });
                                     alert.setMessage(R.string.새문제);
                                     alert.show();
-                                } else if (check == 0) { //Responce값이 2일 때 이미 가지고 있는 문제
+                                } else if (check == 0) { //Responce값이 0일 때 이미 가지고 있는 문제
+                                    Log.d("확인"," "+check);
                                     AlertDialog.Builder alert = new AlertDialog.Builder(getActivity());
-                                    alert.setPositiveButton(getString(R.string.ghkrdls), new DialogInterface.OnClickListener() {
+                                    alert.setPositiveButton(getResources().getString(R.string.dialog_ok), new DialogInterface.OnClickListener() {
                                         @Override
                                         public void onClick(DialogInterface dialog, int which) {
 
@@ -365,6 +369,18 @@ public class Frag_Home extends BaseFragment {
                                         }
                                     });
                                     alert.setMessage(R.string.이미가지고있는문제);
+                                    alert.show();
+                                }
+                                else if (check == 2){ //본인이 낸 퀴즈일 경우
+                                    AlertDialog.Builder alert = new AlertDialog.Builder(getActivity());
+                                    alert.setPositiveButton(getResources().getString(R.string.dialog_ok), new DialogInterface.OnClickListener() {
+                                        @Override
+                                        public void onClick(DialogInterface dialog, int which) {
+
+                                            dialog.dismiss();     //닫기
+                                        }
+                                    });
+                                    alert.setMessage(R.string.you_can_not_get);
                                     alert.show();
                                 }
 
@@ -388,8 +404,39 @@ public class Frag_Home extends BaseFragment {
 
             }
 
+
         }
 
+
+    }
+
+    public void ViewCreater(String contents, String sDate, String sDate2) { //viewfliper에 추가할 뷰를 생성해주는 함수
+
+        LinearLayout view = new LinearLayout(getContext());
+        view.setOrientation(LinearLayout.HORIZONTAL);
+        LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(
+                0,
+                ViewGroup.LayoutParams.MATCH_PARENT,0.3f);
+        LinearLayout.LayoutParams layoutParams2 = new LinearLayout.LayoutParams(
+                0,
+                ViewGroup.LayoutParams.MATCH_PARENT,0.7f);
+
+        TextView tv_sDate = new TextView(getContext());
+        tv_sDate.setLayoutParams(layoutParams);
+        tv_sDate.setText(sDate+ '\n' + sDate2);
+        tv_sDate.setGravity(Gravity.CENTER_HORIZONTAL | Gravity.CENTER_VERTICAL);
+        tv_sDate.setTextSize(TypedValue.COMPLEX_UNIT_DIP, 12);
+        tv_sDate.setTextColor(Color.parseColor("#000000"));
+        view.addView(tv_sDate);
+
+        TextView tv_content = new TextView(getContext());
+        tv_content.setLayoutParams(layoutParams2);
+        tv_content.setText(contents);
+        tv_content.setGravity(Gravity.CENTER_HORIZONTAL | Gravity.CENTER_VERTICAL);
+        tv_content.setTextSize(TypedValue.COMPLEX_UNIT_DIP, 12);
+        tv_content.setTextColor(Color.parseColor("#000000"));
+        view.addView(tv_content);
+        filp_list.add(view);
     }
 
 

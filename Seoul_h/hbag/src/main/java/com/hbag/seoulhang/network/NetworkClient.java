@@ -68,8 +68,8 @@ public class NetworkClient {
         call.enqueue(callback);
     }
 
-    public void checkplayer(String player, Callback<Integer> callback){
-        Call<Integer> call = service.checkplayer(player);
+    public void checkplayer(String player,int question_code, Callback<Integer> callback){
+        Call<Integer> call = service.checkplayer(player, question_code);
         call.enqueue(callback);
     }
 
@@ -182,6 +182,16 @@ public class NetworkClient {
 
     public void send_db(String id, Callback<List<DataBaseDTO>> callback){
         Call<List<DataBaseDTO>> call = service.send_db(id);
+        call.enqueue(callback);
+    }
+
+    public void get_grade(String id, Callback<List<RankDTO>> callback){
+        Call<List<RankDTO>> call = service.get_grade(id);
+        call.enqueue(callback);
+    }
+
+    public void ox_flag(String id, int quesion_code, Callback<String> callback){
+        Call<String> call = service.ox_flag(id,quesion_code);
         call.enqueue(callback);
     }
 

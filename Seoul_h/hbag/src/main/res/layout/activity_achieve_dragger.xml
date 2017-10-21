@@ -10,10 +10,11 @@
 
     <TextView
         android:id="@+id/textView4"
-        android:layout_width="395dp"
-        android:layout_height="50dp"
+        android:layout_width="0dp"
+        android:layout_height="75dp"
         android:layout_marginLeft="20dp"
         android:layout_marginStart="20dp"
+        android:layout_marginTop="0dp"
         android:layout_weight="5"
         android:gravity="center_vertical|start"
         android:text="@string/지역별달성률"
@@ -22,8 +23,23 @@
         android:textStyle="bold"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/bt_close"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="SpUsage" />
+
+    <Button
+        android:id="@+id/bt_close"
+        android:layout_width="50dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="5dp"
+        android:background="@drawable/card_view_button"
+        android:text="@string/close"
+        android:textColor="@color/white"
+        android:textSize="14dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.44"
         tools:ignore="SpUsage" />
 
     <LinearLayout
@@ -37,7 +53,8 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView4"
         app:layout_constraintVertical_bias="0.483"
-        android:baselineAligned="false">
+        android:baselineAligned="false"
+        android:id="@+id/linearLayout2">
 
         <ExpandableListView
             android:id="@+id/exl"
