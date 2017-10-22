@@ -914,7 +914,7 @@
     <string name="app_name">서울행</string>
     <string name="appbar_scrolling_view_behavior" translatable="false">android.support.design.widget.AppBarLayout$ScrollingViewBehavior</string>
     <string name="bottom_sheet_behavior" translatable="false">android.support.design.widget.BottomSheetBehavior</string>
-    <string name="camera_descrip">만일 주변에 타겟이 있다면, 이 버튼을 눌러 카메라를 실행하세요. 카메라를 통해 3D 객체를 확인할 수 있습니다. 대상을 찾으면, 터치해서 획득하세요.</string>
+    <string name="camera_descrip">만일 주변에 타겟이 있다면, 이 버튼을 눌러 카메라를 실행하세요.\n카메라를 통해 3D 객체를 확인할 수 있습니다. 대상을 찾으면, 터치해서 획득하세요.</string>
     <string name="can_not_connent_to_server">서버에 연결할 수 없습니다.</string>
     <string name="can_not_make_quiz">포인트가 부족하여 문제를 낼 수 없습니다.</string>
     <string name="character_counter_pattern" translatable="false">%1$d / %2$d</string>
@@ -922,7 +922,7 @@
     <string name="checkplease">ID중복확인을 해주십시오.</string>
     <string name="close">닫기</string>
     <string name="close_drawer">close drawerclose drawerclose drawerclose drawerclose drawer</string>
-    <string name="com.crashlytics.android.build_id" ns1:ignore="UnusedResources,TypographyDashes" translatable="false">74929f2d-8fa1-4359-adf6-5164d37ddb9b</string>
+    <string name="com.crashlytics.android.build_id" ns1:ignore="UnusedResources,TypographyDashes" translatable="false">afae5eff-d226-4d09-bb95-3a50322cd603</string>
     <string name="com_facebook_image_download_unknown_error">Unexpected error while downloading an image.</string>
     <string name="com_facebook_internet_permission_error_message">WebView login requires INTERNET permission</string>
     <string name="com_facebook_internet_permission_error_title">AndroidManifest Error</string>
@@ -977,10 +977,10 @@
     <string name="hello_world">Hello world!</string>
     <string name="hint_msg">힌트를 보시겠습니까?\n힌트 보너스가 1 소모됩니다.</string>
     <string name="hintmake">문제에 대한 힌트를 입력해주세요.</string>
-    <string name="home_descrip">첫 시작 페이지입니다. 가장 최근에 획득한 문제가 표시되며, 지도보기, 카메라실행 등을 할 수 있습니다.</string>
+    <string name="home_descrip">첫 시작 페이지입니다.\n가장 인기 있는 퀴즈 10순위와 공지사항이 표시되며,\n지도 보기, 카메라 실행, 퀴즈 출제 등을 할 수 있습니다.</string>
     <string name="id">ID</string>
     <string name="id_change"><u>아이디 변경하기</u></string>
-    <string name="info_descrip">현재까지 획득한 점수와 남은 힌트보너스를 확인할 수 있습니다. 지금까지 풀어온 퀴즈들을 확인할 수 있으며 서울시 내의 구 단위로 달성률과 해당 구의 설명을 볼 수 있습니다.</string>
+    <string name="info_descrip">점수와 힌트 포인트, 출제 포인트를 확인할 수 있습니다.\n지금까지 풀어온 퀴즈들을 확인할 수 있으며 서울시 내의 구 단위로 달성률과 해당 구의 설명을 볼 수 있습니다.</string>
     <string name="insert_quiz">Insert Quiz</string>
     <string name="kakao_app_key">45d3abc0fba429258e010957df473e42</string>
     <string name="lang_descrip">언어를 선택합니다.</string>
@@ -996,12 +996,14 @@
     <string name="localrate_see">지역별 달성률 보기</string>
     <string name="loginsuccess">%s님 환영합니다.\n시작버튼을 눌러주세요!</string>
     <string name="make_quiz">퀴즈 출제</string>
-    <string name="make_quiz_check">퀴즈를 제출하면 전용 포인트가 필요합니다. 제출하시겠습니까?</string>
+    <string name="make_quiz_check">퀴즈를 출제하면 전용 포인트가 필요합니다. 출제하시겠습니까?</string>
     <string name="make_quiz_count">%d개의 문제를 낼 수 있습니다!</string>
+    <string name="makequiz_descrip">지도상의 현재 위치에 퀴즈를 추가할 수 있습니다.\n퀴즈 출제에는 출제 포인트가 필요하며, OX 퀴즈 형식으로 출제할 수 있습니다.\n출제 포인트는 50점을 획득할 경우, 1점을 획득합니다.</string>
+    <string name="map_msg">약 200미터 근방에 있어야 타겟을 획득할 수 있습니다.</string>
     <string name="map_view">지도 보기</string>
     <string name="map_view_descrip">타겟의 위치를 지도로 확인할 수 있습니다.</string>
     <string name="mapview_text">                지도 보기</string>
-    <string name="menu_descrip">터치하면 보조메뉴가 열립니다. 보조메뉴에서는 프로필수정, 언어설정 등을 할 수 있으며, 지도, 카메라, 지하철 기능을 실행할 수 있습니다. 또한, 등급표 열람이 가능하며, 간략한 사용자 정보를 표시합니다.</string>
+    <string name="menu_descrip">터치하면 보조 메뉴가 열립니다.\n보조 메뉴에서는 프로필수정, 앱 설정 등을 할 수 있으며, 간략한 사용자 정보를 표시합니다.</string>
     <string name="messenger_send_button_text">Send</string>
     <string name="naverclientid">S25ZUcloW2JU4Xk2SJTD</string>
     <string name="naversecret">IxuQXBjLMf</string>
@@ -1011,6 +1013,7 @@
     <string name="notice_descrip">한 줄 공지를 자동으로 전환시킵니다.\n비활성화시 수동으로 페이지를 넘깁니다.</string>
     <string name="num">num</string>
     <string name="open_drawer">open draweropen draweropen draweropen draweropen draweropen drawer</string>
+    <string name="ox_descrip">OX 퀴즈는 한 번만 풀 수 있으며, 정답일 경우 5점, 오답일 경우 3점을 획득합니다.</string>
     <string name="password_not_good">패스워드가 일치하지 않습니다.</string>
     <string name="password_toggle_content_description">Toggle password visibility</string>
     <string name="path_password_eye" translatable="false">M12,4.5C7,4.5 2.73,7.61 1,12c1.73,4.39 6,7.5 11,7.5s9.27,-3.11 11,-7.5c-1.73,-4.39 -6,-7.5 -11,-7.5zM12,17c-2.76,0 -5,-2.24 -5,-5s2.24,-5 5,-5 5,2.24 5,5 -2.24,5 -5,5zM12,9c-1.66,0 -3,1.34 -3,3s1.34,3 3,3 3,-1.34 3,-3 -1.34,-3 -3,-3z</string>
@@ -1020,14 +1023,14 @@
     <string name="please_check_already_id">이미 같은 아이디가 존재합니다.</string>
     <string name="please_check_id">아이디 또는 비밀번호가 일치하지 않습니다.</string>
     <string name="please_check_name">이미 같은 닉네임이 존재합니다.</string>
-    <string name="quiz_descrip">획득한 퀴즈를 확인할 수 있습니다. 퀴즈는 획득한 순서대로 나열되며, 주관식, OX 퀴즈로 구성되어있습니다. 또한, 힌트보너스를 가지고 있다면, 힌트를 볼 수 있습니다.</string>
+    <string name="quiz_descrip">획득한 퀴즈를 확인할 수 있습니다.\n퀴즈는 획득한 순서대로 나열되며, 주관식, OX 퀴즈로 구성되어있습니다.\n또한, 힌트 포인트를 가지고 있다면, 힌트를 볼 수 있습니다.\n힌트 포인트는 30점을 얻을 경우 1점을 획득합니다.</string>
     <string name="quiz_num">퀴즈 번호</string>
     <string name="quiz_region">획득 장소</string>
     <string name="quizmake">문제를 입력해주세요.</string>
-    <string name="rank_descrip">순위와 등급, 점수를 확인할 수 있습니다. 또한, 전체 순위표를 확인할 수 있습니다.</string>
+    <string name="rank_descrip">순위와 등급, 점수를 확인할 수 있습니다.\n또한, 전체 순위표를 확인할 수 있습니다.</string>
     <string name="region">지역</string>
     <string name="replay">다시 보기</string>
-    <string name="replay_descrip">이 설명을 다시 보고 싶으시면, 이 버튼을 눌러주세요.</string>
+    <string name="replay_descrip">이 설명을 다시 보고 싶으시면,\n이 버튼을 눌러주세요.</string>
     <string name="score">"점수 : "</string>
     <string name="search_menu_title">Search</string>
     <string name="setting_lang">언어 설정</string>
@@ -1037,7 +1040,8 @@
     <string name="side_점수">                점수 : %s</string>
     <string name="side_코드번호">                코드번호 : %s</string>
     <string name="status_bar_notification_info_overflow">999+</string>
-    <string name="succes_make_quiz">퀴즈를 제출했습니다!</string>
+    <string name="submitquiz_title">퀴즈 내기</string>
+    <string name="succes_make_quiz">퀴즈를 출제했습니다!</string>
     <string name="tuto_2">서울행은 증강현실을 이용한\n교육/관광용 게임입니다.</string>
     <string name="tuto_3">지도에 나와 있는 위치로 가서\n카메라를 켜고 주변을 둘러보세요.</string>
     <string name="tuto_4">목표를 발견하면 터치하여 퀴즈를 획득하세요.\n퀴즈를 풀어서 점수를 쌓고 순위를 올리세요.</string>
@@ -1048,7 +1052,7 @@
     <string name="unity_permission_storage">타겟 위치를 확인하기 위해 내부 저장소를 읽을 권한이 필요합니다.</string>
     <string name="visitors">방문자 수 %d</string>
     <string name="welcome">%s님 환영합니다!</string>
-    <string name="you_can_not_get">자신이 제출한 퀴즈는 획득할 수 없습니다.</string>
+    <string name="you_can_not_get">자신이 출제한 퀴즈는 획득할 수 없습니다.</string>
     <string name="같은닉네임존재">이미 사용중인 닉네임입니다.</string>
     <string name="경도">경도</string>
     <string name="계정연동실패">계정 동기화에 실패했습니다.\n다시 시도해주십시오.</string>

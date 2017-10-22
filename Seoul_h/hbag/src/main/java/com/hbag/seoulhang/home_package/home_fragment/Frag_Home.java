@@ -112,8 +112,10 @@ public class Frag_Home extends BaseFragment {
       map_b.getViewTreeObserver().addOnGlobalFocusChangeListener(new ViewTreeObserver.OnGlobalFocusChangeListener() {
           @Override
           public void onGlobalFocusChanged(View oldFocus, View newFocus) {
+              ((Home_Main)getActivity()).targetMaker(achv_b,achv_b.getWidth()/2,getResources().getString(R.string.submitquiz_title),getResources().getString(R.string.makequiz_descrip));
               ((Home_Main)getActivity()).targetMaker(map_b,map_b.getWidth(),getResources().getString(R.string.map_view),getResources().getString(R.string.map_view_descrip));
               ((Home_Main)getActivity()).targetMaker(tuto,tuto.getHeight(),getResources().getString(R.string.replay),getResources().getString(R.string.replay_descrip));
+
               map_b.getViewTreeObserver().removeOnGlobalFocusChangeListener(this);
 
               Log.d("ITPANGPANG","onWindowFocusChanged");
@@ -300,7 +302,6 @@ public class Frag_Home extends BaseFragment {
                             public void run() {
                                 Intent intent = new Intent(getActivity(),GooglemapsActivity.class);
                                 startActivity(intent);
-                                getActivity().finish();
                             }
                         });
                         Looper.loop();

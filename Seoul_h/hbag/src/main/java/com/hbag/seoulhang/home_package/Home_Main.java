@@ -211,7 +211,6 @@ public class Home_Main extends BaseActivity implements
                     public void onClick(DialogInterface dialog, int whichButton) {
                         Intent intent = new Intent(Home_Main.this,EditprofileActivity.class);
                         startActivity(intent);
-                        finish();
                     }
                 });
                 final android.app.AlertDialog dialog = alert.create();
@@ -247,7 +246,6 @@ public class Home_Main extends BaseActivity implements
                             public void run() {
                                 Intent intent = new Intent(Home_Main.this,GooglemapsActivity.class);
                                 startActivity(intent);
-                                finish();
                             }
                         });
                         Looper.loop();
@@ -278,8 +276,7 @@ public class Home_Main extends BaseActivity implements
                 }
                 mLastClickTime = SystemClock.elapsedRealtime();
                 Intent intent = new Intent(Home_Main.this,SettingActivity.class);
-                startActivity(intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK));
-                finish();
+                startActivity(intent);
             }
         });
 
@@ -757,7 +754,7 @@ public class Home_Main extends BaseActivity implements
                 Spotlight.with(this)
                         .setDuration(500L)
                         .setAnimation(new DecelerateInterpolator(2f))
-                        .setTargets(spotTarget.get(2),spotTarget.get(3),spotTarget.get(4),spotTarget.get(5),spotTarget.get(6),spotTarget.get(7),spotTarget.get(0),spotTarget.get(1))
+                        .setTargets(spotTarget.get(3),spotTarget.get(4),spotTarget.get(5),spotTarget.get(6),spotTarget.get(7),spotTarget.get(8),spotTarget.get(0),spotTarget.get(1),spotTarget.get(2))
                         .setOnSpotlightStartedListener(new OnSpotlightStartedListener() {
                             @Override
                             public void onStarted() {
@@ -820,8 +817,9 @@ public class Home_Main extends BaseActivity implements
                                         try {
                                             sqLiteDatabase = getApplicationContext().openOrCreateDatabase(DB_NAME, MODE_PRIVATE, null);
                                             sqLiteDatabase.execSQL("CREATE TABLE IF NOT EXISTS "+TABLE_NAME
-                                                    +"(question_code INTEGER, train_code VARCHAR(64), question_name VARCHAR(64), question_name_en VARCHAR(64), x_coordinate DOUBLE, y_coordinate DOUBLE);");
+                                                    +"(region_code INTEGER, question_code INTEGER, train_code VARCHAR(64), question_name VARCHAR(64), question_name_en VARCHAR(64), x_coordinate DOUBLE, y_coordinate DOUBLE);");
                                             sqLiteDatabase.execSQL("DELETE FROM " + TABLE_NAME  );
+                                            int region_code;
                                             int question_code;
                                             String train_code;
                                             String question_name;
@@ -834,6 +832,7 @@ public class Home_Main extends BaseActivity implements
                                             int dbSize = dbData.get(0).getQuestion_length();
 
                                             for(int i = 0; i<dbSize; i++){
+                                                region_code = dbData.get(i).getRegion_code();
                                                 question_code = dbData.get(i).getQuestion_code();
                                                 train_code = dbData.get(i).getTrain_code();
                                                 question_name = dbData.get(i).getQuestion_name_ko();
@@ -841,20 +840,22 @@ public class Home_Main extends BaseActivity implements
                                                 lat = dbData.get(i).getX_coordinate();
                                                 lon = dbData.get(i).getY_coordinate();
                                                 sqLiteDatabase.execSQL("INSERT INTO " +TABLE_NAME
-                                                        +" (question_code," +
+                                                        +" (region_code," +
+                                                        " question_code,"+
                                                         " train_code," +
                                                         " question_name," +
                                                         " question_name_en," +
                                                         "x_coordinate," +
                                                         " y_coordinate)" +
                                                         " Values" +
-                                                        " ('"+question_code+"'," +
+                                                        " ('"+region_code+"'," +
+                                                        " '"+question_code+"',"+
                                                         " '"+train_code+"'," +
                                                         " '"+question_name+"'," +
                                                         " '"+question_name_en+"', " +
                                                         "'"+lat+"', " +
                                                         "'"+lon+"');");
-                                                Log.d("테스트",question_code+" " + train_code +" "+ question_name +" "+ question_name_en +" "+ lat +" "+ lon);
+                                                Log.d("테스트",region_code + " "+question_code+" " + train_code +" "+ question_name +" "+ question_name_en +" "+ lat +" "+ lon);
 
                                             }
                                             Log.d("경로",sqLiteDatabase.getPath());

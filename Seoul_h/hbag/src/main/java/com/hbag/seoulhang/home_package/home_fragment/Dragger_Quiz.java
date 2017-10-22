@@ -11,6 +11,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
@@ -36,6 +37,7 @@ public class Dragger_Quiz extends SwipeBackActivity {
     TextView quiz;
     TextView hint;
     EditText Answer;
+    LinearLayout ox_lay;
     RadioGroup Answer_ox;
     RadioButton bt_o;
     RadioButton bt_x;
@@ -66,6 +68,7 @@ public class Dragger_Quiz extends SwipeBackActivity {
         hint = (TextView)findViewById(R.id.hint_text);
         Answer = (EditText)findViewById(R.id.Answer);
         Answer_ox = (RadioGroup) findViewById(R.id.Answer_ox);
+        ox_lay = (LinearLayout)findViewById(R.id.ox_lay);
         bt_o = (RadioButton)findViewById(R.id.rd_o);
         bt_x = (RadioButton)findViewById(R.id.rd_x);
         Submit = (Button)findViewById(R.id.commit);
@@ -79,12 +82,12 @@ public class Dragger_Quiz extends SwipeBackActivity {
         mDataset = (ArrayList<MyData_Q>) intent.getSerializableExtra("dataset");
 
         if(mDataset.get(dataPosition).q_type.equals("ox")){                    //문제형식에 따라 UI변경
-            Answer_ox.setVisibility(View.VISIBLE);
+            ox_lay.setVisibility(View.VISIBLE);
             Answer.setVisibility(View.GONE);
         }
         else if(mDataset.get(dataPosition).q_type.equals("default")){
             Answer.setVisibility(View.VISIBLE);
-            Answer_ox.setVisibility(View.GONE);
+            ox_lay.setVisibility(View.GONE);
         }
 
         quiz_region.setText(mDataset.get(dataPosition).text_region);

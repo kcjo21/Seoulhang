@@ -10,6 +10,8 @@ import android.content.pm.PackageManager;
 import android.content.res.AssetManager;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.graphics.Color;
+import android.graphics.Point;
 import android.location.Address;
 import android.location.Geocoder;
 import android.location.Location;
@@ -38,6 +40,8 @@ import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapFragment;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
+import com.google.android.gms.maps.model.Circle;
+import com.google.android.gms.maps.model.CircleOptions;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
@@ -71,6 +75,7 @@ public class GooglemapsActivity extends BaseActivity
     private GoogleApiClient mGoogleApiClient = null;
     private GoogleMap mGoogleMap = null;
     private Marker currentMarker = null;
+    private Circle currentCircle = null;
 
     private static final String TAG = "googlemap_example";
     private static final int GPS_ENABLE_REQUEST_CODE = 2001;
@@ -191,6 +196,7 @@ public class GooglemapsActivity extends BaseActivity
 
         mGoogleMap = googleMap;
         progressOFF(); //프로그래스 애니메이션 종료
+
         //런타임 퍼미션 요청 대화상자나 GPS 활성 요청 대화상자 보이기전에
         //지도의 초기위치를 서울로 이동
         setDefaultLocation();
@@ -307,10 +313,9 @@ public class GooglemapsActivity extends BaseActivity
         Log.d(TAG, "onLocationChanged : ");
 
         String markerTitle = getResources().getString(R.string.내위치);
-        String markerSnippet = getCurrentAddress(location);
 
         //현재 위치에 마커 생성하고 이동
-        setCurrentLocation(location, markerTitle, markerSnippet);
+        setCurrentLocation(location, markerTitle);
 
         mCurrentLocatiion = location;
     }
@@ -404,40 +409,6 @@ public class GooglemapsActivity extends BaseActivity
     }
 
 
-    public String getCurrentAddress(Location location) {
-
-        //지오코더... GPS를 주소로 변환
-        Geocoder geocoder = new Geocoder(this, Locale.getDefault());
-
-        List<Address> addresses;
-
-        try {
-
-            addresses = geocoder.getFromLocation(
-                    location.getLatitude(),
-                    location.getLongitude(),
-                    1);
-        } catch (IOException ioException) {
-            //네트워크 문제
-            Toast.makeText(this, getResources().getString(R.string.지오코더), Toast.LENGTH_LONG).show();
-            return getResources().getString(R.string.지오코더);
-        } catch (IllegalArgumentException illegalArgumentException) {
-            Toast.makeText(this, getResources().getString(R.string.잘못된GPS), Toast.LENGTH_LONG).show();
-            return getResources().getString(R.string.잘못된GPS);
-
-        }
-
-
-        if (addresses == null || addresses.size() == 0) {
-            Toast.makeText(this, getResources().getString(R.string.주소미발견), Toast.LENGTH_LONG).show();
-            return getResources().getString(R.string.주소미발견);
-
-        } else {
-            Address address = addresses.get(0);
-            return address.getAddressLine(0);
-        }
-
-    }
 
 
     public boolean checkLocationServicesStatus() {
@@ -448,12 +419,15 @@ public class GooglemapsActivity extends BaseActivity
     }
 
 
-    public void setCurrentLocation(Location location, String markerTitle, String markerSnippet) {
+    public void setCurrentLocation(Location location, String markerTitle) {
 
         mMoveMapByUser = false;
 
 
-        if (currentMarker != null) currentMarker.remove();
+        if (currentCircle != null){
+            //currentMarker.remove();
+            currentCircle.remove();
+        }
 
 
         LatLng currentLatLng = new LatLng(location.getLatitude(), location.getLongitude());
@@ -463,11 +437,17 @@ public class GooglemapsActivity extends BaseActivity
         MarkerOptions markerOptions = new MarkerOptions();
         markerOptions.position(currentLatLng);
         markerOptions.title(markerTitle);
-        markerOptions.snippet(markerSnippet);
         markerOptions.draggable(true);
         markerOptions.icon(BitmapDescriptorFactory
-                .defaultMarker(BitmapDescriptorFactory.HUE_BLUE));
-        currentMarker = mGoogleMap.addMarker(markerOptions);
+                .defaultMarker(BitmapDescriptorFactory.HUE_GREEN));
+
+        CircleOptions circle = new CircleOptions().center(currentLatLng) //원점
+                .radius(200)      //반지름 단위 : m
+                .strokeWidth(0f)  //선너비 0f : 선없음
+                .fillColor(Color.parseColor("#646EDEF5")); //배경색
+
+        //currentMarker = mGoogleMap.addMarker(markerOptions);
+        currentCircle = mGoogleMap.addCircle(circle);
 
 
         if ( mMoveMapByAPI ) {
@@ -481,6 +461,9 @@ public class GooglemapsActivity extends BaseActivity
     }
 
 
+
+
+
     public void setDefaultLocation() {
 
         mMoveMapByUser = false;
@@ -492,7 +475,10 @@ public class GooglemapsActivity extends BaseActivity
         String markerSnippet = getResources().getString(R.string.GPS활성여부);
 
 
-        if (currentMarker != null) currentMarker.remove();
+        if (currentMarker != null) {
+            currentMarker.remove();
+            currentCircle.remove();
+        }
 
         MarkerOptions markerOptions = new MarkerOptions();
         markerOptions.position(DEFAULT_LOCATION);
@@ -501,6 +487,11 @@ public class GooglemapsActivity extends BaseActivity
         markerOptions.draggable(true);
         markerOptions.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED));
         currentMarker = mGoogleMap.addMarker(markerOptions);
+        CircleOptions circle = new CircleOptions().center(DEFAULT_LOCATION) //원점
+                .radius(200)      //반지름 단위 : m
+                .strokeWidth(0f)  //선너비 0f : 선없음
+                .fillColor(Color.parseColor("#646EDEF5")); //배경색
+        currentCircle = mGoogleMap.addCircle(circle);
 
         CameraUpdate cameraUpdate = CameraUpdateFactory.newLatLngZoom(DEFAULT_LOCATION, 15);
         mGoogleMap.moveCamera(cameraUpdate);
@@ -710,9 +701,6 @@ public void initialize_db(Context context){
             return;
         }
         if (System.currentTimeMillis() <= backKeyPressedTime + 2000) {
-            Intent intent = new Intent(GooglemapsActivity.this,Home_Main.class);
-            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
-            startActivity(intent);
             finish();
             toast.cancel();
         }

@@ -5,6 +5,7 @@ package com.hbag.seoulhang.model.retrofit;
  */
 
 public class DataBaseDTO {
+    private int region_code;
     private int question_code;
     private String train_code;
     private String question_name_ko;
@@ -12,6 +13,10 @@ public class DataBaseDTO {
     private double x_coordinate;
     private double y_coordinate;
     private int question_length;
+
+    public void setRegion_code(int region_code) {
+        this.region_code = region_code;
+    }
 
     public void setQuestion_name_ko(String question_name_ko) {
         this.question_name_ko = question_name_ko;
@@ -39,6 +44,10 @@ public class DataBaseDTO {
 
     public void setQuestion_length(int question_length) {
         this.question_length = question_length;
+    }
+
+    public int getRegion_code() {
+        return region_code;
     }
 
     public String getQuestion_name_ko() {

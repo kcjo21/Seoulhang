@@ -185,10 +185,6 @@ public class NetworkClient {
         call.enqueue(callback);
     }
 
-    public void get_grade(String id, Callback<List<RankDTO>> callback){
-        Call<List<RankDTO>> call = service.get_grade(id);
-        call.enqueue(callback);
-    }
 
     public void ox_flag(String id, int quesion_code, Callback<String> callback){
         Call<String> call = service.ox_flag(id,quesion_code);

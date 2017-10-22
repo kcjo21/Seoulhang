@@ -142,17 +142,17 @@
     <string name="Logout_msg">로그아웃되었습니다.</string>
     <string name="dialog_ok">확인</string>
     <string name="로그인실패">로그인에 실패했습니다.\n다시 시도해주세요.</string>
-    <string name="home_descrip">첫 시작 페이지입니다. 가장 최근에 획득한 문제가 표시되며, 지도보기, 카메라실행 등을 할 수 있습니다.</string>
-    <string name="quiz_descrip">획득한 퀴즈를 확인할 수 있습니다. 퀴즈는 획득한 순서대로 나열되며, 주관식, OX 퀴즈로 구성되어있습니다. 또한, 힌트보너스를 가지고 있다면, 힌트를 볼 수 있습니다.</string>
-    <string name="info_descrip">현재까지 획득한 점수와 남은 힌트보너스를 확인할 수 있습니다. 지금까지 풀어온 퀴즈들을 확인할 수 있으며 서울시 내의 구 단위로 달성률과 해당 구의 설명을 볼 수 있습니다.</string>
-    <string name="rank_descrip">순위와 등급, 점수를 확인할 수 있습니다. 또한, 전체 순위표를 확인할 수 있습니다.</string>
+    <string name="home_descrip">첫 시작 페이지입니다.\n가장 인기 있는 퀴즈 10순위와 공지사항이 표시되며,\n지도 보기, 카메라 실행, 퀴즈 출제 등을 할 수 있습니다.</string>
+    <string name="quiz_descrip">획득한 퀴즈를 확인할 수 있습니다.\n퀴즈는 획득한 순서대로 나열되며, 주관식, OX 퀴즈로 구성되어있습니다.\n또한, 힌트 포인트를 가지고 있다면, 힌트를 볼 수 있습니다.\n힌트 포인트는 30점을 얻을 경우 1점을 획득합니다.</string>
+    <string name="info_descrip">점수와 힌트 포인트, 출제 포인트를 확인할 수 있습니다.\n지금까지 풀어온 퀴즈들을 확인할 수 있으며 서울시 내의 구 단위로 달성률과 해당 구의 설명을 볼 수 있습니다.</string>
+    <string name="rank_descrip">순위와 등급, 점수를 확인할 수 있습니다.\n또한, 전체 순위표를 확인할 수 있습니다.</string>
     <string name="순위표">순위표</string>
     <string name="메뉴버튼">메뉴</string>
-    <string name="menu_descrip">터치하면 보조메뉴가 열립니다. 보조메뉴에서는 프로필수정, 언어설정 등을 할 수 있으며, 지도, 카메라, 지하철 기능을 실행할 수 있습니다. 또한, 등급표 열람이 가능하며, 간략한 사용자 정보를 표시합니다.</string>
-    <string name="camera_descrip">만일 주변에 타겟이 있다면, 이 버튼을 눌러 카메라를 실행하세요. 카메라를 통해 3D 객체를 확인할 수 있습니다. 대상을 찾으면, 터치해서 획득하세요.</string>
+    <string name="menu_descrip">터치하면 보조 메뉴가 열립니다.\n보조 메뉴에서는 프로필수정, 앱 설정 등을 할 수 있으며, 간략한 사용자 정보를 표시합니다.</string>
+    <string name="camera_descrip">만일 주변에 타겟이 있다면, 이 버튼을 눌러 카메라를 실행하세요.\n카메라를 통해 3D 객체를 확인할 수 있습니다. 대상을 찾으면, 터치해서 획득하세요.</string>
     <string name="map_view_descrip">타겟의 위치를 지도로 확인할 수 있습니다.</string>
     <string name="replay">다시 보기</string>
-    <string name="replay_descrip">이 설명을 다시 보고 싶으시면, 이 버튼을 눌러주세요.</string>
+    <string name="replay_descrip">이 설명을 다시 보고 싶으시면,\n이 버튼을 눌러주세요.</string>
     <string name="map_view">지도 보기</string>
     <string name="카메라버튼">카메라</string>
     <string name="완료">완료!</string>
@@ -195,10 +195,14 @@
     <string name="not_good_quiz">과도한 욕설이나 부적절한 내용이\n포함된 퀴즈는 임의로 삭제될 수 있습니다.</string>
     <string name="make_quiz_count">%d개의 문제를 낼 수 있습니다!</string>
     <string name="can_not_make_quiz">포인트가 부족하여 문제를 낼 수 없습니다.</string>
-    <string name="succes_make_quiz">퀴즈를 제출했습니다!</string>
-    <string name="make_quiz_check">퀴즈를 제출하면 전용 포인트가 필요합니다. 제출하시겠습니까?</string>
+    <string name="succes_make_quiz">퀴즈를 출제했습니다!</string>
+    <string name="make_quiz_check">퀴즈를 출제하면 전용 포인트가 필요합니다. 출제하시겠습니까?</string>
     <string name="localrate_see">지역별 달성률 보기</string>
     <string name="close">닫기</string>
-    <string name="you_can_not_get">자신이 제출한 퀴즈는 획득할 수 없습니다.</string>
+    <string name="you_can_not_get">자신이 출제한 퀴즈는 획득할 수 없습니다.</string>
+    <string name="submitquiz_title">퀴즈 내기</string>
+    <string name="makequiz_descrip">지도상의 현재 위치에 퀴즈를 추가할 수 있습니다.\n퀴즈 출제에는 출제 포인트가 필요하며, OX 퀴즈 형식으로 출제할 수 있습니다.\n출제 포인트는 50점을 획득할 경우, 1점을 획득합니다.</string>
+    <string name="map_msg">약 200미터 근방에 있어야 타겟을 획득할 수 있습니다.</string>
+    <string name="ox_descrip">OX 퀴즈는 한 번만 풀 수 있으며, 정답일 경우 5점, 오답일 경우 3점을 획득합니다.</string>
 
 </resources>

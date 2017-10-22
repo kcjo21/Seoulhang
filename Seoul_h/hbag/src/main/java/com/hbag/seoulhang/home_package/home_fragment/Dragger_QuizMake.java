@@ -278,9 +278,8 @@ public class Dragger_QuizMake extends SwipeBackActivity {
 
         locationListener = new LocationListener() {
             public void onLocationChanged(Location location) {
-                double latitude = location.getLatitude();
-                double longitude = location.getLongitude();
-                // TODO 위도, 경도로 하고 싶은 것
+                latitude = location.getLatitude();
+                longitude = location.getLongitude();
             }
 
             public void onStatusChanged(String provider, int status, Bundle extras) {

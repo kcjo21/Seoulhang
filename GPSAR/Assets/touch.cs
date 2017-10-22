@@ -65,7 +65,7 @@ public class touch : MonoBehaviour {
     {
         AndroidJavaClass tc = new AndroidJavaClass("com.unity3d.player.UnityPlayer");
         mnd = tc.GetStatic<AndroidJavaObject>("currentActivity");
-        mnd.Call("onTouch", GPS.Instance.region_code); //Native Call
+        mnd.Call("onTouch", GPS.Instance.question_code); //Native Call
         
     }
 }

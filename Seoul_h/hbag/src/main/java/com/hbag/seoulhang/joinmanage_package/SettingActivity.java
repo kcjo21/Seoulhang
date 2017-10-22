@@ -172,6 +172,7 @@ public class SettingActivity extends AppCompatActivity {
                 }
                 else {
                     Intent intent = new Intent(SettingActivity.this, Home_Main.class);
+                    intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK);
                     startActivity(intent);
                     finish();
                 }
@@ -187,8 +188,6 @@ public class SettingActivity extends AppCompatActivity {
                     return;
                 }
                 mLastClickTime = SystemClock.elapsedRealtime();
-                Intent intent = new Intent(SettingActivity.this, Home_Main.class);
-                startActivity(intent);
                 finish();
             }
         });

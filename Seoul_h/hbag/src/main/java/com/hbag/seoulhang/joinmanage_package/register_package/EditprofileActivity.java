@@ -140,6 +140,7 @@ public class EditprofileActivity extends BaseActivity implements
                                                         toast.show();
                                                         cleanProfile();
                                                         Intent intent = new Intent(EditprofileActivity.this, LoginActivity.class);
+                                                        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK);
                                                         startActivity(intent);
                                                         finish();
                                                         progressOFF();
@@ -163,6 +164,7 @@ public class EditprofileActivity extends BaseActivity implements
                                                 toast.show();
                                                 cleanProfile();
                                                 Intent intent = new Intent(EditprofileActivity.this, LoginActivity.class);
+                                                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK);
                                                 startActivity(intent);
                                                 finish();
                                                 progressOFF();
@@ -213,6 +215,7 @@ public class EditprofileActivity extends BaseActivity implements
                                         Toast toast = Toast.makeText(getApplicationContext(), getResources().getString(R.string.회원정보수정완료), Toast.LENGTH_LONG);
                                         toast.show();
                                         Intent intent = new Intent(EditprofileActivity.this, Home_Main.class);
+                                        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK);
                                         startActivity(intent);
                                         finish();
                                         break;
@@ -235,8 +238,6 @@ public class EditprofileActivity extends BaseActivity implements
             Cancel.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Intent intent = new Intent(EditprofileActivity.this, Home_Main.class);
-                    startActivity(intent);
                     finish();
                 }
             });
@@ -326,6 +327,7 @@ public class EditprofileActivity extends BaseActivity implements
                                                                         editor.apply();
                                                                         cleanProfile();
                                                                         Intent intent = new Intent(EditprofileActivity.this, LoginActivity.class);
+                                                                        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK);
                                                                         startActivity(intent);
                                                                         finish();
                                                                         Toast toast = Toast.makeText(getApplicationContext(), getResources().getString(R.string.탈퇴성공), Toast.LENGTH_LONG);
@@ -468,6 +470,7 @@ public class EditprofileActivity extends BaseActivity implements
                                             Toast toast = Toast.makeText(getApplicationContext(), getResources().getString(R.string.회원정보수정완료), Toast.LENGTH_LONG);
                                             toast.show();
                                             Intent intent = new Intent(EditprofileActivity.this, Home_Main.class);
+                                            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK);
                                             startActivity(intent);
                                             finish();
                                         }
@@ -490,8 +493,6 @@ public class EditprofileActivity extends BaseActivity implements
             Cancel.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Intent intent = new Intent(EditprofileActivity.this, Home_Main.class);
-                    startActivity(intent);
                     finish();
                 }
             });

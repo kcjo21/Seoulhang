@@ -24,10 +24,6 @@
         "source": "C:\\Users\\cwh62\\.android\\build-cache\\1860e7502bea0f552aaa4935120bb2accced6b21\\output\\res\\layout\\abc_action_menu_layout.xml"
     },
     {
-        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\layout\\traffic_subway_info_type_b_line_icon.xml",
-        "source": "C:\\Users\\cwh62\\.android\\build-cache\\6b9e2a149949f92f777fbd1da03ab97e95934703\\output\\res\\layout\\traffic_subway_info_type_b_line_icon.xml"
-    },
-    {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\layout\\design_layout_snackbar.xml",
         "source": "C:\\Users\\cwh62\\.android\\build-cache\\2296c6d153ca9492798042173aaf4756857c6a9d\\output\\res\\layout\\design_layout_snackbar.xml"
     },
@@ -144,16 +140,8 @@
         "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\src\\main\\res\\layout\\activity_achieve_dragger.xml"
     },
     {
-        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\layout\\traffic_subway_info_type_a_line_icon.xml",
-        "source": "C:\\Users\\cwh62\\.android\\build-cache\\6b9e2a149949f92f777fbd1da03ab97e95934703\\output\\res\\layout\\traffic_subway_info_type_a_line_icon.xml"
-    },
-    {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\layout\\notification_action.xml",
         "source": "C:\\Users\\cwh62\\.android\\build-cache\\1860e7502bea0f552aaa4935120bb2accced6b21\\output\\res\\layout\\notification_action.xml"
-    },
-    {
-        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\layout\\custom_progress_dialog.xml",
-        "source": "C:\\Users\\cwh62\\.android\\build-cache\\6b9e2a149949f92f777fbd1da03ab97e95934703\\output\\res\\layout\\custom_progress_dialog.xml"
     },
     {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\layout\\item_rank.xml",
@@ -182,10 +170,6 @@
     {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_icon.xml",
         "source": "C:\\Users\\cwh62\\.android\\build-cache\\1860e7502bea0f552aaa4935120bb2accced6b21\\output\\res\\layout\\abc_list_menu_item_icon.xml"
-    },
-    {
-        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\layout\\traffic_subway_info_type_a.xml",
-        "source": "C:\\Users\\cwh62\\.android\\build-cache\\6b9e2a149949f92f777fbd1da03ab97e95934703\\output\\res\\layout\\traffic_subway_info_type_a.xml"
     },
     {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\layout\\activity_editprofile_social.xml",
@@ -244,14 +228,6 @@
         "source": "C:\\Users\\cwh62\\.android\\build-cache\\1860e7502bea0f552aaa4935120bb2accced6b21\\output\\res\\layout\\abc_select_dialog_material.xml"
     },
     {
-        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\layout\\traffic_subway_button_type_a.xml",
-        "source": "C:\\Users\\cwh62\\.android\\build-cache\\6b9e2a149949f92f777fbd1da03ab97e95934703\\output\\res\\layout\\traffic_subway_button_type_a.xml"
-    },
-    {
-        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\layout\\traffic_subway_type_mini.xml",
-        "source": "C:\\Users\\cwh62\\.android\\build-cache\\6b9e2a149949f92f777fbd1da03ab97e95934703\\output\\res\\layout\\traffic_subway_type_mini.xml"
-    },
-    {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\layout\\item_info_p.xml",
         "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\src\\main\\res\\layout\\item_info_p.xml"
     },
@@ -264,10 +240,6 @@
         "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\src\\main\\res\\layout\\activity_find_pass.xml"
     },
     {
-        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\layout\\activity_main.xml",
-        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\src\\main\\res\\layout\\activity_main.xml"
-    },
-    {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_tuto_d.xml",
         "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\src\\main\\res\\layout\\fragment_tuto_d.xml"
     },
@@ -276,12 +248,12 @@
         "source": "C:\\Users\\cwh62\\.android\\build-cache\\1860e7502bea0f552aaa4935120bb2accced6b21\\output\\res\\layout\\abc_action_bar_title_item.xml"
     },
     {
-        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\layout\\item_topten.xml",
-        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\src\\main\\res\\layout\\item_topten.xml"
+        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\layout\\activity_login.xml",
+        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\src\\main\\res\\layout\\activity_login.xml"
     },
     {
-        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\layout\\traffic_subway_button_type_b.xml",
-        "source": "C:\\Users\\cwh62\\.android\\build-cache\\6b9e2a149949f92f777fbd1da03ab97e95934703\\output\\res\\layout\\traffic_subway_button_type_b.xml"
+        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\layout\\item_topten.xml",
+        "source": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\src\\main\\res\\layout\\item_topten.xml"
     },
     {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\layout\\abc_alert_dialog_material.xml",
@@ -298,10 +270,6 @@
     {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\layout\\design_menu_item_action_area.xml",
         "source": "C:\\Users\\cwh62\\.android\\build-cache\\2296c6d153ca9492798042173aaf4756857c6a9d\\output\\res\\layout\\design_menu_item_action_area.xml"
-    },
-    {
-        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\layout\\traffic_subway_detail.xml",
-        "source": "C:\\Users\\cwh62\\.android\\build-cache\\6b9e2a149949f92f777fbd1da03ab97e95934703\\output\\res\\layout\\traffic_subway_detail.xml"
     },
     {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_toolbar.xml",
@@ -374,10 +342,6 @@
     {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_menu_item_layout.xml",
         "source": "C:\\Users\\cwh62\\.android\\build-cache\\1860e7502bea0f552aaa4935120bb2accced6b21\\output\\res\\layout\\abc_action_menu_item_layout.xml"
-    },
-    {
-        "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\layout\\traffic_subway_info_type_b.xml",
-        "source": "C:\\Users\\cwh62\\.android\\build-cache\\6b9e2a149949f92f777fbd1da03ab97e95934703\\output\\res\\layout\\traffic_subway_info_type_b.xml"
     },
     {
         "merged": "C:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\res\\merged\\debug\\layout\\select_dialog_singlechoice_material.xml",
