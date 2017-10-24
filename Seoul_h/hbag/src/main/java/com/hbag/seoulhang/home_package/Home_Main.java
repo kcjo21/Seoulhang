@@ -126,7 +126,16 @@ public class Home_Main extends BaseActivity implements
         ip = ipm.getip();
         loginid = profile.getId();
         handler = new Handler(Looper.getMainLooper());
-        Log.d("테스트",loginid);
+        if(loginid.length()==0){
+            Toast toast = Toast.makeText(getApplicationContext(), getResources().getString(R.string.load_failed), Toast.LENGTH_LONG);
+            toast.show();
+            Intent intent = new Intent(Home_Main.this, LoginActivity.class)
+                    .setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK);
+            startActivity(intent);
+        }
+        else {
+            Log.d("테스트", loginid);
+        }
         drawerposition = (TextView)findViewById(R.id.drawer_position);
         cameraposition = (TextView)findViewById(R.id.camera_position);
         info_setting = (TextView)findViewById(R.id.info_setting);

@@ -132,6 +132,7 @@
     <string name="insert_quiz">Insert Quiz</string>
     <string name="kakao_app_key">45d3abc0fba429258e010957df473e42</string>
     <string name="lang_descrip">언어를 선택합니다.</string>
+    <string name="load_failed">유저 정보를 불러오지 못했습니다. 다시 로그인해주세요.</string>
     <string name="localrate_see">지역별 달성률 보기</string>
     <string name="loginsuccess">%s님 환영합니다.\n시작버튼을 눌러주세요!</string>
     <string name="make_quiz">퀴즈 출제</string>
@@ -280,7 +281,7 @@
     <string name="회원탈퇴비밀번호">회원탈퇴를 위해 비밀번호를 입력해주세요.</string>
     <string name="힌트없음">남은 힌트가 없습니다!</string>
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-        
+        <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>

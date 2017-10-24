@@ -89,6 +89,16 @@ public class Dragger_QuizMake extends SwipeBackActivity {
             createGpsDisabledAlert();
         }
 
+        settingGPS();
+
+        Location userLocation = getMyLocation();
+
+        if( userLocation != null ) {
+            latitude = (float)userLocation.getLatitude();
+            longitude = (float)userLocation.getLongitude();
+        }
+
+
 
         profile = UserProfileData_singleton.getInstance();
 
@@ -125,18 +135,11 @@ public class Dragger_QuizMake extends SwipeBackActivity {
 
         networkClient = NetworkClient.getInstance(ip);
 
-        settingGPS();
-
-        Location userLocation = getMyLocation();
-
-        if( userLocation != null ) {
-            latitude = (float)userLocation.getLatitude();
-            longitude = (float)userLocation.getLongitude();
-        }
 
         commit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Location userLocation = getMyLocation();
                 final AlertDialog.Builder alert = new AlertDialog.Builder(Dragger_QuizMake.this);
                 alert.setCancelable(false);
                 alert.setMessage(R.string.make_quiz_check);
