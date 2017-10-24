@@ -152,7 +152,7 @@
     <string name="notice_descrip">한 줄 공지를 자동으로 전환시킵니다.\n비활성화시 수동으로 페이지를 넘깁니다.</string>
     <string name="num">num</string>
     <string name="open_drawer">open draweropen draweropen draweropen draweropen draweropen drawer</string>
-    <string name="ox_descrip">OX 퀴즈는 한 번만 풀 수 있으며, 정답일 경우 5점, 오답일 경우 3점을 획득합니다.</string>
+    <string name="ox_descrip">OX 퀴즈는 한 번만 풀 수 있으며, 정답일 경우 10점, 오답일 경우 5점을 획득합니다.</string>
     <string name="password_not_good">패스워드가 일치하지 않습니다.</string>
     <string name="please_check_already_id">이미 같은 아이디가 존재합니다.</string>
     <string name="please_check_id">아이디 또는 비밀번호가 일치하지 않습니다.</string>

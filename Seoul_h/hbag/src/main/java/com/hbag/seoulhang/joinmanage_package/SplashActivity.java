@@ -8,10 +8,8 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.util.DisplayMetrics;
-import android.widget.ImageView;
 
 import com.hbag.seoulhang.R;
-import com.hbag.seoulhang.model.database.Player;
 
 import java.util.Locale;
 

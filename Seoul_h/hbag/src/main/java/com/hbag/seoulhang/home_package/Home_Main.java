@@ -121,15 +121,6 @@ public class Home_Main extends BaseActivity implements
         SharedPreferences preferences = getSharedPreferences("a",MODE_PRIVATE);
         int first_flag = preferences.getInt("First",0);
 
-        if(first_flag != 1) {
-            Intent intent = new Intent(Home_Main.this, TutorialActivity.class);
-            startActivity(intent);
-            finish();
-        }
-        else{
-            LoadDateBase();
-        }
-
         profile = UserProfileData_singleton.getInstance();
         ipm = new Ipm();
         ip = ipm.getip();
@@ -155,6 +146,53 @@ public class Home_Main extends BaseActivity implements
         final int setlang = pref.getInt("setlang",0);
 
         String logintype = profile.getLoginType();
+        networkClient = NetworkClient.getInstance(ip);
+
+        networkClient.getfinishitem(loginid, new Callback<List<InventoryDTO>>() {
+            @Override
+            public void onResponse(Call<List<InventoryDTO>> call, Response<List<InventoryDTO>> response) {
+                Log.d("인포", "123");
+                switch (response.code()) {
+                    case 200:
+                        Log.d("인포", "어댑터 세팅");
+                        infos = response.body();
+
+                        InventoryDTO inventoryDTO = infos.get(0);
+
+                        String grade_i = inventoryDTO.getGrade();
+                        String nickname = inventoryDTO.getNickname();
+                        String email = inventoryDTO.getEmail();
+                        String point_i = Integer.toString(inventoryDTO.getPoint());
+
+                        player_name.setText(getResources().getString(R.string.side_닉네임,nickname));
+                        player_grade.setText(getResources().getString(R.string.side_등급,grade_i));
+                        player_point_home.setText(getResources().getString(R.string.side_점수,point_i));
+                        profile.setId(loginid);
+                        profile.setNickname(nickname);
+                        profile.setEmail(email);
+
+
+                        break;
+
+                    default:
+                        break;
+                }
+            }
+            @Override
+            public void onFailure(Call<List<InventoryDTO>> call, Throwable t) {
+                Log.e("ACC", "s?? " + t.getMessage());
+
+            }
+        });
+
+        if(first_flag != 1) {
+            Intent intent = new Intent(Home_Main.this, TutorialActivity.class);
+            startActivity(intent);
+            finish();
+        }
+        else{
+            LoadDateBase();
+        }
 
 
 
@@ -315,44 +353,6 @@ public class Home_Main extends BaseActivity implements
             }
         });
 
-        networkClient.getfinishitem(loginid, new Callback<List<InventoryDTO>>() {
-            @Override
-            public void onResponse(Call<List<InventoryDTO>> call, Response<List<InventoryDTO>> response) {
-                Log.d("인포", "123");
-                switch (response.code()) {
-                    case 200:
-                        Log.d("인포", "어댑터 세팅");
-                        infos = response.body();
-
-                        InventoryDTO inventoryDTO = infos.get(0);
-
-                        String grade_i = inventoryDTO.getGrade();
-                        String nickname = inventoryDTO.getNickname();
-                        String email = inventoryDTO.getEmail();
-                        String point_i = Integer.toString(inventoryDTO.getPoint());
-
-                        player_name.setText(getResources().getString(R.string.side_닉네임,nickname));
-                        player_grade.setText(getResources().getString(R.string.side_등급,grade_i));
-                        player_point_home.setText(getResources().getString(R.string.side_점수,point_i));
-                        profile.setId(loginid);
-                        profile.setNickname(nickname);
-                        profile.setEmail(email);
-
-
-                        break;
-
-                    default:
-                        break;
-                }
-            }
-            @Override
-            public void onFailure(Call<List<InventoryDTO>> call, Throwable t) {
-                Log.e("ACC", "s?? " + t.getMessage());
-
-            }
-        });
-
-
 
         backPressCloseHandler = new BackPressCloseHandler(this); //뒤로가기 이벤트 핸들러
 
@@ -364,10 +364,6 @@ public class Home_Main extends BaseActivity implements
             actionBar.setDisplayHomeAsUpEnabled(true);    //네비게이션 아이콘 활성화
             actionBar.setDisplayShowTitleEnabled(false);  //앱 타이틀명 제거
         }
-
-        networkClient = NetworkClient.getInstance(ip);
-
-
 
 
         dtToggle = new ActionBarDrawerToggle(this, dlDrawer,R.string.open_drawer,R.string.close_drawer);
@@ -616,7 +612,6 @@ public class Home_Main extends BaseActivity implements
             if(resultCode == RESULT_OK) {
                 int question_code = data.getIntExtra("got",0);
                 Log.d("유니티","Q_code"+question_code);
-                networkClient = NetworkClient.getInstance(ip);
                 networkClient.checkplayer(playerid, question_code,new Callback<Integer>() {
                     @Override
                     public void onResponse(Call<Integer> call, Response<Integer> response) {
@@ -804,8 +799,6 @@ public class Home_Main extends BaseActivity implements
                 handler.post(new Runnable() {
                     @Override
                     public void run() {
-                        NetworkClient networkClient;
-                        networkClient = NetworkClient.getInstance(ip);
                         Log.d("테스트","1");
 
                         networkClient.send_db(loginid, new Callback<List<DataBaseDTO>>() {

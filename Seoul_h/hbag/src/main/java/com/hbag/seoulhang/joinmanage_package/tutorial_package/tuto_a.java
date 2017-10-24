@@ -33,7 +33,8 @@ public class tuto_a extends Fragment
         RelativeLayout layout = (RelativeLayout) inflater.inflate(R.layout.fragment_tuto_a, container, false);
         profile = UserProfileData_singleton.getInstance();
         TextView tv = (TextView)layout.findViewById(R.id.tv_1);
-        tv.setText(getString(R.string.welcome,profile.getName()));
+        tv.setText(getString(R.string.welcome,profile.getNickname()));
+        profile.getName();
         return layout;
     }
 }

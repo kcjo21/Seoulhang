@@ -99,7 +99,7 @@
     <string name="notice_descrip">Select whether to flip notification\nautomatically or manually.</string>
     <string name="num">num</string>
     <string name="open_drawer">open draweropen draweropen draweropen draweropen draweropen drawer</string>
-    <string name="ox_descrip">You can try the OX quiz only once, get 5 points for correct answers, and 3 points for wrong answers.</string>
+    <string name="ox_descrip">You can try the OX quiz only once, get 10 points for correct answers, and 5 points for wrong answers.</string>
     <string name="password_not_good">Passwords do not match.</string>
     <string name="please_check_already_id">this id already exist.</string>
     <string name="please_check_id">Please check your ID or Password.</string>
