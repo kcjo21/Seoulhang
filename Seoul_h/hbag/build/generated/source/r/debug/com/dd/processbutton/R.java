@@ -34,11 +34,11 @@ public final class R {
         public static final int layer_padding = 0x7f080099;
     }
     public static final class drawable {
-        public static final int rect_complete = 0x7f0200e2;
-        public static final int rect_error = 0x7f0200e3;
-        public static final int rect_normal = 0x7f0200e4;
-        public static final int rect_pressed = 0x7f0200e5;
-        public static final int rect_progress = 0x7f0200e6;
+        public static final int rect_complete = 0x7f0200df;
+        public static final int rect_error = 0x7f0200e0;
+        public static final int rect_normal = 0x7f0200e1;
+        public static final int rect_pressed = 0x7f0200e2;
+        public static final int rect_progress = 0x7f0200e3;
     }
     public static final class string {
         public static final int define_processbutton = 0x7f060113;

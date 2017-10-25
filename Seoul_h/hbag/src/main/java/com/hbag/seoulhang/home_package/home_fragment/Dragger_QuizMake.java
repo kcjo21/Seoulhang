@@ -1,5 +1,6 @@
 package com.hbag.seoulhang.home_package.home_fragment;
 
+import android.Manifest;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
@@ -21,7 +22,6 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
-import com.hbag.seoulhang.Manifest;
 import com.hbag.seoulhang.R;
 import com.hbag.seoulhang.home_package.Home_Main;
 import com.hbag.seoulhang.joinmanage_package.login_package.UserProfileData_singleton;
@@ -40,12 +40,6 @@ import retrofit2.Response;
 
 public class Dragger_QuizMake extends SwipeBackActivity {
 
-
-    // 최소 GPS 정보 업데이트 거리 10미터
-    private static final long MIN_DISTANCE_CHANGE_FOR_UPDATES = 10;
-
-    // 최소 GPS 정보 업데이트 시간 밀리세컨이므로 1분
-    private static final long MIN_TIME_BW_UPDATES = 1000 * 60 * 1;
 
     private static final int MY_PERMISSIONS_REQUEST_READ_CONTACTS = 2002;
 
@@ -139,7 +133,14 @@ public class Dragger_QuizMake extends SwipeBackActivity {
         commit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                settingGPS();
+
                 Location userLocation = getMyLocation();
+
+                if( userLocation != null ) {
+                    latitude = (float)userLocation.getLatitude();
+                    longitude = (float)userLocation.getLongitude();
+                }
                 final AlertDialog.Builder alert = new AlertDialog.Builder(Dragger_QuizMake.this);
                 alert.setCancelable(false);
                 alert.setMessage(R.string.make_quiz_check);
@@ -240,40 +241,30 @@ public class Dragger_QuizMake extends SwipeBackActivity {
             }
         });
 
-
-
-
-
-
-
-
     }
 
-        private Location getMyLocation() {
-            Location currentLocation = null;
-            // Register the listener with the Location Manager to receive location updates
-            if (ActivityCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_FINE_LOCATION) !=
-                    PackageManager.PERMISSION_GRANTED &&
-                    ActivityCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_COARSE_LOCATION) !=
-                    PackageManager.PERMISSION_GRANTED) {
-                // 사용자 권한 요청
-                ActivityCompat.requestPermissions(this, new String[]{android.Manifest.permission.ACCESS_FINE_LOCATION}, MY_PERMISSIONS_REQUEST_READ_CONTACTS);
-            }
-            else {
-                locationManager.requestLocationUpdates(LocationManager.NETWORK_PROVIDER, 0, 0, locationListener);
-                locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 0, 0, locationListener);
-
-                // 수동으로 위치 구하기
-                String locationProvider = LocationManager.GPS_PROVIDER;
-                currentLocation = locationManager.getLastKnownLocation(locationProvider);
-                if (currentLocation != null) {
-                    double lng = currentLocation.getLongitude();
-                    double lat = currentLocation.getLatitude();
-                    Log.d("Main", "longtitude=" + lng + ", latitude=" + lat);
-                }
-            }
-            return currentLocation;
+    private Location getMyLocation() {
+        Location currentLocation = null;
+        // Register the listener with the Location Manager to receive location updates
+        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+            // 사용자 권한 요청
+            ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, 2002);
         }
+        else {
+            locationManager.requestLocationUpdates(LocationManager.NETWORK_PROVIDER, 0, 0, locationListener);
+            locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 0, 0, locationListener);
+
+            // 수동으로 위치 구하기
+            String locationProvider = LocationManager.GPS_PROVIDER;
+            currentLocation = locationManager.getLastKnownLocation(locationProvider);
+            if (currentLocation != null) {
+                longitude = currentLocation.getLongitude();
+                latitude = currentLocation.getLatitude();
+                Log.d("Main", "longtitude=" + longitude + ", latitude=" + latitude);
+            }
+        }
+        return currentLocation;
+    }
 
     private void settingGPS() {
         // Acquire a reference to the system Location Manager
@@ -283,6 +274,7 @@ public class Dragger_QuizMake extends SwipeBackActivity {
             public void onLocationChanged(Location location) {
                 latitude = location.getLatitude();
                 longitude = location.getLongitude();
+                // TODO 위도, 경도로 하고 싶은 것
             }
 
             public void onStatusChanged(String provider, int status, Bundle extras) {
@@ -296,6 +288,7 @@ public class Dragger_QuizMake extends SwipeBackActivity {
         };
     }
 
+
     boolean canReadLocation = false;
     public void onRequestPermissionsResult(int requestCode,String[] permissions,int[] grantResults) {
         if (requestCode == MY_PERMISSIONS_REQUEST_READ_CONTACTS) {
@@ -303,7 +296,6 @@ public class Dragger_QuizMake extends SwipeBackActivity {
 
                 Location userLocation = getMyLocation();
                 if( userLocation != null ) {
-
                     latitude = userLocation.getLatitude();
                     longitude = userLocation.getLongitude();
                 }

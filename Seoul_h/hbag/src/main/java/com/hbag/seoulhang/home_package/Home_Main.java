@@ -19,7 +19,9 @@ import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.Toolbar;
+import android.text.TextUtils;
 import android.util.Log;
+import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -126,7 +128,7 @@ public class Home_Main extends BaseActivity implements
         ip = ipm.getip();
         loginid = profile.getId();
         handler = new Handler(Looper.getMainLooper());
-        if(loginid.length()==0){
+        if(TextUtils.isEmpty(loginid)){
             Toast toast = Toast.makeText(getApplicationContext(), getResources().getString(R.string.load_failed), Toast.LENGTH_LONG);
             toast.show();
             Intent intent = new Intent(Home_Main.this, LoginActivity.class)
@@ -631,11 +633,22 @@ public class Home_Main extends BaseActivity implements
                                 Log.d("확인","check"+check);
                                 if (check == 1) {  //Responce의값이 1일 때 새 문제 획득
                                     AlertDialog.Builder alert = new AlertDialog.Builder(Home_Main.this);
+                                    alert.setOnKeyListener(new DialogInterface.OnKeyListener() {
+                                        @Override
+                                        public boolean onKey(DialogInterface dialog, int keyCode, KeyEvent event) {
+                                            Intent intent = new Intent(getApplicationContext(),Home_Main.class);
+                                            startActivity(intent);
+                                            finish();
+                                            dialog.dismiss();     //닫기
+                                            return false;
+                                        }
+                                    });
                                     alert.setPositiveButton(getResources().getString(R.string.dialog_ok), new DialogInterface.OnClickListener() {
                                         @Override
                                         public void onClick(DialogInterface dialog, int which) {
                                             Intent intent = new Intent(getApplicationContext(),Home_Main.class);
                                             startActivity(intent);
+
                                             finish();
                                             dialog.dismiss();     //닫기
                                         }
