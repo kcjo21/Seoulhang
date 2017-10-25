@@ -14,6 +14,7 @@ import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.util.TypedValue;
 import android.view.Gravity;
+import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
@@ -112,7 +113,7 @@ public class Frag_Home extends BaseFragment {
       map_b.getViewTreeObserver().addOnGlobalFocusChangeListener(new ViewTreeObserver.OnGlobalFocusChangeListener() {
           @Override
           public void onGlobalFocusChanged(View oldFocus, View newFocus) {
-              ((Home_Main)getActivity()).targetMaker(achv_b,achv_b.getWidth()/2,getResources().getString(R.string.submitquiz_title),getResources().getString(R.string.makequiz_descrip));
+              ((Home_Main)getActivity()).targetMaker(achv_b,achv_b.getWidth()*40/100,getResources().getString(R.string.submitquiz_title),getResources().getString(R.string.makequiz_descrip));
               ((Home_Main)getActivity()).targetMaker(map_b,map_b.getWidth(),getResources().getString(R.string.map_view),getResources().getString(R.string.map_view_descrip));
               ((Home_Main)getActivity()).targetMaker(tuto,tuto.getHeight(),getResources().getString(R.string.replay),getResources().getString(R.string.replay_descrip));
 
@@ -348,6 +349,18 @@ public class Frag_Home extends BaseFragment {
                                 Log.d("확인","check"+check);
                                 if (check == 1) {  //Responce의값이 1일 때 새 문제 획득
                                     AlertDialog.Builder alert = new AlertDialog.Builder(getActivity());
+                                    alert.setOnKeyListener(new DialogInterface.OnKeyListener() {
+                                        @Override
+                                        public boolean onKey(DialogInterface dialog, int keyCode, KeyEvent event) {
+                                            Intent intent = new Intent(getContext(),Home_Main.class);
+                                            intent.setFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+                                            getActivity().overridePendingTransition(0, 0);
+                                            startActivity(intent);
+                                            getActivity().finish();
+                                            dialog.dismiss();     //닫기
+                                            return false;
+                                        }
+                                    });
                                     alert.setPositiveButton(getResources().getString(R.string.dialog_ok), new DialogInterface.OnClickListener() {
                                         @Override
                                         public void onClick(DialogInterface dialog, int which) {

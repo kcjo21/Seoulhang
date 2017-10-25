@@ -192,7 +192,7 @@
     <string name="answer">Choose an Answer</string>
     <string name="quizmake">Please enter a quiz.</string>
     <string name="hintmake">Please enter a hint about the quiz.</string>
-    <string name="not_good_quiz">A quiz including excessive inappropriate\ncontent may be deleted</string>
+    <string name="not_good_quiz">A quiz including excessive inappropriate\ncontent may be deleted\nyou can submit it in OX quiz form.\nThe quiz making point will be awarded 1 point If you score 50 points.</string>
     <string name="make_quiz_count">You can make %d quizzes.</string>
     <string name="can_not_make_quiz">Not enough points to make a quiz</string>
     <string name="succes_make_quiz">Submitted a quiz!</string>
@@ -201,8 +201,9 @@
     <string name="close">ESC</string>
     <string name="you_can_not_get">You can not get the quiz you made.</string>
     <string name="submitquiz_title">Make a Quiz</string>
-    <string name="makequiz_descrip">You can add a quiz to the current location on the map.\nQuiz making require a quiz making points and you can submit it in OX quiz form.\nThe quiz making point will be awarded 1 point If you score 50 points.</string>
+    <string name="makequiz_descrip">You can add a quiz to the current location on the map.</string>
     <string name="map_msg">You must be near 200 meters to get the target.</string>
     <string name="ox_descrip">You can try the OX quiz only once, get 10 points for correct answers, and 5 points for wrong answers.</string>
     <string name="load_failed">Failed to load user information. Please login again.</string>
+    <string name="enter_quizmake">Some items you have not entered.</string>
 </resources>

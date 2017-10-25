@@ -637,6 +637,8 @@ public class Home_Main extends BaseActivity implements
                                         @Override
                                         public boolean onKey(DialogInterface dialog, int keyCode, KeyEvent event) {
                                             Intent intent = new Intent(getApplicationContext(),Home_Main.class);
+                                            intent.setFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+                                            overridePendingTransition(0, 0);
                                             startActivity(intent);
                                             finish();
                                             dialog.dismiss();     //닫기
@@ -769,7 +771,7 @@ public class Home_Main extends BaseActivity implements
         switch(state) {
             case 0:
                 Spotlight.with(this)
-                        .setDuration(500L)
+                        .setDuration(400L)
                         .setAnimation(new DecelerateInterpolator(2f))
                         .setTargets(spotTarget.get(3),spotTarget.get(4),spotTarget.get(5),spotTarget.get(6),spotTarget.get(7),spotTarget.get(8),spotTarget.get(0),spotTarget.get(1),spotTarget.get(2))
                         .setOnSpotlightStartedListener(new OnSpotlightStartedListener() {

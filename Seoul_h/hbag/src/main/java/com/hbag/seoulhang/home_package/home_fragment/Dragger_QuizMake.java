@@ -11,7 +11,6 @@ import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
 import android.os.Bundle;
-import android.app.Activity;
 import android.support.annotation.IdRes;
 import android.support.v4.app.ActivityCompat;
 import android.util.Log;
@@ -25,7 +24,6 @@ import android.widget.Toast;
 import com.hbag.seoulhang.R;
 import com.hbag.seoulhang.home_package.Home_Main;
 import com.hbag.seoulhang.joinmanage_package.login_package.UserProfileData_singleton;
-import com.hbag.seoulhang.joinmanage_package.register_package.EditprofileActivity;
 import com.hbag.seoulhang.model.retrofit.InventoryDTO;
 import com.hbag.seoulhang.network.Ipm;
 import com.hbag.seoulhang.network.NetworkClient;
@@ -133,6 +131,15 @@ public class Dragger_QuizMake extends SwipeBackActivity {
         commit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                squiz =  quiz.getText().toString();
+                shint = hint.getText().toString();
+
+                if(squiz.length()<=0||shint.length()<=0){
+                    Toast toast = Toast.makeText(getApplicationContext(), getResources().getString(R.string.enter_quizmake), Toast.LENGTH_LONG);
+                    toast.show();
+                    return;
+                }
+
                 settingGPS();
 
                 Location userLocation = getMyLocation();
@@ -179,8 +186,7 @@ public class Dragger_QuizMake extends SwipeBackActivity {
                                                 Answer_check = "x";
                                             }
 
-                                            squiz =  quiz.getText().toString();
-                                            shint = hint.getText().toString();
+
 
                                             Log.d("GPS",loginid+username+squiz+shint+Answer_check+sLocale+latitude+longitude);
 

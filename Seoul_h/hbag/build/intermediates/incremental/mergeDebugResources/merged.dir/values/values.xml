@@ -922,7 +922,7 @@
     <string name="checkplease">ID중복확인을 해주십시오.</string>
     <string name="close">닫기</string>
     <string name="close_drawer">close drawerclose drawerclose drawerclose drawerclose drawer</string>
-    <string name="com.crashlytics.android.build_id" ns1:ignore="UnusedResources,TypographyDashes" translatable="false">b666f1dc-a846-44df-9e3b-70cc6ce961ab</string>
+    <string name="com.crashlytics.android.build_id" ns1:ignore="UnusedResources,TypographyDashes" translatable="false">a42bd037-dc01-4f23-afec-cbd2ee0d6dd8</string>
     <string name="com_facebook_image_download_unknown_error">Unexpected error while downloading an image.</string>
     <string name="com_facebook_internet_permission_error_message">WebView login requires INTERNET permission</string>
     <string name="com_facebook_internet_permission_error_title">AndroidManifest Error</string>
@@ -961,6 +961,7 @@
     <string name="define_processbutton">processbutton</string>
     <string name="dialog_ok">확인</string>
     <string name="email">E-mail</string>
+    <string name="enter_quizmake">입력하지 않은 항목이 있습니다.</string>
     <string name="facebook_app_id">130262031034086</string>
     <string name="facebook_leave_msg">탈퇴하시면 계정의 모든 정보가 삭제됩니다.</string>
     <string name="facebook_with">                페이스북으로 로그인 중</string>
@@ -999,7 +1000,7 @@
     <string name="make_quiz">퀴즈 출제</string>
     <string name="make_quiz_check">퀴즈를 출제하면 전용 포인트가 필요합니다. 출제하시겠습니까?</string>
     <string name="make_quiz_count">%d개의 문제를 낼 수 있습니다!</string>
-    <string name="makequiz_descrip">지도상의 현재 위치에 퀴즈를 추가할 수 있습니다.\n퀴즈 출제에는 출제 포인트가 필요하며, OX 퀴즈 형식으로 출제할 수 있습니다.\n출제 포인트는 50점을 획득할 경우, 1점을 획득합니다.</string>
+    <string name="makequiz_descrip">지도상의 현재 위치에 퀴즈를 추가할 수 있습니다. 퀴즈 출제에는 출제 포인트가 필요합니다.\n</string>
     <string name="map_msg">약 200미터 근방에 있어야 타겟을 획득할 수 있습니다.</string>
     <string name="map_view">지도 보기</string>
     <string name="map_view_descrip">타겟의 위치를 지도로 확인할 수 있습니다.</string>
@@ -1010,7 +1011,7 @@
     <string name="naversecret">IxuQXBjLMf</string>
     <string name="normal_with">                일반계정으로 로그인 중</string>
     <string name="not_good_id">영문과 숫자로만 이루어진 5~12자 아이디를 입력해주세요.\n첫 글자는 반드시 영문입니다.</string>
-    <string name="not_good_quiz">과도한 욕설이나 부적절한 내용이\n포함된 퀴즈는 임의로 삭제될 수 있습니다.</string>
+    <string name="not_good_quiz">과도한 욕설이나 부적절한 내용이\n포함된 퀴즈는 임의로 삭제될 수 있습니다.\nOX 퀴즈 형식으로 출제할 수 있습니다.\n출제 포인트는 50점을 획득할 경우, 1점을 획득합니다.\n</string>
     <string name="notice_descrip">한 줄 공지를 자동으로 전환시킵니다.\n비활성화시 수동으로 페이지를 넘깁니다.</string>
     <string name="num">num</string>
     <string name="open_drawer">open draweropen draweropen draweropen draweropen draweropen drawer</string>

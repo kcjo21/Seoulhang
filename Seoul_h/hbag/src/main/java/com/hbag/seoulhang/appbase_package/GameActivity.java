@@ -16,11 +16,8 @@ import android.widget.Toast;
 
 import com.hbag.seoulhang.R;
 import com.hbag.seoulhang.home_package.Home_Main;
-import com.hbag.seoulhang.joinmanage_package.login_package.UserProfileData_singleton;
-import com.hbag.seoulhang.map_package.GooglemapsActivity;
 import com.hbag.seoulhang.model.retrofit.InventoryDTO;
 import com.hbag.seoulhang.model.retrofit.ItemDTO;
-import com.hbag.seoulhang.model.retrofit.QuestDTO;
 import com.hbag.seoulhang.network.Ipm;
 import com.hbag.seoulhang.network.NetworkClient;
 import com.unity3d.player.UnityPlayer;

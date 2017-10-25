@@ -1,4 +1,7 @@
-#Wed Oct 25 18:09:42 KST 2017
-base.0=C\:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\1f\\main
+#Wed Oct 25 20:49:47 KST 2017
+base.0=C\:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_32410c8fcd47bb2f6aab0a0111c9bd3e180826da
+renamed.1=classes2.dex
 renamed.0=classes.dex
-file.0=C\:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\1f\\main\\classes.dex
+file.1=C\:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_72e23fc9a247d28e87307a2bcd018f94943fbedf\\classes.dex
+base.1=C\:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_72e23fc9a247d28e87307a2bcd018f94943fbedf
+file.0=C\:\\Users\\cwh62\\Documents\\GitHub\\new_sh\\Seoul_h\\hbag\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_32410c8fcd47bb2f6aab0a0111c9bd3e180826da\\classes.dex

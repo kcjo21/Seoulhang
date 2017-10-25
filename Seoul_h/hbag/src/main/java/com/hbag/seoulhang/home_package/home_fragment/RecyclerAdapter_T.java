@@ -76,7 +76,7 @@ public class RecyclerAdapter_T extends RecyclerView.Adapter<RecyclerAdapter_T.Vi
                 case 480:
                     question_name.setTextSize(TypedValue.COMPLEX_UNIT_DIP,14);
                     question_code.setTextSize(TypedValue.COMPLEX_UNIT_DIP,14);
-                    region_name.setTextSize(TypedValue.COMPLEX_UNIT_DIP,12);
+                    region_name.setTextSize(TypedValue.COMPLEX_UNIT_DIP,14);
                     visit_count.setTextSize(TypedValue.COMPLEX_UNIT_DIP,12);
                     break;
                 case 560:
@@ -92,6 +92,8 @@ public class RecyclerAdapter_T extends RecyclerView.Adapter<RecyclerAdapter_T.Vi
                     visit_count.setTextSize(TypedValue.COMPLEX_UNIT_DIP,14);
                     break;
             }
+
+
 
 
 
@@ -126,6 +128,7 @@ public class RecyclerAdapter_T extends RecyclerView.Adapter<RecyclerAdapter_T.Vi
         params.height = rev_size*7/10-5;
         holder.background.setLayoutParams(params);        //DPI별로 이미지뷰 크기를 지정해준다.
         holder.background.setImageResource(methods.imageSelector(mDataset.get(position).region_name)); // 해당지역의 사진으로 변경
+        holder.question_name.setMaxWidth(params.width);
 
 
 
