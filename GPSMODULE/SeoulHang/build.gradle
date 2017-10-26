@@ -37,9 +37,9 @@ android {
 	}
 	signingConfigs { release {
 		storeFile file('C:/Users/cwh62/Documents/GitHub/new_sh/GPSAR/sh.keystore')
-		storePassword ''
+		storePassword 'ckrtma22'
 		keyAlias 'sh'
-		keyPassword ''
+		keyPassword 'ckrtma22'
 	} }
 
 	buildTypes {

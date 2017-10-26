@@ -922,7 +922,7 @@
     <string name="checkplease">ID중복확인을 해주십시오.</string>
     <string name="close">닫기</string>
     <string name="close_drawer">close drawerclose drawerclose drawerclose drawerclose drawer</string>
-    <string name="com.crashlytics.android.build_id" ns1:ignore="UnusedResources,TypographyDashes" translatable="false">a42bd037-dc01-4f23-afec-cbd2ee0d6dd8</string>
+    <string name="com.crashlytics.android.build_id" ns1:ignore="UnusedResources,TypographyDashes" translatable="false">ae343e7b-32e3-40e0-96fe-4fa5513d3f0e</string>
     <string name="com_facebook_image_download_unknown_error">Unexpected error while downloading an image.</string>
     <string name="com_facebook_internet_permission_error_message">WebView login requires INTERNET permission</string>
     <string name="com_facebook_internet_permission_error_title">AndroidManifest Error</string>

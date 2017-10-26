@@ -116,7 +116,8 @@ public class Dragger_Quiz extends SwipeBackActivity {
                     }
                 }
                 else if(mDataset.get(dataPosition).q_type.equals("default")){
-                    answer = Answer.getText().toString();
+                    String sAnswer = Answer.getText().toString();
+                    answer = sAnswer.replaceAll("\\p{Digit}|\\p{Space}|\\p{Punct}", "");
                 }
 
                 if (answer.equalsIgnoreCase(mDataset.get(dataPosition).Answer_q)) {  //해당 position에 있는 답과 입력값 비교
