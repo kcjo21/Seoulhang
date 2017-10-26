@@ -26,6 +26,7 @@ public class GPS : MonoBehaviour {
         DontDestroyOnLoad(gameObject);
         StartCoroutine(StartLocationService());
         GameObject.Find("3d").SetActive(false);
+        GameObject.Find("3d_user").SetActive(false);
         
     }
 
@@ -87,7 +88,7 @@ public class GPS : MonoBehaviour {
         }
         else if (locale == "en")
         {
-            _dbcm.CommandText = "SELECT region_code, question_name,question_code FROM questions WHERE (abs(x_coordinate-" + latitude + "))*(abs(x_coordinate-" + latitude + "))+(abs(y_coordinate-" + longitude + "))*(abs(y_coordinate-" + longitude + "))<=(0.002)*(0.002)"; //현재위치에서 500m안에 있는 역
+            _dbcm.CommandText = "SELECT region_code, question_name_en,question_code FROM questions WHERE (abs(x_coordinate-" + latitude + "))*(abs(x_coordinate-" + latitude + "))+(abs(y_coordinate-" + longitude + "))*(abs(y_coordinate-" + longitude + "))<=(0.002)*(0.002)"; //현재위치에서 500m안에 있는 역
         }
 
         _dbr = _dbcm.ExecuteReader();
@@ -119,14 +120,21 @@ public class GPS : MonoBehaviour {
             {
                 region_name = "주변에 타겟이 없습니다.";
             }
-            else if(locale == "en")
+            else if (locale == "en")
             {
                 region_name = "There is no target nearby.";
             }
         }
         else
         {
-            GameObject.Find("GameObject").transform.Find("3d").gameObject.SetActive(true);
+            if (region_code == 26) //사용자 퀴즈와 일반퀴즈의 오브젝트를 다르게 한다.
+            {
+                GameObject.Find("GameObject").transform.Find("3d_user").gameObject.SetActive(true);
+            }
+            else
+            {
+                GameObject.Find("GameObject").transform.Find("3d").gameObject.SetActive(true);
+            }
         } 
 
         yield break;

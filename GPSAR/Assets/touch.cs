@@ -24,9 +24,16 @@ public class touch : MonoBehaviour {
             if (target.Equals(gameObject)&&Touched==false)  //선택된게 해당 오브젝트이고 터치된 적이 없을 시 실행
             {
 
-               /* var tt = GameObject.Find("Get_text");      //오브젝트의 애니메이션을 불러온다.
-                tt.GetComponent<Animation>().Play("Get");     //텍스트 애니메이션 "Get"을 실행한다. */
-                this.GetComponent<Animation>().Play("Rotate");   //오브젝트 애니메이션 "Rotate"를 실행한다.
+                /* var tt = GameObject.Find("Get_text");      //오브젝트의 애니메이션을 불러온다.
+                 tt.GetComponent<Animation>().Play("Get");     //텍스트 애니메이션 "Get"을 실행한다. */
+                if (this.gameObject.name.Equals("3d_user"))
+                {
+                    this.GetComponent<Animation>().Play("Rotate");   //오브젝트 애니메이션 "Rotate"를 실행한다.
+                }
+                else
+                {
+                    this.GetComponent<Animation>().Play("Rotate_normal");
+                }
                 this.GetComponent<AudioSource>().Play() ;                     //터치 소리를 실행한다.*
 
                                                                 
