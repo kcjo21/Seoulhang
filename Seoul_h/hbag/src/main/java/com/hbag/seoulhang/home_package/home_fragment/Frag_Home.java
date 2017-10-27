@@ -370,6 +370,7 @@ public class Frag_Home extends BaseFragment {
                                             dialog.dismiss();     //닫기
                                         }
                                     });
+                                    alert.setCancelable(false);
                                     alert.setMessage(R.string.새문제);
                                     alert.show();
                                 } else if (check == 0) { //Responce값이 0일 때 이미 가지고 있는 문제

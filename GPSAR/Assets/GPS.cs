@@ -25,7 +25,6 @@ public class GPS : MonoBehaviour {
         Instance = this;
         DontDestroyOnLoad(gameObject);
         StartCoroutine(StartLocationService());
-        GameObject.Find("3d").SetActive(false);
         GameObject.Find("3d_user").SetActive(false);
         
     }
@@ -127,14 +126,7 @@ public class GPS : MonoBehaviour {
         }
         else
         {
-            if (region_code == 26) //사용자 퀴즈와 일반퀴즈의 오브젝트를 다르게 한다.
-            {
                 GameObject.Find("GameObject").transform.Find("3d_user").gameObject.SetActive(true);
-            }
-            else
-            {
-                GameObject.Find("GameObject").transform.Find("3d").gameObject.SetActive(true);
-            }
         } 
 
         yield break;

@@ -442,7 +442,7 @@ public class GooglemapsActivity extends BaseActivity
                 .defaultMarker(BitmapDescriptorFactory.HUE_GREEN));
 
         CircleOptions circle = new CircleOptions().center(currentLatLng) //원점
-                .radius(200)      //반지름 단위 : m
+                .radius(180)      //반지름 단위 : m
                 .strokeWidth(0f)  //선너비 0f : 선없음
                 .fillColor(Color.parseColor("#646EDEF5")); //배경색
 
