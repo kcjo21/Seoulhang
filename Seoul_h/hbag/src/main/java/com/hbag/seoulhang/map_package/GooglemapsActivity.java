@@ -11,9 +11,6 @@ import android.content.res.AssetManager;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Color;
-import android.graphics.Point;
-import android.location.Address;
-import android.location.Geocoder;
 import android.location.Location;
 import android.location.LocationManager;
 import android.net.Uri;
@@ -26,7 +23,10 @@ import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.KeyEvent;
+import android.view.View;
 import android.view.WindowManager;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.google.android.gms.common.ConnectionResult;
@@ -46,9 +46,10 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.hbag.seoulhang.appbase_package.BaseActivity;
+import com.hbag.seoulhang.appbase_package.GameActivity;
 import com.hbag.seoulhang.home_package.BackPressCloseHandler;
-import com.hbag.seoulhang.home_package.Home_Main;
 import com.hbag.seoulhang.R;
+import com.hbag.seoulhang.home_package.Home_Main;
 import com.hbag.seoulhang.network.Ipm;
 import com.hbag.seoulhang.network.NetworkClient;
 import com.hbag.seoulhang.joinmanage_package.login_package.UserProfileData_singleton;
@@ -58,7 +59,6 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.List;
-import java.util.Locale;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -95,6 +95,8 @@ public class GooglemapsActivity extends BaseActivity
     UserProfileData_singleton profile;
     NetworkClient networkClient;
     Ipm ipm;
+    ImageView bt_camera;
+    static boolean flag_isGetQuiz=false;
 
     public static final String PATH = "/data/user/0/com.hbag.seoulhang/";
     public static final String DB_NAME = "seoulhang.sqlite";
@@ -109,6 +111,7 @@ public class GooglemapsActivity extends BaseActivity
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
 
         initialize_db(getApplication()); //데이터베이스를 앱을 복사하여 초기화한다.
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON,
@@ -132,6 +135,19 @@ public class GooglemapsActivity extends BaseActivity
         MapFragment mapFragment = (MapFragment) getFragmentManager()
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
+
+        bt_camera = (ImageView)findViewById(R.id.camera_bt);
+
+        bt_camera.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String sId = profile.getId();
+                Intent intent = new Intent(GooglemapsActivity.this,GameActivity.class);
+                intent.putExtra("playerid",sId);
+                Log.d("게임아이디",sId);
+                startActivityForResult(intent,0);  //문제 소유여부 확인을 위해 forResult로 액티비티 실행
+            }
+        });
     }
 
 
@@ -632,34 +648,6 @@ public class GooglemapsActivity extends BaseActivity
     }
 
 
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-
-        switch (requestCode) {
-
-            case GPS_ENABLE_REQUEST_CODE:
-
-                //사용자가 GPS 활성 시켰는지 검사
-                if (checkLocationServicesStatus()) {
-                    if (checkLocationServicesStatus()) {
-
-                        Log.d(TAG, "onActivityResult : 퍼미션 가지고 있음");
-
-
-                        if (!mGoogleApiClient.isConnected()) {
-
-                            Log.d( TAG, "onActivityResult : mGoogleApiClient connect ");
-                            mGoogleApiClient.connect();
-                        }
-                        return;
-                    }
-                }
-
-                break;
-        }
-    }
-
 public void quiznumParse(List<Integer> squizList){
 
 }
@@ -701,9 +689,141 @@ public void initialize_db(Context context){
             return;
         }
         if (System.currentTimeMillis() <= backKeyPressedTime + 2000) {
+            if(flag_isGetQuiz) {
+                flag_isGetQuiz=false;
+                Intent intent = new Intent(GooglemapsActivity.this, Home_Main.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+                startActivity(intent);
+            }
             finish();
             toast.cancel();
         }
+    }
+
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+
+
+        super.onActivityResult(requestCode, resultCode, data);
+
+        switch (requestCode) {
+
+            case GPS_ENABLE_REQUEST_CODE:
+
+                //사용자가 GPS 활성 시켰는지 검사
+                if (checkLocationServicesStatus()) {
+                    if (checkLocationServicesStatus()) {
+
+                        Log.d(TAG, "onActivityResult : 퍼미션 가지고 있음");
+
+
+                        if (!mGoogleApiClient.isConnected()) {
+
+                            Log.d( TAG, "onActivityResult : mGoogleApiClient connect ");
+                            mGoogleApiClient.connect();
+                        }
+                        return;
+                    }
+                }
+
+                break;
+        }
+        final String playerid=profile.getId();
+        Log.d("유니티 통신완료 ID : ",playerid);
+
+        if(requestCode == 0){
+            Log.d("유니티 리퀘스트코드 : ",""+requestCode);
+            if(resultCode == RESULT_OK) {
+                int question_code = data.getIntExtra("got",0);
+                Log.d("유니티","Q_code"+question_code);
+                networkClient.checkplayer(playerid, question_code,new Callback<Integer>() {
+                    @Override
+                    public void onResponse(Call<Integer> call, Response<Integer> response) {
+                        Log.d("유니티 통신완료 재확인 ID : ",playerid);
+                        switch (response.code()){
+                            case 200:
+                                int check = response.body();
+                                Log.d("확인","check"+check);
+                                if (check == 1) {  //Responce의값이 1일 때 새 문제 획득
+                                    AlertDialog.Builder alert = new AlertDialog.Builder(GooglemapsActivity.this);
+                                    alert.setOnKeyListener(new DialogInterface.OnKeyListener() {
+                                        @Override
+                                        public boolean onKey(DialogInterface dialog, int keyCode, KeyEvent event) {
+                                            Intent intent = new Intent(getApplicationContext(),GooglemapsActivity.class);
+                                            intent.setFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+                                            flag_isGetQuiz=true;
+                                            overridePendingTransition(0, 0);
+                                            startActivity(intent);
+                                            finish();
+                                            dialog.dismiss();     //닫기
+                                            return false;
+                                        }
+                                    });
+                                    alert.setPositiveButton(getResources().getString(R.string.dialog_ok), new DialogInterface.OnClickListener() {
+                                        @Override
+                                        public void onClick(DialogInterface dialog, int which) {
+                                            Intent intent = new Intent(getApplicationContext(),GooglemapsActivity.class);
+                                            intent.setFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+                                            flag_isGetQuiz=true;
+                                            overridePendingTransition(0, 0);
+                                            startActivity(intent);
+                                            finish();
+                                            dialog.dismiss();     //닫기
+                                        }
+                                    });
+                                    alert.setCancelable(false);
+                                    alert.setMessage(R.string.새문제);
+                                    alert.show();
+                                } else if (check == 0) { //Responce값이 0일 때 이미 가지고 있는 문제
+                                    Log.d("확인"," "+check);
+                                    AlertDialog.Builder alert = new AlertDialog.Builder(GooglemapsActivity.this);
+                                    alert.setPositiveButton(getResources().getString(R.string.dialog_ok), new DialogInterface.OnClickListener() {
+                                        @Override
+                                        public void onClick(DialogInterface dialog, int which) {
+
+                                            dialog.dismiss();     //닫기
+                                        }
+                                    });
+                                    alert.setMessage(R.string.이미가지고있는문제);
+                                    alert.show();
+                                }
+                                else if (check == 2){ //본인이 낸 퀴즈일 경우
+                                    AlertDialog.Builder alert = new AlertDialog.Builder(GooglemapsActivity.this);
+                                    alert.setPositiveButton(getResources().getString(R.string.dialog_ok), new DialogInterface.OnClickListener() {
+                                        @Override
+                                        public void onClick(DialogInterface dialog, int which) {
+
+                                            dialog.dismiss();     //닫기
+                                        }
+                                    });
+                                    alert.setMessage(R.string.you_can_not_get);
+                                    alert.show();
+                                }
+
+
+                                break;
+                            default:
+                                Log.e("TAG", "다른 아이디");
+                                Toast toast = Toast.makeText(getApplicationContext(), getResources().getString(R.string.please_check_id), Toast.LENGTH_LONG);
+                                toast.show();
+                                break;
+                        }
+                    }
+
+                    @Override
+                    public void onFailure(Call<Integer> call, Throwable t) {
+                        Log.e("ACC","s?? " + t.getMessage());
+
+                    }
+                });
+
+
+            }
+
+
+        }
+
     }
 
 

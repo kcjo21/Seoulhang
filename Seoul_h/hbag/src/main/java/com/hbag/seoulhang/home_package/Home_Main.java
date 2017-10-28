@@ -649,8 +649,9 @@ public class Home_Main extends BaseActivity implements
                                         @Override
                                         public void onClick(DialogInterface dialog, int which) {
                                             Intent intent = new Intent(getApplicationContext(),Home_Main.class);
+                                            intent.setFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+                                            overridePendingTransition(0, 0);
                                             startActivity(intent);
-
                                             finish();
                                             dialog.dismiss();     //닫기
                                         }
@@ -706,7 +707,6 @@ public class Home_Main extends BaseActivity implements
 
 
         }
-
 
     }
     @Override

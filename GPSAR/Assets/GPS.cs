@@ -39,7 +39,7 @@ public class GPS : MonoBehaviour {
             Debug.Log("User has not enabled GPS");
             yield break;
         }
-        Input.location.Start();
+        Input.location.Start(10,1f);
         int maxWait = 20;
         while (Input.location.status == LocationServiceStatus.Initializing && maxWait > 0)
         {
