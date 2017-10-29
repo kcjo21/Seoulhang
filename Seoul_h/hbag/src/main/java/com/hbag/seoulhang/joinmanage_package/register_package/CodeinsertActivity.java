@@ -82,38 +82,46 @@ public class CodeinsertActivity extends BaseActivity {
             String sid = intent.getStringExtra("id");
             @Override
             public void onClick(View v) {
-                if (SystemClock.elapsedRealtime() - mLastClickTime < 1000){
+                if (SystemClock.elapsedRealtime() - mLastClickTime < 1000) {
                     return;
                 }
                 mLastClickTime = SystemClock.elapsedRealtime();
                 String scodes = codes.getText().toString();
 
-                Log.e("아이디",sid);
-                Log.e("코드",scodes);
+                Log.e("아이디", sid);
+                Log.e("코드", scodes);
 
-                networkClient.entercode(sid, scodes, new Callback<FindDTO>() {
-                    @Override
-                    public void onResponse(Call<FindDTO> call, Response<FindDTO> response) {
-                        switch (response.code()) {
-                            case 200:
-                                profile.setId(sid);
-                                Intent intent = new Intent(CodeinsertActivity.this, NewpasswordActivity.class);
-                                startActivity(intent);
-                                finish();
-                                break;
-                            default:
-                                Toast toast = Toast.makeText(getApplicationContext(), getResources().getString(R.string.코드불일치), Toast.LENGTH_LONG);
-                                toast.show();
-                                break;
+                if (checkcode(scodes)) {
+
+                    networkClient.entercode(sid, scodes, new Callback<FindDTO>() {
+                        @Override
+                        public void onResponse(Call<FindDTO> call, Response<FindDTO> response) {
+                            switch (response.code()) {
+                                case 200:
+                                    profile.setId(sid);
+                                    Intent intent = new Intent(CodeinsertActivity.this, NewpasswordActivity.class);
+                                    startActivity(intent);
+                                    finish();
+                                    break;
+                                default:
+                                    Toast toast = Toast.makeText(getApplicationContext(), getResources().getString(R.string.코드불일치), Toast.LENGTH_LONG);
+                                    toast.show();
+                                    break;
+                            }
                         }
-                    }
 
-                    @Override
-                    public void onFailure(Call<FindDTO> call, Throwable t) { Log.e("ACC", "s?? " + t.getMessage());
-                        Toast toast = Toast.makeText(getApplicationContext(), getResources().getString(R.string.can_not_connent_to_server), Toast.LENGTH_LONG);
-                        toast.show();
-                    }
-                });
+                        @Override
+                        public void onFailure(Call<FindDTO> call, Throwable t) {
+                            Log.e("ACC", "s?? " + t.getMessage());
+                            Toast toast = Toast.makeText(getApplicationContext(), getResources().getString(R.string.can_not_connent_to_server), Toast.LENGTH_LONG);
+                            toast.show();
+                        }
+                    });
+                }
+                else {
+                    Toast toast = Toast.makeText(getApplicationContext(), getResources().getString(R.string.코드불일치), Toast.LENGTH_LONG);
+                    toast.show();
+                }
             }
         });
     }

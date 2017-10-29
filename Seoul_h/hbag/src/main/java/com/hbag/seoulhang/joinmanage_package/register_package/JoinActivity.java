@@ -169,6 +169,7 @@ public class JoinActivity extends BaseActivity {
                 if(!textValidate(password.getText().toString())){password.setError(getResources().getString(R.string.EPass));isFailed = true;}
                 if(!password.getText().toString().equals(passwordconfirm.getText().toString())){passwordconfirm.setError(getResources().getString(R.string.비밀번호일치)); isFailed = true;}
                 if(name.getText().length()<=0){ name.setError(getResources().getString(R.string.Ename)); isFailed = true;}
+                else if(!checkname(name.getText().toString())){name.setError(getResources().getString(R.string.not_available_name)); isFailed=true;}
                 if(email.getText().length()<=0){email.setError(getResources().getString(R.string.EEmail)); isFailed = true;}
                 if(!checkEmail(email.getText().toString())){email.setError(getResources().getString(R.string.checkEmail)); isFailed = true;}
 

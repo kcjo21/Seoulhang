@@ -79,7 +79,7 @@
     <string name="비밀번호일치">password do not match.</string>
     <string name="사용가능">Available.</string>
     <string name="EID">Enter your ID.</string>
-    <string name="EPass">Please enter a combination of 6-18 alphanumeric characters and combinations of special characters.</string>
+    <string name="EPass">Please enter a combination of 6~18 alphanumeric characters and combinations of special characters.</string>
     <string name="Ename">Enter your Name.</string>
     <string name="EEmail">Enter your E-mail adrress.</string>
     <string name="Eage">Enter your age.</string>
@@ -101,7 +101,7 @@
     <string name="회원탈퇴">Leave</string>
     <string name="회원탈퇴비밀번호">Please enter your password for membership withdrawal.</string>
     <string name="탈퇴재확인">Are you sure you want to leave?</string>
-    <string name="Loading">LOADING...</string>
+    <string name="Loading">LOADING</string>
     <string name="내정보설정">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Edit Profile</string>
     <string name="정보수정질문">Do you want to edit your infomaion?</string>
     <string name="정보수정">Edit Profile</string>
@@ -143,7 +143,7 @@
     <string name="dialog_ok">OK</string>
     <string name="로그인실패">Failed to sign in.\nplease try again.</string>
     <string name="home_descrip">This is the first start page.\nYou will see the most popular quiz 10 rankings and notice,\nand you can view maps, run cameras, and make a quiz.</string>
-    <string name="quiz_descrip">You can check the acquired quiz.\nQuizzes are listed in the order they are acquired,\nconsisting of a Short-answer type quiz and an OX quiz.\nAlso, if you have a hint point, you can see the hint.\nThe hint point will be awarded 1 point If you score 30 points.</string>
+    <string name="quiz_descrip">You can check the acquired quiz.\nQuizzes are listed in the order they are acquired,\nconsisting of a Short-answer type quiz and an OX quiz.\nAlso, if you have a hint point, you can see the hint.\nThe hint point will be awarded\n1 point If you score 30 points.</string>
     <string name="info_descrip">You can check scores, hint points, and submission points.\nAlso, You can check the quizzes that have been solved so far,\nand you can see the achievement rate and the description of the district in Seoul city.</string>
     <string name="rank_descrip">You can check your rankings, grades, and scores.\nYou can also check the overall leaderboard.</string>
     <string name="순위표">LEADERBOARDS</string>
@@ -158,7 +158,7 @@
     <string name="완료">Complete!</string>
     <string name="실패">Failed..</string>
     <string name="시작하기">Start!</string>
-    <string name="확인중">...</string>
+    <string name="확인중">Checking</string>
     <string name="not_good_id">Please enter a 5 ~ 12 character ID consisting of only english and numbers,\nand The first letter of the ID must be in English.</string>
     <string name="currentpass">Please enter your current password.</string>
     <string name="Enname">Enter your Nickname.</string>
@@ -206,4 +206,6 @@
     <string name="ox_descrip">You can try the OX quiz only once, get 10 points for correct answers, and 5 points for wrong answers.</string>
     <string name="load_failed">Failed to load user information. Please login again.</string>
     <string name="enter_quizmake">Some items you have not entered.</string>
+    <string name="not_available_name">Please write your name in English or Korean between 1 and 12 characters.</string>
+    <string name="not_available_nickname">Nicknames can only be English, Korean, and numbers between 1 and 12 characters.</string>
 </resources>

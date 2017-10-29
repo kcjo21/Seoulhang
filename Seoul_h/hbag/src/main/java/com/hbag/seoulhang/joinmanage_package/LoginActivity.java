@@ -624,31 +624,37 @@ public class LoginActivity extends BaseActivity implements
                                     Log.d("닉네임",snickname);
                                     Log.d("닉네임",loginid);
                                     keyboard.hideSoftInputFromWindow(nickname.getWindowToken(), 0);
-                                    networkClient.newnickname(loginid, snickname, new Callback<String>() {
-                                        @Override
-                                        public void onResponse(Call<String> call, Response<String> response) {
-                                            switch (response.code()) {
-                                                case 200:
-                                                    Intent intent = new Intent(LoginActivity.this, Home_Main.class);
-                                                    startActivity(intent);
-                                                    finish();
-                                                    dialog.dismiss();
-                                                    break;
-                                                default:
-                                                    Toast toast = Toast.makeText(getApplicationContext(), getResources().getString(R.string.같은닉네임존재), Toast.LENGTH_LONG);
-                                                    toast.show();
-                                                    break;
+                                    if(!checknickname(snickname)){
+                                        Toast toast = Toast.makeText(getApplicationContext(), getResources().getString(R.string.not_available_nickname), Toast.LENGTH_LONG);
+                                        toast.show();
+                                    }
+                                    else {
+                                        networkClient.newnickname(loginid, snickname, new Callback<String>() {
+                                            @Override
+                                            public void onResponse(Call<String> call, Response<String> response) {
+                                                switch (response.code()) {
+                                                    case 200:
+                                                        Intent intent = new Intent(LoginActivity.this, Home_Main.class);
+                                                        startActivity(intent);
+                                                        finish();
+                                                        dialog.dismiss();
+                                                        break;
+                                                    default:
+                                                        Toast toast = Toast.makeText(getApplicationContext(), getResources().getString(R.string.같은닉네임존재), Toast.LENGTH_LONG);
+                                                        toast.show();
+                                                        break;
+                                                }
                                             }
-                                        }
 
-                                        @Override
-                                        public void onFailure(Call<String> call, Throwable t) {
-                                            login.setProgress(0);
-                                            login.setEnabled(true);
-                                            Toast toast = Toast.makeText(getApplicationContext(), getResources().getString(R.string.can_not_connent_to_server), Toast.LENGTH_LONG);
-                                            toast.show();
-                                        }
-                                    });
+                                            @Override
+                                            public void onFailure(Call<String> call, Throwable t) {
+                                                login.setProgress(0);
+                                                login.setEnabled(true);
+                                                Toast toast = Toast.makeText(getApplicationContext(), getResources().getString(R.string.can_not_connent_to_server), Toast.LENGTH_LONG);
+                                                toast.show();
+                                            }
+                                        });
+                                    }
 
                                 }
                             });

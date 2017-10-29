@@ -47,4 +47,25 @@ public class BaseActivity extends AppCompatActivity {
 
     }
 
+    public boolean checkname(String id){ //영문과 한글만 가능 1~12자
+        String regex = "^[가-힣a-zA-Z]{1,12}$";
+        Pattern p = Pattern.compile(regex);
+        Matcher m = p.matcher(id);
+        return m.matches();
+    }
+
+    public boolean checknickname(String id){ //영문과 한글, 숫자만 가능 1~12자
+        String regex = "^[가-힣a-zA-Z0-9]{1,12}$";
+        Pattern p = Pattern.compile(regex);
+        Matcher m = p.matcher(id);
+        return m.matches();
+    }
+
+    public boolean checkcode(String id){ //영문과 숫자만 가능
+        String regex = "^[a-zA-Z0-9]{2,10}$";
+        Pattern p = Pattern.compile(regex);
+        Matcher m = p.matcher(id);
+        return m.matches();
+    }
+
 }

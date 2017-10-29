@@ -204,7 +204,11 @@ public class EditprofileActivity extends BaseActivity implements
 
                     if (Name.getText().length() <= 0) {
                         Name.setError(getResources().getString(R.string.Enname));
-                    } else {
+                    }
+                    else if(!checknickname(Name.getText().toString())){
+                        Toast toast = Toast.makeText(getApplicationContext(), getResources().getString(R.string.not_available_nickname), Toast.LENGTH_LONG);
+                        toast.show();
+                    }else {
 
                         Log.d("회원정보수정", sname);
                         networkClient.editprofile(sid, " ", sname, smail, new Callback<String>() {
@@ -212,15 +216,20 @@ public class EditprofileActivity extends BaseActivity implements
                             public void onResponse(Call<String> call, Response<String> response) {
                                 switch (response.code()) {
                                     case 200:
-                                        Toast toast = Toast.makeText(getApplicationContext(), getResources().getString(R.string.회원정보수정완료), Toast.LENGTH_LONG);
-                                        toast.show();
-                                        Intent intent = new Intent(EditprofileActivity.this, Home_Main.class);
-                                        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK);
-                                        startActivity(intent);
-                                        finish();
+                                        String getmsg = response.body();
+                                        if(getmsg.equals("nicknameerror")) {
+                                            Name.setError(getString(R.string.같은닉네임존재));
+                                        }
+                                        else {
+                                            Toast toast = Toast.makeText(getApplicationContext(), getResources().getString(R.string.회원정보수정완료), Toast.LENGTH_LONG);
+                                            toast.show();
+                                            Intent intent = new Intent(EditprofileActivity.this, Home_Main.class);
+                                            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+                                            startActivity(intent);
+                                            finish();
+                                        }
                                         break;
                                     default:
-                                        Name.setError(getString(R.string.같은닉네임존재));
                                         break;
                                 }
                             }
@@ -435,7 +444,6 @@ public class EditprofileActivity extends BaseActivity implements
             });
             Commit.setOnClickListener(new View.OnClickListener() {
 
-
                 @Override
                 public void onClick(View v) {
                     if (SystemClock.elapsedRealtime() - mLastClickTime < 1000){
@@ -451,6 +459,9 @@ public class EditprofileActivity extends BaseActivity implements
                     if(Password.getText().length()<=0){Password.setError(getString(R.string.currentpass)); isFailed=true;}
                     else if(!textValidate(Password.getText().toString())){Password.setError(getResources().getString(R.string.EPass));isFailed = true;}
                     if(Name.getText().length()<=0){ Name.setError(getResources().getString(R.string.Enname)); isFailed = true;}
+                    else if(!checknickname(Name.getText().toString())){
+                        Name.setError(getResources().getString(R.string.not_available_nickname)); isFailed = true;
+                    }
                     if(Email.getText().length()<=0){Email.setError(getResources().getString(R.string.EEmail)); isFailed = true;}
                     if(!checkEmail(Email.getText().toString())){Email.setError(getResources().getString(R.string.checkEmail)); isFailed = true;}
 
@@ -463,20 +474,29 @@ public class EditprofileActivity extends BaseActivity implements
                                 switch (response.code()) {
                                     case 200:
                                         String code = response.body();
-                                        if(code.equals("password_error")){
-                                            Password.setError(getString(R.string.password_not_good));
-                                        }
-                                        else {
-                                            Toast toast = Toast.makeText(getApplicationContext(), getResources().getString(R.string.회원정보수정완료), Toast.LENGTH_LONG);
-                                            toast.show();
-                                            Intent intent = new Intent(EditprofileActivity.this, Home_Main.class);
-                                            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK);
-                                            startActivity(intent);
-                                            finish();
+
+                                        switch (code) {
+                                            case "passwderror":
+                                                Password.setError(getString(R.string.password_not_good));
+                                                break;
+                                            case "nicknameerror":
+                                                Name.setError(getString(R.string.같은닉네임존재));
+                                                break;
+                                            case "success":
+                                                Toast toast = Toast.makeText(getApplicationContext(), getResources().getString(R.string.회원정보수정완료), Toast.LENGTH_LONG);
+                                                toast.show();
+                                                Intent intent = new Intent(EditprofileActivity.this, Home_Main.class);
+                                                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+                                                startActivity(intent);
+                                                finish();
+                                                break;
+                                            default:
+                                                break;
                                         }
                                         break;
                                     default:
-                                        Name.setError(getString(R.string.같은닉네임존재));
+                                        Toast toast = Toast.makeText(getApplicationContext(), getResources().getString(R.string.can_not_connent_to_server), Toast.LENGTH_LONG);
+                                        toast.show();
                                 }
                             }
 

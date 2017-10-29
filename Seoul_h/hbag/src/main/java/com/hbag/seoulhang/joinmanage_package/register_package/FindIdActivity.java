@@ -69,7 +69,11 @@ public class FindIdActivity extends BaseActivity {
                 if (name.getText().length() <= 0) {
                     Toast toast = Toast.makeText(getApplicationContext(), getResources().getString(R.string.Ename), Toast.LENGTH_LONG);
                     toast.show();
-                } else if (Email.getText().length() <= 0) {
+                }
+                else if(!checkname(name.getText().toString())){
+                    Toast toast = Toast.makeText(getApplicationContext(), getResources().getString(R.string.not_available_name), Toast.LENGTH_LONG);
+                    toast.show();
+                }else if (Email.getText().length() <= 0) {
                 Toast toast = Toast.makeText(getApplicationContext(), getResources().getString(R.string.EEmail), Toast.LENGTH_LONG);
                 toast.show();
                 } else if (!checkEmail(Email.getText().toString())) {
