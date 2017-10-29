@@ -79,7 +79,7 @@
     <string name="비밀번호일치">비밀번호가 일치하지 않습니다.</string>
     <string name="사용가능">사용가능</string>
     <string name="EID">아이디를 입력해주세요.</string>
-    <string name="EPass">6~18자리 영문+숫자+특수문자를 혼합한 비밀번호를 입력해주세요.</string>
+    <string name="EPass">6~18자리 영문+숫자+특수문자(!, @, $, %, ^, *)를 혼합한 비밀번호를 입력해주세요.</string>
     <string name="Ename">이름을 입력해주세요.</string>
     <string name="Eage">나이를 입력해주세요.</string>
     <string name="EEmail">이메일을 입력해주세요.</string>
@@ -87,7 +87,7 @@
     <string name="회원가입성공">회원가입을 축하합니다!</string>
     <string name="GPSMessage">이 게임은 GPS 위치 데이터를 필요로 합니다.\nGPS를 설정하시겠습니까?</string>
     <string name="GPSN">아니요</string>
-    <string name="GPSY">예</string>
+    <string name="GPSY">6~18자리 영문+숫자+특수문자(!, @, $, %, ^, *)를 혼합한 비밀번호를 입력해주세요.</string>
     <string name="checkEmail">형식에 맞지 않는 메일 주소입니다.</string>
     <string name="아이디찾기">아이디 찾기</string>
     <string name="비밀번호찾기">비밀번호 찾기</string>
@@ -208,5 +208,6 @@
     <string name="enter_quizmake">입력하지 않은 항목이 있습니다.</string>
     <string name="not_available_name">이름은 1~12자 사이의 영문, 한글로만 작성해주세요.</string>
     <string name="not_available_nickname">닉네임은 1~9자 사이의 영어, 한글, 숫자만 가능합니다.</string>
+    <string name="not_available_special_ch">특수문자(/, #, <![CDATA["&"]]> ,  <![CDATA["<"]]> , <![CDATA[">"]]> )는 금지되어 있습니다.</string>
 
 </resources>

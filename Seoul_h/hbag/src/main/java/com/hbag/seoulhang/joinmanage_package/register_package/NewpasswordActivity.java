@@ -114,10 +114,4 @@ public class NewpasswordActivity extends BaseActivity {
         return super.onKeyDown(keyCode, event);
     }  //BACK버튼 비활성화
 
-    public boolean textValidate(String str) {  //영어+숫자+특수문자 혼합해서 6~18자 사이 비밀번호를 체크
-        String Passwrod_PATTERN = "^(?=.*[0-9])(?=.*[a-z])(?=.*[@#$%^&+=])(?=\\S+$).{6,18}$";
-        Pattern pattern = Pattern.compile(Passwrod_PATTERN);
-        Matcher matcher = pattern.matcher(str);
-        return matcher.matches();
-    }
 }

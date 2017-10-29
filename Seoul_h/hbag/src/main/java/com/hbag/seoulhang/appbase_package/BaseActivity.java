@@ -32,8 +32,8 @@ public class BaseActivity extends AppCompatActivity {
         return m.matches();
 
     }
-    public boolean textValidate(String password) {  //영어+숫자+특수문자 혼합해서 6~18자 사이 비밀번호를 체크
-        String regex = "^(?=.*[0-9])(?=.*[a-z])(?=.*[@#$%^&+=])(?=\\S+$).{6,18}$";
+    public boolean textValidate(String password) {  //영어+숫자+특수문자 혼합해서 6~18자 사이 비밀번호를 체크 인젝션 가능성 특수문자 배제
+        String regex = "^[0-9a-zA-Z!@[$]%\\^[*]][^\\/#&<>]{6,18}$";
         Pattern p = Pattern.compile(regex);
         Matcher m = p.matcher(password);
         return m.matches();
@@ -67,5 +67,7 @@ public class BaseActivity extends AppCompatActivity {
         Matcher m = p.matcher(id);
         return m.matches();
     }
+
+
 
 }

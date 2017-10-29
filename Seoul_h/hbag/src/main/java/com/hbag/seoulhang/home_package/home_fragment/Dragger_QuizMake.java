@@ -31,6 +31,8 @@ import com.liuguangqiang.swipeback.SwipeBackActivity;
 import com.liuguangqiang.swipeback.SwipeBackLayout;
 
 import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -133,6 +135,17 @@ public class Dragger_QuizMake extends SwipeBackActivity {
             public void onClick(View v) {
                 squiz =  quiz.getText().toString();
                 shint = hint.getText().toString();
+
+                if(!checkquiz(squiz)){
+                    Toast toast = Toast.makeText(getApplicationContext(), getResources().getString(R.string.not_available_special_ch), Toast.LENGTH_LONG);
+                    toast.show();
+                    return;
+                }
+                else if(!checkquiz(shint)){
+                    Toast toast = Toast.makeText(getApplicationContext(), getResources().getString(R.string.not_available_special_ch), Toast.LENGTH_LONG);
+                    toast.show();
+                    return;
+                }
 
                 if(squiz.length()<=0||shint.length()<=0){
                     Toast toast = Toast.makeText(getApplicationContext(), getResources().getString(R.string.enter_quizmake), Toast.LENGTH_LONG);
@@ -339,4 +352,10 @@ public class Dragger_QuizMake extends SwipeBackActivity {
         startActivity(gpsOptionsIntent);
     }
 
+    public boolean checkquiz(String id){ //인젝션 방지
+        String regex = "^[가-힣a-zA-Z0-9\\p{Punct}\\p{Space}][^\\/#&<>]{2,40}$";
+        Pattern p = Pattern.compile(regex);
+        Matcher m = p.matcher(id);
+        return m.matches();
+    }
 }

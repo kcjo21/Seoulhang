@@ -25,7 +25,7 @@
     <string name="ARCam">ARCam</string>
     <string name="EEmail">이메일을 입력해주세요.</string>
     <string name="EID">아이디를 입력해주세요.</string>
-    <string name="EPass">6~18자리 영문+숫자+특수문자를 혼합한 비밀번호를 입력해주세요.</string>
+    <string name="EPass">6~18자리 영문+숫자+특수문자(!, @, $, %, ^, *)를 혼합한 비밀번호를 입력해주세요.</string>
     <string name="Eage">나이를 입력해주세요.</string>
     <string name="Email">Email</string>
     <string name="Ename">이름을 입력해주세요.</string>
@@ -151,6 +151,7 @@
     <string name="normal_with">                일반계정으로 로그인 중</string>
     <string name="not_available_name">이름은 1~12자 사이의 영문, 한글로만 작성해주세요.</string>
     <string name="not_available_nickname">닉네임은 1~9자 사이의 영어, 한글, 숫자만 가능합니다.</string>
+    <string name="not_available_special_ch">특수문자(/, #, "&amp;" , "&lt;" , ">" )는 금지되어 있습니다.</string>
     <string name="not_good_id">영문과 숫자로만 이루어진 5~12자 아이디를 입력해주세요.\n첫 글자는 반드시 영문입니다.</string>
     <string name="not_good_quiz">과도한 욕설이나 부적절한 내용이\n포함된 퀴즈는 임의로 삭제될 수 있습니다.\nOX 퀴즈 형식으로 출제할 수 있습니다.\n출제 포인트는 50점을 획득할 경우, 1점을 획득합니다.</string>
     <string name="notice_descrip">한 줄 공지를 자동으로 전환시킵니다.\n비활성화시 수동으로 페이지를 넘깁니다.</string>
