@@ -5,7 +5,7 @@
     android:id="@+id/back_rate"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@drawable/rate_2"
+    android:background="@drawable/rate_1"
     android:orientation="vertical"
     android:weightSum="100">
 
@@ -54,6 +54,8 @@
             android:id="@+id/content"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="20dp"
             android:gravity="center_vertical|center_horizontal"
             android:scrollbars="vertical"
             android:textColor="@color/white"

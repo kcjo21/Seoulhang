@@ -242,6 +242,7 @@ public class Dragger_Quiz extends SwipeBackActivity {
                         if(hint_flag==1) {
                             get_hint.setVisibility(View.GONE);
                             hint.setText(mDataset.get(dataPosition).hint);
+                            hint.setVisibility(View.VISIBLE);
                         }
                         break;
                     default:
@@ -280,6 +281,7 @@ public class Dragger_Quiz extends SwipeBackActivity {
                                         if (hints.getHintcount()==1) {
                                             get_hint.setVisibility(View.GONE);
                                             hint.setText(mDataset.get(dataPosition).hint);
+                                            hint.setVisibility(View.VISIBLE);
                                         } else {
                                             AlertDialog.Builder alert = new AlertDialog.Builder(Dragger_Quiz.this);
                                             alert.setPositiveButton(getResources().getString(R.string.GPSY), new DialogInterface.OnClickListener() {

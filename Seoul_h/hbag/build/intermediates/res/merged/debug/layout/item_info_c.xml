@@ -38,8 +38,7 @@
             android:layout_marginTop="5dp"
             android:layout_weight="80"
             android:max="100"
-            android:progress="10"
-            android:progressTint="@color/SBLUE" />
+            android:progress="10" />
 
     </LinearLayout>
 
@@ -54,6 +53,8 @@
             android:id="@+id/content"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="20dp"
             android:gravity="center_vertical|center_horizontal"
             android:scrollbars="vertical"
             android:textColor="@color/white"
