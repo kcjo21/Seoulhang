@@ -207,5 +207,5 @@
     <string name="load_failed">Failed to load user information. Please login again.</string>
     <string name="enter_quizmake">Some items you have not entered.</string>
     <string name="not_available_name">Please write your name in English or Korean between 1 and 12 characters.</string>
-    <string name="not_available_nickname">Nicknames can only be English, Korean, and numbers between 1 and 12 characters.</string>
+    <string name="not_available_nickname">Nicknames can only be English, Korean, and numbers between 1 and 9 characters.</string>
 </resources>

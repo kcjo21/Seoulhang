@@ -54,8 +54,8 @@ public class BaseActivity extends AppCompatActivity {
         return m.matches();
     }
 
-    public boolean checknickname(String id){ //영문과 한글, 숫자만 가능 1~12자
-        String regex = "^[가-힣a-zA-Z0-9]{1,12}$";
+    public boolean checknickname(String id){ //영문과 한글, 숫자만 가능 1~9자
+        String regex = "^[가-힣a-zA-Z0-9]{1,9}$";
         Pattern p = Pattern.compile(regex);
         Matcher m = p.matcher(id);
         return m.matches();

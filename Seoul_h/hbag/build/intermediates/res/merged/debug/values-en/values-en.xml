@@ -97,7 +97,7 @@
     <string name="naversecret">IxuQXBjLMf</string>
     <string name="normal_with">                Signed in with Account</string>
     <string name="not_available_name">Please write your name in English or Korean between 1 and 12 characters.</string>
-    <string name="not_available_nickname">Nicknames can only be English, Korean, and numbers between 1 and 12 characters.</string>
+    <string name="not_available_nickname">Nicknames can only be English, Korean, and numbers between 1 and 9 characters.</string>
     <string name="not_good_id">Please enter a 5 ~ 12 character ID consisting of only english and numbers,\nand The first letter of the ID must be in English.</string>
     <string name="not_good_quiz">A quiz including excessive inappropriate\ncontent may be deleted\nyou can submit it in OX quiz form.\nThe quiz making point will be awarded 1 point If you score 50 points.</string>
     <string name="notice_descrip">Select whether to flip notification\nautomatically or manually.</string>

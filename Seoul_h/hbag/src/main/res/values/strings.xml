@@ -207,6 +207,6 @@
     <string name="load_failed">유저 정보를 불러오지 못했습니다. 다시 로그인해주세요.</string>
     <string name="enter_quizmake">입력하지 않은 항목이 있습니다.</string>
     <string name="not_available_name">이름은 1~12자 사이의 영문, 한글로만 작성해주세요.</string>
-    <string name="not_available_nickname">닉네임은 1~12자 사이의 영어, 한글, 숫자만 가능합니다.</string>
+    <string name="not_available_nickname">닉네임은 1~9자 사이의 영어, 한글, 숫자만 가능합니다.</string>
 
 </resources>
