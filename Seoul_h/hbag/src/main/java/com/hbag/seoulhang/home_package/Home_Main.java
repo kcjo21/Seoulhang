@@ -129,6 +129,11 @@ public class Home_Main extends BaseActivity implements
         loginid = profile.getId();
         handler = new Handler(Looper.getMainLooper());
         if(TextUtils.isEmpty(loginid)){
+            profile.setLoginType("logout");         //로그인 상태 로그아웃으로 저장
+            SharedPreferences sharedPreferences = getSharedPreferences("log",MODE_PRIVATE);
+            SharedPreferences.Editor editor =  sharedPreferences.edit();
+            editor.putString("logintype",profile.getLoginType());   //로그인 상태 저장
+            editor.apply();
             Toast toast = Toast.makeText(getApplicationContext(), getResources().getString(R.string.load_failed), Toast.LENGTH_LONG);
             toast.show();
             Intent intent = new Intent(Home_Main.this, LoginActivity.class)
