@@ -25,7 +25,7 @@
     <string name="ARCam">ARCam</string>
     <string name="EEmail">Enter your E-mail adrress.</string>
     <string name="EID">Enter your ID.</string>
-    <string name="EPass">Please enter a combination of 6~18 alphanumeric characters and combinations of special characters(!, @, $, %, ^, *).</string>
+    <string name="EPass">Please enter a combination of 6~18 alphanumeric characters and combinations of special characters(Except /, #, "&amp;" ,  "&lt;" , ">").</string>
     <string name="Eage">Enter your age.</string>
     <string name="Email">Email</string>
     <string name="Ename">Enter your Name.</string>
@@ -98,7 +98,7 @@
     <string name="normal_with">                Signed in with Account</string>
     <string name="not_available_name">Please write your name in English or Korean between 1 and 12 characters.</string>
     <string name="not_available_nickname">Nicknames can only be English, Korean, and numbers between 1 and 9 characters.</string>
-    <string name="not_available_special_ch">Special characters(/, #, "&amp;" , "&lt;" , ">" ) are prohibited.</string>
+    <string name="not_available_special_ch">Special characters(/, #, "&amp;" , "&lt;" , ">") are prohibited.</string>
     <string name="not_good_id">Please enter a 5 ~ 12 character ID consisting of only english and numbers,\nand The first letter of the ID must be in English.</string>
     <string name="not_good_quiz">A quiz including excessive inappropriate\ncontent may be deleted\nyou can submit it in OX quiz form.\nThe quiz making point will be awarded 1 point If you score 50 points.</string>
     <string name="notice_descrip">Select whether to flip notification\nautomatically or manually.</string>
@@ -230,7 +230,7 @@
     <string name="회원탈퇴비밀번호">Please enter your password for membership withdrawal.</string>
     <string name="힌트없음">You have no hint bonus left.</string>
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-        
+        <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>

@@ -15,9 +15,6 @@ import com.hbag.seoulhang.network.Ipm;
 import com.hbag.seoulhang.network.NetworkClient;
 import com.hbag.seoulhang.joinmanage_package.login_package.UserProfileData_singleton;
 
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
-
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -74,7 +71,7 @@ public class NewpasswordActivity extends BaseActivity {
                     toast.show();
                 }
 
-                else if(!textValidate(password.getText().toString())){
+                else if(!passcheck(password.getText().toString())||!special_ch(password.getText().toString())){
                     Toast toast = Toast.makeText(getApplicationContext(), getResources().getString(R.string.EPass), Toast.LENGTH_LONG);
                     toast.show();
                 }

@@ -456,8 +456,11 @@ public class EditprofileActivity extends BaseActivity implements
                     boolean isFailed = false;
 
 
+
+
+
                     if(Password.getText().length()<=0){Password.setError(getString(R.string.currentpass)); isFailed=true;}
-                    else if(!textValidate(Password.getText().toString())){Password.setError(getResources().getString(R.string.EPass));isFailed = true;}
+                    else if(!passcheck(spass)||!special_ch(spass)){Password.setError(getResources().getString(R.string.EPass));isFailed = true;}
                     if(Name.getText().length()<=0){ Name.setError(getResources().getString(R.string.Enname)); isFailed = true;}
                     else if(!checknickname(Name.getText().toString())){
                         Name.setError(getResources().getString(R.string.not_available_nickname)); isFailed = true;

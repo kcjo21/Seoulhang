@@ -79,7 +79,7 @@
     <string name="비밀번호일치">password do not match.</string>
     <string name="사용가능">Available.</string>
     <string name="EID">Enter your ID.</string>
-    <string name="EPass">Please enter a combination of 6~18 alphanumeric characters and combinations of special characters(!, @, $, %, ^, *).</string>
+    <string name="EPass">Please enter a combination of 6~18 alphanumeric characters and combinations of special characters(Except /, #, <![CDATA["&"]]> ,  <![CDATA["<"]]> , <![CDATA[">"]]>).</string>
     <string name="Ename">Enter your Name.</string>
     <string name="EEmail">Enter your E-mail adrress.</string>
     <string name="Eage">Enter your age.</string>
@@ -208,5 +208,5 @@
     <string name="enter_quizmake">Some items you have not entered.</string>
     <string name="not_available_name">Please write your name in English or Korean between 1 and 12 characters.</string>
     <string name="not_available_nickname">Nicknames can only be English, Korean, and numbers between 1 and 9 characters.</string>
-    <string name="not_available_special_ch">Special characters(/, #, <![CDATA["&"]]> , <![CDATA["<"]]> , <![CDATA[">"]]> ) are prohibited.</string>
+    <string name="not_available_special_ch">Special characters(/, #, <![CDATA["&"]]> , <![CDATA["<"]]> , <![CDATA[">"]]>) are prohibited.</string>
 </resources>

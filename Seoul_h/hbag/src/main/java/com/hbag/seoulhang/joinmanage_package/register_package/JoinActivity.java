@@ -1,32 +1,21 @@
 package com.hbag.seoulhang.joinmanage_package.register_package;
 
-import android.content.Context;
-import android.graphics.Color;
-import android.graphics.PorterDuff;
 import android.os.Bundle;
 import android.os.SystemClock;
-import android.support.annotation.Nullable;
-import android.support.design.widget.TextInputLayout;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
-import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.dd.processbutton.iml.ActionProcessButton;
-import com.dd.processbutton.iml.GenerateProcessButton;
 import com.hbag.seoulhang.appbase_package.BaseActivity;
 import com.hbag.seoulhang.R;
 import com.hbag.seoulhang.network.Ipm;
 import com.hbag.seoulhang.network.NetworkClient;
-
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -164,9 +153,19 @@ public class JoinActivity extends BaseActivity {
 
                 boolean isFailed = false;
 
+                if(special_ch(password.getText().toString())){
+                    Log.d("정규식특수","트루");
+                }
+                else Log.d("정규식특수","폴스");
+
+                if(passcheck(password.getText().toString())){
+                    Log.d("정규식","트루");
+                }
+                else Log.d("정규식","폴스");
+
 
                 if(id.getText().length()<=0){ id.setError((getResources().getString(R.string.EID))); isFailed = true;}
-                if(!textValidate(password.getText().toString())){password.setError(getResources().getString(R.string.EPass));isFailed = true;}
+                if(!passcheck(password.getText().toString())||!special_ch(password.getText().toString())){password.setError(getResources().getString(R.string.EPass));isFailed = true;}
                 if(!password.getText().toString().equals(passwordconfirm.getText().toString())){passwordconfirm.setError(getResources().getString(R.string.비밀번호일치)); isFailed = true;}
                 if(name.getText().length()<=0){ name.setError(getResources().getString(R.string.Ename)); isFailed = true;}
                 else if(!checkname(name.getText().toString())){name.setError(getResources().getString(R.string.not_available_name)); isFailed=true;}
