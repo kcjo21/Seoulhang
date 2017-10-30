@@ -684,7 +684,7 @@ public void initialize_db(Context context){
 
         if (System.currentTimeMillis() > backKeyPressedTime + 2000) {
             backKeyPressedTime = System.currentTimeMillis();
-            toast = Toast.makeText(getApplicationContext(), "한번 더 누르시면 종료됩니다.", Toast.LENGTH_SHORT); //백키 토스트 출력
+            toast = Toast.makeText(getApplicationContext(), getString(R.string.back_key_msg), Toast.LENGTH_SHORT); //백키 토스트 출력
             toast.show();
             return;
         }
@@ -793,6 +793,12 @@ public void initialize_db(Context context){
                                     alert.setPositiveButton(getResources().getString(R.string.dialog_ok), new DialogInterface.OnClickListener() {
                                         @Override
                                         public void onClick(DialogInterface dialog, int which) {
+                                            Intent intent = new Intent(getApplicationContext(),GooglemapsActivity.class);
+                                            intent.setFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+                                            flag_isGetQuiz=true;
+                                            overridePendingTransition(0, 0);
+                                            startActivity(intent);
+                                            finish();
 
                                             dialog.dismiss();     //닫기
                                         }

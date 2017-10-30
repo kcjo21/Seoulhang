@@ -69,12 +69,9 @@ public class Frag_Quiz extends Fragment {
         String ip = ipm.getip();
         final String loginid = profile.getId();
         networkClient = NetworkClient.getInstance(ip);
-        Log.e("ACC", "TEAM id IS !!! frag quiz" + loginid);
-
         networkClient.getstartitem(loginid, new Callback<List<ItemDTO>>() {
             @Override
             public void onResponse(Call<List<ItemDTO>> call, Response<List<ItemDTO>> response) {
-                Log.d("퀴즈", "123");
                 switch (response.code()) {
                     case 200:
                         Log.d("퀴즈", "어댑터 세팅");

@@ -129,12 +129,18 @@ public class Dragger_QuizMake extends SwipeBackActivity {
 
         networkClient = NetworkClient.getInstance(ip);
 
-
+        //퀴즈 제출 버튼
         commit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 squiz =  quiz.getText().toString();
                 shint = hint.getText().toString();
+
+                if(squiz.length()<=0||shint.length()<=0){
+                    Toast toast = Toast.makeText(getApplicationContext(), getResources().getString(R.string.enter_quizmake), Toast.LENGTH_LONG);
+                    toast.show();
+                    return;
+                }
 
                 if(!checkquiz(squiz)){
                     Toast toast = Toast.makeText(getApplicationContext(), getResources().getString(R.string.not_available_special_ch), Toast.LENGTH_LONG);
@@ -147,11 +153,7 @@ public class Dragger_QuizMake extends SwipeBackActivity {
                     return;
                 }
 
-                if(squiz.length()<=0||shint.length()<=0){
-                    Toast toast = Toast.makeText(getApplicationContext(), getResources().getString(R.string.enter_quizmake), Toast.LENGTH_LONG);
-                    toast.show();
-                    return;
-                }
+
 
                 settingGPS();
 
@@ -179,9 +181,10 @@ public class Dragger_QuizMake extends SwipeBackActivity {
                 dialog.getButton(DialogInterface.BUTTON_POSITIVE).setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        if(latitude==0||longitude==0){
+                        if(latitude==0||longitude==0){  //위치정보가 0이 들어가는 것 방지
                             Toast toast = Toast.makeText(getApplicationContext(), getResources().getString(R.string.GPS활성여부), Toast.LENGTH_LONG);
                             toast.show();
+                            finish();
                             return;
                         }
                         networkClient.getfinishitem(loginid, new Callback<List<InventoryDTO>>() {
@@ -353,7 +356,7 @@ public class Dragger_QuizMake extends SwipeBackActivity {
     }
 
     public boolean checkquiz(String id){ //인젝션 방지
-        String regex = "^[가-힣a-zA-Z0-9\\p{Punct}\\p{Space}][^\\/#&<>]{2,40}$";
+        String regex = "^[가-힣a-zA-Z0-9\\p{Punct}\\p{Space}][^\\/#&<>]{4,40}$";
         Pattern p = Pattern.compile(regex);
         Matcher m = p.matcher(id);
         return m.matches();

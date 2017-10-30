@@ -3,6 +3,8 @@ package com.hbag.seoulhang.home_package;
 import android.app.Activity;
 import android.widget.Toast;
 
+import com.hbag.seoulhang.R;
+
 public class BackPressCloseHandler {           //백키 핸들러
     private long backKeyPressedTime = 0;
     private Toast toast;
@@ -31,7 +33,7 @@ public class BackPressCloseHandler {           //백키 핸들러
     }
 
     public void showGuide() {
-        toast = Toast.makeText(activity, "한번 더 누르시면 종료됩니다.", Toast.LENGTH_SHORT); //백키 토스트 출력
+        toast = Toast.makeText(activity, activity.getResources().getString(R.string.back_key_msg), Toast.LENGTH_SHORT); //백키 토스트 출력
         toast.show();
     }
 

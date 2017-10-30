@@ -39,7 +39,7 @@
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:orientation="vertical"
-            android:weightSum="85"
+            android:weightSum="120"
             app:layout_constraintBottom_toTopOf="@+id/linearLayout"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
@@ -54,7 +54,7 @@
                 android:layout_marginRight="10dp"
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="10dp"
-                android:layout_weight="10"
+                android:layout_weight="25"
                 android:orientation="vertical"
                 android:theme="@style/AppTheme.NoActionBar"
                 android:weightSum="100">
@@ -63,11 +63,13 @@
                     android:id="@+id/id"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
+                    android:layout_marginLeft="5dp"
                     android:layout_marginStart="5dp"
                     android:layout_weight="50"
                     android:text="@string/id"
                     android:textColor="@color/SBLUE"
-                    tools:ignore="NestedWeights" />
+                    android:textSize="14dp"
+                    tools:ignore="NestedWeights,SpUsage" />
 
                 <TextView
                     android:id="@+id/id_t"
@@ -75,7 +77,9 @@
                     android:layout_height="0dp"
                     android:layout_weight="50"
                     android:maxLines="1"
-                    android:textColor="@android:color/black" />
+                    android:textColor="@android:color/black"
+                    android:textSize="14dp"
+                    tools:ignore="SpUsage" />
             </LinearLayout>
 
             <android.support.design.widget.TextInputLayout
@@ -85,7 +89,8 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:layout_marginStart="10dp"
-                android:layout_weight="15"
+                android:layout_marginTop="10dp"
+                android:layout_weight="25"
                 android:theme="@style/AppTheme.NoActionBar">
 
                 <EditText
@@ -95,7 +100,7 @@
                     android:hint="@string/비밀번호"
                     android:inputType="textPassword"
                     android:maxLines="1"
-                    android:textSize="16dp"
+                    android:textSize="14dp"
                     tools:ignore="SpUsage" />
             </android.support.design.widget.TextInputLayout>
 
@@ -104,10 +109,8 @@
                 android:layout_width="100dp"
                 android:layout_height="0dp"
                 android:layout_gravity="end"
-                android:layout_marginBottom="20dp"
                 android:layout_marginEnd="10dp"
                 android:layout_marginRight="10dp"
-                android:layout_marginTop="20dp"
                 android:layout_weight="10"
                 android:background="@drawable/card_view_button"
                 android:text="@string/비밀번호변경"
@@ -123,7 +126,8 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:layout_marginStart="10dp"
-                android:layout_weight="15"
+                android:layout_marginTop="10dp"
+                android:layout_weight="25"
                 android:theme="@style/AppTheme.NoActionBar">
 
                 <EditText
@@ -133,7 +137,7 @@
                     android:hint="@string/닉네임"
                     android:inputType="text"
                     android:maxLines="1"
-                    android:textSize="16dp"
+                    android:textSize="14dp"
                     tools:ignore="SpUsage" />
             </android.support.design.widget.TextInputLayout>
 
@@ -145,7 +149,8 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:layout_marginStart="10dp"
-                android:layout_weight="15"
+                android:layout_marginTop="10dp"
+                android:layout_weight="25"
                 android:theme="@style/AppTheme.NoActionBar">
 
                 <EditText
@@ -155,7 +160,7 @@
                     android:hint="@string/email"
                     android:inputType="textEmailAddress"
                     android:maxLines="1"
-                    android:textSize="16dp"
+                    android:textSize="14dp"
                     tools:ignore="SpUsage" />
             </android.support.design.widget.TextInputLayout>
 
@@ -164,10 +169,8 @@
                 android:layout_width="100dp"
                 android:layout_height="0dp"
                 android:layout_gravity="end"
-                android:layout_marginBottom="20dp"
                 android:layout_marginEnd="10dp"
                 android:layout_marginRight="10dp"
-                android:layout_marginTop="20dp"
                 android:layout_weight="8"
                 android:background="@drawable/card_view_button"
                 android:text="@string/회원탈퇴"

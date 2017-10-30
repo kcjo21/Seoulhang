@@ -864,7 +864,7 @@
     <string name="GPSY">6~18자리 영문+숫자+특수문자(!, @, $, %, ^, *)를 혼합한 비밀번호를 입력해주세요.</string>
     <string name="GPS퍼미션">지도를 사용하시려면 위치정보접근을 허가해야합니다.</string>
     <string name="GPS퍼미션체크박스">지도를 사용하시려면 스마트폰 설정에서 위치정보접근을 허가해야합니다.</string>
-    <string name="GPS활성여부">GPS를 활성화했는지 확인해주십시오.</string>
+    <string name="GPS활성여부">위치 정보 데이터를 불러올 수 없습니다. 다시 시도해주세요.</string>
     <string name="Hint_info">"힌트 : "</string>
     <string name="Loading">응답대기중</string>
     <string name="Login">Login</string>
@@ -913,6 +913,7 @@
     <string name="answer">정답을 선택하세요.</string>
     <string name="app_name">서울행</string>
     <string name="appbar_scrolling_view_behavior" translatable="false">android.support.design.widget.AppBarLayout$ScrollingViewBehavior</string>
+    <string name="back_key_msg">한번 더 누르시면 종료됩니다.</string>
     <string name="bottom_sheet_behavior" translatable="false">android.support.design.widget.BottomSheetBehavior</string>
     <string name="camera_descrip">만일 주변에 타겟이 있다면, 이 버튼을 눌러 카메라를 실행하세요.\n카메라를 통해 3D 객체를 확인할 수 있습니다. 대상을 찾으면, 터치해서 획득하세요.</string>
     <string name="can_not_connent_to_server">서버에 연결할 수 없습니다.</string>
@@ -922,7 +923,7 @@
     <string name="checkplease">ID중복확인을 해주십시오.</string>
     <string name="close">닫기</string>
     <string name="close_drawer">close drawerclose drawerclose drawerclose drawerclose drawer</string>
-    <string name="com.crashlytics.android.build_id" ns1:ignore="UnusedResources,TypographyDashes" translatable="false">71877959-94e8-47aa-9ecc-09a62d9e02e2</string>
+    <string name="com.crashlytics.android.build_id" ns1:ignore="UnusedResources,TypographyDashes" translatable="false">2d962344-d23a-4221-bdd8-7401ef267ee2</string>
     <string name="com_facebook_image_download_unknown_error">Unexpected error while downloading an image.</string>
     <string name="com_facebook_internet_permission_error_message">WebView login requires INTERNET permission</string>
     <string name="com_facebook_internet_permission_error_title">AndroidManifest Error</string>
@@ -973,6 +974,7 @@
     <string name="google_app_id" translatable="false">1:760341892608:android:07479dda6ac018c0</string>
     <string name="google_auth_key">AIzaSyAM_yLXX5PM6rGttCC86w50OCIHPTtir30</string>
     <string name="google_crash_reporting_api_key" translatable="false">AIzaSyArqcPgmwsl4CSl5nGdtqp_ZLaykRorwy8</string>
+    <string name="google_failed_to_login">계정연동에 실패했거나 로그인을 취소했습니다.</string>
     <string name="google_with">                구글계정으로 로그인 중</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="hello_world">Hello world!</string>
@@ -1012,7 +1014,7 @@
     <string name="normal_with">                일반계정으로 로그인 중</string>
     <string name="not_available_name">이름은 1~12자 사이의 영문, 한글로만 작성해주세요.</string>
     <string name="not_available_nickname">닉네임은 1~9자 사이의 영어, 한글, 숫자만 가능합니다.</string>
-    <string name="not_available_special_ch">특수문자(/, #, "&amp;" ,  "&lt;" , ">")는 금지되어 있습니다.</string>
+    <string name="not_available_special_ch">특수문자(/, #, "&amp;" ,  "&lt;" , ">")는 금지되어 있습니다.\n문제와 힌트는 5글자 이상 작성바랍니다.</string>
     <string name="not_good_id">영문과 숫자로만 이루어진 5~12자 아이디를 입력해주세요.\n첫 글자는 반드시 영문입니다.</string>
     <string name="not_good_quiz">과도한 욕설이나 부적절한 내용이\n포함된 퀴즈는 임의로 삭제될 수 있습니다.\nOX 퀴즈 형식으로 출제할 수 있습니다.\n출제 포인트는 50점을 획득할 경우, 1점을 획득합니다.\n</string>
     <string name="notice_descrip">한 줄 공지를 자동으로 전환시킵니다.\n비활성화시 수동으로 페이지를 넘깁니다.</string>
@@ -1029,6 +1031,7 @@
     <string name="please_check_id">아이디 또는 비밀번호가 일치하지 않습니다.</string>
     <string name="please_check_name">이미 같은 닉네임이 존재합니다.</string>
     <string name="quiz_descrip">획득한 퀴즈를 확인할 수 있습니다.\n퀴즈는 획득한 순서대로 나열되며, 주관식, OX 퀴즈로 구성되어있습니다.\n또한, 힌트 포인트를 가지고 있다면, 힌트를 볼 수 있습니다.\n힌트 포인트는 30점을 얻을 경우 1점을 획득합니다.</string>
+    <string name="quiz_list">퀴즈 목록</string>
     <string name="quiz_num">퀴즈 번호</string>
     <string name="quiz_region">획득 장소</string>
     <string name="quizmake">문제를 입력해주세요.</string>

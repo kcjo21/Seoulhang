@@ -12,7 +12,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="20"
+        android:layout_weight="25"
         android:background="@color/black_a"
         android:gravity="center_vertical|center_horizontal"
         android:orientation="horizontal"
@@ -22,7 +22,8 @@
             android:id="@+id/progress"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="20"
+            android:layout_margin="2dp"
+            android:layout_weight="22"
             android:gravity="center_vertical|center_horizontal"
             android:textColor="@color/white"
             android:textSize="@dimen/size"
@@ -34,9 +35,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_gravity="center_vertical|center_horizontal"
-            android:layout_marginBottom="5dp"
-            android:layout_marginTop="5dp"
-            android:layout_weight="80"
+            android:layout_weight="78"
             android:max="100"
             android:progress="10" />
 
@@ -45,7 +44,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="80"
+        android:layout_weight="75"
         android:background="@color/black_a"
         android:orientation="horizontal">
 
@@ -53,8 +52,8 @@
             android:id="@+id/content"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginBottom="20dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginBottom="30dp"
+            android:layout_marginTop="30dp"
             android:gravity="center_vertical|center_horizontal"
             android:scrollbars="vertical"
             android:textColor="@color/white"

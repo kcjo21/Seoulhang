@@ -25,7 +25,7 @@ import io.realm.RealmConfiguration;
 /**
  * Created by cwh62 on 2017-03-14.
  */
-
+//통신에 필요한 Realm 메소드와 프로그레스 로딩이미지 소스를 App수준에 배치
 public class RealmInit extends Application {
     private Realm realm;
     private static RealmInit ourInstance = new RealmInit();
@@ -129,28 +129,6 @@ public class RealmInit extends Application {
         realm = Realm.getDefaultInstance();
     }
 
-    public boolean checkEmail(String email){ //이메일 유효성 체크
-
-        String regex = "^[_a-zA-Z0-9-\\.]+@[\\.a-zA-Z0-9-]+\\.[a-zA-Z]+$";
-        Pattern p = Pattern.compile(regex);
-        Matcher m = p.matcher(email);
-        return m.matches();
-
-    }
-    public boolean textValidate(String password) {  //영어+숫자+특수문자 혼합해서 6~18자 사이 비밀번호를 체크
-        String regex = "^(?=.*[0-9])(?=.*[a-z])(?=.*[@#$%^&+=])(?=\\S+$).{6,18}$";
-        Pattern p = Pattern.compile(regex);
-        Matcher m = p.matcher(password);
-        return m.matches();
-    }
-
-    public boolean checkId(String id){ //첫글자는 영어, 나머지 아이디는 영어와 숫자로 구성된 5~12자 아이디
-        String regex = "^[a-zA-Z]{1}[a-zA-Z0-9_]{4,11}$";
-        Pattern p = Pattern.compile(regex);
-        Matcher m = p.matcher(id);
-        return m.matches();
-
-    }
 }
 
 

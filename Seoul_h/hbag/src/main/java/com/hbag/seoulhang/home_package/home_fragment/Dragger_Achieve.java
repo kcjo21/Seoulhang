@@ -59,7 +59,6 @@ public class Dragger_Achieve extends BaseActivity {
         networkClient.getrate(sid, new Callback<List<RateDTO>>() {
             @Override
             public void onResponse(Call<List<RateDTO>> call, Response<List<RateDTO>> response) {
-                Log.d("인포", "123");
                 switch (response.code()) {
                     case 200:
                         Log.d("인포", "어댑터 세팅");

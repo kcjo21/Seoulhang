@@ -502,7 +502,7 @@ public class LoginActivity extends BaseActivity implements
                 UI_State1(1);
             } else {
                 UI_State1(0);
-                Toast toast = Toast.makeText(getApplicationContext(), getResources().getString(R.string.로그인실패), Toast.LENGTH_LONG);
+                Toast toast = Toast.makeText(getApplicationContext(), getResources().getString(R.string.google_failed_to_login), Toast.LENGTH_LONG);
                 toast.show();
                 login.setEnabled(true);
                 login.setProgress(0);

@@ -85,12 +85,8 @@ public class ExpandableListViewAdapter extends BaseExpandableListAdapter{
             }
         });
 
-        final int sdk = android.os.Build.VERSION.SDK_INT;
-        if(sdk < android.os.Build.VERSION_CODES.JELLY_BEAN) {
-            background.setBackgroundResource(methods.imageSelector2(_listDataHeader.get(groupPosition).getName()));
-        } else {
-            background.setBackgroundResource(methods.imageSelector2(_listDataHeader.get(groupPosition).getName()));
-        }
+
+        background.setBackgroundResource(methods.imageSelector2(_listDataHeader.get(groupPosition).getName()));
 
         progress.setText(_listDataChild.get(groupPosition).get(childPosition).getProgress());
         progressBar.setProgress(_listDataChild.get(groupPosition).get(childPosition).getProgressbar());

@@ -153,16 +153,6 @@ public class JoinActivity extends BaseActivity {
 
                 boolean isFailed = false;
 
-                if(special_ch(password.getText().toString())){
-                    Log.d("정규식특수","트루");
-                }
-                else Log.d("정규식특수","폴스");
-
-                if(passcheck(password.getText().toString())){
-                    Log.d("정규식","트루");
-                }
-                else Log.d("정규식","폴스");
-
 
                 if(id.getText().length()<=0){ id.setError((getResources().getString(R.string.EID))); isFailed = true;}
                 if(!passcheck(password.getText().toString())||!special_ch(password.getText().toString())){password.setError(getResources().getString(R.string.EPass));isFailed = true;}

@@ -60,7 +60,7 @@ public class RecyclerAdapter_T extends RecyclerView.Adapter<RecyclerAdapter_T.Vi
 
             Log.d("DPI",""+dpi);
 
-            switch (dpi){
+            switch (dpi){ //DPI별 뷰 크기 설정
                 case 240:
                     question_name.setTextSize(TypedValue.COMPLEX_UNIT_DIP,10);
                     question_code.setTextSize(TypedValue.COMPLEX_UNIT_DIP,10);

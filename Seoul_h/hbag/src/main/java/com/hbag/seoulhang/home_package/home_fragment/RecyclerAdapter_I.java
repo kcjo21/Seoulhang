@@ -1,5 +1,6 @@
 package com.hbag.seoulhang.home_package.home_fragment;
 
+import android.content.Context;
 import android.content.DialogInterface;
 import android.support.v4.view.MotionEventCompat;
 import android.support.v7.app.AlertDialog;
@@ -61,7 +62,7 @@ public class RecyclerAdapter_I extends RecyclerView.Adapter<RecyclerAdapter_I.Vi
             @Override
             public void onClick(View v) {
                 AlertDialog.Builder alert = new AlertDialog.Builder(Frag_Quiz.activity);
-                alert.setPositiveButton("확인", new DialogInterface.OnClickListener() {
+                alert.setPositiveButton(view.getResources().getString(R.string.확인), new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         dialog.dismiss();     //닫기

@@ -28,14 +28,14 @@ import retrofit2.Response;
 public class Dialog_Grade extends Dialog {
 
 
-    TextView tv_1;
-    TextView tv_2;
-    TextView tv_3;
-    TextView tv_4;
-    TextView tv_5;
-    TextView tv_6;
-    TextView tv_7;
-    TextView tv_8;
+    private TextView tv_1;
+    private TextView tv_2;
+    private TextView tv_3;
+    private TextView tv_4;
+    private TextView tv_5;
+    private TextView tv_6;
+    private TextView tv_7;
+    private TextView tv_8;
     private Button commit;
     private View.OnClickListener click;
     NetworkClient networkClient;

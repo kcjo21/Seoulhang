@@ -77,7 +77,6 @@ public class Frag_Rank extends Fragment
         networkClient.getranking(loginid, new Callback<List<RankDTO>>() {
             @Override
             public void onResponse(Call<List<RankDTO>> call, Response<List<RankDTO>> response) {
-                Log.d("퀴즈", "123");
                 switch (response.code()) {
                     case 200:
                         Log.d("퀴즈", "어댑터 세팅");

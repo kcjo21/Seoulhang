@@ -20,7 +20,7 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="달성률"><font size="1">Achievement rate </font></string>
+    <string name="달성률"><font size="1">Achievement\nRate </font></string>
     <string name="닉네임">Nickname</string>
     <string name="등급">Tier</string>
     <string name="순위">Rank</string>
@@ -115,7 +115,7 @@
     <string name="잘못된GPS">Wrong GPS coordinates.</string>
     <string name="주소미발견">No address found.</string>
     <string name="위치정보불가">Unable to get location information.</string>
-    <string name="GPS활성여부">Check whether GPS is activated.</string>
+    <string name="GPS활성여부">Unable to fetch location info data. Please try again.</string>
     <string name="GPS퍼미션체크박스">To use the map, you must permit accessing location information in your smartphone setting</string>
     <string name="GPS퍼미션">Access to location information must be granted to use the map.</string>
     <string name="알림">Alert</string>
@@ -208,5 +208,8 @@
     <string name="enter_quizmake">Some items you have not entered.</string>
     <string name="not_available_name">Please write your name in English or Korean between 1 and 12 characters.</string>
     <string name="not_available_nickname">Nicknames can only be English, Korean, and numbers between 1 and 9 characters.</string>
-    <string name="not_available_special_ch">Special characters(/, #, <![CDATA["&"]]> , <![CDATA["<"]]> , <![CDATA[">"]]>) are prohibited.</string>
+    <string name="not_available_special_ch">Special characters(/, #, <![CDATA["&"]]> , <![CDATA["<"]]> , <![CDATA[">"]]>) are prohibited.\nPlease write more than 5 letters of quiz and hint.</string>
+    <string name="google_failed_to_login">Login failed or login was canceled.</string>
+    <string name="back_key_msg">Press again to exit.</string>
+    <string name="quiz_list">Quiz List</string>
 </resources>

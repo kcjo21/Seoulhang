@@ -28,7 +28,7 @@ import java.util.List;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
-
+//유니티 액티비티를 불러오기위해 UnityPlayerActivity를 상속받아서 관련 메소드를 오버라이드 한다.
 public class GameActivity extends UnityPlayerActivity {
     Ipm ipm;
     NetworkClient networkClient;

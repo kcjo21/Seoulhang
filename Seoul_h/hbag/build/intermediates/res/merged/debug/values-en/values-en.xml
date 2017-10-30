@@ -35,7 +35,7 @@
     <string name="GPSY">Yes</string>
     <string name="GPS퍼미션">Access to location information must be granted to use the map.</string>
     <string name="GPS퍼미션체크박스">To use the map, you must permit accessing location information in your smartphone setting</string>
-    <string name="GPS활성여부">Check whether GPS is activated.</string>
+    <string name="GPS활성여부">Unable to fetch location info data. Please try again.</string>
     <string name="Hint_info">"Hints : "</string>
     <string name="Loading">LOADING</string>
     <string name="Login">Login</string>
@@ -52,6 +52,7 @@
     <string name="age">Age</string>
     <string name="answer">Choose an Answer</string>
     <string name="app_name">SeoulHang</string>
+    <string name="back_key_msg">Press again to exit.</string>
     <string name="camera_descrip">If there is a target nearby, press this button to run the camera.\nYou can view 3D objects through the camera. After finding the object. Touch it.</string>
     <string name="can_not_connent_to_server">Cannot connect Server.</string>
     <string name="can_not_make_quiz">Not enough points to make a quiz</string>
@@ -70,6 +71,7 @@
     <string name="flip">Notice Auto Switching</string>
     <string name="ghkrdls">OK</string>
     <string name="google_auth_key">AIzaSyAM_yLXX5PM6rGttCC86w50OCIHPTtir30</string>
+    <string name="google_failed_to_login">Login failed or login was canceled.</string>
     <string name="google_with">                Signed in with Google</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="hint_msg">Do you want to see the hint?\nOne hint bonus is required.</string>
@@ -98,7 +100,7 @@
     <string name="normal_with">                Signed in with Account</string>
     <string name="not_available_name">Please write your name in English or Korean between 1 and 12 characters.</string>
     <string name="not_available_nickname">Nicknames can only be English, Korean, and numbers between 1 and 9 characters.</string>
-    <string name="not_available_special_ch">Special characters(/, #, "&amp;" , "&lt;" , ">") are prohibited.</string>
+    <string name="not_available_special_ch">Special characters(/, #, "&amp;" , "&lt;" , ">") are prohibited.\nPlease write more than 5 letters of quiz and hint.</string>
     <string name="not_good_id">Please enter a 5 ~ 12 character ID consisting of only english and numbers,\nand The first letter of the ID must be in English.</string>
     <string name="not_good_quiz">A quiz including excessive inappropriate\ncontent may be deleted\nyou can submit it in OX quiz form.\nThe quiz making point will be awarded 1 point If you score 50 points.</string>
     <string name="notice_descrip">Select whether to flip notification\nautomatically or manually.</string>
@@ -110,6 +112,7 @@
     <string name="please_check_id">Please check your ID or Password.</string>
     <string name="please_check_name">this nickname already exsist.</string>
     <string name="quiz_descrip">You can check the acquired quiz.\nQuizzes are listed in the order they are acquired,\nconsisting of a Short-answer type quiz and an OX quiz.\nAlso, if you have a hint point, you can see the hint.\nThe hint point will be awarded\n1 point If you score 30 points.</string>
+    <string name="quiz_list">Quiz List</string>
     <string name="quiz_num">Quiz No.</string>
     <string name="quiz_region">Location</string>
     <string name="quizmake">Please enter a quiz.</string>
@@ -150,7 +153,7 @@
     <string name="닉네임">Nickname</string>
     <string name="닉네임입력">Please enter your nickname.</string>
     <string name="다이아몬드">Diamond</string>
-    <string name="달성률"><font size="1">Achievement rate </font></string>
+    <string name="달성률"><font size="1">Achievement\nRate </font></string>
     <string name="등급">Tier</string>
     <string name="등급정보">Rating Table</string>
     <string name="등급차트">Challenger = Score 450 \nMaster = Score 340 \nDiamond = Score 240 \nPlatinum = Score 160 \nGold = Score 90 \nSilver = Score 40 \nBronze = Score 10</string>

@@ -14,7 +14,7 @@
         android:layout_weight="5"
         android:background="@color/SBLUE"
         android:gravity="center_vertical|center_horizontal"
-        android:text="퀴즈목록"
+        android:text="@string/quiz_list"
         android:textColor="@color/white"
         android:textSize="14dp"
         tools:ignore="HardcodedText,SpUsage" />

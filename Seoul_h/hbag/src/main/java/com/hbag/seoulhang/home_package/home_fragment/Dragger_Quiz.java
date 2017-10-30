@@ -131,7 +131,7 @@ public class Dragger_Quiz extends SwipeBackActivity {
                                     grade_check = response.body();
                                     Log.e("확인","aaa"+grade_check);
                                     AlertDialog.Builder alert = new AlertDialog.Builder(Dragger_Quiz.this);
-                                    alert.setPositiveButton("확인", new DialogInterface.OnClickListener() {
+                                    alert.setPositiveButton(getResources().getString(R.string.확인), new DialogInterface.OnClickListener() {
                                         @Override
                                         public void onClick(DialogInterface dialog, int which) {
                                             dialog.dismiss();     //닫기
@@ -175,9 +175,8 @@ public class Dragger_Quiz extends SwipeBackActivity {
                             switch (response.code()){
                                 case 200:
                                     String check = response.body();
-                                    Log.d("으음",check);
                                     AlertDialog.Builder alert = new AlertDialog.Builder(Dragger_Quiz.this);
-                                    alert.setPositiveButton("확인", new DialogInterface.OnClickListener() {
+                                    alert.setPositiveButton(getResources().getString(R.string.확인), new DialogInterface.OnClickListener() {
                                         @Override
                                         public void onClick(DialogInterface dialog, int which) {
                                             Intent intent = new Intent(Dragger_Quiz.this,Home_Main.class);

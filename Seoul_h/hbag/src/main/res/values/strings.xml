@@ -115,7 +115,7 @@
     <string name="잘못된GPS">잘못된 GPS좌표</string>
     <string name="주소미발견">주소를 발견하지 못했습니다.</string>
     <string name="위치정보불가">위치정보 가져올 수 없음.</string>
-    <string name="GPS활성여부">GPS를 활성화했는지 확인해주십시오.</string>
+    <string name="GPS활성여부">위치 정보 데이터를 불러올 수 없습니다. 다시 시도해주세요.</string>
     <string name="GPS퍼미션체크박스">지도를 사용하시려면 스마트폰 설정에서 위치정보접근을 허가해야합니다.</string>
     <string name="GPS퍼미션">지도를 사용하시려면 위치정보접근을 허가해야합니다.</string>
     <string name="알림">알림</string>
@@ -208,6 +208,9 @@
     <string name="enter_quizmake">입력하지 않은 항목이 있습니다.</string>
     <string name="not_available_name">이름은 1~12자 사이의 영문, 한글로만 작성해주세요.</string>
     <string name="not_available_nickname">닉네임은 1~9자 사이의 영어, 한글, 숫자만 가능합니다.</string>
-    <string name="not_available_special_ch">특수문자(/, #, <![CDATA["&"]]> ,  <![CDATA["<"]]> , <![CDATA[">"]]>)는 금지되어 있습니다.</string>
+    <string name="not_available_special_ch">특수문자(/, #, <![CDATA["&"]]> ,  <![CDATA["<"]]> , <![CDATA[">"]]>)는 금지되어 있습니다.\n문제와 힌트는 5글자 이상 작성바랍니다.</string>
+    <string name="google_failed_to_login">계정연동에 실패했거나 로그인을 취소했습니다.</string>
+    <string name="back_key_msg">한번 더 누르시면 종료됩니다.</string>
+    <string name="quiz_list">퀴즈 목록</string>
 
 </resources>

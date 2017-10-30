@@ -167,10 +167,8 @@ public class Home_Main extends BaseActivity implements
         networkClient.getfinishitem(loginid, new Callback<List<InventoryDTO>>() {
             @Override
             public void onResponse(Call<List<InventoryDTO>> call, Response<List<InventoryDTO>> response) {
-                Log.d("인포", "123");
                 switch (response.code()) {
                     case 200:
-                        Log.d("인포", "어댑터 세팅");
                         infos = response.body();
 
                         InventoryDTO inventoryDTO = infos.get(0);
@@ -682,6 +680,12 @@ public class Home_Main extends BaseActivity implements
                                     alert.setPositiveButton(getResources().getString(R.string.dialog_ok), new DialogInterface.OnClickListener() {
                                         @Override
                                         public void onClick(DialogInterface dialog, int which) {
+
+                                            Intent intent = new Intent(getApplicationContext(),Home_Main.class);
+                                            intent.setFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+                                            overridePendingTransition(0, 0);
+                                            startActivity(intent);
+                                            finish();
 
                                             dialog.dismiss();     //닫기
                                         }

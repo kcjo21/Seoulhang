@@ -75,6 +75,7 @@ public class Frag_Home extends BaseFragment {
     private long mLastClickTime = 0;
     UserProfileData_singleton profile;
     int autoflip;
+    int sLocale;
 
     public Frag_Home() {
     }
@@ -104,7 +105,9 @@ public class Frag_Home extends BaseFragment {
         networkClient = NetworkClient.getInstance(ip);
 
         final SharedPreferences setting = getActivity().getSharedPreferences("prefrence_setting",MODE_PRIVATE);
+        final SharedPreferences lang = getActivity().getSharedPreferences("lang",MODE_PRIVATE);
         autoflip = setting.getInt("auto_notice",0);
+        sLocale = lang.getInt("setlang",0);
 
 
 
@@ -142,7 +145,6 @@ public class Frag_Home extends BaseFragment {
         networkClient.toptenregion(loginid, new Callback<List<TopDTO>>() {  //인기 순위 top10 지역을 서버로 부터 불러온다.
             @Override
             public void onResponse(Call<List<TopDTO>> call, Response<List<TopDTO>> response) {
-                Log.d("퀴즈", "123");
                 switch (response.code()) {
                     case 200:
                         Log.d("퀴즈", "어댑터 세팅");
@@ -194,15 +196,19 @@ public class Frag_Home extends BaseFragment {
                 Animation showIn = AnimationUtils.loadAnimation(getContext(), R.anim.center_in_left);
                 Animation showOut = AnimationUtils.loadAnimation(getContext(), R.anim.center_out_left);
 
-
                 for (int j = 0; j < notice.size(); j++) {
 
                     NoticeDTO noticeDTO = notice.get(j);
-                    String title = noticeDTO.getTitle();
-                    String contents = noticeDTO.getContents();
+                    String title_ko = noticeDTO.getTitle_ko();
+                    String title_en = noticeDTO.getTitle_en();
                     String sDate = noticeDTO.getDate1();
                     String sDate2 = noticeDTO.getDate2();
-                    ViewCreater(contents, sDate, sDate2);   //플리퍼에 추가할 뷰를 동적 생성
+                    if(sLocale==0) {  //언어에 따른 내용 삽입
+                        ViewCreater(title_ko, sDate, sDate2);   //플리퍼에 추가할 뷰를 동적 생성
+                    }
+                    else if(sLocale==1){
+                        ViewCreater(title_en, sDate, sDate2);
+                    }
                     viewFlipper.addView(filp_list.get(j));  //생성한 뷰를 플리퍼에 추가
                     Log.d("데이트",sDate);
 
@@ -391,6 +397,11 @@ public class Frag_Home extends BaseFragment {
                                     alert.setPositiveButton(getResources().getString(R.string.dialog_ok), new DialogInterface.OnClickListener() {
                                         @Override
                                         public void onClick(DialogInterface dialog, int which) {
+                                            Intent intent = new Intent(getContext(),Home_Main.class);
+                                            intent.setFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+                                            getActivity().overridePendingTransition(0, 0);
+                                            startActivity(intent);
+                                            getActivity().finish();
 
                                             dialog.dismiss();     //닫기
                                         }
